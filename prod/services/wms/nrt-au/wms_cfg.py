@@ -7,7 +7,7 @@ response_cfg = {
 service_cfg = {
     # Required config
     "title": "WMS server for Near Realtime Sentinel 2",
-    "url": "http://nrt-au.wms.gadevs.ga",
+    "url": "http://nrt-au.dea.ga.gov.au",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
             "geographic": False,
