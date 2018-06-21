@@ -33,11 +33,9 @@ service_cfg = {
     # Optional config - may be set to blank/empty
     "abstract": """Near Realtime Sentinel 2 imagery of Australia""",
     "keywords": [
-        "landsat",
         "sentinel",
         "australia",
         "time-series",
-        "murraydarling",
     ],
     "contact_info": {
         "person": "Digital Earth Australia",
