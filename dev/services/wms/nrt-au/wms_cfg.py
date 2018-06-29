@@ -5,9 +5,14 @@ response_cfg = {
 }
 
 service_cfg = {
+    ## Which web service(s) should be supported by this instance
+    # Defaults: wms: True, wcs: False
+    "wcs": True,
+    "wms": True,
+
     # Required config
-    "title": "WMS server for Near Realtime Sentinel 2",
-    "url": "http://nrt-au.wms.gadevs.ga",
+    "title": "OGC server for Near Realtime Sentinel 2",
+    "url": "https://nrt-au.wms.gadevs.ga",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
             "geographic": False,
@@ -33,11 +38,9 @@ service_cfg = {
     # Optional config - may be set to blank/empty
     "abstract": """Near Realtime Sentinel 2 imagery of Australia""",
     "keywords": [
-        "landsat",
         "sentinel",
         "australia",
         "time-series",
-        "murraydarling",
     ],
     "contact_info": {
         "person": "Digital Earth Australia",
@@ -57,6 +60,36 @@ service_cfg = {
     },
     "fees": "",
     "access_constraints": "",
+
+    ## Required config for WCS
+    # Must be a geographic CRS in the published_CRSs list.  EPSG:4326 is recommended, but any geographic CRS should work.
+    "default_geographic_CRS": "EPSG:4326",
+
+    # Supported WCS formats
+    "wcs_formats": {
+        # Key is the format name, as used in DescribeCoverage XML
+        "GeoTIFF": {
+            # Renderer is the FQN of a Python function that takes:
+            #   * A ProductLayerDef
+            #   * Some ODC data to be rendered.
+            #   * The CRS to render with
+            "renderer": "datacube_wms.wcs_utils.get_tiff",
+            # The MIME type of the image, as used in the Http Response.
+            "mime": "image/geotiff",
+            # The file extension to add to the filename.
+            "extension": "tif",
+            # Whether or not the file format supports multiple time slices.
+            "multi-time": False
+        },
+        "netCDF": {
+            "renderer": "datacube_wms.wcs_utils.get_netcdf",
+            "mime": "application/x-netcdf",
+            "extension": "nc",
+            "multi-time": True,
+        }
+    },
+    # The native wcs format must be declared in wcs_formats above.
+    "native_wcs_format": "GeoTIFF",
 }
 
 layer_cfg = [
