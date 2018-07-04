@@ -56,8 +56,33 @@ service_cfg = {
     },
     "fees": "",
     "access_constraints": "",
-}
 
+    # Supported WCS formats
+    "wcs_formats": {
+        # Key is the format name, as used in DescribeCoverage XML
+        "GeoTIFF": {
+            # Renderer is the FQN of a Python function that takes:
+            #   * A ProductLayerDef
+            #   * Some ODC data to be rendered.
+            #   * The CRS to render with
+            "renderer": "datacube_wms.wcs_utils.get_tiff",
+            # The MIME type of the image, as used in the Http Response.
+            "mime": "image/geotiff",
+            # The file extension to add to the filename.
+            "extension": "tif",
+            # Whether or not the file format supports multiple time slices.
+            "multi-time": False
+        },
+        "netCDF": {
+            "renderer": "datacube_wms.wcs_utils.get_netcdf",
+            "mime": "application/x-netcdf",
+            "extension": "nc",
+            "multi-time": True,
+        }
+    },
+    # The native wcs format must be declared in wcs_formats above.
+    "native_wcs_format": "GeoTIFF",
+}
 layer_cfg = [
     # Layer Config is a list of platform configs
     {
