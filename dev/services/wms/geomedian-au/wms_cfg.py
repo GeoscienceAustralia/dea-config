@@ -70,6 +70,7 @@ service_cfg = {
     # Optional config for all services (WMS and/or WCS) - may be set to blank/empty, no defaults
     "abstract": """Historic Landsat imagery for Australia.""",
     "keywords": [
+        "geomedian"
         "landsat",
         "australia",
         "time-series",
