@@ -11,9 +11,9 @@ service_cfg = {
 
     ## Required config for WMS and/or WCS
     # Service title - appears e.g. in Terria catalog
-    "title": "WMS server for Australian Landsat Datacube",
+    "title": "WMS server for Australian Geomedian NBART Datacube",
     # Service URL.  Should a fully qualified URL
-    "url": "https://geomedianau.wms.gadevs.ga/",
+    "url": "https://geomedianau.wms.gadevs.ga//",
 
     # Supported co-ordinate reference systems
     "published_CRSs": {

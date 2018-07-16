@@ -13,7 +13,7 @@ service_cfg = {
     # Service title - appears e.g. in Terria catalog
     "title": "WMS server for Australian Landsat Datacube",
     # Service URL.  Should a fully qualified URL
-    "url": "https://geomedianau.wms.gadevs.ga/",
+    "url": "https://geomedianau.dea.ga.gov.au/",
 
     # Supported co-ordinate reference systems
     "published_CRSs": {
