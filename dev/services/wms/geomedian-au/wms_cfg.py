@@ -1,15 +1,21 @@
 # Static config for the wms metadata.
 
-
 response_cfg = {
     "Access-Control-Allow-Origin": "*",  # CORS header
-    "Cache-Control": "public, max-age=3600"
 }
 
 service_cfg = {
-    # Required config
-    "title": "WMS server for Australian Geomedian Level2 Product Datacube",
+    ## Which web service(s) should be supported by this instance
+    "wcs": False,
+    "wms": True,
+
+    ## Required config for WMS and/or WCS
+    # Service title - appears e.g. in Terria catalog
+    "title": "WMS server for Australian Landsat Datacube",
+    # Service URL.  Should a fully qualified URL
     "url": "http://9xjfk12.nexus.csiro.au/datacube_wms",
+
+    # Supported co-ordinate reference systems
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
             "geographic": False,
@@ -18,23 +24,53 @@ service_cfg = {
         },
         "EPSG:4326": {  # WGS-84
             "geographic": True,
+            "vertical_coord_first": True
         },
         "EPSG:3577": {  # GDA-94, internal representation
             "geographic": False,
-            "horizontal_coord": "easting",
-            "vertical_coord": "northing",
+            "horizontal_coord": "x",
+            "vertical_coord": "y",
         },
     },
 
-    # Technically optional config, but strongly recommended
-    "layer_limit": 1,
+    ## Required config for WCS
+    # Must be a geographic CRS in the published_CRSs list.  EPSG:4326 is recommended, but any geographic CRS should work.
+    "default_geographic_CRS": "EPSG:4326",
+
+    # Supported WCS formats
+    "wcs_formats": {
+        # Key is the format name, as used in DescribeCoverage XML
+        "GeoTIFF": {
+            # Renderer is the FQN of a Python function that takes:
+            #   * A WCS Request object
+            #   * Some ODC data to be rendered.
+            "renderer": "datacube_wms.wcs_utils.get_tiff",
+            # The MIME type of the image, as used in the Http Response.
+            "mime": "image/geotiff",
+            # The file extension to add to the filename.
+            "extension": "tif",
+            # Whether or not the file format supports multiple time slices.
+            "multi-time": False
+        },
+        "netCDF": {
+            "renderer": "datacube_wms.wcs_utils.get_netcdf",
+            "mime": "application/x-netcdf",
+            "extension": "nc",
+            "multi-time": True,
+        }
+    },
+    # The native wcs format must be declared in wcs_formats above.
+    "native_wcs_format": "GeoTIFF",
+
+    ## Optional config for instances supporting WMS
+    # Max tile height/width.  If not specified, default to 256x256
     "max_width": 512,
     "max_height": 512,
 
-    # Optional config - may be set to blank/empty
+    # Optional config for all services (WMS and/or WCS) - may be set to blank/empty, no defaults
     "abstract": """Historic Landsat imagery for Australia.""",
     "keywords": [
-        "Geomedian",
+        "landsat",
         "australia",
         "time-series",
     ],
@@ -56,33 +92,8 @@ service_cfg = {
     },
     "fees": "",
     "access_constraints": "",
-
-    # Supported WCS formats
-    #"wcs_formats": {
-        # Key is the format name, as used in DescribeCoverage XML
-    #    "GeoTIFF": {
-            # Renderer is the FQN of a Python function that takes:
-            #   * A ProductLayerDef
-            #   * Some ODC data to be rendered.
-            #   * The CRS to render with
-    #        "renderer": "datacube_wms.wcs_utils.get_tiff",
-            # The MIME type of the image, as used in the Http Response.
-    #        "mime": "image/geotiff",
-            # The file extension to add to the filename.
-    #        "extension": "tif",
-            # Whether or not the file format supports multiple time slices.
-    #        "multi-time": False
-    #    },
-    #    "netCDF": {
-    #        "renderer": "datacube_wms.wcs_utils.get_netcdf",
-    #        "mime": "application/x-netcdf",
-    #        "extension": "nc",
-    #        "multi-time": True,
-    #    }
-    #},
-    # The native wcs format must be declared in wcs_formats above.
-    #"native_wcs_format": "GeoTIFF",
 }
+
 layer_cfg = [
     # Layer Config is a list of platform configs
     {
