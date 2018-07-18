@@ -76,9 +76,9 @@ service_cfg = {
         "time-series",
     ],
     "contact_info": {
-        "person": "David Gavin",
+        "person": "Digital Earth Australia",
         "organisation": "Geoscience Australia",
-        "position": "Technical Lead",
+        "position": "",
         "address": {
             "type": "postal",
             "address": "GPO Box 378",
@@ -87,9 +87,9 @@ service_cfg = {
             "postcode": "2906",
             "country": "Australia",
         },
-        "telephone": "+61 2 1234 5678",
-        "fax": "+61 2 1234 6789",
-        "email": "test@example.com",
+        "telephone": "+61 2 6249 9111",
+        "fax": "",
+        "email": "earth.observation@ga.gov.au",
     },
     "fees": "",
     "access_constraints": "",
@@ -112,7 +112,7 @@ layer_cfg = [
             # Included as a keyword  for the layer
                 "label": "LANDSAT_8",
                 # Included as a keyword  for the layer
-                "type": "Level2",
+                "type": "SR",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
@@ -464,7 +464,7 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "LANDSAT_7",
                 # Included as a keyword  for the layer
-                "type": "Level2",
+                "type": "SR",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
@@ -741,7 +741,7 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "LANDSAT_5",
                 # Included as a keyword  for the layer
-                "type": "Level2",
+                "type": "SR",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
