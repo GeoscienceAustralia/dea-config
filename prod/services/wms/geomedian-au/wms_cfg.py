@@ -112,7 +112,7 @@ layer_cfg = [
             # Included as a keyword  for the layer
                 "label": "LANDSAT_8",
                 # Included as a keyword  for the layer
-                "type": "Level2",
+                "type": "SR",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
@@ -464,7 +464,7 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "LANDSAT_7",
                 # Included as a keyword  for the layer
-                "type": "Level2",
+                "type": "SR",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
@@ -741,7 +741,7 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "LANDSAT_5",
                 # Included as a keyword  for the layer
-                "type": "Level2",
+                "type": "SR",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
