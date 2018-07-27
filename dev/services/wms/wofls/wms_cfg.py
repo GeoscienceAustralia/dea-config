@@ -199,7 +199,19 @@ layer_cfg = [
                                     'wet': True,
                                 },
                             },
-                        ]
+                        ],
+                        "components": {
+                            "red": {
+                                "water": 0
+                            },
+                            "green": {
+                                "water": 0
+                            },
+                            "blue": {
+                                "water": 1.0
+                            }
+                        },
+                        "scale_range": [0, 3]
                     },
                     {
                         "name": "water",
@@ -217,6 +229,18 @@ layer_cfg = [
                                 },
                             },
                         ],
+                        "components": {
+                            "red": {
+                                "water": 0
+                            },
+                            "green": {
+                                "water": 0
+                            },
+                            "blue": {
+                                "water": 1.0
+                            }
+                        },
+                        "scale_range": [0, 3]
                     }
                 ],
                 # Default style (if request does not specify style)
