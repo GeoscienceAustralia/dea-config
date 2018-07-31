@@ -131,6 +131,8 @@ layer_cfg = [
                             "flags": {
                                 'dry': True
                             },
+                        },
+                        {
                             "flags": {
                                 "terrain_or_low_angle": False,
                                 "high_slope": False,
@@ -150,5 +152,5 @@ layer_cfg = [
             "default_style": "simple_fc",
             }
         ]
-    }
+    },
 ]
