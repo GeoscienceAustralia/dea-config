@@ -175,53 +175,103 @@ layer_cfg = [
                     # Examples of styles which are linear combinations of the available spectral bands.
                     #
                     {
-                        "name": "water_masked",
-                        "title": "Water (masked)",
-                        "abstract": "Water, with clouds, terrain shadows, etc. masked",
-                        "heat_mapped": True,
-                        "index_function": lambda data: data["water"] * 0.0 + 0.25,
-                        "needed_bands": ["water"],
-                        "range": [0.0, 1.0],
-                        # Invert True: Show if no flags match (Hide if any match)
-                        # (Invert False: Show if any flags match - Hide if none match)
-
-                        "pq_masks": [
-                            {
-                                "flags": {
-                                    'terrain_or_low_angle': False,
-                                    'high_slope': False,
-                                    'cloud_shadow': False,
-                                    'cloud': False,
+                        "name": "water",
+                        "title": "Water",
+                        "abstract": "Water",
+                        "value_map": {
+                            "water": [
+                                {
+                                    "flags": {
+                                        "wet": True,
+                                    },
+                                    "values": {
+                                        "red": 79,
+                                        "green": 129,
+                                        "blue": 189
+                                    }
                                 },
-                            },
-                            {
-                                "flags": {
-                                    'wet': True,
+                                {
+                                    "flags": {
+                                        "sea": True,
+                                    },
+                                    "values": {
+                                        "red": 79,
+                                        "green": 129,
+                                        "blue": 189
+                                    }
                                 },
-                            },
-                        ],
-                        "components": {
-                            "red": {
-                                "water": 0
-                            },
-                            "green": {
-                                "water": 0
-                            },
-                            "blue": {
-                                "water": 1.0
-                            }
-                        },
-                        "scale_range": [0, 3]
+                                {
+                                    "flags": {
+                                        "dry": True,
+                                    },
+                                    "values": {
+                                        "red": 217,
+                                        "green": 150,
+                                        "blue": 148
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "terrain_or_low_angle": True,
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "high_slope": True,
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "cloud_shadow": True,
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "cloud": True
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                }
+                            ]
+                        }
                     },
                     {
-                        "name": "water",
-                        "title": "Water (unmasked)",
-                        "abstract": "Simple water data, no masking",
-                        "heat_mapped": True,
-                        "index_function": lambda data: data["water"] * 0.0 + 0.25,
-                        "needed_bands": ["water"],
-                        "range": [0.0, 1.0],
+                        "name": "water_masked",
+                        "title": "Water (Masked)",
+                        "abstract": "Water Data, Masked",
                         # Invert True: Show if no flags match
+                        "value_map": {
+                            "water": [
+                                {
+                                    "flags": {
+                                        "wet": True
+                                    },
+                                    "values": {
+                                        "red": 79,
+                                        "green": 129,
+                                        "blue": 189
+                                    }
+                                },
+                            ]
+                        },
                         "pq_masks": [
                             {
                                 "flags": {
@@ -229,18 +279,6 @@ layer_cfg = [
                                 },
                             },
                         ],
-                        "components": {
-                            "red": {
-                                "water": 0
-                            },
-                            "green": {
-                                "water": 0
-                            },
-                            "blue": {
-                                "water": 1.0
-                            }
-                        },
-                        "scale_range": [0, 3]
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -248,7 +286,7 @@ layer_cfg = [
 
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "water_masked",
+                "default_style": "water",
 
             },
 
