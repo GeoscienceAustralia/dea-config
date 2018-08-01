@@ -1020,19 +1020,41 @@ layer_cfg = [
                     {
                         "name": "mangrove",
                         "title": "Mangrove Cover",
-                        "abstract": "Simple Mangrove Cover",
-                        "components": {
-                            "red": {
-                                "canopy_cover_class": 0
-                            },
-                            "green": {
-                                "canopy_cover_class": 1.0
-                            },
-                            "blue": {
-                                "canopy_cover_class": 0
-                            }
-                        },
-                        "scale_range": [0, 3]
+                        "abstract": "Mangrove Cover",
+                        "value_map": {
+                            "canopy_cover_class": [
+                                {
+                                    "flags": {
+                                        "woodland": True
+                                    },
+                                    "values": {
+                                        "red": 159,
+                                        "green": 255,
+                                        "blue": 76
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "open_forest": True
+                                    },
+                                    "values": {
+                                        "red": 94,
+                                        "green": 204,
+                                        "blue": 0
+                                    }
+                                },
+                                {
+                                "flags": {
+                                        "closed_forest": True
+                                    },
+                                    "values": {
+                                        "red": 59,
+                                        "green": 127,
+                                        "blue": 0
+                                    }
+                                },
+                            ]
+                        }
                     }
                 ],
                 # Default style (if request does not specify style)
