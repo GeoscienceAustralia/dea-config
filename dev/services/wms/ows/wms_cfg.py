@@ -86,7 +86,7 @@ service_cfg = {
             "address": "GPO Box 378",
             "city": "Canberra",
             "state": "ACT",
-            "postcode": "2906",
+            "postcode": "2609",
             "country": "Australia",
         },
         "telephone": "+61 2 6249 9111",
@@ -99,6 +99,90 @@ service_cfg = {
 
 layer_cfg = [
     # Layer Config is a list of platform configs
+    {
+        "name": "fractional cover",
+        "title": "Fractional Cover",
+        "abstract": "Fractional Cover",
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "FC",
+                # Included as a keyword  for the layer
+                "type": "fractional cover",
+                # Included as a keyword  for the layer
+                "variant": "terrain corrected",
+                # The WMS name for the layer
+                "name": "ls8_fc_albers",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_fc_albers",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                "pq_dataset": "wofs_albers",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                "pq_band": "water",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 500.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+
+                "styles": [
+                    {
+                        "name": "simple_fc",
+                        "title": "Fractional Cover",
+                        "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
+                        "components": {
+                            "red": {
+                                "BS": 1.0
+                            },
+                            "green": {
+                                "PV": 1.0
+                            },
+                            "blue": {
+                                "NPV": 1.0
+                            }
+                        },
+                        # Used to clip off very bright areas.
+                        "scale_factor": 0.39,
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'dry': True
+                                },
+                            },
+                            {
+                                "flags": {
+                                    "terrain_or_low_angle": False,
+                                    "high_slope": False,
+                                    "cloud_shadow": False,
+                                    "cloud": False,
+                                    "sea": False
+                                }
+                            },
+                        ]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_fc",
+            }
+        ]
+    },
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
@@ -357,81 +441,6 @@ layer_cfg = [
                         "needed_bands": ["swir2", "nir"],
                         "range": [0.0, 1.0],
                     },
-                    # Mask layers - examples of how to display raw pixel quality data.
-                    # This works by creatively mis-using the Heatmap style class.
-                    # {
-                    #    "name": "cloud_mask",
-                    #    "title": "Cloud Mask",
-                    #    "abstract": "Highlight pixels with cloud.",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.1,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    # Mask flags normally describe which areas SHOULD be shown.
-                        # (i.e. pixels for which any of the declared flags are true)
-                        # pq_mask_invert is intended to invert this logic.
-                        # (i.e. pixels for which none of the declared flags are true)
-                        #
-                        # i.e. Specifying like this shows pixels which are not clouds in either metric.
-                        #      Specifying "cloud" and setting the "pq_mask_invert" to False would
-                        #      show pixels which are not clouds in both metrics.
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "cloud": False,
-                    #            }
-                    #        }
-                    #    ],
-                    # },
-                    # {
-                    #    "name": "cloud_acca",
-                    #    "title": "Cloud acca Mask",
-                    #    "abstract": "Highlight pixels with cloud.",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.4,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "cloud": True,
-                    #            }
-                    #        }
-                    #    ],
-                    # },
-                    # {
-                    #    "name": "cloud_fmask",
-                    #    "title": "Cloud fmask Mask",
-                    #    "abstract": "Highlight pixels with cloud.",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.8,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "cloud_fmask": "cloud",
-                    #            },
-                    #        },
-                    #    ],
-                    # },
-                    # {
-                    #    "name": "contiguous_mask",
-                    #    "title": "Contiguous Data Mask",
-                    #    "abstract": "Highlight pixels with non-contiguous data",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.3,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "contiguous": False
-                    #            },
-                    #        },
-                    #    ],
-                    # },
-                    # Hybrid style - mixes a linear mapping and a heat mapped index
                     {
                         "name": "rgb_ndvi",
                         "title": "NDVI plus RGB",
@@ -989,11 +998,57 @@ layer_cfg = [
         ]
     },
     {
+        "name": "mangrove_cover",
+        "title": "Mangrove Cover",
+        "abstract": "Mangrove Cover",
+        "products": [
+            {
+                "label": "Mangrove Cover",
+                "type": "Level3",
+                "variant": "Level 3",
+                "name": "mangrove_cover",
+                "product_name": "mangrove_cover",
+                "min_zoom_factor": 500.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data["extent"] == 1,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["extent"],
+                "apply_solar_corrections": False,
+                "styles": [
+                    {
+                        "name": "mangrove",
+                        "title": "Mangrove Cover",
+                        "abstract": "Simple Mangrove Cover",
+                        "components": {
+                            "red": {
+                                "canopy_cover_class": 0
+                            },
+                            "green": {
+                                "canopy_cover_class": 1.0
+                            },
+                            "blue": {
+                                "canopy_cover_class": 0
+                            }
+                        },
+                        "scale_range": [0, 3]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "mangrove",
+            },
+        ]
+    },
+    {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
-        "name": "WOFLS",
-        "title": "Water_Observation_Feature_Layers",
-        "abstract": "WOFLs",
+        "name": "WOfS",
+        "title": "Water_Observation_from_Space",
+        "abstract": "WOfS",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -1066,41 +1121,103 @@ layer_cfg = [
                     # Examples of styles which are linear combinations of the available spectral bands.
                     #
                     {
-                        "name": "water_masked",
-                        "title": "Water (masked)",
-                        "abstract": "Water, with clouds, terrain shadows, etc. masked",
-                        "heat_mapped": True,
-                        "index_function": lambda data: data["water"] * 0.0 + 0.25,
-                        "needed_bands": ["water"],
-                        "range": [0.0, 1.0],
-                        # Invert True: Show if no flags match (Hide if any match)
-                        # (Invert False: Show if any flags match - Hide if none match)
-
-                        "pq_masks": [
-                            {
-                                "flags": {
-                                    'terrain_or_low_angle': False,
-                                    'high_slope': False,
-                                    'cloud_shadow': False,
-                                    'cloud': False,
+                        "name": "water",
+                        "title": "Water",
+                        "abstract": "Water",
+                        "value_map": {
+                            "water": [
+                                {
+                                    "flags": {
+                                        "wet": True,
+                                    },
+                                    "values": {
+                                        "red": 79,
+                                        "green": 129,
+                                        "blue": 189
+                                    }
                                 },
-                            },
-                            {
-                                "flags": {
-                                    'wet': True,
+                                {
+                                    "flags": {
+                                        "sea": True,
+                                    },
+                                    "values": {
+                                        "red": 79,
+                                        "green": 129,
+                                        "blue": 189
+                                    }
                                 },
-                            },
-                        ]
+                                {
+                                    "flags": {
+                                        "dry": True,
+                                    },
+                                    "values": {
+                                        "red": 217,
+                                        "green": 150,
+                                        "blue": 148
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "terrain_or_low_angle": True,
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "high_slope": True,
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "cloud_shadow": True,
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                },
+                                {
+                                    "flags": {
+                                        "cloud": True
+                                    },
+                                    "values": {
+                                        "red": 112,
+                                        "green": 112,
+                                        "blue": 112
+                                    }
+                                }
+                            ]
+                        }
                     },
                     {
-                        "name": "water",
-                        "title": "Water (unmasked)",
-                        "abstract": "Simple water data, no masking",
-                        "heat_mapped": True,
-                        "index_function": lambda data: data["water"] * 0.0 + 0.25,
-                        "needed_bands": ["water"],
-                        "range": [0.0, 1.0],
+                        "name": "water_masked",
+                        "title": "Water (Masked)",
+                        "abstract": "Water Data, Masked",
                         # Invert True: Show if no flags match
+                        "value_map": {
+                            "water": [
+                                {
+                                    "flags": {
+                                        "wet": True
+                                    },
+                                    "values": {
+                                        "red": 79,
+                                        "green": 129,
+                                        "blue": 189
+                                    }
+                                },
+                            ]
+                        },
                         "pq_masks": [
                             {
                                 "flags": {
@@ -1115,45 +1232,62 @@ layer_cfg = [
 
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "water_masked",
+                "default_style": "water",
 
             },
-
-        ],
-    },
-    {
-        "name": "mangrove_cover",
-        "title": "Mangrove Cover",
-        "abstract": "Mangrove Cover",
-        "products": [
             {
-                "label": "Mangrove Cover",
-                "type": "Level3",
-                "variant": "Level 3",
-                "name": "mangrove_cover",
-                "product_name": "mangrove_cover",
+                # Included as a keyword  for the layer
+                "label": "WOfS_Summary",
+                # Included as a keyword  for the layer
+                "type": "WOfS_Summary",
+                # Included as a keyword  for the layer
+                "variant": "Summary",
+                # The WMS name for the layer
+                "name": "wofs_summary",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_summary",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                #"pq_dataset": "wofs_albers",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                #"pq_band": "water",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
                 "min_zoom_factor": 500.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
                 "time_zone": 9,
-                "extent_mask_func": lambda data, band: data["extent"] == 1,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
                 "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["extent"],
-                "apply_solar_corrections": False,
+
                 "styles": [
                     {
-                        "name": "mangrove",
-                        "title": "Mangrove Cover",
-                        "abstract": "Simple Mangrove Cover",
+                        "name": "WOfS_frequency",
+                        "title": " Wet and Dry Count",
+                        "abstract": "WOfS summary determinig the count_wet and count_clear for WOfS product",
+                        "heat_mapped": True,
+                        "index_function": lambda data: data["frequency"] * 0.0 + 0.25,
+                        "needed_bands": ["frequency"],
+                        "range": [0.0, 1.0],
+
                         "components": {
                             "red": {
-                                "canopy_cover_class": 0
+                                "frequency": 0.0
                             },
                             "green": {
-                                "canopy_cover_class": 1.0
+                                "frequency": 0.0
                             },
                             "blue": {
-                                "canopy_cover_class": 0
+                                "frequency": 1.0
                             }
                         },
                         "scale_range": [0, 3]
@@ -1161,10 +1295,13 @@ layer_cfg = [
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
+
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "mangrove",
-            },
-        ]
+                "default_style": "WOfS_frequency",
+            }
+
+        ],
     },
+
 ]
