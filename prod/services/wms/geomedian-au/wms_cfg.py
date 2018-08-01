@@ -464,7 +464,7 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "LANDSAT_7",
                 # Included as a keyword  for the layer
-                "type": "SR",
+                "type": "nbart",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
@@ -741,7 +741,7 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "LANDSAT_5",
                 # Included as a keyword  for the layer
-                "type": "SR",
+                "type": "nbart",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
