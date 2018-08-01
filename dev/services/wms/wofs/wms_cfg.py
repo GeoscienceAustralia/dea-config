@@ -72,6 +72,7 @@ service_cfg = {
     "keywords": [
         "wofs"
         "wofls",
+        "wofs_summary",
         "australia",
         "time-series",
     ],
@@ -84,7 +85,7 @@ service_cfg = {
             "address": "GPO Box 378",
             "city": "Canberra",
             "state": "ACT",
-            "postcode": "2906",
+            "postcode": "2609",
             "country": "Australia",
         },
         "telephone": "+61 2 6249 9111",
@@ -100,16 +101,16 @@ layer_cfg = [
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
-        "name": "WOFLS",
-        "title": "Water_Observation_Feature_Layers",
-        "abstract": "WOFLs",
+        "name": "WOfS",
+        "title": "Water_Observation_from_Space",
+        "abstract": "WOfS",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
         "products": [
             {
-            # Included as a keyword  for the layer
+                # Included as a keyword  for the layer
                 "label": "WOFLs",
                 # Included as a keyword  for the layer
                 "type": "albers",
@@ -150,7 +151,7 @@ layer_cfg = [
                     "noncontiguous",
                 ],
                 "data_manual_merge": False,
-                "always_fetch_bands": [ ],
+                "always_fetch_bands": [],
                 "apply_solar_corrections": False,
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
@@ -289,6 +290,71 @@ layer_cfg = [
                 "default_style": "water",
 
             },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS_Summary",
+                # Included as a keyword  for the layer
+                "type": "WOfS_Summary",
+                # Included as a keyword  for the layer
+                "variant": "Summary",
+                # The WMS name for the layer
+                "name": "wofs_summary",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_summary",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "wofs_albers",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "water",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 500.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+
+                "styles": [
+                    {
+                        "name": "WOfS_frequency",
+                        "title": " Wet and Dry Count",
+                        "abstract": "WOfS summary determinig the count_wet and count_clear for WOfS product",
+                        "heat_mapped": True,
+                        "index_function": lambda data: data["frequency"] * 0.0 + 0.25,
+                        "needed_bands": ["frequency"],
+                        "range": [0.0, 1.0],
+
+                        "components": {
+                            "red": {
+                                "frequency": 0.0
+                            },
+                            "green": {
+                                "frequency": 0.0
+                            },
+                            "blue": {
+                                "frequency": 1.0
+                            }
+                        },
+                        "scale_range": [0, 3]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "WOfS_frequency",
+            }
 
         ],
     },

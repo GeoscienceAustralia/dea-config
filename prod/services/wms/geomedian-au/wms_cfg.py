@@ -101,7 +101,7 @@ layer_cfg = [
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Geomedian_AU_NBART",
-        "title": "Geomedian_au_nbart_surface_reflectance",
+        "title": "DEA geomedian terrain corrected surface reflectance",
         "abstract": "Images from the Geomedian Surface Reflectance on Level2 Products",
 
         # Products available for this platform.
@@ -112,7 +112,7 @@ layer_cfg = [
             # Included as a keyword  for the layer
                 "label": "LANDSAT_8",
                 # Included as a keyword  for the layer
-                "type": "SR",
+                "type": "nbart",
                 # Included as a keyword  for the layer
                 "variant": "Level 2",
                 # The WMS name for the layer
