@@ -67,6 +67,8 @@ service_cfg = {
         }
     },
     "native_wcs_format": "GeoTIFF",
+    "wcs": True,
+    "wns": True
 }
 layer_cfg = [
     {
