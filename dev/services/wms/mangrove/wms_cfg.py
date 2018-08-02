@@ -67,6 +67,7 @@ service_cfg = {
         }
     },
     "native_wcs_format": "GeoTIFF",
+    "default_geographic_CRS": "EPSG:4326",
     "wcs": True,
     "wns": True
 }
