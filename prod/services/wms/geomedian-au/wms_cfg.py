@@ -11,7 +11,7 @@ service_cfg = {
 
     ## Required config for WMS and/or WCS
     # Service title - appears e.g. in Terria catalog
-    "title": "WMS server for Australian Landsat Datacube",
+    "title": "DEA Surface Reflectance 25m Geomedian",
     # Service URL.  Should a fully qualified URL
     "url": "https://geomedianau.dea.ga.gov.au/",
 
@@ -68,7 +68,15 @@ service_cfg = {
     "max_height": 512,
 
     # Optional config for all services (WMS and/or WCS) - may be set to blank/empty, no defaults
-    "abstract": """Historic Landsat imagery for Australia.""",
+    "abstract": "Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a "
+                "shaded region. The surface reflectance geometric median (geomedian) is a pixel composite mosaic of "
+                "a time series of earth observations. The value of a pixel in a an annual geomedian image is the "
+                "statistical median of all observations for that pixel from a calendar year. "
+                "Annual mosaics are available for the following years: "
+                "Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; "
+                "Landsat 7: 2000 to 2017; "
+                "Landsat 8: 2013 to 2017; "
+                "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374",
     "keywords": [
         "geomedian"
         "landsat",
@@ -76,9 +84,9 @@ service_cfg = {
         "time-series",
     ],
     "contact_info": {
-        "person": "Digital Earth Australia",
+        "person": "",
         "organisation": "Geoscience Australia",
-        "position": "",
+        "position": "Client Services",
         "address": {
             "type": "postal",
             "address": "GPO Box 378",
@@ -89,10 +97,12 @@ service_cfg = {
         },
         "telephone": "+61 2 6249 9111",
         "fax": "",
-        "email": "earth.observation@ga.gov.au",
+        "email": "client.services@ga.gov.au",
     },
-    "fees": "",
-    "access_constraints": "",
+    "fees": "none",
+    "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. " 
+                          "This product is released under the Creative Commons Attribution 4.0 International Licence. " 
+                          "http://creativecommons.org/licenses/by/4.0/legalcode",
 }
 
 layer_cfg = [
@@ -101,8 +111,16 @@ layer_cfg = [
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Geomedian_AU_NBART",
-        "title": "DEA geomedian terrain corrected surface reflectance",
-        "abstract": "Images from the Geomedian Surface Reflectance on Level2 Products",
+        "title": "DEA Surface Reflectance",
+        "abstract": "Data is only visible at higher resolutions; when zoomed-out the available area will be displayed "
+                    "as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite "
+                    "mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian "
+                    "image is the statistical median of all observations for that pixel from a calendar year. "
+                    "Annual mosaics are available for the following years: "
+                    "Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; "
+                    "Landsat 7: 2000 to 2017; "
+                    "Landsat 8: 2013 to 2017; "
+                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -110,11 +128,11 @@ layer_cfg = [
         "products": [
             {
             # Included as a keyword  for the layer
-                "label": "LANDSAT_8",
+                "label": "Landsat 8",
                 # Included as a keyword  for the layer
-                "type": "nbart",
+                "type": "Annual Geomedian",
                 # Included as a keyword  for the layer
-                "variant": "Level 2",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "ls8_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
@@ -462,11 +480,11 @@ layer_cfg = [
             },
             {
                 # Included as a keyword  for the layer
-                "label": "LANDSAT_7",
+                "label": "Landsat 7",
                 # Included as a keyword  for the layer
-                "type": "nbart",
+                "type": "Annual Geomedian",
                 # Included as a keyword  for the layer
-                "variant": "Level 2",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "ls7_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
@@ -739,11 +757,11 @@ layer_cfg = [
             },
             {
                 # Included as a keyword  for the layer
-                "label": "LANDSAT_5",
+                "label": "Landsat 5",
                 # Included as a keyword  for the layer
-                "type": "nbart",
+                "type": "Annual Geomedian",
                 # Included as a keyword  for the layer
-                "variant": "Level 2",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "ls5_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
