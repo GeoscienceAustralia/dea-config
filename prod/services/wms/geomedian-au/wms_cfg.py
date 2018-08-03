@@ -11,7 +11,7 @@ service_cfg = {
 
     ## Required config for WMS and/or WCS
     # Service title - appears e.g. in Terria catalog
-    "title": "DEA Surface Reflectance 25m Geomedian",
+    "title": "Digital Earth Australia Surface Reflectance 25m Geomedian",
     # Service URL.  Should a fully qualified URL
     "url": "https://geomedianau.dea.ga.gov.au/",
 
@@ -111,7 +111,7 @@ layer_cfg = [
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Geomedian_AU_NBART",
-        "title": "DEA Surface Reflectance",
+        "title": "Surface Reflectance",
         "abstract": "Data is only visible at higher resolutions; when zoomed-out the available area will be displayed "
                     "as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite "
                     "mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian "
