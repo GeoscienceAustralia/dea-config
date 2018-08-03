@@ -6,7 +6,7 @@ response_cfg = {
 
 service_cfg = {
     # Required config
-    "title": "DEA Near Realtime Sentinel 2",
+    "title": "Digital Earth Australia Near Real-Time Surface Reflectance",
     "url": "http://nrt-au.dea.ga.gov.au",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
@@ -70,7 +70,7 @@ layer_cfg = [
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Sentinel-2 NRT",
-        "title": "Sentinel-2 Near Real-Time Surface Reflectance",
+        "title": "Near Real-Time",
         "abstract": "This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. "
                     "Data is only visible at higher resolutions: when zoomed-out the available areas for that day "
                     "will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data "
@@ -84,11 +84,11 @@ layer_cfg = [
         "products": [
             {
                 # Included as a keyword  for the layer
-                "label": "NBAR-T",
+                "label": "Sentinel 2B",
                 # Included as a keyword  for the layer
-                "type": "ard",
+                "type": "",
                 # Included as a keyword  for the layer
-                "variant": "S2B-MSI",
+                "variant": "Surface Reflectance",
                 # The WMS name for the layer
                 "name": "s2b_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
@@ -419,11 +419,11 @@ layer_cfg = [
             },
             {
                 # Included as a keyword  for the layer
-                "label": "NBAR-T",
+                "label": "Sentinel 2A",
                 # Included as a keyword  for the layer
-                "type": "ard",
+                "type": "",
                 # Included as a keyword  for the layer
-                "variant": "S2A-MSI",
+                "variant": "Surface Reflectance",
                 # The WMS name for the layer
                 "name": "s2a_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
