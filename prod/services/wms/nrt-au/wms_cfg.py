@@ -6,7 +6,7 @@ response_cfg = {
 
 service_cfg = {
     # Required config
-    "title": "WMS server for Near Realtime Sentinel 2",
+    "title": "Digital Earth Australia Near Real-Time Surface Reflectance",
     "url": "http://nrt-au.dea.ga.gov.au",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
@@ -31,16 +31,21 @@ service_cfg = {
     "max_height": 512,
 
     # Optional config - may be set to blank/empty
-    "abstract": """Near Realtime Sentinel 2 imagery of Australia""",
+    "abstract": "This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. "
+                "Data is only visible at higher resolutions: when zoomed-out the available areas for that day "
+                "will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data "
+                "that is processed on receipt using the best-available ancillary information at the time to "
+                "provide atmospheric corrections. For more information see "
+                "http://pid.geoscience.gov.au/dataset/ga/122229",
     "keywords": [
         "sentinel",
         "australia",
         "time-series",
     ],
     "contact_info": {
-        "person": "Digital Earth Australia",
+        "person": "",
         "organisation": "Geoscience Australia",
-        "position": "",
+        "position": "Client Services",
         "address": {
             "type": "postal",
             "address": "GPO Box 378",
@@ -51,10 +56,12 @@ service_cfg = {
         },
         "telephone": "+61 2 6249 9111",
         "fax": "",
-        "email": "earth.observation@ga.gov.au",
+        "email": "clientservices@ga.gov.au",
     },
-    "fees": "",
-    "access_constraints": "",
+    "fees": "none",
+    "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. "
+                          "This product is released under the Creative Commons Attribution 4.0 International Licence. "
+                          "http://creativecommons.org/licenses/by/4.0/legalcode"
 }
 
 layer_cfg = [
@@ -62,9 +69,14 @@ layer_cfg = [
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
-        "name": "Sentinel-2-NRT",
-        "title": "Sentinel-2-NRT",
-        "abstract": "Sentinel 2 NRT data",
+        "name": "Sentinel-2 NRT",
+        "title": "Near Real-Time",
+        "abstract": "This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. "
+                    "Data is only visible at higher resolutions: when zoomed-out the available areas for that day "
+                    "will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data "
+                    "that is processed on receipt using the best-available ancillary information at the time to "
+                    "provide atmospheric corrections. For more information see "
+                    "http://pid.geoscience.gov.au/dataset/ga/122229",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -72,11 +84,11 @@ layer_cfg = [
         "products": [
             {
                 # Included as a keyword  for the layer
-                "label": "NBAR-T",
+                "label": "Sentinel 2B",
                 # Included as a keyword  for the layer
-                "type": "ard",
+                "type": "",
                 # Included as a keyword  for the layer
-                "variant": "S2B-MSI",
+                "variant": "Surface Reflectance",
                 # The WMS name for the layer
                 "name": "s2b_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
@@ -407,11 +419,11 @@ layer_cfg = [
             },
             {
                 # Included as a keyword  for the layer
-                "label": "NBAR-T",
+                "label": "Sentinel 2A",
                 # Included as a keyword  for the layer
-                "type": "ard",
+                "type": "",
                 # Included as a keyword  for the layer
-                "variant": "S2A-MSI",
+                "variant": "Surface Reflectance",
                 # The WMS name for the layer
                 "name": "s2a_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
