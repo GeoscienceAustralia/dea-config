@@ -28,8 +28,8 @@ storage:
 measurements:
     - name: canopy_cover_class
       units: "1"
-      dtype: int8
-      nodata: -1
+      dtype: uint8
+      nodata: 255
       aliases: ["cover"]
       flags_definition:
         woodland:
@@ -46,6 +46,6 @@ measurements:
           values: {3: true}
     - name: extent
       units: "1"
-      dtype: int8
-      nodata: -1
+      dtype: uint8
+      nodata: 255
       aliases: ["extent"]
