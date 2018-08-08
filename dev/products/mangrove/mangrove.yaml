@@ -28,24 +28,24 @@ storage:
 measurements:
     - name: canopy_cover_class
       units: "1"
-      dtype: uint8
-      nodata: 255
+      dtype: int16
+      nodata: -1
       aliases: ["cover"]
       flags_definition:
         woodland:
-          bits: [7, 6, 5, 4, 3, 2, 1, 0]
+          bits: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
           description: Woodland
           values: {1: true}
         open_forest:
-          bits: [7, 6, 5, 4, 3, 2, 1, 0]
+          bits: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
           description: Open Forest
           values: {2: true}
         closed_forest:
-          bits: [7, 6, 5, 4, 3, 2, 1, 0]
+          bits: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
           description: Closed Forest
           values: {3: true}
     - name: extent
       units: "1"
-      dtype: uint8
-      nodata: 255
+      dtype: int16
+      nodata: -1
       aliases: ["extent"]
