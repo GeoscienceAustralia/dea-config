@@ -137,15 +137,6 @@ layer_cfg = [
                 "name": "ls8_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
                 "product_name": "ls8_nbart_geomedian_annual",
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "ls8_level1_usgs",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_manual_data_merge": True,
-                # "data_manual_merge": True,
-                # "pq_band": "quality",
-                # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
                 "min_zoom_factor": 500.0,
@@ -163,21 +154,9 @@ layer_cfg = [
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
-                "data_manual_merge": True,
+                "data_manual_merge": False,
                 "always_fetch_bands": [ ],
                 "apply_solar_corrections": False,
-                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
-                # If None or not specified, the product has no sub-layers.
-                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
-                # A prefix used to describe the sub-layer in the GetCapabilities response.
-                # E.g. sub-layer 109 will be described as "Landsat Path 109"
-                # "sub_product_label": "Landsat Path",
-
-                # Bands to include in time-dimension "pixel drill".
-                # Don't activate in production unless you really know what you're doing.
-                # "band_drill": ["nir", "red", "green", "blue"],
-
-                # Styles.
                 #
                 # See band_mapper.py
                 #
@@ -373,80 +352,6 @@ layer_cfg = [
                         "needed_bands": ["swir2", "nir"],
                         "range": [0.0, 1.0],
                     },
-                    # Mask layers - examples of how to display raw pixel quality data.
-                    # This works by creatively mis-using the Heatmap style class.
-                    # {
-                    #    "name": "cloud_mask",
-                    #    "title": "Cloud Mask",
-                    #    "abstract": "Highlight pixels with cloud.",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.1,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    # Mask flags normally describe which areas SHOULD be shown.
-                        # (i.e. pixels for which any of the declared flags are true)
-                        # pq_mask_invert is intended to invert this logic.
-                        # (i.e. pixels for which none of the declared flags are true)
-                        #
-                        # i.e. Specifying like this shows pixels which are not clouds in either metric.
-                        #      Specifying "cloud" and setting the "pq_mask_invert" to False would
-                        #      show pixels which are not clouds in both metrics.
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "cloud": False,
-                    #            }
-                    #        }
-                    #    ],
-                    # },
-                    # {
-                    #    "name": "cloud_acca",
-                    #    "title": "Cloud acca Mask",
-                    #    "abstract": "Highlight pixels with cloud.",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.4,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "cloud": True,
-                    #            }
-                    #        }
-                    #    ],
-                    # },
-                    # {
-                    #    "name": "cloud_fmask",
-                    #    "title": "Cloud fmask Mask",
-                    #    "abstract": "Highlight pixels with cloud.",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.8,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "cloud_fmask": "cloud",
-                    #            },
-                    #        },
-                    #    ],
-                    # },
-                    # {
-                    #    "name": "contiguous_mask",
-                    #    "title": "Contiguous Data Mask",
-                    #    "abstract": "Highlight pixels with non-contiguous data",
-                    #    "heat_mapped": True,
-                    #    "index_function": lambda data: data["red"] * 0.0 + 0.3,
-                    #    "needed_bands": ["red"],
-                    #    "range": [0.0, 1.0],
-                    #    "pq_masks": [
-                    #        {
-                    #            "flags": {
-                    #                "contiguous": False
-                    #            },
-                    #        },
-                    #    ],
-                    # },
                     # Hybrid style - mixes a linear mapping and a heat mapped index
                     {
                         "name": "rgb_ndvi",
@@ -489,15 +394,6 @@ layer_cfg = [
                 "name": "ls7_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
                 "product_name": "ls7_nbart_geomedian_annual",
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "ls8_level1_usgs",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_manual_data_merge": True,
-                # "data_manual_merge": True,
-                # "pq_band": "quality",
-                # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
                 "min_zoom_factor": 500.0,
@@ -515,20 +411,9 @@ layer_cfg = [
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
-                "data_manual_merge": True,
+                "data_manual_merge": False,
                 "always_fetch_bands": [],
                 "apply_solar_corrections": False,
-                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
-                # If None or not specified, the product has no sub-layers.
-                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
-                # A prefix used to describe the sub-layer in the GetCapabilities response.
-                # E.g. sub-layer 109 will be described as "Landsat Path 109"
-                # "sub_product_label": "Landsat Path",
-
-                # Bands to include in time-dimension "pixel drill".
-                # Don't activate in production unless you really know what you're doing.
-                # "band_drill": ["nir", "red", "green", "blue"],
-
                 # Styles.
                 #
                 # See band_mapper.py
@@ -766,15 +651,6 @@ layer_cfg = [
                 "name": "ls5_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
                 "product_name": "ls5_nbart_geomedian_annual",
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "ls8_level1_usgs",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_manual_data_merge": True,
-                # "data_manual_merge": True,
-                # "pq_band": "quality",
-                # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
                 "min_zoom_factor": 500.0,
@@ -792,20 +668,9 @@ layer_cfg = [
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
-                "data_manual_merge": True,
+                "data_manual_merge": False,
                 "always_fetch_bands": [],
                 "apply_solar_corrections": False,
-                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
-                # If None or not specified, the product has no sub-layers.
-                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
-                # A prefix used to describe the sub-layer in the GetCapabilities response.
-                # E.g. sub-layer 109 will be described as "Landsat Path 109"
-                # "sub_product_label": "Landsat Path",
-
-                # Bands to include in time-dimension "pixel drill".
-                # Don't activate in production unless you really know what you're doing.
-                # "band_drill": ["nir", "red", "green", "blue"],
-
                 # Styles.
                 #
                 # See band_mapper.py
@@ -971,6 +836,34 @@ layer_cfg = [
                             }
                         },
                         "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "heat_mapped": True,
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        # Areas where the index_function returns outside the range are masked.
+                        "range": [0.0, 1.0],
+                    },
+                    {
+                        "name": "ndwi",
+                        "title": "NDWI",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "heat_mapped": True,
+                        "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
+                        "needed_bands": ["green", "nir"],
+                        "range": [0.0, 1.0],
+                    },
+                    {
+                        "name": "ndbi",
+                        "title": "NDBI",
+                        "abstract": "Normalised Difference Buildup Index - a derived index that correlates with the existence of urbanisation",
+                        "heat_mapped": True,
+                        "index_function": lambda data: (data["swir2"] - data["nir"]) / (data["swir2"] + data["nir"]),
+                        "needed_bands": ["swir2", "nir"],
+                        "range": [0.0, 1.0],
                     },
                     {
                         "name": "rgb_ndvi",
