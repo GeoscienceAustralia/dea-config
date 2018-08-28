@@ -6,14 +6,14 @@ response_cfg = {
 
 service_cfg = {
     ## Which web service(s) should be supported by this instance
-    "wcs": False,
+    "wcs": True,
     "wms": True,
 
     ## Required config for WMS and/or WCS
     # Service title - appears e.g. in Terria catalog
     "title": "WMS server for Australian NBART Datacube products",
     # Service URL.  Should a fully qualified URL
-    "url": "https://ows.wms.gadevs.ga",
+    "url": "https://ows.devkube.services.dea.ga.gov.au",
 
     # Supported co-ordinate reference systems
     "published_CRSs": {
@@ -95,6 +95,8 @@ service_cfg = {
     },
     "fees": "",
     "access_constraints": "",
+    "preauthenticate_s3": True,
+    "geotiff_georeference_source": "INTERNAL"
 }
 
 layer_cfg = [
@@ -123,7 +125,7 @@ layer_cfg = [
                 "pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -216,7 +218,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -493,7 +495,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -770,7 +772,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1008,7 +1010,7 @@ layer_cfg = [
                 "variant": "Level 3",
                 "name": "mangrove_cover",
                 "product_name": "mangrove_cover",
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
@@ -1099,7 +1101,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [200, 180, 180, 160],
@@ -1276,7 +1278,7 @@ layer_cfg = [
                 #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
