@@ -303,13 +303,13 @@ layer_cfg = [
                 "product_name": "wofs_summary",
                 # The Datacube name for the associated pixel-quality product (optional)
                 # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "wofs_albers",
+                #"pq_dataset": "wofs_albers",
                 # The name of the measurement band for the pixel-quality product
                 # (Only required if pq_dataset is set)
-                # "pq_band": "water",
+                #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -319,7 +319,7 @@ layer_cfg = [
                 "time_zone": 9,
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                "extent_mask_func": lambda data, band: ((data['frequency'] >= 0.01).astype('bool') & (data['frequency'] != data['frequency'].attrs['nodata']).astype('bool')),
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
@@ -329,11 +329,8 @@ layer_cfg = [
                         "name": "WOfS_frequency",
                         "title": " Wet and Dry Count",
                         "abstract": "WOfS summary determinig the count_wet and count_clear for WOfS product",
-                        "heat_mapped": True,
-                        "index_function": lambda data: data["frequency"] * 0.0 + 0.25,
                         "needed_bands": ["frequency"],
-                        "range": [0.0, 1.0],
-
+                        "scale_range": [0.01, 1.0],
                         "components": {
                             "red": {
                                 "frequency": 0.0
@@ -345,7 +342,6 @@ layer_cfg = [
                                 "frequency": 1.0
                             }
                         },
-                        "scale_range": [0, 3]
                     }
                 ],
                 # Default style (if request does not specify style)

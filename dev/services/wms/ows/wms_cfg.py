@@ -1288,7 +1288,7 @@ layer_cfg = [
                 "time_zone": 9,
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                "extent_mask_func": lambda data, band: ((data['frequency'] >= 0.01).astype('bool') & (data['frequency'] != data['frequency'].attrs['nodata']).astype('bool')),
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
@@ -1298,11 +1298,8 @@ layer_cfg = [
                         "name": "WOfS_frequency",
                         "title": " Wet and Dry Count",
                         "abstract": "WOfS summary determinig the count_wet and count_clear for WOfS product",
-                        "heat_mapped": True,
-                        "index_function": lambda data: data["frequency"] * 0.0 + 0.25,
                         "needed_bands": ["frequency"],
-                        "range": [0.0, 1.0],
-
+                        "scale_range": [0.01, 1.0],
                         "components": {
                             "red": {
                                 "frequency": 0.0
@@ -1314,7 +1311,6 @@ layer_cfg = [
                                 "frequency": 1.0
                             }
                         },
-                        "scale_range": [0, 3]
                     }
                 ],
                 # Default style (if request does not specify style)
