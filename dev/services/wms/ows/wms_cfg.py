@@ -1,5 +1,11 @@
 # Static config for the wms metadata.
 
+from colour import Color
+from bisect import bisect
+import xarray
+import numpy as np
+from functools import partial
+
 response_cfg = {
     "Access-Control-Allow-Origin": "*",  # CORS header
 }
