@@ -1288,7 +1288,7 @@ layer_cfg = [
                 "time_zone": 9,
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: ((data['frequency'] >= 0.01).astype('bool') & (data['frequency'] != data['frequency'].attrs['nodata']).astype('bool')),
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
@@ -1297,20 +1297,65 @@ layer_cfg = [
                     {
                         "name": "WOfS_frequency",
                         "title": " Wet and Dry Count",
-                        "abstract": "WOfS summary determinig the count_wet and count_clear for WOfS product",
+                        "abstract": "WOfS summary showing the frequency of Wetness",
                         "needed_bands": ["frequency"],
-                        "scale_range": [0.01, 1.0],
                         "components": {
                             "red": {
-                                "frequency": 0.0
+                                "frequency": __calculate_wofs_summary_ramp__
                             },
                             "green": {
-                                "frequency": 0.0
+                                "frequency": __calculate_wofs_summary_ramp__
                             },
                             "blue": {
-                                "frequency": 1.0
+                                "frequency": __calculate_wofs_summary_ramp__
+                            },
+                            "alpha": {
+                                "frequency": __calculate_wofs_summary_ramp__
                             }
                         },
+                        "scale_range": [ 0, 255 ],
+                    },
+                    {
+                        "name": "clear_observations",
+                        "title": "Clear Observations Count",
+                        "abstract": "WOfS summary showing the count of clear observations",
+                        "needed_bands": ["count_clear"],
+                        "components": {
+                            "red": {
+                                "count_clear": __calculate_wofs_clear_ramp__
+                            },
+                            "green": {
+                                "count_clear": __calculate_wofs_clear_ramp__
+                            },
+                            "blue": {
+                                "count_clear": __calculate_wofs_clear_ramp__
+                            },
+                            "alpha": {
+                                "count_clear": __calculate_wofs_clear_ramp__
+                            }
+                        },
+                        "scale_range": [ 0, 255 ],
+                    },
+                    {
+                        "name": "water_observations",
+                        "title": "Water Observations Count",
+                        "abstract": "WOfS summary showing the count of water observations",
+                        "needed_bands": ["count_wet"],
+                        "components": {
+                            "red": {
+                                "count_wet": __calculate_wofs_water_ramp__
+                            },
+                            "green": {
+                                "count_wet": __calculate_wofs_water_ramp__
+                            },
+                            "blue": {
+                                "count_wet": __calculate_wofs_water_ramp__
+                            },
+                            "alpha": {
+                                "count_wet": __calculate_wofs_water_ramp__
+                            }
+                        },
+                        "scale_range": [ 0, 255 ],
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -1325,3 +1370,250 @@ layer_cfg = [
     },
 
 ]
+
+__ramp_values__ = [
+    {
+        "value": 0.002,
+        "color": "#000000",
+        "alpha": 0.0
+    },
+    {
+        "value": 0.005,
+        "color": "#8e0101",
+        "alpha": 0.25
+    },
+    {
+        "value": 0.01,
+        "color": "#cf2200",
+        "alpha": 0.75
+    },
+    {
+        "value": 0.02,
+        "color": "#e38400"
+    },
+    {
+        "value": 0.05,
+        "color": "#e3df00"
+    },
+    {
+        "value": 0.1,
+        "color": "#a6e300"
+    },
+    {
+        "value": 0.2,
+        "color": "#62e300"
+    },
+    {
+        "value": 0.3,
+        "color": "#00e32d"
+    },
+    {
+        "value": 0.4,
+        "color": "#00e384"
+    },
+    {
+        "value": 0.5,
+        "color": "#00e3c8"
+    },
+    {
+        "value": 0.6,
+        "color": "#00c5e3"
+    },
+    {
+        "value": 0.7,
+        "color": "#0097e3"
+    },
+    {
+        "value": 0.8,
+        "color": "#005fe3"
+    },
+    {
+        "value": 0.9,
+        "color": "#000fe3"
+    },
+    {
+        "value": 1.0,
+        "color": "#5700e3"
+    }
+]
+
+__clear_ramp_values__ = [
+    {
+        "value": 0,
+        "color": "#FFFFFF",
+        "alpha": 0
+    },
+    {
+        "value": 10,
+        "color": "#B21800"
+    },
+    {
+        "value": 25,
+        "color": "#FF4400"
+    },
+    {
+        "value": 50,
+        "color": "#FF8000"
+    },
+    {
+        "value": 100,
+        "color": "#FFA200"
+    },
+    {
+        "value": 150,
+        "color": "#FFC000"
+    },
+    {
+        "value": 200,
+        "color": "#FFD500"
+    },
+    {
+        "value": 250,
+        "color": "#FFF300"
+    },
+    {
+        "value": 300,
+        "color": "#E6FF00"
+    },
+    {
+        "value": 350,
+        "color": "#BCFF00"
+    },
+    {
+        "value": 400,
+        "color": "#89FF00"
+    },
+    {
+        "value": 500,
+        "color": "#68C400"
+    },
+    {
+        "value": 600,
+        "color": "#44C400"
+    },
+    {
+        "value": 700,
+        "color": "#03B500"
+    },
+    {
+        "value": 800,
+        "color": "#039500"
+    },
+    {
+        "value": 1000,
+        "color": "#026900"
+    }
+]
+
+__water_ramp_values__ = [
+    {
+        "value": 0,
+        "color": "#666666",
+        "alpha": 0
+    },
+    {
+        "value": 2,
+        "color": "#890000"
+    },
+    {
+        "value": 5,
+        "color": "#990000"
+    },
+    {
+        "value": 10,
+        "color": "#E38400"
+    },
+    {
+        "value": 25,
+        "color": "#E3DF00"
+    },
+    {
+        "value": 50,
+        "color": "#A6E300"
+    },
+    {
+        "value": 100,
+        "color": "#00E32D"
+    },
+    {
+        "value": 150,
+        "color": "#00E3C8"
+    },
+    {
+        "value": 200,
+        "color": "#0097E3"
+    },
+    {
+        "value": 250,
+        "color": "#005FE3"
+    },
+    {
+        "value": 300,
+        "color": "#000FE3"
+    },
+    {
+        "value": 350,
+        "color": "#000EA9"
+    },
+    {
+        "value": 400,
+        "color": "#5700E3"
+    }
+]
+
+def __generate_color_ramp__(ramp_values, delta):
+    def frange(start, stop, step):
+        i = start
+        while i < stop:
+            yield i
+            i += step
+    from colour import Color
+    values = []
+    ramp = []
+    alpha = []
+    low = None
+    high = None
+    for i, pair in enumerate(ramp_values):
+        if i == 0:
+            low = pair
+            continue
+        high = pair
+        prev = len(values)
+        alpha_low = low.get("alpha", 1.0)
+        alpha_high = high.get("alpha", 1.0)
+        values.extend(frange(low["value"], high["value"], delta))
+        if alpha_high != alpha_low:
+            alpha_range = frange(alpha_low, alpha_high, (alpha_high - alpha_low) / delta)
+        else:
+            alpha_range = [1.0 for i in range(len(values))]
+        ramp.extend(Color(low["color"]).range_to(Color(high["color"]), len(values) - prev))
+        alpha.extend(alpha_range)
+        low = pair
+    return zip(values, ramp, alpha)
+
+__wofs_summary_ramp__ = __generate_color_ramp__(__ramp_values__, 0.01)
+__clear_summary_ramp__ = __generate_color_ramp__(__clear_ramp_values__, 5)
+__water_summary_ramp__ = __generate_color_ramp__(__water_ramp_values__, 1)
+
+def __get_calculate_summary_ramp__(ramp_values, ramp_colors, ramp_alpha):
+    def calculate_ramp(data, band, imgband):
+        def process(values, colors, alpha, imgband, data):
+            i = bisect(values, data)
+            i = i if i < len(colors) else i - 1
+            c = colors[i]
+            a = alpha[i]
+            val = a if imgband is "alpha" else getattr(c, imgband)
+            return (val * 255.0)
+
+        p = partial(process, ramp_values, ramp_colors, ramp_alpha, imgband)
+
+        ramped = data.copy(deep=True)
+        ramped.values = np.vectorize(p)(data.values)
+        return ramped
+
+    return calculate_ramp
+
+__calculate_wofs_summary_ramp__ = __get_calculate_summary_ramp__(*zip(*__wofs_summary_ramp__))
+__calculate_wofs_clear_ramp__ = __get_calculate_summary_ramp__(*zip(*__clear_summary_ramp__))
+__calculate_wofs_water_ramp__ = __get_calculate_summary_ramp__(*zip(*__water_summary_ramp__))
+
