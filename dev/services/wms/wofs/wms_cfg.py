@@ -4,6 +4,7 @@ from bisect import bisect
 import xarray
 import numpy as np
 from functools import partial
+import math
 
 response_cfg = {
     "Access-Control-Allow-Origin": "*",  # CORS header
@@ -328,6 +329,8 @@ __water_summary_ramp__ = __generate_color_ramp__(__water_ramp_values__, 1)
 def __get_calculate_summary_ramp__(ramp_values, ramp_colors, ramp_alpha):
     def calculate_ramp(data, band, imgband):
         def process(values, colors, alpha, imgband, data):
+            if math.isnan(data):
+                return data
             i = bisect(values, data)
             i = i if i < len(colors) else i - 1
             c = colors[i]
