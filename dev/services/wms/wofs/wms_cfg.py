@@ -1,6 +1,6 @@
 # Static config for the wms metadata.
 from colour import Color
-from bisect import bisect
+from bisect import bisect_left
 import xarray
 import numpy as np
 from functools import partial
@@ -316,7 +316,8 @@ def __generate_color_ramp__(ramp_values, delta):
         if alpha_high != alpha_low:
             alpha_range = frange(alpha_low, alpha_high, (alpha_high - alpha_low) / delta)
         else:
-            alpha_range = [1.0 for i in range(len(values))]
+            alpha_val = alpha_high
+            alpha_range = [alpha_val for i in range(len(values))]
         ramp.extend(Color(low["color"]).range_to(Color(high["color"]), len(values) - prev))
         alpha.extend(alpha_range)
         low = pair
@@ -331,8 +332,8 @@ def __get_calculate_summary_ramp__(ramp_values, ramp_colors, ramp_alpha):
         def process(values, colors, alpha, imgband, data):
             if math.isnan(data):
                 return data
-            i = bisect(values, data)
-            i = i if i < len(colors) else i - 1
+            i = bisect_left(values, data)
+            i = i if i < len(values) else i - 1
             c = colors[i]
             a = alpha[i]
             val = a if imgband is "alpha" else getattr(c, imgband)
