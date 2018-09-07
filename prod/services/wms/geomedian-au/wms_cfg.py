@@ -13,7 +13,7 @@ service_cfg = {
     # Service title - appears e.g. in Terria catalog
     "title": "Digital Earth Australia Surface Reflectance 25m Geomedian",
     # Service URL.  Should a fully qualified URL
-    "url": "https://geomedianau.dea.ga.gov.au/",
+    "url": "https://geomedian.services.dea.ga.gov.au",
 
     # Supported co-ordinate reference systems
     "published_CRSs": {
