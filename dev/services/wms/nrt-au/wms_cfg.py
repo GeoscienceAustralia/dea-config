@@ -12,7 +12,7 @@ service_cfg = {
 
     # Required config
     "title": "OGC server for Near Realtime Sentinel 2",
-    "url": "https://nrt-au.wms.gadevs.ga",
+    "url": "https://nrt.services.devkube.dea.ga.gov.au",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
             "geographic": False,
