@@ -6,7 +6,7 @@ response_cfg = {
 
 service_cfg = {
     ## Which web service(s) should be supported by this instance
-    "wcs": False,
+    "wcs": True,
     "wms": True,
 
     ## Required config for WMS and/or WCS
