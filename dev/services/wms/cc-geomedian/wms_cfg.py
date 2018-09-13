@@ -9,7 +9,7 @@ response_cfg = {
 service_cfg = {
     # Required config
     "title": "WMS server for Australian Geomedian Level2 Product Datacube",
-    "url": "http://9xjfk12.nexus.csiro.au/datacube_wms",
+    "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
             "geographic": False,
@@ -93,7 +93,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 25.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
