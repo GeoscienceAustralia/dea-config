@@ -8,7 +8,7 @@ response_cfg = {
 
 service_cfg = {
     # Required config
-    "title": "WMS server for Australian Geomedian Level2 Product Datacube",
+    "title": "WMS server for Cambodia Datacube",
     "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
@@ -32,16 +32,16 @@ service_cfg = {
     "max_height": 512,
 
     # Optional config - may be set to blank/empty
-    "abstract": """Historic Landsat imagery for Australia.""",
+    "abstract": """Historic Landsat imagery for Cambodia.""",
     "keywords": [
         "Geomedian",
-        "australia",
+        "cambodia",
         "time-series",
     ],
     "contact_info": {
-        "person": "David Gavin",
+        "person": "",
         "organisation": "Geoscience Australia",
-        "position": "Technical Lead",
+        "position": "Client Services",
         "address": {
             "type": "postal",
             "address": "GPO Box 378",
@@ -50,12 +50,13 @@ service_cfg = {
             "postcode": "2906",
             "country": "Australia",
         },
-        "telephone": "+61 2 1234 5678",
-        "fax": "+61 2 1234 6789",
-        "email": "test@example.com",
+        "telephone": "+61 2 6249 9111",
+        "fax": "",
+        "email": "client.services@ga.gov.au",
     },
     "fees": "",
     "access_constraints": "",
+    "preauthenticate_s3": True,
 }
 
 layer_cfg = [
