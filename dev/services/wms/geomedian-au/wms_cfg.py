@@ -178,25 +178,8 @@ layer_cfg = [
                         "scale_range": [0.0, 3000.0]
                     },
                     {
-                        "name": "infra_red",
-                        "title": "False colour multi-band infra-red",
-                        "abstract": "Simple false-colour image, using the near and short-wave infra-red bands",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "swir2": 1.0
-                            },
-                            "blue": {
-                                "nir": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
                         "name": "infrared_green",
-                        "title": "False colour SWIR, NIR and green",
+                        "title": "False colour - Green, SWIR, NIR",
                         "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
                         "components": {
                             "red": {
@@ -211,161 +194,99 @@ layer_cfg = [
                         },
                         "scale_range": [0.0, 3000.0]
                     },
-                    {
-                        "name": "blue",
-                        "title": "Spectral band 2 - Blue",
-                        "abstract": "Blue band, approximately 453nm to 511nm",
-                        "components": {
-                            "red": {
-                                "blue": 1.0
-                            },
-                            "green": {
-                                "blue": 1.0
-                            },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Spectral band 3 - Green",
-                        "abstract": "Green band, approximately 534nm to 588nm",
-                        "components": {
-                            "red": {
-                                "green": 1.0
-                            },
-                            "green": {
-                                "green": 1.0
-                            },
-                            "blue": {
-                                "green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Spectral band 4 - Red",
-                        "abstract": "Red band, roughly 637nm to 672nm",
-                        "components": {
-                            "red": {
-                                "red": 1.0
-                            },
-                            "green": {
-                                "red": 1.0
-                            },
-                            "blue": {
-                                "red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Spectral band 5 - Near infra-red",
-                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
-                        "components": {
-                            "red": {
-                                "nir": 1.0
-                            },
-                            "green": {
-                                "nir": 1.0
-                            },
-                            "blue": {
-                                "nir": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Spectral band 6 - Short wave infra-red 1",
-                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "swir1": 1.0
-                            },
-                            "blue": {
-                                "swir1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Spectral band 7 - Short wave infra-red 2",
-                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-                        "components": {
-                            "red": {
-                                "swir2": 1.0
-                            },
-                            "green": {
-                                "swir2": 1.0
-                            },
-                            "blue": {
-                                "swir2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
                     #
                     # Examples of non-linear heat-mapped styles.
                     {
                         "name": "ndvi",
-                        "title": "NDVI",
+                        "title": "NDVI - Red, NIR",
                         "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "heat_mapped": True,
                         "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
                         "needed_bands": ["red", "nir"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI",
+                        "title": "NDWI - Green, SWIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
-                        "needed_bands": ["green", "nir"],
-                        "range": [0.0, 1.0],
-                    },
-                    {
-                        "name": "ndbi",
-                        "title": "NDBI",
-                        "abstract": "Normalised Difference Buildup Index - a derived index that correlates with the existence of urbanisation",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["swir2"] - data["nir"]) / (data["swir2"] + data["nir"]),
-                        "needed_bands": ["swir2", "nir"],
-                        "range": [0.0, 1.0],
-                    },
-                    # Hybrid style - mixes a linear mapping and a heat mapped index
-                    {
-                        "name": "rgb_ndvi",
-                        "title": "NDVI plus RGB",
-                        "abstract": "Normalised Difference Vegetation Index (blended with RGB) - a derived index that correlates well with the existence of vegetation",
-                        "component_ratio": 0.6,
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
-                        "needed_bands": ["red", "nir"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
-                        "components": {
-                            "red": {
-                                "red": 1.0
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "green": 1.0
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -436,25 +357,8 @@ layer_cfg = [
                         "scale_range": [0.0, 3000.0]
                     },
                     {
-                        "name": "infra_red",
-                        "title": "False colour multi-band infra-red",
-                        "abstract": "Simple false-colour image, using the near and short-wave infra-red bands",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "swir2": 1.0
-                            },
-                            "blue": {
-                                "nir": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
                         "name": "infrared_green",
-                        "title": "False colour SWIR, NIR and green",
+                        "title": "False colour - Green, SWIR, NIR",
                         "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
                         "components": {
                             "red": {
@@ -469,160 +373,99 @@ layer_cfg = [
                         },
                         "scale_range": [0.0, 3000.0]
                     },
-                    {
-                        "name": "blue",
-                        "title": "Spectral band 2 - Blue",
-                        "abstract": "Blue band, approximately 453nm to 511nm",
-                        "components": {
-                            "red": {
-                                "blue": 1.0
-                            },
-                            "green": {
-                                "blue": 1.0
-                            },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Spectral band 3 - Green",
-                        "abstract": "Green band, approximately 534nm to 588nm",
-                        "components": {
-                            "red": {
-                                "green": 1.0
-                            },
-                            "green": {
-                                "green": 1.0
-                            },
-                            "blue": {
-                                "green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Spectral band 4 - Red",
-                        "abstract": "Red band, roughly 637nm to 672nm",
-                        "components": {
-                            "red": {
-                                "red": 1.0
-                            },
-                            "green": {
-                                "red": 1.0
-                            },
-                            "blue": {
-                                "red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Spectral band 5 - Near infra-red",
-                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
-                        "components": {
-                            "red": {
-                                "nir": 1.0
-                            },
-                            "green": {
-                                "nir": 1.0
-                            },
-                            "blue": {
-                                "nir": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Spectral band 6 - Short wave infra-red 1",
-                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "swir1": 1.0
-                            },
-                            "blue": {
-                                "swir1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Spectral band 7 - Short wave infra-red 2",
-                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-                        "components": {
-                            "red": {
-                                "swir2": 1.0
-                            },
-                            "green": {
-                                "swir2": 1.0
-                            },
-                            "blue": {
-                                "swir2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
                     #
                     # Examples of non-linear heat-mapped styles.
                     {
                         "name": "ndvi",
-                        "title": "NDVI",
+                        "title": "NDVI - Red, NIR",
                         "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "heat_mapped": True,
                         "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
                         "needed_bands": ["red", "nir"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI",
+                        "title": "NDWI - Green, SWIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
-                        "needed_bands": ["green", "nir"],
-                        "range": [0.0, 1.0],
-                    },
-                    {
-                        "name": "ndbi",
-                        "title": "NDBI",
-                        "abstract": "Normalised Difference Buildup Index - a derived index that correlates with the existence of urbanisation",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["swir2"] - data["nir"]) / (data["swir2"] + data["nir"]),
-                        "needed_bands": ["swir2", "nir"],
-                        "range": [0.0, 1.0],
-                    },
-                    {
-                        "name": "rgb_ndvi",
-                        "title": "NDVI plus RGB",
-                        "abstract": "Normalised Difference Vegetation Index (blended with RGB) - a derived index that correlates well with the existence of vegetation",
-                        "component_ratio": 0.6,
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
-                        "needed_bands": ["red", "nir"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
-                        "components": {
-                            "red": {
-                                "red": 1.0
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "green": 1.0
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -693,25 +536,8 @@ layer_cfg = [
                         "scale_range": [0.0, 3000.0]
                     },
                     {
-                        "name": "infra_red",
-                        "title": "False colour multi-band infra-red",
-                        "abstract": "Simple false-colour image, using the near and short-wave infra-red bands",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "swir2": 1.0
-                            },
-                            "blue": {
-                                "nir": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
                         "name": "infrared_green",
-                        "title": "False colour SWIR, NIR and green",
+                        "title": "False colour - Green, SWIR, NIR",
                         "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
                         "components": {
                             "red": {
@@ -726,158 +552,99 @@ layer_cfg = [
                         },
                         "scale_range": [0.0, 3000.0]
                     },
-                    {
-                        "name": "blue",
-                        "title": "Spectral band 2 - Blue",
-                        "abstract": "Blue band, approximately 453nm to 511nm",
-                        "components": {
-                            "red": {
-                                "blue": 1.0
-                            },
-                            "green": {
-                                "blue": 1.0
-                            },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Spectral band 3 - Green",
-                        "abstract": "Green band, approximately 534nm to 588nm",
-                        "components": {
-                            "red": {
-                                "green": 1.0
-                            },
-                            "green": {
-                                "green": 1.0
-                            },
-                            "blue": {
-                                "green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Spectral band 4 - Red",
-                        "abstract": "Red band, roughly 637nm to 672nm",
-                        "components": {
-                            "red": {
-                                "red": 1.0
-                            },
-                            "green": {
-                                "red": 1.0
-                            },
-                            "blue": {
-                                "red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Spectral band 5 - Near infra-red",
-                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
-                        "components": {
-                            "red": {
-                                "nir": 1.0
-                            },
-                            "green": {
-                                "nir": 1.0
-                            },
-                            "blue": {
-                                "nir": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Spectral band 6 - Short wave infra-red 1",
-                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "swir1": 1.0
-                            },
-                            "blue": {
-                                "swir1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Spectral band 7 - Short wave infra-red 2",
-                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-                        "components": {
-                            "red": {
-                                "swir2": 1.0
-                            },
-                            "green": {
-                                "swir2": 1.0
-                            },
-                            "blue": {
-                                "swir2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
+                    #
+                    # Examples of non-linear heat-mapped styles.
                     {
                         "name": "ndvi",
-                        "title": "NDVI",
+                        "title": "NDVI - Red, NIR",
                         "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "heat_mapped": True,
                         "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
                         "needed_bands": ["red", "nir"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI",
+                        "title": "NDWI - Green, SWIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
-                        "needed_bands": ["green", "nir"],
-                        "range": [0.0, 1.0],
-                    },
-                    {
-                        "name": "ndbi",
-                        "title": "NDBI",
-                        "abstract": "Normalised Difference Buildup Index - a derived index that correlates with the existence of urbanisation",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["swir2"] - data["nir"]) / (data["swir2"] + data["nir"]),
-                        "needed_bands": ["swir2", "nir"],
-                        "range": [0.0, 1.0],
-                    },
-                    {
-                        "name": "rgb_ndvi",
-                        "title": "NDVI plus RGB",
-                        "abstract": "Normalised Difference Vegetation Index (blended with RGB) - a derived index that correlates well with the existence of vegetation",
-                        "component_ratio": 0.6,
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
-                        "needed_bands": ["red", "nir"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
-                        "components": {
-                            "red": {
-                                "red": 1.0
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "green": 1.0
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
                     },
                 ],
                 # Default style (if request does not specify style)
