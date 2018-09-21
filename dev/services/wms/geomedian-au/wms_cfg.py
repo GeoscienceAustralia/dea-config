@@ -505,6 +505,12 @@ layer_cfg = [
                 "data_manual_merge": False,
                 "always_fetch_bands": [],
                 "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi", "ndwi"]
+                },
                 # Styles.
                 #
                 # See band_mapper.py
