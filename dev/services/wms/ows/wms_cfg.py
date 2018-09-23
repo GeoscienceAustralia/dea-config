@@ -919,7 +919,7 @@ layer_cfg = [
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["mangrove"]
-                }
+                },
                 "styles": [
                     {
                         "name": "mangrove",
