@@ -844,7 +844,7 @@ layer_cfg = [
                             "it is affected by noise where misclassifications have occurred in the WOfS water classifications,"
                             "and hence can be difficult to interpret on its own."
                             "The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product,"
-                            "which provide a noise-reduced view of the water summary."
+                            "which provide a noise-reduced view of the water summary.",
                 "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1112,7 +1112,7 @@ layer_cfg = [
                             "showing the frequency of water observations where the Confidence is above a cutoff level."
                             "This layer gives a noise-reduced view of surface water across Australia. "
                             "Even though confidence filtering is applied to the Filtered Water Summary,"
-                            "some cloud and shadow, and sensor noise does persist."
+                            "some cloud and shadow, and sensor noise does persist.",
 
                 "min_zoom_factor": 0.0,
                 # The fill-colour of the indicative polygons when zoomed out.
