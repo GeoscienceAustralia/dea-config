@@ -845,7 +845,10 @@ layer_cfg = [
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
-
+                "legend": {
+                    # "url": ""
+                    "styles": ["WOfS_frequency"]
+                },
                 "styles": [
                     {
                         "name": "WOfS_frequency",
@@ -1093,7 +1096,10 @@ layer_cfg = [
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
-
+                "legend": {
+                    # "url": ""
+                    "styles": ["WOfS_filtered_frequency"]
+                },
                 "styles": [
                     {
                         "name": "WOfS_filtered_frequency",
