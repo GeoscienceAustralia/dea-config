@@ -929,7 +929,7 @@ layer_cfg = [
                             "canopy_cover_class": [
                                 {
                                     "title": "Woodland",
-                                    "abstract": "Classified as woodland",
+                                    "abstract": "(20% - 50% cover)",
                                     "flags": {
                                         "woodland": True
                                     },
@@ -937,7 +937,7 @@ layer_cfg = [
                                 },
                                 {
                                     "title": "Open Forest",
-                                    "abstract": "Classified as open canopy forest",
+                                    "abstract": "(50% - 80% cover)",
                                     "flags": {
                                         "open_forest": True
                                     },
@@ -945,7 +945,7 @@ layer_cfg = [
                                 },
                                 {
                                     "title": "Closed Forest",
-                                    "abstract": "Classified as closed canopy forest",
+                                    "abstract": "(>80% cover)",
                                     "flags": {
                                         "closed_forest": True
                                     },
@@ -1221,6 +1221,165 @@ layer_cfg = [
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "WOfS_frequency",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS Filtered Summary",
+                # Included as a keyword  for the layer
+                "type": "WOfS_Filtered_Summary",
+                # Included as a keyword  for the layer
+                "variant": "Filtered Summary",
+                # The WMS name for the layer
+                "name": "wofs_filtered_summary",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_filtered_summary",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                #"pq_dataset": "wofs_albers",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                #"pq_band": "water",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 50.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+
+                "styles": [
+                    {
+                        "name": "WOfS_filtered_frequency",
+                        "title": " Wet and Dry Count, Filtered",
+                        "abstract": "WOfS filtered summary showing the frequency of Wetness",
+                        "needed_bands": ["wofs_filtered_summary"],
+                        "color_ramp": [
+                            {
+                                "value": 0.002,
+                                "color": "#000000",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.005,
+                                "color": "#8e0101",
+                                "alpha": 0.25
+                            },
+                            {
+                                "value": 0.01,
+                                "color": "#cf2200",
+                                "alpha": 0.75
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#e38400"
+                            },
+                            {
+                                "value": 0.05,
+                                "color": "#e3df00"
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#a6e300"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#62e300"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#00e32d"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#00e384"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#00e3c8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#00c5e3"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#0097e3"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#005fe3"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#000fe3"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wofs_confidence",
+                        "title": "WOfS Confidence",
+                        "abstract": "WOfS Confidence",
+                        "needed_bands": ["confidence"],
+                        "color_ramp": [
+                            {
+                                "value": 0,
+                                "color": "#FFFFFF",
+                                "alpha": 0
+                            },
+                            {
+                                "value": 0.01,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#990000"
+                            },
+                            {
+                                "value": 0.05,
+                                "color": "#CF2200"
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#E38400"
+                            },
+                            {
+                                "value": 0.25,
+                                "color": "#E3DF00"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#A6E300"
+                            },
+                            {
+                                "value": 0.75,
+                                "color": "#62E300"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#00E32D"
+                            }
+                        ]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "WOfS_filtered_frequency",
             }
 
         ],
