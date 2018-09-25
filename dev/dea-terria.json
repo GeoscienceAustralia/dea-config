@@ -62,7 +62,7 @@
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "ls8_nbart_geomedian_annual"
-            },
+            }
          ]
       },
       {
@@ -114,9 +114,9 @@
                "name": "DEA High Tide Composite 25m v2.0 polygons for access to data",
                "type": "geojson",
                "url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/high_composite_20.geojson"
-            },
+            }
          ]
-      },
+      }
       /*{
          "name": "Analysis Tools",
          "type": "group",
