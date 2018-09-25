@@ -1,0 +1,135 @@
+{
+	"catalog": [
+		{
+			"name": "GSKY Geoglam (prod)",
+			"type": "wms-getCapabilities",
+			"url": "http://gsky-geoglam.nci.org.au/ows"
+		},
+		{
+			"name": "GSKY DEA (prod)",
+			"type": "wms-getCapabilities",
+			"url": "http://gsky.nci.org.au/ows"
+		},
+		{
+			"name": "DEA Dev (K8s dev)",
+			"type": "group",
+			"preserveOrder": true,
+			"items": [
+				{
+					"name": "Mangrove Canopy Cover",
+					"type": "wms",
+					"layers": "mangrove_cover",
+					"url": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsCoverage": "mangrove_cover"
+				},
+				{
+					"name": "Water Observations from Space (Filtered Summary)",
+					"type": "wms",
+					"layers": "wofs_filtered_summary",
+					"url": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsCoverage": "wofs_filtered_summary"
+				},
+				{
+					"name": "Water Observations from Space (Unfiltered Summary)",
+					"type": "wms",
+					"layers": "Water Observations from Space Statistics",
+					"url": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsCoverage": "Water Observations from Space Statistics"
+				},
+				{
+					"name": "Surface Reflectance (Landsat 5)",
+					"type": "wms",
+					"layers": "ls5_nbart_geomedian_annual",
+					"url": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsCoverage": "ls5_nbart_geomedian_annual"
+				},
+				{
+					"name": "Surface Reflectance (Landsat 7)",
+					"type": "wms",
+					"layers": "ls7_nbart_geomedian_annual",
+					"url": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsCoverage": "ls7_nbart_geomedian_annual"
+				},
+				{
+					"name": "Surface Reflectance (Landsat 8)",
+					"type": "wms",
+					"layers": "ls8_nbart_geomedian_annual",
+					"url": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+					"linkedWcsCoverage": "ls8_nbart_geomedian_annual"
+				},
+			]
+		},
+		{
+			"name": "Cambodia (K8s dev)",
+			"type": "wms-getCapabilities",
+			"url": "https://cambodiacube.services.devkube.dea.ga.gov.au/"
+		},
+		{
+			"name": "Cambodia (ECS prod)",
+			"type": "wms-getCapabilities",
+			"url": "https://geomedian.dea.gov.au/"
+		},
+		{
+			"name": "Geomedian (K8s prod)",
+			"type": "wms-getCapabilities",
+			"url": "https://geomedian.services.dea.ga.gov.au/"
+		},
+		{
+			"name": "Geomedian (ECS prod)",
+			"type": "wms-getCapabilities",
+			"url": "https://geomedianau.dea.ga.gov.au/"
+		},
+		{
+			"name": "Sentinel 2 NRT (ECS prod)",
+			"type": "wms-getCapabilities",
+			"url": "https://nrt-au.dea.ga.gov.au/"
+		},
+		{
+			"name": "DEA Shapes",
+			"type": "group",
+			"preserveOrder": true,
+			"items": [
+				{
+					"name": "DEA Albers Tiles grid",
+					"type": "geojson",
+					"url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/geomedian-australia/albers_grid.geojson"
+				},
+				{
+					"name": "DEA Intertidal Extents Relative Model and Confidence Layer 25m v2.0 polygons for access to data",
+					"type": "geojson",
+					"url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/ITEM_V2/Itemv2.geojson"
+				},
+				{
+					"name": "DEA Low Tide Composite 25m v2.0 polygons for access to data",
+					"type": "geojson",
+					"url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/low_composite_20.geojson"
+				},
+				{
+					"name": "DEA High Tide Composite 25m v2.0 polygons for access to data",
+					"type": "geojson",
+					"url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/high_composite_20.geojson"
+				},
+			]
+		},
+		/*{
+			"name": "Analysis Tools",
+			"type": "group",
+			"preserveOrder": true,
+			"items": [
+				{
+					"name": "Pixel Drill",
+					"url": "https://ows.services.devkube.dea.ga.gov.au/",
+					"type": "wps",
+					"identifier": "pixelDrill",
+					"description": "Coming soon"
+				}
+			]
+		}*/
+	]
+}
