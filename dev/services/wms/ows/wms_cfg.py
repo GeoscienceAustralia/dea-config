@@ -769,7 +769,7 @@ layer_cfg = [
             {
                 "label": "Mangrove Canopy Cover",
                 "abstract": "Mangrove canopy cover version 1, 25 metre, 100km tile,"
-                            "Australian Albers Equal Area projection (EPSG:3577)"
+                            "Australian Albers Equal Area projection (EPSG:3577)",
                 "type": "100km tile",
                 "variant": "25m",
                 "name": "mangrove_cover",
