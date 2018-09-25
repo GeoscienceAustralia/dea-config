@@ -149,7 +149,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -354,7 +354,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -559,7 +559,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -774,7 +774,7 @@ layer_cfg = [
                 "variant": "25m",
                 "name": "mangrove_cover",
                 "product_name": "mangrove_cover",
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
@@ -864,7 +864,7 @@ layer_cfg = [
                             "and hence can be difficult to interpret on its own."
                             "The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product,"
                             "which provide a noise-reduced view of the water summary.",
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1133,7 +1133,7 @@ layer_cfg = [
                             "Even though confidence filtering is applied to the Filtered Water Summary,"
                             "some cloud and shadow, and sensor noise does persist.",
 
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
