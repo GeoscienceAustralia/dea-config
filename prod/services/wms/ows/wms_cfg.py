@@ -20,7 +20,7 @@ service_cfg = {
     # Service title - appears e.g. in Terria catalog
     "title": "WMS server for Australian NBART Datacube products",
     # Service URL.  Should a fully qualified URL
-    "url": "https://ows.devkube.services.dea.ga.gov.au",
+    "url": "https://ows.services.dea.ga.gov.au",
 
     # Supported co-ordinate reference systems
     "published_CRSs": {
@@ -109,7 +109,6 @@ service_cfg = {
 }
 
 layer_cfg = [
-    # Layer Config is a list of platform configs
     # Layer Config is a list of platform configs
     {
         # Name and title of the platform layer.
@@ -1584,4 +1583,5 @@ layer_cfg = [
 
         ],
     },
+
 ]
