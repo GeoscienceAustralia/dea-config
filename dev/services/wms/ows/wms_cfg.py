@@ -838,11 +838,11 @@ in some locations dense dwarf/shrub mangroves that are less than 2 metres tall m
         "products": [
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS_Summary",
+                "label": "WOfS Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Summary",
+                "type": "Water Summary",
                 # Included as a keyword  for the layer
-                "variant": "Summary",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "Water Observations from Space Statistics",
                 # The Datacube name for the associated data product
@@ -959,13 +959,13 @@ This layer contains Water Summary: what percentage of clear observations were de
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS_Summary",
+                "label": "WOfS Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Summary",
+                "type": "Wet Count",
                 # Included as a keyword  for the layer
-                "variant": "Summary",
+                "variant": "25m",
                 # The WMS name for the layer
-                "name": "Water Observations from Space Statistics - Wet Count",
+                "name": "wofs_summary_wet",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_summary",
                 "abstract": """
@@ -1065,13 +1065,13 @@ This layer contains Wet Count: how many times water was detected in observations
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS_Summary",
+                "label": "WOfS Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Summary",
+                "type": "Clear Count",
                 # Included as a keyword  for the layer
-                "variant": "Summary",
+                "variant": "25m",
                 # The WMS name for the layer
-                "name": "Water Observations from Space Statistics - Clear Count",
+                "name": "wofs_summary_clear",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_summary",
                 "abstract": """
@@ -1183,11 +1183,11 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS Filtered Summary",
+                "label": "WOfS Filtered Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Filtered_Summary",
+                "type": "Filtered Water Summary",
                 # Included as a keyword  for the layer
-                "variant": "Filtered Summary",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary",
                 # The Datacube name for the associated data product
@@ -1307,11 +1307,11 @@ This layer gives a noise-reduced view of surface water across Australia. Even th
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS Filtered Summary - Confidence",
+                "label": "WOfS Filtered Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Filtered_Summary",
+                "type": "Confidence",
                 # Included as a keyword  for the layer
-                "variant": "Filtered Summary",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary_confidence",
                 # The Datacube name for the associated data product
