@@ -151,7 +151,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -356,7 +356,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -561,7 +561,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -771,7 +771,7 @@ in some locations dense dwarf/shrub mangroves that are less than 2 metres tall m
                 "variant": "25m",
                 "name": "mangrove_cover",
                 "product_name": "mangrove_cover",
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
@@ -838,11 +838,11 @@ in some locations dense dwarf/shrub mangroves that are less than 2 metres tall m
         "products": [
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS_Summary",
+                "label": "WOfS Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Summary",
+                "type": "Water Summary",
                 # Included as a keyword  for the layer
-                "variant": "Summary",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "Water Observations from Space Statistics",
                 # The Datacube name for the associated data product
@@ -854,7 +854,7 @@ This product is Water Observations from Space - Statistics, a set of statistical
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage)""",
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -959,13 +959,13 @@ This layer contains Water Summary: what percentage of clear observations were de
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS_Summary",
+                "label": "WOfS Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Summary",
+                "type": "Wet Count",
                 # Included as a keyword  for the layer
-                "variant": "Summary",
+                "variant": "25m",
                 # The WMS name for the layer
-                "name": "Water Observations from Space Statistics - Wet Count",
+                "name": "wofs_summary_wet",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_summary",
                 "abstract": """
@@ -975,7 +975,7 @@ This product is Water Observations from Space - Statistics, a set of statistical
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Wet Count: how many times water was detected in observations that were clear""",
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1065,13 +1065,13 @@ This layer contains Wet Count: how many times water was detected in observations
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS_Summary",
+                "label": "WOfS Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Summary",
+                "type": "Clear Count",
                 # Included as a keyword  for the layer
-                "variant": "Summary",
+                "variant": "25m",
                 # The WMS name for the layer
-                "name": "Water Observations from Space Statistics - Clear Count",
+                "name": "wofs_summary_clear",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_summary",
                 "abstract": """
@@ -1081,7 +1081,7 @@ This product is Water Observations from Space - Statistics, a set of statistical
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Clear Count: how many times an area could be clearly seen (ie. not affected by clouds, shadows or other satellite observation problems)""",
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1183,11 +1183,11 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS Filtered Summary",
+                "label": "WOfS Filtered Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Filtered_Summary",
+                "type": "Filtered Water Summary",
                 # Included as a keyword  for the layer
-                "variant": "Filtered Summary",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary",
                 # The Datacube name for the associated data product
@@ -1202,7 +1202,7 @@ The Filtered Water Summary provides the long term understanding of the recurrenc
 This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level.
 This layer gives a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist.""",
 
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1307,11 +1307,11 @@ This layer gives a noise-reduced view of surface water across Australia. Even th
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS Filtered Summary - Confidence",
+                "label": "WOfS Filtered Statistics",
                 # Included as a keyword  for the layer
-                "type": "WOfS_Filtered_Summary",
+                "type": "Confidence",
                 # Included as a keyword  for the layer
-                "variant": "Filtered Summary",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary_confidence",
                 # The Datacube name for the associated data product
@@ -1326,7 +1326,7 @@ The Filtered Water Summary provides the long term understanding of the recurrenc
 This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets.
 The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. """,
 
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
