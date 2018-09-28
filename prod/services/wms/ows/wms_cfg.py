@@ -290,7 +290,10 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "ndwi",
@@ -318,7 +321,10 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
-                        ]
+                        ],
+                        "legend": {
+                            "major_ticks": 0.1
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -495,7 +501,10 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "ndwi",
@@ -523,7 +532,10 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
-                        ]
+                        ],
+                        "legend": {
+                            "major_ticks": 0.1
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -700,7 +712,10 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "ndwi",
@@ -728,7 +743,10 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
-                        ]
+                        ],
+                        "legend": {
+                            "major_ticks": 0.1
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -940,7 +958,13 @@ This layer contains Water Summary: what percentage of clear observations were de
                                 "value": 1.0,
                                 "color": "#5700e3"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -1046,7 +1070,12 @@ This layer contains Wet Count: how many times water was detected in observations
                                 "value": 400,
                                 "color": "#5700E3"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 100
+                        }
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -1164,7 +1193,12 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
                                 "value": 1000,
                                 "color": "#026900"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 100
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -1288,7 +1322,13 @@ This layer gives a noise-reduced view of surface water across Australia. Even th
                                 "value": 1.0,
                                 "color": "#5700e3"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -1381,7 +1421,13 @@ The Confidence layer provides understanding of whether the water shown in the Wa
                                 "value": 1.0,
                                 "color": "#00E32D"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
                     }
                 ],
                 # Default style (if request does not specify style)
