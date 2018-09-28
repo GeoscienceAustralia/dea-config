@@ -289,10 +289,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#114D04"
                             }
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                     {
                         "name": "ndwi",
@@ -320,10 +317,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -500,10 +494,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#114D04"
                             }
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                     {
                         "name": "ndwi",
@@ -531,10 +522,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -711,10 +699,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#114D04"
                             }
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                     {
                         "name": "ndwi",
@@ -742,10 +727,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -922,10 +904,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#114D04"
                             }
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                     {
                         "name": "ndwi",
@@ -954,10 +933,7 @@ layer_cfg = [
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
-                        ],
-                        "legend": {
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                 ],
                 # Default style (if request does not specify style)
