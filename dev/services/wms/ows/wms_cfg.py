@@ -750,7 +750,7 @@ layer_cfg = [
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat8_barest_earth",
-        "title": "Surface Reflectance",
+        "title": "Barest Earth",
         "abstract": "Data is only visible at higher resolutions; when zoomed-out the available area will be displayed "
                     "as a shaded region. The surface reflectance of the barest state (i.e., least vegetation) observed "
                     "through Landsat-8 OLI observations to generate a six band Landsat-8 Barest earth pixel composite "
