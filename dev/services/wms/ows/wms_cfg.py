@@ -1638,7 +1638,7 @@ The Confidence layer provides understanding of whether the water shown in the Wa
                             "units": "%",
                             "radix_point": 0,
                             "scale_by": 100.0,
-                            "major_ticks": 0.1
+                            "major_ticks": 0.25
                         }
                     }
                 ],
