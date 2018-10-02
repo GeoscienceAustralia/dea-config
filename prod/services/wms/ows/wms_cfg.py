@@ -1050,7 +1050,10 @@ This layer contains Wet Count: how many times water was detected in observations
                             },
                             {
                                 "value": 400,
-                                "color": "#5700E3"
+                                "color": "#5700E3",
+                                "legend": {
+                                    "prefix": ">"
+                                }
                             }
                         ],
                         "legend": {
@@ -1173,7 +1176,10 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
                             },
                             {
                                 "value": 1000,
-                                "color": "#026900"
+                                "color": "#026900",
+                                "legend": {
+                                    "prefix": ">"
+                                }
                             }
                         ],
                         "legend": {
