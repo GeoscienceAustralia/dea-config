@@ -62,8 +62,21 @@
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "ls8_nbart_geomedian_annual"
+            },
+            {
+               "name": "Barest Earth (Landsat 8)",
+               "type": "wms",
+               "layers": "ls8_barest_earth_mosaic",
+               "url": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsCoverage": "ls8_barest_earth_mosaic"
             }
          ]
+      },
+      {
+         "name": "DEA Prod (K8s prod)",
+         "type": "wms-getCapabilities",
+         "url": "https://ows.services.dea.ga.gov.au/"
       },
       {
          "name": "Cambodia (K8s dev)",
