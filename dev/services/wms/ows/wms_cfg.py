@@ -1391,7 +1391,8 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
                         "legend": {
                             "radix_point": 0,
                             "scale_by": 1,
-                            "major_ticks": 100
+                            "major_ticks": 100,
+                            "axes_position": [0.05, 0.5, 0.89, 0.15]
                         }
                     },
                 ],
