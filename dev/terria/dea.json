@@ -16,15 +16,7 @@
          "preserveOrder": true,
          "items": [
             {
-               "name": "Mangrove Canopy Cover",
-               "type": "wms",
-               "layers": "mangrove_cover",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "mangrove_cover"
-            },
-            {
-               "name": "Water Observations from Space (Filtered Summary)",
+               "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
                "type": "wms",
                "layers": "wofs_filtered_summary",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
@@ -32,12 +24,36 @@
                "linkedWcsCoverage": "wofs_filtered_summary"
             },
             {
-               "name": "Water Observations from Space (Unfiltered Summary)",
+               "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
+               "type": "wms",
+               "layers": "wofs_summary_wet",
+               "url": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsCoverage": "wofs_summary_wet"
+            },
+            {
+               "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
+               "type": "wms",
+               "layers": "wofs_summary_clear",
+               "url": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsCoverage": "wofs_summary_clear"
+            },
+            {
+               "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
                "type": "wms",
                "layers": "Water Observations from Space Statistics",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "Water Observations from Space Statistics"
+            },
+            {
+               "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
+               "type": "wms",
+               "layers": "wofs_filtered_summary_confidence",
+               "url": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsCoverage": "wofs_filtered_summary_confidence"
             },
             {
                "name": "Surface Reflectance (Landsat 5)",
@@ -70,13 +86,77 @@
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "ls8_barest_earth_mosaic"
+            },
+            {
+               "name": "Mangrove Canopy Cover",
+               "type": "wms",
+               "layers": "mangrove_cover",
+               "url": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsCoverage": "mangrove_cover"
             }
          ]
       },
       {
          "name": "DEA Prod (K8s prod)",
-         "type": "wms-getCapabilities",
-         "url": "https://ows.services.dea.ga.gov.au/"
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
+               "type": "wms",
+               "layers": "wofs_filtered_summary",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
+               "type": "wms",
+               "layers": "wofs_summary_wet",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
+               "type": "wms",
+               "layers": "wofs_summary_clear",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
+               "type": "wms",
+               "layers": "Water Observations from Space Statistics",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
+               "type": "wms",
+               "layers": "wofs_filtered_summary_confidence",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Surface Reflectance (Landsat 5)",
+               "type": "wms",
+               "layers": "ls5_nbart_geomedian_annual",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Surface Reflectance (Landsat 7)",
+               "type": "wms",
+               "layers": "ls7_nbart_geomedian_annual",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Surface Reflectance (Landsat 8)",
+               "type": "wms",
+               "layers": "ls8_nbart_geomedian_annual",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            },
+            {
+               "name": "Mangrove Canopy Cover",
+               "type": "wms",
+               "layers": "mangrove_cover",
+               "url": "https://ows.services.dea.ga.gov.au/"
+            }
+         ]
       },
       {
          "name": "Cambodia (K8s dev)",
