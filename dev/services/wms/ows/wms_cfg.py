@@ -115,7 +115,8 @@ layer_cfg = [
                     "Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; "
                     "Landsat 7: 2000 to 2017; "
                     "Landsat 8: 2013 to 2017; "
-                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374",
+                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374"
+                    "For product definition, see http://dea-public-data.s3-ap-southeast-2.amazonaws.com/geomedian-australia/v2.1.0/Product%20Description.pdf",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
