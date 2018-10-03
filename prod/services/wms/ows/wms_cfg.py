@@ -831,22 +831,27 @@ in some locations dense dwarf/shrub mangroves that are less than 2 metres tall m
         "products": [
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS Statistics",
+                "label": "WOfS Filtered Statistics",
                 # Included as a keyword  for the layer
-                "type": "Water Summary",
+                "type": "Filtered Water Summary",
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
-                "name": "Water Observations from Space Statistics",
+                "name": "wofs_filtered_summary",
                 # The Datacube name for the associated data product
-                "product_name": "wofs_summary",
+                "product_name": "wofs_filtered_summary",
+                
                 "abstract": """
-Water Observations from Space - Statistics is a set of statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+Water Observations from Space - Filtered Statistics is a set of statistical summaries of the water observations contained in Water Observations from Space.
 
-This product is Water Observations from Space - Statistics, a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
+This product is Water Observations from Space - Filtered Statistics, consisting of a Confidence layer that compares the Water Observations from Space - Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the Water Observations from Space - Statistics water summary where Confidence is low.
+The Filtered Water Summary provides the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out.
 
-This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage)""",
+This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level.
+This layer gives a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist.
+
+For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
+
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -863,14 +868,14 @@ This layer contains Water Summary: what percentage of clear observations were de
                 "ignore_info_flags": [],
                 "legend": {
                     # "url": ""
-                    "styles": ["WOfS_frequency"]
+                    "styles": ["WOfS_filtered_frequency"]
                 },
                 "styles": [
                     {
-                        "name": "WOfS_frequency",
-                        "title": " Water Summary",
-                        "abstract": "WOfS summary showing the frequency of Wetness",
-                        "needed_bands": ["frequency"],
+                        "name": "WOfS_filtered_frequency",
+                        "title": "Filtered Water Summary",
+                        "abstract": "WOfS filtered summary showing the frequency of Wetness",
+                        "needed_bands": ["wofs_filtered_summary"],
                         "color_ramp": [
                             {
                                 "value": 0.0,
@@ -947,14 +952,14 @@ This layer contains Water Summary: what percentage of clear observations were de
                             "scale_by": 100.0,
                             "major_ticks": 0.1
                         }
-                    },
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
 
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "WOfS_frequency",
+                "default_style": "WOfS_filtered_frequency",
             },
             {
                 # Included as a keyword  for the layer
@@ -973,7 +978,9 @@ Water Observations from Space - Statistics is a set of statistical summaries of 
 This product is Water Observations from Space - Statistics, a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
-This layer contains Wet Count: how many times water was detected in observations that were clear""",
+This layer contains Wet Count: how many times water was detected in observations that were clear
+
+For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/summary/v2.1.0/Product%20Description.pdf""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1087,7 +1094,9 @@ Water Observations from Space - Statistics is a set of statistical summaries of 
 This product is Water Observations from Space - Statistics, a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
-This layer contains Clear Count: how many times an area could be clearly seen (ie. not affected by clouds, shadows or other satellite observation problems)""",
+This layer contains Clear Count: how many times an area could be clearly seen (ie. not affected by clouds, shadows or other satellite observation problems)
+
+For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/summary/v2.1.0/Product%20Description.pdf""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1199,25 +1208,24 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
             },
             {
                 # Included as a keyword  for the layer
-                "label": "WOfS Filtered Statistics",
+                "label": "WOfS Statistics",
                 # Included as a keyword  for the layer
-                "type": "Filtered Water Summary",
+                "type": "Water Summary",
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
-                "name": "wofs_filtered_summary",
+                "name": "Water Observations from Space Statistics",
                 # The Datacube name for the associated data product
-                "product_name": "wofs_filtered_summary",
-                
+                "product_name": "wofs_summary",
                 "abstract": """
-Water Observations from Space - Filtered Statistics is a set of statistical summaries of the water observations contained in Water Observations from Space.
+Water Observations from Space - Statistics is a set of statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
-This product is Water Observations from Space - Filtered Statistics, consisting of a Confidence layer that compares the Water Observations from Space - Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the Water Observations from Space - Statistics water summary where Confidence is low.
-The Filtered Water Summary provides the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out.
+This product is Water Observations from Space - Statistics, a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
+The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
-This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level.
-This layer gives a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist.""",
+This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage)
 
+For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/summary/v2.1.0/Product%20Description.pdf""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1234,14 +1242,14 @@ This layer gives a noise-reduced view of surface water across Australia. Even th
                 "ignore_info_flags": [],
                 "legend": {
                     # "url": ""
-                    "styles": ["WOfS_filtered_frequency"]
+                    "styles": ["WOfS_frequency"]
                 },
                 "styles": [
                     {
-                        "name": "WOfS_filtered_frequency",
-                        "title": "Filtered Water Summary",
-                        "abstract": "WOfS filtered summary showing the frequency of Wetness",
-                        "needed_bands": ["wofs_filtered_summary"],
+                        "name": "WOfS_frequency",
+                        "title": " Water Summary",
+                        "abstract": "WOfS summary showing the frequency of Wetness",
+                        "needed_bands": ["frequency"],
                         "color_ramp": [
                             {
                                 "value": 0.0,
@@ -1318,14 +1326,14 @@ This layer gives a noise-reduced view of surface water across Australia. Even th
                             "scale_by": 100.0,
                             "major_ticks": 0.1
                         }
-                    }
+                    },
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
 
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "WOfS_filtered_frequency",
+                "default_style": "WOfS_frequency",
             },
             {
                 # Included as a keyword  for the layer
@@ -1346,7 +1354,9 @@ This product is Water Observations from Space - Filtered Statistics, consisting 
 The Filtered Water Summary provides the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out.
 
 This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets.
-The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. """,
+The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means.
+
+For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
 
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
