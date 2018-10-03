@@ -1,4 +1,16 @@
 {
+   "corsDomains": [
+      "ga.gov.au",
+      "gsky-dev.nci.org.au",
+      "gsky-test.nci.org.au",
+      "gsky.nci.org.au"
+   ],
+   "homeCamera": {
+      "north": -8,
+      "east": 158,
+      "south": -45,
+      "west": 109
+   },
    "catalog": [
       {
          "name": "GSKY Geoglam (prod)",
