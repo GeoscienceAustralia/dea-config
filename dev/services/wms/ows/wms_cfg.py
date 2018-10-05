@@ -905,35 +905,6 @@ layer_cfg = [
                             }
                         ]
                     },
-                    {
-                        "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "index_function": lambda data: (data["green"] - data["swir1"]) / (
-                                data["swir1"] + data["green"]),
-                        "needed_bands": ["green", "swir1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#0303FF",
-                            },
-                        ]
-                    },
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
