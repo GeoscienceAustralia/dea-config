@@ -842,11 +842,459 @@ layer_cfg = [
                     #
                     # Examples of non-linear heat-mapped styles.
                     {
+                        "name": "ndsi",
+                        "title": "NDSI - SWIR1, SWIR2",
+                        "abstract": "Normalised Difference Soil Index ",
+                        "index_function": lambda data: (data["swir1"] - data["swir2"]) / (data["swir1"] + data["swir2"]),
+                        "needed_bands": ["swir1", "swir2"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "soil_composition_index",
+                        "title": "Soil composition index - NIR, SWIR",
+                        "abstract": "Soil Composition Index",
+                        "index_function": lambda data: (data["swir1"] - data["nir"]) / (data["swir1"] + data["nir"]),
+                        "needed_bands": ["swir1", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
                         "name": "ndvi",
                         "title": "NDVI - Red, NIR",
                         "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
                         "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
                         "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "clay",
+                        "title": "Clay/Hydroxyl-bearing minerals",
+                        "abstract": "Hydroxyl bearing minerals SWIR",
+                        "index_function": lambda data: (data["swir1"]) / (data["swir2"]),
+                        "needed_bands": ["swir1", "swir2"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "iron_oxides",
+                        "title": "Iron oxides",
+                        "abstract": "Iron Oxides SWIR, NIR ",
+                        "index_function": lambda data: (data["swir2"]) / (data["nir"]),
+                        "needed_bands": ["swir2", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "hematite-goethite",
+                        "title": "hematite-goethite - NIR, Green",
+                        "abstract": "hematite-goethite index",
+                        "index_function": lambda data: (data["nir"]) / (data["green"]),
+                        "needed_bands": ["nir", "green"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "iron-3+",
+                        "title": "IRON 3+- Red, Blue",
+                        "abstract": "Iron 3+ index",
+                        "index_function": lambda data: (data["red"]) / (data["blue"]),
+                        "needed_bands": ["red", "blue"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "iron-2+",
+                        "title": "Iron 2+ - Green, Blue",
+                        "abstract": "Iron 2+_index",
+                        "index_function": lambda data: (data["green"]) / (data["blue"]),
+                        "needed_bands": ["green", "blue"],
                         "color_ramp": [
                             {
                                 "value": -1.0,
