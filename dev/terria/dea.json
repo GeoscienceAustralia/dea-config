@@ -176,21 +176,6 @@
          "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/"
       },
       {
-         "name": "Cambodia (ECS prod)",
-         "type": "wms-getCapabilities",
-         "url": "https://geomedian.dea.gov.au/"
-      },
-      {
-         "name": "Geomedian (K8s prod)",
-         "type": "wms-getCapabilities",
-         "url": "https://geomedian.services.dea.ga.gov.au/"
-      },
-      {
-         "name": "Geomedian (ECS prod)",
-         "type": "wms-getCapabilities",
-         "url": "https://geomedianau.dea.ga.gov.au/"
-      },
-      {
          "name": "Sentinel 2 NRT (ECS prod)",
          "type": "wms-getCapabilities",
          "url": "https://nrt-au.dea.ga.gov.au/"
