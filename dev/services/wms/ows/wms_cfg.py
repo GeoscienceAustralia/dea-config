@@ -1200,7 +1200,12 @@ layer_cfg = [
                                 "value": 2.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.2
+                        },
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -1317,7 +1322,12 @@ layer_cfg = [
                                 "value": 2.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.2
+                        },
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -1434,7 +1444,12 @@ layer_cfg = [
                                 "value": 3.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.3
+                        },
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -1551,7 +1566,12 @@ layer_cfg = [
                                 "value": 4.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.4
+                        },
                     },
                     {
                         "name": "iron-2+",
@@ -1615,7 +1635,12 @@ layer_cfg = [
                                 "value": 2.0,
                                 "color": "#114D04"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.2
+                        },
                     },
                 ],
                 # Default style (if request does not specify style)
