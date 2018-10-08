@@ -1202,7 +1202,6 @@ layer_cfg = [
                             }
                         ],
                         "legend": {
-                            "radix_point": 0,
                             "scale_by": 1,
                             "major_ticks": 0.2
                         },
@@ -1324,7 +1323,6 @@ layer_cfg = [
                             }
                         ],
                         "legend": {
-                            "radix_point": 0,
                             "scale_by": 1,
                             "major_ticks": 0.2
                         },
@@ -1446,7 +1444,6 @@ layer_cfg = [
                             }
                         ],
                         "legend": {
-                            "radix_point": 0,
                             "scale_by": 1,
                             "major_ticks": 0.3
                         },
@@ -1568,7 +1565,6 @@ layer_cfg = [
                             }
                         ],
                         "legend": {
-                            "radix_point": 0,
                             "scale_by": 1,
                             "major_ticks": 0.4
                         },
@@ -1637,7 +1633,6 @@ layer_cfg = [
                             }
                         ],
                         "legend": {
-                            "radix_point": 0,
                             "scale_by": 1,
                             "major_ticks": 0.2
                         },
