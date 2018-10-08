@@ -839,13 +839,129 @@ layer_cfg = [
                         },
                         "scale_range": [0.0, 3000.0]
                     },
-                    #
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI - Red, NIR",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Landsat 8",
+                # Included as a keyword  for the layer
+                "type": "Soil Index",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "Soil Index",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_barest_earth_mosaic",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndsi", "soil_composition_index"]
+                },
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
                     # Examples of non-linear heat-mapped styles.
                     {
                         "name": "ndsi",
                         "title": "NDSI - SWIR1, SWIR2",
                         "abstract": "Normalised Difference Soil Index ",
-                        "index_function": lambda data: (data["swir1"] - data["swir2"]) / (data["swir1"] + data["swir2"]),
+                        "index_function": lambda data: (data["swir1"] - data["swir2"]) / (
+                                    data["swir1"] + data["swir2"]),
                         "needed_bands": ["swir1", "swir2"],
                         "color_ramp": [
                             {
@@ -968,71 +1084,60 @@ layer_cfg = [
                                 "color": "#114D04"
                             }
                         ]
-                    },
-                    {
-                        "name": "ndvi",
-                        "title": "NDVI - Red, NIR",
-                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
-                        "needed_bands": ["red", "nir"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#A35F18"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#B88512"
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#CEAC0E"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#E5D609"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FFFF0C"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#C3DE09"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#88B808"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#529400"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#237100"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#114D04"
-                            }
-                        ]
-                    },
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ndsi",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Landsat 8",
+                # Included as a keyword  for the layer
+                "type": "clay minerals",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "clay/hydroxyl-bearing minerals",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_barest_earth_mosaic",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["clay/hydroxyl-bearing minerals"]
+                },
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
                     {
                         "name": "clay",
                         "title": "Clay/Hydroxyl-bearing minerals",
@@ -1056,47 +1161,100 @@ layer_cfg = [
                                 "alpha": 1.0
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.2,
                                 "color": "#A35F18"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.4,
                                 "color": "#B88512"
                             },
                             {
-                                "value": 0.3,
+                                "value": 0.6,
                                 "color": "#CEAC0E"
                             },
                             {
-                                "value": 0.4,
+                                "value": 0.8,
                                 "color": "#E5D609"
                             },
                             {
-                                "value": 0.5,
+                                "value": 1.0,
                                 "color": "#FFFF0C"
                             },
                             {
-                                "value": 0.6,
+                                "value": 1.2,
                                 "color": "#C3DE09"
                             },
                             {
-                                "value": 0.7,
+                                "value": 1.4,
                                 "color": "#88B808"
                             },
                             {
-                                "value": 0.8,
+                                "value": 1.6,
                                 "color": "#529400"
                             },
                             {
-                                "value": 0.9,
+                                "value": 1.8,
                                 "color": "#237100"
                             },
                             {
-                                "value": 1.0,
+                                "value": 2.0,
                                 "color": "#114D04"
                             }
                         ]
-                    },
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "clay",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Landsat 8",
+                # Included as a keyword  for the layer
+                "type": "Iron Oxides",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "Iron Oxides Index",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_barest_earth_mosaic",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["iron oxide"]
+                },
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
                     {
                         "name": "iron_oxides",
                         "title": "Iron oxides",
@@ -1120,47 +1278,100 @@ layer_cfg = [
                                 "alpha": 1.0
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.2,
                                 "color": "#A35F18"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.4,
                                 "color": "#B88512"
                             },
                             {
-                                "value": 0.3,
+                                "value": 0.6,
                                 "color": "#CEAC0E"
                             },
                             {
-                                "value": 0.4,
+                                "value": 0.8,
                                 "color": "#E5D609"
                             },
                             {
-                                "value": 0.5,
+                                "value": 1.0,
                                 "color": "#FFFF0C"
                             },
                             {
-                                "value": 0.6,
+                                "value": 1.2,
                                 "color": "#C3DE09"
                             },
                             {
-                                "value": 0.7,
+                                "value": 1.4,
                                 "color": "#88B808"
                             },
                             {
-                                "value": 0.8,
+                                "value": 1.6,
                                 "color": "#529400"
                             },
                             {
-                                "value": 0.9,
+                                "value": 1.8,
                                 "color": "#237100"
                             },
                             {
-                                "value": 1.0,
+                                "value": 2.0,
                                 "color": "#114D04"
                             }
                         ]
-                    },
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "iron_oxides",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Landsat 8",
+                # Included as a keyword  for the layer
+                "type": "Hematite/Goethite Index ",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "hematite/goethite_index",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_barest_earth_mosaic",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["hematite/goethite-index"]
+                },
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
                     {
                         "name": "hematite-goethite",
                         "title": "hematite-goethite - NIR, Green",
@@ -1184,50 +1395,103 @@ layer_cfg = [
                                 "alpha": 1.0
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.3,
                                 "color": "#A35F18"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.6,
                                 "color": "#B88512"
                             },
                             {
-                                "value": 0.3,
+                                "value": 0.9,
                                 "color": "#CEAC0E"
                             },
                             {
-                                "value": 0.4,
+                                "value": 1.2,
                                 "color": "#E5D609"
                             },
                             {
-                                "value": 0.5,
+                                "value": 1.5,
                                 "color": "#FFFF0C"
                             },
                             {
-                                "value": 0.6,
+                                "value": 1.8,
                                 "color": "#C3DE09"
                             },
                             {
-                                "value": 0.7,
+                                "value": 2.1,
                                 "color": "#88B808"
                             },
                             {
-                                "value": 0.8,
+                                "value": 2.4,
                                 "color": "#529400"
                             },
                             {
-                                "value": 0.9,
+                                "value": 2.7,
                                 "color": "#237100"
                             },
                             {
-                                "value": 1.0,
+                                "value": 3.0,
                                 "color": "#114D04"
                             }
                         ]
-                    },
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "hematite-goethite",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Landsat 8",
+                # Included as a keyword  for the layer
+                "type": "Iron Index",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "iron-index",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_barest_earth_mosaic",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["iron-index"]
+                },
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
                     {
                         "name": "iron-3+",
-                        "title": "IRON 3+- Red, Blue",
+                        "title": "IRON 3+ - Red, Blue",
                         "abstract": "Iron 3+ index",
                         "index_function": lambda data: (data["red"]) / (data["blue"]),
                         "needed_bands": ["red", "blue"],
@@ -1248,50 +1512,50 @@ layer_cfg = [
                                 "alpha": 1.0
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.4,
                                 "color": "#A35F18"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.8,
                                 "color": "#B88512"
                             },
                             {
-                                "value": 0.3,
+                                "value": 1.2,
                                 "color": "#CEAC0E"
                             },
                             {
-                                "value": 0.4,
+                                "value": 1.6,
                                 "color": "#E5D609"
                             },
                             {
-                                "value": 0.5,
+                                "value": 2.0,
                                 "color": "#FFFF0C"
                             },
                             {
-                                "value": 0.6,
+                                "value": 2.4,
                                 "color": "#C3DE09"
                             },
                             {
-                                "value": 0.7,
+                                "value": 2.8,
                                 "color": "#88B808"
                             },
                             {
-                                "value": 0.8,
+                                "value": 3.2,
                                 "color": "#529400"
                             },
                             {
-                                "value": 0.9,
+                                "value": 3.6,
                                 "color": "#237100"
                             },
                             {
-                                "value": 1.0,
+                                "value": 4.0,
                                 "color": "#114D04"
                             }
                         ]
                     },
                     {
                         "name": "iron-2+",
-                        "title": "Iron 2+ - Green, Blue",
+                        "title": "IRON 2+ - Green, Blue",
                         "abstract": "Iron 2+_index",
                         "index_function": lambda data: (data["green"]) / (data["blue"]),
                         "needed_bands": ["green", "blue"],
@@ -1312,43 +1576,43 @@ layer_cfg = [
                                 "alpha": 1.0
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.2,
                                 "color": "#A35F18"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.4,
                                 "color": "#B88512"
                             },
                             {
-                                "value": 0.3,
+                                "value": 0.6,
                                 "color": "#CEAC0E"
                             },
                             {
-                                "value": 0.4,
+                                "value": 0.8,
                                 "color": "#E5D609"
                             },
                             {
-                                "value": 0.5,
+                                "value": 1.0,
                                 "color": "#FFFF0C"
                             },
                             {
-                                "value": 0.6,
+                                "value": 1.2,
                                 "color": "#C3DE09"
                             },
                             {
-                                "value": 0.7,
+                                "value": 1.4,
                                 "color": "#88B808"
                             },
                             {
-                                "value": 0.8,
+                                "value": 1.6,
                                 "color": "#529400"
                             },
                             {
-                                "value": 0.9,
+                                "value": 1.8,
                                 "color": "#237100"
                             },
                             {
-                                "value": 1.0,
+                                "value": 2.0,
                                 "color": "#114D04"
                             }
                         ]
@@ -1358,7 +1622,7 @@ layer_cfg = [
                 # MUST be defined in the styles list above.
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "simple_rgb",
+                "default_style": "iron-3+",
             }
         ]
     },
