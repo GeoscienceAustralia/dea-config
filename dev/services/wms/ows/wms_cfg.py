@@ -1126,7 +1126,7 @@ layer_cfg = [
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["clay/hydroxyl-bearing minerals"]
+                    "styles": ["clay"]
                 },
                 #
                 # See band_mapper.py
@@ -1243,7 +1243,7 @@ layer_cfg = [
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["iron oxide"]
+                    "styles": ["iron_oxides"]
                 },
                 #
                 # See band_mapper.py
@@ -1360,7 +1360,7 @@ layer_cfg = [
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["hematite/goethite-index"]
+                    "styles": ["hematite-goethite"]
                 },
                 #
                 # See band_mapper.py
@@ -1477,7 +1477,7 @@ layer_cfg = [
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["iron-index"]
+                    "styles": ["iron-3+", "iron-2+"]
                 },
                 #
                 # See band_mapper.py
