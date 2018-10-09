@@ -32,7 +32,7 @@
                "type": "wms",
                "layers": "wofs_filtered_summary",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "wofs_filtered_summary"
             },
             {
@@ -40,7 +40,7 @@
                "type": "wms",
                "layers": "wofs_summary_wet",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "wofs_summary_wet"
             },
             {
@@ -48,7 +48,7 @@
                "type": "wms",
                "layers": "wofs_summary_clear",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "wofs_summary_clear"
             },
             {
@@ -56,7 +56,7 @@
                "type": "wms",
                "layers": "Water Observations from Space Statistics",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "Water Observations from Space Statistics"
             },
             {
@@ -64,7 +64,7 @@
                "type": "wms",
                "layers": "wofs_filtered_summary_confidence",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "wofs_filtered_summary_confidence"
             },
             {
@@ -72,7 +72,7 @@
                "type": "wms",
                "layers": "ls5_nbart_geomedian_annual",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "ls5_nbart_geomedian_annual"
             },
             {
@@ -80,7 +80,7 @@
                "type": "wms",
                "layers": "ls7_nbart_geomedian_annual",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "ls7_nbart_geomedian_annual"
             },
             {
@@ -88,7 +88,7 @@
                "type": "wms",
                "layers": "ls8_nbart_geomedian_annual",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "ls8_nbart_geomedian_annual"
             },
             {
@@ -96,7 +96,7 @@
                "type": "wms",
                "layers": "ls8_barest_earth_mosaic",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "ls8_barest_earth_mosaic"
             },
             {
@@ -104,7 +104,7 @@
                "type": "wms",
                "layers": "mangrove_cover",
                "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsURL": "https://ows.services.devkube.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                "linkedWcsCoverage": "mangrove_cover"
             }
          ]
