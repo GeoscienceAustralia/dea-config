@@ -28,84 +28,175 @@
          "preserveOrder": true,
          "items": [
             {
-               "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
-               "type": "wms",
-               "layers": "wofs_filtered_summary",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "wofs_filtered_summary"
+               "name": "WOfS Summaries",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_filtered_summary",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_filtered_summary"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_summary_wet",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_summary_wet"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_summary_clear",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_summary_clear"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
+                     "type": "wms",
+                     "layers": "Water Observations from Space Statistics",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "Water Observations from Space Statistics"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_filtered_summary_confidence",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_filtered_summary_confidence"
+                  }
+               ]
             },
             {
-               "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
-               "type": "wms",
-               "layers": "wofs_summary_wet",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "wofs_summary_wet"
-            },
-            {
-               "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
-               "type": "wms",
-               "layers": "wofs_summary_clear",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "wofs_summary_clear"
-            },
-            {
-               "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
-               "type": "wms",
-               "layers": "Water Observations from Space Statistics",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "Water Observations from Space Statistics"
-            },
-            {
-               "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
-               "type": "wms",
-               "layers": "wofs_filtered_summary_confidence",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "wofs_filtered_summary_confidence"
-            },
-            {
-               "name": "Surface Reflectance (Landsat 5)",
-               "type": "wms",
-               "layers": "ls5_nbart_geomedian_annual",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "ls5_nbart_geomedian_annual"
-            },
-            {
-               "name": "Surface Reflectance (Landsat 7)",
-               "type": "wms",
-               "layers": "ls7_nbart_geomedian_annual",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "ls7_nbart_geomedian_annual"
-            },
-            {
-               "name": "Surface Reflectance (Landsat 8)",
-               "type": "wms",
-               "layers": "ls8_nbart_geomedian_annual",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "ls8_nbart_geomedian_annual"
+               "name": "Annual Landsat Geomedian",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Surface Reflectance (Landsat 5)",
+                     "type": "wms",
+                     "layers": "ls5_nbart_geomedian_annual",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls5_nbart_geomedian_annual"
+                  },
+                  {
+                     "name": "Surface Reflectance (Landsat 7)",
+                     "type": "wms",
+                     "layers": "ls7_nbart_geomedian_annual",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls7_nbart_geomedian_annual"
+                  },
+                  {
+                     "name": "Surface Reflectance (Landsat 8)",
+                     "type": "wms",
+                     "layers": "ls8_nbart_geomedian_annual",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls8_nbart_geomedian_annual"
+                  }
+                ]
             },
             {
                "name": "Barest Earth (Landsat 8)",
-               "type": "wms",
-               "layers": "ls8_barest_earth_mosaic",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "ls8_barest_earth_mosaic"
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Barest Earth 25m Mosiac",
+                     "type": "wms",
+                     "layers": "ls8_barest_earth_mosaic",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls8_barest_earth_mosaic"
+                  },
+                  {
+                     "name": "Barest Earth 25m clay minerals",
+                     "type": "wms",
+                     "layers": "clay/hydroxyl-bearing minerals",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "clay/hydroxyl-bearing minerals"
+                  },
+                  {
+                     "name": "Barest Earth 25m Hematite/Goethite Index",
+                     "type": "wms",
+                     "layers": "hematite/goethite_index",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "hematite/goethite_index"
+                  },
+                  {
+                     "name": "Barest Earth 25m Iron Index",
+                     "type": "wms",
+                     "layers": "iron-index",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "iron-index"
+                  },
+                  {
+                     "name": "Barest Earth 25m Iron Oxides",
+                     "type": "wms",
+                     "layers": "Iron Oxides Index",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "Iron Oxides Index"
+                  },
+                  {
+                     "name": "Barest Earth 25m Soil Index",
+                     "type": "wms",
+                     "layers": "Soil Index",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "Soil Index"
+                  }
+               ]
+            },
+            {
+               "name": "Near Real-Time",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Near Real-Time Surface Reflectance (Sentinel 2A)",
+                     "type": "wms",
+                     "layers": "s2a_nrt_granule_nbar_t",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2a_nrt_granule_nbar_t"
+                  },
+                  {
+                     "name": "Near Real-Time Surface Reflectance (Sentinel 2B)",
+                     "type": "wms",
+                     "layers": "s2b_nrt_granule_nbar_t",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2b_nrt_granule_nbar_t"
+                  }
+               ]
             },
             {
                "name": "Mangrove Canopy Cover",
-               "type": "wms",
-               "layers": "mangrove_cover",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-               "linkedWcsCoverage": "mangrove_cover"
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Mangrove Canopy Cover",
+                     "type": "wms",
+                     "layers": "mangrove_cover",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "mangrove_cover"
+                  }
+               ]
             }
          ]
       },
