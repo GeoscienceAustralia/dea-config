@@ -2515,7 +2515,6 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "name": "ndwi",
                         "title": "NDWI - Green, SWIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "heat_mapped": True,
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
@@ -2700,7 +2699,6 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "name": "ndwi",
                         "title": "NDWI - Green, SWIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "heat_mapped": True,
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
