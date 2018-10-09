@@ -2381,7 +2381,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # "pq_band": "pixel_quality",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -2395,6 +2395,12 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi", "ndwi"]
+                },
                 # Styles.
                 #
                 # See band_mapper.py
@@ -2424,49 +2430,8 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "scale_range": [0.0, 3000.0]
                     },
                     {
-                        "name": "extended_rgb",
-                        "title": "Extended RGB",
-                        "abstract": "Extended true-colour image, incorporating the coastal aerosol band",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                 "nbart_green": 1.0
-                            },
-                            "blue": {
-                                 "nbart_blue": 0.6,
-                                 "nbart_coastal_aerosol": 0.4
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "wideband",
-                        "title": "Wideband false-colour",
-                        "abstract": "False-colour image, incorporating all available spectral bands",
-                        "components": {
-                            "red": {
-                                "nbart_swir_3": 0.255,
-                                "nbart_swir_2": 0.45,
-                                "nbart_nir_1": 0.255,
-                            },
-                            "green": {
-                                "nbart_nir_1": 0.255,
-                                "nbart_red": 0.45,
-                                "nbart_green": 0.255,
-                            },
-                            "blue": {
-                                "nbart_green": 0.255,
-                                "nbart_blue": 0.45,
-                                "nbart_coastal_aerosol": 0.255,
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
                         "name": "infrared_green",
-                        "title": "False colour SWIR, NIR and green",
+                        "title": "False colour - Green, SWIR, NIR",
                         "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
                         "components": {
                             "red": {
@@ -2482,214 +2447,99 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "scale_range": [0.0, 3000.0]
                     },
                     {
-                        "name": "infra_red",
-                        "title": "False colour multi-band infra-red",
-                        "abstract": "Simple false-colour image, using the near and short-wave infra-red bands",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "aerosol",
-                        "title": "Spectral band 1 - Coastal aerosol",
-                        "abstract": "Coastal aerosol band, approximately 435nm to 450nm",
-                        "components": {
-                            "red": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "green": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "blue": {
-                                "nbart_coastal_aerosol": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "blue",
-                        "title": "Spectral band 2 - Blue",
-                        "abstract": "Blue band, approximately 453nm to 511nm",
-                        "components": {
-                            "red": {
-                                "nbart_blue": 1.0
-                            },
-                            "green": {
-                                "nbart_blue": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Spectral band 3 - Green",
-                        "abstract": "Green band, approximately 534nm to 588nm",
-                        "components": {
-                            "red": {
-                                "nbart_green": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Spectral band 4 - Red",
-                        "abstract": "Red band, roughly 637nm to 672nm",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_red": 1.0
-                            },
-                            "blue": {
-                                "nbart_red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Spectral band 5 - Near infra-red",
-                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "narrow_nir",
-                        "title": "Narrow band Near Infra-Red",
-                        "abstract": "Near infra-red band, centred on 865nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Spectral band 6 - Short wave infra-red 1",
-                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Spectral band 7 - Short wave infra-red 2",
-                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_3": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    #
-                    # Examples of non-linear heat-mapped styles.
-                    {
                         "name": "ndvi",
-                        "title": "NDVI",
+                        "title": "NDVI - Red, NIR",
                         "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "heat_mapped": True,
                         "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                        
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI",
+                        "title": "NDWI - Green, SWIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
                         "heat_mapped": True,
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
-                        "range": [0.0, 1.0],
-                    },
-                    {
-                        "name": "ndbi",
-                        "title": "NDBI",
-                        "abstract": "Normalised Difference Buildup Index - a derived index that correlates with the existence of urbanisation",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nbart_swir_3"] - data["nbart_nir_1"]) / (data["nbart_swir_3"] + data["nbart_nir_1"]),
-                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
-                        "range": [0.0, 1.0],
-                    },
-                    # Mask layers - examples of how to display raw pixel quality data.
-                    # This works by creatively mis-using the Heatmap style class.
-                    # Hybrid style - mixes a linear mapping and a heat mapped index
-                    {
-                        "name": "rgb_ndvi",
-                        "title": "NDVI plus RGB",
-                        "abstract": "Normalised Difference Vegetation Index (blended with RGB) - a derived index that correlates well with the existence of vegetation",
-                        "component_ratio": 0.6,
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
-                        "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "nbart_green": 1.0
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    }
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
+                    },
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -2716,7 +2566,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # "pq_band": "pixel_quality",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -2730,6 +2580,12 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi", "ndwi"]
+                },
                 # Styles.
                 #
                 # See band_mapper.py
@@ -2756,53 +2612,11 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                                 "nbart_blue": 1.0
                             }
                         },
-                        # Used to clip off very bright areas.
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "extended_rgb",
-                        "title": "Extended RGB",
-                        "abstract": "Extended true-colour image, incorporating the coastal aerosol band",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 0.6,
-                                "nbart_coastal_aerosol": 0.4
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "wideband",
-                        "title": "Wideband false-colour",
-                        "abstract": "False-colour image, incorporating all available spectral bands",
-                        "components": {
-                            "red": {
-                                "nbart_swir_3": 0.255,
-                                "nbart_swir_2": 0.45,
-                                "nbart_nir_1": 0.255,
-                            },
-                            "green": {
-                                "nbart_nir_1": 0.255,
-                                "nbart_red": 0.45,
-                                "nbart_green": 0.255,
-                            },
-                            "blue": {
-                                "nbart_green": 0.255,
-                                "nbart_blue": 0.45,
-                                "nbart_coastal_aerosol": 0.255,
-                            }
-                        },
                         "scale_range": [0.0, 3000.0]
                     },
                     {
                         "name": "infrared_green",
-                        "title": "False colour SWIR, NIR and green",
+                        "title": "False colour - Green, SWIR, NIR",
                         "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
                         "components": {
                             "red": {
@@ -2818,218 +2632,99 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "scale_range": [0.0, 3000.0]
                     },
                     {
-                        "name": "infra_red",
-                        "title": "False colour multi-band infra-red",
-                        "abstract": "Simple false-colour image, using the near and short-wave infra-red bands",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "aerosol",
-                        "title": "Spectral band 1 - Coastal aerosol",
-                        "abstract": "Coastal aerosol band, approximately 435nm to 450nm",
-                        "components": {
-                            "red": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "green": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "blue": {
-                                "nbart_coastal_aerosol": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "blue",
-                        "title": "Spectral band 2 - Blue",
-                        "abstract": "Blue band, approximately 453nm to 511nm",
-                        "components": {
-                            "red": {
-                                "nbart_blue": 1.0
-                            },
-                            "green": {
-                                "nbart_blue": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Spectral band 3 - Green",
-                        "abstract": "Green band, approximately 534nm to 588nm",
-                        "components": {
-                            "red": {
-                                "nbart_green": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Spectral band 4 - Red",
-                        "abstract": "Red band, roughly 637nm to 672nm",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_red": 1.0
-                            },
-                            "blue": {
-                                "nbart_red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Spectral band 5 - Near infra-red",
-                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "narrow_nir",
-                        "title": "Narrow band Near Infra-Red",
-                        "abstract": "Near infra-red band, centred on 865nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Spectral band 6 - Short wave infra-red 1",
-                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Spectral band 7 - Short wave infra-red 2",
-                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_3": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    #
-                    # Examples of non-linear heat-mapped styles.
-                    {
                         "name": "ndvi",
-                        "title": "NDVI",
+                        "title": "NDVI - Red, NIR",
                         "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (
-                                    data["nbart_nir_1"] + data["nbart_red"]),
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                        
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI",
+                        "title": "NDWI - Green, SWIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
                         "heat_mapped": True,
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
-                                    data["nbart_nir_1"] + data["nbart_green"]),
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
-                        "range": [0.0, 1.0],
-                    },
-                    {
-                        "name": "ndbi",
-                        "title": "NDBI",
-                        "abstract": "Normalised Difference Buildup Index - a derived index that correlates with the existence of urbanisation",
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nbart_swir_3"] - data["nbart_nir_1"]) / (
-                                    data["nbart_swir_3"] + data["nbart_nir_1"]),
-                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
-                        "range": [0.0, 1.0],
-                    },
-                    # Mask layers - examples of how to display raw pixel quality data.
-                    # This works by creatively mis-using the Heatmap style class.
-                    # Hybrid style - mixes a linear mapping and a heat mapped index
-                    {
-                        "name": "rgb_ndvi",
-                        "title": "NDVI plus RGB",
-                        "abstract": "Normalised Difference Vegetation Index (blended with RGB) - a derived index that correlates well with the existence of vegetation",
-                        "component_ratio": 0.6,
-                        "heat_mapped": True,
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (
-                                    data["nbart_nir_1"] + data["nbart_red"]),
-                        "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        # Areas where the index_function returns outside the range are masked.
-                        "range": [0.0, 1.0],
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "nbart_green": 1.0
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
                             },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    }
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
+                    },
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
