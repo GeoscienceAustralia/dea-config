@@ -1,0 +1,25 @@
+name: weathering_intensity
+description: Weathering Intensity Model
+metadata_type: eo
+storage:
+    crs: EPSG:4326
+    resolution:
+        latitude: -0.000833333333347
+        longitude: 0.000833333333347
+    tile_size:
+        latitude: 1200.0
+        longitude: 1200.0
+
+metadata:
+    format:
+        name: GeoTIFF
+    instrument:
+        name: unknown
+    platform:
+        code: unknown
+    product_type: model
+measurements:
+-   dtype: float32
+    name: intensity
+    nodata: -100000002004087730000
+    units: '0.16666666666666666'
