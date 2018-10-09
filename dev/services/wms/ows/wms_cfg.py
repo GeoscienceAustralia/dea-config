@@ -770,7 +770,7 @@ layer_cfg = [
                 "product_name": "ls8_barest_earth_mosaic",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 50.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -923,7 +923,7 @@ layer_cfg = [
                 "product_name": "ls8_barest_earth_mosaic",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 50.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1105,7 +1105,7 @@ layer_cfg = [
                 "product_name": "ls8_barest_earth_mosaic",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 50.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1226,7 +1226,7 @@ layer_cfg = [
                 "product_name": "ls8_barest_earth_mosaic",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 50.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1347,7 +1347,7 @@ layer_cfg = [
                 "product_name": "ls8_barest_earth_mosaic",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 50.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1468,7 +1468,7 @@ layer_cfg = [
                 "product_name": "ls8_barest_earth_mosaic",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 50.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -2345,476 +2345,6 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
             }
 
         ],
-    },
-    {
-        # Name and title of the platform layer.
-        # Platform layers are not mappable. The name is for internal server use only.
-        "name": "Sentinel-2 NRT",
-        "title": "Near Real-Time",
-        "abstract": "This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. "
-                    "Data is only visible at higher resolutions: when zoomed-out the available areas for that day "
-                    "will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data "
-                    "that is processed on receipt using the best-available ancillary information at the time to "
-                    "provide atmospheric corrections. For more information see "
-                    "http://pid.geoscience.gov.au/dataset/ga/122229",
-
-        # Products available for this platform.
-        # For each product, the "name" is the Datacube name, and the label is used
-        # to describe the label to end-users.
-        "products": [
-            {
-                # Included as a keyword  for the layer
-                "label": "Sentinel 2B",
-                # Included as a keyword  for the layer
-                "type": "",
-                # Included as a keyword  for the layer
-                "variant": "Surface Reflectance",
-                # The WMS name for the layer
-                "name": "s2b_nrt_granule_nbar_t",
-                # The Datacube name for the associated data product
-                "product_name": "s2b_nrt_granule",
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "s2b_nrt_granule",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_band": "pixel_quality",
-                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-                # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Time Zone.  In hours added to UTC (maybe negative)
-                # Used for rounding off scene times to a date.
-                # 9 is good value for imagery of Australia.
-                "time_zone": 9,
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-                # Define layer wide legend graphic if no style is passed
-                # to GetLegendGraphic
-                "legend": {
-                    # "url": ""
-                    "styles": ["ndvi", "ndwi"]
-                },
-                # Styles.
-                #
-                # See band_mapper.py
-                #
-                # The various available spectral bands, and ways to combine them
-                # into a single rgb image.
-                # The examples here are ad hoc
-                #
-                "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
-                    {
-                        "name": "simple_rgb",
-                        "title": "Simple RGB",
-                        "abstract": "Simple true-colour image, using the red, green and blue bands",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "infrared_green",
-                        "title": "False colour - Green, SWIR, NIR",
-                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "ndvi",
-                        "title": "NDVI - Red, NIR",
-                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
-                        "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#A35F18"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#B88512"
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#CEAC0E"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#E5D609"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FFFF0C"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#C3DE09"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#88B808"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#529400"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#237100"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#114D04"
-                            }
-                        ]
-                        
-                    },
-                    {
-                        "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
-                        "needed_bands": ["nbart_green", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#0303FF",
-                            },
-                        ]
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "simple_rgb",
-            },
-            {
-                # Included as a keyword  for the layer
-                "label": "Sentinel 2A",
-                # Included as a keyword  for the layer
-                "type": "",
-                # Included as a keyword  for the layer
-                "variant": "Surface Reflectance",
-                # The WMS name for the layer
-                "name": "s2a_nrt_granule_nbar_t",
-                # The Datacube name for the associated data product
-                "product_name": "s2a_nrt_granule",
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "s2b_nrt_granule",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_band": "pixel_quality",
-                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-                # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Time Zone.  In hours added to UTC (maybe negative)
-                # Used for rounding off scene times to a date.
-                # 9 is good value for imagery of Australia.
-                "time_zone": 9,
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-                # Define layer wide legend graphic if no style is passed
-                # to GetLegendGraphic
-                "legend": {
-                    # "url": ""
-                    "styles": ["ndvi", "ndwi"]
-                },
-                # Styles.
-                #
-                # See band_mapper.py
-                #
-                # The various available spectral bands, and ways to combine them
-                # into a single rgb image.
-                # The examples here are ad hoc
-                #
-                "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
-                    {
-                        "name": "simple_rgb",
-                        "title": "Simple RGB",
-                        "abstract": "Simple true-colour image, using the red, green and blue bands",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "infrared_green",
-                        "title": "False colour - Green, SWIR, NIR",
-                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "ndvi",
-                        "title": "NDVI - Red, NIR",
-                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
-                        "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#A35F18"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#B88512"
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#CEAC0E"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#E5D609"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FFFF0C"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#C3DE09"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#88B808"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#529400"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#237100"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#114D04"
-                            }
-                        ]
-                        
-                    },
-                    {
-                        "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
-                        "needed_bands": ["nbart_green", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#0303FF",
-                            },
-                        ]
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "simple_rgb",
-            },
-        ],
-    },
-    {
-        "name": "multi_scale_topographic_position",
-        "title": "Multi-Scale Topographic Position",
-        "abstract": "",
-        "products": [
-            {
-                "label": "Multi-Scale Topographic Position",
-                "abstract": """A Multi-scale topographic position map of Australia has been generated by combining a 
-topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures the topographic slope 
-position of landforms. The TPI compares the mean elevation of a specific neighbourhood area with the elevation value of 
-central cell. This is done for every cell or pixel in the DEM to derive the relative topographic position (e.g. upper, 
-middle and lower landscape elements). Ruggedness informs on the roughness of the surface and is calculated as the 
-standard deviation of elevations. Both these terrain attributes are therefore scale dependant and will vary according 
-to the size of the analysis window. Based on an algorithm developed by Lindsay et al. (2015) we have generated 
-multi-scale topographic position model over the Australian continent using 3 second resolution (~90m) DEM derived from 
-the Shuttle Radar Topography Mission (SRTM). The algorithm calculates topographic position scaled by the corresponding 
-ruggedness across three spatial scales (window sizes) of 0.2-8.1 Km; 8.2-65.2 Km and 65.6-147.6 Km. The derived ternary 
-image captures variations in topographic position across these spatial scales (red local, green intermediate and blue 
-regional) and gives a rich representation of nested landform features that have broad application in understanding 
-geomorphological and hydrological processes and in mapping regolith and soils over the Australian continent.
-                """,
-                "type": "1 degree tile",
-                "variant": "",
-                "name": "multi_scale_topographic_position",
-                "product_name": "multi_scale_topographic_position",
-                "min_zoom_factor": 15.0,
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] == 0,
-                "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["regional", "intermediate", "local"],
-                "apply_solar_corrections": False,
-                "legend": {
-                    "styles": ["mstp"]
-                },
-                "styles": [
-                    {
-                        "name": "paper_style",
-                        "title": "Style as per paper legend",
-                        "abstract": "red regional, green intermediate and blue local",
-                        "components": {
-                            "red": {
-                                "regional": 1.0
-                            },
-                            "green": {
-                                "intermediate": 1.0
-                            },
-                            "blue": {
-                                "local": 1.0
-                            }
-                        },
-                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
-                        # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 255.0]
-                    },
-                    {
-                        "name": "ecat_style",
-                        "title": "Style as per eCat",
-                        "abstract": "red local, green intermediate and blue regional",
-                        "components": {
-                            "red": {
-                                "local": 1.0
-                            },
-                            "green": {
-                                "intermediate": 1.0
-                            },
-                            "blue": {
-                                "regional": 1.0
-                            }
-                        },
-                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
-                        # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 255.0]
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "paper_style",
-            },
-        ]
     },
 
 ]
