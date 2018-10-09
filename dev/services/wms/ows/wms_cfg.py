@@ -2815,5 +2815,79 @@ geomorphological and hydrological processes and in mapping regolith and soils ov
             },
         ]
     },
+    {
+        "name": "weathering_intensity",
+        "title": "Weathering Intensity",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Weathering Intensity",
+                "abstract": "Weathering intensity or the degree of weathering is an important characteristic of the "
+                            "earth’s surface that has a significant influence on the chemical and physical properties "
+                            "of surface materials. Weathering intensity largely controls the degree to which primary "
+                            "minerals are altered to secondary components including clay minerals and oxides. The "
+                            "degree of surface weathering is particularly important in Australia where variations in "
+                            "weathering intensity correspond to the nature and distribution of regolith (weathered "
+                            "bedrock and sediments) which mantles approximately 90% of the Australian continent. The "
+                            "weathering intensity prediction has been generated using the Random Forest decision tree "
+                            "machine learning algorithm. The algorithm is used to establish predictive relationships "
+                            "between field estimates of the degree of weathering and a comprehensive suite of "
+                            "covariate or predictive datasets. The covariates used to generate the model include "
+                            "satellite imagery, terrain attributes, airborne radiometric imagery and mapped geology. "
+                            "Correlations between the training dataset and the covariates were explored through the "
+                            "generation of 300 random tree models. An r-squared correlation of 0.85 is reported using "
+                            "5 K-fold cross-validation. The mean of the 300 models is used for predicting the "
+                            "weathering intensity and the uncertainty in the weathering intensity is estimated at "
+                            "each location via the standard deviation in the 300 model values. The predictive "
+                            "weathering intensity model is an estimate of the degree of surface weathering only. The "
+                            "interpretation of the weathering intensity is different for in-situ or residual "
+                            "landscapes compared with transported materials within depositional landscapes. In "
+                            "residual landscapes, weathering process are operating locally whereas in depositional "
+                            "landscapes the model is reflecting the degree of weathering either prior to erosion and "
+                            "subsequent deposition, or weathering of sediments after being deposited. The weathering "
+                            "intensity model has broad utility in assisting mineral exploration in variably weathered "
+                            "geochemical landscapes across the Australian continent, mapping chemical and physical "
+                            "attributes of soils in agricultural landscapes and in understanding the nature and "
+                            "distribution of weathering processes occurring within the upper regolith. For more "
+                            "information see http://pid.geoscience.gov.au/dataset/ga/123106",
+                "type": "1 degree tile",
+                "variant": "",
+                "name": "weathering_intensity",
+                "product_name": "weathering_intensity",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] == 0,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["intensity"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["wii"]
+                },
+                "styles": [
+                    {
+                        "name": "wii",
+                        "title": "Weathering Intensity",
+                        "abstract": "Weather Intensity Index (0-6)",
+                        "needed_bands": ["intensity"],
+                        "color_ramp": [{'value': '0', 'color': '#0571b0'},
+                                       {'value': '1', 'color': '#62a9ce'},
+                                       {'value': '2', 'color': '#b3d5e6'},
+                                       {'value': '3', 'color': '#f7f7f7'},
+                                       {'value': '4', 'color': '#f5c0a9'},
+                                       {'value': '5', 'color': '#e66e61'},
+                                       {'value': '6', 'color': '#ca0020'}]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "wii",
+            },
+        ]
+    },
+
 ]
 
