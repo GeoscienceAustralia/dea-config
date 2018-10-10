@@ -21,5 +21,5 @@ metadata:
 measurements:
 -   dtype: float32
     name: intensity
-    nodata: -1.0
+    nodata: -1
     units: '0.16666666666666666'
