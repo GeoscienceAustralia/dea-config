@@ -2760,7 +2760,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] == 0,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
                 "always_fetch_bands": ["regional", "intermediate", "local"],
@@ -2839,7 +2839,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] == 0,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
                 "always_fetch_bands": ["intensity"],
@@ -2860,6 +2860,9 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                                        {'value': '4', 'color': '#f5c0a9'},
                                        {'value': '5', 'color': '#e66e61'},
                                        {'value': '6', 'color': '#ca0020'}]
+                        "legend": {
+                            "major_ticks": 1
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
