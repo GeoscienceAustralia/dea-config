@@ -197,6 +197,36 @@
                      "linkedWcsCoverage": "mangrove_cover"
                   }
                ]
+            },
+            {
+               "name": "Weathering Intensity",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Weathering Intensity 1 degree tile (Weathering Intensity)",
+                     "type": "wms",
+                     "layers": "weathering_intensity",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "weathering_intensity"
+                  }
+               ]
+            },
+            {
+               "name": "Multi-Scale Topographic Position",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
+                     "type": "wms",
+                     "layers": "multi_scale_topographic_position",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "multi_scale_topographic_position"
+                  }
+               ]
             }
          ]
       },
