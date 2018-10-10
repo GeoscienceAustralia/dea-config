@@ -1035,53 +1035,53 @@ layer_cfg = [
                             },
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.1,
-                                "color": "#A35F18"
+                                "color": "#0000F3"
                             },
                             {
                                 "value": 0.2,
-                                "color": "#B88512"
+                                "color": "#004CFF"
                             },
                             {
                                 "value": 0.3,
-                                "color": "#CEAC0E"
+                                "color": "#00B3FF"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#E5D609"
+                                "color": "#29FFCE"
                             },
                             {
                                 "value": 0.5,
-                                "color": "#FFFF0C"
+                                "color": "#7BFF7B"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#C3DE09"
+                                "color": "#CEFF29"
                             },
                             {
                                 "value": 0.7,
-                                "color": "#88B808"
+                                "color": "#FFC600"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#529400"
+                                "color": "#FF6800"
                             },
                             {
                                 "value": 0.9,
-                                "color": "#237100"
+                                "color": "#F30900"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#114D04"
+                                "color": "#800000"
                             }
                         ]
                     }
@@ -1152,53 +1152,53 @@ layer_cfg = [
                             },
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.2,
-                                "color": "#A35F18"
+                                "color": "#0000F3"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#B88512"
+                                "color": "#004CFF"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#CEAC0E"
+                                "color": "#00B3FF"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#E5D609"
+                                "color": "#29FFCE"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#FFFF0C"
+                                "color": "#7B777B"
                             },
                             {
                                 "value": 1.2,
-                                "color": "#C3DE09"
+                                "color": "#CEFF29"
                             },
                             {
                                 "value": 1.4,
-                                "color": "#88B808"
+                                "color": "#FFC600"
                             },
                             {
                                 "value": 1.6,
-                                "color": "#529400"
+                                "color": "#FF6800"
                             },
                             {
                                 "value": 1.8,
-                                "color": "#237100"
+                                "color": "#F30900"
                             },
                             {
                                 "value": 2.0,
-                                "color": "#114D04"
+                                "color": "#800000"
                             }
                         ],
                         "legend": {
@@ -1273,53 +1273,53 @@ layer_cfg = [
                             },
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.2,
-                                "color": "#A35F18"
+                                "color": "#0000F3"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#B88512"
+                                "color": "#004CFF"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#CEAC0E"
+                                "color": "#00B3FF"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#E5D609"
+                                "color": "#29FFCE"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#FFFF0C"
+                                "color": "#7BFF7B"
                             },
                             {
                                 "value": 1.2,
-                                "color": "#C3DE09"
+                                "color": "#CEFF29"
                             },
                             {
                                 "value": 1.4,
-                                "color": "#88B808"
+                                "color": "#FFC600"
                             },
                             {
                                 "value": 1.6,
-                                "color": "#529400"
+                                "color": "#FF6800"
                             },
                             {
                                 "value": 1.8,
-                                "color": "#237100"
+                                "color": "#F30900"
                             },
                             {
                                 "value": 2.0,
-                                "color": "#114D04"
+                                "color": "#800000"
                             }
                         ],
                         "legend": {
@@ -1394,53 +1394,53 @@ layer_cfg = [
                             },
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.3,
-                                "color": "#A35F18"
+                                "color": "#0000F3"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#B88512"
+                                "color": "#004CFF"
                             },
                             {
                                 "value": 0.9,
-                                "color": "#CEAC0E"
+                                "color": "#00B3FF"
                             },
                             {
                                 "value": 1.2,
-                                "color": "#E5D609"
+                                "color": "#29FFCE"
                             },
                             {
                                 "value": 1.5,
-                                "color": "#FFFF0C"
+                                "color": "#7BFF7B"
                             },
                             {
                                 "value": 1.8,
-                                "color": "#C3DE09"
+                                "color": "#CEFF29"
                             },
                             {
                                 "value": 2.1,
-                                "color": "#88B808"
+                                "color": "#FFC600"
                             },
                             {
                                 "value": 2.4,
-                                "color": "#529400"
+                                "color": "#FF6800"
                             },
                             {
                                 "value": 2.7,
-                                "color": "#237100"
+                                "color": "#F30900"
                             },
                             {
                                 "value": 3.0,
-                                "color": "#114D04"
+                                "color": "#800000"
                             }
                         ],
                         "legend": {
@@ -1515,53 +1515,53 @@ layer_cfg = [
                             },
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.4,
-                                "color": "#A35F18"
+                                "color": "#0000F3"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#B88512"
+                                "color": "#004CFF"
                             },
                             {
                                 "value": 1.2,
-                                "color": "#CEAC0E"
+                                "color": "#00B3FF"
                             },
                             {
                                 "value": 1.6,
-                                "color": "#E5D609"
+                                "color": "#29FFCE"
                             },
                             {
                                 "value": 2.0,
-                                "color": "#FFFF0C"
+                                "color": "#7BFF7B"
                             },
                             {
                                 "value": 2.4,
-                                "color": "#C3DE09"
+                                "color": "#CEFF29"
                             },
                             {
                                 "value": 2.8,
-                                "color": "#88B808"
+                                "color": "#FFC600"
                             },
                             {
                                 "value": 3.2,
-                                "color": "#529400"
+                                "color": "#FF6800"
                             },
                             {
                                 "value": 3.6,
-                                "color": "#237100"
+                                "color": "#F30900"
                             },
                             {
                                 "value": 4.0,
-                                "color": "#114D04"
+                                "color": "#800000"
                             }
                         ],
                         "legend": {
@@ -1583,53 +1583,53 @@ layer_cfg = [
                             },
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#000080",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.2,
-                                "color": "#A35F18"
+                                "color": "#0000F3"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#B88512"
+                                "color": "#004CFF"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#CEAC0E"
+                                "color": "#00B3FF"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#E5D609"
+                                "color": "#29FFCE"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#FFFF0C"
+                                "color": "#7BFF7B"
                             },
                             {
                                 "value": 1.2,
-                                "color": "#C3DE09"
+                                "color": "#CEFF29"
                             },
                             {
                                 "value": 1.4,
-                                "color": "#88B808"
+                                "color": "#FFC600"
                             },
                             {
                                 "value": 1.6,
-                                "color": "#529400"
+                                "color": "#FF6800"
                             },
                             {
                                 "value": 1.8,
-                                "color": "#237100"
+                                "color": "#F30900"
                             },
                             {
                                 "value": 2.0,
-                                "color": "#114D04"
+                                "color": "#800000"
                             }
                         ],
                         "legend": {
