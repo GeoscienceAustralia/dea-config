@@ -2859,7 +2859,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                                        {'value': '3', 'color': '#f7f7f7'},
                                        {'value': '4', 'color': '#f5c0a9'},
                                        {'value': '5', 'color': '#e66e61'},
-                                       {'value': '6', 'color': '#ca0020'}]
+                                       {'value': '6', 'color': '#ca0020'}],
                         "legend": {
                             "major_ticks": 1
                         }
