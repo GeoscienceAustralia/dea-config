@@ -2856,15 +2856,34 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "title": "Weathering Intensity",
                         "abstract": "Weather Intensity Index (0-6)",
                         "needed_bands": ["intensity"],
-                        "color_ramp": [{'value': '0', 'color': '#0571b0'},
-                                       {'value': '1', 'color': '#62a9ce'},
-                                       {'value': '2', 'color': '#b3d5e6'},
-                                       {'value': '3', 'color': '#f7f7f7'},
-                                       {'value': '4', 'color': '#f5c0a9'},
-                                       {'value': '5', 'color': '#e66e61'},
-                                       {'value': '6', 'color': '#ca0020'}],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 1,
+                                'color': '#2972a8',
+                                'legend': {
+                                    'label': 'Low\nClass 1'
+                                }
+                            },
+                            {
+                                'value': 3,
+                                'color': '#fcf24b'
+                            },
+                            {
+                                'value': 6,
+                                'color': '#a02406',
+                                'legend': {
+                                    'label': 'High\nClass 6'
+                                }
+                            }
+                        ],
                         "legend": {
-                            "major_ticks": 1
+                            "legend_values": [1, 6],
+                            "axes_position": [0.1, 0.5, 0.8, 0.15]
                         }
                     },
                 ],
