@@ -1,0 +1,51 @@
+name: mangrove_cover
+
+description: Mangrove Cover, Australian Albers Equal Area projection (EPSG:3577)
+metadata_type: eo
+
+metadata:
+  platform:
+    code: LANDSAT_5,LANDSAT_7,LANDSAT_8
+  format:
+    name: GeoTIFF
+  instrument:
+    name: TM,ETM+,OLI
+  product_type: mangrove_extent_cover
+
+storage:
+  crs: EPSG:3577
+  resolution:
+          x: 25
+          y: -25
+  dimension_order: ['time', 'y', 'x']
+  tile_size:
+    x: 100000.0
+    y: 100000.0
+  resolution:
+    x: 25
+    y: -25
+
+measurements:
+    - name: canopy_cover_class
+      units: "1"
+      dtype: int16
+      nodata: -1
+      aliases: ["cover"]
+      flags_definition:
+        woodland:
+          bits: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+          description: Woodland
+          values: {1: true}
+        open_forest:
+          bits: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+          description: Open Forest
+          values: {2: true}
+        closed_forest:
+          bits: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+          description: Closed Forest
+          values: {3: true}
+    - name: extent
+      units: "1"
+      dtype: int16
+      nodata: -1
+      aliases: ["extent"]

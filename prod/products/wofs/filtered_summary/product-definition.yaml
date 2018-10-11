@@ -1,0 +1,32 @@
+description: Water Observations from Space Statistics confidence filtered
+measurements:
+-   dtype: float32
+    name: confidence
+    nodata: -1
+    units: '1'
+-   dtype: float32
+    name: wofs_filtered_summary
+    nodata: -1
+    units: '1'
+metadata:
+    format:
+        name: 'GeoTIFF'
+    instrument:
+        name: 'TM,ETM+,OLI'
+    platform:
+        code: 'LANDSAT_5,LANDSAT_7,LANDSAT_8'
+    product_type: wofs_filtered_summary
+metadata_type: eo
+name: wofs_filtered_summary
+storage:
+    crs: EPSG:3577
+    dimension_order:
+    - time
+    - y
+    - x
+    resolution:
+        x: 25
+        y: -25
+    tile_size:
+        x: 100000.0
+        y: 100000.0
