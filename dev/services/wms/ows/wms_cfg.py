@@ -2155,7 +2155,8 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 "always_fetch_bands": ["regional", "intermediate", "local"],
                 "apply_solar_corrections": False,
                 "legend": {
-                    "styles": ["mstp_rgb"]
+                    "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/multi-scale-topographic-position/mstp_legend.png",
+                    # "styles": ["mstp_rgb"]
                 },
                 "styles": [
                     {
