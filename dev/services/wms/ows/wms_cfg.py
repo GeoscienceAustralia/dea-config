@@ -974,53 +974,53 @@ layer_cfg = [
                             },
                             {
                                 "value": -0.0,
-                                "color": "#000080",
+                                "color": "#333399",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#000080",
+                                "color": "#333399",
                                 "alpha": 1.0
                             },
                             {
+                                "value": 0.05,
+                                "color": "#1177DD"
+                            },
+                            {
                                 "value": 0.1,
-                                "color": "#0000F3"
+                                "color": "#00B2B2"
+                            },
+                            {
+                                "value": 0.15,
+                                "color": "#33D670"
                             },
                             {
                                 "value": 0.2,
-                                "color": "#004CFF"
+                                "color": "#99EB85"
+                            },
+                            {
+                                "value": 0.25,
+                                "color": "#FFFF99"
                             },
                             {
                                 "value": 0.3,
-                                "color": "#00B3FF"
+                                "color": "#CCBE7D"
+                            },
+                            {
+                                "value": 0.35,
+                                "color": "#997C62"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#29FFCE"
+                                "color": "#997C76"
+                            },
+                            {
+                                "value": 0.45,
+                                "color": "#CCBEBB"
                             },
                             {
                                 "value": 0.5,
-                                "color": "#7BFF7B"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#CEFF29"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#FFC600"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#FF6800"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#F30900"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#800000"
+                                "color": "#FFFFFF"
                             }
                         ]
                     }
