@@ -912,7 +912,125 @@ layer_cfg = [
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "simple_rgb",
-            }
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Landsat 8",
+                # Included as a keyword  for the layer
+                "type": "Soil Index",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "Soil Index",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_barest_earth_mosaic",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 50.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndsi"]
+                },
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    # Examples of non-linear heat-mapped styles.
+                    {
+                        "name": "ndsi",
+                        "title": "NDSI - SWIR1, SWIR2",
+                        "abstract": "Normalised Difference Soil Index ",
+                        "index_function": lambda data: (data["swir1"] - data["swir2"]) / (
+                                    data["swir1"] + data["swir2"]),
+                        "needed_bands": ["swir1", "swir2"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#000080",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#000080",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#0000F3"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#004CFF"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#00B3FF"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#29FFCE"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#7BFF7B"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#CEFF29"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#FFC600"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#FF6800"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#F30900"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#800000"
+                            }
+                        ]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ndsi",
+            },
         ]
     },
     {
