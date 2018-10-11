@@ -119,38 +119,6 @@
                      "linkedWcsCoverage": "ls8_barest_earth_mosaic"
                   },
                   {
-                     "name": "Barest Earth 25m clay minerals",
-                     "type": "wms",
-                     "layers": "clay/hydroxyl-bearing minerals",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "clay/hydroxyl-bearing minerals"
-                  },
-                  {
-                     "name": "Barest Earth 25m Hematite/Goethite Index",
-                     "type": "wms",
-                     "layers": "hematite/goethite_index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "hematite/goethite_index"
-                  },
-                  {
-                     "name": "Barest Earth 25m Iron Index",
-                     "type": "wms",
-                     "layers": "iron-index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "iron-index"
-                  },
-                  {
-                     "name": "Barest Earth 25m Iron Oxides",
-                     "type": "wms",
-                     "layers": "Iron Oxides Index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "Iron Oxides Index"
-                  },
-                  {
                      "name": "Barest Earth 25m Soil Index",
                      "type": "wms",
                      "layers": "Soil Index",
@@ -309,7 +277,7 @@
             {
                "name": "DEA Albers Tiles grid",
                "type": "geojson",
-               "url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/geomedian-australia/albers_grid.geojson"
+               "url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/geomedian-australia/v2.1.0/albers_grid.geojson"
             },
             {
                "name": "DEA Intertidal Extents Relative Model and Confidence Layer 25m v2.0 polygons for access to data",
