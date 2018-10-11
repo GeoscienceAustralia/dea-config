@@ -988,7 +988,7 @@ layer_cfg = [
                             },
                             {
                                 "value": 0.2,
-                                "color": "#00004CFF"
+                                "color": "#004CFF"
                             },
                             {
                                 "value": 0.3,
