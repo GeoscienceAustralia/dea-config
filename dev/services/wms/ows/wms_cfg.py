@@ -2870,7 +2870,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                                 }
                             },
                             {
-                                'value': 3,
+                                'value': 3.5,
                                 'color': '#fcf24b'
                             },
                             {
