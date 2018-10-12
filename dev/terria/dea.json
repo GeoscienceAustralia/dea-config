@@ -23,6 +23,25 @@
          "url": "http://gsky.nci.org.au/ows"
       },
       {
+         "name": "GSKY with legends (prod)",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Daily Water Observation Feature Layer",
+               "type": "wms",
+               "layers": "wofs",
+               "url": "http://gsky.nci.org.au/ows",
+               "legendUrl": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/WOFLs/v2.1.0/wofs-legend.svg",
+            }
+         ]
+      },
+      {
+         "name": "GSKY Daily Landsat (dev)",
+         "type": "wms-getCapabilities",
+         "url": "http://130.56.242.16/ows/dea/daily"
+      },
+      {
          "name": "DEA Dev (K8s dev)",
          "type": "group",
          "preserveOrder": true,

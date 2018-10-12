@@ -1,4 +1,5 @@
 # Static config for the wms metadata.
+
 response_cfg = {
     "Access-Control-Allow-Origin": "*",  # CORS header
 }
@@ -12,7 +13,7 @@ service_cfg = {
     # Service title - appears e.g. in Terria catalog
     "title": "Digital Earth Australia - OGC Web Services",
     # Service URL.  Should a fully qualified URL
-    "url": "https://ows.services.devkube.dea.ga.gov.au",
+    "url": "https://ows.services.dea.ga.gov.au",
     "human_url": "dea.ga.gov.au/",
     # Supported co-ordinate reference systems
     "published_CRSs": {
@@ -62,6 +63,7 @@ service_cfg = {
     "native_wcs_format": "GeoTIFF",
 
     ## Optional config for instances supporting WMS
+    # Max tile height/width.  If not specified, default to 256x256
     "max_width": 512,
     "max_height": 512,
 
@@ -71,8 +73,8 @@ service_cfg = {
         "geomedian",
         "WOfS",
         "mangrove",
-        "bare-earth"
         "landsat",
+        "sentinel",
         "australia",
         "time-series",
     ],
@@ -115,8 +117,7 @@ layer_cfg = [
                     "Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; "
                     "Landsat 7: 2000 to 2017; "
                     "Landsat 8: 2013 to 2017; "
-                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374"
-                    "For product definition, see http://dea-public-data.s3-ap-southeast-2.amazonaws.com/geomedian-australia/v2.1.0/Product%20Description.pdf",
+                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -144,7 +145,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -349,7 +350,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -554,7 +555,7 @@ layer_cfg = [
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -736,184 +737,6 @@ layer_cfg = [
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "simple_rgb",
-            }
-        ]
-    },
-    {
-        # Name and title of the platform layer.
-        # Platform layers are not mappable. The name is for internal server use only.
-        "name": "landsat8_barest_earth",
-        "title": "Barest Earth",
-        "abstract": "A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state "
-                    "(i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a "
-                    "six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent. The bands include BLUE "
-                    "(0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 "
-                    "(2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, "
-                    "saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra "
-                    "observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and "
-                    "rock mineralogy. Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at "
-                    "its Barest, submitted. "
-                    "Mosaics are available for the following years: "
-                    "Landsat 8: 2013 to 2017; "
-                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/122573",
-        # Products available for this platform.
-        # For each product, the "name" is the Datacube name, and the label is used
-        # to describe the label to end-users.
-        "products": [
-            {
-                # Included as a keyword  for the layer
-                "label": "Landsat 8",
-                # Included as a keyword  for the layer
-                "type": "Barest Earth",
-                # Included as a keyword  for the layer
-                "variant": "25m",
-                # The WMS name for the layer
-                "name": "ls8_barest_earth_mosaic",
-                # The Datacube name for the associated data product
-                "product_name": "ls8_barest_earth_mosaic",
-                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-                # to actual imagery occurs.
-                "min_zoom_factor": 50.0,
-                "max_datasets_wms": 1000,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Time Zone.  In hours added to UTC (maybe negative)
-                # Used for rounding off scene times to a date.
-                # 9 is good value for imagery of Australia.
-                "time_zone": 9,
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-                "data_manual_merge": True,
-                "always_fetch_bands": [],
-                "apply_solar_corrections": False,
-                # Define layer wide legend graphic if no style is passed
-                # to GetLegendGraphic
-                "legend": {
-                    # "url": ""
-                    "styles": ["ndvi"]
-                },
-                #
-                # See band_mapper.py
-                #
-                # The various available spectral bands, and ways to combine them
-                # into a single rgb image.
-                # The examples here are ad hoc
-                #
-                "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
-                    {
-                        "name": "simple_rgb",
-                        "title": "Simple RGB",
-                        "abstract": "Simple true-colour image, using the red, green and blue bands",
-                        "components": {
-                            "red": {
-                                "red": 1.0
-                            },
-                            "green": {
-                                "green": 1.0
-                            },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
-                        # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "infrared_green",
-                        "title": "False colour - Green, SWIR, NIR",
-                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "nir": 1.0
-                            },
-                            "blue": {
-                                "green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "ndvi",
-                        "title": "NDVI - Red, NIR",
-                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
-                        "needed_bands": ["red", "nir"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#A35F18"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#B88512"
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#CEAC0E"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#E5D609"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FFFF0C"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#C3DE09"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#88B808"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#529400"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#237100"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#114D04"
-                            }
-                        ]
-                    }
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "simple_rgb",
-
             }
         ]
     },
@@ -1622,7 +1445,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Sentinel-2 NRT",
         "title": "Near Real-Time",
-        "abstract": "This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. "
+        "abstract": "This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. "
                     "Data is only visible at higher resolutions: when zoomed-out the available areas for that day "
                     "will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data "
                     "that is processed on receipt using the best-available ancillary information at the time to "
@@ -2002,168 +1825,4 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
             },
         ],
     },
-    {
-        "name": "multi_scale_topographic_position",
-        "title": "Multi-Scale Topographic Position",
-        "abstract": "",
-        "products": [
-            {
-                "label": "Multi-Scale Topographic Position",
-                "abstract": """A Multi-scale topographic position image of Australia has been generated by combining 
-                a topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures 
-                the topographic slope position of landforms. Ruggedness informs on the roughness of the surface and 
-                is calculated as the standard deviation of elevations. Both these terrain attributes are therefore 
-                scale dependent and will vary according to the size of the analysis window. Based on an algorithm 
-                developed by Lindsay et al. (2015) we have generated multi-scale topographic position model over the 
-                Australian continent using 3 second resolution (~90m) DEM derived from the Shuttle Radar Topography 
-                Mission (SRTM). The algorithm calculates topographic position scaled by the corresponding ruggedness 
-                across three spatial scales (window sizes) of 0.2-8.1 Km; 8.2-65.2 Km and 65.6-147.6 Km. The derived 
-                ternary image captures variations in topographic position across these spatial scales (blue local, 
-                green intermediate and red regional) and gives a rich representation of nested landform features that 
-                have broad application in understanding geomorphological and hydrological processes and in mapping 
-                regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
-                H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
-                Geomorphology 245, 51–61. For more information see http://pid.geoscience.gov.au/dataset/ga/123314 """,
-                "type": "1 degree tile",
-                "variant": "",
-                "name": "multi_scale_topographic_position",
-                "product_name": "multi_scale_topographic_position",
-                "min_zoom_factor": 15.0,
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
-                "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["regional", "intermediate", "local"],
-                "apply_solar_corrections": False,
-                "legend": {
-                    "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/multi-scale-topographic-position/mstp_legend.png",
-                    # "styles": ["mstp_rgb"]
-                },
-                "styles": [
-                    {
-                        "name": "mstp_rgb",
-                        "title": "Multi-scale Topographic Position",
-                        "abstract": "red regional, green intermediate and blue local",
-                        "components": {
-                            "red": {
-                                "regional": 1.0
-                            },
-                            "green": {
-                                "intermediate": 1.0
-                            },
-                            "blue": {
-                                "local": 1.0
-                            }
-                        },
-                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
-                        # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 255.0]
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "mstp_rgb",
-            },
-        ]
-    },
-    {
-        "name": "weathering_intensity",
-        "title": "Weathering Intensity",
-        "abstract": "",
-        "products": [
-            {
-                "label": "Weathering Intensity",
-                "abstract": "Weathering intensity or the degree of weathering is an important characteristic of the "
-                            "earth’s surface that has a significant influence on the chemical and physical properties "
-                            "of surface materials. Weathering intensity largely controls the degree to which primary "
-                            "minerals are altered to secondary components including clay minerals and oxides. The "
-                            "degree of surface weathering is particularly important in Australia where variations in "
-                            "weathering intensity correspond to the nature and distribution of regolith (weathered "
-                            "bedrock and sediments) which mantles approximately 90% of the Australian continent. The "
-                            "weathering intensity prediction has been generated using the Random Forest decision tree "
-                            "machine learning algorithm. The algorithm is used to establish predictive relationships "
-                            "between field estimates of the degree of weathering and a comprehensive suite of "
-                            "covariate or predictive datasets. The covariates used to generate the model include "
-                            "satellite imagery, terrain attributes, airborne radiometric imagery and mapped geology. "
-                            "Correlations between the training dataset and the covariates were explored through the "
-                            "generation of 300 random tree models. An r-squared correlation of 0.85 is reported using "
-                            "5 K-fold cross-validation. The mean of the 300 models is used for predicting the "
-                            "weathering intensity and the uncertainty in the weathering intensity is estimated at "
-                            "each location via the standard deviation in the 300 model values. The predictive "
-                            "weathering intensity model is an estimate of the degree of surface weathering only. The "
-                            "interpretation of the weathering intensity is different for in-situ or residual "
-                            "landscapes compared with transported materials within depositional landscapes. In "
-                            "residual landscapes, weathering process are operating locally whereas in depositional "
-                            "landscapes the model is reflecting the degree of weathering either prior to erosion and "
-                            "subsequent deposition, or weathering of sediments after being deposited. The weathering "
-                            "intensity model has broad utility in assisting mineral exploration in variably weathered "
-                            "geochemical landscapes across the Australian continent, mapping chemical and physical "
-                            "attributes of soils in agricultural landscapes and in understanding the nature and "
-                            "distribution of weathering processes occurring within the upper regolith. For more "
-                            "information see http://pid.geoscience.gov.au/dataset/ga/123106",
-                "type": "1 degree tile",
-                "variant": "",
-                "name": "weathering_intensity",
-                "product_name": "weathering_intensity",
-                "min_zoom_factor": 15.0,
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
-                "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["intensity"],
-                "apply_solar_corrections": False,
-                "legend": {
-                    "styles": ["wii"]
-                },
-                "styles": [
-                    {
-                        "name": "wii",
-                        "title": "Weathering Intensity",
-                        "abstract": "Weather Intensity Index (0-6)",
-                        "needed_bands": ["intensity"],
-                        "color_ramp": [
-                            {
-                                'value': 0,
-                                'color': '#ffffff',
-                                'alpha': 0
-                            },
-                            {
-                                'value': 1,
-                                'color': '#2972a8',
-                                'legend': {
-                                    'label': 'Low\nClass 1'
-                                }
-                            },
-                            {
-                                'value': 3.5,
-                                'color': '#fcf24b'
-                            },
-                            {
-                                'value': 6,
-                                'color': '#a02406',
-                                'legend': {
-                                    'label': 'High\nClass 6'
-                                }
-                            }
-                        ],
-                        "legend": {
-                            "legend_values": [1, 6],
-                            "axes_position": [0.1, 0.5, 0.8, 0.15]
-                        }
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "wii",
-            },
-        ]
-    },
-
 ]
-
