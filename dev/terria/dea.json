@@ -37,14 +37,23 @@
          ]
       },
       {
+         "name": "GSKY Daily WOFLs Landsat (dev)",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "GSKY Daily WOFLs Landsat (dev)",
+               "type": "wms",
+               "layers": "wofs",
+               "url": "http://130.56.242.16/ows/dea/wofs",
+               "legendUrl": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/WOFLs/v2.1.0/wofs-legend.svg",
+            }
+         ]
+      },
+      {
          "name": "GSKY Daily NBAR Landsat (dev)",
          "type": "wms-getCapabilities",
          "url": "http://130.56.242.16/ows/dea/daily"
-      },
-      {
-         "name": "GSKY Daily WOFLs Landsat (dev)",
-         "type": "wms-getCapabilities",
-         "url": "http://130.56.242.16/ows/dea/wofs"
       },
       {
          "name": "DEA Dev (K8s dev)",
