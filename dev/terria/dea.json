@@ -136,14 +136,6 @@
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_barest_earth_mosaic"
-                  },
-                  {
-                     "name": "Barest Earth 25m Soil Index",
-                     "type": "wms",
-                     "layers": "Soil Index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "Soil Index"
                   }
                ]
             },
