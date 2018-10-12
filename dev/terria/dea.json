@@ -37,9 +37,14 @@
          ]
       },
       {
-         "name": "GSKY Daily Landsat (dev)",
+         "name": "GSKY Daily NBAR Landsat (dev)",
          "type": "wms-getCapabilities",
          "url": "http://130.56.242.16/ows/dea/daily"
+      },
+      {
+         "name": "GSKY Daily WOFLs Landsat (dev)",
+         "type": "wms-getCapabilities",
+         "url": "http://130.56.242.16/ows/dea/wofs"
       },
       {
          "name": "DEA Dev (K8s dev)",
@@ -215,58 +220,165 @@
          "preserveOrder": true,
          "items": [
             {
-               "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
-               "type": "wms",
-               "layers": "wofs_filtered_summary",
-               "url": "https://ows.services.dea.ga.gov.au/"
+               "name": "WOfS Summaries",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_filtered_summary",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_filtered_summary"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_summary_wet",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_summary_wet"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_summary_clear",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_summary_clear"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
+                     "type": "wms",
+                     "layers": "Water Observations from Space Statistics",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "Water Observations from Space Statistics"
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_filtered_summary_confidence",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_filtered_summary_confidence"
+                  }
+               ]
             },
             {
-               "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
-               "type": "wms",
-               "layers": "wofs_summary_wet",
-               "url": "https://ows.services.dea.ga.gov.au/"
+               "name": "Annual Landsat Geomedian",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Surface Reflectance (Landsat 5)",
+                     "type": "wms",
+                     "layers": "ls5_nbart_geomedian_annual",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls5_nbart_geomedian_annual"
+                  },
+                  {
+                     "name": "Surface Reflectance (Landsat 7)",
+                     "type": "wms",
+                     "layers": "ls7_nbart_geomedian_annual",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls7_nbart_geomedian_annual"
+                  },
+                  {
+                     "name": "Surface Reflectance (Landsat 8)",
+                     "type": "wms",
+                     "layers": "ls8_nbart_geomedian_annual",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls8_nbart_geomedian_annual"
+                  }
+                ]
             },
             {
-               "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
-               "type": "wms",
-               "layers": "wofs_summary_clear",
-               "url": "https://ows.services.dea.ga.gov.au/"
+               "name": "Barest Earth (Landsat 8)",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Barest Earth 25m Mosiac",
+                     "type": "wms",
+                     "layers": "ls8_barest_earth_mosaic",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ls8_barest_earth_mosaic"
+                  }
+               ]
             },
             {
-               "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
-               "type": "wms",
-               "layers": "Water Observations from Space Statistics",
-               "url": "https://ows.services.dea.ga.gov.au/"
-            },
-            {
-               "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
-               "type": "wms",
-               "layers": "wofs_filtered_summary_confidence",
-               "url": "https://ows.services.dea.ga.gov.au/"
-            },
-            {
-               "name": "Surface Reflectance (Landsat 5)",
-               "type": "wms",
-               "layers": "ls5_nbart_geomedian_annual",
-               "url": "https://ows.services.dea.ga.gov.au/"
-            },
-            {
-               "name": "Surface Reflectance (Landsat 7)",
-               "type": "wms",
-               "layers": "ls7_nbart_geomedian_annual",
-               "url": "https://ows.services.dea.ga.gov.au/"
-            },
-            {
-               "name": "Surface Reflectance (Landsat 8)",
-               "type": "wms",
-               "layers": "ls8_nbart_geomedian_annual",
-               "url": "https://ows.services.dea.ga.gov.au/"
+               "name": "Near Real-Time",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Near Real-Time Surface Reflectance (Sentinel 2A)",
+                     "type": "wms",
+                     "layers": "s2a_nrt_granule_nbar_t",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2a_nrt_granule_nbar_t"
+                  },
+                  {
+                     "name": "Near Real-Time Surface Reflectance (Sentinel 2B)",
+                     "type": "wms",
+                     "layers": "s2b_nrt_granule_nbar_t",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2b_nrt_granule_nbar_t"
+                  }
+               ]
             },
             {
                "name": "Mangrove Canopy Cover",
-               "type": "wms",
-               "layers": "mangrove_cover",
-               "url": "https://ows.services.dea.ga.gov.au/"
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Mangrove Canopy Cover",
+                     "type": "wms",
+                     "layers": "mangrove_cover",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "mangrove_cover"
+                  }
+               ]
+            },
+            {
+               "name": "Weathering Intensity",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Weathering Intensity 1 degree tile (Weathering Intensity)",
+                     "type": "wms",
+                     "layers": "weathering_intensity",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "weathering_intensity"
+                  }
+               ]
+            },
+            {
+               "name": "Multi-Scale Topographic Position",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
+                     "type": "wms",
+                     "layers": "multi_scale_topographic_position",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "multi_scale_topographic_position"
+                  }
+               ]
             }
          ]
       },
