@@ -14,7 +14,7 @@ metadata:
     format:
         name: GeoTIFF
     instrument:
-        name: unknown
+        name: STRM
     platform:
         code: unknown
     product_type: model
