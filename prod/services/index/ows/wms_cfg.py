@@ -741,6 +741,184 @@ layer_cfg = [
         ]
     },
     {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "landsat8_barest_earth",
+        "title": "Barest Earth",
+        "abstract": "A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state "
+                    "(i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a "
+                    "six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent. The bands include BLUE "
+                    "(0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 "
+                    "(2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, "
+                    "saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra "
+                    "observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and "
+                    "rock mineralogy. Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at "
+                    "its Barest, submitted. "
+                    "Mosaics are available for the following years: "
+                    "Landsat 8: 2013 to 2017; "
+                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/122573",
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "Landsat 8",
+                # Included as a keyword  for the layer
+                "type": "Barest Earth",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "ls8_barest_earth_mosaic",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_barest_earth_mosaic",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 50.0,
+                "max_datasets_wms": 1000,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi"]
+                },
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "infrared_green",
+                        "title": "False colour - Green, SWIR, NIR",
+                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI - Red, NIR",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -1.0,
+                                "color": "#FFFFFF",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+
+            }
+        ]
+    },
+    {
         "name": "mangrove_cover",
         "title": "Mangrove Canopy Cover",
         "abstract": "",
@@ -1824,5 +2002,72 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 "default_style": "simple_rgb",
             },
         ],
+    },
+{
+        "name": "multi_scale_topographic_position",
+        "title": "Multi-Scale Topographic Position",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Multi-Scale Topographic Position",
+                "abstract": """A Multi-scale topographic position image of Australia has been generated by combining 
+                a topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures 
+                the topographic slope position of landforms. Ruggedness informs on the roughness of the surface and 
+                is calculated as the standard deviation of elevations. Both these terrain attributes are therefore 
+                scale dependent and will vary according to the size of the analysis window. Based on an algorithm 
+                developed by Lindsay et al. (2015) we have generated multi-scale topographic position model over the 
+                Australian continent using 3 second resolution (~90m) DEM derived from the Shuttle Radar Topography 
+                Mission (SRTM). The algorithm calculates topographic position scaled by the corresponding ruggedness 
+                across three spatial scales (window sizes) of 0.2-8.1 Km; 8.2-65.2 Km and 65.6-147.6 Km. The derived 
+                ternary image captures variations in topographic position across these spatial scales (blue local, 
+                green intermediate and red regional) and gives a rich representation of nested landform features that 
+                have broad application in understanding geomorphological and hydrological processes and in mapping 
+                regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
+                H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
+                Geomorphology 245, 51–61. For more information see http://pid.geoscience.gov.au/dataset/ga/123314 """,
+                "type": "1 degree tile",
+                "variant": "",
+                "name": "multi_scale_topographic_position",
+                "product_name": "multi_scale_topographic_position",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["regional", "intermediate", "local"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/multi-scale-topographic-position/mstp_legend.png",
+                    # "styles": ["mstp_rgb"]
+                },
+                "styles": [
+                    {
+                        "name": "mstp_rgb",
+                        "title": "Multi-scale Topographic Position",
+                        "abstract": "red regional, green intermediate and blue local",
+                        "components": {
+                            "red": {
+                                "regional": 1.0
+                            },
+                            "green": {
+                                "intermediate": 1.0
+                            },
+                            "blue": {
+                                "local": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 255.0]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "mstp_rgb",
+            },
+        ]
     },
 ]
