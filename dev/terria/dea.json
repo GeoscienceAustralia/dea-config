@@ -37,7 +37,7 @@
          ]
       },
       {
-         "name": "GSKY Daily WOFLs Landsat (dev)",
+         "name": "GSKY Dev (dev)",
          "type": "group",
          "preserveOrder": true,
          "items": [
@@ -47,7 +47,81 @@
                "layers": "wofs",
                "url": "http://130.56.242.16/ows/dea/wofs",
                "legendUrl": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/WOFLs/v2.1.0/wofs-legend.svg",
-            }
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/wofs",
+               "linkedWcsCoverage": "wofs"
+            },
+            {
+               "name": "LS8 NBART WCS",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/cloud_masking_agg",
+               "layers": "LS8:NBART:TRUE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/cloud_masking_agg",
+               "linkedWcsCoverage": "LS8:NBART:TRUE"
+            },
+            {
+               "name": "LS7 NBAR Daily True Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS7:NBAR:TRUE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS7:NBAR:TRUE"
+            },
+            {
+               "name": "LS7 NBAR Daily False Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS7:NBAR:FALSE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS7:NBAR:FALSE"
+            },
+            {
+               "name": "LS7 NBART Daily True Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS7:NBART:TRUE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS7:NBART:TRUE"
+            },
+            {
+               "name": "LS7 NBART Daily False Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS7:NBART:FALSE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS7:NBART:FALSE"
+            },
+            {
+               "name": "LS8 NBAR Daily True Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS8:NBAR:TRUE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS8:NBAR:TRUE"
+            },
+            {
+               "name": "LS8 NBAR Daily False Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS8:NBAR:FALSE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS8:NBAR:FALSE"
+            },
+            {
+               "name": "LS8 NBART Daily True Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS8:NBART:TRUE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS8:NBART:TRUE"
+            },
+            {
+               "name": "LS8 NBART Daily False Colour",
+               "type": "wms",
+               "url": "http://130.56.242.16/ows/dea/daily",
+               "layers": "LS8:NBART:FALSE",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
+               "linkedWcsCoverage": "LS8:NBART:FALSE"
+            },
          ]
       },
       {
