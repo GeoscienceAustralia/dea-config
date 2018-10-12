@@ -51,14 +51,6 @@
                "linkedWcsCoverage": "wofs"
             },
             {
-               "name": "LS8 NBART WCS",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/cloud_masking_agg",
-               "layers": "LS8:NBART:TRUE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/cloud_masking_agg",
-               "linkedWcsCoverage": "LS8:NBART:TRUE"
-            },
-            {
                "name": "LS7 NBAR Daily True Colour",
                "type": "wms",
                "url": "http://130.56.242.16/ows/dea/daily",
@@ -123,11 +115,6 @@
                "linkedWcsCoverage": "LS8:NBART:FALSE"
             },
          ]
-      },
-      {
-         "name": "GSKY Daily NBAR Landsat (dev)",
-         "type": "wms-getCapabilities",
-         "url": "http://130.56.242.16/ows/dea/daily"
       },
       {
          "name": "DEA Dev (K8s dev)",
