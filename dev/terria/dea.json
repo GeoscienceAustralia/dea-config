@@ -37,6 +37,11 @@
          ]
       },
       {
+         "name": "GSKY Daily Landsat (dev)",
+         "type": "wms-getCapabilities",
+         "url": "http://130.56.242.16/ows/dea/daily"
+      },
+      {
          "name": "DEA Dev (K8s dev)",
          "type": "group",
          "preserveOrder": true,
