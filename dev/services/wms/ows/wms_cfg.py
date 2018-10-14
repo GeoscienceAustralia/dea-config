@@ -744,18 +744,6 @@ layer_cfg = [
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat8_barest_earth",
         "title": "Barest Earth",
-        "abstract": "A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state "
-                    "(i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a "
-                    "six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent. The bands include BLUE "
-                    "(0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 "
-                    "(2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, "
-                    "saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra "
-                    "observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and "
-                    "rock mineralogy. Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at "
-                    "its Barest, submitted. "
-                    "Mosaics are available for the following years: "
-                    "Landsat 8: 2013 to 2017; "
-                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/122573",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
@@ -767,6 +755,12 @@ layer_cfg = [
                 "type": "Barest Earth",
                 # Included as a keyword  for the layer
                 "variant": "25m",
+                "abstract": """
+A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
+The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+Mosaics are available for the following years:
+    Landsat 8: 2013 to 2017""",
                 # The WMS name for the layer
                 "name": "ls8_barest_earth_mosaic",
                 # The Datacube name for the associated data product
