@@ -763,9 +763,7 @@ The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.6
 Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
 
 Mosaics are available for the following years:
-    Landsat 8: 2013 to 2017;
-
-For more information, see http://pid.geoscience.gov.au/dataset/ga/122573""",
+    Landsat 8: 2013 to 2017;""",
                 # The WMS name for the layer
                 "name": "ls8_barest_earth_mosaic",
                 # The Datacube name for the associated data product
