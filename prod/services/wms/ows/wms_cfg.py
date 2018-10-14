@@ -765,7 +765,7 @@ Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Au
 Mosaics are available for the following years:
     Landsat 8: 2013 to 2017;
 
-For more information, see http://pid.geoscience.gov.au/dataset/ga/122573"""
+For more information, see http://pid.geoscience.gov.au/dataset/ga/122573""",
                 # The WMS name for the layer
                 "name": "ls8_barest_earth_mosaic",
                 # The Datacube name for the associated data product
@@ -1641,7 +1641,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 "abstract":"""
 This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. Data is only visible at higher resolutions: when zoomed-out the available areas for that day will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
-For more information see http://pid.geoscience.gov.au/dataset/ga/122229"""
+For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 # The WMS name for the layer
                 "name": "s2b_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
@@ -1831,7 +1831,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229"""
                 "abstract": """
 This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. Data is only visible at higher resolutions: when zoomed-out the available areas for that day will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
-For more information see http://pid.geoscience.gov.au/dataset/ga/122229"""
+For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 # The WMS name for the layer
                 "name": "s2a_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
