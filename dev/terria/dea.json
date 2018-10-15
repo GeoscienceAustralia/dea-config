@@ -13,31 +13,12 @@
    },
    "catalog": [
       {
-         "name": "GSKY Geoglam (prod)",
-         "type": "wms-getCapabilities",
-         "url": "http://gsky-geoglam.nci.org.au/ows"
-      },
-      {
          "name": "GSKY DEA (prod)",
          "type": "wms-getCapabilities",
          "url": "https://gsky.nci.org.au/ows"
       },
       {
-         "name": "GSKY with legends (prod)",
-         "type": "group",
-         "preserveOrder": true,
-         "items": [
-            {
-               "name": "Daily Water Observation Feature Layer",
-               "type": "wms",
-               "layers": "wofs",
-               "url": "https://gsky.nci.org.au/ows",
-               "legendUrl": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/WOFLs/v2.1.0/wofs-legend.svg",
-            }
-         ]
-      },
-      {
-         "name": "GSKY Dev (dev)",
+         "name": "GSKY DEA (dev)",
          "type": "group",
          "preserveOrder": true,
          "items": [
@@ -458,9 +439,9 @@
          "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/"
       },
       {
-         "name": "Sentinel 2 NRT (ECS prod)",
+         "name": "Cambodia (K8s prod)",
          "type": "wms-getCapabilities",
-         "url": "https://nrt-au.dea.ga.gov.au/"
+         "url": "https://cambodiacube.services.dea.ga.gov.au/"
       },
       {
          "name": "DEA Shapes",
