@@ -755,8 +755,7 @@ layer_cfg = [
                     "rock mineralogy. Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at "
                     "its Barest, submitted. "
                     "Mosaics are available for the following years: "
-                    "Landsat 8: 2013 to 2017; "
-                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/122573",
+                    "Landsat 8: 2013 to 2017; ",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
@@ -2024,7 +2023,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 have broad application in understanding geomorphological and hydrological processes and in mapping 
                 regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
                 H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
-                Geomorphology 245, 51–61. For more information see http://pid.geoscience.gov.au/dataset/ga/123314 """,
+                Geomorphology 245, 51–61.""",
                 "type": "1 degree tile",
                 "variant": "",
                 "name": "multi_scale_topographic_position",
@@ -2103,8 +2102,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                             "intensity model has broad utility in assisting mineral exploration in variably weathered "
                             "geochemical landscapes across the Australian continent, mapping chemical and physical "
                             "attributes of soils in agricultural landscapes and in understanding the nature and "
-                            "distribution of weathering processes occurring within the upper regolith. For more "
-                            "information see http://pid.geoscience.gov.au/dataset/ga/123106",
+                            "distribution of weathering processes occurring within the upper regolith.",
                 "type": "1 degree tile",
                 "variant": "",
                 "name": "weathering_intensity",

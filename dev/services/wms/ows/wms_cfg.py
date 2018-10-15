@@ -2023,7 +2023,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 have broad application in understanding geomorphological and hydrological processes and in mapping 
                 regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
                 H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
-                Geomorphology 245, 51–61. For more information see http://pid.geoscience.gov.au/dataset/ga/123314 """,
+                Geomorphology 245, 51–61.""",
                 "type": "1 degree tile",
                 "variant": "",
                 "name": "multi_scale_topographic_position",
@@ -2102,8 +2102,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                             "intensity model has broad utility in assisting mineral exploration in variably weathered "
                             "geochemical landscapes across the Australian continent, mapping chemical and physical "
                             "attributes of soils in agricultural landscapes and in understanding the nature and "
-                            "distribution of weathering processes occurring within the upper regolith. For more "
-                            "information see http://pid.geoscience.gov.au/dataset/ga/123106",
+                            "distribution of weathering processes occurring within the upper regolith.",
                 "type": "1 degree tile",
                 "variant": "",
                 "name": "weathering_intensity",
