@@ -776,11 +776,11 @@ Mosaics are available for the following years:
                 # The WMS name for the layer
                 "name": "ls8_barest_earth_mosaic",
                 # The Datacube name for the associated data product
-                "product_name": "ls8_barest_earth_mosaic",
+                "product_name": "ls8_barest_earth_albers",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
-                "max_datasets_wms": 1000,
+                "min_zoom_factor": 35.0,
+                #"max_datasets_wms": 1000,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
