@@ -1628,9 +1628,8 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Sentinel-2 NRT",
         "title": "Near Real-Time",
-        "abstract": "This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. "
-                    "Data is only visible at higher resolutions: when zoomed-out the available areas for that day "
-                    "will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data "
+        "abstract": "This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. "
+                    "The Near Real-Time capability provides analysis-ready data "
                     "that is processed on receipt using the best-available ancillary information at the time to "
                     "provide atmospheric corrections. For more information see "
                     "http://pid.geoscience.gov.au/dataset/ga/122229",
@@ -1646,7 +1645,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
                 "abstract":"""
-This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. Data is only visible at higher resolutions: when zoomed-out the available areas for that day will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
+This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 # The WMS name for the layer
@@ -1836,7 +1835,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
-This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. Data is only visible at higher resolutions: when zoomed-out the available areas for that day will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
+This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 # The WMS name for the layer
