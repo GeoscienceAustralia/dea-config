@@ -12,7 +12,7 @@ measurements:
     nodata: -9999
     units: '1'
 storage:
-  crs: EPSG:4326
+  crs: EPSG:3577
   resolution:
     x: 25
     y: -25
