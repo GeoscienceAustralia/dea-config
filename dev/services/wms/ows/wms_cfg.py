@@ -2187,7 +2187,7 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
-                "always_fetch_bands": ["extent"],
+                "always_fetch_bands": [ ],
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["green_veg_10"]
