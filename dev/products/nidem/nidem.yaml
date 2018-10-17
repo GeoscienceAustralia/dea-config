@@ -1,0 +1,22 @@
+name: nidem
+description: National Intertidal Digital Elevation Model 25m 1.0.0
+metadata_type: eo
+
+metadata:
+    format:
+        name: GeoTIFF
+    instrument:
+        name: unknown
+    platform:
+        code: unknown
+    product_type: item_v2.0
+measurements:
+-   dtype: float32
+    name: nidem
+    nodata: -9999
+    units: '1'
+storage:
+  crs: EPSG:4326
+  resolution:
+    x: 25
+    y: -25
