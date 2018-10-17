@@ -273,6 +273,53 @@
                ]
             },
             {
+               "name": "Fractional Cover Percentiles",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Fractional Cover Percentiles - Median",
+                     "type": "wms",
+                     "layers": "fcp_rgb",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "fcp_rgb"
+                  },
+                  {
+                     "name": "Fractional Cover Percentiles - Green Vegetation",
+                     "type": "wms",
+                     "layers": "fcp_green_veg",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "fcp_green_veg"
+                  },
+                  {
+                     "name": "Fractional Cover Percentiles - Green Vegetation",
+                     "type": "wms",
+                     "layers": "fcp_green_veg",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "fcp_green_veg"
+                  },
+                  {
+                     "name": "Fractional Cover Percentiles - Non-Green Vegetation",
+                     "type": "wms",
+                     "layers": "fcp_non_green_veg",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "fcp_non_green_veg"
+                  },
+                  {
+                     "name": "Fractional Cover Percentiles - Bare Soil",
+                     "type": "wms",
+                     "layers": "fcp_bare_ground",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "fcp_bare_ground"
+                  }
+               ]
+            },
+            {
                "name": "Mangrove Canopy Cover",
                "type": "group",
                "preserveOrder": true,
