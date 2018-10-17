@@ -5,10 +5,6 @@ metadata_type: eo
 metadata:
     format:
         name: GeoTIFF
-    instrument:
-        name: unknown
-    platform:
-        code: unknown
     product_type: item_v2.0
 measurements:
 -   dtype: float32
