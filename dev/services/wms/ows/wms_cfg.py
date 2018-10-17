@@ -2184,7 +2184,7 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
-                "extent_mask_func": lambda data, band: data["extent"] == 1,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
                 "always_fetch_bands": [ ],
