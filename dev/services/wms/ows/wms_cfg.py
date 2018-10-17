@@ -2308,7 +2308,7 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
-                "always_fetch_bands": ["extent"],
+                "always_fetch_bands": [],
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["non_green_veg_10"]
@@ -2429,7 +2429,7 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
-                "always_fetch_bands": ["extent"],
+                "always_fetch_bands": [],
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["bare_ground_10"]
