@@ -75,6 +75,7 @@ service_cfg = {
         "landsat",
         "australia",
         "time-series",
+        "fractional-cover"
     ],
     "contact_info": {
         "person": "Digital Earth Australia",
@@ -2180,7 +2181,7 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                 "variant": "25m",
                 "name": "fcp_green_veg",
                 "product_name": "fcp_green_veg",
-                "min_zoom_factor": 50.0,
+                "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
@@ -2422,7 +2423,7 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                 "variant": "25m",
                 "name": "fcp_bare_ground",
                 "product_name": "fcp_green_veg",
-                "min_zoom_factor": 50.0,
+                "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
                 "extent_mask_func": lambda data, band: data["extent"] == 1,
