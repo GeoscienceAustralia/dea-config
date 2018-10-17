@@ -75,6 +75,7 @@ service_cfg = {
         "landsat",
         "australia",
         "time-series",
+        "fractional-cover"
     ],
     "contact_info": {
         "person": "Digital Earth Australia",
@@ -2164,6 +2165,368 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
             },
         ]
     },
-
+    {
+        "name": "fcp_green_veg",
+        "title": "Fractional Cover Percentiles - Green Vegetation",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Fractional Cover Percentiles - Green Vegetation",
+                "abstract": """
+Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+This contains a (10th, 50th and 90th percentile) for green vegetation observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_green_veg",
+                "product_name": "fcp_green_veg",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [ ],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["green_veg_10"]
+                },
+                "styles": [
+                    {
+                        "name": "green_veg_10",
+                        "title": "10th Percentile",
+                        "abstract": "10th Percentile of Green Vegetation",
+                        "needed_bands": ["PV_PC_10"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffcc'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#c2e699'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#78c679'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#31a354'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#006837'
+                            }
+                        ]
+                    },
+                    {
+                        "name": "green_veg_50",
+                        "title": "50th Percentile",
+                        "abstract": "50th Percentile of Green Vegetation",
+                        "needed_bands": ["PV_PC_50"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffcc'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#c2e699'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#78c679'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#31a354'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#006837'
+                            }
+                        ]
+                    },
+                    {
+                        "name": "green_veg_90",
+                        "title": "90th Percentile",
+                        "abstract": "90th Percentile of Green Vegetation",
+                        "needed_bands": ["PV_PC_90"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffcc'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#c2e699'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#78c679'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#31a354'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#006837'
+                            }
+                        ]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "green_veg_10",
+            },
+        ]
+    },
+{
+        "name": "fcp_non_green_veg",
+        "title": "Fractional Cover Percentiles - Non Green Vegetation",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Fractional Cover Percentiles - Non Green Vegetation",
+                "abstract": """
+Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+This contains a (10th, 50th and 90th percentile) for non-green vegetation observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_non_green_veg",
+                "product_name": "fc_percentile_albers_annual",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["non_green_veg_10"]
+                },
+                "styles": [
+                    {
+                        "name": "non_green_veg_10",
+                        "title": "10th Percentile",
+                        "abstract": "10th Percentile of Non Green Vegetation",
+                        "needed_bands": ["NPV_PC_10"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#feebe2'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fbb4b9'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#f768a1'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#c51b8a'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#7a0177'
+                            }
+                        ]
+                    },
+                    {
+                        "name": "non_green_veg_50",
+                        "title": "50th Percentile",
+                        "abstract": "50th Percentile of Non Green Vegetation",
+                        "needed_bands": ["NPV_PC_50"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#feebe2'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fbb4b9'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#f768a1'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#c51b8a'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#7a0177'
+                            }
+                        ]
+                    },
+                    {
+                        "name": "non_green_veg_90",
+                        "title": "90th Percentile",
+                        "abstract": "90th Percentile of Non Green Vegetation",
+                        "needed_bands": ["NPV_PC_90"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#feebe2'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fbb4b9'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#f768a1'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#c51b8a'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#7a0177'
+                            }
+                        ]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "non_green_veg_10",
+            },
+        ]
+    },
+{
+        "name": "fcp_bare_soil",
+        "title": "Fractional Cover Percentiles - Bare Soil",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Fractional Cover Percentiles - Bare Soil",
+                "abstract": """
+Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+This contains a (10th, 50th and 90th percentile) for bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_bare_ground",
+                "product_name": "fcp_green_veg",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["bare_ground_10"]
+                },
+                "styles": [
+                    {
+                        "name": "bare_ground_10",
+                        "title": "10th Percentile",
+                        "abstract": "10th Percentile of Bare Earth",
+                        "needed_bands": ["BS_PC_10"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffd4'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fed98e'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#fe9929'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#d95f0e'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#993404'
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bare_ground_50",
+                        "title": "50th Percentile",
+                        "abstract": "50th Percentile of Bare Earth",
+                        "needed_bands": ["BS_PC_50"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffd4'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fed98e'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#fe9929'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#d95f0e'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#993404'
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bare_ground_90",
+                        "title": "90th Percentile",
+                        "abstract": "90th Percentile of Bare Earth",
+                        "needed_bands": ["BS_PC_90"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffd4'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fed98e'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#fe9929'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#d95f0e'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#993404'
+                            }
+                        ]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "bare_ground_10",
+            },
+        ]
+    },
 ]
 
