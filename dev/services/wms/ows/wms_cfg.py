@@ -2528,5 +2528,59 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
             },
         ]
     },
+    {
+        "name": "fcp_rgb",
+        "title": "Fractional Cover Percentiles - Median",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Fractional Cover Percentiles - Median",
+                "abstract": """
+Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+This contains a median of 50th Percentile for green vegetation, non green vegetation and bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_rgb",
+                "product_name": "fc_percentile_albers_annual",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+                },
+                "styles": [
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "BS_PC_50": 1.0
+                            },
+                            "green": {
+                                "PV_PC_50": 1.0
+                            },
+                            "blue": {
+                                "NPV_PC_50": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 100.0]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },
+        ]
+    },
 ]
 
