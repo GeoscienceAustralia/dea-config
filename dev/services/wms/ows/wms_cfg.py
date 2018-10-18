@@ -2629,41 +2629,119 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'alpha': 0
                             },
                             {
-                                'value': -2.0,
-                                'color': '#482878',
+                                'value': -2.5,
+                                'color': '#440154',
+                                'legend': {
+                                    'label': 'Low\nClass -2.5'
+                                }
                             },
                             {
-                                'value': -1.5,
-                                'color': '#3e4989'
+                                'value': -2.34,
+                                'color': '#460e61',
+                            },
+                            {
+                                'value': -2.18,
+                                'color': '#471b6e',
+                            },
+                            {
+                                'value': -2.02,
+                                'color': '#472877'
+                            },
+                            {
+                                'value': -1.86,
+                                'color': '#45347f'
+                            },
+                            {
+                                'value': -1.7,
+                                'color': '#413f85'
+                            },
+                            {
+                                'value': -1.58,
+                                'color': '#3b4d8a'
+                            },
+                            {
+                                'value': -1.42,
+                                'color': '#37578b'
+                            },
+                            {
+                                'value': -1.26,
+                                'color': '#32618c'
                             },
 
                             {
-                                'value': -1.0,
-                                'color': '#31688e'
+                                'value': -1.1,
+                                'color': '#2e6b8d'
                             },
                             {
-                                'value': -0.5,
-                                'color': '#26828e'
+                                'value': -0.94,
+                                'color': '#2a748e'
                             },
                             {
-                                'value': -0.0,
-                                'color': '#1f9e89'
+                                'value': -0.78,
+                                'color': '#267d8e'
                             },
                             {
-                                'value': 0.0,
-                                'color': '#35b779'
+                                'value': -0.62,
+                                'color': '#23868d'
                             },
                             {
-                                'value': 0.5,
-                                'color': '#6ece58'
+                                'value': -0.46,
+                                'color': '#208f8c'
                             },
                             {
-                                'value': 1.0,
-                                'color': '#b5de2b'
+                                'value': -0.3,
+                                'color': '#1e9889'
+                            },
+                            {
+                                'value': -0.14,
+                                'color': '#1fa186'
+                            },
+                            {
+                                'value': -0.2,
+                                'color': '#26ac7f'
+                            },
+                            {
+                                'value': 0.14,
+                                'color': '#32b579'
+                            },
+                            {
+                                'value': 0.3,
+                                'color': '#41bd70'
+                            },
+                            {
+                                'value': 0.46,
+                                'color': '#54c566'
+                            },
+                            {
+                                'value': 0.62,
+                                'color': '#69cc59'
+                            },
+                            {
+                                'value': 0.78,
+                                'color': '#80d24b'
+                            },
+                            {
+                                'value': 0.94,
+                                'color': '#99d83c'
+                            },
+                            {
+                                'value': 1.1,
+                                'color': '#b2dc2c',
+                            },
+                            {
+                                'value': 1.26,
+                                'color': '#cce01e'
+                            },
+                            {
+                                'value': 1.42,
+                                'color': '#e5e31a'
                             },
                             {
                                 'value': 1.5,
-                                'color': '#fde725',
+                                'color': '#fde724',
+                                'legend': {
+                                    'label': 'High\nClass 1.5'
+                                }
                             }
                         ],
                     },
