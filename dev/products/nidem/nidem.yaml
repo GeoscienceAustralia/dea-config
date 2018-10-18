@@ -10,7 +10,7 @@ measurements:
 -   dtype: float32
     name: 'nidem'
     nodata: -9999
-    units: '1'
+    units: 'metres'
 storage:
   crs: EPSG:3577
   resolution:
