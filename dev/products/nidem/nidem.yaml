@@ -8,7 +8,7 @@ metadata:
     product_type: item_v2.0
 measurements:
 -   dtype: float32
-    name: nidem
+    name: 'nidem'
     nodata: -9999
     units: '1'
 storage:
