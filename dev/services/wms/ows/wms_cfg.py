@@ -71,7 +71,8 @@ service_cfg = {
         "geomedian",
         "WOfS",
         "mangrove",
-        "bare-earth"
+        "bare-earth",
+        "NIDEM",
         "landsat",
         "australia",
         "time-series",
@@ -2601,8 +2602,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             "new suite of use cases that require a more detailed understanding of the three-dimensional "
                             "topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management "
                             "and ecological habitat mapping.",
-                "type": "",
-                "variant": "",
+                "type": "Grid",
+                "variant": "nidem-v1.0.0 25m",
                 "name": "NIDEM",
                 "product_name": "nidem",
                 "min_zoom_factor": 15.0,
@@ -2633,7 +2634,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'value': -2.5,
                                 'color': '#440154',
                                 'legend': {
-                                    'label': 'Low\nClass -2.5'
+                                    'label': '<2.50 m'
                                 }
                             },
                             {
@@ -2699,7 +2700,10 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             },
                             {
                                 'value': -0.2,
-                                'color': '#26ac7f'
+                                'color': '#26ac7f',
+                                'legend': {
+                                    'label': '0.00 m'
+                                }
                             },
                             {
                                 'value': 0.14,
@@ -2741,7 +2745,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'value': 1.5,
                                 'color': '#fde724',
                                 'legend': {
-                                    'label': 'High\nClass 1.5'
+                                    'label': '>1.50 m'
                                 }
                             }
                         ],
