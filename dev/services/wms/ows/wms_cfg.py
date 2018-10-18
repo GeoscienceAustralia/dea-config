@@ -2625,12 +2625,11 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         "color_ramp": [
                             {
                                 'value': -2.5,
-                                'color': '#440154',
-                                'alpha': 0
+                                'color': '#440154'
                             },
                             {
                                 'value': -2.0,
-                                'color': '#482878',
+                                'color': '#482878'
                             },
                             {
                                 'value': -1.5,
@@ -2663,7 +2662,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             },
                             {
                                 'value': 1.5,
-                                'color': '#fde725',
+                                'color': '#fde725'
                             }
                         ],
                     },
