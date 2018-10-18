@@ -2322,23 +2322,23 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#feebe2'
+                                'color': '#ffffd4'
                             },
                             {
                                 'value': 25,
-                                'color': '#fbb4b9'
+                                'color': '#fed98e'
                             },
                             {
                                 'value': 50,
-                                'color': '#f768a1'
+                                'color': '#fe9929'
                             },
                             {
                                 'value': 75,
-                                'color': '#c51b8a'
+                                'color': '#d95f0e'
                             },
                             {
                                 'value': 100,
-                                'color': '#7a0177'
+                                'color': '#993404'
                             }
                         ]
                     },
@@ -2350,23 +2350,23 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#feebe2'
+                                'color': '#ffffd4'
                             },
                             {
                                 'value': 25,
-                                'color': '#fbb4b9'
+                                'color': '#fed98e'
                             },
                             {
                                 'value': 50,
-                                'color': '#f768a1'
+                                'color': '#fe9929'
                             },
                             {
                                 'value': 75,
-                                'color': '#c51b8a'
+                                'color': '#d95f0e'
                             },
                             {
                                 'value': 100,
-                                'color': '#7a0177'
+                                'color': '#993404'
                             }
                         ]
                     },
@@ -2378,23 +2378,23 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#feebe2'
+                                'color': '#ffffd4'
                             },
                             {
                                 'value': 25,
-                                'color': '#fbb4b9'
+                                'color': '#fed98e'
                             },
                             {
                                 'value': 50,
-                                'color': '#f768a1'
+                                'color': '#fe9929'
                             },
                             {
                                 'value': 75,
-                                'color': '#c51b8a'
+                                'color': '#d95f0e'
                             },
                             {
                                 'value': 100,
-                                'color': '#7a0177'
+                                'color': '#993404'
                             }
                         ]
                     },
@@ -2443,23 +2443,23 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#ffffd4'
+                                'color': '#feebe2'
                             },
                             {
                                 'value': 25,
-                                'color': '#fed98e'
+                                'color': '#fbb4b9'
                             },
                             {
                                 'value': 50,
-                                'color': '#fe9929'
+                                'color': '#f768a1'
                             },
                             {
                                 'value': 75,
-                                'color': '#d95f0e'
+                                'color': '#c51b8a'
                             },
                             {
                                 'value': 100,
-                                'color': '#993404'
+                                'color': '#7a0177'
                             }
                         ]
                     },
@@ -2471,23 +2471,23 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#ffffd4'
+                                'color': '#feebe2'
                             },
                             {
                                 'value': 25,
-                                'color': '#fed98e'
+                                'color': '#fbb4b9'
                             },
                             {
                                 'value': 50,
-                                'color': '#fe9929'
+                                'color': '#f768a1'
                             },
                             {
                                 'value': 75,
-                                'color': '#d95f0e'
+                                'color': '#c51b8a'
                             },
                             {
                                 'value': 100,
-                                'color': '#993404'
+                                'color': '#7a0177'
                             }
                         ]
                     },
@@ -2499,23 +2499,23 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#ffffd4'
+                                'color': '#feebe2'
                             },
                             {
                                 'value': 25,
-                                'color': '#fed98e'
+                                'color': '#fbb4b9'
                             },
                             {
                                 'value': 50,
-                                'color': '#fe9929'
+                                'color': '#f768a1'
                             },
                             {
                                 'value': 75,
-                                'color': '#d95f0e'
+                                'color': '#c51b8a'
                             },
                             {
                                 'value': 100,
-                                'color': '#993404'
+                                'color': '#7a0177'
                             }
                         ]
                     },
