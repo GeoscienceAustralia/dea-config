@@ -2438,7 +2438,7 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                     {
                         "name": "bare_ground_10",
                         "title": "10th Percentile",
-                        "abstract": "10th Percentile of Bare Earth",
+                        "abstract": "10th Percentile of Bare Soil",
                         "needed_bands": ["BS_PC_10"],
                         "color_ramp": [
                             {
@@ -2466,7 +2466,7 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                     {
                         "name": "bare_ground_50",
                         "title": "50th Percentile",
-                        "abstract": "50th Percentile of Bare Earth",
+                        "abstract": "50th Percentile of Bare Soil",
                         "needed_bands": ["BS_PC_50"],
                         "color_ramp": [
                             {
@@ -2494,7 +2494,7 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                     {
                         "name": "bare_ground_90",
                         "title": "90th Percentile",
-                        "abstract": "90th Percentile of Bare Earth",
+                        "abstract": "90th Percentile of Bare Soil",
                         "needed_bands": ["BS_PC_90"],
                         "color_ramp": [
                             {
@@ -2538,7 +2538,7 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                 "abstract": """
 Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
-This contains a median of 50th Percentile for green vegetation, non green vegetation and bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+This contains a three band combination of the 50th Percentile for green vegetation, non green vegetation and bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
 """,
                 "type": "100km tile",
                 "variant": "25m",
