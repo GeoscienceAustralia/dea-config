@@ -1811,6 +1811,193 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                             },
                         ]
                     },
+                    {
+                        "name": "aerosol",
+                        "title": "Narrow Blue - 440",
+                        "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
+                        "components": {
+                            "red": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "green": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "blue": {
+                                "nbart_coastal_aerosol": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, approximately 453nm to 511nm",
+                        "components": {
+                            "red": {
+                                "nbart_blue": 1.0
+                            },
+                            "green": {
+                                "nbart_blue": 1.0
+                            },
+                            "blue": {
+                                "nbart_blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, approximately 534nm to 588nm",
+                        "components": {
+                            "red": {
+                                "nbart_green": 1.0
+                            },
+                            "green": {
+                                "nbart_green": 1.0
+                            },
+                            "blue": {
+                                "nbart_green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 670",
+                        "abstract": "Red band, roughly 637nm to 672nm",
+                        "components": {
+                            "red": {
+                                "nbart_red": 1.0
+                            },
+                            "green": {
+                                "nbart_red": 1.0
+                            },
+                            "blue": {
+                                "nbart_red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_1",
+                        "title": "Vegetation Red Edge - 710",
+                        "abstract": "Near infra-red band, centred on 710nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_2",
+                        "title": "Vegetation Red Edge - 740",
+                        "abstract": "Near infra-red band, centred on 740nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_3",
+                        "title": "Vegetation Red Edge - 780",
+                        "abstract": "Near infra-red band, centred on 780nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "narrow_nir",
+                        "title": "Narrow Near Infrared - 870",
+                        "abstract": "Near infra-red band, centred on 865nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared - 1610",
+                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared - 2190",
+                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -1995,6 +2182,193 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                             },
                         ]
                     },
+                    {
+                        "name": "aerosol",
+                        "title": "Narrow Blue - 440",
+                        "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
+                        "components": {
+                            "red": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "green": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "blue": {
+                                "nbart_coastal_aerosol": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, approximately 453nm to 511nm",
+                        "components": {
+                            "red": {
+                                "nbart_blue": 1.0
+                            },
+                            "green": {
+                                "nbart_blue": 1.0
+                            },
+                            "blue": {
+                                "nbart_blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, approximately 534nm to 588nm",
+                        "components": {
+                            "red": {
+                                "nbart_green": 1.0
+                            },
+                            "green": {
+                                "nbart_green": 1.0
+                            },
+                            "blue": {
+                                "nbart_green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 670",
+                        "abstract": "Red band, roughly 637nm to 672nm",
+                        "components": {
+                            "red": {
+                                "nbart_red": 1.0
+                            },
+                            "green": {
+                                "nbart_red": 1.0
+                            },
+                            "blue": {
+                                "nbart_red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_1",
+                        "title": "Vegetation Red Edge - 710",
+                        "abstract": "Near infra-red band, centred on 710nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_2",
+                        "title": "Vegetation Red Edge - 740",
+                        "abstract": "Near infra-red band, centred on 740nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_3",
+                        "title": "Vegetation Red Edge - 780",
+                        "abstract": "Near infra-red band, centred on 780nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "narrow_nir",
+                        "title": "Narrow Near Infrared - 870",
+                        "abstract": "Near infra-red band, centred on 865nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared - 1610",
+                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared - 2190",
+                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
