@@ -1615,8 +1615,97 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "wofs_confidence",
-            }
-
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS",
+                # Included as a keyword  for the layer
+                "type": "albers",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "wofs_albers",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_albers",
+                "abstract":
+                    "Water Observations from Space (WOfS) is a gridded dataset indicating areas where surface water "
+                    "has been observed using the Geoscience Australia (GA) Earth observation satellite data holdings. "
+                    "The current product (Version 2.1.5) covers all of mainland Australia and "
+                    "Tasmania but excludes off-shore Territories. WOfS shows water observed for every Landsat-5, "
+                    "Landsat-7 and Landsat-8 image across Australia (excluding External Territories) from 1986 onwards "
+                    "The dataset is updated as a satellite acquires data, with a delay of several weeks. "
+                    "\r\n"
+                    "The details of the WOfS algorithm and derived statistics are available at "
+                    "http://dx.doi.org/10.1016/j.rse.2015.11.003.",
+                "pq_band": "water",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 50.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [200, 180, 180, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] & data[band].attrs['nodata']) == 0,
+                # Fuse func
+                # Determines how multiple dataset arrays are compressed into a single time array
+                "fuse_func": "datacube_wms.wms_utils.wofls_fuser",
+                "data_manual_merge": False,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                "styles": [
+                    {
+                        "name": "water",
+                        "title": "Water",
+                        "abstract": "Water",
+                        "value_map": {
+                            "water": [
+                                {
+                                    "flags": {"terrain_or_low_angle": True},
+                                    "color": "#707070",
+                                },
+                                {
+                                    "flags": {"noncontiguous": True},
+                                    "color": "#707070",
+                                },
+                                {
+                                    "flags": {"high_slope": True},
+                                    "color": "#707070",
+                                },
+                                {
+                                    "flags": {"cloud_shadow": True},
+                                    "color": "#707070",
+                                },
+                                {
+                                    "flags": {"cloud": True},
+                                    "color": "#707070",
+                                },
+                                {
+                                    "flags": {"sea": True, "dry": True},
+                                    "color": "#707070",
+                                },
+                                {
+                                    "flags": {"wet": True},
+                                    "color": "#4F81BD",
+                                },
+                                {
+                                    "flags": {"sea": True},
+                                    "color": "#4F81BD",
+                                },
+                                {
+                                    "flags": {"dry": True},
+                                    "color": "#D99694",
+                                },
+                            ]
+                        }
+                    },
+                ],
+                "default_style": "water",
+            },
         ],
     },
     {
