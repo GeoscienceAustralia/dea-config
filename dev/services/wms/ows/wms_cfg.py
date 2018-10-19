@@ -1966,7 +1966,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                     },
                     {
                         "name": "swir1",
-                        "title": "Shortwave Infrared - 1610",
+                        "title": "Shortwave Infrared (SWIR) - 1610",
                         "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
                         "components": {
                             "red": {
@@ -1983,7 +1983,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                     },
                     {
                         "name": "swir2",
-                        "title": "Shortwave Infrared - 2190",
+                        "title": "Shortwave Infrared (SWIR) - 2190",
                         "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
                         "components": {
                             "red": {
@@ -2337,7 +2337,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                     },
                     {
                         "name": "swir1",
-                        "title": "Shortwave Infrared - 1610",
+                        "title": "Shortwave Infrared (SWIR) - 1610",
                         "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
                         "components": {
                             "red": {
@@ -2354,7 +2354,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                     },
                     {
                         "name": "swir2",
-                        "title": "Shortwave Infrared - 2190",
+                        "title": "Shortwave Infrared (SWIR) - 2190",
                         "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
                         "components": {
                             "red": {
