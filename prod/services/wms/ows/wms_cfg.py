@@ -1793,7 +1793,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
+                        "title": "NDWI - Green, NIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
@@ -2170,7 +2170,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
+                        "title": "NDWI - Green, NIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
