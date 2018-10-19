@@ -1830,7 +1830,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                     },
                     {
                         "name": "blue",
-                        "title": "Blue - 440",
+                        "title": "Blue - 490",
                         "abstract": "Blue band, approximately 453nm to 511nm",
                         "components": {
                             "red": {
@@ -2201,7 +2201,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                     },
                     {
                         "name": "blue",
-                        "title": "Blue - 440",
+                        "title": "Blue - 490",
                         "abstract": "Blue band, approximately 453nm to 511nm",
                         "components": {
                             "red": {
