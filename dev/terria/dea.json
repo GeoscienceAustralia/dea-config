@@ -13,11 +13,6 @@
    },
    "catalog": [
       {
-         "name": "GSKY DEA (prod)",
-         "type": "wms-getCapabilities",
-         "url": "https://gsky.nci.org.au/ows"
-      },
-      {
          "name": "GSKY DEA (dev)",
          "type": "group",
          "preserveOrder": true,
@@ -29,7 +24,9 @@
                "url": "http://130.56.242.16/ows/dea/wofs",
                "legendUrl": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/WOFLs/v2.1.0/wofs-legend.svg",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/wofs",
-               "linkedWcsCoverage": "wofs"
+               "linkedWcsCoverage": "wofs",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS7 NBAR Daily True Colour",
@@ -37,7 +34,9 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS7:NBAR:TRUE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBAR:TRUE"
+               "linkedWcsCoverage": "LS7:NBAR:TRUE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS7 NBAR Daily False Colour",
@@ -45,7 +44,9 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS7:NBAR:FALSE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBAR:FALSE"
+               "linkedWcsCoverage": "LS7:NBAR:FALSE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS7 NBART Daily True Colour",
@@ -53,7 +54,9 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS7:NBART:TRUE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBART:TRUE"
+               "linkedWcsCoverage": "LS7:NBART:TRUE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS7 NBART Daily False Colour",
@@ -61,7 +64,9 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS7:NBART:FALSE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBART:FALSE"
+               "linkedWcsCoverage": "LS7:NBART:FALSE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS8 NBAR Daily True Colour",
@@ -69,7 +74,9 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS8:NBAR:TRUE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBAR:TRUE"
+               "linkedWcsCoverage": "LS8:NBAR:TRUE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS8 NBAR Daily False Colour",
@@ -77,7 +84,9 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS8:NBAR:FALSE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBAR:FALSE"
+               "linkedWcsCoverage": "LS8:NBAR:FALSE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS8 NBART Daily True Colour",
@@ -85,7 +94,9 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS8:NBART:TRUE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBART:TRUE"
+               "linkedWcsCoverage": "LS8:NBART:TRUE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
             {
                "name": "LS8 NBART Daily False Colour",
@@ -93,9 +104,16 @@
                "url": "http://130.56.242.16/ows/dea/daily",
                "layers": "LS8:NBART:FALSE",
                "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBART:FALSE"
+               "linkedWcsCoverage": "LS8:NBART:FALSE",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
             },
          ]
+      },
+      {
+         "name": "GSKY DEA (prod)",
+         "type": "wms-getCapabilities",
+         "url": "https://gsky.nci.org.au/ows"
       },
       {
          "name": "DEA Dev (K8s dev)",
@@ -113,7 +131,9 @@
                      "layers": "wofs_filtered_summary",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_filtered_summary"
+                     "linkedWcsCoverage": "wofs_filtered_summary",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
@@ -121,7 +141,9 @@
                      "layers": "wofs_summary_wet",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_summary_wet"
+                     "linkedWcsCoverage": "wofs_summary_wet",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
@@ -129,7 +151,9 @@
                      "layers": "wofs_summary_clear",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_summary_clear"
+                     "linkedWcsCoverage": "wofs_summary_clear",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
@@ -137,7 +161,9 @@
                      "layers": "Water Observations from Space Statistics",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "Water Observations from Space Statistics"
+                     "linkedWcsCoverage": "Water Observations from Space Statistics",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
@@ -145,7 +171,9 @@
                      "layers": "wofs_filtered_summary_confidence",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_filtered_summary_confidence"
+                     "linkedWcsCoverage": "wofs_filtered_summary_confidence",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
@@ -283,7 +311,9 @@
                      "layers": "fcp_rgb",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "fcp_rgb"
+                     "linkedWcsCoverage": "fcp_rgb",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Fractional Cover Percentiles - Green Vegetation",
@@ -291,7 +321,9 @@
                      "layers": "fcp_green_veg",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "fcp_green_veg"
+                     "linkedWcsCoverage": "fcp_green_veg",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Fractional Cover Percentiles - Green Vegetation",
@@ -299,7 +331,9 @@
                      "layers": "fcp_green_veg",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "fcp_green_veg"
+                     "linkedWcsCoverage": "fcp_green_veg",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Fractional Cover Percentiles - Non-Green Vegetation",
@@ -307,7 +341,9 @@
                      "layers": "fcp_non_green_veg",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "fcp_non_green_veg"
+                     "linkedWcsCoverage": "fcp_non_green_veg",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Fractional Cover Percentiles - Bare Soil",
@@ -315,12 +351,14 @@
                      "layers": "fcp_bare_ground",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "fcp_bare_ground"
+                     "linkedWcsCoverage": "fcp_bare_ground",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
             {
-               "name": "Mangrove Canopy Cover",
+               "name": "Marine and Tidal Regions",
                "type": "group",
                "preserveOrder": true,
                "items": [
@@ -330,7 +368,19 @@
                      "layers": "mangrove_cover",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "mangrove_cover"
+                     "linkedWcsCoverage": "mangrove_cover",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "National Intertidal Digital Elevation Model",
+                     "type": "wms",
+                     "layers": "NIDEM",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "NIDEM",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
@@ -345,7 +395,9 @@
                      "layers": "weathering_intensity",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "weathering_intensity"
+                     "linkedWcsCoverage": "weathering_intensity",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
@@ -360,7 +412,9 @@
                      "layers": "multi_scale_topographic_position",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "multi_scale_topographic_position"
+                     "linkedWcsCoverage": "multi_scale_topographic_position",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             }
@@ -382,7 +436,9 @@
                      "layers": "wofs_filtered_summary",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_filtered_summary"
+                     "linkedWcsCoverage": "wofs_filtered_summary",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
@@ -390,7 +446,9 @@
                      "layers": "wofs_summary_wet",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_summary_wet"
+                     "linkedWcsCoverage": "wofs_summary_wet",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
@@ -398,7 +456,9 @@
                      "layers": "wofs_summary_clear",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_summary_clear"
+                     "linkedWcsCoverage": "wofs_summary_clear",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
@@ -406,7 +466,9 @@
                      "layers": "Water Observations from Space Statistics",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "Water Observations from Space Statistics"
+                     "linkedWcsCoverage": "Water Observations from Space Statistics",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   },
                   {
                      "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
@@ -414,7 +476,9 @@
                      "layers": "wofs_filtered_summary_confidence",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "wofs_filtered_summary_confidence"
+                     "linkedWcsCoverage": "wofs_filtered_summary_confidence",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
@@ -552,7 +616,9 @@
                      "layers": "mangrove_cover",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "mangrove_cover"
+                     "linkedWcsCoverage": "mangrove_cover",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
@@ -567,7 +633,9 @@
                      "layers": "weathering_intensity",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "weathering_intensity"
+                     "linkedWcsCoverage": "weathering_intensity",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
@@ -582,7 +650,9 @@
                      "layers": "multi_scale_topographic_position",
                      "url": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "multi_scale_topographic_position"
+                     "linkedWcsCoverage": "multi_scale_topographic_position",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             }
