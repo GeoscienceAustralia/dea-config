@@ -1,0 +1,99 @@
+name: high_tide_comp_20p
+description: High tide 20 percentage composites 25m v. 2.0.0
+metadata_type: eo
+
+managed: true
+metadata:
+    format:
+        name: GeoTIFF
+    product_type: tidal_composite
+    statistic:
+        name: precisegeomedian
+        source: nbar
+        tidal_range:
+            name: high
+            min: 80
+            max: 100
+
+measurements:
+    - name: blue
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: green
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: red
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: nir
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: swir1
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: swir2
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+
+storage:
+    crs: EPSG:3577
+    resolution:
+        x: 25
+        y: -25
+
+---
+
+name: low_tide_comp_20p
+description: Low tide 20 percentage composites 25m v. 2.0.0
+metadata_type: eo
+managed: true
+
+metadata:
+    format:
+        name: GeoTIFF
+    product_type: tidal_composite
+    statistic:
+        name: precisegeomedian
+        source: nbar
+        tidal_range:
+            name: low
+            min: 0
+            max: 20
+
+measurements:
+    - name: blue
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: green
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: red
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: nir
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: swir1
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: swir2
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+
+storage:
+    crs: EPSG:3577
+    resolution:
+        x: 25
+        y: -25
