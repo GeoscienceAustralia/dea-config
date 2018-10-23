@@ -2510,7 +2510,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                                 "color": "#114D04"
                             }
                         ]
-                        
+
                     },
                     {
                         "name": "ndwi",
