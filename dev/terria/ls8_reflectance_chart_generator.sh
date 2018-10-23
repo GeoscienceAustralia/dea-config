@@ -9,11 +9,11 @@ tr -d '\n' > ls8_reflectance-chart.json <<EOF
 "template": "
 <table>
   <tr><td><b>Time</b></td><td>{{time}}</td></tr>
-  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>
+  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>
   <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>
   <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>
   <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>
-  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>
+  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>
   <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>
   <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>
   <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr>
