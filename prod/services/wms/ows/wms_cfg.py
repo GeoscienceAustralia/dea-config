@@ -385,13 +385,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 1, centered on 1610nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -402,13 +402,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 2, centered on 2200nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -682,13 +682,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 1, centered on 1650nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -699,13 +699,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 2, centered on 2220nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -979,13 +979,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 1, centered on 1650nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -996,13 +996,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 2, centered on 2220nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -1259,13 +1259,13 @@ Mosaics are available for the following years:
                         "abstract": "Short wave infra-red band 1, centered on 1610nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -1276,13 +1276,13 @@ Mosaics are available for the following years:
                         "abstract": "Short wave infra-red band 2, centered on 2200nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
