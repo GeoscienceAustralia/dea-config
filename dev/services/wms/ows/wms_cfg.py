@@ -237,11 +237,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -300,11 +295,6 @@ layer_cfg = [
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -544,11 +534,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -607,11 +592,6 @@ layer_cfg = [
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -851,11 +831,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -914,11 +889,6 @@ layer_cfg = [
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -1158,11 +1128,6 @@ Mosaics are available for the following years:
                         "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -2134,11 +2099,6 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -2198,11 +2158,6 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -2570,11 +2525,6 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -2934,7 +2884,6 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                             }
                         ],
                         "legend": {
-                            "legend_values": [1, 6],
                             "axes_position": [0.1, 0.5, 0.8, 0.15]
                         }
                     },
@@ -3406,7 +3355,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         "needed_bands": ["nidem"],
                         "color_ramp": [
                             {
-                                'value': -2.5,
+                                'value': -2.51,
                                 'color': '#440154',
                                 'alpha': 0
                             },
@@ -3415,7 +3364,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'value': -2.5,
                                 'color': '#440154',
                                 'legend': {
-                                    'label': 'Low\nClass -2.5'
+                                    "prefix": "<"
                                 }
                             },
                             {
@@ -3453,7 +3402,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
 
                             {
                                 'value': -1.1,
-                                'color': '#2e6b8d'
+                                'color': '#2e6b8d',
+                                "legend": { }
                             },
                             {
                                 'value': -0.94,
@@ -3480,8 +3430,9 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'color': '#1fa186'
                             },
                             {
-                                'value': -0.2,
-                                'color': '#26ac7f'
+                                'value': 0.0,
+                                'color': '#26ac7f',
+                                "legend": { }
                             },
                             {
                                 'value': 0.14,
@@ -3523,10 +3474,13 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'value': 1.5,
                                 'color': '#fde724',
                                 'legend': {
-                                    'label': 'High\nClass 1.5'
+                                    "prefix": ">"
                                 }
                             }
                         ],
+                        "legend": {
+                            "units": "metres"
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
