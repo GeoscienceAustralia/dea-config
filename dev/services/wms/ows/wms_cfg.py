@@ -2632,10 +2632,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             {
 
                                 'value': -2.5,
-                                'color': '#440154',
-                                'legend': {
-                                    'label': '<2.50 m'
-                                }
+                                'color': '#440154'
                             },
                             {
                                 'value': -2.34,
@@ -2701,9 +2698,6 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             {
                                 'value': -0.2,
                                 'color': '#26ac7f',
-                                'legend': {
-                                    'label': '0.00 m'
-                                }
                             },
                             {
                                 'value': 0.14,
@@ -2743,10 +2737,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             },
                             {
                                 'value': 1.5,
-                                'color': '#fde724',
-                                'legend': {
-                                    'label': '>1.50 m'
-                                }
+                                'color': '#fde724'
                             }
                         ],
                     },
