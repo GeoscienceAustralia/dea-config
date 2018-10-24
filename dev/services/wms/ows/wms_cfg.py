@@ -3327,8 +3327,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             "new suite of use cases that require a more detailed understanding of the three-dimensional "
                             "topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management "
                             "and ecological habitat mapping.",
-                "type": "",
-                "variant": "",
+                "type": "grid",
+                "variant": "nidem_v1.0.0",
                 "name": "NIDEM",
                 "product_name": "nidem",
                 "min_zoom_factor": 15.0,
