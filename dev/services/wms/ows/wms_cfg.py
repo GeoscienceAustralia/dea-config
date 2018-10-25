@@ -2012,7 +2012,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                     "\r\n"
                     "The details of the WOfS algorithm and derived statistics are available at "
                     "http://dx.doi.org/10.1016/j.rse.2015.11.003.",
-                "pq_band": "water",
+                #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
                 "min_zoom_factor": 500.0,
