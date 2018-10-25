@@ -3624,11 +3624,6 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -3688,11 +3683,6 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                     data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -3830,11 +3820,6 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -3894,11 +3879,6 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                     data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
