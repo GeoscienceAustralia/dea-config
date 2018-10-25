@@ -4022,6 +4022,239 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "default_style": "simple_rgb",
             },
         ]
-    }
+    },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "ITEM",
+        "title": "Intertidal Extents Model",
+        "abstract": "The Intertidal Extents Model (ITEM) product is a national dataset of the exposed intertidal zone; "
+                    "the land between the observed highest and lowest tide. ITEM provides the extent and topography of "
+                    "the intertidal zone of Australia's coastline (excluding off-shore Territories). "
+                    "This information was collated using observations in the Landsat archive since 1986. "
+                    "ITEM can be a valuable complimentary dataset to both onshore LiDAR survey data and coarser offshore "
+                    "bathymetry data, enabling a more realistic representation of the land and ocean interface.",
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "Relative Layer",
+                "abstract": "The Relative Extents Model (item_v2) utilises the tidal information attributed to "
+                            "each Landsat observation to indicate the spatial extent of intertidal substratum "
+                            "exposed at percentile intervals of the observed tidal range for the cell.",
+                # Included as a keyword  for the layer
+                "type": "ITEM v2.0.0",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "ITEM_V2.0.0",
+                # The Datacube name for the associated data product
+                "product_name": "item_v2",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["relative"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["relative_layer"]
+                },
+                "styles": [
+                    {
+                        "name": "relative_layer",
+                        "title": "relative layer",
+                        "abstract": "The Relative Extents Model (item_v2) 25m v2.0.0",
+                        "needed_bands": ["relative"],
+                        "color_ramp": [
+                            {
+                                'value': 1.0,
+                                'color': '#d7191c',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '0-10%'
+                                }
+                            },
+                            {
+
+                                'value': 2.0,
+                                'color': '#ec6e43',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "10-20%"
+                                }
+                            },
+                            {
+                                'value': 3.0,
+                                'color': '#fdb96e',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '20-30%'
+                                }
+                            },
+                            {
+
+                                'value': 4.0,
+                                'color': '#fee7a4',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "30-40%"
+                                }
+                            },
+                            {
+                                'value': 5.0,
+                                'color': '#e7f5b7',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '40-50%'
+                                }
+                            },
+                            {
+
+                                'value': 6.0,
+                                'color': '#b7e1a7',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "50-60%"
+                                }
+                            },
+                            {
+                                'value': 7.0,
+                                'color': '#74b6ad',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '60-70%'
+                                }
+                            },
+                            {
+
+                                'value': 8.0,
+                                'color': '#ec6e43',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "70-80% and above"
+                                }
+                            },
+                        ],
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "relative_layer",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Confidence Layer",
+                "abstract": "The Confidence Layer (item_v2_conf) reflects the confidence level of the "
+                            "Relative Extents Model, based on the distribution of classification metrics "
+                            "within each of the percentile intervals of the tidal range.",
+                # Included as a keyword  for the layer
+                "type": "ITEM v2.0.0",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "ITEM_V2.0.0",
+                # The Datacube name for the associated data product
+                "product_name": "item_v2_conf",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["stddev"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["confidence_layer"]
+                },
+                "styles": [
+                    {
+                        "name": "confidence_layer",
+                        "title": "confidence layer",
+                        "abstract": "The Confidence layer (item_v2_conf) 25m v2.0.0",
+                        "needed_bands": ["stddev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#2b83ba',
+                                'alpha': 0.0
+                            },
+                            {
+
+                                'value': 0.01,
+                                'color': '#2b83ba',
+                                'legend': {
+                                    "prefix": "<"
+                                }
+                            },
+                            {
+                                'value': 0.055,
+                                'color': '#55a1b2',
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#80bfab',
+                            },
+                            {
+                                'value': 0.145,
+                                'color': '#abdda4',
+                            },
+                            {
+                                'value': 0.19,
+                                'color': '#c7e8ad',
+                            },
+                            {
+                                'value': 0.235,
+                                'color': '#e3f3b6',
+                            },
+                            {
+                                'value': 0.28,
+                                'color': '#fdbf6f',
+                            },
+                            {
+                                'value': 0.325,
+                                'color': '#e37d1c',
+                            },
+                            {
+                                'value': 0.37,
+                                'color': '#e35e1c',
+                            },
+                            {
+                                'value': 0.415,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.46,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.505,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.55,
+                                'color': '#e31a1c',
+                            },
+                        ],
+                        "legend": {
+                            "units": "metres"
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "confidence_layer",
+            },
+        ]
+    },
+
 ]
 
