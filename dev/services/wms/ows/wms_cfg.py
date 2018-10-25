@@ -3488,7 +3488,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
             },
         ]
     },
-{
+    {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "HLTC Composites",
