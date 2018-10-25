@@ -121,10 +121,20 @@
          "preserveOrder": true,
          "items": [
             {
-               "name": "WOfS Summaries",
+               "name": "Water Observations from Space",
                "type": "group",
                "preserveOrder": true,
                "items": [
+                  {
+                     "name": "Water Observations from Space wofs albers (WOfS Daily Observations)",
+                     "type": "wms",
+                     "layers": "wofs_albers",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_albers",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
                   {
                      "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
                      "type": "wms",
@@ -379,6 +389,26 @@
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsCoverage": "NIDEM",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
+                     "type": "wms",
+                     "layers": "high_tide_composite",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "high_tide_composite",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
+                     "type": "wms",
+                     "layers": "low_tide_composite",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "low_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   }
