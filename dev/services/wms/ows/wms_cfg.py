@@ -2014,11 +2014,10 @@ Water Observations from Space - Daily Observations
 """,
 
 
-                "pq_band": "water",
+                # "pq_band": "water",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 0.0,
                 "min_zoom_factor": 500.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2030,7 +2029,7 @@ Water Observations from Space - Daily Observations
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
                 "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
-                "pq_manual_merge": True,
+                # "pq_manual_merge": True,
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [
@@ -2059,84 +2058,43 @@ Water Observations from Space - Daily Observations
                 # into a single rgb image.
                 # The examples here are ad hoc
                 #
+                "legend": {
+                    "styles": ["water"]
+                },
                 "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
                     {
                         "name": "water",
                         "title": "Water",
-                        "abstract": "Water",
+                        "abstract": "",
                         "value_map": {
                             "water": [
                                 {
+                                    "title": "Wet",
+                                    "abstract": "Wet or Sea",
                                     "flags": {
                                         "wet": True,
+                                        "sea": True
                                     },
-                                    "values": {
-                                        "red": 79,
-                                        "green": 129,
-                                        "blue": 189
-                                    }
+                                    "color": "#4F81BD"
                                 },
                                 {
+                                    "title": "Dry",
+                                    "abstract": "Dry",
                                     "flags": {
-                                        "sea": True,
+                                        "dry": True
                                     },
-                                    "values": {
-                                        "red": 79,
-                                        "green": 129,
-                                        "blue": 189
-                                    }
+                                    "color": "#D99694"
                                 },
                                 {
-                                    "flags": {
-                                        "dry": True,
-                                    },
-                                    "values": {
-                                        "red": 217,
-                                        "green": 150,
-                                        "blue": 148
-                                    }
-                                },
-                                {
+                                    "title": "Invalid",
+                                    "abstract": "Slope or Cloud",
                                     "flags": {
                                         "terrain_or_low_angle": True,
+                                        "cloud_shadow": True
+                                        "cloud": True,
+                                        "high_slope": True
                                     },
-                                    "values": {
-                                        "red": 112,
-                                        "green": 112,
-                                        "blue": 112
-                                    }
-                                },
-                                {
-                                    "flags": {
-                                        "high_slope": True,
-                                    },
-                                    "values": {
-                                        "red": 112,
-                                        "green": 112,
-                                        "blue": 112
-                                    }
-                                },
-                                {
-                                    "flags": {
-                                        "cloud_shadow": True,
-                                    },
-                                    "values": {
-                                        "red": 112,
-                                        "green": 112,
-                                        "blue": 112
-                                    }
-                                },
-                                {
-                                    "flags": {
-                                        "cloud": True
-                                    },
-                                    "values": {
-                                        "red": 112,
-                                        "green": 112,
-                                        "blue": 112
-                                    }
+                                    "color": "#707070"
                                 }
                             ]
                         }
@@ -2145,6 +2103,7 @@ Water Observations from Space - Daily Observations
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
 
+           
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "water",
