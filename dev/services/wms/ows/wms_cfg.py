@@ -1997,27 +1997,22 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # Included as a keyword  for the layer
                 "type": "albers",
                 # Included as a keyword  for the layer
-                "variant": "wofs",
+                "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_albers",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_albers",
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "ls8_level1_usgs",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_manual_data_merge": True,
-                # "data_manual_merge": True,
-                # "pq_band": "quality",
-
-                "abstract": """
-Water Observations from Space - Daily Observations 
-""",
-
-
-                # "pq_band": "water",
-                # "always_fetch_bands": [ "quality" ],
+                "abstract":
+                    "Water Observations from Space (WOfS) is a gridded dataset indicating areas where surface water "
+                    "has been observed using the Geoscience Australia (GA) Earth observation satellite data holdings. "
+                    "The current product (Version 2.1.5) covers all of mainland Australia and "
+                    "Tasmania but excludes off-shore Territories. WOfS shows water observed for every Landsat-5, "
+                    "Landsat-7 and Landsat-8 image across Australia (excluding External Territories) from 1986 onwards "
+                    "The dataset is updated as a satellite acquires data, with a delay of several weeks. "
+                    "\r\n"
+                    "The details of the WOfS algorithm and derived statistics are available at "
+                    "http://dx.doi.org/10.1016/j.rse.2015.11.003.",
+                #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
                 "min_zoom_factor": 500.0,
@@ -2068,36 +2063,41 @@ Water Observations from Space - Daily Observations
                     {
                         "name": "water",
                         "title": "Water",
-                        "abstract": "",
+                        "abstract": "Water",
                         "value_map": {
                             "water": [
                                 {
-                                    "title": "Wet",
-                                    "abstract": "Wet or Sea",
+                                    "title": "Invalid",
+                                    "abstract": "Slope or Cloud",
                                     "flags": {
-                                        "wet": True,
-                                        "sea": True
+                                        "or": {
+                                          "terrain_or_low_angle": True,
+                                          "cloud_shadow": True,
+                                          "cloud": True,
+                                          "high_slope": True
+                                        }
                                     },
-                                    "color": "#4F81BD"
+                                    "color": "#707070"
                                 },
                                 {
                                     "title": "Dry",
                                     "abstract": "Dry",
                                     "flags": {
-                                        "dry": True
+                                        "dry": True,
+                                        "sea": False,
                                     },
                                     "color": "#D99694"
                                 },
                                 {
-                                    "title": "Invalid",
-                                    "abstract": "Slope or Cloud",
+                                    "title": "Wet",
+                                    "abstract": "Wet or Sea",
                                     "flags": {
-                                        "terrain_or_low_angle": True,
-                                        "cloud_shadow": True,
-                                        "cloud": True,
-                                        "high_slope": True
+                                      "or": {
+                                        "wet": True,
+                                        "sea": True
+                                      }
                                     },
-                                    "color": "#707070"
+                                    "color": "#4F81BD"
                                 }
                             ]
                         }
@@ -2110,8 +2110,7 @@ Water Observations from Space - Daily Observations
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "water",
-             },
-
+             }
         ],
     },
     {
