@@ -1990,7 +1990,127 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "wofs_confidence",
-            }
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS Daily Observations",
+                # Included as a keyword  for the layer
+                "type": "albers",
+                # Included as a keyword  for the layer
+                "variant": "wofs",
+                # The WMS name for the layer
+                "name": "wofs_albers",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_albers",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+
+                "abstract": """
+Water Observations from Space - Daily Observations 
+""",
+
+
+                # "pq_band": "water",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 500.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [200, 180, 180, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # "pq_manual_merge": True,
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [
+                    "nodata",
+                    "noncontiguous",
+                ],
+                "data_manual_merge": False,
+                "always_fetch_bands": [ ],
+                "apply_solar_corrections": False,
+                "fuse_func": "datacube_wms.wms_utils.wofls_fuser"
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "legend": {
+                    "styles": ["water"]
+                },
+                "styles": [
+                    {
+                        "name": "water",
+                        "title": "Water",
+                        "abstract": "",
+                        "value_map": {
+                            "water": [
+                                {
+                                    "title": "Wet",
+                                    "abstract": "Wet or Sea",
+                                    "flags": {
+                                        "wet": True,
+                                        "sea": True
+                                    },
+                                    "color": "#4F81BD"
+                                },
+                                {
+                                    "title": "Dry",
+                                    "abstract": "Dry",
+                                    "flags": {
+                                        "dry": True
+                                    },
+                                    "color": "#D99694"
+                                },
+                                {
+                                    "title": "Invalid",
+                                    "abstract": "Slope or Cloud",
+                                    "flags": {
+                                        "terrain_or_low_angle": True,
+                                        "cloud_shadow": True
+                                        "cloud": True,
+                                        "high_slope": True
+                                    },
+                                    "color": "#707070"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+           
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "water",
+             },
 
         ],
     },
