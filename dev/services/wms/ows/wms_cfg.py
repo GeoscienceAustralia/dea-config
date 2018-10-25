@@ -3715,7 +3715,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         },
                         # The raw band value range to be compressed to an 8 bit range for the output image tiles.
                         # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 3000.0]
+                        "scale_range": [0.0, 3.0]
                     },
                     {
                         "name": "infrared_green",
@@ -3732,7 +3732,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 "green": 1.0
                             }
                         },
-                        "scale_range": [0.0, 3000.0]
+                        "scale_range": [0.0, 3.0]
                     },
                     #
                     # Examples of non-linear heat-mapped styles.
@@ -3911,7 +3911,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         },
                         # The raw band value range to be compressed to an 8 bit range for the output image tiles.
                         # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 3000.0]
+                        "scale_range": [0.0, 3.0]
                     },
                     {
                         "name": "infrared_green",
@@ -3928,7 +3928,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 "green": 1.0
                             }
                         },
-                        "scale_range": [0.0, 3000.0]
+                        "scale_range": [0.0, 3.0]
                     },
                     #
                     # Examples of non-linear heat-mapped styles.
