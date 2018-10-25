@@ -2093,7 +2093,7 @@ Water Observations from Space - Daily Observations
                                     "abstract": "Slope or Cloud",
                                     "flags": {
                                         "terrain_or_low_angle": True,
-                                        "cloud_shadow": True
+                                        "cloud_shadow": True,
                                         "cloud": True,
                                         "high_slope": True
                                     },
