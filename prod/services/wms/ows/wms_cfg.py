@@ -73,6 +73,7 @@ service_cfg = {
         "geomedian",
         "WOfS",
         "mangrove",
+        "bare-earth"
         "landsat",
         "australia",
         "time-series",
@@ -236,11 +237,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -300,11 +296,6 @@ layer_cfg = [
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -320,6 +311,108 @@ layer_cfg = [
                             },
                         ]
                     },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 480",
+                        "abstract": "Blue band, centered on 480nm",
+                        "components": {
+                            "red": {
+                                "blue": 1.0
+                            },
+                            "green": {
+                                "blue": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, centered on 560nm",
+                        "components": {
+                            "red": {
+                                "green": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 660",
+                        "abstract": "Red band, centered on 660nm",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "red": 1.0
+                            },
+                            "blue": {
+                                "red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 870",
+                        "abstract": "Near infra-red band, centered on 870nm",
+                        "components": {
+                            "red": {
+                                "nir": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "nir": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1610",
+                        "abstract": "Short wave infra-red band 1, centered on 1610nm",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "swir1": 1.0
+                            },
+                            "blue": {
+                                "swir1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2200",
+                        "abstract": "Short wave infra-red band 2, centered on 2200nm",
+                        "components": {
+                            "red": {
+                                "swir2": 1.0
+                            },
+                            "green": {
+                                "swir2": 1.0
+                            },
+                            "blue": {
+                                "swir2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -441,11 +534,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -505,11 +593,6 @@ layer_cfg = [
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -525,6 +608,108 @@ layer_cfg = [
                             },
                         ]
                     },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, centered on 490nm",
+                        "components": {
+                            "red": {
+                                "blue": 1.0
+                            },
+                            "green": {
+                                "blue": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, centered on 560nm",
+                        "components": {
+                            "red": {
+                                "green": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 660",
+                        "abstract": "Red band, centered on 660nm",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "red": 1.0
+                            },
+                            "blue": {
+                                "red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, centered on 840nm",
+                        "components": {
+                            "red": {
+                                "nir": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "nir": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1650",
+                        "abstract": "Short wave infra-red band 1, centered on 1650nm",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "swir1": 1.0
+                            },
+                            "blue": {
+                                "swir1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2220",
+                        "abstract": "Short wave infra-red band 2, centered on 2220nm",
+                        "components": {
+                            "red": {
+                                "swir2": 1.0
+                            },
+                            "green": {
+                                "swir2": 1.0
+                            },
+                            "blue": {
+                                "swir2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -646,11 +831,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -710,11 +890,6 @@ layer_cfg = [
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -730,6 +905,108 @@ layer_cfg = [
                             },
                         ]
                     },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, centered on 490nm",
+                        "components": {
+                            "red": {
+                                "blue": 1.0
+                            },
+                            "green": {
+                                "blue": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, centered on 560nm",
+                        "components": {
+                            "red": {
+                                "green": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 660",
+                        "abstract": "Red band, centered on 660nm",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "red": 1.0
+                            },
+                            "blue": {
+                                "red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, centered on 840nm",
+                        "components": {
+                            "red": {
+                                "nir": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "nir": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1650",
+                        "abstract": "Short wave infra-red band 1, centered on 1650nm",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "swir1": 1.0
+                            },
+                            "blue": {
+                                "swir1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2220",
+                        "abstract": "Short wave infra-red band 2, centered on 2220nm",
+                        "components": {
+                            "red": {
+                                "swir2": 1.0
+                            },
+                            "green": {
+                                "swir2": 1.0
+                            },
+                            "blue": {
+                                "swir2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -857,11 +1134,6 @@ Mosaics are available for the following years:
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -912,6 +1184,108 @@ Mosaics are available for the following years:
                                 "color": "#114D04"
                             }
                         ]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 480",
+                        "abstract": "Blue band, centered on 480nm",
+                        "components": {
+                            "red": {
+                                "blue": 1.0
+                            },
+                            "green": {
+                                "blue": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, centered on 560nm",
+                        "components": {
+                            "red": {
+                                "green": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 660",
+                        "abstract": "Red band, centered on 660nm",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "red": 1.0
+                            },
+                            "blue": {
+                                "red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 870",
+                        "abstract": "Near infra-red band, centered on 870nm",
+                        "components": {
+                            "red": {
+                                "nir": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "nir": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1610",
+                        "abstract": "Short wave infra-red band 1, centered on 1610nm",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "swir1": 1.0
+                            },
+                            "blue": {
+                                "swir1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2200",
+                        "abstract": "Short wave infra-red band 2, centered on 2200nm",
+                        "components": {
+                            "red": {
+                                "swir2": 1.0
+                            },
+                            "green": {
+                                "swir2": 1.0
+                            },
+                            "blue": {
+                                "swir2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -1734,11 +2108,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -1793,17 +2162,12 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
+                        "title": "NDWI - Green, NIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -1820,6 +2184,193 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                             },
                         ]
                     },
+                    {
+                        "name": "aerosol",
+                        "title": "Narrow Blue - 440",
+                        "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
+                        "components": {
+                            "red": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "green": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "blue": {
+                                "nbart_coastal_aerosol": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, approximately 453nm to 511nm",
+                        "components": {
+                            "red": {
+                                "nbart_blue": 1.0
+                            },
+                            "green": {
+                                "nbart_blue": 1.0
+                            },
+                            "blue": {
+                                "nbart_blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, approximately 534nm to 588nm",
+                        "components": {
+                            "red": {
+                                "nbart_green": 1.0
+                            },
+                            "green": {
+                                "nbart_green": 1.0
+                            },
+                            "blue": {
+                                "nbart_green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 670",
+                        "abstract": "Red band, roughly 637nm to 672nm",
+                        "components": {
+                            "red": {
+                                "nbart_red": 1.0
+                            },
+                            "green": {
+                                "nbart_red": 1.0
+                            },
+                            "blue": {
+                                "nbart_red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_1",
+                        "title": "Vegetation Red Edge - 710",
+                        "abstract": "Near infra-red band, centred on 710nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_2",
+                        "title": "Vegetation Red Edge - 740",
+                        "abstract": "Near infra-red band, centred on 740nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_3",
+                        "title": "Vegetation Red Edge - 780",
+                        "abstract": "Near infra-red band, centred on 780nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "narrow_nir",
+                        "title": "Narrow Near Infrared - 870",
+                        "abstract": "Near infra-red band, centred on 865nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1610",
+                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2190",
+                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -1924,11 +2475,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -1983,17 +2529,12 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
+                        "title": "NDWI - Green, NIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -2010,6 +2551,193 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                             },
                         ]
                     },
+                    {
+                        "name": "aerosol",
+                        "title": "Narrow Blue - 440",
+                        "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
+                        "components": {
+                            "red": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "green": {
+                                "nbart_coastal_aerosol": 1.0
+                            },
+                            "blue": {
+                                "nbart_coastal_aerosol": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, approximately 453nm to 511nm",
+                        "components": {
+                            "red": {
+                                "nbart_blue": 1.0
+                            },
+                            "green": {
+                                "nbart_blue": 1.0
+                            },
+                            "blue": {
+                                "nbart_blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, approximately 534nm to 588nm",
+                        "components": {
+                            "red": {
+                                "nbart_green": 1.0
+                            },
+                            "green": {
+                                "nbart_green": 1.0
+                            },
+                            "blue": {
+                                "nbart_green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 670",
+                        "abstract": "Red band, roughly 637nm to 672nm",
+                        "components": {
+                            "red": {
+                                "nbart_red": 1.0
+                            },
+                            "green": {
+                                "nbart_red": 1.0
+                            },
+                            "blue": {
+                                "nbart_red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_1",
+                        "title": "Vegetation Red Edge - 710",
+                        "abstract": "Near infra-red band, centred on 710nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_2",
+                        "title": "Vegetation Red Edge - 740",
+                        "abstract": "Near infra-red band, centred on 740nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red_edge_3",
+                        "title": "Vegetation Red Edge - 780",
+                        "abstract": "Near infra-red band, centred on 780nm",
+                        "components": {
+                            "red": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "green": {
+                                "nbart_red_edge_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_red_edge_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_1": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "narrow_nir",
+                        "title": "Narrow Near Infrared - 870",
+                        "abstract": "Near infra-red band, centred on 865nm",
+                        "components": {
+                            "red": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_nir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_nir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1610",
+                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_2": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2190",
+                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
+                        "components": {
+                            "red": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "green": {
+                                "nbart_swir_3": 1.0
+                            },
+                            "blue": {
+                                "nbart_swir_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -2167,7 +2895,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                             }
                         ],
                         "legend": {
-                            "legend_values": [1, 6],
                             "axes_position": [0.1, 0.5, 0.8, 0.15]
                         }
                     },
