@@ -2041,7 +2041,7 @@ Water Observations from Space - Daily Observations
                 "data_manual_merge": False,
                 "always_fetch_bands": [ ],
                 "apply_solar_corrections": False,
-                "fuse_func": "datacube_wms.wms_utils.wofls_fuser"
+                "fuse_func": "datacube_wms.wms_utils.wofls_fuser",
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
