@@ -4243,7 +4243,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
-                "name": "ITEM_V2.0.0",
+                "name": "ITEM_V2.0.0_Conf",
                 # The Datacube name for the associated data product
                 "product_name": "item_v2_conf",
                 "min_zoom_factor": 15.0,
