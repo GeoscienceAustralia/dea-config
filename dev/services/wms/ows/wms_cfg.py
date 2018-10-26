@@ -4324,6 +4324,9 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             {
                                 'value': 0.55,
                                 'color': '#e31a1c',
+                                'legend': {
+                                    "prefix": ">"
+                                }
                             },
                         ],
                         "legend": {
