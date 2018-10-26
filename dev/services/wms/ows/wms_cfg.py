@@ -2295,6 +2295,52 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         ]
                     },
                     {
+                        "name": "ndci",
+                        "title": "NDCI - Red Edge, Red",
+                        "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF",
+                                "alpha": 0,
+                                "legend": {
+                                    "prefix" : "<"
+                                }
+                            },
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF"
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#00FFDF",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#FFF50E",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#FFB50A",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#FF530D",
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FF0000",
+                                "legend": {
+                                    "prefix": ">"
+                                }
+                            }
+                        ]
+                    },
+                    {
                         "name": "aerosol",
                         "title": "Narrow Blue - 440",
                         "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
@@ -2653,6 +2699,52 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "ndci",
+                        "title": "NDCI - Red Edge, Red",
+                        "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF",
+                                "alpha": 0,
+                                "legend": {
+                                    "prefix" : "<"
+                                }
+                            },
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF"
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#00FFDF",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#FFF50E",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#FFB50A",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#FF530D",
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FF0000",
+                                "legend": {
+                                    "prefix": ">"
+                                }
+                            }
                         ]
                     },
                     {
