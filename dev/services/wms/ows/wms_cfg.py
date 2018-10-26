@@ -2157,7 +2157,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi"]
+                    "styles": ["ndvi", "ndwi", "ndci"]
                 },
                 # Styles.
                 #
@@ -2564,7 +2564,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi"]
+                    "styles": ["ndvi", "ndwi", "ndci"]
                 },
                 # Styles.
                 #
