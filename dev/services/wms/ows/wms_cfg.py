@@ -2066,7 +2066,8 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                           "terrain_or_low_angle": True,
                                           "cloud_shadow": True,
                                           "cloud": True,
-                                          "high_slope": True
+                                          "high_slope": True,
+                                          "noncontiguous": True
                                         }
                                     },
                                     "color": "#707070"
