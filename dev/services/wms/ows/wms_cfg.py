@@ -2017,7 +2017,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 "time_zone": 9,
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                "extent_mask_func": lambda data, band: (data[band] & data[band].attrs['nodata']) == 0,
                 # "pq_manual_merge": True,
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
