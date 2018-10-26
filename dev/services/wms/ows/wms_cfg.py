@@ -1940,8 +1940,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "color_ramp": [
                             {
                                 "value": 0,
-                                "color": "#FFFFFF",
-                                "alpha": 0
+                                "color": "#000000",
                             },
                             {
                                 "value": 0.01,
