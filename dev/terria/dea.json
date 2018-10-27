@@ -411,7 +411,27 @@
                      "linkedWcsCoverage": "low_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
-                  }
+                  },
+                  {
+                     "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
+                     "type": "wms",
+                     "layers": "ITEM_V2.0.0",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ITEM_V2.0.0",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
+                     "type": "wms",
+                     "layers": "ITEM_V2.0.0_Conf",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  }                 
                ]
             },
             {
