@@ -4479,7 +4479,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
-                "always_fetch_bands": ["relative"],
+                #"always_fetch_bands": ["relative"],
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["relative_layer"]
@@ -4494,72 +4494,50 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             {
                                 'value': 1.0,
                                 'color': '#d7191c',
-                                'alpha': 1.0,
-                                'legend': {
-                                    'label': '0-10%'
-                                }
+                                'alpha': 1.0
                             },
                             {
 
                                 'value': 2.0,
                                 'color': '#ec6e43',
-                                'alpha': 1.0,
-                                'legend': {
-                                    "label": "10-20%"
-                                }
                             },
                             {
                                 'value': 3.0,
                                 'color': '#fdb96e',
-                                'alpha': 1.0,
-                                'legend': {
-                                    'label': '20-30%'
-                                }
                             },
                             {
 
                                 'value': 4.0,
                                 'color': '#fee7a4',
-                                'alpha': 1.0,
-                                'legend': {
-                                    "label": "30-40%"
-                                }
                             },
                             {
                                 'value': 5.0,
                                 'color': '#e7f5b7',
-                                'alpha': 1.0,
-                                'legend': {
-                                    'label': '40-50%'
-                                }
                             },
                             {
 
                                 'value': 6.0,
                                 'color': '#b7e1a7',
-                                'alpha': 1.0,
-                                'legend': {
-                                    "label": "50-60%"
-                                }
                             },
                             {
                                 'value': 7.0,
                                 'color': '#74b6ad',
-                                'alpha': 1.0,
-                                'legend': {
-                                    'label': '60-70%'
-                                }
                             },
                             {
 
                                 'value': 8.0,
                                 'color': '#ec6e43',
-                                'alpha': 1.0,
                                 'legend': {
                                     "label": "70-80% and above"
                                 }
                             },
                         ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 1
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -4588,7 +4566,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
-                "always_fetch_bands": ["stddev"],
+                #"always_fetch_bands": ["stddev"],
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["confidence_layer"]
