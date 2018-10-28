@@ -71,7 +71,9 @@ service_cfg = {
         "geomedian",
         "WOfS",
         "mangrove",
-        "bare-earth"
+        "bare-earth",
+        "NIDEM",
+        "HLTC",
         "landsat",
         "australia",
         "time-series",
@@ -237,11 +239,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -300,11 +297,6 @@ layer_cfg = [
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -395,13 +387,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 1, centered on 1610nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -412,13 +404,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 2, centered on 2200nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -544,11 +536,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -607,11 +594,6 @@ layer_cfg = [
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -702,13 +684,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 1, centered on 1650nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -719,13 +701,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 2, centered on 2220nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -851,11 +833,6 @@ layer_cfg = [
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -914,11 +891,6 @@ layer_cfg = [
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -1009,13 +981,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 1, centered on 1650nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -1026,13 +998,13 @@ layer_cfg = [
                         "abstract": "Short wave infra-red band 2, centered on 2220nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -1159,11 +1131,6 @@ Mosaics are available for the following years:
                         "needed_bands": ["red", "nir"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -1289,13 +1256,13 @@ Mosaics are available for the following years:
                         "abstract": "Short wave infra-red band 1, centered on 1610nm",
                         "components": {
                             "red": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "green": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             },
                             "blue": {
-                                "swir_1": 1.0
+                                "swir1": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -1306,13 +1273,13 @@ Mosaics are available for the following years:
                         "abstract": "Short wave infra-red band 2, centered on 2200nm",
                         "components": {
                             "red": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "green": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             },
                             "blue": {
-                                "swir_2": 1.0
+                                "swir2": 1.0
                             }
                         },
                         "scale_range": [0.0, 3000.0]
@@ -1430,15 +1397,13 @@ in some locations dense dwarf/shrub mangroves that are less than 2 metres tall m
                 "product_name": "wofs_filtered_summary",
                 
                 "abstract": """
-Water Observations from Space - Filtered Statistics is a set of statistical summaries of the water observations contained in Water Observations from Space.
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. 
 
-This product is Water Observations from Space - Filtered Statistics, consisting of a Confidence layer that compares the Water Observations from Space - Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the Water Observations from Space - Statistics water summary where Confidence is low.
-The Filtered Water Summary provides the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out.
+This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level.  No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
 
-This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level.
-This layer gives a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist.
+The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. 
 
-For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
 
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
@@ -1561,14 +1526,13 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # The Datacube name for the associated data product
                 "product_name": "wofs_summary",
                 "abstract": """
-Water Observations from Space - Statistics is a set of statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. 
 
-This product is Water Observations from Space - Statistics, a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
+This layer contains Wet Count: how many times water was detected in observations that were clear. No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
 
-This layer contains Wet Count: how many times water was detected in observations that were clear
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1677,14 +1641,13 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # The Datacube name for the associated data product
                 "product_name": "wofs_summary",
                 "abstract": """
-Water Observations from Space - Statistics is a set of statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. 
 
-This product is Water Observations from Space - Statistics, a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
+This layer contains Clear Count: how many times an area could be clearly seen (ie. not affected by clouds, shadows or other satellite observation problems). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
 
-This layer contains Clear Count: how many times an area could be clearly seen (ie. not affected by clouds, shadows or other satellite observation problems)
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1806,14 +1769,13 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 # The Datacube name for the associated data product
                 "product_name": "wofs_summary",
                 "abstract": """
-Water Observations from Space - Statistics is a set of statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary). 
 
-This product is Water Observations from Space - Statistics, a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
+This layer contains the Water Summary: the percentage of clear observations which were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
 
-This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage)
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1936,15 +1898,13 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                 "product_name": "wofs_filtered_summary",
                 
                 "abstract": """
-Water Observations from Space - Filtered Statistics is a set of statistical summaries of the water observations contained in Water Observations from Space.
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low.
+ 
+This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green.
 
-This product is Water Observations from Space - Filtered Statistics, consisting of a Confidence layer that compares the Water Observations from Space - Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the Water Observations from Space - Statistics water summary where Confidence is low.
-The Filtered Water Summary provides the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out.
+The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. 
 
-This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets.
-The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means.
-
-For more information please see: http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
 
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
@@ -1973,8 +1933,7 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
                         "color_ramp": [
                             {
                                 "value": 0,
-                                "color": "#FFFFFF",
-                                "alpha": 0
+                                "color": "#000000",
                             },
                             {
                                 "value": 0.01,
@@ -2359,6 +2318,126 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 #  not required by the standard.)
                 "default_style": "annual_WOfS_frequency",
             },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS Daily Observations",
+                # Included as a keyword  for the layer
+                "type": "albers",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "wofs_albers",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_albers",
+                "abstract":
+                    "Water Observations from Space (WOfS) is a gridded dataset indicating areas where surface water "
+                    "has been observed using the Geoscience Australia (GA) Earth observation satellite data holdings. "
+                    "The current product (Version 2.1.5) covers all of mainland Australia and "
+                    "Tasmania but excludes off-shore Territories. WOfS shows water observed for every Landsat-5, "
+                    "Landsat-7 and Landsat-8 image across Australia (excluding External Territories) from 1986 onwards "
+                    "The dataset is updated as a satellite acquires data, with a delay of several weeks. "
+                    "\r\n"
+                    "The details of the WOfS algorithm and derived statistics are available at "
+                    "http://dx.doi.org/10.1016/j.rse.2015.11.003.",
+                #"pq_band": "water",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 500.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [200, 180, 180, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # "pq_manual_merge": True,
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [
+                    "nodata",
+                    "noncontiguous",
+                ],
+                "data_manual_merge": False,
+                "always_fetch_bands": [ ],
+                "apply_solar_corrections": False,
+                "fuse_func": "datacube_wms.wms_utils.wofls_fuser",
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "legend": {
+                    "styles": ["water"]
+                },
+                "styles": [
+                    {
+                        "name": "water",
+                        "title": "Water",
+                        "abstract": "Water",
+                        "value_map": {
+                            "water": [
+                                {
+                                    "title": "Invalid",
+                                    "abstract": "Slope or Cloud",
+                                    "flags": {
+                                        "or": {
+                                          "terrain_or_low_angle": True,
+                                          "cloud_shadow": True,
+                                          "cloud": True,
+                                          "high_slope": True
+                                        }
+                                    },
+                                    "color": "#707070"
+                                },
+                                {
+                                    "title": "Dry",
+                                    "abstract": "Dry",
+                                    "flags": {
+                                        "dry": True,
+                                        "sea": False,
+                                    },
+                                    "color": "#D99694"
+                                },
+                                {
+                                    "title": "Wet",
+                                    "abstract": "Wet or Sea",
+                                    "flags": {
+                                      "or": {
+                                        "wet": True,
+                                        "sea": True
+                                      }
+                                    },
+                                    "color": "#4F81BD"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+           
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "water",
+             }
         ],
     },
     {
@@ -2468,11 +2547,6 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -2533,11 +2607,6 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -2551,6 +2620,52 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "ndci",
+                        "title": "NDCI - Red Edge, Red",
+                        "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF",
+                                "alpha": 0,
+                                "legend": {
+                                    "prefix" : "<"
+                                }
+                            },
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF"
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#00FFDF",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#FFF50E",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#FFB50A",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#FF530D",
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FF0000",
+                                "legend": {
+                                    "prefix": ">"
+                                }
+                            }
                         ]
                     },
                     {
@@ -2839,11 +2954,6 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -1.0,
-                                "color": "#FFFFFF",
-                                "alpha": 0.0
-                            },
-                            {
                                 "value": -0.0,
                                 "color": "#8F3F20",
                                 "alpha": 0.0
@@ -2894,7 +3004,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "color": "#114D04"
                             }
                         ]
-                        
+
                     },
                     {
                         "name": "ndwi",
@@ -2903,11 +3013,6 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
                             {
                                 "value": -0.0,
                                 "color": "#8F3F20",
@@ -2922,6 +3027,52 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "ndci",
+                        "title": "NDCI - Red Edge, Red",
+                        "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF",
+                                "alpha": 0,
+                                "legend": {
+                                    "prefix" : "<"
+                                }
+                            },
+                            {
+                                "value": -0.1,
+                                "color": "#1696FF"
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#00FFDF",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#FFF50E",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#FFB50A",
+                                "legend": { }
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#FF530D",
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FF0000",
+                                "legend": {
+                                    "prefix": ">"
+                                }
+                            }
                         ]
                     },
                     {
@@ -3268,7 +3419,6 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                             }
                         ],
                         "legend": {
-                            "legend_values": [1, 6],
                             "axes_position": [0.1, 0.5, 0.8, 0.15]
                         }
                     },
@@ -3717,8 +3867,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             "new suite of use cases that require a more detailed understanding of the three-dimensional "
                             "topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management "
                             "and ecological habitat mapping.",
-                "type": "",
-                "variant": "",
+                "type": "grid",
+                "variant": "nidem_v1.0.0",
                 "name": "NIDEM",
                 "product_name": "nidem",
                 "min_zoom_factor": 15.0,
@@ -3740,7 +3890,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         "needed_bands": ["nidem"],
                         "color_ramp": [
                             {
-                                'value': -2.5,
+                                'value': -2.51,
                                 'color': '#440154',
                                 'alpha': 0
                             },
@@ -3749,7 +3899,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'value': -2.5,
                                 'color': '#440154',
                                 'legend': {
-                                    'label': 'Low\nClass -2.5'
+                                    "prefix": "<"
                                 }
                             },
                             {
@@ -3787,7 +3937,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
 
                             {
                                 'value': -1.1,
-                                'color': '#2e6b8d'
+                                'color': '#2e6b8d',
+                                "legend": { }
                             },
                             {
                                 'value': -0.94,
@@ -3814,8 +3965,9 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'color': '#1fa186'
                             },
                             {
-                                'value': -0.2,
-                                'color': '#26ac7f'
+                                'value': 0.0,
+                                'color': '#26ac7f',
+                                "legend": { }
                             },
                             {
                                 'value': 0.14,
@@ -3857,10 +4009,13 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 'value': 1.5,
                                 'color': '#fde724',
                                 'legend': {
-                                    'label': 'High\nClass 1.5'
+                                    "prefix": ">"
                                 }
                             }
                         ],
+                        "legend": {
+                            "units": "metres"
+                        }
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -3871,5 +4026,654 @@ This contains a three band combination of the 50th Percentile for green vegetati
             },
         ]
     },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "HLTC Composites",
+        "title": "High Tide Low Tide Composite",
+        "abstract": "The High and Low Tide Composites product is composed of two surface reflectance composite mosaics "
+                    "of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) "
+                    "surface reflectance data (Li et al., 2012). These products have been produced using "
+                    "Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation "
+                    "of the shallow water and inter-tidal coastal regions of Australia, as observed at "
+                    "high and low tide respectively.The composites are generated utilising the geomedian approach of "
+                    "Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as "
+                    "habitat mapping. The time range used for composite generation in each polygon of the mosaic is "
+                    "tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud "
+                    "free composite to be generated. The concepts of the Observed Tidal Range (OTR), "
+                    "and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. "
+                    "(2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016.",
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "High Tide",
+                # Included as a keyword  for the layer
+                "type": "Tidal Composite",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "high_tide_composite",
+                # The Datacube name for the associated data product
+                "product_name": "high_tide_comp_20p",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi", "ndwi"]
+                },
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 0.30]
+                    },
+                    {
+                        "name": "infrared_green",
+                        "title": "False colour - Green, SWIR, NIR",
+                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.30]
+                    },
+                    #
+                    # Examples of non-linear heat-mapped styles.
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI - Red, NIR",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ndwi",
+                        "title": "NDWI - Green, SWIR",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (
+                                    data["swir1"] + data["green"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Low Tide",
+                # Included as a keyword  for the layer
+                "type": "Tidal Composite",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "low_tide_composite",
+                # The Datacube name for the associated data product
+                "product_name": "low_tide_comp_20p",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi", "ndwi"]
+                },
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 0.30]
+                    },
+                    {
+                        "name": "infrared_green",
+                        "title": "False colour - Green, SWIR, NIR",
+                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.30]
+                    },
+                    #
+                    # Examples of non-linear heat-mapped styles.
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI - Red, NIR",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ndwi",
+                        "title": "NDWI - Green, SWIR",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (
+                                    data["swir1"] + data["green"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },
+        ]
+    },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "ITEM",
+        "title": "Intertidal Extents Model",
+        "abstract": "The Intertidal Extents Model (ITEM) product is a national dataset of the exposed intertidal zone; "
+                    "the land between the observed highest and lowest tide. ITEM provides the extent and topography of "
+                    "the intertidal zone of Australia's coastline (excluding off-shore Territories). "
+                    "This information was collated using observations in the Landsat archive since 1986. "
+                    "ITEM can be a valuable complimentary dataset to both onshore LiDAR survey data and coarser offshore "
+                    "bathymetry data, enabling a more realistic representation of the land and ocean interface.",
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "Relative Layer",
+                "abstract": "The Relative Extents Model (item_v2) utilises the tidal information attributed to "
+                            "each Landsat observation to indicate the spatial extent of intertidal substratum "
+                            "exposed at percentile intervals of the observed tidal range for the cell.",
+                # Included as a keyword  for the layer
+                "type": "ITEM v2.0.0",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "ITEM_V2.0.0",
+                # The Datacube name for the associated data product
+                "product_name": "item_v2",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["relative"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["relative_layer"]
+                },
+                "styles": [
+                    {
+                        "name": "relative_layer",
+                        "title": "relative layer",
+                        "abstract": "The Relative Extents Model (item_v2) 25m v2.0.0",
+                        "needed_bands": ["relative"],
+                        "color_ramp": [
+                            {
+                                'value': 1.0,
+                                'color': '#d7191c',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '0-10%'
+                                }
+                            },
+                            {
+
+                                'value': 2.0,
+                                'color': '#ec6e43',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "10-20%"
+                                }
+                            },
+                            {
+                                'value': 3.0,
+                                'color': '#fdb96e',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '20-30%'
+                                }
+                            },
+                            {
+
+                                'value': 4.0,
+                                'color': '#fee7a4',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "30-40%"
+                                }
+                            },
+                            {
+                                'value': 5.0,
+                                'color': '#e7f5b7',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '40-50%'
+                                }
+                            },
+                            {
+
+                                'value': 6.0,
+                                'color': '#b7e1a7',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "50-60%"
+                                }
+                            },
+                            {
+                                'value': 7.0,
+                                'color': '#74b6ad',
+                                'alpha': 1.0,
+                                'legend': {
+                                    'label': '60-70%'
+                                }
+                            },
+                            {
+
+                                'value': 8.0,
+                                'color': '#ec6e43',
+                                'alpha': 1.0,
+                                'legend': {
+                                    "label": "70-80% and above"
+                                }
+                            },
+                        ],
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "relative_layer",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Confidence Layer",
+                "abstract": "The Confidence Layer (item_v2_conf) reflects the confidence level of the "
+                            "Relative Extents Model, based on the distribution of classification metrics "
+                            "within each of the percentile intervals of the tidal range.",
+                # Included as a keyword  for the layer
+                "type": "ITEM v2.0.0",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "ITEM_V2.0.0",
+                # The Datacube name for the associated data product
+                "product_name": "item_v2_conf",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["stddev"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["confidence_layer"]
+                },
+                "styles": [
+                    {
+                        "name": "confidence_layer",
+                        "title": "confidence layer",
+                        "abstract": "The Confidence layer (item_v2_conf) 25m v2.0.0",
+                        "needed_bands": ["stddev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#2b83ba',
+                                'alpha': 0.0
+                            },
+                            {
+
+                                'value': 0.01,
+                                'color': '#2b83ba',
+                                'legend': {
+                                    "prefix": "<"
+                                }
+                            },
+                            {
+                                'value': 0.055,
+                                'color': '#55a1b2',
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#80bfab',
+                            },
+                            {
+                                'value': 0.145,
+                                'color': '#abdda4',
+                            },
+                            {
+                                'value': 0.19,
+                                'color': '#c7e8ad',
+                            },
+                            {
+                                'value': 0.235,
+                                'color': '#e3f3b6',
+                            },
+                            {
+                                'value': 0.28,
+                                'color': '#fdbf6f',
+                            },
+                            {
+                                'value': 0.325,
+                                'color': '#e37d1c',
+                            },
+                            {
+                                'value': 0.37,
+                                'color': '#e35e1c',
+                            },
+                            {
+                                'value': 0.415,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.46,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.505,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.55,
+                                'color': '#e31a1c',
+                            },
+                        ],
+                        "legend": {
+                            "units": "metres"
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "confidence_layer",
+            },
+        ]
+    },
+
 ]
 
