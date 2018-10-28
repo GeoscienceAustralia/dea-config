@@ -4535,7 +4535,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         "legend": {
                             "units": "%",
                             "radix_point": 0,
-                            "scale_by": 100.0,
+                            "scale_by": 10.0,
                             "major_ticks": 1
                         }
                     },
