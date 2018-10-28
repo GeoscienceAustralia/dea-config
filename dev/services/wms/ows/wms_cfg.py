@@ -1985,6 +1985,341 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
             },
             {
                 # Included as a keyword  for the layer
+                "label": "WOfS Annual Statistics",
+                # Included as a keyword  for the layer
+                "type": "Wet Count",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "wofs_annual_summary_wet",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_annual_summary",
+                "abstract": """
+Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+
+This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
+The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
+
+This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage)
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "legend": {
+                    # "url": ""
+                    "styles": ["annual_water_observations"]
+                },
+                "styles": [
+                    {
+                        "name": "annual_water_observations",
+                        "title": "Wet Count",
+                        "abstract": "WOfS annual summary showing the count of water observations",
+                        "needed_bands": ["count_wet"],
+                        "color_ramp": [
+                            {
+                                "value": 0,
+                                "color": "#666666",
+                                "alpha": 0
+                            },
+                            {
+                                "value": 2,
+                                "color": "#990000"
+                            },
+                            {
+                                "value": 4,
+                                "color": "#E38400"
+                            },
+                            {
+                                "value": 6,
+                                "color": "#E3DF00"
+                            },
+                            {
+                                "value": 8,
+                                "color": "#00E32D"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#00E3C8"
+                            },
+                            {
+                                "value": 12,
+                                "color": "#0097E3"
+                            },
+                            {
+                                "value": 14,
+                                "color": "#005FE3"
+                            },
+                            {
+                                "value": 16,
+                                "color": "#000FE3"
+                            },
+                            {
+                                "value": 18,
+                                "color": "#000EA9"
+                            },
+                            {
+                                "value": 20,
+                                "color": "#5700E3",
+                                "legend": {
+                                    "prefix": ">"
+                                }
+                            }
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 10
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "annual_water_observations",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS Annual Statistics",
+                # Included as a keyword  for the layer
+                "type": "Clear Count",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "wofs_annual_summary_clear",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_annual_summary",
+                "abstract": """                
+Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+
+This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
+The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
+
+This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage)
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "legend": {
+                    # "url": ""
+                    "styles": ["annual_clear_observations"]
+                },
+                "styles": [
+                    {
+                        "name": "annual_clear_observations",
+                        "title": "Clear Count",
+                        "abstract": "WOfS annual summary showing the count of clear observations",
+                        "needed_bands": ["count_clear"],
+                        "color_ramp": [
+                            {
+                                "value": 0,
+                                "color": "#FFFFFF",
+                                "alpha": 0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#B21800"
+                            },
+                            {
+                                "value": 2,
+                                "color": "#FF4400"
+                            },
+                            {
+                                "value": 4,
+                                "color": "#FF8000"
+                            },
+                            {
+                                "value": 6,
+                                "color": "#FFA200"
+                            },
+                            {
+                                "value": 8,
+                                "color": "#FFD500"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#FFF300"
+                            },
+                            {
+                                "value": 12,
+                                "color": "#89FF00"
+                            },
+                            {
+                                "value": 15,
+                                "color": "#44C400"
+                            },
+                            {
+                                "value": 20,
+                                "color": "#03B500"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#039500"
+                            },
+                            {
+                                "value": 30,
+                                "color": "#026900",
+                                "legend": {
+                                    "prefix": ">"
+                                }
+                            }
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 10,
+                            "axes_position": [0.05, 0.5, 0.89, 0.15]
+                        }
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "annual_clear_observations",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS Annual Statistics",
+                # Included as a keyword  for the layer
+                "type": "Water Summary",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "Water Observations from Space Statistics",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_annual_summary",
+                "abstract": """
+Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+
+This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
+The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
+
+This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage)
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "legend": {
+                    # "url": ""
+                    "styles": ["annual_WOfS_frequency"]
+                },
+                "styles": [
+                    {
+                        "name": "annual_WOfS_frequency",
+                        "title": " Water Summary",
+                        "abstract": "WOfS annual summary showing the frequency of Wetness",
+                        "needed_bands": ["frequency"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#000000",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#000000",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.05,
+                                "color": "#8e0101",
+                                "alpha": 0.25
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#cf2200",
+                                "alpha": 0.75
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#e38400"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#e3df00"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#62e300"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#00e32d"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#00e3c8"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#0097e3"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#005fe3"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#000fe3"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "annual_WOfS_frequency",
+            },
+            {
+                # Included as a keyword  for the layer
                 "label": "WOfS Daily Observations",
                 # Included as a keyword  for the layer
                 "type": "albers",
