@@ -2229,7 +2229,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
-                "name": "Water Observations from Space Statistics",
+                "name": "wofs_annual_summary_statistics",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_annual_summary",
                 "abstract": """
