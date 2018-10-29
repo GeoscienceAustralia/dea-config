@@ -2033,6 +2033,14 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "alpha": 0
                             },
                             {
+                                # purely for legend display
+                                # we should not get fractional
+                                # values in this styles
+                                "value": 0.2,
+                                "color": "#990000",
+                                "alpha": 1
+                            },
+                            {
                                 "value": 2,
                                 "color": "#990000"
                             },
@@ -2138,6 +2146,14 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "value": 0,
                                 "color": "#FFFFFF",
                                 "alpha": 0
+                            },
+                            {
+                                # purely for legend display
+                                # we should not get fractional
+                                # values in this styles
+                                "value": 0.2,
+                                "color": "#B21800",
+                                "alpha": 1
                             },
                             {
                                 "value": 1,
