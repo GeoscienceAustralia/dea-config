@@ -4495,7 +4495,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
-                #"always_fetch_bands": ["relative"],
+                "always_fetch_bands": ["relative"],
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["relative_layer"]
@@ -4507,6 +4507,10 @@ This contains a three band combination of the 50th Percentile for green vegetati
                         "abstract": "The Relative Extents Model (item_v2) 25m v2.0.0",
                         "needed_bands": ["relative"],
                         "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#000000',
+                            },
                             {
                                 'value': 1.0,
                                 'color': '#d7191c',
@@ -4582,7 +4586,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
-                #"always_fetch_bands": ["stddev"],
+                "always_fetch_bands": ["stddev"],
                 "apply_solar_corrections": False,
                 "legend": {
                     "styles": ["confidence_layer"]
