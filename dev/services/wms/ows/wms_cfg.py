@@ -4510,6 +4510,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             {
                                 'value': 0.0,
                                 'color': '#000000',
+                                'alpha': 0.0
                             },
                             {
                                 'value': 1.0,
@@ -4546,10 +4547,12 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             {
 
                                 'value': 8.0,
-                                'color': '#2b83ba',
-                                'legend': {
-                                    "label": "80%\nabove"
-                                }
+                                'color': '#2b83ba'
+                            },
+                            {
+                                'value': 9.0,
+                                'color': '#000000',
+                                'alpha': 0.0
                             },
                         ],
                         "legend": {
