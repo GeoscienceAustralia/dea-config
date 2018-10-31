@@ -2345,16 +2345,12 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 "name": "wofs_albers",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_albers",
-                "abstract":
-                    "Water Observations from Space (WOfS) is a gridded dataset indicating areas where surface water "
-                    "has been observed using the Geoscience Australia (GA) Earth observation satellite data holdings. "
-                    "The current product (Version 2.1.5) covers all of mainland Australia and "
-                    "Tasmania but excludes off-shore Territories. WOfS shows water observed for every Landsat-5, "
-                    "Landsat-7 and Landsat-8 image across Australia (excluding External Territories) from 1986 onwards "
-                    "The dataset is updated as a satellite acquires data, with a delay of several weeks. "
-                    "\r\n"
-                    "The details of the WOfS algorithm and derived statistics are available at "
-                    "http://dx.doi.org/10.1016/j.rse.2015.11.003.",
+                "abstract": """
+Water Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.
+
+The WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.
+
+Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relationship with the input satellite data. Hence there is one WOFL for each satellite dataset processed for the occurrence of water. The details of the WOfS algorithm and derived statistics are available at http://dx.doi.org/10.1016/j.rse.2015.11.003."""",
                 #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
