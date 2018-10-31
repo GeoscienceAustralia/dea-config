@@ -2420,6 +2420,16 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                     "color": "#707070"
                                 },
                                 {
+                                    # Possible Sea Glint, also mark as invalid
+                                    "title": "",
+                                    "abstract": "",
+                                    "flags": {
+                                        "dry": True,
+                                        "sea": True
+                                    },
+                                    "color": "#707070"
+                                },
+                                {
                                     "title": "Dry",
                                     "abstract": "Dry",
                                     "flags": {
