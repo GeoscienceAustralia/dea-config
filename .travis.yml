@@ -1,0 +1,14 @@
+dist: trusty
+
+git:
+  # We need a deeper depth for 'git descibe' to ensure
+  # we can reach the last tagged version.
+  depth: 99999
+
+language: python
+python:
+# We don't use the travis python, but we will use it for the build matrix
+  - "3.6"
+
+script:
+  - ./check-code.sh
