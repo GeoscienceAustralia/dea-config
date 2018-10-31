@@ -126,7 +126,7 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Water Observations from Space wofs albers (WOfS Daily Observations)",
+                     "name": "Water Observations from Space Daily (WOfS Daily Observations)",
                      "type": "wms",
                      "layers": "wofs_albers",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
