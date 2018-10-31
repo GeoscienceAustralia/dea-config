@@ -2350,7 +2350,7 @@ Water Observations from Space (WOfS) provides surface water observations derived
 
 The WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.
 
-Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relationship with the input satellite data. Hence there is one WOFL for each satellite dataset processed for the occurrence of water. The details of the WOfS algorithm and derived statistics are available at http://dx.doi.org/10.1016/j.rse.2015.11.003."""",
+Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relationship with the input satellite data. Hence there is one WOFL for each satellite dataset processed for the occurrence of water. The details of the WOfS algorithm and derived statistics are available at http://dx.doi.org/10.1016/j.rse.2015.11.003.""",
                 #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
@@ -2416,6 +2416,16 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                           "high_slope": True,
                                           "noncontiguous": True
                                         }
+                                    },
+                                    "color": "#707070"
+                                },
+                                {
+                                    # Possible Sea Glint, also mark as invalid
+                                    "title": "",
+                                    "abstract": "",
+                                    "flags": {
+                                        "dry": True,
+                                        "sea": True
                                     },
                                     "color": "#707070"
                                 },
