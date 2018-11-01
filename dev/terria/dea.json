@@ -184,6 +184,36 @@
                      "linkedWcsCoverage": "wofs_filtered_summary_confidence",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Confidence (WOfs Annual Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_annual_summary_wet",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_annual_summary_wet",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Confidence (WOfs Annual Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_annual_summary_clear",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_annual_summary_clear",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Water Observations from Space 25m Confidence (WOfs Annual Statistics)",
+                     "type": "wms",
+                     "layers": "wofs_annual_summary_statistics",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "wofs_annual_summary_statistics",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
                   }
                ]
             },
