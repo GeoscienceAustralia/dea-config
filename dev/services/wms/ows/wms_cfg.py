@@ -2372,6 +2372,8 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                     "nodata",
                     "noncontiguous",
                 ],
+                # Include UTC dates for GSKY lookup
+                "feature_info_include_utc_dates": True,
                 "data_manual_merge": False,
                 "always_fetch_bands": [ ],
                 "apply_solar_corrections": False,
