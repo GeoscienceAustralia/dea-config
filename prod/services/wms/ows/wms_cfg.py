@@ -1030,6 +1030,9 @@ Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Au
 
 Mosaics are available for the following years:
     Landsat 8: 2013 to 2017;""",
+        # Link removed until eCat record is "published_external", not "published_internal"
+        # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
+
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
@@ -1048,10 +1051,11 @@ The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.6
 
 Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
 
-For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
-
 Mosaics are available for the following years:
     Landsat 8: 2013 to 2017;""",
+                # Link removed until eCat record is "published_external", not "published_internal"
+                # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
+
                 # The WMS name for the layer
                 "name": "ls8_barest_earth_mosaic",
                 # The Datacube name for the associated data product
