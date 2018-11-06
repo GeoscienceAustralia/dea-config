@@ -4595,6 +4595,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
                 "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "fuse_func": "datacube_wms.wms_utils.item_fuser",
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
                 "always_fetch_bands": ["stddev"],
