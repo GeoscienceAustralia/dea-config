@@ -4691,8 +4691,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "water_bodies",
-        "title": "NSW DOI",
-        "abstract": "NSW DOI Water Bodies Project",
+        "title": "Projects",
+        "abstract": "Projects",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -4701,7 +4701,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
             {
                 # Included as a keyword  for the layer
                 "label": "Water Bodies",
-                "abstract": "NSW DOI Water Bodies Mapping Project",
+                "abstract": "NSW Water Bodies Project",
                 # Included as a keyword  for the layer
                 "type": "NSW",
                 # Included as a keyword  for the layer
