@@ -4,10 +4,14 @@ git:
 language: python
 python:
 - '3.6'
+stages:
+  - name: deploy
+    if: branch = master
+    script:
+      - ./run-pipeline.sh
 script:
 - pip install pylint
 - ./check-code.sh || travis_terminate 1
-- ./run-pipeline.sh
 notifications:
   slack:
     secure: cNYu6iz861hlq8vmkIXGbsnVTzfx0P2hWEFJp9baFh40GuTtuU8qfeQvBtWguRMsCCbvE2Pwr1UZQQxDWUK2hLGqi+nT9kmItpRoGH69fvyXLWrEfU3HERanpBYine949fEksSlMCv3BuqZqCf9rtfbZp743jErQVctJkD+Pf1rC/Qt0eK9x9MykPE+lIupm6j1t9aFJuAF6lfcesGNYuYl0W4Vjcc+iLrZG/7s/ixQWlgxGTHVkVHHed2rsv6JHbm+9WPchPXvD12o5tdmFHqnzog30rA10V2eM03tYcTaExPUe+Z1RLv9tK/A//mTO35wg7laB0AqxFaCS+s4R3wdYpq/IvFIyiJp96ww+u9S1j9jnZZ/TxuB3ilGVUoKRr92AVxL5ghlhL0+a4QJEwOJ1BTytlc1eh0fXN5xKtzqwEPOQqP9jNhTPZP44attEc2knpFSTaIoin6LTg6LptlQFLbqhtNFc+kFK7OZMMNZwVI+oxyqAEaE1hgMRYKukNyUs6YmGzCX935Pe84Kq/Oo63+d05HN0qxHfXWxKCkdX9pagJVLMF4jI78abRPPjtmKC7L+G1//ZKdSB6sHTpWT7vcUCCPUpIXLTGsKU2EZ0r9to+5nQ/PjFJDZta5VfLDkcf9bK+r5nWrQafzHl8x0rpgZpOtFUXPCAutEc7Y0=
