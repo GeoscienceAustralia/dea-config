@@ -12,7 +12,15 @@ service_cfg = {
     # Service title - appears e.g. in Terria catalog
     "title": "Digital Earth Australia - OGC Web Services",
     # Service URL.  Should a fully qualified URL
-    "url": "https://ows.services.dea.ga.gov.au",
+    "url": [
+        "https://ows.services.dea.ga.gov.au",
+        "https://ows.services.devkube.dea.ga.gov.au",
+        "https://nrt.services.dea.ga.gov.au",
+        "https://geomedian.services.dea.ga.gov.au",
+        "https://geomedianau.dea.ga.gov.au",
+        "https://geomedian.dea.ga.gov.au",
+        "https://nrt.dea.ga.gov.au",
+        "https://nrt-au.dea.ga.gov.au"],
     "human_url": "dea.ga.gov.au/",
     # Supported co-ordinate reference systems
     "published_CRSs": {
