@@ -12,7 +12,7 @@ service_cfg = {
     # Service title - appears e.g. in Terria catalog
     "title": "Digital Earth Australia - OGC Web Services",
     # Service URL.  Should a fully qualified URL
-    "url": "https://ows.services.devkube.dea.ga.gov.au",
+    "url": "https://ows.services.dea.ga.gov.au",
     "human_url": "dea.ga.gov.au/",
     # Supported co-ordinate reference systems
     "published_CRSs": {
@@ -118,8 +118,7 @@ layer_cfg = [
                     "Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; "
                     "Landsat 7: 2000 to 2017; "
                     "Landsat 8: 2013 to 2017; "
-                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374"
-                    "For product definition, see http://dea-public-data.s3-ap-southeast-2.amazonaws.com/geomedian-australia/v2.1.0/Product%20Description.pdf",
+                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -1025,10 +1024,16 @@ layer_cfg = [
         "title": "Barest Earth",
         "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
+
 The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+
 Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+
 Mosaics are available for the following years:
-    Landsat 8: 2013 to 2017""",
+    Landsat 8: 2013 to 2017;""",
+        # Link removed until eCat record is "published_external", not "published_internal"
+        # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
+
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
@@ -1042,10 +1047,16 @@ Mosaics are available for the following years:
                 "variant": "25m",
                 "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
+
 The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+
 Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+
 Mosaics are available for the following years:
-    Landsat 8: 2013 to 2017""",
+    Landsat 8: 2013 to 2017;""",
+                # Link removed until eCat record is "published_external", not "published_internal"
+                # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
+
                 # The WMS name for the layer
                 "name": "ls8_barest_earth_mosaic",
                 # The Datacube name for the associated data product
@@ -1053,8 +1064,7 @@ Mosaics are available for the following years:
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
                 "min_zoom_factor": 35.0,
-                # To render the blue box if the no. of datasets exceeds 1000
-                # "max_datasets_wms": 1000,
+                #"max_datasets_wms": 1000,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -2470,9 +2480,8 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Sentinel-2 NRT",
         "title": "Near Real-Time",
-        "abstract": "This is a 30-day rolling archive of daily Sentinel-2 Near Real Time data. "
-                    "Data is only visible at higher resolutions: when zoomed-out the available areas for that day "
-                    "will be displayed as shaded regions. The Near Real-Time capability provides analysis-ready data "
+        "abstract": "This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. "
+                    "The Near Real-Time capability provides analysis-ready data "
                     "that is processed on receipt using the best-available ancillary information at the time to "
                     "provide atmospheric corrections. For more information see "
                     "http://pid.geoscience.gov.au/dataset/ga/122229",
@@ -2487,6 +2496,10 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                 "type": "",
                 # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
+                "abstract":"""
+This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
+
+For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 # The WMS name for the layer
                 "name": "s2b_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
@@ -2622,13 +2635,14 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                 "color": "#114D04"
                             }
                         ]
-                        
+
                     },
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
+                                    data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
@@ -2894,6 +2908,10 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                 "type": "",
                 # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
+                "abstract": """
+This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
+
+For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 # The WMS name for the layer
                 "name": "s2a_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
@@ -2975,7 +2993,8 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                         "name": "ndvi",
                         "title": "NDVI - Red, NIR",
                         "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (
+                                    data["nbart_nir_1"] + data["nbart_red"]),
                         "needed_bands": ["nbart_red", "nbart_nir_1"],
                         "color_ramp": [
                             {
@@ -3035,7 +3054,8 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
                         "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (data["nbart_nir_1"] + data["nbart_green"]),
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
+                                    data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
@@ -3304,20 +3324,20 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
             {
                 "label": "Multi-Scale Topographic Position",
                 "abstract": """A Multi-scale topographic position image of Australia has been generated by combining 
-                a topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures 
-                the topographic slope position of landforms. Ruggedness informs on the roughness of the surface and 
-                is calculated as the standard deviation of elevations. Both these terrain attributes are therefore 
-                scale dependent and will vary according to the size of the analysis window. Based on an algorithm 
-                developed by Lindsay et al. (2015) we have generated multi-scale topographic position model over the 
-                Australian continent using 3 second resolution (~90m) DEM derived from the Shuttle Radar Topography 
-                Mission (SRTM). The algorithm calculates topographic position scaled by the corresponding ruggedness 
-                across three spatial scales (window sizes) of 0.2-8.1 Km; 8.2-65.2 Km and 65.6-147.6 Km. The derived 
-                ternary image captures variations in topographic position across these spatial scales (blue local, 
-                green intermediate and red regional) and gives a rich representation of nested landform features that 
-                have broad application in understanding geomorphological and hydrological processes and in mapping 
-                regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
-                H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
-                Geomorphology 245, 51–61.""",
+            a topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures 
+            the topographic slope position of landforms. Ruggedness informs on the roughness of the surface and 
+            is calculated as the standard deviation of elevations. Both these terrain attributes are therefore 
+            scale dependent and will vary according to the size of the analysis window. Based on an algorithm 
+            developed by Lindsay et al. (2015) we have generated multi-scale topographic position model over the 
+            Australian continent using 3 second resolution (~90m) DEM derived from the Shuttle Radar Topography 
+            Mission (SRTM). The algorithm calculates topographic position scaled by the corresponding ruggedness 
+            across three spatial scales (window sizes) of 0.2-8.1 Km; 8.2-65.2 Km and 65.6-147.6 Km. The derived 
+            ternary image captures variations in topographic position across these spatial scales (blue local, 
+            green intermediate and red regional) and gives a rich representation of nested landform features that 
+            have broad application in understanding geomorphological and hydrological processes and in mapping 
+            regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
+            H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
+            Geomorphology 245, 51–61.""",
                 "type": "1 degree tile",
                 "variant": "",
                 "name": "multi_scale_topographic_position",
@@ -3963,7 +3983,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             {
                                 'value': -1.1,
                                 'color': '#2e6b8d',
-                                "legend": { }
+                                "legend": {}
                             },
                             {
                                 'value': -0.94,
