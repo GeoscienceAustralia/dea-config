@@ -9,8 +9,8 @@ curl -X POST -is -u "${BITBUCKET_PIPELINE_USERNAME}:${BITBUCKET_PIPELINE_APP_PAS
         "type": "pipeline_ref_target",
         "ref_name": "master",
         "selector": {
-            "type": "custom",
-            "pattern":"deploy"
+            "type": "branches",
+            "pattern":"master"
         }
     }
 }'
