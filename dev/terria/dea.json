@@ -780,22 +780,22 @@
             {
                "name": "DEA Albers Tiles grid",
                "type": "geojson",
-               "url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/geomedian-australia/v2.1.0/albers_grid.geojson"
+               "url": "https://data.dea.ga.gov.au/geomedian-australia/v2.1.0/albers_grid.geojson"
             },
             {
                "name": "DEA Intertidal Extents Relative Model and Confidence Layer 25m v2.0 polygons for access to data",
                "type": "geojson",
-               "url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/ITEM_V2/Itemv2.geojson"
+               "url": "https://data.dea.ga.gov.au/ITEM_V2/Itemv2.geojson"
             },
             {
                "name": "DEA Low Tide Composite 25m v2.0 polygons for access to data",
                "type": "geojson",
-               "url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/low_composite_20.geojson"
+               "url": "https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20.geojson"
             },
             {
                "name": "DEA High Tide Composite 25m v2.0 polygons for access to data",
                "type": "geojson",
-               "url": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/high_composite_20.geojson"
+               "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20.geojson"
             }
          ]
       }
