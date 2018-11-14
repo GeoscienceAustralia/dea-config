@@ -116,7 +116,7 @@
          "url": "https://gsky.nci.org.au/ows"
       },
       {
-         "name": "DEA Dev",
+         "name": "DEA Development",
          "type": "group",
          "preserveOrder": true,
          "items": [
