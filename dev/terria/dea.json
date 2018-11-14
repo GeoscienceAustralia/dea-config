@@ -794,8 +794,8 @@
                      "name": "National Intertidal Digital Elevation Model",
                      "type": "wms",
                      "layers": "NIDEM",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
                      "linkedWcsCoverage": "NIDEM",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
