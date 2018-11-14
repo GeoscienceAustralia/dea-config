@@ -1697,8 +1697,12 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "alpha": 0
                             },
                             {
+                                # purely for legend display
+                                # we should not get fractional
+                                # values in this styles
                                 "value": 10,
-                                "color": "#B21800"
+                                "color": "#B21800",
+                                "alpha": 1
                             },
                             {
                                 "value": 25,
@@ -1708,7 +1712,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "value": 50,
                                 "color": "#FF8000"
                             },
-                            {
+{
                                 "value": 100,
                                 "color": "#FFA200"
                             },
@@ -1721,28 +1725,16 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "color": "#FFD500"
                             },
                             {
-                                "value": 250,
-                                "color": "#FFF300"
-                            },
-                            {
-                                "value": 300,
-                                "color": "#E6FF00"
-                            },
-                            {
                                 "value": 350,
-                                "color": "#BCFF00"
-                            },
-                            {
-                                "value": 400,
-                                "color": "#89FF00"
+                                "color": "#FFE100"
                             },
                             {
                                 "value": 500,
-                                "color": "#68C400"
+                                "color": "#FFF300"
                             },
                             {
                                 "value": 600,
-                                "color": "#44C400"
+                                "color": "#89FF00"
                             },
                             {
                                 "value": 700,
@@ -2198,12 +2190,8 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "color": "#FFF300"
                             },
                             {
-                                "value": 12,
-                                "color": "#89FF00"
-                            },
-                            {
                                 "value": 15,
-                                "color": "#44C400"
+                                "color": "#89FF00"
                             },
                             {
                                 "value": 20,
