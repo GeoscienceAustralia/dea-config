@@ -2341,4 +2341,641 @@ For more information please see: http://dea-public-data.s3-ap-southeast-2.amazon
             },
         ]
     },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "HLTC Composites",
+        "title": "High Tide Low Tide Composite",
+        "abstract": "The High and Low Tide Composites product is composed of two surface reflectance composite mosaics "
+                    "of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) "
+                    "surface reflectance data (Li et al., 2012). These products have been produced using "
+                    "Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation "
+                    "of the shallow water and inter-tidal coastal regions of Australia, as observed at "
+                    "high and low tide respectively.The composites are generated utilising the geomedian approach of "
+                    "Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as "
+                    "habitat mapping. The time range used for composite generation in each polygon of the mosaic is "
+                    "tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud "
+                    "free composite to be generated. The concepts of the Observed Tidal Range (OTR), "
+                    "and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. "
+                    "(2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016.",
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "High Tide",
+                # Included as a keyword  for the layer
+                "type": "Tidal Composite",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "high_tide_composite",
+                # The Datacube name for the associated data product
+                "product_name": "high_tide_comp_20p",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi", "ndwi"]
+                },
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 0.30]
+                    },
+                    {
+                        "name": "infrared_green",
+                        "title": "False colour - Green, SWIR, NIR",
+                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.30]
+                    },
+                    #
+                    # Examples of non-linear heat-mapped styles.
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI - Red, NIR",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ndwi",
+                        "title": "NDWI - Green, SWIR",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (
+                                    data["swir1"] + data["green"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Low Tide",
+                # Included as a keyword  for the layer
+                "type": "Tidal Composite",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "low_tide_composite",
+                # The Datacube name for the associated data product
+                "product_name": "low_tide_comp_20p",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi", "ndwi"]
+                },
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 0.30]
+                    },
+                    {
+                        "name": "infrared_green",
+                        "title": "False colour - Green, SWIR, NIR",
+                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.30]
+                    },
+                    #
+                    # Examples of non-linear heat-mapped styles.
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI - Red, NIR",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ndwi",
+                        "title": "NDWI - Green, SWIR",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (
+                                    data["swir1"] + data["green"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#0303FF",
+                            },
+                        ]
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },
+        ]
+    },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "ITEM",
+        "title": "Intertidal Extents Model",
+        "abstract": "The Intertidal Extents Model (ITEM) product is a national dataset of the exposed intertidal zone; "
+                    "the land between the observed highest and lowest tide. ITEM provides the extent and topography of "
+                    "the intertidal zone of Australia's coastline (excluding off-shore Territories). "
+                    "This information was collated using observations in the Landsat archive since 1986. "
+                    "ITEM can be a valuable complimentary dataset to both onshore LiDAR survey data and coarser offshore "
+                    "bathymetry data, enabling a more realistic representation of the land and ocean interface.",
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "Relative Layer",
+                "abstract": "The Relative Extents Model (item_v2) utilises the tidal information attributed to "
+                            "each Landsat observation to indicate the spatial extent of intertidal substratum "
+                            "exposed at percentile intervals of the observed tidal range for the cell.",
+                # Included as a keyword  for the layer
+                "type": "ITEM v2.0.0",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "ITEM_V2.0.0",
+                # The Datacube name for the associated data product
+                "product_name": "item_v2",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["relative"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["relative_layer"]
+                },
+                "styles": [
+                    {
+                        "name": "relative_layer",
+                        "title": "relative layer",
+                        "abstract": "The Relative Extents Model (item_v2) 25m v2.0.0",
+                        "needed_bands": ["relative"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#000000',
+                                'alpha': 0.0
+                            },
+                            {
+                                'value': 1.0,
+                                'color': '#d7191c',
+                                'alpha': 1.0
+                            },
+                            {
+
+                                'value': 2.0,
+                                'color': '#ec6e43',
+                            },
+                            {
+                                'value': 3.0,
+                                'color': '#fdb96e',
+                            },
+                            {
+
+                                'value': 4.0,
+                                'color': '#fee7a4',
+                            },
+                            {
+                                'value': 5.0,
+                                'color': '#e7f5b7',
+                            },
+                            {
+
+                                'value': 6.0,
+                                'color': '#b7e1a7',
+                            },
+                            {
+                                'value': 7.0,
+                                'color': '#74b6ad',
+                            },
+                            {
+
+                                'value': 8.0,
+                                'color': '#2b83ba'
+                            },
+                            {
+                                'value': 9.0,
+                                'color': '#000000',
+                                'alpha': 0.0
+                            },
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 10.0,
+                            "major_ticks": 1
+                        }
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "relative_layer",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "Confidence Layer",
+                "abstract": "The Confidence Layer (item_v2_conf) reflects the confidence level of the "
+                            "Relative Extents Model, based on the distribution of classification metrics "
+                            "within each of the percentile intervals of the tidal range.",
+                # Included as a keyword  for the layer
+                "type": "ITEM v2.0.0",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "ITEM_V2.0.0_Conf",
+                # The Datacube name for the associated data product
+                "product_name": "item_v2_conf",
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "fuse_func": "datacube_wms.wms_utils.item_fuser",
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["stddev"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["confidence_layer"]
+                },
+                "styles": [
+                    {
+                        "name": "confidence_layer",
+                        "title": "confidence layer",
+                        "abstract": "The Confidence layer (item_v2_conf) 25m v2.0.0",
+                        "needed_bands": ["stddev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#2b83ba',
+                                'alpha': 0.0
+                            },
+                            {
+
+                                'value': 0.01,
+                                'color': '#2b83ba',
+                                'legend': {
+                                    "prefix": "<"
+                                }
+                            },
+                            {
+                                'value': 0.055,
+                                'color': '#55a1b2',
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#80bfab',
+                            },
+                            {
+                                'value': 0.145,
+                                'color': '#abdda4',
+                            },
+                            {
+                                'value': 0.19,
+                                'color': '#c7e8ad',
+                            },
+                            {
+                                'value': 0.235,
+                                'color': '#e3f3b6',
+                            },
+                            {
+                                'value': 0.28,
+                                'color': '#fdbf6f',
+                            },
+                            {
+                                'value': 0.325,
+                                'color': '#e37d1c',
+                            },
+                            {
+                                'value': 0.37,
+                                'color': '#e35e1c',
+                            },
+                            {
+                                'value': 0.415,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.46,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.505,
+                                'color': '#e31a1c',
+                            },
+                            {
+                                'value': 0.55,
+                                'color': '#e31a1c',
+                                'legend': {
+                                    "prefix": ">"
+                                }
+                            },
+                        ],
+                        "legend": {
+                            "units": "metres"
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "confidence_layer",
+            },
+        ]
+    },
 ]
