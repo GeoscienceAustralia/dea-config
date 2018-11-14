@@ -561,7 +561,7 @@
                      "preserveOrder": true,
                      "items": [
                         {
-                           "name": "Water Observations from Space 25m Wet Count (WOfs Annual Statistics)",
+                           "name": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_wet",
                            "url": "https://ows.services.dea.ga.gov.au/",
@@ -571,7 +571,7 @@
                            "opacity": 1
                         },
                         {
-                           "name": "Water Observations from Space 25m Clear Count (WOfs Annual Statistics)",
+                           "name": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_clear",
                            "url": "https://ows.services.dea.ga.gov.au/",
@@ -581,7 +581,7 @@
                            "opacity": 1
                         },
                         {
-                           "name": "Water Observations from Space 25m Summary (WOfs Annual Statistics)",
+                           "name": "Water Observations from Space 25m Summary (WOfS Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_statistics",
                            "url": "https://ows.services.dea.ga.gov.au/",
