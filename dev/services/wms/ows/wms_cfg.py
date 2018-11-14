@@ -1712,7 +1712,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "value": 50,
                                 "color": "#FF8000"
                             },
-{
+                            {
                                 "value": 100,
                                 "color": "#FFA200"
                             },
@@ -1725,7 +1725,11 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "color": "#FFD500"
                             },
                             {
-                                "value": 350,
+                                "value": 300,
+                                "color": "#FFDD00"
+                            },
+                            {
+                                "value": 400,
                                 "color": "#FFE100"
                             },
                             {
@@ -1742,6 +1746,10 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                             },
                             {
                                 "value": 800,
+                                "color": "#039500"
+                            },
+                            {
+                                "value": 900,
                                 "color": "#039500"
                             },
                             {
