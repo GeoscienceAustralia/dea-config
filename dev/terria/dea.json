@@ -556,6 +556,23 @@
                "preserveOrder": true,
                "items": [
                   {
+                     "name": "Daily observations",
+                     "type": "group",
+                     "preserveOrder": true,
+                     "items": [
+                           {
+                              "name": "Water Observations from Space Daily (WOfS Daily Observations)",
+                              "type": "wms",
+                              "layers": "wofs_albers",
+                              "url": "https://ows.services.dea.ga.gov.au/",
+                              "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                              "linkedWcsCoverage": "wofs_albers",
+                              "ignoreUnknownTileErrors": true,
+                              "opacity": 1
+                           }
+                        ]
+                  },
+                  {
                      "name": "Annual Summaries",
                      "type": "group",
                      "preserveOrder": true,
