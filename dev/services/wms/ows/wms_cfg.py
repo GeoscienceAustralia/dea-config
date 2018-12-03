@@ -178,6 +178,7 @@ layer_cfg = [
                     # "url": ""
                     "styles": ["ndvi", "ndwi"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
@@ -475,6 +476,7 @@ layer_cfg = [
                     # "url": ""
                     "styles": ["ndvi", "ndwi"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
@@ -772,6 +774,7 @@ layer_cfg = [
                     # "url": ""
                     "styles": ["ndvi", "ndwi"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
@@ -1095,6 +1098,7 @@ Mosaics are available for the following years:
                     # "url": ""
                     "styles": ["ndvi"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 #
                 # See band_mapper.py
                 #
@@ -1348,6 +1352,7 @@ in some locations dense dwarf/shrub mangroves that are less than 2 metres tall m
                 "legend": {
                     "styles": ["mangrove"]
                 },
+                "wcs_default_bands": ["canopy_cover_class", "extent"],
                 "styles": [
                     {
                         "name": "mangrove",
@@ -1441,6 +1446,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["WOfS_filtered_frequency"]
                 },
+                "wcs_default_bands": ["wofs_filtered_summary"],
                 "styles": [
                     {
                         "name": "WOfS_filtered_frequency",
@@ -1569,6 +1575,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["water_observations"]
                 },
+                "wcs_default_bands": ["count_wet"],
                 "styles": [
                     {
                         "name": "water_observations",
@@ -1684,6 +1691,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["clear_observations"]
                 },
+                "wcs_default_bands": ["count_clear"],
                 "styles": [
                     {
                         "name": "clear_observations",
@@ -1800,6 +1808,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["WOfS_frequency"]
                 },
+                "wcs_default_bands": ["frequency"],
                 "styles": [
                     {
                         "name": "WOfS_frequency",
@@ -1930,6 +1939,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["wofs_confidence"]
                 },
+                "wcs_default_bands": ["confidence"],
                 "styles": [
                     {
                         "name": "wofs_confidence",
@@ -2026,6 +2036,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["annual_water_observations"]
                 },
+                "wcs_default_bands": ["count_wet"],
                 "styles": [
                     {
                         "name": "annual_water_observations",
@@ -2141,6 +2152,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["annual_clear_observations"]
                 },
+                "wcs_default_bands": ["count_clear"],
                 "styles": [
                     {
                         "name": "annual_clear_observations",
@@ -2257,6 +2269,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     # "url": ""
                     "styles": ["annual_WOfS_frequency"]
                 },
+                "wcs_default_bands": ["frequency"],
                 "styles": [
                     {
                         "name": "annual_WOfS_frequency",
@@ -2402,6 +2415,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                 "legend": {
                     "styles": ["water"]
                 },
+                "wcs_default_bands": ["water"],
                 "styles": [
                     {
                         "name": "water",
@@ -2524,6 +2538,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     # "url": ""
                     "styles": ["ndvi", "ndwi", "ndci"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 # Styles.
                 #
                 # See band_mapper.py
@@ -2936,6 +2951,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     # "url": ""
                     "styles": ["ndvi", "ndwi", "ndci"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 # Styles.
                 #
                 # See band_mapper.py
@@ -3346,6 +3362,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/multi-scale-topographic-position/mstp_legend.png",
                     # "styles": ["mstp_rgb"]
                 },
+                "wcs_default_bands": ["regional", "intermediate", "local"],
                 "styles": [
                     {
                         "name": "mstp_rgb",
@@ -3424,6 +3441,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 "legend": {
                     "styles": ["wii"]
                 },
+                "wcs_default_bands": ["intensity"],
                 "styles": [
                     {
                         "name": "wii",
@@ -3495,6 +3513,7 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                 "legend": {
                     "styles": ["green_veg_10"]
                 },
+                "wcs_default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
                 "styles": [
                     {
                         "name": "green_veg_10",
@@ -3616,6 +3635,7 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                 "legend": {
                     "styles": ["non_green_veg_10"]
                 },
+                "wcs_default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
                 "styles": [
                     {
                         "name": "non_green_veg_10",
@@ -3737,6 +3757,7 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                 "legend": {
                     "styles": ["bare_ground_10"]
                 },
+                "wcs_default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
                 "styles": [
                     {
                         "name": "bare_ground_10",
@@ -3858,6 +3879,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "legend": {
                     "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
                 },
+                "wcs_default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
                 "styles": [
                     {
                         "name": "simple_rgb",
@@ -3919,6 +3941,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "legend": {
                     "styles": ["NIDEM"]
                 },
+                "wcs_default_bands": ["nidem"],
                 "styles": [
                     {
                         "name": "NIDEM",
@@ -4131,6 +4154,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                     # "url": ""
                     "styles": ["ndvi", "ndwi"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
@@ -4327,6 +4351,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                     # "url": ""
                     "styles": ["ndvi", "ndwi"]
                 },
+                "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
@@ -4520,6 +4545,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "legend": {
                     "styles": ["relative_layer"]
                 },
+                "wcs_default_bands": ["relative"],
                 "styles": [
                     {
                         "name": "relative_layer",
@@ -4615,6 +4641,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "legend": {
                     "styles": ["confidence_layer"]
                 },
+                "wcs_default_bands": ["stddev"],
                 "styles": [
                     {
                         "name": "confidence_layer",
@@ -4740,6 +4767,7 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "legend": {
                     "styles": []
                 },
+                "wcs_default_bands": ["dam_id"],
                 "styles": [
                     {
                         "name": "dam_id",
