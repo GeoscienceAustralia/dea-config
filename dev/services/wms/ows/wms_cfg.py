@@ -2538,7 +2538,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     # "url": ""
                     "styles": ["ndvi", "ndwi", "ndci"]
                 },
-                "wcs_default_bands": ["red", "green", "blue"],
+                "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
                 #
                 # See band_mapper.py
@@ -2951,7 +2951,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                     # "url": ""
                     "styles": ["ndvi", "ndwi", "ndci"]
                 },
-                "wcs_default_bands": ["red", "green", "blue"],
+                "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
                 #
                 # See band_mapper.py
