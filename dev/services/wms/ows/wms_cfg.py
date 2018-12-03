@@ -12,7 +12,15 @@ service_cfg = {
     # Service title - appears e.g. in Terria catalog
     "title": "Digital Earth Australia - OGC Web Services",
     # Service URL.  Should a fully qualified URL
-    "url": "https://ows.services.dea.ga.gov.au",
+    "url": [
+        "https://ows.services.dea.ga.gov.au",
+        "https://ows.services.devkube.dea.ga.gov.au",
+        "https://nrt.services.dea.ga.gov.au",
+        "https://geomedian.services.dea.ga.gov.au",
+        "https://geomedianau.dea.ga.gov.au",
+        "https://geomedian.dea.ga.gov.au",
+        "https://nrt.dea.ga.gov.au",
+        "https://nrt-au.dea.ga.gov.au"],
     "human_url": "dea.ga.gov.au/",
     # Supported co-ordinate reference systems
     "published_CRSs": {
@@ -1689,60 +1697,48 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "alpha": 0
                             },
                             {
+                                # purely for legend display
+                                # we should not get fractional
+                                # values in this styles
                                 "value": 10,
-                                "color": "#B21800"
-                            },
-                            {
-                                "value": 25,
-                                "color": "#FF4400"
-                            },
-                            {
-                                "value": 50,
-                                "color": "#FF8000"
+                                "color": "#b21800",
+                                "alpha": 1
                             },
                             {
                                 "value": 100,
-                                "color": "#FFA200"
-                            },
-                            {
-                                "value": 150,
-                                "color": "#FFC000"
+                                "color": "#ef8500"
                             },
                             {
                                 "value": 200,
-                                "color": "#FFD500"
-                            },
-                            {
-                                "value": 250,
-                                "color": "#FFF300"
+                                "color": "#ffb800"
                             },
                             {
                                 "value": 300,
-                                "color": "#E6FF00"
-                            },
-                            {
-                                "value": 350,
-                                "color": "#BCFF00"
+                                "color": "#ffd300"
                             },
                             {
                                 "value": 400,
-                                "color": "#89FF00"
+                                "color": "#ffe300"
                             },
                             {
                                 "value": 500,
-                                "color": "#68C400"
+                                "color": "#fff300"
                             },
                             {
                                 "value": 600,
-                                "color": "#44C400"
+                                "color": "#d0f800"
                             },
                             {
                                 "value": 700,
-                                "color": "#03B500"
+                                "color": "#a0fd00"
                             },
                             {
                                 "value": 800,
-                                "color": "#039500"
+                                "color": "#6ee100"
+                            },
+                            {
+                                "value": 901,
+                                "color": "#39a500"
                             },
                             {
                                 "value": 1000,
@@ -2170,40 +2166,36 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                                 "color": "#B21800"
                             },
                             {
-                                "value": 2,
-                                "color": "#FF4400"
-                            },
-                            {
                                 "value": 4,
-                                "color": "#FF8000"
-                            },
-                            {
-                                "value": 6,
-                                "color": "#FFA200"
+                                "color": "#ef8500"
                             },
                             {
                                 "value": 8,
-                                "color": "#FFD500"
+                                "color": "#ffb800"
                             },
                             {
                                 "value": 10,
-                                "color": "#FFF300"
+                                "color": "#ffd000"
                             },
                             {
-                                "value": 12,
-                                "color": "#89FF00"
+                                "value": 13,
+                                "color": "#fff300"
                             },
                             {
-                                "value": 15,
-                                "color": "#44C400"
+                                "value": 16,
+                                "color": "#fff300"
                             },
                             {
                                 "value": 20,
-                                "color": "#03B500"
+                                "color": "#c1ec00"
                             },
                             {
-                                "value": 25,
-                                "color": "#039500"
+                                "value": 24,
+                                "color": "#6ee100"
+                            },
+                            {
+                                "value": 28,
+                                "color": "#39a500"
                             },
                             {
                                 "value": 30,
@@ -2364,7 +2356,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                 #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [200, 180, 180, 160],
