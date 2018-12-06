@@ -18,102 +18,26 @@
          "preserveOrder": true,
          "items": [
             {
-               "name": "GSKY Daily WOFLs Landsat (dev)",
+               "name": "GSKY Daily Sentinel 2 NBART (dev)",
                "type": "wms",
-               "layers": "wofs",
-               "url": "http://130.56.242.16/ows/dea/wofs",
-               "legendUrl": "http://dea-public-data.s3-ap-southeast-2.amazonaws.com/WOfS/WOFLs/v2.1.0/wofs-legend.svg",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/wofs",
-               "linkedWcsCoverage": "wofs",
+               "layers": "SENTINEL2:NBART",
+               "url": "http://130.56.242.16/ows/dea/sentinel2",
+               "linkedWcsUrl": "http://130.56.242.16/ows/dea/sentinel2",
+               "linkedWcsCoverage": "SENTINEL2:NBART",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
-            },
-            {
-               "name": "LS7 NBAR Daily True Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS7:NBAR:TRUE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBAR:TRUE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
-            {
-               "name": "LS7 NBAR Daily False Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS7:NBAR:FALSE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBAR:FALSE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
-            {
-               "name": "LS7 NBART Daily True Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS7:NBART:TRUE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBART:TRUE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
-            {
-               "name": "LS7 NBART Daily False Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS7:NBART:FALSE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS7:NBART:FALSE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
-            {
-               "name": "LS8 NBAR Daily True Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS8:NBAR:TRUE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBAR:TRUE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
-            {
-               "name": "LS8 NBAR Daily False Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS8:NBAR:FALSE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBAR:FALSE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
-            {
-               "name": "LS8 NBART Daily True Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS8:NBART:TRUE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBART:TRUE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
-            {
-               "name": "LS8 NBART Daily False Colour",
-               "type": "wms",
-               "url": "http://130.56.242.16/ows/dea/daily",
-               "layers": "LS8:NBART:FALSE",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/daily",
-               "linkedWcsCoverage": "LS8:NBART:FALSE",
-               "ignoreUnknownTileErrors": true,
-               "opacity": 1
-            },
+            }
          ]
       },
       {
-         "name": "GSKY DEA Production",
+         "name": "GSKY DEA Production (Deprecated)",
          "type": "wms-getCapabilities",
          "url": "https://gsky.nci.org.au/ows"
+      },
+      {
+         "name": "GSKY DEA Production (Upcoming)",
+         "type": "wms-getCapabilities",
+         "url": "http://gsky.nci.org.au/ows/dea"
       },
       {
          "name": "DEA Development",
