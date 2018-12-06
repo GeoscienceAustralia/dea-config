@@ -1444,7 +1444,10 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 "ignore_info_flags": [],
                 "legend": {
                     # "url": ""
-                    "styles": ["WOfS_filtered_frequency"]
+                    "styles": [
+                        "WOfS_filtered_frequency",
+                        "WOfS_filtered_frequency_blues",
+                        "WOfS_filtered_frequency_blues_transparent"]
                 },
                 "wcs_default_bands": ["wofs_filtered_summary"],
                 "styles": [
@@ -1529,7 +1532,97 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                             "scale_by": 100.0,
                             "major_ticks": 0.1
                         }
-                    }
+                    },
+                    {
+                        "name": "WOfS_filtered_frequency_blues",
+                        "title": "Blue on white",
+                        "abstract": "WOfS filtered summary showing the frequency of Wetness",
+                        "needed_bands": ["wofs_filtered_summary"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#ffffff",
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#d5fef9",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#71e3ff"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#01ccff"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#0178ff"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#2701ff"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                    {
+                        "name": "WOfS_filtered_frequency_blues_transparent",
+                        "title": "Blues (transparent)",
+                        "abstract": "WOfS filtered summary showing the frequency of Wetness",
+                        "needed_bands": ["wofs_filtered_summary"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#ffffff",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.001,
+                                "color": "#d5fef9",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#d5fef9",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#71e3ff"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#01ccff"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#0178ff"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#2701ff"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -1806,7 +1899,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 "ignore_info_flags": [],
                 "legend": {
                     # "url": ""
-                    "styles": ["WOfS_frequency"]
+                    "styles": ["WOfS_frequency", "WOfS_frequency_blues", "WOfS_frequency_blues_transparent"]
                 },
                 "wcs_default_bands": ["frequency"],
                 "styles": [
@@ -1879,6 +1972,96 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                             {
                                 "value": 0.9,
                                 "color": "#000fe3"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                    {
+                        "name": "WOfS_frequency_blues",
+                        "title": "Blue on white",
+                        "abstract": "WOfS summary showing the frequency of Wetness",
+                        "needed_bands": ["frequency"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#ffffff",
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#d5fef9",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#71e3ff"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#01ccff"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#0178ff"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#2701ff"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                    {
+                        "name": "WOfS_frequency_blues_transparent",
+                        "title": "Blues (transparent)",
+                        "abstract": "WOfS summary showing the frequency of Wetness",
+                        "needed_bands": ["frequency"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#ffffff",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.001,
+                                "color": "#d5fef9",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#d5fef9",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#71e3ff"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#01ccff"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#0178ff"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#2701ff"
                             },
                             {
                                 "value": 1.0,
@@ -2267,7 +2450,9 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 "ignore_info_flags": [],
                 "legend": {
                     # "url": ""
-                    "styles": ["annual_WOfS_frequency"]
+                    "styles": ["annual_WOfS_frequency",
+                               "annual_WOfS_frequency_blues",
+                               "annual_WOfS_frequency_blues_transparent"]
                 },
                 "wcs_default_bands": ["frequency"],
                 "styles": [
@@ -2328,6 +2513,96 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                             {
                                 "value": 0.9,
                                 "color": "#000fe3"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                    {
+                        "name": "annual_WOfS_frequency_blues",
+                        "title": "Blue on white",
+                        "abstract": "WOfS annual summary showing the frequency of Wetness",
+                        "needed_bands": ["frequency"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#ffffff",
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#d5fef9",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#71e3ff"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#01ccff"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#0178ff"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#2701ff"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                    {
+                        "name": "annual_WOfS_frequency_blues_transparent",
+                        "title": "Blues (transparent)",
+                        "abstract": "WOfS annual summary showing the frequency of Wetness",
+                        "needed_bands": ["frequency"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#ffffff",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.001,
+                                "color": "#d5fef9",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#d5fef9",
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#71e3ff"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#01ccff"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#0178ff"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#2701ff"
                             },
                             {
                                 "value": 1.0,
