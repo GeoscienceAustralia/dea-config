@@ -2560,7 +2560,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                 # The examples here are ad hoc
                 #
                 "legend": {
-                    "styles": ["water"]
+                    "styles": ["water", "wet"]
                 },
                 "wcs_default_bands": ["water"],
                 "styles": [
@@ -2603,6 +2603,26 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                     },
                                     "color": "#D99694"
                                 },
+                                {
+                                    "title": "Wet",
+                                    "abstract": "Wet or Sea",
+                                    "flags": {
+                                      "or": {
+                                        "wet": True,
+                                        "sea": True
+                                      }
+                                    },
+                                    "color": "#4F81BD"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "wet",
+                        "title": "Wet",
+                        "abstract": "Wet",
+                        "value_map": {
+                            "wet": [
                                 {
                                     "title": "Wet",
                                     "abstract": "Wet or Sea",
