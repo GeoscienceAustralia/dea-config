@@ -2636,7 +2636,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                         }
                                     },
                                     "color": "#707070",
-                                    "alpha": 0.0
+                                    "mask": True
                                 },
                                 {
                                     # Possible Sea Glint, also mark as invalid
@@ -2647,7 +2647,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                         "sea": True
                                     },
                                     "color": "#707070",
-                                    "alpha": 0.0
+                                    "mask": True
                                 },
                                 {
                                     "title": "Dry",
@@ -2657,7 +2657,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                         "sea": False,
                                     },
                                     "color": "#D99694",
-                                    "alpha": 0.0
+                                    "mask": True
                                 },
                                 {
                                     "title": "Wet",
