@@ -2560,14 +2560,14 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                 # The examples here are ad hoc
                 #
                 "legend": {
-                    "styles": ["water"]
+                    "styles": ["observations"]
                 },
                 "wcs_default_bands": ["water"],
                 "styles": [
                     {
-                        "name": "water",
-                        "title": "Water",
-                        "abstract": "Water",
+                        "name": "observations",
+                        "title": "Observations",
+                        "abstract": "Observations",
                         "value_map": {
                             "water": [
                                 {
@@ -2619,8 +2619,8 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                     },
                     {
                         "name": "wet",
-                        "title": "Wet",
-                        "abstract": "Wet",
+                        "title": "Wet Only",
+                        "abstract": "Wet Only",
                         "value_map": {
                             "water": [
                                 {
@@ -2644,7 +2644,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
            
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "water",
+                "default_style": "observations",
              }
         ],
     },
