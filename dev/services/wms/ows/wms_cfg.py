@@ -4071,6 +4071,9 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "variant": "25m",
                 "name": "fcp_rgb",
                 "product_name": "fc_percentile_albers_annual",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
@@ -4099,7 +4102,15 @@ This contains a three band combination of the 50th Percentile for green vegetati
                                 "NPV_PC_50": 1.0
                             }
                         },
-                        "scale_range": [0.0, 100.0]
+                        "scale_range": [0.0, 100.0],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                 ],
                 # Default style (if request does not specify style)
