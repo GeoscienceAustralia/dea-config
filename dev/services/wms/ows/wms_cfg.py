@@ -2622,7 +2622,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                         "title": "Wet",
                         "abstract": "Wet",
                         "value_map": {
-                            "wet": [
+                            "water": [
                                 {
                                     "title": "Wet",
                                     "abstract": "Wet or Sea",
