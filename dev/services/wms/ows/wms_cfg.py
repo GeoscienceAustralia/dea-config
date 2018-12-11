@@ -2577,7 +2577,7 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                                         "or": {
                                           "terrain_or_low_angle": True,
                                           "cloud_shadow": True,
-                                          "cloud": True,gi
+                                          "cloud": True,
                                           "high_slope": True,
                                           "noncontiguous": True
                                         }
