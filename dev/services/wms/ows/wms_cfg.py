@@ -2624,6 +2624,42 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                         "value_map": {
                             "water": [
                                 {
+                                    "title": "Invalid",
+                                    "abstract": "Slope or Cloud",
+                                    "flags": {
+                                        "or": {
+                                          "terrain_or_low_angle": True,
+                                          "cloud_shadow": True,
+                                          "cloud": True,
+                                          "high_slope": True,
+                                          "noncontiguous": True
+                                        }
+                                    },
+                                    "color": "#707070",
+                                    "alpha": 0.0
+                                },
+                                {
+                                    # Possible Sea Glint, also mark as invalid
+                                    "title": "",
+                                    "abstract": "",
+                                    "flags": {
+                                        "dry": True,
+                                        "sea": True
+                                    },
+                                    "color": "#707070",
+                                    "alpha": 0.0
+                                },
+                                {
+                                    "title": "Dry",
+                                    "abstract": "Dry",
+                                    "flags": {
+                                        "dry": True,
+                                        "sea": False,
+                                    },
+                                    "color": "#D99694",
+                                    "alpha": 0.0
+                                },
+                                {
                                     "title": "Wet",
                                     "abstract": "Wet or Sea",
                                     "flags": {
