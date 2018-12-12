@@ -3705,6 +3705,9 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                 "variant": "25m",
                 "name": "fcp_green_veg",
                 "product_name": "fc_percentile_albers_annual",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
@@ -3744,7 +3747,15 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                                 'value': 100,
                                 'color': '#006837'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                     {
                         "name": "green_veg_50",
@@ -3772,7 +3783,15 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                                 'value': 100,
                                 'color': '#006837'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                     {
                         "name": "green_veg_90",
@@ -3800,7 +3819,15 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
                                 'value': 100,
                                 'color': '#006837'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -3827,6 +3854,9 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                 "variant": "25m",
                 "name": "fcp_non_green_veg",
                 "product_name": "fc_percentile_albers_annual",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
@@ -3866,7 +3896,15 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                                 'value': 100,
                                 'color': '#993404'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                     {
                         "name": "non_green_veg_50",
@@ -3894,7 +3932,15 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                                 'value': 100,
                                 'color': '#993404'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                     {
                         "name": "non_green_veg_90",
@@ -3922,7 +3968,15 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
                                 'value': 100,
                                 'color': '#993404'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                 ],
                 # Default style (if request does not specify style)
@@ -3949,6 +4003,9 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                 "variant": "25m",
                 "name": "fcp_bare_ground",
                 "product_name": "fc_percentile_albers_annual",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
@@ -3988,7 +4045,15 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                                 'value': 100,
                                 'color': '#7a0177'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                     {
                         "name": "bare_ground_50",
@@ -4016,7 +4081,15 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                                 'value': 100,
                                 'color': '#7a0177'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                     {
                         "name": "bare_ground_90",
@@ -4044,7 +4117,15 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
                                 'value': 100,
                                 'color': '#7a0177'
                             }
-                        ]
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
                     },
                 ],
                 # Default style (if request does not specify style)
