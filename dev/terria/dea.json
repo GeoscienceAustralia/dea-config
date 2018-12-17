@@ -54,17 +54,22 @@
                      "type": "group",
                      "preserveOrder": true,
                      "items": [
-                           {
-                              "name": "Water Observations from Space Daily (WOfS Daily Observations)",
-                              "type": "wms",
-                              "layers": "wofs_albers",
-                              "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                              "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                              "linkedWcsCoverage": "wofs_albers",
-                              "ignoreUnknownTileErrors": true,
-                              "opacity": 1
-                           }
-                        ]
+                        {
+                           "name": "Water Observations from Space Daily (WOfS Daily Observations)",
+                           "type": "wms",
+                           "layers": "wofs_albers",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "wofs_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Water Observations from Space Daily Pixel Drill",
+                           "type": "wps-getCapabilities",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/wps/"
+                        }
+                     ]
                   },
                   {
                      "name": "Annual summaries",
