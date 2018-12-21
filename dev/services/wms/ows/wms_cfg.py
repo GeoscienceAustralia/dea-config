@@ -2504,7 +2504,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
-                "name": "wofs_wofs_apr_oct_summary_wet",
+                "name": "wofs_apr_oct_summary_wet",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_apr_oct_summary",
                 "abstract": """
@@ -2514,7 +2514,7 @@ This product is Water Observations from Space - April to October Statistics, a s
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2538,7 +2538,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     {
                         "name": "seasonal_water_observations",
                         "title": "Wet Count",
-                        "abstract": "WOfS annual summary showing the count of water observations",
+                        "abstract": "WOfS seasonal summary showing the count of water observations",
                         "needed_bands": ["count_wet"],
                         "color_ramp": [
                             {
@@ -2620,17 +2620,17 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
-                "name": "wofs_wofs_apr_oct_summary_clear",
+                "name": "wofs_apr_oct_summary_clear",
                 # The Datacube name for the associated data product
                 "product_name": "wofs_apr_oct_summary",
                 "abstract": """                
-Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+Water Observations from Space - April to October Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
-This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
+This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2743,11 +2743,11 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                 "abstract": """
 Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
-This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
+This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2772,7 +2772,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     {
                         "name": "seasonal_WOfS_frequency",
                         "title": " Water Summary",
-                        "abstract": "WOfS annual summary showing the frequency of Wetness",
+                        "abstract": "WOfS seasonal summary showing the frequency of Wetness",
                         "needed_bands": ["frequency"],
                         "color_ramp": [
                             {
@@ -2842,7 +2842,7 @@ For more information please see: http://dea-public-data.s3-website-ap-southeast-
                     {
                         "name": "seasonal_WOfS_frequency_blues_transparent",
                         "title": "Water Summary (Blue)",
-                        "abstract": "WOfS annual summary showing the frequency of Wetness",
+                        "abstract": "WOfS seasonal summary showing the frequency of Wetness",
                         "needed_bands": ["frequency"],
                         "color_ramp": [
                             {
