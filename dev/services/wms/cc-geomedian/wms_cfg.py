@@ -9,7 +9,11 @@ response_cfg = {
 service_cfg = {
     # Required config
     "title": "WMS server for Cambodia Datacube",
-    "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
+    "url": [
+        "https://cambodiacube.services.dea.ga.gov.au",
+        "https://cambodiacube.services.dea.ga.gov.au"
+    ],
+    "human_url": "https://dea.ga.gov.au/",
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
             "geographic": False,
@@ -18,6 +22,7 @@ service_cfg = {
         },
         "EPSG:4326": {  # WGS-84
             "geographic": True,
+            "vertical_coord_first": True
         },
         "EPSG:3577": {  # GDA-94, internal representation
             "geographic": False,
@@ -56,7 +61,6 @@ service_cfg = {
     },
     "fees": "",
     "access_constraints": "",
-    "preauthenticate_s3": True,
 }
 
 layer_cfg = [
@@ -112,6 +116,7 @@ layer_cfg = [
                 "data_manual_merge": True,
                 "always_fetch_bands": [ ],
                 "apply_solar_corrections": False,
+                "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
                 # If None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
