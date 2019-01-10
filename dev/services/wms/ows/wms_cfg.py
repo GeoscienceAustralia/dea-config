@@ -118,15 +118,7 @@ layer_cfg = [
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Geomedian_AU_NBART",
         "title": "Surface Reflectance",
-        "abstract": "Data is only visible at higher resolutions; when zoomed-out the available area will be displayed "
-                    "as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite "
-                    "mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian "
-                    "image is the statistical median of all observations for that pixel from a calendar year. "
-                    "Annual mosaics are available for the following years: "
-                    "Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; "
-                    "Landsat 7: 2000 to 2017; "
-                    "Landsat 8: 2013 to 2017; "
-                    "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374",
+        "abstract": "",
 
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -140,6 +132,18 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
+                "abstract": """
+Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
+as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
+mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
+image is the statistical median of all observations for that pixel from a calendar year.
+Annual mosaics are available for the following years:
+
+Landsat 8: 2013 to 2017;
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "name": "ls8_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
                 "product_name": "ls8_nbart_geomedian_annual",
@@ -437,6 +441,18 @@ layer_cfg = [
                 "type": "Annual Geomedian",
                 # Included as a keyword  for the layer
                 "variant": "25m",
+                "abstract": """
+Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
+as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
+mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
+image is the statistical median of all observations for that pixel from a calendar year.
+Annual mosaics are available for the following years:
+
+Landsat 7: 2000 to 2017;
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+
+For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
                 "name": "ls7_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
@@ -735,6 +751,18 @@ layer_cfg = [
                 "type": "Annual Geomedian",
                 # Included as a keyword  for the layer
                 "variant": "25m",
+                "abstract": """
+Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
+as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
+mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
+image is the statistical median of all observations for that pixel from a calendar year.
+Annual mosaics are available for the following years:
+
+Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; 
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+
+For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
                 "name": "ls5_nbart_geomedian_annual",
                 # The Datacube name for the associated data product
@@ -5549,7 +5577,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                             " comparison to the modeled tide data for 15 minutes either side of the observation to"
                             " determine the ebb, flow or peak movement of the tide."
                             ""
-                            "Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).",
+                            "Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band)."
+                            "For service status information, see https://status.dea.ga.gov.au",
                 # Included as a keyword  for the layer
                 "type": "Tidal Composite",
                 # Included as a keyword  for the layer
@@ -5767,7 +5796,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "label": "Relative Layer",
                 "abstract": "The Relative Extents Model (item_v2) utilises the tidal information attributed to "
                             "each Landsat observation to indicate the spatial extent of intertidal substratum "
-                            "exposed at percentile intervals of the observed tidal range for the cell.",
+                            "exposed at percentile intervals of the observed tidal range for the cell."
+                            "For service status information, see https://status.dea.ga.gov.au",
                 # Included as a keyword  for the layer
                 "type": "ITEM v2.0.0",
                 # Included as a keyword  for the layer
