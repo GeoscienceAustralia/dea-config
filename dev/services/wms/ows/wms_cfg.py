@@ -1041,7 +1041,8 @@ The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.6
 Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
 
 Mosaics are available for the following years:
-    Landsat 8: 2013 to 2017;""",
+    Landsat 8: 2013 to 2017;
+    """,
         # Link removed until eCat record is "published_external", not "published_internal"
         # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
 
@@ -1064,7 +1065,9 @@ The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.6
 Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
 
 Mosaics are available for the following years:
-    Landsat 8: 2013 to 2017;""",
+    Landsat 8: 2013 to 2017;
+
+For service status information, see https://status.dea.ga.gov.au""",
                 # Link removed until eCat record is "published_external", not "published_internal"
                 # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
 
@@ -1336,7 +1339,9 @@ The mangrove canopy cover version 1 product has the following caveats:
 it underestimates the overall extent of mangroves.
 it doesn’t detect small mangrove communities i.e. smaller estuaries in NSW and Victoria
 that there is localised confusion between mangroves and wooded freshwater wetlands i.e. Melaleuca swamps, and
-in some locations dense dwarf/shrub mangroves that are less than 2 metres tall may be mis-labelled as woodland/open forest/closed forest.""",
+in some locations dense dwarf/shrub mangroves that are less than 2 metres tall may be mis-labelled as woodland/open forest/closed forest.
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
                 "name": "mangrove_cover",
@@ -1426,7 +1431,9 @@ This layer is Filtered Water Summary: A simplified version of the Water Summary,
 
 The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
 
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
@@ -1606,7 +1613,9 @@ This layer contains Wet Count: how many times water was detected in observations
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1722,7 +1731,9 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -1839,7 +1850,9 @@ This layer contains the Water Summary: the percentage of clear observations whic
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2017,7 +2030,9 @@ This layer is Confidence: the degree of agreement between water shown in the Wat
 
 The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
 
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
@@ -2115,7 +2130,9 @@ This product is Water Observations from Space - Annual Statistics, a set of annu
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2231,7 +2248,9 @@ This product is Water Observations from Space - Annual Statistics, a set of annu
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2348,7 +2367,9 @@ This product is Water Observations from Space - Annual Statistics, a set of annu
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf""",
+For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2514,7 +2535,8 @@ This product is Water Observations from Space - April to October Statistics, a s
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2630,7 +2652,8 @@ This product is Water Observations from Space - April to October Statistics, a s
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2747,7 +2770,8 @@ This product is Water Observations from Space - April to October Statistics, a s
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -2913,7 +2937,8 @@ This product is Water Observations from Space - November to March Statistics, a 
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -3029,7 +3054,8 @@ This product is Water Observations from Space - November to March Statistics, a 
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -3146,7 +3172,8 @@ This product is Water Observations from Space - November to March Statistics, a 
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
@@ -3310,7 +3337,9 @@ Water Observations from Space (WOfS) provides surface water observations derived
 
 The WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.
 
-Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relationship with the input satellite data. Hence there is one WOFL for each satellite dataset processed for the occurrence of water. The details of the WOfS algorithm and derived statistics are available at http://dx.doi.org/10.1016/j.rse.2015.11.003.""",
+Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relationship with the input satellite data. Hence there is one WOFL for each satellite dataset processed for the occurrence of water. The details of the WOfS algorithm and derived statistics are available at http://dx.doi.org/10.1016/j.rse.2015.11.003.
+
+For service status information, see https://status.dea.ga.gov.au""",
                 #"pq_band": "water",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
@@ -3506,7 +3535,9 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
                 "abstract":"""
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
-For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
+For more information see http://pid.geoscience.gov.au/dataset/ga/122229
+
+For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
                 "name": "s2b_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
@@ -3919,7 +3950,9 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                 "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
-For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
+For more information see http://pid.geoscience.gov.au/dataset/ga/122229
+
+For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
                 "name": "s2a_nrt_granule_nbar_t",
                 # The Datacube name for the associated data product
@@ -4346,7 +4379,9 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
             have broad application in understanding geomorphological and hydrological processes and in mapping 
             regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
             H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
-            Geomorphology 245, 51–61.""",
+            Geomorphology 245, 51–61.
+            
+            For service status information, see https://status.dea.ga.gov.au""",
                 "type": "1 degree tile",
                 "variant": "",
                 "name": "multi_scale_topographic_position",
@@ -4426,7 +4461,8 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
                             "intensity model has broad utility in assisting mineral exploration in variably weathered "
                             "geochemical landscapes across the Australian continent, mapping chemical and physical "
                             "attributes of soils in agricultural landscapes and in understanding the nature and "
-                            "distribution of weathering processes occurring within the upper regolith.",
+                            "distribution of weathering processes occurring within the upper regolith."
+                            "For service status information, see https://status.dea.ga.gov.au",
                 "type": "1 degree tile",
                 "variant": "",
                 "name": "weathering_intensity",
@@ -4498,7 +4534,8 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229""",
 Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
 This contains a (10th, 50th and 90th percentile) for green vegetation observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
                 "name": "fcp_green_veg",
@@ -4647,7 +4684,8 @@ This contains a (10th, 50th and 90th percentile) for green vegetation observatio
 Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
 This contains a (10th, 50th and 90th percentile) for non-green vegetation observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
                 "name": "fcp_non_green_veg",
@@ -4796,7 +4834,8 @@ This contains a (10th, 50th and 90th percentile) for non-green vegetation observ
 Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
 This contains a (10th, 50th and 90th percentile) for bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
                 "name": "fcp_bare_ground",
@@ -4945,7 +4984,8 @@ This contains a (10th, 50th and 90th percentile) for bare soil observations acqu
 Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
 This contains a three band combination of the 50th Percentile for green vegetation, non green vegetation and bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
                 "name": "fcp_rgb",
@@ -5018,7 +5058,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
                             "NIDEM complements existing intertidal extent products, and provides data to support a "
                             "new suite of use cases that require a more detailed understanding of the three-dimensional "
                             "topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management "
-                            "and ecological habitat mapping.",
+                            "and ecological habitat mapping."
+                            "For service status information, see https://status.dea.ga.gov.au",
                 "type": "grid",
                 "variant": "nidem_v1.0.0",
                 "name": "NIDEM",
@@ -5821,7 +5862,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
                 "label": "Confidence Layer",
                 "abstract": "The Confidence Layer (item_v2_conf) reflects the confidence level of the "
                             "Relative Extents Model, based on the distribution of classification metrics "
-                            "within each of the percentile intervals of the tidal range.",
+                            "within each of the percentile intervals of the tidal range."
+                            "For service status information, see https://status.dea.ga.gov.au",
                 # Included as a keyword  for the layer
                 "type": "ITEM v2.0.0",
                 # Included as a keyword  for the layer
@@ -5942,7 +5984,8 @@ This contains a three band combination of the 50th Percentile for green vegetati
             {
                 # Included as a keyword  for the layer
                 "label": "Water Bodies",
-                "abstract": "NSW Water Bodies Project",
+                "abstract": "NSW Water Bodies Project"
+                            "For service status information, see https://status.dea.ga.gov.au",
                 # Included as a keyword  for the layer
                 "type": "NSW",
                 # Included as a keyword  for the layer
