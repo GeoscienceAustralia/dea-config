@@ -3565,6 +3565,13 @@ This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Ne
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
 
+The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
+The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
+- Influence on the remote sensing signal from nearby land and/or atmospheric effects
+- Optically shallow water
+- Cloud cover
+Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
+
 For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
                 "name": "s2b_nrt_granule_nbar_t",
@@ -3979,6 +3986,13 @@ For service status information, see https://status.dea.ga.gov.au""",
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
+
+The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
+The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
+- Influence on the remote sensing signal from nearby land and/or atmospheric effects
+- Optically shallow water
+- Cloud cover
+Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
 
 For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
