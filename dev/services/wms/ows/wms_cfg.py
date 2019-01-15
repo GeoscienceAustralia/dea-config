@@ -1459,7 +1459,7 @@ This layer is Filtered Water Summary: A simplified version of the Water Summary,
 
 The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
 
@@ -1641,7 +1641,7 @@ This layer contains Wet Count: how many times water was detected in observations
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
@@ -1759,7 +1759,7 @@ This layer contains Clear Count: how many times an area could be clearly seen (i
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
@@ -1878,7 +1878,7 @@ This layer contains the Water Summary: the percentage of clear observations whic
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/summary/v2.1.0/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
@@ -2058,7 +2058,7 @@ This layer is Confidence: the degree of agreement between water shown in the Wat
 
 The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. 
 
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
 
@@ -2158,7 +2158,7 @@ This product is Water Observations from Space - Annual Statistics, a set of annu
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
@@ -2276,7 +2276,7 @@ This product is Water Observations from Space - Annual Statistics, a set of annu
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
@@ -2395,7 +2395,7 @@ This product is Water Observations from Space - Annual Statistics, a set of annu
 The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
-For more information please see: http://dea-public-data.s3-website-ap-southeast-2.amazonaws.com/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/annual_summary/v2.1.5/Product%20Description.pdf
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
@@ -4437,7 +4437,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": ["regional", "intermediate", "local"],
                 "apply_solar_corrections": False,
                 "legend": {
-                    "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/multi-scale-topographic-position/mstp_legend.png",
+                    "url": "https://data.dea.ga.gov.au/multi-scale-topographic-position/mstp_legend.png",
                     # "styles": ["mstp_rgb"]
                 },
                 "wcs_default_bands": ["regional", "intermediate", "local"],
@@ -5044,7 +5044,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": [],
                 "apply_solar_corrections": False,
                 "legend": {
-                    "url": "https://s3-ap-southeast-2.amazonaws.com/dea-public-data/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
                 },
                 "wcs_default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
                 "styles": [
@@ -6044,7 +6044,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "extent_mask_func": lambda data, band: data[band] != 65535,
                 # include links to csv, {dam_id: 2611} becomes ".../026/02611.csv"
                 "feature_info_include_custom": lambda data: {
-                    'timeseries': f"https://dea-public-data.s3-ap-southeast-2.amazonaws.com"
+                    'timeseries': f"https://data.dea.ga.gov.au"
                                   f"/projects/WaterBodies/feature_info/"
                                   f"{data['dam_id']//100:03}/{data['dam_id']:05}.csv"
                 },
