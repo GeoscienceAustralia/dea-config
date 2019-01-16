@@ -8,14 +8,14 @@ metadata:
   statistics:
     period: '1y'
   format:
-    name: GeoTIFF
+    name: NetCDF
   platform:
     code: LANDSAT_5,LANDSAT_7,LANDSAT_8
   instrument:
     name: TM,ETM+,OLI
 
 storage:
-  driver: GeoTIFF
+  driver: NetCDF CF
   crs: EPSG:3577
   tile_size:
     x: 100000.0
@@ -27,46 +27,46 @@ storage:
 
 measurements:
   - name: BS_PC_10
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: PV_PC_10
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: NPV_PC_10
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: BS_PC_50
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: PV_PC_50
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: NPV_PC_50
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: BS_PC_90
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: PV_PC_90
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
 
   - name: NPV_PC_90
-    dtype: uint8
-    nodata: 255
+    dtype: int16
+    nodata: -1
     units: 'percent'
