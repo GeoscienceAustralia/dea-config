@@ -566,6 +566,23 @@
                      }
                   }
                ]
+            },
+            {
+               "name": "Historical Airborne Photography PoC",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Historical Airborne Photography PoC",
+                     "type": "wms",
+                     "layers": "historical_airborne_photography",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "historical_airborne_photography",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  }
+               ]
             }
          ]
       },
@@ -1024,23 +1041,6 @@
                      }
                   }
                ]
-            },
-            {
-               "name": "Historical Airborne Photography PoC",
-               "type": "group",
-               "preserveOrder": true,
-               "items": [
-                  {
-                     "name": "Historical Airborne Photography PoC",
-                     "type": "wms",
-                     "layers": "historical_airborne_photography",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "historical_airborne_photography",
-                     "ignoreUnknownTileErrors": true,
-                     "opacity": 1
-                  }
-               ]
             }
          ]
       },
@@ -1082,7 +1082,7 @@
             {
                "name": "Historical Airborne Photography - Cloncurry frames",
                "type": "geojson",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/frames_geojson.geojson"
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/frames_geojson.geojson",
                "featureInfoTemplate": {
                "formats": {
                      "lat": {
@@ -1092,24 +1092,10 @@
                         "maximumFractionDigits": 5
                      }
                   },
-                  "template": "<img style='width: 100%' src='https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/run{{RUN}}_frame{{PHOTO}}.tif'/></figure> <p/> Download the GeoTIFF products for this polygon here: <p/> <a href='https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/run{{RUN}}_frame{{PHOTO}}.tif'>run{{RUN}}_frame{{PHOTO}}.tif</a><p/><a href='https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/run{{RUN}}_frame{{PHOTO}}.tif'>run{{RUN}}_frame{{PHOTO}}.tif</a>"
+                  "template": "<img style='width: 100%' src='https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/run{{RUN}}_frame{{PHOTO}}.tif'/></figure> <p/> Download the GeoTIFF products for this polygon here: <p/> <a href='https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/run{{RUN}}_frame{{PHOTO}}.tif'>run{{RUN}}_frame{{PHOTO}}.tif</a><p/>"
                }
             }
          ]
       }
-      /*{
-         "name": "Analysis Tools",
-         "type": "group",
-         "preserveOrder": true,
-         "items": [
-            {
-               "name": "Pixel Drill",
-               "url": "https://ows.services.devkube.dea.ga.gov.au/",
-               "type": "wps",
-               "identifier": "pixelDrill",
-               "description": "Coming soon"
-            }
-         ]
-      }*/
    ]
 }
