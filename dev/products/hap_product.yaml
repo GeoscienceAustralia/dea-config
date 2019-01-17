@@ -1,0 +1,15 @@
+name: historical_airborne_photography
+description: Historical Airborne Photography
+metadata_type: eo
+metadata:
+  format:
+    name: GeoTIFF
+  product_type: airborne_photography
+
+measurements:
+- name: 'Band_1'
+  aliases: ['band_01', 'B01', 'Band1']
+  dtype: uint8
+  nodata: 0
+  units: '1'
+
