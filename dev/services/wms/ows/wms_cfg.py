@@ -6083,6 +6083,90 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "dam_id",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "HAP",
+                # Included as a keyword  for the layer
+                "type": "historical airborne photography",
+                # Included as a keyword  for the layer
+                "variant": "munged",
+                # The WMS name for the layer
+                "name": "historical_airborne_photography",
+                # The Datacube name for the associated data product
+                "product_name": "historical_airborne_photography",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 500.0,
+                # Min zoom factor (above) works well for small-tiled requests, (e.g. 256x256 as sent by Terria).
+                # However, for large-tiled requests (e.g. as sent by QGIS), large and intensive queries can still
+                # go through to the datacube.
+                # max_datasets_wms specifies a maximum number of datasets that a GetMap request can retrieve.
+                # Indicatative polygons are displayed if a request exceeds the limits imposed by EITHER max_dataset_wms
+                # OR min_zoom_factor.
+                # max_datasets_wms should be set in conjunction with min_zoom_factor so that Terria style 256x256
+                # tiled requests respond consistently - you never want to see a mixture of photographic tiles and polygon
+                # tiles at a given zoom level.  i.e. max_datasets_wms should be greater than the number of datasets
+                # required for most intensive possible photographic query given the min_zoom_factor.
+                # Note that the ideal value may vary from product to product depending on the size of the dataset
+                # extents for the product.
+                # Defaults to zero, which is interpreted as no dataset limit.
+                # 6 seems to work with a min_zoom_factor of 500.0 for "old-style" Net-CDF albers tiled data.
+                "max_datasets_wms": 6,
+                # max_datasets_wcs is the WCS equivalent of max_datasets_wms.  The main requirement for setting this
+                # value is to avoid gateway timeouts on overly large WCS requests (and reduce server load).
+                "max_datasets_wcs": 16,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+
+                'wcs_default_bands':['Band_1'],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                # LS7:  http://www.indexdatabase.de/db/s-single.php?id=8
+                # LS8:  http://www.indexdatabase.de/db/s-single.php?id=168
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_gray",
+                        "title": "Simple gray",
+                        "abstract": "Simple grayscale image",
+                        "components": {
+                            "red": {
+                                "Band_1": 1.0
+                            },
+                            "green": {
+                                "Band_1": 1.0
+                            },
+                            "blue": {
+                                "Band_1": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 255]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_gray",
             }
         ]
     },
