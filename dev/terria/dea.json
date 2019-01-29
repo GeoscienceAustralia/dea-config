@@ -586,6 +586,73 @@
                      ]
                   },
                   {
+                     "name": "Seasonal summaries",
+                     "type": "group",
+                     "preserveOrder": true,
+                     "items": [
+                        {
+                           "name": "Water Observations from Space 25m Wet Count (WOfs April to October Statistics)",
+                           "type": "wms",
+                           "layers": "wofs_apr_oct_summary_wet",
+                           "url": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Water Observations from Space 25m Clear Count (WOfs April to October Statistics)",
+                           "type": "wms",
+                           "layers": "wofs_apr_oct_summary_clear",
+                           "url": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Water Observations from Space 25m Summary (WOfs April to October Statistics)",
+                           "type": "wms",
+                           "layers": "wofs_apr_oct_summary_statistics",
+                           "url": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Water Observations from Space 25m Wet Count (WOfs November to March Statistics)",
+                           "type": "wms",
+                           "layers": "wofs_nov_mar_summary_wet",
+                           "url": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Water Observations from Space 25m Clear Count (WOfs November to March Statistics)",
+                           "type": "wms",
+                           "layers": "wofs_nov_mar_summary_clear",
+                           "url": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Water Observations from Space 25m Summary (WOfs November to March Statistics)",
+                           "type": "wms",
+                           "layers": "wofs_nov_mar_summary_statistics",
+                           "url": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        }
+                     ]
+                  },
+                  {
                      "name": "Annual Summaries",
                      "type": "group",
                      "preserveOrder": true,
