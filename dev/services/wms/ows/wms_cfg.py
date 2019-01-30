@@ -5163,8 +5163,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 'value': -2.51,
-                                'color': '#440154',
-                                'alpha': 0
+                                'color': '#440154'
                             },
                             {
 
