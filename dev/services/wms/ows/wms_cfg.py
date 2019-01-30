@@ -4573,9 +4573,12 @@ For service status information, see https://status.dea.ga.gov.au""",
             {
                 "label": "Fractional Cover Percentiles - Green Vegetation",
                 "abstract": """
-Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
 This contains a (10th, 50th and 90th percentile) for green vegetation observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This masking may cause some areas to contain Fractional Cover Percentiles data for a certain year but not another.
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
@@ -4606,23 +4609,28 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#ffffcc'
+                                'color': '#ffffcc',
+                                'legend': {}
                             },
                             {
                                 'value': 25,
-                                'color': '#c2e699'
+                                'color': '#c2e699',
+                                'legend': {}
                             },
                             {
                                 'value': 50,
-                                'color': '#78c679'
+                                'color': '#78c679',
+                                'legend': {}
                             },
                             {
                                 'value': 75,
-                                'color': '#31a354'
+                                'color': '#31a354',
+                                'legend': {}
                             },
                             {
                                 'value': 100,
-                                'color': '#006837'
+                                'color': '#006837',
+                                'legend': {}
                             }
                         ],
                         "pq_masks": [
@@ -4633,6 +4641,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "invert": True,
                             },
                         ],
+                        "legend": {
+                            "units": "%",
+                            "title": "Proportion of Pixel: Green Vegetation"
+                        }
                     },
                     {
                         "name": "green_veg_50",
@@ -4723,9 +4735,12 @@ For service status information, see https://status.dea.ga.gov.au""",
             {
                 "label": "Fractional Cover Percentiles - Non Green Vegetation",
                 "abstract": """
-Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
 This contains a (10th, 50th and 90th percentile) for non-green vegetation observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This masking may cause some areas to contain Fractional Cover Percentiles data for a certain year but not another.
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
@@ -4756,23 +4771,28 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#ffffd4'
+                                'color': '#ffffd4',
+                                'legend': {}
                             },
                             {
                                 'value': 25,
-                                'color': '#fed98e'
+                                'color': '#fed98e',
+                                'legend': {}
                             },
                             {
                                 'value': 50,
-                                'color': '#fe9929'
+                                'color': '#fe9929',
+                                'legend': {}
                             },
                             {
                                 'value': 75,
-                                'color': '#d95f0e'
+                                'color': '#d95f0e',
+                                'legend': {}
                             },
                             {
                                 'value': 100,
-                                'color': '#993404'
+                                'color': '#993404',
+                                'legend': {}
                             }
                         ],
                         "pq_masks": [
@@ -4783,6 +4803,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "invert": True,
                             },
                         ],
+                        "legend": {
+                            "units": "%",
+                            "title": "Proportion of Pixel: Non-Green Vegetation"
+                        }
                     },
                     {
                         "name": "non_green_veg_50",
@@ -4873,9 +4897,12 @@ For service status information, see https://status.dea.ga.gov.au""",
             {
                 "label": "Fractional Cover Percentiles - Bare Soil",
                 "abstract": """
-Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
 This contains a (10th, 50th and 90th percentile) for bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This masking may cause some areas to contain Fractional Cover Percentiles data for a certain year but not another.
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
@@ -4906,23 +4933,28 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 'value': 0,
-                                'color': '#feebe2'
+                                'color': '#feebe2',
+                                'legend': {}
                             },
                             {
                                 'value': 25,
-                                'color': '#fbb4b9'
+                                'color': '#fbb4b9',
+                                'legend': {}
                             },
                             {
                                 'value': 50,
-                                'color': '#f768a1'
+                                'color': '#f768a1',
+                                'legend': {}
                             },
                             {
                                 'value': 75,
-                                'color': '#c51b8a'
+                                'color': '#c51b8a',
+                                'legend': {}
                             },
                             {
                                 'value': 100,
-                                'color': '#7a0177'
+                                'color': '#7a0177',
+                                'legend': {}
                             }
                         ],
                         "pq_masks": [
@@ -4933,6 +4965,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "invert": True,
                             },
                         ],
+                        "legend": {
+                            "units": "%",
+                            "title": "Proportion of Pixel: Bare Soil"
+                        }
                     },
                     {
                         "name": "bare_ground_50",
@@ -5023,7 +5059,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             {
                 "label": "Fractional Cover Percentiles - Median",
                 "abstract": """
-Fractional Cover Percentiles version 2.0.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover.  For example the 90th percentile of bare soil for a particular year will identify areas that have experienced a high portion of bare soil during that year.  The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
 This contains a three band combination of the 50th Percentile for green vegetation, non green vegetation and bare soil observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
 
