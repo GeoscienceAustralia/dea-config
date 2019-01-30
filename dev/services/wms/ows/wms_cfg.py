@@ -4643,7 +4643,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         ],
                         "legend": {
                             "units": "%",
-                            "title": "Green Vegetation Proportion"
+                            "title": "Proportion of Pixel: Green Vegetation"
                         }
                     },
                     {
@@ -4805,7 +4805,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         ],
                         "legend": {
                             "units": "%",
-                            "title": "Non-Green Vegetation Proportion"
+                            "title": "Proportion of Pixel: Non-Green Vegetation"
                         }
                     },
                     {
@@ -4967,7 +4967,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         ],
                         "legend": {
                             "units": "%",
-                            "title": "Bare Soil Proportion"
+                            "title": "Proportion of Pixel: Bare Soil"
                         }
                     },
                     {
