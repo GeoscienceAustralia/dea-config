@@ -4168,7 +4168,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#1696FF",
-                                "alpha": 0,
                                 "legend": {
                                     "prefix" : "<"
                                 }
