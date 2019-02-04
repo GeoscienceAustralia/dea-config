@@ -1123,7 +1123,7 @@
                "type": "geojson",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/frames_geojson.geojson",
                "featureInfoTemplate": {
-               "formats": {
+                  "formats": {
                      "lat": {
                         "maximumFractionDigits": 5
                      },
