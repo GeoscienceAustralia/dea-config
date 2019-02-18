@@ -561,34 +561,6 @@
                ]
             },
             {
-               "name": "NSW Water Bodies Project",
-               "type": "group",
-               "preserveOrder": true,
-               "items": [
-                  {
-                     "name": "NSW Water Bodies Project",
-                     "type": "wms",
-                     "layers": "water_bodies",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "water_bodies",
-                     "ignoreUnknownTileErrors": true,
-                     "opacity": 1,
-                     "featureInfoTemplate": {
-                        "formats": {
-                           "lat": {
-                              "maximumFractionDigits": 5
-                           },
-                           "lon": {
-                              "maximumFractionDigits": 5
-                           }
-                        },
-                        "template": "<div style='width:600px'><h3>Water Body Identifier: {{bands.dam_id}}</h3><br/><chart id='{{bands.dam_id}}' title='Water Body {{bands.dam_id}}' preview-x-label='Water Observed' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage,Pixel Count' column-units='Date,%,#'></chart></div>"
-                     }
-                  }
-               ]
-            },
-            {
                "name": "Historical Airborne Photography PoC",
                "type": "group",
                "preserveOrder": true,
