@@ -6501,6 +6501,65 @@ For service status information, see https://status.dea.ga.gov.au""",
         ]
     },
     {
+        # Included as a keyword  for the layer
+        "label": "Water Bodies",
+        "abstract": "NSW Water Bodies Project"
+                    "For service status information, see https://status.dea.ga.gov.au",
+        # Included as a keyword  for the layer
+        "type": "NSW",
+        # Included as a keyword  for the layer
+        "variant": "25m",
+        # The WMS name for the layer
+        "name": "water_bodies",
+        # The Datacube name for the associated data product
+        "product_name": "water_bodies",
+        "min_zoom_factor": 15.0,
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
+        "time_zone": 9,
+        "extent_mask_func": lambda data, band: data[band] != 65535,
+        # include links to csv, {dam_id: 2611} becomes ".../026/02611.csv"
+        "feature_info_include_custom": lambda data: {
+            'timeseries': f"https://data.dea.ga.gov.au"
+            f"/projects/WaterBodies/feature_info/"
+            f"{data['dam_id'] // 100:03}/{data['dam_id']:05}.csv"
+        },
+        "ignore_info_flags": [],
+        "data_manual_merge": False,
+        "always_fetch_bands": ["dam_id"],
+        "apply_solar_corrections": False,
+        "legend": {
+            "styles": []
+        },
+        "wcs_default_bands": ["dam_id"],
+        "styles": [
+            {
+                "name": "dam_id",
+                "title": "Water Body",
+                "abstract": "",
+                "needed_bands": ["dam_id"],
+                "color_ramp": [
+                    {
+                        'value': 0,
+                        'color': '#11ccff',
+                        'alpha': 1.0
+                    },
+                    {
+                        'value': 65534,
+                        'color': '#11ccff',
+                        'alpha': 1.0
+                    },
+                ],
+                "legend": {
+                }
+            },
+        ],
+        # Default style (if request does not specify style)
+        # MUST be defined in the styles list above.
+        # (Looks like Terria assumes this is the first style in the list, but this is
+        #  not required by the standard.)
+        "default_style": "dam_id",
+    },
+    {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "water_bodies",
