@@ -6,7 +6,7 @@ metadata_type: eo
 metadata:
   product_type: fractional_cover_seasonal_summary
   statistics:
-    period: '1y'
+    period: '3m'
   format:
     name: GeoTIFF
   platform:
