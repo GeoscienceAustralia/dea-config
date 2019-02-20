@@ -6558,7 +6558,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # (Looks like Terria assumes this is the first style in the list, but this is
         #  not required by the standard.)
         "default_style": "dam_id",
-    }
+    },
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
