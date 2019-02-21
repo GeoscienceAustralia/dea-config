@@ -5552,6 +5552,570 @@ For service status information, see https://status.dea.ga.gov.au""",
         ]
     },
     {
+        "name": "fcp_seasonal_green_veg",
+        "title": "Fractional Cover Percentiles Seasonal",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Green Vegetation",
+                "abstract": """
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
+ FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
+For service status information, see https://status.dea.ga.gov.au""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_seasonal_green_veg",
+                "product_name": "fc_percentile_albers_seasonal",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [ ],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["green_veg_10"]
+                },
+                "wcs_default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
+                "styles": [
+                    {
+                        "name": "green_veg_10",
+                        "title": "10th Percentile",
+                        "abstract": "10th Percentile of Green Vegetation",
+                        "needed_bands": ["PV_PC_10"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffcc',
+                                'legend': {}
+                            },
+                            {
+                                'value': 25,
+                                'color': '#c2e699',
+                                'legend': {}
+                            },
+                            {
+                                'value': 50,
+                                'color': '#78c679',
+                                'legend': {}
+                            },
+                            {
+                                'value': 75,
+                                'color': '#31a354',
+                                'legend': {}
+                            },
+                            {
+                                'value': 100,
+                                'color': '#006837',
+                                'legend': {}
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                        "legend": {
+                            "units": "% / pixel",
+                            "title": "Percentage of Pixel that is Green Vegetation",
+                            "rcParams": {
+                                "font.size": 9
+                            }
+                        }
+                    },
+                    {
+                        "name": "green_veg_50",
+                        "title": "50th Percentile",
+                        "abstract": "50th Percentile of Green Vegetation",
+                        "needed_bands": ["PV_PC_50"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffcc'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#c2e699'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#78c679'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#31a354'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#006837'
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                    },
+                    {
+                        "name": "green_veg_90",
+                        "title": "90th Percentile",
+                        "abstract": "90th Percentile of Green Vegetation",
+                        "needed_bands": ["PV_PC_90"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffcc'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#c2e699'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#78c679'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#31a354'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#006837'
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "green_veg_10",
+            },
+        ]
+    },
+    {
+        "name": "fcp_seasonal_non_green_veg",
+        "title": "Fractional Cover Percentiles Seasonal",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Non Green Vegetation",
+                "abstract": """
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
+ FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
+For service status information, see https://status.dea.ga.gov.au""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_seasonal_non_green_veg",
+                "product_name": "fc_percentile_albers_seasonal",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["non_green_veg_10"]
+                },
+                "wcs_default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
+                "styles": [
+                    {
+                        "name": "non_green_veg_10",
+                        "title": "10th Percentile",
+                        "abstract": "10th Percentile of Non Green Vegetation",
+                        "needed_bands": ["NPV_PC_10"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffd4',
+                                'legend': {}
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fed98e',
+                                'legend': {}
+                            },
+                            {
+                                'value': 50,
+                                'color': '#fe9929',
+                                'legend': {}
+                            },
+                            {
+                                'value': 75,
+                                'color': '#d95f0e',
+                                'legend': {}
+                            },
+                            {
+                                'value': 100,
+                                'color': '#993404',
+                                'legend': {}
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                        "legend": {
+                            "units": "% / pixel",
+                            "title": "Percentage of Pixel that is Non-Green Vegetation",
+                            "rcParams": {
+                                "font.size": 9
+                            }
+                        }
+                    },
+                    {
+                        "name": "non_green_veg_50",
+                        "title": "50th Percentile",
+                        "abstract": "50th Percentile of Non Green Vegetation",
+                        "needed_bands": ["NPV_PC_50"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffd4'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fed98e'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#fe9929'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#d95f0e'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#993404'
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                    },
+                    {
+                        "name": "non_green_veg_90",
+                        "title": "90th Percentile",
+                        "abstract": "90th Percentile of Non Green Vegetation",
+                        "needed_bands": ["NPV_PC_90"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#ffffd4'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fed98e'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#fe9929'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#d95f0e'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#993404'
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "non_green_veg_10",
+            },
+        ]
+    },
+    {
+        "name": "fcp_seasonal_bare_soil",
+        "title": "Fractional Cover Percentiles Seasonal",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Bare Soil",
+                "abstract": """
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time.  The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
+FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
+For service status information, see https://status.dea.ga.gov.au""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_bare_ground",
+                "product_name": "fc_percentile_albers_seasonal",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": ["bare_ground_10"]
+                },
+                "wcs_default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
+                "styles": [
+                    {
+                        "name": "bare_ground_10",
+                        "title": "10th Percentile",
+                        "abstract": "10th Percentile of Bare Soil",
+                        "needed_bands": ["BS_PC_10"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#feebe2',
+                                'legend': {}
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fbb4b9',
+                                'legend': {}
+                            },
+                            {
+                                'value': 50,
+                                'color': '#f768a1',
+                                'legend': {}
+                            },
+                            {
+                                'value': 75,
+                                'color': '#c51b8a',
+                                'legend': {}
+                            },
+                            {
+                                'value': 100,
+                                'color': '#7a0177',
+                                'legend': {}
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                        "legend": {
+                            "units": "% / pixel",
+                            "title": "Percentage of Pixel that is Bare Soil",
+                            "rcParams": {
+                                "font.size": 9
+                            }
+                        }
+                    },
+                    {
+                        "name": "bare_ground_50",
+                        "title": "50th Percentile",
+                        "abstract": "50th Percentile of Bare Soil",
+                        "needed_bands": ["BS_PC_50"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#feebe2'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fbb4b9'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#f768a1'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#c51b8a'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#7a0177'
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                    },
+                    {
+                        "name": "bare_ground_90",
+                        "title": "90th Percentile",
+                        "abstract": "90th Percentile of Bare Soil",
+                        "needed_bands": ["BS_PC_90"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#feebe2'
+                            },
+                            {
+                                'value': 25,
+                                'color': '#fbb4b9'
+                            },
+                            {
+                                'value': 50,
+                                'color': '#f768a1'
+                            },
+                            {
+                                'value': 75,
+                                'color': '#c51b8a'
+                            },
+                            {
+                                'value': 100,
+                                'color': '#7a0177'
+                            }
+                        ],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "bare_ground_10",
+            },
+        ]
+    },
+    {
+        "name": "fcp_rgb",
+        "title": "Fractional Cover Percentiles Seasonal",
+        "abstract": "",
+        "products": [
+            {
+                "label": "Median",
+                "abstract": """
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
+
+ FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
+For service status information, see https://status.dea.ga.gov.au""",
+                "type": "100km tile",
+                "variant": "25m",
+                "name": "fcp_rgb",
+                "product_name": "fc_percentile_albers_seasonal",
+                "pq_dataset": "geodata_coast_100k",
+                "pq_band": "land",
+                "pq_ignore_time": True,
+                "min_zoom_factor": 15.0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != data[band].nodata,
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+                },
+                "wcs_default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
+                "styles": [
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "BS_PC_50": 1.0
+                            },
+                            "green": {
+                                "PV_PC_50": 1.0
+                            },
+                            "blue": {
+                                "NPV_PC_50": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 100.0],
+                        "pq_masks": [
+                            {
+                                "flags": {
+                                    'sea': True,
+                                },
+                                "invert": True,
+                            },
+                        ],
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },
+        ]
+    },
+    {
         "name": "nidem",
         "title": "National Intertidal Digital Elevation Model",
         "abstract": "",
