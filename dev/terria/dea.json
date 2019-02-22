@@ -42,7 +42,7 @@
       {
          "name": "Thredds WMS - (Davecube)",
          "type": "wms-getCapabilities",
-         "url": "https://dave.services.dea.ga.gov.au/"
+         "url": "https://dave.services.devkube.dea.ga.gov.au"
       },
       {
          "name": "DEA Development",
