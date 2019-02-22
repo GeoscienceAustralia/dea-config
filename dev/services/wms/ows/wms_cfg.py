@@ -5551,8 +5551,8 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         ]
     },
-{
-        "name": "fcp_seasonal_green_veg",
+    {
+        "name": "fcp_seasonal",
         "title": "Fractional Cover Percentiles Seasonal",
         "abstract": "",
         "products": [
@@ -5714,13 +5714,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 #  not required by the standard.)
                 "default_style": "green_veg_10",
             },
-        ]
-    },
-    {
-        "name": "fcp_seasonal_non_green_veg",
-        "title": "Fractional Cover Percentiles Seasonal",
-        "abstract": "",
-        "products": [
             {
                 "label": "Non Green Vegetation",
                 "abstract": """
@@ -5879,13 +5872,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 #  not required by the standard.)
                 "default_style": "non_green_veg_10",
             },
-        ]
-    },
-    {
-        "name": "fcp_seasonal_bare_soil",
-        "title": "Fractional Cover Percentiles Seasonal",
-        "abstract": "",
-        "products": [
             {
                 "label": "Bare Soil",
                 "abstract": """
@@ -5898,7 +5884,7 @@ Fractional Cover products use Water Observations from Space (WOfS) to mask out a
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
-                "name": "fcp_bare_ground",
+                "name": "fcp_seasonal_bare_ground",
                 "product_name": "fc_percentile_albers_seasonal",
                 "pq_dataset": "geodata_coast_100k",
                 "pq_band": "land",
@@ -6043,13 +6029,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 #  not required by the standard.)
                 "default_style": "bare_ground_10",
             },
-        ]
-    },
-    {
-        "name": "fcp_rgb",
-        "title": "Fractional Cover Percentiles Seasonal",
-        "abstract": "",
-        "products": [
             {
                 "label": "Median",
                 "abstract": """
@@ -6063,7 +6042,7 @@ Fractional Cover products use Water Observations from Space (WOfS) to mask out a
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
-                "name": "fcp_rgb",
+                "name": "fcp_seasonal_rgb",
                 "product_name": "fc_percentile_albers_seasonal",
                 "pq_dataset": "geodata_coast_100k",
                 "pq_band": "land",
