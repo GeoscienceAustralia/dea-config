@@ -40,6 +40,11 @@
          "url": "http://gsky.nci.org.au/ows/dea"
       },
       {
+         "name": "Thredds WMS - (Davecube)",
+         "type": "wms-getCapabilities",
+         "url": "https://dave.services.dea.ga.gov.au/"
+      },
+      {
          "name": "DEA Development",
          "type": "group",
          "preserveOrder": true,
