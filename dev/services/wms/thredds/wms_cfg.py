@@ -286,21 +286,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 "value": -1.0,
-                                "color": "#ce2e0e"
+                                "color": "#d81e11"
                             },
                             {
                                 "value": -0.2,
-                                "color": "#ce2e0e",
+                                "color": "#d81e11",
                             },
                             {
-                                "value": -0.0,
-                                "color": "#ce2e0e",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 1,
-                                "color": "#ce2e0e",
-                                "alpha": 0.0
+                                "value": -0.19999999,
+                                "color": "#d81e11",
+                                "alpha": 0.0,
+                                'legend': {
+                                    'label': '> -0.2'
+                                }
                             }
                         ]
 
@@ -735,21 +733,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 "value": -1.0,
-                                "color": "#ce2e0e"
+                                "color": "#d81e11"
                             },
                             {
                                 "value": -0.2,
-                                "color": "#ce2e0e",
+                                "color": "#d81e11",
                             },
                             {
-                                "value": -0.0,
-                                "color": "#ce2e0e",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 1,
-                                "color": "#ce2e0e",
-                                "alpha": 0.0
+                                "value": -0.19999999,
+                                "color": "#d81e11",
+                                "alpha": 0.0,
+                                'legend': {
+                                    'label': '> -0.2'
+                                }
                             }
                         ]
 
@@ -1185,21 +1181,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 "value": -1.0,
-                                "color": "#ce2e0e"
+                                "color": "#d81e11"
                             },
                             {
                                 "value": -0.2,
-                                "color": "#ce2e0e",
+                                "color": "#d81e11",
                             },
                             {
-                                "value": -0.0,
-                                "color": "#ce2e0e",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 1,
-                                "color": "#ce2e0e",
-                                "alpha": 0.0
+                                "value": -0.19999999,
+                                "color": "#d81e11",
+                                "alpha": 0.0,
+                                'legend': {
+                                    'label': '> -0.2'
+                                }
                             }
                         ]
 
