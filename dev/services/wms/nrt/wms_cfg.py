@@ -374,6 +374,15 @@ layer_cfg = [
                         "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
                         "range": [0.0, 1.0],
                     },
+                    {
+                        "name": "nbr",
+                        "title": "NBR",
+                        "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995).",
+                        "heat_mapped": True,
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
+                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
+                        "range": [0.0, 1.0],
+                    },
                     # Mask layers - examples of how to display raw pixel quality data.
                     # This works by creatively mis-using the Heatmap style class.
                     # Hybrid style - mixes a linear mapping and a heat mapped index
@@ -706,6 +715,15 @@ layer_cfg = [
                         "abstract": "Normalised Difference Buildup Index - a derived index that correlates with the existence of urbanisation",
                         "heat_mapped": True,
                         "index_function": lambda data: (data["nbart_swir_3"] - data["nbart_nir_1"]) / (data["nbart_swir_3"] + data["nbart_nir_1"]),
+                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
+                        "range": [0.0, 1.0],
+                    },
+                    {
+                        "name": "nbr",
+                        "title": "NBR",
+                        "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995).",
+                        "heat_mapped": True,
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
                         "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
                         "range": [0.0, 1.0],
                     },
@@ -1045,6 +1063,15 @@ layer_cfg = [
                         "heat_mapped": True,
                         "index_function": lambda data: (data["nbart_swir_3"] - data["nbart_nir_1"]) / (
                                     data["nbart_swir_3"] + data["nbart_nir_1"]),
+                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
+                        "range": [0.0, 1.0],
+                    },
+                    {
+                        "name": "nbr",
+                        "title": "NBR",
+                        "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995).",
+                        "heat_mapped": True,
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
                         "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
                         "range": [0.0, 1.0],
                     },
