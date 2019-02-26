@@ -281,21 +281,26 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "nbr",
                         "title": "NBR",
                         "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995)",
-                        "index_function": lambda data: -1 * ((data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"])),
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
                         "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
                         "color_ramp": [
                             {
+                                "value": -1.0,
+                                "color": "#ce2e0e"
+                            },
+                            {
+                                "value": -0.2,
+                                "color": "#ce2e0e",
+                            },
+                            {
                                 "value": -0.0,
-                                "color": "#f48653",
+                                "color": "#ce2e0e",
                                 "alpha": 0.0
                             },
                             {
-                                "value": 0.0,
-                                "color": "#f48653"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#ce2e0e"
+                                "value": 1,
+                                "color": "#ce2e0e",
+                                "alpha": 0.0
                             }
                         ]
 
@@ -725,21 +730,26 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "nbr",
                         "title": "NBR",
                         "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995)",
-                        "index_function": lambda data: -1 * ((data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"])),
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
                         "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
                         "color_ramp": [
                             {
+                                "value": -1.0,
+                                "color": "#ce2e0e"
+                            },
+                            {
+                                "value": -0.2,
+                                "color": "#ce2e0e",
+                            },
+                            {
                                 "value": -0.0,
-                                "color": "#f48653",
+                                "color": "#ce2e0e",
                                 "alpha": 0.0
                             },
                             {
-                                "value": 0.0,
-                                "color": "#f48653"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#ce2e0e"
+                                "value": 1,
+                                "color": "#ce2e0e",
+                                "alpha": 0.0
                             }
                         ]
 
@@ -1170,21 +1180,26 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "nbr",
                         "title": "NBR",
                         "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995)",
-                        "index_function": lambda data: -1 * ((data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"])),
+                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
                         "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
                         "color_ramp": [
                             {
+                                "value": -1.0,
+                                "color": "#ce2e0e"
+                            },
+                            {
+                                "value": -0.2,
+                                "color": "#ce2e0e",
+                            },
+                            {
                                 "value": -0.0,
-                                "color": "#f48653",
+                                "color": "#ce2e0e",
                                 "alpha": 0.0
                             },
                             {
-                                "value": 0.0,
-                                "color": "#f48653"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#ce2e0e"
+                                "value": 1,
+                                "color": "#ce2e0e",
+                                "alpha": 0.0
                             }
                         ]
 
