@@ -1,0 +1,32 @@
+description: ASTER
+measurements:
+- aliases:
+  - band_01
+  - B01
+  - Band1
+  dtype: uint8
+  name: Band_1
+  nodata: 0
+  units: '1'
+- aliases:
+  - band_02
+  - B02
+  - Band2
+  dtype: uint8
+  name: Band_2
+  nodata: 0
+  units: '1'
+- aliases:
+  - band_03
+  - B03
+  - Band3
+  dtype: uint8
+  name: Band_3
+  nodata: 0
+  units: '1'
+metadata:
+  format:
+    name: GeoTIFF
+  product_type: aster_false_colour
+metadata_type: eo
+name: aster_false_colour
