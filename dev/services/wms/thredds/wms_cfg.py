@@ -286,7 +286,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 "value": -1.0,
-                                "color": "#d81e11"
+                                "color": "#d81e11",
                                 "legend": {}
                             },
                             {
@@ -739,7 +739,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 "value": -1.0,
-                                "color": "#d81e11"
+                                "color": "#d81e11",
                                 "legend": {}
                             },
                             {
@@ -1193,7 +1193,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 "value": -1.0,
-                                "color": "#d81e11"
+                                "color": "#d81e11",
                                 "legend": {}
                             },
                             {
