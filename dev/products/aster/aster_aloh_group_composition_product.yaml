@@ -1,0 +1,16 @@
+description: ASTER
+measurements:
+- aliases:
+  - band_01
+  - B01
+  - Band1
+  dtype: uint8
+  name: Band_1
+  nodata: 0
+  units: '1'
+metadata:
+  format:
+    name: GeoTIFF
+  product_type: aster_aloh_group_composition
+metadata_type: eo
+name: aster_aloh_group_composition

@@ -7198,5 +7198,2090 @@ For service status information, see https://status.dea.ga.gov.au""",
             }
         ]
     },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "National ASTER Map",
+        "title": "National ASTER Map of Australia",
+        "abstract": """
+This datset comprises a set of 14+ geoscience products made up of mosaiced ASTER scenes across Australia.  The individual geoscience products are a compbination of bands and band ratios to highlight different mineral groups and parameters including:
+False colour composite
+CSIRO Landsat TM Regolith Ratios
+Green vegetation content
+Ferric oxide content
+Ferric oxide composition
+Ferrous iron index
+Opaque index
+AlOH group content
+AlOH group composition
+Kaolin group index
+FeOH group content
+MgOH group content
+MgOH group composition
+Ferrous iron content in MgOH/carbonate""",
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "False Colour Mosaic",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+Use this image to help understand non-geological differences within and between ASTER scenes caused by green
+vegetation (red), fire scars, thin and thick cloud and cloud shadows. Use band 2 only for a gray-scale background to the content,
+composition and index colour products.""",
+                # The WMS name for the layer
+                "name": "aster_false_colour",
+                # The Datacube name for the associated data product
+                "product_name": "aster_false_colour",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "wcs_default_bands": ["Band_1", "Band_2", "Band_3"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "false_colour",
+                        "title": "False Colour",
+                        "abstract": "Simple false-colour image using ASTER Bands 3 as red, 2 as green and 1 as blue",
+                        "components": {
+                            "red": {
+                                "Band_1": 1.0
+                            },
+                            "green": {
+                                "Band_2": 1.0
+                            },
+                            "blue": {
+                                "Band_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 255.0]
+                    },
+                    {
+                        "name": "gray",
+                        "title": "B2 Grayscale",
+                        "abstract": "Simple grayscale image using ASTER Band 2",
+                        "components": {
+                            "red": {
+                                "Band_2": 1.0
+                            },
+                            "green": {
+                                "Band_2": 1.0
+                            },
+                            "blue": {
+                                "Band_2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 255.0]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "false_colour",
+            },  # ASTER False Colour
+            {
+                # Included as a keyword  for the layer
+                "label": "Regolith Ratios",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+Use this image to help interpret (1) the amount of green vegetation cover (appears as white); (2) basic spectral separation (colour) between different regolith and geological units and regions/provinces; and (3) evidence for unmasked cloud (appears as green).""",
+                # The WMS name for the layer
+                "name": "aster_regolith_ratios",
+                # The Datacube name for the associated data product
+                "product_name": "aster_regolith_ratios",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "wcs_default_bands": ["Band_1", "Band_2", "Band_3"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "Band_1": 1.0
+                            },
+                            "green": {
+                                "Band_2": 1.0
+                            },
+                            "blue": {
+                                "Band_3": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 255.0]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+            },  # ASTER Regolith Ratios
+            {
+                # Included as a keyword  for the layer
+                "label": "AlOH Group Composition",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B5/B7
+
+Blue is well ordered kaolinite, Al-rich muscovite/illite, paragonite, pyrophyllite 
+
+Red is Al-poor (Si-rich) muscovite (phengite)""",
+                # The WMS name for the layer
+                "name": "aster_aloh_group_composition",
+                # The Datacube name for the associated data product
+                "product_name": "aster_aloh_group_composition",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER AlOH Group Composition
+            {
+                # Included as a keyword  for the layer
+                "label": "AlOH Group Content",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: (B5+B7)/B6
+
+Blue is low abundance, Red is high abundance
+
+ potentially includes: phengite, muscovite, paragonite, lepidolite, illite, brammalite, montmorillonite, beidellite, kaolinite, dickite""",
+                # The WMS name for the layer
+                "name": "aster_aloh_group_content",
+                # The Datacube name for the associated data product
+                "product_name": "aster_aloh_group_content",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER AlOH Group Content
+            {
+                # Included as a keyword  for the layer
+                "label": "FeOH Group Content",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: (B6+B8)/B7
+
+Blue is low content, Red is high content
+
+(potentially includes: chlorite, epidote, jarosite, nontronite, gibbsite, gypsum, opal-chalcedony)""",
+                # The WMS name for the layer
+                "name": "aster_feoh_group_content",
+                # The Datacube name for the associated data product
+                "product_name": "aster_feoh_group_content",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "wcs_default_bands": ["Band_1"],
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER FeOH Group Content
+            {
+                # Included as a keyword  for the layer
+                "label": "Ferric Oxide Composition",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B2/B1
+Blue-cyan is goethite rich, Green is hematite-goethite, Red-yellow is hematite-rich""",
+                # The WMS name for the layer
+                "name": "aster_ferric_oxide_composition",
+                # The Datacube name for the associated data product
+                "product_name": "aster_ferric_oxide_composition",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Ferric Oxide Composition
+            {
+                # Included as a keyword  for the layer
+                "label": "Ferric Oxide Content",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B4/B3
+Blue is low abundance, Red is high abundance""",
+                # The WMS name for the layer
+                "name": "aster_ferric_oxide_content",
+                # The Datacube name for the associated data product
+                "product_name": "aster_ferric_oxide_content",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Ferric Oxide Content
+            {
+                # Included as a keyword  for the layer
+                "label": "Ferrous Iron Content in MgOH",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B5/B4
+
+Blue is low ferrous iron content in carbonate and MgOH minerals like talc and tremolite.
+
+Red is high ferrous iron content in carbonate and MgOH minerals like chlorite and actinolite.""",
+                # The WMS name for the layer
+                "name": "aster_ferrous_iron_content_in_mgoh",
+                # The Datacube name for the associated data product
+                "product_name": "aster_ferrous_iron_content_in_mgoh",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Ferrous Iron Content in MgOH
+            {
+                # Included as a keyword  for the layer
+                "label": "Ferrous Iron Index",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B5/B4
+Blue is low abundance, Red is high abundance""",
+                # The WMS name for the layer
+                "name": "aster_ferrous_iron_index",
+                # The Datacube name for the associated data product
+                "product_name": "aster_ferrous_iron_index",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Ferrous Iron Index
+            {
+                # Included as a keyword  for the layer
+                "label": "Green Vegetation",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+Band ratio: B3/B2 
+Blue is low content
+Red is high content""",
+                # The WMS name for the layer
+                "name": "aster_green_vegetation",
+                # The Datacube name for the associated data product
+                "product_name": "aster_green_vegetation",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Green Vegetation
+            {
+                # Included as a keyword  for the layer
+                "label": "Gypsum Index",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+Band Ratio: (B10+B12)/B11
+Blue is low gypsum content
+Red is high gypsum content""",
+                # The WMS name for the layer
+                "name": "aster_gypsum_index",
+                # The Datacube name for the associated data product
+                "product_name": "aster_gypsum_index",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Gypsum Index
+            {
+                # Included as a keyword  for the layer
+                "label": "Kaolin Group Index",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+B6/B5
+
+(potential includes: pyrophyllite, alunite, well-ordered kaolinite)
+
+Blue is low content, Red is high content""",
+                # The WMS name for the layer
+                "name": "aster_kaolin_group_index",
+                # The Datacube name for the associated data product
+                "product_name": "aster_kaolin_group_index",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Kaolin Group Index
+            {
+                # Included as a keyword  for the layer
+                "label": "MgOH Group Composition",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B7/B8
+
+Blue-cyan is magnesite-dolomite, amphibole, chlorite	
+
+Red is calcite, epidote, amphibole""",
+                # The WMS name for the layer
+                "name": "aster_mgoh_group_composition",
+                # The Datacube name for the associated data product
+                "product_name": "aster_mgoh_group_composition",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER MgOH Group Composition
+            {
+                # Included as a keyword  for the layer
+                "label": "MgOH Group Content",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: (B6+B9/(B7+B8)
+
+Blue is low content, Red is high content
+
+(potentially includes: calcite, dolomite, magnesite, chlorite, epidote, amphibole, talc, serpentine)""",
+                # The WMS name for the layer
+                "name": "aster_mgoh_group_content",
+                # The Datacube name for the associated data product
+                "product_name": "aster_mgoh_group_content",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER MgOH Group Content
+            {
+                # Included as a keyword  for the layer
+                "label": "Opaque Index",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B1/B4
+Blue is low abundance, Red is high abundance
+
+(potentially includes  carbon black (e.g. ash), magnetite, Mn oxides, and sulphides in unoxidised envornments""",
+                # The WMS name for the layer
+                "name": "aster_opaque_index",
+                # The Datacube name for the associated data product
+                "product_name": "aster_opaque_index",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Opaque Index
+            {
+                # Included as a keyword  for the layer
+                "label": "Silica Index",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B13/B10
+
+Blue is low silica content
+
+Red is high silica content
+
+(potentially includes Si-rich minerals, such as quartz, feldspars, Al-clays)""",
+                # The WMS name for the layer
+                "name": "aster_silica_index",
+                # The Datacube name for the associated data product
+                "product_name": "aster_silica_index",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Silica Index
+            {
+                # Included as a keyword  for the layer
+                "label": "Quartz Index",
+                # Included as a keyword  for the layer
+                "type": "",
+                # Included as a keyword  for the layer
+                "variant": "",
+                "abstract": """
+1. Band ratio: B11/(B10+B12)
+
+Blue is low quartz content
+
+Red is high quartz content""",
+                # The WMS name for the layer
+                "name": "aster_quartz_index",
+                # The Datacube name for the associated data product
+                "product_name": "aster_quartz_index",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "s2b_ard_granule",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_band": "pixel_quality",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 10.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ramp"]
+                },
+                "wcs_default_bands": ["Band_1"],
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "ramp",
+                        "title": "Ramp",
+                        "abstract": "Ramp",
+                        "index_function": lambda data: data["Band_1"],
+                        "needed_bands": ["Band_1"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 1,
+                                "color": "#000000"
+                            },
+                            {
+                                "value": 10,
+                                "color": "#2d002b"
+                            },
+                            {
+                                "value": 25,
+                                "color": "#550071"
+                            },
+                            {
+                                "value": 60,
+                                "color": "#0400ff"
+                            },
+                            {
+                                "value": 90,
+                                "color": "#0098ff"
+                            },
+                            {
+                                "value": 110,
+                                "color": "#00ffff"
+                            },
+                            {
+                                "value": 130,
+                                "color": "#00ff94"
+                            },
+                            {
+                                "value": 150,
+                                "color": "#00ff2a"
+                            },
+                            {
+                                "value": 170,
+                                "color": "#3fff00"
+                            },
+                            {
+                                "value": 210,
+                                "color": "#ffee00"
+                            },
+                            {
+                                "value": 230,
+                                "color": "#ff8300"
+                            },
+                            {
+                                "value": 255.0,
+                                "color": "#ff0000"
+                            }
+                        ]
+
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "ramp",
+            },  # ASTER Quartz Index
+        ],
+    }
 ]
 
