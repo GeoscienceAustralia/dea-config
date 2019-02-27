@@ -169,7 +169,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "nbr", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -622,7 +622,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "nbr", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -1075,7 +1075,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "nbr", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
