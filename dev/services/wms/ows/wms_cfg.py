@@ -7204,22 +7204,22 @@ For service status information, see https://status.dea.ga.gov.au""",
         "name": "National ASTER Map",
         "title": "National ASTER Map of Australia",
         "abstract": """
-    This datsaet comprises a set of 14+ geoscience products made up of mosaiced ASTER scenes across Australia.
-    The individual geoscience products are a compbination of bands and band ratios to highlight different mineral groups and parameters including:
-    False colour composite
-    CSIRO Landsat TM Regolith Ratios
-    Green vegetation content
-    Ferric oxide content
-    Ferric oxide composition
-    Ferrous iron index
-    Opaque index
-    AlOH group content
-    AlOH group composition
-    Kaolin group index
-    FeOH group content
-    MgOH group content
-    MgOH group composition
-    Ferrous iron content in MgOH/carbonate""",
+This datsaet comprises a set of 14+ geoscience products made up of mosaiced ASTER scenes across Australia.
+The individual geoscience products are a compbination of bands and band ratios to highlight different mineral groups and parameters including:
+False colour composite
+CSIRO Landsat TM Regolith Ratios
+Green vegetation content
+Ferric oxide content
+Ferric oxide composition
+Ferrous iron index
+Opaque index
+AlOH group content
+AlOH group composition
+Kaolin group index
+FeOH group content
+MgOH group content
+MgOH group composition
+Ferrous iron content in MgOH/carbonate""",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
@@ -7232,14 +7232,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    False colour RGB composite\n
-    Red: B3\n
-    Green: B2\n
-    Blue: B1\n
-    (red = green vegetation)
+False colour RGB composite
 
-    Use this image to help understand non-geological differences within and between ASTER scenes caused by green vegetation (red), fire scars, thin and thick cloud and cloud shadows.\n
-    Use band 2 only for a gray-scale background to the content, composition and index colour products.""",
+Red: B3
+
+Green: B2
+
+Blue: B1
+
+(red = green vegetation)
+
+Use this image to help understand non-geological differences within and between ASTER scenes caused by green vegetation (red), fire scars, thin and thick cloud and cloud shadows.
+
+Use band 2 only for a gray-scale background to the content, composition and index colour products.""",
                 # The WMS name for the layer
                 "name": "aster_false_colour",
                 # The Datacube name for the associated data product
@@ -7329,16 +7334,23 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    3 band RGB composite\n
-    Red: B3/B2\n
-    Green: B3/B7\n
-    Blue: B4/B7\n
-    (white = green vegetation)
+3 band RGB composite
 
-    Use this image to help interpret:\n
-    (1) the amount of green vegetation cover (appears as white);\n
-    (2) basic spectral separation (colour) between different regolith and geological units and regions/provinces; and\n
-    (3) evidence for unmasked cloud (appears as green).""",
+Red: B3/B2
+
+Green: B3/B7
+
+Blue: B4/B7
+
+(white = green vegetation)
+
+Use this image to help interpret:
+
+(1) the amount of green vegetation cover (appears as white);
+
+(2) basic spectral separation (colour) between different regolith and geological units and regions/provinces; and
+
+(3) evidence for unmasked cloud (appears as green).""",
                 # The WMS name for the layer
                 "name": "aster_regolith_ratios",
                 # The Datacube name for the associated data product
@@ -7411,15 +7423,23 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B5/B7\n
-    Blue is well ordered kaolinite, Al-rich muscovite/illite, paragonite, pyrophyllite\n
-    Red is Al-poor (Si-rich) muscovite (phengite)
+Band ratio: B5/B7
 
-    Useful for mapping:\n
-    (1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);\n
-    (2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours;\n
-    (3) stratigraphic mapping based on different clay-types; and\n
-    (4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).   Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).""",
+Blue is well ordered kaolinite, Al-rich muscovite/illite, paragonite, pyrophyllite
+
+Red is Al-poor (Si-rich) muscovite (phengite)
+
+Useful for mapping:
+
+(1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);
+
+(2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours;
+
+(3) stratigraphic mapping based on different clay-types; and
+
+(4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).
+
+Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).""",
                 # The WMS name for the layer
                 "name": "aster_aloh_group_composition",
                 # The Datacube name for the associated data product
@@ -7550,20 +7570,29 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: (B5+B7)/B6\n
-    Blue is low abundance\n
-    Red is high abundance\n
-    (potentially includes: phengite, muscovite, paragonite, lepidolite, illite, brammalite, montmorillonite, beidellite, kaolinite, dickite)
+Band ratio: (B5+B7)/B6
 
-    Useful for mapping:\n
-    (1) exposed saprolite/saprock\n
-    (2) clay-rich stratigraphic horizons;\n
-    (3) lithology-overprinting hydrothermal phyllic (e.g. white mica) alteration; and\n
-    (4) clay-rich diluents in ore systems (e.g. clay in iron ore).
+Blue is low abundance
 
-    Also combine with AlOH composition to help map:\n
-    (1) exposed in situ parent material persisting through “cover” which can be expressed as:\n
-    (a) more abundant AlOH content + (b) long-wavelength (warmer colour) AlOH composition (e.g. muscovite/phengite).""",
+Red is high abundance
+
+(potentially includes: phengite, muscovite, paragonite, lepidolite, illite, brammalite, montmorillonite, beidellite, kaolinite, dickite)
+
+Useful for mapping:
+
+(1) exposed saprolite/saprock;
+
+(2) clay-rich stratigraphic horizons;
+
+(3) lithology-overprinting hydrothermal phyllic (e.g. white mica) alteration; and
+
+(4) clay-rich diluents in ore systems (e.g. clay in iron ore).
+
+Also combine with AlOH composition to help map:
+
+(1) exposed in situ parent material persisting through “cover” which can be expressed as:
+
+(a) more abundant AlOH content + (b) long-wavelength (warmer colour) AlOH composition (e.g. muscovite/phengite).""",
                 # The WMS name for the layer
                 "name": "aster_aloh_group_content",
                 # The Datacube name for the associated data product
@@ -7694,17 +7723,25 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: (B6+B8)/B7\n
-    Blue is low content,\n
-    Red is high content\n
-    (potentially includes: chlorite, epidote, jarosite, nontronite, gibbsite, gypsum, opal-chalcedony
+Band ratio: (B6+B8)/B7
 
-    Useful for mapping:\n
-    (1) jarosite (acid conditions) – in combination with ferric oxide content (high);\n
-    (2) gypsum/gibbsite – in combination with ferric oxide content (low);\n
-    (3) magnesite - in combination with ferric oxide content (low) and MgOH content (moderate-high)\n
-    (4) chlorite (e.g. propyllitic alteration) – in combination with Ferrous in MgOH (high); and\n
-    (5) epidote (calc-silicate alteration) – in combination with Ferrous in MgOH (low).""",
+Blue is low content,
+
+Red is high content
+
+(potentially includes: chlorite, epidote, jarosite, nontronite, gibbsite, gypsum, opal-chalcedony
+
+Useful for mapping:
+
+(1) jarosite (acid conditions) – in combination with ferric oxide content (high);
+
+(2) gypsum/gibbsite – in combination with ferric oxide content (low);
+
+(3) magnesite - in combination with ferric oxide content (low) and MgOH content (moderate-high);
+
+(4) chlorite (e.g. propyllitic alteration) – in combination with Ferrous in MgOH (high); and
+
+(5) epidote (calc-silicate alteration) – in combination with Ferrous in MgOH (low).""",
                 # The WMS name for the layer
                 "name": "aster_feoh_group_content",
                 # The Datacube name for the associated data product
@@ -7835,14 +7872,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B2/B1\n
-    Blue-cyan is goethite rich,\n 
-    Green is hematite-goethite,\n
-    Red-yellow is hematite-rich
+Band ratio: B2/B1
 
-    Useful For:\n
-    (1) Mapping transported materials (including palaeochannels) characterised by hematite (relative to geothite). Combine with AlOH composition to find co-located areas of hematite and poorly ordered kaolin to map transported materials; and \n
-    (2) hematite-rish areas in drier conditions (eg above the water table) whereas goethite-rich in wetter conditions (eg at/below the water or areas recently exposed). May also be climate driven.""",
+Blue-cyan is goethite rich,
+
+Green is hematite-goethite,
+
+Red-yellow is hematite-rich
+
+Useful For:
+
+(1) Mapping transported materials (including palaeochannels) characterised by hematite (relative to geothite). Combine with AlOH composition to find co-located areas of hematite and poorly ordered kaolin to map transported materials; and 
+
+(2) hematite-rish areas in drier conditions (eg above the water table) whereas goethite-rich in wetter conditions (eg at/below the water or areas recently exposed). May also be climate driven.""",
                 # The WMS name for the layer
                 "name": "aster_ferric_oxide_composition",
                 # The Datacube name for the associated data product
@@ -7973,17 +8015,22 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B4/B3\n
-    Blue is low abundance,\n
-    Red is high abundance
+Band ratio: B4/B3
 
-    Useful for:\n
-    (1) Exposed iron ore (hematite-goethite).Use in combination with the “Opaques index” to help separate/map dark (a) surface lags (e.g. maghemite gravels) which can be misidentified in visible and false colour imagery; and (b) magnetite in BIF and/or bedded iron ore; and\n
-    (2) Acid conditions: combine with FeOH Group content to help map jarosite which will have high values in both products.
+Blue is low abundance,
 
-    Mapping hematite versus goethite mapping is NOT easily achieved as ASTER’s spectral bands were not designed to capture diagnostic iron oxide spectral behaviour.\n
-    However, some information on visible colour relating in part to differences in hematite and/or goethite content can be obtained using a ratio of B2/B1 especially when this is masked using a B4/B3 to locate those pixels with sufficient iro oxide content.
-    """,
+Red is high abundance
+
+Useful for:
+
+(1) Exposed iron ore (hematite-goethite).Use in combination with the “Opaques index” to help separate/map dark (a) surface lags (e.g. maghemite gravels) which can be misidentified in visible and false colour imagery; and (b) magnetite in BIF and/or bedded iron ore; and
+
+(2) Acid conditions: combine with FeOH Group content to help map jarosite which will have high values in both products.
+
+Mapping hematite versus goethite mapping is NOT easily achieved as ASTER’s spectral bands were not designed to capture diagnostic iron oxide spectral behaviour.
+
+However, some information on visible colour relating in part to differences in hematite and/or goethite content can be obtained using a ratio of B2/B1 especially when this is masked using a B4/B3 to locate those pixels with sufficient iro oxide content.
+""",
                 # The WMS name for the layer
                 "name": "aster_ferric_oxide_content",
                 # The Datacube name for the associated data product
@@ -8114,16 +8161,23 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B5/B4\n
-    Blue is low ferrous iron content in carbonate and MgOH minerals like talc and tremolite.\n
-    Red is high ferrous iron content in carbonate and MgOH minerals like chlorite and actinolite.
+Band ratio: B5/B4
 
-    Useful for mapping:\n
-    (1) un-oxidised “parent rocks” – i.e. mapping exposed parent rock materials (warm colours) in transported cover; \n
-    (2) talc/tremolite (Mg-rich – cool colours) versus actinolite (Fe-rich – warm colours);\n
-    (3) ferrous-bearing carbonates (warm colours) potentially associated with metasomatic “alteration”;\n
-    (4) calcite/dolomite which are ferrous iron-poor (cool colours); and\n
-    (5) epidote, which is ferrous iron poor (cool colours) – in combination with FeOH content product (high).""",
+Blue is low ferrous iron content in carbonate and MgOH minerals like talc and tremolite.
+
+Red is high ferrous iron content in carbonate and MgOH minerals like chlorite and actinolite.
+
+Useful for mapping:
+
+(1) un-oxidised “parent rocks” – i.e. mapping exposed parent rock materials (warm colours) in transported cover; 
+
+(2) talc/tremolite (Mg-rich – cool colours) versus actinolite (Fe-rich – warm colours);
+
+(3) ferrous-bearing carbonates (warm colours) potentially associated with metasomatic “alteration”;
+
+(4) calcite/dolomite which are ferrous iron-poor (cool colours); and
+
+(5) epidote, which is ferrous iron poor (cool colours) – in combination with FeOH content product (high).""",
                 # The WMS name for the layer
                 "name": "aster_ferrous_iron_content_in_mgoh",
                 # The Datacube name for the associated data product
@@ -8254,14 +8308,18 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B5/B4\n
-    Blue is low abundance,\n
-    Red is high abundance
+Band ratio: B5/B4
 
-    This product can help map exposed “fresh” (un-oxidised) rocks (warm colours) especially mafic and ultramafic lithologies rich in ferrous silicates (e.g. actinolite, chlorite) and/or ferrous carbonates (e.g. ferroan dolomite, ankerite, siderite).\n
-    Applying an MgOH Group content mask to this product helps to isolate ferrous bearing non-OH bearing minerals like pyroxenes (e.g. jadeite) from OH-bearing or carbonate-bearing ferrous minerals like actinolite or ankerite, respectively.\n
-    Also combine with the FeOH Group content product to find evidence for ferrous-bearing chlorite (e.g. chamosite).
-    """,
+Blue is low abundance,
+
+Red is high abundance
+
+This product can help map exposed “fresh” (un-oxidised) rocks (warm colours) especially mafic and ultramafic lithologies rich in ferrous silicates (e.g. actinolite, chlorite) and/or ferrous carbonates (e.g. ferroan dolomite, ankerite, siderite).
+
+Applying an MgOH Group content mask to this product helps to isolate ferrous bearing non-OH bearing minerals like pyroxenes (e.g. jadeite) from OH-bearing or carbonate-bearing ferrous minerals like actinolite or ankerite, respectively.
+
+Also combine with the FeOH Group content product to find evidence for ferrous-bearing chlorite (e.g. chamosite).
+""",
                 # The WMS name for the layer
                 "name": "aster_ferrous_iron_index",
                 # The Datacube name for the associated data product
@@ -8392,11 +8450,13 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B3/B2\n
-    Blue is low content\n
-    Red is high content
+Band ratio: B3/B2
 
-    Use this image to help interpret the amount of “obscuring/complicating” green vegetation cover.""",
+Blue is low content,
+
+Red is high content
+
+Use this image to help interpret the amount of “obscuring/complicating” green vegetation cover.""",
                 # The WMS name for the layer
                 "name": "aster_green_vegetation",
                 # The Datacube name for the associated data product
@@ -8527,15 +8587,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band Ratio: (B10+B12)/B11\n
-    Blue is low gypsum content\n
-    Red is high gypsum content
+Band Ratio: (B10+B12)/B11
 
-    Useful for mapping:\n
-    (1) evaporative environments (e.g. salt lakes) and associated arid aeolian systems (e.g. dunes);\n
-    (2) acid waters (e.g. from oxidising sulphides) invading carbonate rich materials including around mine environments; and\n
-    (3) hydrothermal (e.g. volcanic) systems.
-    """,
+Blue is low gypsum content,
+
+Red is high gypsum content
+
+Useful for mapping:
+
+(1) evaporative environments (e.g. salt lakes) and associated arid aeolian systems (e.g. dunes);
+
+(2) acid waters (e.g. from oxidising sulphides) invading carbonate rich materials including around mine environments; and
+
+(3) hydrothermal (e.g. volcanic) systems.""",
                 # The WMS name for the layer
                 "name": "aster_gypsum_index",
                 # The Datacube name for the associated data product
@@ -8666,16 +8730,22 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band Ratio: B6/B5\n
-    Blue is low content,\n
-    Red is high content\n
-    (potentially includes: pyrophyllite, alunite, well-ordered kaolinite)
+Band Ratio: B6/B5
+
+Blue is low content,
+
+Red is high content
+
+(potentially includes: pyrophyllite, alunite, well-ordered kaolinite)
 
 
-    Useful for mapping:\n
-    (1) different clay-type stratigraphic horizons;\n
-    (2) lithology-overprinting hydrothermal alteration, e.g. high sulphidation, “advanced argillic” alteration comprising pyrophyllite, alunite, kaolinite/dickite; and\n
-    (3) well-ordered kaolinite (warmer colours) versus poorly-ordered kaolinite (cooler colours) which can be used for mapping in situ versus transported materials, respectively.""",
+Useful for mapping:
+
+(1) different clay-type stratigraphic horizons;
+
+(2) lithology-overprinting hydrothermal alteration, e.g. high sulphidation, “advanced argillic” alteration comprising pyrophyllite, alunite, kaolinite/dickite; and
+
+(3) well-ordered kaolinite (warmer colours) versus poorly-ordered kaolinite (cooler colours) which can be used for mapping in situ versus transported materials, respectively.""",
                 # The WMS name for the layer
                 "name": "aster_kaolin_group_index",
                 # The Datacube name for the associated data product
@@ -8806,17 +8876,23 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B7/B8\n
-    Blue-cyan is magnesite-dolomite, amphibole, chlorite\n
-    Red is calcite, epidote, amphibole
+Band ratio: B7/B8
 
-    Useful for mapping:\n
-    (1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);\n
-    (2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours.\n
-    (3) stratigraphic mapping based on different clay-types; and\n
-    (4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).
+Blue-cyan is magnesite-dolomite, amphibole, chlorite
 
-    Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).""",
+Red is calcite, epidote, amphibole
+
+Useful for mapping:
+
+(1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);
+
+(2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours.
+
+(3) stratigraphic mapping based on different clay-types; and
+
+(4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).
+
+Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).""",
                 # The WMS name for the layer
                 "name": "aster_mgoh_group_composition",
                 # The Datacube name for the associated data product
@@ -8947,16 +9023,23 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: (B6+B9/(B7+B8)\n
-    Blue is low content,\n
-    Red is high content\n
-    (potentially includes: calcite, dolomite, magnesite, chlorite, epidote, amphibole, talc, serpentine)
+Band ratio: (B6+B9/(B7+B8)
 
-    Useful for mapping:\n
-    (1) “hydrated” ferromagnesian rocks rich in OH-bearing tri-octahedral silicates like actinolite, serpentine, chlorite and talc;\n
-    (2) carbonate-rich rocks, including shelf (palaeo-reef) and valley carbonates(calcretes, dolocretes and magnecretes); and\n
-    (3) lithology-overprinting hydrothermal alteration, e.g. “propyllitic alteration” comprising chlorite, amphibole and carbonate.\n
-    The nature (composition) of the silicate or carbonate mineral can be further assessed using the MgOH composition product.""",
+Blue is low content,
+
+Red is high content
+
+(potentially includes: calcite, dolomite, magnesite, chlorite, epidote, amphibole, talc, serpentine)
+
+Useful for mapping:
+
+(1) “hydrated” ferromagnesian rocks rich in OH-bearing tri-octahedral silicates like actinolite, serpentine, chlorite and talc;
+
+(2) carbonate-rich rocks, including shelf (palaeo-reef) and valley carbonates(calcretes, dolocretes and magnecretes); and
+
+(3) lithology-overprinting hydrothermal alteration, e.g. “propyllitic alteration” comprising chlorite, amphibole and carbonate.
+
+The nature (composition) of the silicate or carbonate mineral can be further assessed using the MgOH composition product.""",
                 # The WMS name for the layer
                 "name": "aster_mgoh_group_content",
                 # The Datacube name for the associated data product
@@ -9087,19 +9170,27 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B1/B4\n
-    Blue is low abundance,\n
-    Red is high abundance\n
-    (potentially includes  carbon black (e.g. ash), magnetite, Mn oxides, and sulphides in unoxidised envornments
+Band ratio: B1/B4
 
-    Useful for mapping:\n
-    (1) magnetite-bearing rocks (e.g. BIF);\n
-    (2) maghemite gravels;\n
-    (3) manganese oxides;\n
-    (4) graphitic shales.
+Blue is low abundance,
 
-    Note 1: (1) and (4) above can be evidence for “reduced” rocks when interpreting REDOX gradients.\n
-    Combine with AlOH group Content (high values) and Composition (high values) products, to find evidence for any invading “oxidised” hydrothermal fluids which may have interacted with reduced rocks evident in the Opaques index product.""",
+Red is high abundance
+
+(potentially includes  carbon black (e.g. ash), magnetite, Mn oxides, and sulphides in unoxidised envornments
+
+Useful for mapping:
+
+(1) magnetite-bearing rocks (e.g. BIF);
+
+(2) maghemite gravels;
+
+(3) manganese oxides;
+
+(4) graphitic shales.
+
+Note 1: (1) and (4) above can be evidence for “reduced” rocks when interpreting REDOX gradients.
+
+Combine with AlOH group Content (high values) and Composition (high values) products, to find evidence for any invading “oxidised” hydrothermal fluids which may have interacted with reduced rocks evident in the Opaques index product.""",
                 # The WMS name for the layer
                 "name": "aster_opaque_index",
                 # The Datacube name for the associated data product
@@ -9230,22 +9321,29 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B13/B10\n
-    Blue is low silica content\n
-    Red is high silica content\n
-    (potentially includes Si-rich minerals, such as quartz, feldspars, Al-clays)
+Band ratio: B13/B10
 
-    Geoscience Applications:\n
-    Broadly equates to the silica content though the intensity (depth) of this reststrahlen feature is also affected by particle size &lt;250 micron.
+Blue is low silica content,
 
-    Useful product for mapping:\n
-    (1) colluvial/alluvial materials;\n
-    (2) silica-rich (quartz) sediments (e.g. quartzites);\n
-    (3) silification and silcretes; and\n
-    (4) quartz veins.
+Red is high silica content
 
-    Use in combination with quartz index, which is often correlated with the Silica index.
-    """,
+(potentially includes Si-rich minerals, such as quartz, feldspars, Al-clays)
+
+Geoscience Applications:
+
+Broadly equates to the silica content though the intensity (depth) of this reststrahlen feature is also affected by particle size &lt;250 micron.
+
+Useful product for mapping:
+
+(1) colluvial/alluvial materials;
+
+(2) silica-rich (quartz) sediments (e.g. quartzites);
+
+(3) silification and silcretes; and
+
+(4) quartz veins.
+
+Use in combination with quartz index, which is often correlated with the Silica index.""",
                 # The WMS name for the layer
                 "name": "aster_silica_index",
                 # The Datacube name for the associated data product
@@ -9376,12 +9474,15 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Included as a keyword  for the layer
                 "variant": "",
                 "abstract": """
-    Band ratio: B11/(B10+B12)\n
-    Blue is low quartz content\n
-    Red is high quartz content
+Band ratio: B11/(B10+B12)
 
-    Geoscience Applications:\n
-    Use in combination with Silica index to more accurately map “crystalline” quartz rather than poorly ordered silica (e.g. opal), feldspars and compacted clays.""",
+Blue is low quartz content,
+
+Red is high quartz content
+
+Geoscience Applications:
+
+Use in combination with Silica index to more accurately map “crystalline” quartz rather than poorly ordered silica (e.g. opal), feldspars and compacted clays.""",
                 # The WMS name for the layer
                 "name": "aster_quartz_index",
                 # The Datacube name for the associated data product
