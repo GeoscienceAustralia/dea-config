@@ -6819,7 +6819,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": ["relative"],
                 "apply_solar_corrections": False,
                 "legend": {
-                    "styles": ["relative_layer"]
+                    "url": "https://data.dea.ga.gov.au/item_v2/v2.0.1/relative/ITEM_REL_Legend.png"
                 },
                 "wcs_default_bands": ["relative"],
                 "styles": [
@@ -7031,7 +7031,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                         ],
                         "legend": {
-                            "units": "metres"
+                            "units": "NDWI standard deviation"
                         }
                     }
                 ],
