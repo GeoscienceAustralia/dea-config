@@ -1185,7 +1185,7 @@
                            "type": "wms",
                            "layers": "fcp_rgb",
                            "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.devkube.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_rgb",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
