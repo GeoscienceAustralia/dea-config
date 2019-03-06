@@ -8,8 +8,6 @@ description: Sentinel-2A MSI ARD NRT - NBAR NBART and Pixel Quality
 metadata_type: eo
 
 metadata:
-    format:
-        name: GeoTIFF
     instrument:
         name: MSI
     platform:
@@ -800,8 +798,6 @@ description: Sentinel-2B MSI ARD NRT - NBAR NBART and Pixel Quality
 metadata_type: eo
 
 metadata:
-    format:
-        name: GeoTIFF
     instrument:
         name: MSI
     platform:
