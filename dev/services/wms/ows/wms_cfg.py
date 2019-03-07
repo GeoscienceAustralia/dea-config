@@ -6187,7 +6187,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
         ],
-    }
+    },
     {
         "name": "multi_scale_topographic_position",
         "title": "Multi-Scale Topographic Position",
