@@ -1,15 +1,15 @@
-name: ls8_fc_albers
+name: ls7_fc_albers
 
-description: Landsat 8 Fractional Cover 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)
+description: Landsat 7 Fractional Cover 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)
 metadata_type: eo
 
 metadata:
   platform:
-    code: LANDSAT_8
+    code: LANDSAT_7
   format:
     name: GeoTIFF
   instrument:
-    name: OLI_TIRS
+    name: ETM
   product_type: fractional_cover
 
 storage:
