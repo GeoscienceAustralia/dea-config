@@ -10975,37 +10975,42 @@ Use in combination with Silica index to more accurately map “crystalline” qu
         ],
     },
     {
-        "name": "fractional cover ls 5",
-        "title": "Fractional Cover LS 5",
+        "name": "Fractional Cover",
+        "title": "Fractional Cover",
         "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
-This contains the percentage of green vegetation per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
-
-This product is dervied from the Landsat 5 satellite.
 
 For service status information, see https://status.dea.ga.gov.au""",
         "products": [
             {
             # Included as a keyword  for the layer
-            "label": "FC",
+            "label": "FCLS5",
             # Included as a keyword  for the layer
             "type": "fractional cover",
             # Included as a keyword  for the layer
             "variant": "terrain corrected",
+            "abstract": """
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
+This product contains Fractional Cover dervied from the Landsat 5 satellite
+
+For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
             "name": "ls5_fc_albers",
             # The Datacube name for the associated data product
             "product_name": "ls5_fc_albers",
             # The Datacube name for the associated pixel-quality product (optional)
             # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
+            # "pq_dataset": "wofs_albers",
             # The name of the measurement band for the pixel-quality product
             # (Only required if pq_dataset is set)
-            "pq_band": "water",
+            # "pq_band": "water",
             # Min zoom factor - sets the zoom level where the cutover from indicative polygons
             # to actual imagery occurs.
             "min_zoom_factor": 50.0,
@@ -11041,22 +11046,22 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     # Used to clip off very bright areas.
                     "scale_factor": 1,
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
+                    # "pq_masks": [
+                    #     {
+                    #         "flags": {
+                    #             'dry': True
+                    #         },
+                    #     },
+                    #     {
+                    #         "flags": {
+                    #             "terrain_or_low_angle": False,
+                    #             "high_slope": False,
+                    #             "cloud_shadow": False,
+                    #             "cloud": False,
+                    #             "sea": False
+                    #         }
+                    #     },
+                    # ]
                 }
             ],
             # Default style (if request does not specify style)
@@ -11065,24 +11070,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # (Looks like Terria assumes this is the first style in the list, but this is
             #  not required by the standard.)
             "default_style": "simple_fc",
-            }
-        ]
-    },
-    {
-        "name": "fractional cover ls 7",
-        "title": "Fractional Cover LS 7",
-        "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-This contains the percentage of green vegetation per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
-
-This product is dervied from the Landsat 7 satellite.
-
-For service status information, see https://status.dea.ga.gov.au""",
-        "products": [
+            },
             {
             # Included as a keyword  for the layer
             "label": "FC",
@@ -11090,16 +11078,25 @@ For service status information, see https://status.dea.ga.gov.au""",
             "type": "fractional cover",
             # Included as a keyword  for the layer
             "variant": "terrain corrected",
+            "abstract": """
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
+This product contains Fractional Cover dervied from the Landsat 7 satellite
+
+For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
             "name": "ls7_fc_albers",
             # The Datacube name for the associated data product
             "product_name": "ls7_fc_albers",
             # The Datacube name for the associated pixel-quality product (optional)
             # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
+            # "pq_dataset": "wofs_albers",
             # The name of the measurement band for the pixel-quality product
             # (Only required if pq_dataset is set)
-            "pq_band": "water",
+            # "pq_band": "water",
             # Min zoom factor - sets the zoom level where the cutover from indicative polygons
             # to actual imagery occurs.
             "min_zoom_factor": 50.0,
@@ -11135,22 +11132,22 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     # Used to clip off very bright areas.
                     "scale_factor": 1,
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
+                    # "pq_masks": [
+                    #     {
+                    #         "flags": {
+                    #             'dry': True
+                    #         },
+                    #     },
+                    #     {
+                    #         "flags": {
+                    #             "terrain_or_low_angle": False,
+                    #             "high_slope": False,
+                    #             "cloud_shadow": False,
+                    #             "cloud": False,
+                    #             "sea": False
+                    #         }
+                    #     },
+                    # ]
                 }
             ],
             # Default style (if request does not specify style)
@@ -11159,24 +11156,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # (Looks like Terria assumes this is the first style in the list, but this is
             #  not required by the standard.)
             "default_style": "simple_fc",
-            }
-        ]
-    },
-    {
-        "name": "fractional cover ls 8",
-        "title": "Fractional Cover LS 8",
-        "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-This contains the percentage of green vegetation per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
-
-This product is dervied from the Landsat 8 satellite.
-
-For service status information, see https://status.dea.ga.gov.au""",
-        "products": [
+            },
             {
             # Included as a keyword  for the layer
             "label": "FC",
@@ -11184,16 +11164,25 @@ For service status information, see https://status.dea.ga.gov.au""",
             "type": "fractional cover",
             # Included as a keyword  for the layer
             "variant": "terrain corrected",
+            "abstract": """
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
+
+Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
+This product contains Fractional Cover dervied from the Landsat 8 satellite
+
+For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
             "name": "ls8_fc_albers",
             # The Datacube name for the associated data product
             "product_name": "ls8_fc_albers",
             # The Datacube name for the associated pixel-quality product (optional)
             # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
+            # "pq_dataset": "wofs_albers",
             # The name of the measurement band for the pixel-quality product
             # (Only required if pq_dataset is set)
-            "pq_band": "water",
+            # "pq_band": "water",
             # Min zoom factor - sets the zoom level where the cutover from indicative polygons
             # to actual imagery occurs.
             "min_zoom_factor": 50.0,
@@ -11229,22 +11218,22 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     # Used to clip off very bright areas.
                     "scale_factor": 1,
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
+                    # "pq_masks": [
+                    #     {
+                    #         "flags": {
+                    #             'dry': True
+                    #         },
+                    #     },
+                    #     {
+                    #         "flags": {
+                    #             "terrain_or_low_angle": False,
+                    #             "high_slope": False,
+                    #             "cloud_shadow": False,
+                    #             "cloud": False,
+                    #             "sea": False
+                    #         }
+                    #     },
+                    # ]
                 }
             ],
             # Default style (if request does not specify style)
