@@ -412,7 +412,7 @@
                "type": "group",
                "preserveOrder": true,
                "items": [
-{
+                  {
                      "name": "Fractional Cover Daily Observationa",
                      "type": "group",
                      "preserveOrder": true,
