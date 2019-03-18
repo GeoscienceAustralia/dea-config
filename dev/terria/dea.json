@@ -408,10 +408,57 @@
                ]
             },
             {
-               "name": "Fractional Cover Percentiles",
+               "name": "Fractional Cover",
                "type": "group",
                "preserveOrder": true,
                "items": [
+{
+                     "name": "Fractional Cover Daily Observationa",
+                     "type": "group",
+                     "preserveOrder": true,
+                     "items": [
+                        {
+                           "name": "Fractional Cover Combined",
+                           "type": "wms",
+                           "layers": "fc_albers_combined",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "fc_albers_combined",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 5",
+                           "type": "wms",
+                           "layers": "ls5_fc_albers",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls5_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 7",
+                           "type": "wms",
+                           "layers": "ls7_fc_albers",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls7_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 8",
+                           "type": "wms",
+                           "layers": "ls8_fc_albers",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls8_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1
+                        }
+                     ]
+                  },
                   {
                      "name": "Fractional Cover Percentiles Annual",
                      "type": "group",
