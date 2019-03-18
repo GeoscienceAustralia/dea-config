@@ -11029,6 +11029,9 @@ For service status information, see https://status.dea.ga.gov.au""",
             # Flags listed here are ignored in GetFeatureInfo requests.
             # (defaults to empty list)
             "ignore_info_flags": [],
+            "legend": {
+                "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+            },
             "wcs_default_bands": ["BS", "PV", "NPV"],
             "styles": [
                 {
@@ -11046,8 +11049,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "NPV": 1.0
                         }
                     },
-                    # Used to clip off very bright areas.
-                    "scale_factor": 1,
+                    "scale_range": [0.0, 100.0],
                     "pq_masks": [
                         {
                             "flags": {
@@ -11117,6 +11119,9 @@ For service status information, see https://status.dea.ga.gov.au""",
             # Flags listed here are ignored in GetFeatureInfo requests.
             # (defaults to empty list)
             "ignore_info_flags": [],
+            "legend": {
+                "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+            },
             "wcs_default_bands": ["BS", "PV", "NPV"],
             "styles": [
                 {
@@ -11134,8 +11139,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "NPV": 1.0
                         }
                     },
-                    # Used to clip off very bright areas.
-                    "scale_factor": 1,
+                    "scale_range": [0.0, 100.0],
                     "pq_masks": [
                         {
                             "flags": {
@@ -11205,6 +11209,9 @@ For service status information, see https://status.dea.ga.gov.au""",
             # Flags listed here are ignored in GetFeatureInfo requests.
             # (defaults to empty list)
             "ignore_info_flags": [],
+            "legend": {
+                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+            },
             "wcs_default_bands": ["BS", "PV", "NPV"],
             "styles": [
                 {
@@ -11222,8 +11229,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "NPV": 1.0
                         }
                     },
-                    # Used to clip off very bright areas.
-                    "scale_factor": 1,
+                    "scale_range": [0.0, 100.0],
                     "pq_masks": [
                         {
                             "flags": {
@@ -11294,6 +11300,9 @@ For service status information, see https://status.dea.ga.gov.au""",
             # Flags listed here are ignored in GetFeatureInfo requests.
             # (defaults to empty list)
             "ignore_info_flags": [],
+            "legend": {
+                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+            },
             "wcs_default_bands": ["BS", "PV", "NPV"],
             "styles": [
                 {
@@ -11311,8 +11320,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "NPV": 1.0
                         }
                     },
-                    # Used to clip off very bright areas.
-                    "scale_factor": 1,
+                    "scale_range": [0.0, 100.0],
                     "pq_masks": [
                         {
                             "flags": {
