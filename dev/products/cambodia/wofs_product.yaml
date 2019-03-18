@@ -1,9 +1,10 @@
 name: wofs_grids_1987_2017
 description: Water Observations from Space (WOfS) for Cambodia based pn USGS level two landsat surface reflectance. WOfS is produced by using a water classifier to classify when water is observed on the ground surface, next the presence of water is divided by the total observations to create a percentage of water presence over all observations. The WOfS layer was calculated with the datacube-stats.
 
-format:
-    name: GeoTiff
-product_type: water_classifier_statistical_summary
+metadata:
+    format:
+        name: GeoTiff
+    product_type: water_classifier_statistical_summary
 
 metadata_type: eo
 
