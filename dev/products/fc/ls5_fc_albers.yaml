@@ -22,21 +22,21 @@ storage:
 measurements:
     - name: BS
       units: "percent"
-      dtype: uint8
-      nodata: 255
+      dtype: int16
+      nodata: -1
       aliases: ["bare"]
     - name: PV
       units: "percent"
-      dtype: uint8
-      nodata: 255
+      dtype: int16
+      nodata: -1
       aliases: ["green_veg"]
     - name: NPV
       units: "percent"
-      dtype: uint8
-      nodata: 255
+      dtype: int16
+      nodata: -1
       aliases: ["dead_veg"]
     - name: UE
       units: "1"
-      dtype: uint8
-      nodata: 255
+      dtype: int16
+      nodata: -1
       aliases: ["err"]
