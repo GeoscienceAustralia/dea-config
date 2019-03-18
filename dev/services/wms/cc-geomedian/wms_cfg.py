@@ -428,6 +428,132 @@ layer_cfg = [
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "simple_rgb",
+            },
+            {
+                # Included as a keyword  for the layer
+                "label": "WOfS",
+                # Included as a keyword  for the layer
+                "type": "Water Observation",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "cambodia_wofs",
+                # The Datacube name for the associated data product
+                "product_name": "wofs_grids_1987_2017",
+                "abstract": """
+Water Observations from Space (WOfS) for Cambodia based pn USGS level 2 landsat surface reflectance. 
+WOfS is produced by using a water classifier to classify when water is observed on the ground surface, next the presence of water is divided by the total observations to create a percentage of water presence over all observations. 
+The WOfS layer was calculated with the datacube-stats.""",
+                "min_zoom_factor": 25.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "legend": {
+                    # "url": ""
+                    "styles": ["WOfS_frequency"]
+                },
+                "wcs_default_bands": ["wofs"],
+                "styles": [
+                    {
+                        "name": "WOfS_frequency",
+                        "title": " Water Summary",
+                        "abstract": "WOfS summary showing the frequency of Wetness",
+                        "needed_bands": ["wofs"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#000000",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.002,
+                                "color": "#000000",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.005,
+                                "color": "#8e0101",
+                                "alpha": 0.25
+                            },
+                            {
+                                "value": 0.01,
+                                "color": "#cf2200",
+                                "alpha": 0.75
+                            },
+                            {
+                                "value": 0.02,
+                                "color": "#e38400"
+                            },
+                            {
+                                "value": 0.05,
+                                "color": "#e3df00"
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#a6e300"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#62e300"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#00e32d"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#00e384"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#00e3c8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#00c5e3"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#0097e3"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#005fe3"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#000fe3"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                   
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "WOfS_frequency",
             }
         ]
     },
