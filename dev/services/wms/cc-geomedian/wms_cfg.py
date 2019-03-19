@@ -470,7 +470,7 @@ The WOfS layer was calculated with the datacube-stats.""",
                         "abstract": "WOfS summary showing the frequency of Wetness",
                         "needed_bands": ["wofs"],
                         "color_ramp": [
-                                                        {
+                            {
                                 "value": 0.0,
                                 "color": "#ffffff",
                                 "alpha": 0.0,
