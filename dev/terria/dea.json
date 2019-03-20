@@ -1429,7 +1429,7 @@
             {
                "name": "Cambodia Geomedian Surface Reflectance (Level 2)",
                "type": "wms",
-               "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/"
+               "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
             },
