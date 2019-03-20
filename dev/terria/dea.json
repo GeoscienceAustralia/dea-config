@@ -1429,6 +1429,7 @@
             {
                "name": "Cambodia Geomedian Surface Reflectance (Level 2)",
                "type": "wms",
+               "layers": "ls_level2_geomedian_annual",
                "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
@@ -1436,6 +1437,7 @@
              {
                "name": "Cambodia Water Observation from Space 30m (WOfS)",
                "type": "wms",
+               "layers": "cambodia_wofs",
                "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
