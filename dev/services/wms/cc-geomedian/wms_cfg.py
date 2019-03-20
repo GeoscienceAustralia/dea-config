@@ -433,9 +433,9 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "WOfS",
                 # Included as a keyword  for the layer
-                "type": "Water Observation from Space",
+                "type": "30m",
                 # Included as a keyword  for the layer
-                "variant": "30m",
+                "variant": "Water Observation from Space",
                 # The WMS name for the layer
                 "name": "cambodia_wofs",
                 # The Datacube name for the associated data product

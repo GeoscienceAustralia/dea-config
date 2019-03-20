@@ -1423,8 +1423,24 @@
       },
       {
          "name": "Cambodia Development",
-         "type": "wms-getCapabilities",
-         "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/"
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Cambodia Geomedian Surface Reflectance (Level 2)",
+               "type": "wms",
+               "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
+            },
+             {
+               "name": "Cambodia Water Observation from Space 30m (WOfS)",
+               "type": "wms",
+               "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
+            },
+         ]   
       },
       {
          "name": "Cambodia Production",
