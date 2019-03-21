@@ -464,6 +464,12 @@
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Polygon Drill",
+                           "type": "wps-getCapabilities",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/wps/",
+                           "opacity": 1,
                         }
                      ]
                   },
