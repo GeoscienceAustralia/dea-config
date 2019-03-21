@@ -68,8 +68,8 @@ layer_cfg = [
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
-        "name": "Cambodia_Geomedian_SR",
-        "title": "Cambodia_Geomedian_L2-SR",
+        "name": "Cambodia Observation",
+        "title": "Cambodia",
         "abstract": "Images from the Geomedian Surface Reflectance on Level2 Products",
 
         # Products available for this platform.
@@ -80,9 +80,9 @@ layer_cfg = [
             # Included as a keyword  for the layer
                 "label": "Level 2",
                 # Included as a keyword  for the layer
-                "type": "Level2",
+                "type": "Surface Reflectance",
                 # Included as a keyword  for the layer
-                "variant": "Level 2",
+                "variant": "Geomedian",
                 # The WMS name for the layer
                 "name": "ls_level2_geomedian_annual",
                 # The Datacube name for the associated data product
@@ -433,9 +433,9 @@ layer_cfg = [
                 # Included as a keyword  for the layer
                 "label": "WOfS",
                 # Included as a keyword  for the layer
-                "type": "Water Observation",
+                "type": "30m",
                 # Included as a keyword  for the layer
-                "variant": "25m",
+                "variant": "Water Observation from Space",
                 # The WMS name for the layer
                 "name": "cambodia_wofs",
                 # The Datacube name for the associated data product
@@ -472,81 +472,46 @@ The WOfS layer was calculated with the datacube-stats.""",
                         "color_ramp": [
                             {
                                 "value": 0.0,
-                                "color": "#000000",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.002,
-                                "color": "#000000",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.005,
-                                "color": "#8e0101",
-                                "alpha": 0.25
-                            },
-                            {
-                                "value": 0.01,
-                                "color": "#cf2200",
-                                "alpha": 0.75
-                            },
-                            {
-                                "value": 0.02,
-                                "color": "#e38400"
-                            },
-                            {
-                                "value": 0.05,
-                                "color": "#e3df00"
+                                "color": "#ffffff",
+                                "alpha": 0.0,
                             },
                             {
                                 "value": 0.1,
-                                "color": "#a6e300"
+                                "color": "#d5fef9",
+                                "alpha": 0.0,
                             },
                             {
-                                "value": 0.2,
-                                "color": "#62e300"
+                                "value": 2.0,
+                                "color": "#d5fef9",
                             },
                             {
-                                "value": 0.3,
-                                "color": "#00e32d"
+                                "value": 20.0,
+                                "color": "#71e3ff"
                             },
                             {
-                                "value": 0.4,
-                                "color": "#00e384"
+                                "value": 40.0,
+                                "color": "#01ccff"
                             },
                             {
-                                "value": 0.5,
-                                "color": "#00e3c8"
+                                "value": 60.0,
+                                "color": "#0178ff"
                             },
                             {
-                                "value": 0.6,
-                                "color": "#00c5e3"
+                                "value": 80.0,
+                                "color": "#2701ff"
                             },
                             {
-                                "value": 0.7,
-                                "color": "#0097e3"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#005fe3"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#000fe3"
-                            },
-                            {
-                                "value": 1.0,
+                                "value": 100.0,
                                 "color": "#5700e3"
                             }
                         ],
                         "legend": {
                             "units": "%",
                             "radix_point": 0,
-                            "scale_by": 100.0,
-                            "major_ticks": 0.1
+                            "scale_by": 1,
+                            "major_ticks": 10
                         }
                     },
-                   
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.

@@ -19,5 +19,5 @@ storage:
 measurements:
     - name: wofs
       dtype: float64
-      units: '%'
-      nodata: 'NaN'
+      units: '1'
+      nodata: -1
