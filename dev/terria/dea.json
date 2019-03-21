@@ -456,6 +456,11 @@
                            "linkedWcsCoverage": "ls8_fc_albers",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
+                        },
+                        {
+                           "name": "Fractional Cover Polygon Drill",
+                           "type": "wps-getCapabilities",
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/wps/"
                         }
                      ]
                   },
