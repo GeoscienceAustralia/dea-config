@@ -468,7 +468,7 @@
                         {
                            "name": "Fractional Cover Polygon Drill",
                            "type": "wps-getCapabilities",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/wps/"
+                           "url": "https://ows.services.devkube.dea.ga.gov.au/wps/",
                            "opacity": 1,
                         }
                      ]
