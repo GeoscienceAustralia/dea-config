@@ -1,4 +1,4 @@
-name: mangrove_cover
+name: mangrove_cover_test
 
 description: Mangrove Cover, Australian Albers Equal Area projection (EPSG:3577)
 metadata_type: eo
@@ -29,7 +29,7 @@ measurements:
     - name: canopy_cover_class
       units: "1"
       dtype: int16
-      nodata: -1
+      nodata: 0
       aliases: ["cover"]
       flags_definition:
         woodland:
@@ -47,5 +47,5 @@ measurements:
     - name: extent
       units: "1"
       dtype: int16
-      nodata: -1
+      nodata: 0
       aliases: ["extent"]
