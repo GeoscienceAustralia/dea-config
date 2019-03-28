@@ -23,6 +23,8 @@ service_cfg = {
         "https://nrt.dea.ga.gov.au",
         "https://nrt-au.dea.ga.gov.au"],
     "human_url": "dea.ga.gov.au/",
+    "s3_url": "https://data.dea.ga.gov.au",
+    "s3_bucket": "dea-public-data"
     # Supported co-ordinate reference systems
     "published_CRSs": {
         "EPSG:3857": {  # Web Mercator
