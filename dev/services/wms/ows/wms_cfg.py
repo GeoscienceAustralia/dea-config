@@ -11017,7 +11017,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
             # Min zoom factor - sets the zoom level where the cutover from indicative polygons
             # to actual imagery occurs.
-            "min_zoom_factor": 50.0,
+            "min_zoom_factor": 10.0,
             # The fill-colour of the indicative polygons when zoomed out.
             # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
             "zoomed_out_fill_colour": [ 150, 180, 200, 160],
@@ -11107,7 +11107,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
             # Min zoom factor - sets the zoom level where the cutover from indicative polygons
             # to actual imagery occurs.
-            "min_zoom_factor": 50.0,
+            "min_zoom_factor": 10.0,
             # The fill-colour of the indicative polygons when zoomed out.
             # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
             "zoomed_out_fill_colour": [ 150, 180, 200, 160],
@@ -11197,7 +11197,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
             # Min zoom factor - sets the zoom level where the cutover from indicative polygons
             # to actual imagery occurs.
-            "min_zoom_factor": 50.0,
+            "min_zoom_factor": 10.0,
             # The fill-colour of the indicative polygons when zoomed out.
             # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
             "zoomed_out_fill_colour": [ 150, 180, 200, 160],
@@ -11280,7 +11280,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": ["ls5_fc_albers", "ls7_fc_albers", "ls8_fc_albers"],
             # The Datacube name for the associated pixel-quality product (optional)
             # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
+            "pq_dataset": ["wofs_albers", "wofs_albers", "wofs_albers"],
             # The name of the measurement band for the pixel-quality product
             # (Only required if pq_dataset is set)
             "pq_band": "water",
@@ -11288,7 +11288,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
             # Min zoom factor - sets the zoom level where the cutover from indicative polygons
             # to actual imagery occurs.
-            "min_zoom_factor": 50.0,
+            "min_zoom_factor": 10.0,
             # The fill-colour of the indicative polygons when zoomed out.
             # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
             "zoomed_out_fill_colour": [ 150, 180, 200, 160],
