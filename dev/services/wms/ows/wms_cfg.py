@@ -8412,16 +8412,16 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         ]
     },
-#    {
-#        # Name and title of the platform layer.
-#        # Platform layers are not mappable. The name is for internal server use only.
-#        "name": "water_bodies",
-#        "title": "Projects",
-#        "abstract": "Projects",
-#        # Products available for this platform.
-#        # For each product, the "name" is the Datacube name, and the label is used
-#        # to describe the label to end-users.
-#        "products": [
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "water_bodies",
+        "title": "Projects",
+        "abstract": "Projects",
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
 #            {
 #                # Included as a keyword  for the layer
 #                "label": "Water Bodies",
