@@ -8418,9 +8418,9 @@ For service status information, see https://status.dea.ga.gov.au""",
 #        "name": "water_bodies",
 #        "title": "Projects",
 #        "abstract": "Projects",
-        # Products available for this platform.
-        # For each product, the "name" is the Datacube name, and the label is used
-        # to describe the label to end-users.
+#        # Products available for this platform.
+#        # For each product, the "name" is the Datacube name, and the label is used
+#        # to describe the label to end-users.
 #        "products": [
 #            {
 #                # Included as a keyword  for the layer
