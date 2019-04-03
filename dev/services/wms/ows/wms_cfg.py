@@ -8425,7 +8425,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 #            {
 #                # Included as a keyword  for the layer
 #                "label": "Water Bodies",
-#                "abstract": "NSW Water Bodies Project"
+#                "abstract": "MDBA and NSW Water Bodies Project"
 #                            "For service status information, see https://status.dea.ga.gov.au",
 #                # Included as a keyword  for the layer
 #                "type": "NSW",
@@ -8443,7 +8443,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 #                "feature_info_include_custom": lambda data: {
 #                    'timeseries': f"https://data.dea.ga.gov.au"
 #                    f"/projects/WaterBodies/feature_info/"
-#                    f"{data['dam_id'] // 1000:04}/{data['dam_id']:06}.csv"
+#                    f"{data['dam_id'] // 100:04}/{data['dam_id']:06}.csv"
 #                },
 #                "ignore_info_flags": [],
 #                "data_manual_merge": False,
