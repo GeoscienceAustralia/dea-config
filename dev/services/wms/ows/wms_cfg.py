@@ -8439,11 +8439,11 @@ For service status information, see https://status.dea.ga.gov.au""",
 #                "zoomed_out_fill_colour": [150, 180, 200, 160],
 #                "time_zone": 9,
 #                "extent_mask_func": lambda data, band: data[band] != 65535,
-#                # include links to csv, {dam_id: 2611} becomes ".../026/02611.csv"
+#                # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
 #                "feature_info_include_custom": lambda data: {
 #                    'timeseries': f"https://data.dea.ga.gov.au"
 #                    f"/projects/WaterBodies/feature_info/"
-#                    f"{data['dam_id'] // 100:03}/{data['dam_id']:05}.csv"
+#                    f"{data['dam_id'] // 1000:04}/{data['dam_id']:06}.csv"
 #                },
 #                "ignore_info_flags": [],
 #                "data_manual_merge": False,
@@ -8466,7 +8466,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 #                                'alpha': 1.0
 #                            },
 #                            {
-#                                'value': 65534,
+#                                'value': 109000,
 #                                'color': '#11ccff',
 #                                'alpha': 1.0
 #                            },
