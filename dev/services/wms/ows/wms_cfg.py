@@ -8425,7 +8425,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 #            {
 #                # Included as a keyword  for the layer
 #                "label": "Water Bodies",
-#                "abstract": "MDBA and NSW Water Bodies Project"
+#                "abstract": "Waterbody Area Mapping and Monitoring"
 #                            "For service status information, see https://status.dea.ga.gov.au",
 #                # Included as a keyword  for the layer
 #                "type": "NSW",
@@ -8438,7 +8438,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 #                "min_zoom_factor": 15.0,
 #                "zoomed_out_fill_colour": [150, 180, 200, 160],
 #                "time_zone": 9,
-#                "extent_mask_func": lambda data, band: data[band] != 65535,
+#                "extent_mask_func": lambda data, band: data[band] != 8388607,
 #                # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
 #                "feature_info_include_custom": lambda data: {
 #                    'timeseries': f"https://data.dea.ga.gov.au"
@@ -8466,7 +8466,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 #                                'alpha': 1.0
 #                            },
 #                            {
-#                                'value': 109000,
+#                                'value': 8388607,
 #                                'color': '#11ccff',
 #                                'alpha': 1.0
 #                            },
