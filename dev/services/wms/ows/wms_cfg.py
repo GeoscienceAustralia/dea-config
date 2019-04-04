@@ -7506,10 +7506,10 @@ While image compositing and masking methods have been applied to remove the majo
  
 *Data access and additional information*
 
-Journal article: Bishop-Taylor et al. 2019 (https://doi.org/10.1016/j.ecss.2019.03.006) 
-Data available on THREDDS: http://dapds00.nci.org.au/thredds/catalogs/fk4/nidem_1_0.html
-eCat catalogue listing including data access options: http://pid.geoscience.gov.au/dataset/ga/123678
-CMI listing for extended metadata: https://cmi.ga.gov.au/pd/NIDEM_25_1.0.0 
+ - Journal article: Bishop-Taylor et al. 2019 (https://doi.org/10.1016/j.ecss.2019.03.006) 
+ - Data available on THREDDS: http://dapds00.nci.org.au/thredds/catalogs/fk4/nidem_1_0.html
+ - eCat catalogue listing including data access: http://pid.geoscience.gov.au/dataset/ga/123678
+ - CMI listing for extended metadata: https://cmi.ga.gov.au/pd/NIDEM_25_1.0.0 
 
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "grid",
