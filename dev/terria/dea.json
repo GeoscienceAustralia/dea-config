@@ -1533,7 +1533,30 @@
                "opacity": 1
             },
          ]   
-      },      
+      },
+      {
+         "name": "Hotspots",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Current Hotspots",
+               "type": "wms",
+               "layers": "hotspot_current_4326",
+               "url": "https://sentinel.ga.gov.au/geoserver/public/wms",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
+            },
+             {
+               "name": "Himawari 8 Mosaic ",
+               "type": "wms",
+               "layers": "himawari8_mosaic",
+               "url": "https://sentinel.ga.gov.au/geoserver/public/wms",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
+            },
+         ]   
+      },
       {
          "name": "DEA Shapes",
          "type": "group",
