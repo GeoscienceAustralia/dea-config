@@ -721,12 +721,12 @@
                ]
             },
             {
-               "name": "NSW Water Bodies Project",
+               "name": "Waterbody Area Mapping and Monitoring",
                "type": "group",
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "NSW Water Bodies Project",
+                     "name": "Waterbody Area Mapping and Monitoring",
                      "type": "wms",
                      "layers": "water_bodies",
                      "url": "https://ows.services.devkube.dea.ga.gov.au/",
