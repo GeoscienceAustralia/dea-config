@@ -3,8 +3,6 @@ description: Sentinel 2 NRT Water Observations from Space
 metadata_type: eo
 metadata:
   product_type: wofs
-  platform:
-    code: SENTINEL_2B
   format:
     name: GeoTIFF
   instrument:
