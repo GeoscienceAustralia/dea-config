@@ -8474,7 +8474,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "feature_info_include_custom": lambda data: {
                     'timeseries': f"https://data.dea.ga.gov.au"
                     f"/projects/WaterBodies/feature_info/"
-                    f"{data['dam_id'] // 100:04}/{data['dam_id']:06}.csv"
+                    f"{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
                 },
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
