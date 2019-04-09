@@ -10,6 +10,6 @@ metadata:
 
 measurements:
    - name: water
-     dtype: int8
+     dtype: uint8
      nodata: 0
      units: '1'
