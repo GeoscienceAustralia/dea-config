@@ -4821,6 +4821,92 @@ For service status information, see https://status.dea.ga.gov.au""",
                 #  not required by the standard.)
                 "default_style": "simple_rgb",
             },
+            {
+                # Included as a keyword  for the layer
+                "label": "Sentinel 2 WOfS NRT",
+                # Included as a keyword  for the layer
+                "type": "Water Classifier",
+                # Included as a keyword  for the layer
+                "variant": "",
+                # The WMS name for the layer
+                "name": "s2_nrt_wofs",
+                # The Datacube name for the associated data product
+                "product_name": "sentinel2_wofs_nrt",
+                "abstract": """
+Sentinel 2 NRT Water Classifier.
+For service status information, see https://status.dea.ga.gov.au""",
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "legend": {
+                    # "url": ""
+                    "styles": ["water_classifier"]
+                },
+                "wcs_default_bands": ["water"],
+                "styles": [
+                    {
+                        "name": "water_classifier",
+                        "title": " Water Summary",
+                        "abstract": "WOfS NRT",
+                        "needed_bands": ["water"],
+                        "color_ramp": [
+                            {
+                                "value": 0.0,
+                                "color": "#ffffff",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#d5fef9",
+                                "alpha": 0.0,
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#71e3ff"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#01ccff"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#0178ff"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#2701ff"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#5700e3"
+                            }
+                        ],
+                        "legend": {
+                            "units": "%",
+                            "radix_point": 0,
+                            "scale_by": 100.0,
+                            "major_ticks": 0.1
+                        }
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "water_classifier",
+            },
         ],
     },
     {
