@@ -3740,6 +3740,44 @@ For service status information, see https://status.dea.ga.gov.au""",
                         ]
                     },
                     {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
+                        "needed_bands": ["nbart_green", "nbart_swir_2"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
+                        ]
+                    },
+                    {
                         "name": "ndci",
                         "title": "NDCI - Red Edge, Red",
                         "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
@@ -4158,6 +4196,44 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
+                        "needed_bands": ["nbart_green", "nbart_swir_2"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
@@ -4580,6 +4656,44 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
+                        "needed_bands": ["nbart_green", "nbart_swir_2"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
@@ -5130,6 +5244,44 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
+                        "needed_bands": ["nbart_green", "nbart_swir_2"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
