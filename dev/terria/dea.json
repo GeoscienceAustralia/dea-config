@@ -643,6 +643,8 @@
                      "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
                      "linkedWcsCoverage": "NIDEM",
                      "ignoreUnknownTileErrors": true,
+                     "useOwnClock": true,
+                     "availableDimensions": [],
                      "opacity": 1
                   },
                   {
