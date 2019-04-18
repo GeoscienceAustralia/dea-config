@@ -1634,10 +1634,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         ],
                         "legend": {
-                            "units": "%",
-                            "radix_point": 0,
-                            "scale_by": 100.0,
-                            "major_ticks": 0.1
+                            "url": "https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/wofs_full_summary_legend.png",
                         }
                     },
                     {
@@ -2050,10 +2047,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         ],
                         "legend": {
-                            "units": "%",
-                            "radix_point": 0,
-                            "scale_by": 100.0,
-                            "major_ticks": 0.1
+                            "url": "https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/wofs_full_summary_legend.png",
                         }
                     },
                     {
