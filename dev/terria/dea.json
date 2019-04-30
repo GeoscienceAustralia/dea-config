@@ -1586,7 +1586,7 @@
                "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20.geojson"
             },
             {
-               "name": "DEA Ramsar Wetlands draft polygons",
+               "name": "DEA Wetlands Insight Tool v1.0",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_exploded3.geojson",
                "type": "geojson",
                "featureInfoTemplate": {
