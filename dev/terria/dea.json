@@ -515,7 +515,7 @@
                            "featureTimesProperty": "data_available_for_dates"
                         },
                         {
-                           "name": "Fractional Cover Drill",
+                           "name": "Fractional Cover Polygon Drill",
                            "type": "wps",
                            "url": "https://ows.services.devkube.dea.ga.gov.au/wps/",
                            "opacity": 1,
