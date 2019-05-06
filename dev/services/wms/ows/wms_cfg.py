@@ -42,6 +42,11 @@ service_cfg = {
             "horizontal_coord": "x",
             "vertical_coord": "y",
         },
+        "EPSG:3111": {  # VicGrid94 for delwp.vic.gov.au
+            "geographic": False,
+            "horizontal_coord": "x",
+            "vertical_coord": "y",
+        },
     },
 
     ## Required config for WCS
