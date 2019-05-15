@@ -1472,6 +1472,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "value_map": {
                             "canopy_cover_class": [
                                 {
+                                    "title": "Not Observed",
+                                    "abstract": "(Clear Obs < 3)",
+                                    "flags": {
+                                        "notobserved": True
+                                    },
+                                    "color": "#BDBDBD"
+                                },
+                                {
                                     "title": "Woodland",
                                     "abstract": "(20% - 50% cover)",
                                     "flags": {
