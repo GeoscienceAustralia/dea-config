@@ -1437,9 +1437,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "mangrove",
             },
             {
-                "label": "Mangrove Canopy Cover V2.0.1",
+                "label": "Mangrove Canopy Cover V2.0.2",
                 "abstract": """
-Mangrove canopy cover version 2.0.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Mangrove canopy cover version 2.0.2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 
 The mangrove canopy cover product provides valuable information about the extent and canopy density of mangroves for each year between 1987 and 2016 for the entire Australian coastline.
 The canopy cover classes are:
@@ -1450,7 +1450,7 @@ The product consists of  a sequence (one per year) of 25 meter resolution maps t
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
-                "name": "mangrove_cover_v2_0_1",
+                "name": "mangrove_cover_v2_0_2",
                 "product_name": "mangrove_cover_test",
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -1477,7 +1477,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     "flags": {
                                         "notobserved": True
                                     },
-                                    "color": "#BDBDBD"
+                                    "color": "#636363"
                                 },
                                 {
                                     "title": "Woodland",
