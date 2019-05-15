@@ -1455,7 +1455,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
-                "extent_mask_func": lambda data, band: data["extent"] == 1,
+                "extent_mask_func": lambda data, band: data["extent"] != data["extent"].attrs['nodata'],
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
                 "always_fetch_bands": ["extent"],
@@ -1477,7 +1477,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     "flags": {
                                         "notobserved": True
                                     },
-                                    "color": "#636363"
+                                    "color": "#BDBDBD"
                                 },
                                 {
                                     "title": "Woodland",
