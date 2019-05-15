@@ -29,7 +29,7 @@ measurements:
     - name: canopy_cover_class
       units: "1"
       dtype: int16
-      nodata: 0
+      nodata: -1
       aliases: ["cover"]
       flags_definition:
         notobserved:
@@ -51,5 +51,5 @@ measurements:
     - name: extent
       units: "1"
       dtype: int16
-      nodata: 0
+      nodata: -1
       aliases: ["extent"]
