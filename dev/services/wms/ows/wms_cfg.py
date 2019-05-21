@@ -1380,7 +1380,7 @@ Mosaics are available for the following years:
         "products": [
             {
                 # Included as a keyword  for the layer
-                "label": "Barest Earth Combined Landsat 30 Years",
+                "label": "Combined Landsat",
                 # Included as a keyword  for the layer
                 "type": "albers",
                 # Included as a keyword  for the layer
