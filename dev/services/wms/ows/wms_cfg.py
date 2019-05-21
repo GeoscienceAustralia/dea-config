@@ -1360,7 +1360,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat_barest_earth",
-        "title": "Barest Earth 30 Years (100km x 100km tile)",
+        "title": "Barest Earth 30 Years",
         "abstract": """
 A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
 
@@ -1382,7 +1382,7 @@ Mosaics are available for the following years:
                 # Included as a keyword  for the layer
                 "label": "Landsat Combined",
                 # Included as a keyword  for the layer
-                "type": "Barest Earth 30 Years (100km x 100km tile)",
+                "type": "Barest Earth 30 Years",
                 # Included as a keyword  for the layer
                 "variant": "25m",
                 "abstract": """
