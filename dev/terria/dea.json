@@ -1595,7 +1595,7 @@
             },
             {
                   "name": "MODIS Marine Heat Waves Tool",
-                  "url": "http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/CMR_2013_dissolved_wgs84.geojson",
+                  "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/CMR_2013_dissolved_wgs84.geojson",
                   "type": "geojson",
                   "featureInfoTemplate": {
                     "template": " {{MPA_NAME}} Marine Park in {{network}} marine network.  <p/> <figure> <img style='width: 100%' src='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'/> <figcaption>Seasonal change of MHW affected area and maximum intensity for {{MPA_NAME}}</figcaption> </figure> <p/> Download: <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'>chart image</a> | <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.csv'>timeseries CSV</a><p/>"
