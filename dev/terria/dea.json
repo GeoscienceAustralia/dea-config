@@ -14,6 +14,22 @@
    },
    "catalog": [
       {
+         "name": "GSKY DEA Functional Testing",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Blended service",
+               "type": "wms",
+               "url": "http://130.56.242.6/ows/fusion",
+               "layers": "blended",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            }
+         ]
+      },
+      {
          "name": "GSKY DEA Production",
          "type": "wms-getCapabilities",
          "url": "http://gsky.nci.org.au/ows/dea"
@@ -1691,6 +1707,110 @@
                }
             }
          ]
-      }
+      },
+      {
+         "name": "ODC Hackathon",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "2018-2019 Fiji Summaries",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Level 3 Land Cover Classification",
+                     "type": "wms",
+                     "layers": "lccs_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Fractional Cover Annual 50th Percentile",
+                     "type": "wms",
+                     "layers": "ls_usgs_fcp_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Water Observations from Space Annual Summary",
+                     "type": "wms",
+                     "layers": "ls_usgs_wofs_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+               ]
+            },
+            {
+               "name": "USGS Landsat 8",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 8 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls8_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "USGS Landsat 8 Fractional Cover",
+                     "type": "wms",
+                     "layers": "ls8_usgs_fc_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "USGS Landsat 8 Water Observation Feature Layer",
+                     "type": "wms",
+                     "layers": "ls_usgs_wofs",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+               ]
+            },
+            {
+               "name": "USGS Landsat 7",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 7 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls7_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
+               "name": "USGS Landsat 5",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 5 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls5_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            }
+         ]   
+      },
    ]
 }
