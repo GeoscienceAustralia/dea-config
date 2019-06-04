@@ -139,7 +139,7 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
-                "name": "s2_nrt_granule_nbar_t",
+                "name": "s2_ard_granule_nbar_t",
                 # The Datacube name for the associated data product
                 "multi_product": True,
                 "product_name": ["s2a_ard_granule", "s2b_ard_granule"],
