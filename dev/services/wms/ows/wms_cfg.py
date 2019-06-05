@@ -5342,43 +5342,15 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": " Water Summary",
                         "abstract": "WOfS NRT",
                         "needed_bands": ["water"],
-                        "color_ramp": [
-                            {
-                                "value": 0.0,
-                                "color": "#ffffff",
-                                "alpha": 0.0,
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#d5fef9",
-                                "alpha": 0.0,
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#71e3ff"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#01ccff"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#0178ff"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#2701ff"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#5700e3"
-                            }
-                        ],
-                        "legend": {
-                            "units": "%",
-                            "radix_point": 0,
-                            "scale_by": 100.0,
-                            "major_ticks": 0.1
+                        "value_map": {
+                            "water_classifier": [
+                                {
+                                    "title": "Wet",
+                                    "abstract": "(100%)",
+                                    "color": "#5700E3"
+                                },
+
+                            ]
                         }
                     },
                 ],
