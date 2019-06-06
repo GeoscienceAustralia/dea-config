@@ -5372,7 +5372,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "The Surface Reflectance product has been corrected to account for variations"
         "caused by atmospheric properties, sun position and sensor view angle at time of image capture."
         "These corrections have been applied to all satellite imagery in the Sentinel-2 archive"
-        "For more information see http://pid.geoscience.gov.au/dataset/ga/129684
+        "For more information see http://pid.geoscience.gov.au/dataset/ga/129684",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
