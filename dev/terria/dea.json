@@ -1769,6 +1769,15 @@
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
+                  {
+                     "name": "USGS Landsat 8 Geomedian",
+                     "type": "wms",
+                     "layers": "ls_usgs_geomedian_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
                ]
             },
             {
@@ -1802,7 +1811,7 @@
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates"
-                  },
+                  }
                ]
             },
             {
