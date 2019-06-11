@@ -5343,7 +5343,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "abstract": "WOfS NRT",
                         "needed_bands": ["water"],
                         "value_map": {
-                            "water_classifier": [
+                            "water": [
                                 {
                                     "title": "Wet",
                                     "abstract": "(100%)",
