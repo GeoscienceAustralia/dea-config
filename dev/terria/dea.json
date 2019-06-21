@@ -1709,6 +1709,14 @@
                   "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                }
             },
+{
+               "name": "DEA WIT - LRA",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/DCDB_NW_LGA_aoi.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " OBJECTID {{OBJECTID}} in locality {{LOCALITY}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLANSEGPAR}-{LOCALITY}-{OBJECTID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{LOTPLANSEGPAR}-{LOCALITY}-{OBJECTID}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLANSEGPAR}-{LOCALITY}-{OBJECTID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLANSEGPAR}-{LOCALITY}-{OBJECTID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               }
+            },
             {
                   "name": "MODIS Marine Heat Waves Tool",
                   "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/CMR_2013_dissolved_wgs84.geojson",
