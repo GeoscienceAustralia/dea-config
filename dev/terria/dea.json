@@ -14,6 +14,38 @@
    },
    "catalog": [
       {
+         "name": "GSKY DEA Functional Testing",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Blended service",
+               "type": "wms",
+               "url": "http://130.56.242.6/ows/fusion",
+               "layers": "blended",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            }
+         ]
+      },
+      {
+         "name": "GSKY Blended Service",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance (Beta)",
+               "type": "wms",
+               "url": "https://gsky.nci.org.au/ows/dea",
+               "layers": "blend_sentinel2_landsat_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            }
+         ]
+      },
+      {
          "name": "GSKY DEA Production",
          "type": "wms-getCapabilities",
          "url": "http://gsky.nci.org.au/ows/dea"
@@ -315,7 +347,7 @@
                ]
             },
             {
-               "name": "Definitive",
+               "name": "Sentinel-2 Definitive",
                "type": "group",
                "preserveOrder": true,
                "items": [
@@ -456,6 +488,17 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Near Real-Time Surface Reflectance (WOfS Water Classifier)",
+                     "type": "wms",
+                     "layers": "s2_nrt_wofs",
+                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2_nrt_wofs",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates"
                   }
                ]
@@ -1237,6 +1280,79 @@
                ]
             },
             {
+               "name": "Sentinel-2 Definitive",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Devinitive Surface Reflectance (Sentinel 2A and 2B combined)",
+                     "type": "wms",
+                     "layers": "s2_ard_granule_nbar_t",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2A)",
+                     "type": "wms",
+                     "layers": "s2a_ard_granule_nbar_t",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2B)",
+                     "type": "wms",
+                     "layers": "s2b_ard_granule_nbar_t",
+                     "url": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
                "name": "Near Real-Time",
                "type": "group",
                "preserveOrder": true,
@@ -1511,7 +1627,7 @@
                "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
-            },
+            }
          ]   
       },
       {
@@ -1534,7 +1650,7 @@
                "url": "https://cambodiacube.services.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
-            },
+            }
          ]   
       },
       {
@@ -1557,7 +1673,7 @@
                "url": "https://sentinel.ga.gov.au/geoserver/public/wms",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
-            },
+            }
          ]   
       },
       {
@@ -1590,8 +1706,24 @@
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_exploded6.geojson",
                "type": "geojson",
                "featureInfoTemplate": {
-                  "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png'>chart image</a> | <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv'>timeseries CSV</a><p/>"
+                  "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                }
+            },
+            {
+               "name": "DEA WIT - LRA",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/DCDB_NW_LGA_aoi.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " OBJECTID {{OBJECTID}} in locality {{LOCALITY}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               }
+            },
+            {
+                  "name": "MODIS Marine Heat Waves Tool",
+                  "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/CMR_2013_dissolved_wgs84.geojson",
+                  "type": "geojson",
+                  "featureInfoTemplate": {
+                    "template": " {{MPA_NAME}} Marine Park in {{network}} marine network.  <p/> <figure> <img style='width: 100%' src='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'/> <figcaption>Seasonal variation of the MHW characteristics for {{MPA_NAME}} Marine Park. The MHW area is calculated as the percentage of the Marine Park observed by MODIS satellite. The mean MHW intensity is represented as degrees above the 90 percentile climatology calculated from the daily IMOS MODIS SST data between July 2002 and Oct 2018. The MHW days indicate the number of the days for which the Marine Park has been affected by MHWs. Note that the 2002 winter and the 2018 spring seasons have only 51 and 42 total numbers of days, respectively, due to the limitation of the time series.</figcaption> </figure> <p/> Download: <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'>chart image</a> | <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.csv'>timeseries CSV</a><p/>"
+                  }
             },
             {
                "name": "Historical Airborne Photography - Cloncurry frames",
@@ -1610,6 +1742,119 @@
                }
             }
          ]
-      }
+      },
+      {
+         "name": "ODC Hackathon",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "2018-2019 Fiji Summaries",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Level 3 Land Cover Classification",
+                     "type": "wms",
+                     "layers": "lccs_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Fractional Cover Annual 50th Percentile",
+                     "type": "wms",
+                     "layers": "ls_usgs_fcp_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Water Observations from Space Annual Summary",
+                     "type": "wms",
+                     "layers": "ls_usgs_wofs_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "USGS Landsat 8 Geomedian",
+                     "type": "wms",
+                     "layers": "ls_usgs_geomedian_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+               ]
+            },
+            {
+               "name": "USGS Landsat 8",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 8 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls8_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "USGS Landsat 8 Fractional Cover",
+                     "type": "wms",
+                     "layers": "ls8_usgs_fc_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "USGS Landsat 8 Water Observation Feature Layer",
+                     "type": "wms",
+                     "layers": "ls_usgs_wofs",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
+               "name": "USGS Landsat 7",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 7 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls7_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
+               "name": "USGS Landsat 5",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 5 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls5_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            }
+         ]   
+      },
    ]
 }

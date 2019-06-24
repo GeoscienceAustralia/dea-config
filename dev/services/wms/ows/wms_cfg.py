@@ -1357,6 +1357,297 @@ For service status information, see https://status.dea.ga.gov.au""",
         ]
     },
     {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "landsat_barest_earth",
+        "title": "Barest Earth 30 Years",
+        "abstract": """
+A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
+
+The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+
+Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+
+Mosaics are available for the following years:
+    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
+    """,
+        # Link removed until eCat record is "published_external", not "published_internal"
+        # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword  for the layer
+                "label": "Combined Landsat",
+                # Included as a keyword  for the layer
+                "type": "albers",
+                # Included as a keyword  for the layer
+                "variant": "25m",
+                "abstract": """
+A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
+
+The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+
+Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+
+Mosaics are available for the following years:
+    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
+
+For service status information, see https://status.dea.ga.gov.au""",
+                # Link removed until eCat record is "published_external", not "published_internal"
+                # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
+
+                # The WMS name for the layer
+                "name": "landsat_barest_earth",
+                # The Datacube name for the associated data product
+                "product_name": "landsat_barest_earth",
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                #"max_datasets_wms": 1000,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["ndvi"]
+                },
+                "wcs_default_bands": ["red", "green", "blue"],
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "simple_rgb",
+                        "title": "Simple RGB",
+                        "abstract": "Simple true-colour image, using the red, green and blue bands",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "infrared_green",
+                        "title": "False colour - Green, SWIR, NIR",
+                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "ndvi",
+                        "title": "NDVI - Red, NIR",
+                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
+                        "needed_bands": ["red", "nir"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#8F3F20",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#8F3F20",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#A35F18"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#B88512"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#CEAC0E"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#E5D609"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FFFF0C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#C3DE09"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#88B808"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#529400"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#237100"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#114D04"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 480",
+                        "abstract": "Blue band, centered on 480nm",
+                        "components": {
+                            "red": {
+                                "blue": 1.0
+                            },
+                            "green": {
+                                "blue": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, centered on 560nm",
+                        "components": {
+                            "red": {
+                                "green": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 660",
+                        "abstract": "Red band, centered on 660nm",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "red": 1.0
+                            },
+                            "blue": {
+                                "red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 870",
+                        "abstract": "Near infra-red band, centered on 870nm",
+                        "components": {
+                            "red": {
+                                "nir": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "nir": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1610",
+                        "abstract": "Short wave infra-red band 1, centered on 1610nm",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "swir1": 1.0
+                            },
+                            "blue": {
+                                "swir1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2200",
+                        "abstract": "Short wave infra-red band 2, centered on 2200nm",
+                        "components": {
+                            "red": {
+                                "swir2": 1.0
+                            },
+                            "green": {
+                                "swir2": 1.0
+                            },
+                            "blue": {
+                                "swir2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "simple_rgb",
+
+            }
+        ]
+    },
+    {
         "name": "mangrove_cover",
         "title": "Mangrove Canopy Cover",
         "abstract": "",
@@ -1437,9 +1728,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "mangrove",
             },
             {
-                "label": "Mangrove Canopy Cover V2.0.1",
+                "label": "Mangrove Canopy Cover V2.0.2",
                 "abstract": """
-Mangrove canopy cover version 2.0.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Mangrove canopy cover version 2.0.2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 
 The mangrove canopy cover product provides valuable information about the extent and canopy density of mangroves for each year between 1987 and 2016 for the entire Australian coastline.
 The canopy cover classes are:
@@ -1450,12 +1741,12 @@ The product consists of  a sequence (one per year) of 25 meter resolution maps t
 For service status information, see https://status.dea.ga.gov.au""",
                 "type": "100km tile",
                 "variant": "25m",
-                "name": "mangrove_cover_v2_0_1",
+                "name": "mangrove_cover_v2_0_2",
                 "product_name": "mangrove_cover_test",
                 "min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
-                "extent_mask_func": lambda data, band: data["extent"] == 1,
+                "extent_mask_func": lambda data, band: data["extent"] != data["extent"].attrs['nodata'],
                 "ignore_info_flags": [],
                 "data_manual_merge": False,
                 "always_fetch_bands": ["extent"],
@@ -1471,6 +1762,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "abstract": "",
                         "value_map": {
                             "canopy_cover_class": [
+                                {
+                                    "title": "Not Observed",
+                                    "abstract": "(Clear Obs < 3)",
+                                    "flags": {
+                                        "notobserved": True
+                                    },
+                                    "color": "#BDBDBD"
+                                },
                                 {
                                     "title": "Woodland",
                                     "abstract": "(20% - 50% cover)",
@@ -5043,43 +5342,15 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": " Water Summary",
                         "abstract": "WOfS NRT",
                         "needed_bands": ["water"],
-                        "color_ramp": [
-                            {
-                                "value": 0.0,
-                                "color": "#ffffff",
-                                "alpha": 0.0,
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#d5fef9",
-                                "alpha": 0.0,
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#71e3ff"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#01ccff"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#0178ff"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#2701ff"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#5700e3"
-                            }
-                        ],
-                        "legend": {
-                            "units": "%",
-                            "radix_point": 0,
-                            "scale_by": 100.0,
-                            "major_ticks": 0.1
+                        "value_map": {
+                            "water": [
+                                {
+                                    "title": "Wet",
+                                    "abstract": "(100%)",
+                                    "color": "#5700E3"
+                                },
+
+                            ]
                         }
                     },
                 ],
@@ -5097,7 +5368,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "Sentinel-2 Definitive",
         "title": "Sentinel Definitive",
-        "abstract": "This is a definitive archive of daily Sentinel-2 data. ",
+        "abstract": "This is a definitive archive of daily Sentinel-2 data."
+        "The Surface Reflectance product has been corrected to account for variations"
+        "caused by atmospheric properties, sun position and sensor view angle at time of image capture."
+        "These corrections have been applied to all satellite imagery in the Sentinel-2 archive"
+        "For more information see http://pid.geoscience.gov.au/dataset/ga/129684",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
@@ -5111,6 +5386,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
+The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
 
 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
 The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
@@ -5119,6 +5395,7 @@ The index indicates levels of chlorophyll-a (chl-a) concentrations in complex tu
 - Cloud cover
 Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
 
+For more information see http://pid.geoscience.gov.au/dataset/ga/129684
 For service status information, see https://status.dea.ga.gov.au""",
                 # The WMS name for the layer
                 "name": "s2_ard_granule_nbar_t",
@@ -5602,6 +5879,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
 
+The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
+
+For more information see http://pid.geoscience.gov.au/dataset/ga/129684
+
 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
 The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
 - Influence on the remote sensing signal from nearby land and/or atmospheric effects
@@ -5802,6 +6083,44 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
+                        "needed_bands": ["nbart_green", "nbart_swir_2"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
@@ -6053,6 +6372,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
 
+The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
+
+For more information see http://pid.geoscience.gov.au/dataset/ga/129684
+
 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
 The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
 - Influence on the remote sensing signal from nearby land and/or atmospheric effects
@@ -6254,6 +6577,44 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 1.0,
                                 "color": "#0303FF",
                             },
+                        ]
+                    },
+                    {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
+                        "needed_bands": ["nbart_green", "nbart_swir_2"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
