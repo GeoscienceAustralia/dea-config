@@ -1,0 +1,131 @@
+name: ga_ls5t_ard_3
+description: GA Landsat-5 New Collection Upgrade Product (EPSG:4326)
+metadata_type: eo
+metadata:
+  product_type: ga_ls5t_ard_3
+  platform:
+    code: LANDSAT_5
+  format:
+    name: GeoTIFF
+  instrument:
+    name: TM
+storage:
+  driver: GeoTIFF
+  crs: EPSG:4326
+  tile_size:
+    x: 100000.0
+    y: 100000.0
+  resolution:
+    x: 25
+    y: -25
+  dimension_order: [time, y, x]
+measurements:
+  - dtype: int16
+    name: nbar_band01
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbar_band02
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbar_band03
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbar_band04
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbar_band05
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbar_band07
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbart_band01
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbart_band02
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbart_band03
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbart_band04
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbart_band05
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: nbart_band07
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_azimuthal_exiting
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_azimuthal_incident
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_combined_terrain_shadow
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_exiting_angle
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_fmask
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_incident_angle
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_nbar_contiguity
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_nbart_contiguity
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_relative_azimuth
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_relative_slope
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_satellite_azimuth
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_satellite_view
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_solar_azimuth
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_solar_zenith
+    nodata: -999
+    units: '1'
+  - dtype: int16
+    name: oa_time_delta
+    nodata: -999
+    units: '1'
+
