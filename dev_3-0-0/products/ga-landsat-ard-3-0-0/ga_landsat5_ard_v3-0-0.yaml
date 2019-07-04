@@ -2,23 +2,15 @@ name: ga_ls5t_ard_3
 description: GA Landsat-5 New Collection Upgrade Product (EPSG:4326)
 metadata_type: eo
 metadata:
-  product_type: ga_ls5t_ard_3
+  product_type: ard
   platform:
-    code: LANDSAT_5
+    code: landsat-5
   format:
     name: GeoTIFF
   instrument:
     name: TM
 storage:
-  driver: GeoTIFF
   crs: EPSG:4326
-  tile_size:
-    x: 100000.0
-    y: 100000.0
-  resolution:
-    x: 25
-    y: -25
-  dimension_order: [time, y, x]
 measurements:
   - dtype: int16
     name: nbar_band01
