@@ -314,30 +314,45 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
                         "needed_bands": ["green", "nir"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["green"] + data["swir1"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
@@ -662,30 +677,45 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
                         "needed_bands": ["green", "nir"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["green"] + data["swir1"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
@@ -1010,30 +1040,45 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
                         "needed_bands": ["green", "nir"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (data["green"] + data["swir1"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
@@ -4200,31 +4245,46 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
                         "needed_bands": ["nbart_green", "nbart_swir_2"],
                         "color_ramp": [
@@ -4659,31 +4719,46 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
                         "needed_bands": ["nbart_green", "nbart_swir_2"],
                         "color_ramp": [
@@ -5119,31 +5194,46 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
                         "needed_bands": ["nbart_green", "nbart_swir_2"],
                         "color_ramp": [
@@ -5524,7 +5614,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "pq_band": "pixel_quality",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -5651,65 +5741,48 @@ For service status information, see https://status.dea.ga.gov.au""",
 
                     },
                     {
-                        "name": "nbr",
-                        "title": "NBR",
-                        "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995)",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
-                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#d81e11",
-                                "legend": {}
-                            },
-                            {
-                                "value": -0.2,
-                                "color": "#d81e11",
-                            },
-                            {
-                                "value": -0.19999999,
-                                "color": "#d81e11",
-                                "alpha": 0.0,
-                                "legend": {
-                                    "label": ">-0.2"
-                                }
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#d81e11",
-                                "alpha": 0.0,
-                            },
-                        ]
-
-                    },
-                    {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
                         "needed_bands": ["nbart_green", "nbart_swir_2"],
                         "color_ramp": [
@@ -6017,7 +6090,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "pq_band": "pixel_quality",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -6144,65 +6217,48 @@ For service status information, see https://status.dea.ga.gov.au""",
 
                     },
                     {
-                        "name": "nbr",
-                        "title": "NBR",
-                        "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995)",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
-                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#d81e11",
-                                "legend": {}
-                            },
-                            {
-                                "value": -0.2,
-                                "color": "#d81e11",
-                            },
-                            {
-                                "value": -0.19999999,
-                                "color": "#d81e11",
-                                "alpha": 0.0,
-                                "legend": {
-                                    "label": ">-0.2"
-                                }
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#d81e11",
-                                "alpha": 0.0,
-                            },
-                        ]
-
-                    },
-                    {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
                         "needed_bands": ["nbart_green", "nbart_swir_2"],
                         "color_ramp": [
@@ -6510,7 +6566,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "pq_band": "pixel_quality",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -6638,65 +6694,48 @@ For service status information, see https://status.dea.ga.gov.au""",
 
                     },
                     {
-                        "name": "nbr",
-                        "title": "NBR",
-                        "abstract": "The Normalized burn ratio (NBR) is used to identify burned areas. The formula is similar to a normalized difference vegetation index (NDVI), except that it uses near-infrared (NIR) and shortwave-infrared (SWIR) portions of the electromagnetic spectrum (Lopez, 1991; Key and Benson, 1995)",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_swir_3"]) / (data["nbart_nir_1"] + data["nbart_swir_3"]),
-                        "needed_bands": ["nbart_swir_3", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -1.0,
-                                "color": "#d81e11",
-                                "legend": {}
-                            },
-                            {
-                                "value": -0.2,
-                                "color": "#d81e11",
-                            },
-                            {
-                                "value": -0.19999999,
-                                "color": "#d81e11",
-                                "alpha": 0.0,
-                                "legend": {
-                                    "label": ">-0.2"
-                                }
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#d81e11",
-                                "alpha": 0.0,
-                            },
-                        ]
-
-                    },
-                    {
                         "name": "ndwi",
                         "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
                                     data["nbart_nir_1"] + data["nbart_green"]),
                         "needed_bands": ["nbart_green", "nbart_nir_1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                     {
                         "name": "mndwi",
                         "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
                         "needed_bands": ["nbart_green", "nbart_swir_2"],
                         "color_ramp": [
@@ -8670,25 +8709,40 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, SWIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (
                                     data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                 ],
@@ -8891,25 +8945,40 @@ For service status information, see https://status.dea.ga.gov.au""",
                     {
                         "name": "ndwi",
                         "title": "NDWI - Green, SWIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
                         "index_function": lambda data: (data["green"] - data["swir1"]) / (
                                     data["swir1"] + data["green"]),
                         "needed_bands": ["green", "swir1"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#8F3F20",
+                                "value": -0.1,
+                                "color": "#f7fbff",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
+                                "color": "#d8e7f5"
                             },
                             {
-                                "value": 1.0,
-                                "color": "#0303FF",
+                                "value": 0.1,
+                                "color": "#b0d2e8"
                             },
+                            {
+                                "value": 0.2,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#08306b"
+                            }
                         ]
                     },
                 ],
@@ -12164,4 +12233,3 @@ For service status information, see https://status.dea.ga.gov.au""",
         ]
     }
 ]
-
