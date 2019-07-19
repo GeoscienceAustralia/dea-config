@@ -16,6 +16,8 @@ service_cfg = {
     "url": [
         "https://ows.services.dea.ga.gov.au",
         "https://ows.services.dev.dea.ga.gov.au",
+        "https://ows.dev.dea.ga.gov.au",
+        "https://ows.prod.dea.ga.gov.au",
         "https://ows.services.devkube.dea.ga.gov.au",
         "https://nrt.services.dea.ga.gov.au",
         "https://geomedian.services.dea.ga.gov.au",
