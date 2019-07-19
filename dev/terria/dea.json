@@ -352,7 +352,7 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Devinitive Surface Reflectance (Sentinel 2A and 2B combined)",
+                     "name": "Definitive Surface Reflectance (Sentinel 2A and 2B combined)",
                      "type": "wms",
                      "layers": "s2_ard_granule_nbar_t",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -1285,7 +1285,7 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Devinitive Surface Reflectance (Sentinel 2A and 2B combined)",
+                     "name": "Definitive Surface Reflectance (Sentinel 2A and 2B combined)",
                      "type": "wms",
                      "layers": "s2_ard_granule_nbar_t",
                      "url": "https://ows.prod.dea.ga.gov.au/",
