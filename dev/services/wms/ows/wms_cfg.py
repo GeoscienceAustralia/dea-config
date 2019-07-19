@@ -349,7 +349,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -712,7 +717,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -1075,7 +1085,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -4281,7 +4296,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -4755,7 +4775,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -4793,7 +4818,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 1.0,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "ndci",
@@ -5230,7 +5260,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -5779,7 +5814,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -6255,7 +6295,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
@@ -6732,7 +6777,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 0.5,
                                 "color": "#08306b"
                             }
-                        ]
+                        ],
+                        "legend": {
+                            "radix_point": 0,
+                            "scale_by": 1,
+                            "major_ticks": 0.1
+                        }
                     },
                     {
                         "name": "mndwi",
