@@ -189,7 +189,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi"]
+                    "styles": ["ndvi", "ndwi", "mndwi"]
                 },
                 "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -552,7 +552,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi"]
+                    "styles": ["ndvi", "ndwi", "mndwi"]
                 },
                 "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -915,7 +915,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi"]
+                    "styles": ["ndvi", "ndwi", "mndwi"]
                 },
                 "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -4134,7 +4134,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -4608,7 +4608,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -5082,7 +5082,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -5632,7 +5632,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -6108,7 +6108,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -6584,7 +6584,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi", "ndci"]
+                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                 # Styles.
@@ -8584,7 +8584,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi"]
+                    "styles": ["ndvi", "ndwi", "mndwi"]
                 },
                 "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -8626,7 +8626,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         },
                         # The raw band value range to be compressed to an 8 bit range for the output image tiles.
                         # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 0.30]
+                        "scale_range": [0.0, 0.3]
                     },
                     {
                         "name": "infrared_green",
@@ -8643,7 +8643,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "green": 1.0
                             }
                         },
-                        "scale_range": [0.0, 0.30]
+                        "scale_range": [0.0, 0.3]
                     },
                     #
                     # Examples of non-linear heat-mapped styles.
@@ -8708,11 +8708,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
-                        "index_function": lambda data: (data["green"] - data["swir1"]) / (
-                                    data["swir1"] + data["green"]),
-                        "needed_bands": ["green", "swir1"],
+                        "title": "NDWI - Green, NIR",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
+                        "needed_bands": ["green", "nir"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -8745,6 +8744,146 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         ]
                     },
+                    {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (data["green"] + data["swir1"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, centered on 490nm",
+                        "components": {
+                            "red": {
+                                "blue": 1.0
+                            },
+                            "green": {
+                                "blue": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, centered on 560nm",
+                        "components": {
+                            "red": {
+                                "green": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 660",
+                        "abstract": "Red band, centered on 660nm",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "red": 1.0
+                            },
+                            "blue": {
+                                "red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, centered on 840nm",
+                        "components": {
+                            "red": {
+                                "nir": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "nir": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1650",
+                        "abstract": "Short wave infra-red band 1, centered on 1650nm",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "swir1": 1.0
+                            },
+                            "blue": {
+                                "swir1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2220",
+                        "abstract": "Short wave infra-red band 2, centered on 2220nm",
+                        "components": {
+                            "red": {
+                                "swir2": 1.0
+                            },
+                            "green": {
+                                "swir2": 1.0
+                            },
+                            "blue": {
+                                "swir2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
@@ -8820,7 +8959,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi", "ndwi"]
+                    "styles": ["ndvi", "ndwi", "mndwi"]
                 },
                 "wcs_default_bands": ["red", "green", "blue"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -8862,7 +9001,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         },
                         # The raw band value range to be compressed to an 8 bit range for the output image tiles.
                         # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 0.30]
+                        "scale_range": [0.0, 0.3]
                     },
                     {
                         "name": "infrared_green",
@@ -8879,7 +9018,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "green": 1.0
                             }
                         },
-                        "scale_range": [0.0, 0.30]
+                        "scale_range": [0.0, 0.3]
                     },
                     #
                     # Examples of non-linear heat-mapped styles.
@@ -8944,11 +9083,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     {
                         "name": "ndwi",
-                        "title": "NDWI - Green, SWIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
-                        "index_function": lambda data: (data["green"] - data["swir1"]) / (
-                                    data["swir1"] + data["green"]),
-                        "needed_bands": ["green", "swir1"],
+                        "title": "NDWI - Green, NIR",
+                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+                        "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
+                        "needed_bands": ["green", "nir"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -8981,6 +9119,146 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         ]
                     },
+                    {
+                        "name": "mndwi",
+                        "title": "MNDWI - Green, SWIR",
+                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
+                        "index_function": lambda data: (data["green"] - data["swir1"]) / (data["green"] + data["swir1"]),
+                        "needed_bands": ["green", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "blue",
+                        "title": "Blue - 490",
+                        "abstract": "Blue band, centered on 490nm",
+                        "components": {
+                            "red": {
+                                "blue": 1.0
+                            },
+                            "green": {
+                                "blue": 1.0
+                            },
+                            "blue": {
+                                "blue": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "green",
+                        "title": "Green - 560",
+                        "abstract": "Green band, centered on 560nm",
+                        "components": {
+                            "red": {
+                                "green": 1.0
+                            },
+                            "green": {
+                                "green": 1.0
+                            },
+                            "blue": {
+                                "green": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "red",
+                        "title": "Red - 660",
+                        "abstract": "Red band, centered on 660nm",
+                        "components": {
+                            "red": {
+                                "red": 1.0
+                            },
+                            "green": {
+                                "red": 1.0
+                            },
+                            "blue": {
+                                "red": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "nir",
+                        "title": "Near Infrared (NIR) - 840",
+                        "abstract": "Near infra-red band, centered on 840nm",
+                        "components": {
+                            "red": {
+                                "nir": 1.0
+                            },
+                            "green": {
+                                "nir": 1.0
+                            },
+                            "blue": {
+                                "nir": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "swir1",
+                        "title": "Shortwave Infrared (SWIR) - 1650",
+                        "abstract": "Short wave infra-red band 1, centered on 1650nm",
+                        "components": {
+                            "red": {
+                                "swir1": 1.0
+                            },
+                            "green": {
+                                "swir1": 1.0
+                            },
+                            "blue": {
+                                "swir1": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    },
+                    {
+                        "name": "swir2",
+                        "title": "Shortwave Infrared (SWIR) - 2220",
+                        "abstract": "Short wave infra-red band 2, centered on 2220nm",
+                        "components": {
+                            "red": {
+                                "swir2": 1.0
+                            },
+                            "green": {
+                                "swir2": 1.0
+                            },
+                            "blue": {
+                                "swir2": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 0.3]
+                    }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
