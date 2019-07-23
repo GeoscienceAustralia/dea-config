@@ -323,18 +323,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
-                            },
-                            {
-                                "value": -0.1,
-                                "color": "#f7fbff"
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -698,18 +694,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
-                            },
-                            {
-                                "value": -0.1,
-                                "color": "#f7fbff"
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -1073,14 +1065,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -4287,14 +4279,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -4769,14 +4761,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -4841,12 +4833,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "value": 1.0,
                                 "color": "#08306b"
                             }
-                        ],
-                        "legend": {
-                            "radix_point": 0,
-                            "scale_by": 1,
-                            "major_ticks": 0.1
-                        }
+                        ]
                     },
                     {
                         "name": "ndci",
@@ -5257,14 +5244,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -5814,14 +5801,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -6298,14 +6285,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -6783,14 +6770,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -8803,14 +8790,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
-                                "legend": {
-                                    "prefix": "<"
-                                }
+                                "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
                                 "color": "#d8e7f5",
-                                "legend": { }
+                                "legend": {
+                                    "prefix": "<"
+                                }
                             },
                             {
                                 "value": 0.1,
@@ -9183,6 +9170,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "index_function": lambda data: (data["green"] - data["nir"]) / (data["nir"] + data["green"]),
                         "needed_bands": ["green", "nir"],
                         "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+
+                            },
                             {
                                 "value": -0.1,
                                 "color": "#f7fbff",
