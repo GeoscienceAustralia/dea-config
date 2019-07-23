@@ -4357,8 +4357,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "ndci",
                         "title": "NDCI - Red Edge, Red",
                         "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -4839,8 +4839,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "ndci",
                         "title": "NDCI - Red Edge, Red",
                         "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -5322,8 +5322,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "ndci",
                         "title": "NDCI - Red Edge, Red",
                         "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -5879,8 +5879,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "ndci",
                         "title": "NDCI - Red Edge, Red",
                         "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -6363,8 +6363,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "ndci",
                         "title": "NDCI - Red Edge, Red",
                         "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -6848,8 +6848,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "ndci",
                         "title": "NDCI - Red Edge, Red",
                         "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_3"]) / (data["nbart_green"] + data["nbart_swir_3"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_3"],
+                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
+                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
                         "color_ramp": [
                             {
                                 "value": -0.1,
@@ -12402,209 +12402,4 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "pq_masks": [
                         {
                             "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
-                }
-            ],
-            # Default style (if request does not specify style)
-            # MUST be defined in the styles list above.
-
-            # (Looks like Terria assumes this is the first style in the list, but this is
-            #  not required by the standard.)
-            "default_style": "simple_fc",
-            },
-            {
-            # Included as a keyword  for the layer
-            "label": "Fractional Cover Landsat 8",
-            # Included as a keyword  for the layer
-            "type": "100km tile",
-            # Included as a keyword  for the layer
-            "variant": "25m",
-            "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
-
-This product contains Fractional Cover dervied from the Landsat 8 satellite
-
-For service status information, see https://status.dea.ga.gov.au""",
-            # The WMS name for the layer
-            "name": "ls8_fc_albers",
-            # The Datacube name for the associated data product
-            "product_name": "ls8_fc_albers",
-            # The Datacube name for the associated pixel-quality product (optional)
-            # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
-            # The name of the measurement band for the pixel-quality product
-            # (Only required if pq_dataset is set)
-            "pq_band": "water",
-            # Fuse function for pq data
-            "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
-            # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-            # to actual imagery occurs.
-            "min_zoom_factor": 10.0,
-            # The fill-colour of the indicative polygons when zoomed out.
-            # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-            "zoomed_out_fill_colour": [ 150, 180, 200, 160],
-            # Time Zone.  In hours added to UTC (maybe negative)
-            # Used for rounding off scene times to a date.
-            # 9 is good value for imagery of Australia.
-            "time_zone": 9,
-            # Extent mask function
-            # Determines what portions of dataset is potentially meaningful data.
-            "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-            # Flags listed here are ignored in GetFeatureInfo requests.
-            # (defaults to empty list)
-            "ignore_info_flags": [],
-            "legend": {
-                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
-            },
-            "wcs_default_bands": ["BS", "PV", "NPV"],
-            "styles": [
-                {
-                    "name": "simple_fc",
-                    "title": "Fractional Cover",
-                    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-                    "components": {
-                        "red": {
-                            "BS": 1.0
-                        },
-                        "green": {
-                            "PV": 1.0
-                        },
-                        "blue": {
-                            "NPV": 1.0
-                        }
-                    },
-                    "scale_range": [0.0, 100.0],
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
-                }
-            ],
-            # Default style (if request does not specify style)
-            # MUST be defined in the styles list above.
-
-            # (Looks like Terria assumes this is the first style in the list, but this is
-            #  not required by the standard.)
-            "default_style": "simple_fc",
-            },
-            {
-            # Included as a keyword  for the layer
-            "label": "Fractional Cover Combined",
-            # Included as a keyword  for the layer
-            "type": "100km tile",
-            # Included as a keyword  for the layer
-            "variant": "25m",
-            "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
-
-This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites
-
-For service status information, see https://status.dea.ga.gov.au""",
-            # The WMS name for the layer
-            "name": "fc_albers_combined",
-            # The Datacube name for the associated data product
-            "multi_product": True,
-            "product_name": ["ls5_fc_albers", "ls7_fc_albers", "ls8_fc_albers"],
-            # The Datacube name for the associated pixel-quality product (optional)
-            # The name of the associated Datacube pixel-quality product
-            "pq_dataset": ["wofs_albers", "wofs_albers", "wofs_albers"],
-            # The name of the measurement band for the pixel-quality product
-            # (Only required if pq_dataset is set)
-            "pq_band": "water",
-            # Fuse function for pq data
-            "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
-            # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-            # to actual imagery occurs.
-            "min_zoom_factor": 10.0,
-            # The fill-colour of the indicative polygons when zoomed out.
-            # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-            "zoomed_out_fill_colour": [ 150, 180, 200, 160],
-            # Time Zone.  In hours added to UTC (maybe negative)
-            # Used for rounding off scene times to a date.
-            # 9 is good value for imagery of Australia.
-            "time_zone": 9,
-            # Extent mask function
-            # Determines what portions of dataset is potentially meaningful data.
-            "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-            # Flags listed here are ignored in GetFeatureInfo requests.
-            # (defaults to empty list)
-            "ignore_info_flags": [],
-            "legend": {
-                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
-            },
-            "wcs_default_bands": ["BS", "PV", "NPV"],
-            "styles": [
-                {
-                    "name": "simple_fc",
-                    "title": "Fractional Cover",
-                    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-                    "components": {
-                        "red": {
-                            "BS": 1.0
-                        },
-                        "green": {
-                            "PV": 1.0
-                        },
-                        "blue": {
-                            "NPV": 1.0
-                        }
-                    },
-                    "scale_range": [0.0, 100.0],
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
-                }
-            ],
-            # Default style (if request does not specify style)
-            # MUST be defined in the styles list above.
-
-            # (Looks like Terria assumes this is the first style in the list, but this is
-            #  not required by the standard.)
-            "default_style": "simple_fc",
-            },
-        ]
-    }
-]
+                                
