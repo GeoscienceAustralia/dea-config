@@ -1,6 +1,7 @@
 {
     "corsDomains": [
        "dea.ga.gov.au",
+       "digitalearth.africa",
        "dea-public-data-dev.s3-ap-southeast-2.amazonaws.com"
     ],
     "homeCamera": {
