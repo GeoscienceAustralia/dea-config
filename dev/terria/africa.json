@@ -29,6 +29,7 @@
                       "linkedWcsCoverage": "ls5_usgs_sr_scene",
                       "ignoreUnknownTileErrors": true,
                       "opacity": 1,
+                      "featureTimesProperty": "data_available_for_dates",
                       "featureInfoTemplate": {
                          "formats": {
                             "lat": {
@@ -50,6 +51,7 @@
                     "linkedWcsCoverage": "ls7_usgs_sr_scene",
                     "ignoreUnknownTileErrors": true,
                     "opacity": 1,
+                    "featureTimesProperty": "data_available_for_dates",
                     "featureInfoTemplate": {
                        "formats": {
                           "lat": {
@@ -71,6 +73,7 @@
                     "linkedWcsCoverage": "ls8_usgs_sr_scene",
                     "ignoreUnknownTileErrors": true,
                     "opacity": 1,
+                    "featureTimesProperty": "data_available_for_dates",
                     "featureInfoTemplate": {
                        "formats": {
                           "lat": {
