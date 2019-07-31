@@ -43,7 +43,7 @@ metadata:
     platform: {code: SENTINEL_2A}
     processing_level: Level-2
     product_type: ard
-metadata_type: gqa_eo
+metadata_type: eo_plus
 
 measurements:
   - aliases: [azimuthal_exiting]
@@ -646,7 +646,7 @@ metadata:
     platform: {code: SENTINEL_2B}
     processing_level: Level-2
     product_type: ard
-metadata_type: gqa_eo
+metadata_type: eo_plus
 
 measurements:
   - aliases: [azimuthal_exiting]
