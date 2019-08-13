@@ -35,10 +35,19 @@
          "preserveOrder": true,
          "items": [
             {
-               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance (Beta)",
+               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance true colour (Beta)",
                "type": "wms",
                "url": "https://gsky.nci.org.au/ows/dea",
-               "layers": "blend_sentinel2_landsat_nbart_daily",
+               "layers": "blend_sentinel2_landsat_nbart_daily_true_colour",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            },
+            {
+               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance false colour (Beta)",
+               "type": "wms",
+               "url": "https://gsky.nci.org.au/ows/dea",
+               "layers": "blend_sentinel2_landsat_nbart_daily_false_colour",
                "ignoreUnknownTileErrors": true,
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
