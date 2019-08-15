@@ -52,7 +52,7 @@ service_cfg = {
     },
 
     ## Required config for WCS
-    # Must be a geographic CRS in the published_CRSs list.  EPSG:4326 is recommended, but any geographic CRS should work.
+    # Must be a geographic CRS in the published_CRSs list. EPSG:4326 is recommended, but any geographic CRS should work.
     "default_geographic_CRS": "EPSG:4326",
 
     # Supported WCS formats
@@ -116,7 +116,7 @@ service_cfg = {
     },
     "fees": "",
     "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. " 
-                          "This product is released under the Creative Commons Attribution 4.0 International Licence. " 
+                          "This product is released under the Creative Commons Attribution 4.0 International Licence. "
                           "http://creativecommons.org/licenses/by/4.0/legalcode",
     "preauthenticate_s3": True,
     "geotiff_georeference_source": "INTERNAL"
@@ -136,11 +136,11 @@ layer_cfg = [
         # to describe the label to end-users.
         "products": [
             {
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
                 "label": "Landsat 8",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Annual Geomedian",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "abstract": """
@@ -507,11 +507,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Landsat 7",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Annual Geomedian",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
@@ -878,11 +878,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Landsat 5",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Annual Geomedian",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
@@ -1273,11 +1273,11 @@ Mosaics are available for the following years:
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Landsat 8",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Barest Earth",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
@@ -1564,11 +1564,11 @@ Mosaics are available for the following years:
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Combined Landsat",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "albers",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
 A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
@@ -2003,11 +2003,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Filtered Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Filtered Water Summary",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary",
@@ -2183,11 +2183,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "WOfS_filtered_frequency",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Wet Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_summary_wet",
@@ -2301,11 +2301,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "water_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Clear Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_summary_clear",
@@ -2420,11 +2420,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "clear_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Water Summary",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "Water Observations from Space Statistics",
@@ -2596,11 +2596,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "WOfS_frequency",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Filtered Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Confidence",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary_confidence",
@@ -2697,11 +2697,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "wofs_confidence",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Annual Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Wet Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_annual_summary_wet",
@@ -2815,11 +2815,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "annual_water_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Annual Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Clear Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_annual_summary_clear",
@@ -2934,11 +2934,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "annual_clear_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Annual Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Water Summary",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_annual_summary_statistics",
@@ -3102,11 +3102,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "annual_WOfS_frequency",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS April - October Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Wet Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_apr_oct_summary_wet",
@@ -3219,11 +3219,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_water_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS April - October Summary Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Clear Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_apr_oct_summary_clear",
@@ -3337,11 +3337,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_clear_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS April - October Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Water Summary",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_apr_oct_summary_statistics",
@@ -3504,11 +3504,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_WOfS_frequency",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS November - March Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Wet Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_nov_mar_summary_wet",
@@ -3621,11 +3621,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_water_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS November - March Summary Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Clear Count",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_nov_mar_summary_clear",
@@ -3739,11 +3739,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_clear_observations",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS November - March Statistics",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Water Summary",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_nov_mar_summary_statistics",
@@ -3906,11 +3906,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_WOfS_frequency",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "WOfS Daily Observations",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "albers",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_albers",
@@ -4110,11 +4110,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Sentinel 2 (A and B combined)",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "Surface Reflectance",
                 "abstract":"""
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
@@ -4593,11 +4593,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Sentinel 2B",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "Surface Reflectance",
                 "abstract":"""
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
@@ -5075,11 +5075,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Sentinel 2A",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
@@ -5558,11 +5558,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Sentinel 2 WOfS NRT",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Water Classifier",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 # The WMS name for the layer
                 "name": "s2_nrt_wofs",
@@ -5632,11 +5632,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Sentinel 2 (A and B combined)",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
@@ -6115,11 +6115,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Sentinel 2B",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
@@ -6599,11 +6599,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Sentinel 2A",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
@@ -8591,7 +8591,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "High Tide",
                 "abstract":"""
 High Tide and Low Tide Composites 2.0.0
@@ -8617,9 +8617,9 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
                 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Tidal Composite",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "high_tide_composite",
@@ -8974,7 +8974,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Low Tide",
                 "abstract": """
 High Tide and Low Tide Composites 2.0.0
@@ -9000,9 +9000,9 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
                 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "Tidal Composite",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "low_tide_composite",
@@ -9382,7 +9382,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Relative Layer",
                 "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
@@ -9428,9 +9428,9 @@ ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
 
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "ITEM v2.0.0",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "ITEM_V2.0.0",
@@ -9518,7 +9518,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "relative_layer",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Confidence Layer",
                 "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
@@ -9563,9 +9563,9 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands. 
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "ITEM v2.0.0",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "ITEM_V2.0.0_Conf",
@@ -9680,13 +9680,13 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Waterbody Area Mapping and Monitoring",
                 "abstract": "Waterbody Area Mapping and Monitoring"
                             "For service status information, see https://status.dea.ga.gov.au",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "water_bodies",
@@ -9739,11 +9739,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "dam_id",
             },
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "HAP",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "historical airborne photography",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "munged",
                 # The WMS name for the layer
                 "name": "historical_airborne_photography",
@@ -9827,50 +9827,55 @@ For service status information, see https://status.dea.ga.gov.au""",
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
-        "name": "National ASTER Map",
-        "title": "National ASTER Map of Australia",
+        "name": "ASTER Geoscience Map",
+        "title": "ASTER Geoscience Map of Australia",
         "abstract": """
-This datsaet comprises a set of 14+ geoscience products made up of mosaiced ASTER scenes across Australia.
-The individual geoscience products are a compbination of bands and band ratios to highlight different mineral groups and parameters including:
-False colour composite
-CSIRO Landsat TM Regolith Ratios
-Green vegetation content
-Ferric oxide content
-Ferric oxide composition
-Ferrous iron index
-Opaque index
-AlOH group content
-AlOH group composition
-Kaolin group index
-FeOH group content
-MgOH group content
-MgOH group composition
-Ferrous iron content in MgOH/carbonate""",
+This dataset comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+The individual geoscience products are a combination of bands and band ratios to highlight different mineral groups and parameters including:
+- False Colour Mosaic
+- Regolith Ratios
+- AlOH Group Composition
+- AlOH Group Content
+- FeOH Group Content
+- Ferric Oxide Composition
+- Ferric Oxide Content
+- Ferrous Iron Content in MgOH/Carbonate
+- Ferrous Iron Index
+- Green Vegetation Content
+- Gypsum Index
+- Kaolin Group Index
+- MgOH Group Composition
+- MgOH Group Content
+- Opaque Index
+- Silica Index
+- Quartz Index
+""",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "False Colour Mosaic",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 False colour RGB composite
 
-Red: B3
-
-Green: B2
-
-Blue: B1
-
+- Red: B3
+- Green: B2
+- Blue: B1
 (red = green vegetation)
 
 Use this image to help understand non-geological differences within and between ASTER scenes caused by green vegetation (red), fire scars, thin and thick cloud and cloud shadows.
 
-Use band 2 only for a gray-scale background to the content, composition and index colour products.""",
+Use band 2 only for a gray-scale background to the content, composition and index colour products.
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_false_colour",
                 # The Datacube name for the associated data product
@@ -9953,30 +9958,28 @@ Use band 2 only for a gray-scale background to the content, composition and inde
                 "default_style": "false_colour",
             },  # ASTER False Colour
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Regolith Ratios",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 3 band RGB composite
 
-Red: B3/B2
-
-Green: B3/B7
-
-Blue: B4/B7
-
+- Red: B3/B2
+- Green: B3/B7
+- Blue: B4/B7
 (white = green vegetation)
 
 Use this image to help interpret:
 
 (1) the amount of green vegetation cover (appears as white);
-
 (2) basic spectral separation (colour) between different regolith and geological units and regions/provinces; and
+(3) evidence for unmasked cloud (appears as green).
 
-(3) evidence for unmasked cloud (appears as green).""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_regolith_ratios",
                 # The Datacube name for the associated data product
@@ -10042,30 +10045,29 @@ Use this image to help interpret:
                 "default_style": "simple_rgb",
             },  # ASTER Regolith Ratios
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "AlOH Group Composition",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B5/B7
 
-Blue is well ordered kaolinite, Al-rich muscovite/illite, paragonite, pyrophyllite
-
-Red is Al-poor (Si-rich) muscovite (phengite)
+- Blue is well ordered kaolinite, Al-rich muscovite/illite, paragonite, pyrophyllite
+- Red is Al-poor (Si-rich) muscovite (phengite)
 
 Useful for mapping:
 
 (1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);
-
 (2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours;
-
 (3) stratigraphic mapping based on different clay-types; and
-
 (4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).
 
-Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).""",
+Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole)
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_aloh_group_composition",
                 # The Datacube name for the associated data product
@@ -10189,36 +10191,34 @@ Combine with Ferrous iron in MgOH and FeOH content products to look for evidence
                 "default_style": "ramp",
             },  # ASTER AlOH Group Composition
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "AlOH Group Content",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: (B5+B7)/B6
 
-Blue is low abundance
-
-Red is high abundance
+- Blue is low abundance
+- Red is high abundance
 
 (potentially includes: phengite, muscovite, paragonite, lepidolite, illite, brammalite, montmorillonite, beidellite, kaolinite, dickite)
 
 Useful for mapping:
 
 (1) exposed saprolite/saprock;
-
 (2) clay-rich stratigraphic horizons;
-
 (3) lithology-overprinting hydrothermal phyllic (e.g. white mica) alteration; and
-
 (4) clay-rich diluents in ore systems (e.g. clay in iron ore).
 
 Also combine with AlOH composition to help map:
 
 (1) exposed in situ parent material persisting through “cover” which can be expressed as:
+(a) more abundant AlOH content + (b) long-wavelength (warmer colour) AlOH composition (e.g. muscovite/phengite)
 
-(a) more abundant AlOH content + (b) long-wavelength (warmer colour) AlOH composition (e.g. muscovite/phengite).""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_aloh_group_content",
                 # The Datacube name for the associated data product
@@ -10342,32 +10342,30 @@ Also combine with AlOH composition to help map:
                 "default_style": "ramp",
             },  # ASTER AlOH Group Content
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "FeOH Group Content",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: (B6+B8)/B7
 
-Blue is low content,
-
-Red is high content
+- Blue is low content,
+- Red is high content
 
 (potentially includes: chlorite, epidote, jarosite, nontronite, gibbsite, gypsum, opal-chalcedony
 
 Useful for mapping:
 
 (1) jarosite (acid conditions) – in combination with ferric oxide content (high);
-
 (2) gypsum/gibbsite – in combination with ferric oxide content (low);
-
 (3) magnesite - in combination with ferric oxide content (low) and MgOH content (moderate-high);
-
 (4) chlorite (e.g. propyllitic alteration) – in combination with Ferrous in MgOH (high); and
+(5) epidote (calc-silicate alteration) – in combination with Ferrous in MgOH (low).
 
-(5) epidote (calc-silicate alteration) – in combination with Ferrous in MgOH (low).""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_feoh_group_content",
                 # The Datacube name for the associated data product
@@ -10491,26 +10489,26 @@ Useful for mapping:
                 "default_style": "ramp",
             },  # ASTER FeOH Group Content
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Ferric Oxide Composition",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B2/B1
 
-Blue-cyan is goethite rich,
-
-Green is hematite-goethite,
-
-Red-yellow is hematite-rich
+- Blue-cyan is goethite rich,
+- Green is hematite-goethite,
+- Red-yellow is hematite-rich
 
 Useful For:
 
 (1) Mapping transported materials (including palaeochannels) characterised by hematite (relative to geothite). Combine with AlOH composition to find co-located areas of hematite and poorly ordered kaolin to map transported materials; and 
+(2) hematite-rish areas in drier conditions (eg above the water table) whereas goethite-rich in wetter conditions (eg at/below the water or areas recently exposed). May also be climate driven.
 
-(2) hematite-rish areas in drier conditions (eg above the water table) whereas goethite-rich in wetter conditions (eg at/below the water or areas recently exposed). May also be climate driven.""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_ferric_oxide_composition",
                 # The Datacube name for the associated data product
@@ -10634,29 +10632,29 @@ Useful For:
                 "default_style": "ramp",
             },  # ASTER Ferric Oxide Composition
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Ferric Oxide Content",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B4/B3
 
-Blue is low abundance,
-
-Red is high abundance
+- Blue is low abundance,
+- Red is high abundance
 
 Useful for:
 
 (1) Exposed iron ore (hematite-goethite).Use in combination with the “Opaques index” to help separate/map dark (a) surface lags (e.g. maghemite gravels) which can be misidentified in visible and false colour imagery; and (b) magnetite in BIF and/or bedded iron ore; and
-
 (2) Acid conditions: combine with FeOH Group content to help map jarosite which will have high values in both products.
 
 Mapping hematite versus goethite mapping is NOT easily achieved as ASTER’s spectral bands were not designed to capture diagnostic iron oxide spectral behaviour.
 
 However, some information on visible colour relating in part to differences in hematite and/or goethite content can be obtained using a ratio of B2/B1 especially when this is masked using a B4/B3 to locate those pixels with sufficient iro oxide content.
-""",
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_ferric_oxide_content",
                 # The Datacube name for the associated data product
@@ -10780,30 +10778,28 @@ However, some information on visible colour relating in part to differences in h
                 "default_style": "ramp",
             },  # ASTER Ferric Oxide Content
             {
-                # Included as a keyword  for the layer
-                "label": "Ferrous Iron Content in MgOH",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
+                "label": "Ferrous Iron Content in MgOH/Carbonate",
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B5/B4
 
-Blue is low ferrous iron content in carbonate and MgOH minerals like talc and tremolite.
-
-Red is high ferrous iron content in carbonate and MgOH minerals like chlorite and actinolite.
+- Blue is low ferrous iron content in carbonate and MgOH minerals like talc and tremolite.
+- Red is high ferrous iron content in carbonate and MgOH minerals like chlorite and actinolite.
 
 Useful for mapping:
 
 (1) un-oxidised “parent rocks” – i.e. mapping exposed parent rock materials (warm colours) in transported cover; 
-
 (2) talc/tremolite (Mg-rich – cool colours) versus actinolite (Fe-rich – warm colours);
-
 (3) ferrous-bearing carbonates (warm colours) potentially associated with metasomatic “alteration”;
-
 (4) calcite/dolomite which are ferrous iron-poor (cool colours); and
+(5) epidote, which is ferrous iron poor (cool colours) – in combination with FeOH content product (high).
 
-(5) epidote, which is ferrous iron poor (cool colours) – in combination with FeOH content product (high).""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_ferrous_iron_content_in_mgoh",
                 # The Datacube name for the associated data product
@@ -10925,27 +10921,28 @@ Useful for mapping:
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "ramp",
-            },  # ASTER Ferrous Iron Content in MgOH
+            },  # ASTER Ferrous Iron Content in MgOH/Carbonate
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Ferrous Iron Index",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B5/B4
 
-Blue is low abundance,
-
-Red is high abundance
+- Blue is low abundance,
+- Red is high abundance
 
 This product can help map exposed “fresh” (un-oxidised) rocks (warm colours) especially mafic and ultramafic lithologies rich in ferrous silicates (e.g. actinolite, chlorite) and/or ferrous carbonates (e.g. ferroan dolomite, ankerite, siderite).
 
 Applying an MgOH Group content mask to this product helps to isolate ferrous bearing non-OH bearing minerals like pyroxenes (e.g. jadeite) from OH-bearing or carbonate-bearing ferrous minerals like actinolite or ankerite, respectively.
 
 Also combine with the FeOH Group content product to find evidence for ferrous-bearing chlorite (e.g. chamosite).
-""",
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_ferrous_iron_index",
                 # The Datacube name for the associated data product
@@ -11069,20 +11066,22 @@ Also combine with the FeOH Group content product to find evidence for ferrous-be
                 "default_style": "ramp",
             },  # ASTER Ferrous Iron Index
             {
-                # Included as a keyword  for the layer
-                "label": "Green Vegetation",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
+                "label": "Green Vegetation Content",
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B3/B2
 
-Blue is low content,
+- Blue is low content,
+- Red is high content
 
-Red is high content
+Use this image to help interpret the amount of “obscuring/complicating” green vegetation cover.
 
-Use this image to help interpret the amount of “obscuring/complicating” green vegetation cover.""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_green_vegetation",
                 # The Datacube name for the associated data product
@@ -11204,28 +11203,28 @@ Use this image to help interpret the amount of “obscuring/complicating” gree
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "ramp",
-            },  # ASTER Green Vegetation
+            },  # ASTER Green Vegetation Content
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Gypsum Index",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band Ratio: (B10+B12)/B11
 
-Blue is low gypsum content,
-
-Red is high gypsum content
+- Blue is low gypsum content,
+- Red is high gypsum content
 
 Useful for mapping:
 
 (1) evaporative environments (e.g. salt lakes) and associated arid aeolian systems (e.g. dunes);
-
 (2) acid waters (e.g. from oxidising sulphides) invading carbonate rich materials including around mine environments; and
+(3) hydrothermal (e.g. volcanic) systems.
 
-(3) hydrothermal (e.g. volcanic) systems.""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_gypsum_index",
                 # The Datacube name for the associated data product
@@ -11349,29 +11348,28 @@ Useful for mapping:
                 "default_style": "ramp",
             },  # ASTER Gypsum Index
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Kaolin Group Index",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band Ratio: B6/B5
 
-Blue is low content,
-
-Red is high content
+- Blue is low content,
+- Red is high content
 
 (potentially includes: pyrophyllite, alunite, well-ordered kaolinite)
-
 
 Useful for mapping:
 
 (1) different clay-type stratigraphic horizons;
-
 (2) lithology-overprinting hydrothermal alteration, e.g. high sulphidation, “advanced argillic” alteration comprising pyrophyllite, alunite, kaolinite/dickite; and
+(3) well-ordered kaolinite (warmer colours) versus poorly-ordered kaolinite (cooler colours) which can be used for mapping in situ versus transported materials, respectively.
 
-(3) well-ordered kaolinite (warmer colours) versus poorly-ordered kaolinite (cooler colours) which can be used for mapping in situ versus transported materials, respectively.""",
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_kaolin_group_index",
                 # The Datacube name for the associated data product
@@ -11495,30 +11493,29 @@ Useful for mapping:
                 "default_style": "ramp",
             },  # ASTER Kaolin Group Index
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "MgOH Group Composition",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B7/B8
 
-Blue-cyan is magnesite-dolomite, amphibole, chlorite
-
-Red is calcite, epidote, amphibole
+- Blue-cyan is magnesite-dolomite, amphibole, chlorite
+- Red is calcite, epidote, amphibole
 
 Useful for mapping:
 
 (1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);
-
 (2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours.
-
 (3) stratigraphic mapping based on different clay-types; and
-
 (4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).
 
-Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).""",
+Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_mgoh_group_composition",
                 # The Datacube name for the associated data product
@@ -11642,30 +11639,30 @@ Combine with Ferrous iron in MgOH and FeOH content products to look for evidence
                 "default_style": "ramp",
             },  # ASTER MgOH Group Composition
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "MgOH Group Content",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: (B6+B9/(B7+B8)
 
-Blue is low content,
-
-Red is high content
+- Blue is low content,
+- Red is high content
 
 (potentially includes: calcite, dolomite, magnesite, chlorite, epidote, amphibole, talc, serpentine)
 
 Useful for mapping:
 
 (1) “hydrated” ferromagnesian rocks rich in OH-bearing tri-octahedral silicates like actinolite, serpentine, chlorite and talc;
-
 (2) carbonate-rich rocks, including shelf (palaeo-reef) and valley carbonates(calcretes, dolocretes and magnecretes); and
-
 (3) lithology-overprinting hydrothermal alteration, e.g. “propyllitic alteration” comprising chlorite, amphibole and carbonate.
 
-The nature (composition) of the silicate or carbonate mineral can be further assessed using the MgOH composition product.""",
+The nature (composition) of the silicate or carbonate mineral can be further assessed using the MgOH composition product.
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_mgoh_group_content",
                 # The Datacube name for the associated data product
@@ -11789,34 +11786,33 @@ The nature (composition) of the silicate or carbonate mineral can be further ass
                 "default_style": "ramp",
             },  # ASTER MgOH Group Content
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Opaque Index",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B1/B4
 
-Blue is low abundance,
-
-Red is high abundance
+- Blue is low abundance,
+- Red is high abundance
 
 (potentially includes  carbon black (e.g. ash), magnetite, Mn oxides, and sulphides in unoxidised envornments
 
 Useful for mapping:
 
 (1) magnetite-bearing rocks (e.g. BIF);
-
 (2) maghemite gravels;
-
 (3) manganese oxides;
-
 (4) graphitic shales.
 
-Note 1: (1) and (4) above can be evidence for “reduced” rocks when interpreting REDOX gradients.
+Note: (1) and (4) above can be evidence for “reduced” rocks when interpreting REDOX gradients.
 
-Combine with AlOH group Content (high values) and Composition (high values) products, to find evidence for any invading “oxidised” hydrothermal fluids which may have interacted with reduced rocks evident in the Opaques index product.""",
+Combine with AlOH group Content (high values) and Composition (high values) products, to find evidence for any invading “oxidised” hydrothermal fluids which may have interacted with reduced rocks evident in the Opaques index product.
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_opaque_index",
                 # The Datacube name for the associated data product
@@ -11940,18 +11936,17 @@ Combine with AlOH group Content (high values) and Composition (high values) prod
                 "default_style": "ramp",
             },  # ASTER Opaque Index
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Silica Index",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B13/B10
 
-Blue is low silica content,
-
-Red is high silica content
+- Blue is low silica content,
+- Red is high silica content
 
 (potentially includes Si-rich minerals, such as quartz, feldspars, Al-clays)
 
@@ -11962,14 +11957,14 @@ Broadly equates to the silica content though the intensity (depth) of this rests
 Useful product for mapping:
 
 (1) colluvial/alluvial materials;
-
 (2) silica-rich (quartz) sediments (e.g. quartzites);
-
 (3) silification and silcretes; and
-
 (4) quartz veins.
 
-Use in combination with quartz index, which is often correlated with the Silica index.""",
+Use in combination with quartz index, which is often correlated with the Silica index.
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_silica_index",
                 # The Datacube name for the associated data product
@@ -12093,22 +12088,24 @@ Use in combination with quartz index, which is often correlated with the Silica 
                 "default_style": "ramp",
             },  # ASTER Silica Index
             {
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "label": "Quartz Index",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "type": "",
-                # Included as a keyword  for the layer
+                # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
 Band ratio: B11/(B10+B12)
 
-Blue is low quartz content,
-
-Red is high quartz content
+- Blue is low quartz content,
+- Red is high quartz content
 
 Geoscience Applications:
 
-Use in combination with Silica index to more accurately map “crystalline” quartz rather than poorly ordered silica (e.g. opal), feldspars and compacted clays.""",
+Use in combination with Silica index to more accurately map “crystalline” quartz rather than poorly ordered silica (e.g. opal), feldspars and compacted clays.
+
+For service status information, see https://status.dea.ga.gov.au
+For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
                 # The WMS name for the layer
                 "name": "aster_quartz_index",
                 # The Datacube name for the associated data product
@@ -12245,11 +12242,11 @@ Fractional Cover products use Water Observations from Space (WOfS) to mask out a
 For service status information, see https://status.dea.ga.gov.au""",
         "products": [
             {
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "label": "Fractional Cover Landsat 5",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "type": "100km tile",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "variant": "25m",
             "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -12335,11 +12332,11 @@ For service status information, see https://status.dea.ga.gov.au""",
             "default_style": "simple_fc",
             },
             {
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "label": "Fractional Cover Landsat 7",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "type": "100km tile",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "variant": "25m",
             "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -12425,11 +12422,11 @@ For service status information, see https://status.dea.ga.gov.au""",
             "default_style": "simple_fc",
             },
             {
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "label": "Fractional Cover Landsat 8",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "type": "100km tile",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "variant": "25m",
             "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -12515,11 +12512,11 @@ For service status information, see https://status.dea.ga.gov.au""",
             "default_style": "simple_fc",
             },
             {
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "label": "Fractional Cover Combined",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "type": "100km tile",
-            # Included as a keyword  for the layer
+            # Included as a keyword for the layer
             "variant": "25m",
             "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
