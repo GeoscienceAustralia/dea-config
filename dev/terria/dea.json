@@ -966,7 +966,7 @@
                      "opacity": 1
                   },
                   {
-                     "name": "Silica Index",
+                     "name": "TIR Silica index",
                      "type": "wms",
                      "layers": "aster_silica_index",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -976,7 +976,7 @@
                      "opacity": 1
                   },
                   {
-                     "name": "Quartz Index",
+                     "name": "TIR Quartz Index",
                      "type": "wms",
                      "layers": "aster_quartz_index",
                      "url": "https://ows.dev.dea.ga.gov.au/",

@@ -9830,10 +9830,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         "name": "ASTER Geoscience Map",
         "title": "ASTER Geoscience Map of Australia",
         "abstract": """
-This dataset comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 The individual geoscience products are a combination of bands and band ratios to highlight different mineral groups and parameters including:
 - False Colour Mosaic
+- CSIRO Landsat TM
 - Regolith Ratios
 - AlOH Group Composition
 - AlOH Group Content
@@ -9848,8 +9849,11 @@ The individual geoscience products are a combination of bands and band ratios to
 - MgOH Group Composition
 - MgOH Group Content
 - Opaque Index
-- Silica Index
-- Quartz Index
+- TIR Silica index
+- TIR Quartz Index
+- Surface mineral group distribution (relative abundance and composition)
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
 """,
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
@@ -9863,6 +9867,15 @@ The individual geoscience products are a combination of bands and band ratios to
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 False colour RGB composite
 
 - Red: B3
@@ -9874,8 +9887,9 @@ Use this image to help understand non-geological differences within and between 
 
 Use band 2 only for a gray-scale background to the content, composition and index colour products.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'False Colour Mosaic' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74348
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_false_colour",
                 # The Datacube name for the associated data product
@@ -9965,6 +9979,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 3 band RGB composite
 
 - Red: B3/B2
@@ -9975,11 +9998,14 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
 Use this image to help interpret:
 
 (1) the amount of green vegetation cover (appears as white);
+
 (2) basic spectral separation (colour) between different regolith and geological units and regions/provinces; and
+
 (3) evidence for unmasked cloud (appears as green).
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Regolith Ratios' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74349
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_regolith_ratios",
                 # The Datacube name for the associated data product
@@ -10052,6 +10078,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B5/B7
 
 - Blue is well ordered kaolinite, Al-rich muscovite/illite, paragonite, pyrophyllite
@@ -10060,14 +10095,18 @@ Band ratio: B5/B7
 Useful for mapping:
 
 (1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);
+
 (2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours;
+
 (3) stratigraphic mapping based on different clay-types; and
+
 (4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).
 
 Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole)
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'AlOH Group Composition' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74356
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_aloh_group_composition",
                 # The Datacube name for the associated data product
@@ -10198,6 +10237,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: (B5+B7)/B6
 
 - Blue is low abundance
@@ -10208,17 +10256,24 @@ Band ratio: (B5+B7)/B6
 Useful for mapping:
 
 (1) exposed saprolite/saprock;
+
 (2) clay-rich stratigraphic horizons;
+
 (3) lithology-overprinting hydrothermal phyllic (e.g. white mica) alteration; and
+
 (4) clay-rich diluents in ore systems (e.g. clay in iron ore).
 
 Also combine with AlOH composition to help map:
 
 (1) exposed in situ parent material persisting through “cover” which can be expressed as:
-(a) more abundant AlOH content + (b) long-wavelength (warmer colour) AlOH composition (e.g. muscovite/phengite)
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+(a) more abundant AlOH content +
+
+(b) long-wavelength (warmer colour) AlOH composition (e.g. muscovite/phengite)
+
+For 'AlOH Group Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74355
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_aloh_group_content",
                 # The Datacube name for the associated data product
@@ -10349,6 +10404,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: (B6+B8)/B7
 
 - Blue is low content,
@@ -10359,13 +10423,18 @@ Band ratio: (B6+B8)/B7
 Useful for mapping:
 
 (1) jarosite (acid conditions) – in combination with ferric oxide content (high);
+
 (2) gypsum/gibbsite – in combination with ferric oxide content (low);
+
 (3) magnesite - in combination with ferric oxide content (low) and MgOH content (moderate-high);
+
 (4) chlorite (e.g. propyllitic alteration) – in combination with Ferrous in MgOH (high); and
+
 (5) epidote (calc-silicate alteration) – in combination with Ferrous in MgOH (low).
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'FeOH Group Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74358
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_feoh_group_content",
                 # The Datacube name for the associated data product
@@ -10496,6 +10565,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B2/B1
 
 - Blue-cyan is goethite rich,
@@ -10504,11 +10582,13 @@ Band ratio: B2/B1
 
 Useful For:
 
-(1) Mapping transported materials (including palaeochannels) characterised by hematite (relative to geothite). Combine with AlOH composition to find co-located areas of hematite and poorly ordered kaolin to map transported materials; and 
+(1) Mapping transported materials (including palaeochannels) characterised by hematite (relative to geothite). Combine with AlOH composition to find co-located areas of hematite and poorly ordered kaolin to map transported materials; and
+
 (2) hematite-rish areas in drier conditions (eg above the water table) whereas goethite-rich in wetter conditions (eg at/below the water or areas recently exposed). May also be climate driven.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Ferric Oxide Composition' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74352
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_ferric_oxide_composition",
                 # The Datacube name for the associated data product
@@ -10639,6 +10719,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B4/B3
 
 - Blue is low abundance,
@@ -10646,15 +10735,21 @@ Band ratio: B4/B3
 
 Useful for:
 
-(1) Exposed iron ore (hematite-goethite).Use in combination with the “Opaques index” to help separate/map dark (a) surface lags (e.g. maghemite gravels) which can be misidentified in visible and false colour imagery; and (b) magnetite in BIF and/or bedded iron ore; and
+(1) Exposed iron ore (hematite-goethite). Use in combination with the “Opaques index” to help separate/map dark:
+
+   (a) surface lags (e.g. maghemite gravels) which can be misidentified in visible and false colour imagery; and
+
+   (b) magnetite in BIF and/or bedded iron ore; and
+
 (2) Acid conditions: combine with FeOH Group content to help map jarosite which will have high values in both products.
 
 Mapping hematite versus goethite mapping is NOT easily achieved as ASTER’s spectral bands were not designed to capture diagnostic iron oxide spectral behaviour.
 
 However, some information on visible colour relating in part to differences in hematite and/or goethite content can be obtained using a ratio of B2/B1 especially when this is masked using a B4/B3 to locate those pixels with sufficient iro oxide content.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Ferric Oxide Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74351
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_ferric_oxide_content",
                 # The Datacube name for the associated data product
@@ -10785,6 +10880,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B5/B4
 
 - Blue is low ferrous iron content in carbonate and MgOH minerals like talc and tremolite.
@@ -10792,14 +10896,19 @@ Band ratio: B5/B4
 
 Useful for mapping:
 
-(1) un-oxidised “parent rocks” – i.e. mapping exposed parent rock materials (warm colours) in transported cover; 
+(1) un-oxidised “parent rocks” – i.e. mapping exposed parent rock materials (warm colours) in transported cover;
+
 (2) talc/tremolite (Mg-rich – cool colours) versus actinolite (Fe-rich – warm colours);
+
 (3) ferrous-bearing carbonates (warm colours) potentially associated with metasomatic “alteration”;
+
 (4) calcite/dolomite which are ferrous iron-poor (cool colours); and
+
 (5) epidote, which is ferrous iron poor (cool colours) – in combination with FeOH content product (high).
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Ferrous Iron Content in MgOH/Carbonate' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74361
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_ferrous_iron_content_in_mgoh",
                 # The Datacube name for the associated data product
@@ -10930,6 +11039,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B5/B4
 
 - Blue is low abundance,
@@ -10941,8 +11059,9 @@ Applying an MgOH Group content mask to this product helps to isolate ferrous bea
 
 Also combine with the FeOH Group content product to find evidence for ferrous-bearing chlorite (e.g. chamosite).
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Ferrous Iron Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74353
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_ferrous_iron_index",
                 # The Datacube name for the associated data product
@@ -11073,6 +11192,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B3/B2
 
 - Blue is low content,
@@ -11080,8 +11208,9 @@ Band ratio: B3/B2
 
 Use this image to help interpret the amount of “obscuring/complicating” green vegetation cover.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Green Vegetation Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74350
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_green_vegetation",
                 # The Datacube name for the associated data product
@@ -11212,6 +11341,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band Ratio: (B10+B12)/B11
 
 - Blue is low gypsum content,
@@ -11220,11 +11358,12 @@ Band Ratio: (B10+B12)/B11
 Useful for mapping:
 
 (1) evaporative environments (e.g. salt lakes) and associated arid aeolian systems (e.g. dunes);
+
 (2) acid waters (e.g. from oxidising sulphides) invading carbonate rich materials including around mine environments; and
+
 (3) hydrothermal (e.g. volcanic) systems.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_gypsum_index",
                 # The Datacube name for the associated data product
@@ -11355,6 +11494,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band Ratio: B6/B5
 
 - Blue is low content,
@@ -11365,11 +11513,14 @@ Band Ratio: B6/B5
 Useful for mapping:
 
 (1) different clay-type stratigraphic horizons;
+
 (2) lithology-overprinting hydrothermal alteration, e.g. high sulphidation, “advanced argillic” alteration comprising pyrophyllite, alunite, kaolinite/dickite; and
+
 (3) well-ordered kaolinite (warmer colours) versus poorly-ordered kaolinite (cooler colours) which can be used for mapping in situ versus transported materials, respectively.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Kaolin Group Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74357
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_kaolin_group_index",
                 # The Datacube name for the associated data product
@@ -11500,6 +11651,15 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B7/B8
 
 - Blue-cyan is magnesite-dolomite, amphibole, chlorite
@@ -11507,15 +11667,18 @@ Band ratio: B7/B8
 
 Useful for mapping:
 
-(1) exposed saprolite/saprock is often white mica or Al-smectite (warmer colours) whereas transported materials are often kaolin-rich (cooler colours);
-(2) clays developed over carbonates, especially Al-smectite (montmorillonite, beidellite) will produce middle to warmers colours.
-(3) stratigraphic mapping based on different clay-types; and
-(4) lithology-overprinting hydrothermal alteration, e.g. Si-rich and K-rich phengitic mica (warmer colours).
+(1) exposed parent material persisting through "cover";
 
-Combine with Ferrous iron in MgOH and FeOH content products to look for evidence of overlapping/juxtaposed potassic metasomatism in ferromagnesian parents rocks (e.g. Archaean greenstone associated Au mineralisation) +/- associated distal propyllitic alteration (e.g. chlorite, amphibole).
+(2) "dolomitization" alteration in carbonates - combine with Ferrous iron in MgOH product to help separate dolomite versus ankerite;
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+(3) lithology-cutting hydrothermal (e.g. propyllitic) alteration - combine with FeOH content product and ferrous iron in Mg-OH to isolate chlorite from actinolite versus talc versus epidote; and
+
+(4) layering within mafic/ultramafic intrusives
+
+
+For 'MgOH Group Composition' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74360
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_mgoh_group_composition",
                 # The Datacube name for the associated data product
@@ -11646,7 +11809,16 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-Band ratio: (B6+B9/(B7+B8)
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
+Band ratio: (B6+B9)/(B7+B8)
 
 - Blue is low content,
 - Red is high content
@@ -11656,13 +11828,16 @@ Band ratio: (B6+B9/(B7+B8)
 Useful for mapping:
 
 (1) “hydrated” ferromagnesian rocks rich in OH-bearing tri-octahedral silicates like actinolite, serpentine, chlorite and talc;
+
 (2) carbonate-rich rocks, including shelf (palaeo-reef) and valley carbonates(calcretes, dolocretes and magnecretes); and
+
 (3) lithology-overprinting hydrothermal alteration, e.g. “propyllitic alteration” comprising chlorite, amphibole and carbonate.
 
 The nature (composition) of the silicate or carbonate mineral can be further assessed using the MgOH composition product.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'MgOH Group Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74359
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_mgoh_group_content",
                 # The Datacube name for the associated data product
@@ -11793,26 +11968,39 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B1/B4
 
 - Blue is low abundance,
 - Red is high abundance
 
-(potentially includes  carbon black (e.g. ash), magnetite, Mn oxides, and sulphides in unoxidised envornments
+(potentially includes carbon black (e.g. ash), magnetite, Mn oxides, and sulphides in unoxidised environments)
 
 Useful for mapping:
 
 (1) magnetite-bearing rocks (e.g. BIF);
+
 (2) maghemite gravels;
+
 (3) manganese oxides;
+
 (4) graphitic shales.
 
 Note: (1) and (4) above can be evidence for “reduced” rocks when interpreting REDOX gradients.
 
 Combine with AlOH group Content (high values) and Composition (high values) products, to find evidence for any invading “oxidised” hydrothermal fluids which may have interacted with reduced rocks evident in the Opaques index product.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'Opaque Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74354
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_opaque_index",
                 # The Datacube name for the associated data product
@@ -11937,12 +12125,21 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
             },  # ASTER Opaque Index
             {
                 # Included as a keyword for the layer
-                "label": "Silica Index",
+                "label": "TIR Silica index",
                 # Included as a keyword for the layer
                 "type": "",
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B13/B10
 
 - Blue is low silica content,
@@ -11957,14 +12154,18 @@ Broadly equates to the silica content though the intensity (depth) of this rests
 Useful product for mapping:
 
 (1) colluvial/alluvial materials;
+
 (2) silica-rich (quartz) sediments (e.g. quartzites);
+
 (3) silification and silcretes; and
+
 (4) quartz veins.
 
 Use in combination with quartz index, which is often correlated with the Silica index.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'TIR Silica index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74362
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_silica_index",
                 # The Datacube name for the associated data product
@@ -12086,15 +12287,24 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "ramp",
-            },  # ASTER Silica Index
+            },  # ASTER TIR Silica index
             {
                 # Included as a keyword for the layer
-                "label": "Quartz Index",
+                "label": "TIR Quartz Index",
                 # Included as a keyword for the layer
                 "type": "",
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+
+ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
+
+Collaborative research, undertaken by Geoscience Australia, the Commonwealth Scientific Research Organisation (CSIRO) and state and industry partners, on the world-class Mt Isa mineral province in Queensland was completed in 2008 as a test-case for these new methods.
+
+For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
+
+
 Band ratio: B11/(B10+B12)
 
 - Blue is low quartz content,
@@ -12104,8 +12314,9 @@ Geoscience Applications:
 
 Use in combination with Silica index to more accurately map “crystalline” quartz rather than poorly ordered silica (e.g. opal), feldspars and compacted clays.
 
-For service status information, see https://status.dea.ga.gov.au
-For dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347 """,
+For 'TIR Quartz Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74363
+
+For service status information, see https://status.dea.ga.gov.au """,
                 # The WMS name for the layer
                 "name": "aster_quartz_index",
                 # The Datacube name for the associated data product
@@ -12227,7 +12438,7 @@ For dataset information, see the dataset record: http://pid.geoscience.gov.au/da
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "ramp",
-            },  # ASTER Quartz Index
+            },  # ASTER TIR Quartz Index
         ],
     },
     {
