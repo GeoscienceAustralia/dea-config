@@ -9830,7 +9830,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "name": "ASTER Geoscience Map",
         "title": "ASTER Geoscience Map of Australia",
         "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 The individual geoscience products are a combination of bands and band ratios to highlight different mineral groups and parameters including:
 - False Colour Mosaic
@@ -9867,7 +9867,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -9979,7 +9979,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -10078,7 +10078,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -10237,7 +10237,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -10404,7 +10404,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -10565,7 +10565,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -10719,7 +10719,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -10880,7 +10880,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -11039,7 +11039,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -11192,7 +11192,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -11341,7 +11341,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -11494,7 +11494,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -11651,7 +11651,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -11809,7 +11809,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -11968,7 +11968,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -12131,7 +12131,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -12296,7 +12296,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Included as a keyword for the layer
                 "variant": "",
                 "abstract": """
-This is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
