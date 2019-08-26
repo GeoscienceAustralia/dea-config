@@ -4163,6 +4163,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -5127,6 +5130,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -5590,6 +5596,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["water_classifier"]
                 },
                 "wcs_default_bands": ["water"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 "styles": [
                     {
                         "name": "water_classifier",
@@ -5685,6 +5694,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -6169,6 +6181,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -6653,6 +6668,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -9781,6 +9799,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "ignore_info_flags": [],
 
                 'wcs_default_bands':['Band_1'],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
 
                 # Styles.
                 #
@@ -9919,6 +9940,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Define layer wide legend graphic if no style is passed
                 # to GetLegendGraphic
                 "wcs_default_bands": ["Band_1", "Band_2", "Band_3"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10035,6 +10059,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Define layer wide legend graphic if no style is passed
                 # to GetLegendGraphic
                 "wcs_default_bands": ["Band_1", "Band_2", "Band_3"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10140,6 +10167,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10307,6 +10337,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10464,6 +10497,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Define layer wide legend graphic if no style is passed
                 # to GetLegendGraphic
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 "legend": {
                     # "url": ""
                     "styles": ["ramp"]
@@ -10622,6 +10658,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10783,6 +10822,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10942,6 +10984,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11095,6 +11140,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11244,6 +11292,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11397,6 +11448,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11554,6 +11608,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11712,6 +11769,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11871,6 +11931,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12034,6 +12097,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12199,6 +12265,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12350,6 +12419,9 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12500,6 +12572,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
             },
             "wcs_default_bands": ["BS", "PV", "NPV"],
+            # The "native" CRS for WCS.
+            # Can be omitted if the product has a single native CRS, as this will be used in preference.
+            "native_wcs_crs": "EPSG:3577",
             "styles": [
                 {
                     "name": "simple_fc",
