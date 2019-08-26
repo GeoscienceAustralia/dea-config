@@ -3974,6 +3974,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["observations"]
                 },
                 "wcs_default_bands": ["water"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 "styles": [
                     {
                         "name": "observations",
@@ -4648,6 +4651,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                # The "native" CRS for WCS.
+                # Can be omitted if the product has a single native CRS, as this will be used in preference.
+                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12572,9 +12578,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
             },
             "wcs_default_bands": ["BS", "PV", "NPV"],
-            # The "native" CRS for WCS.
-            # Can be omitted if the product has a single native CRS, as this will be used in preference.
-            "native_wcs_crs": "EPSG:3577",
             "styles": [
                 {
                     "name": "simple_fc",
