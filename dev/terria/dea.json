@@ -1718,7 +1718,7 @@
                   "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                }
             },
-			   {
+	    {
                "name": "Summer Irrigation Insight Tool",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/CONDAMINE-CULGOA_2013_WIT.geojson",
                "type": "geojson",
