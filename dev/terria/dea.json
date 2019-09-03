@@ -1719,36 +1719,44 @@
                }
             },
 	    {
-               "name": "Summer Irrigation Insight Tool- Condamine-Culgoa 2013-14",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/CONDAMINE-CULGOA_2013_WIT.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
-               }
-	    },
-	    {
-               "name": "Summer Irrigation Insight Tool- GWYDIR 2016-17",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2016_WIT.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
-               }
-	    },
-	    {
-               "name": "Summer Irrigation Insight Tool- GWYDIR 2017-18",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2017_WIT.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
-               }
-	    },
-	    {
-               "name": "Summer Irrigation Insight Tool- GWYDIR 2018-19",
+         "name": "Summer Irrigation Insight Tool
+	 "type": "group",
+	 "preserveOrder": true,
+	 "items": [
+           {
+              "name": "Condamine-Culgoa 2013-14",
+              "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/CONDAMINE-CULGOA_2013_WIT.geojson",
+              "type": "geojson",
+              "featureInfoTemplate": {
+                 "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+              }
+           },
+           {
+              "name": "GWYDIR 2016-17",
+              "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2016_WIT.geojson",
+              "type": "geojson",
+              "featureInfoTemplate": {
+                 "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+              }
+           },
+           {
+              "name": "GWYDIR 2017-18",
+              "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2017_WIT.geojson",
+              "type": "geojson",
+              "featureInfoTemplate": {
+                 "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+              }
+           },
+	   {
+               "name": "GWYDIR 2018-19",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2018_WIT.geojson",
                "type": "geojson",
                "featureInfoTemplate": {
                   "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
                }
+		},
+	    ]
+	    ],
             },
             {
                "name": "DEA WIT - LRA",
