@@ -1719,7 +1719,7 @@
                }
             },
 	    {
-         "name": "Summer Irrigation Insight Tool
+         "name": "Summer Irrigation Insight Tool",
 	 "type": "group",
 	 "preserveOrder": true,
 	 "items": [
@@ -1754,10 +1754,7 @@
                "featureInfoTemplate": {
                   "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
                }
-		},
-	    ]
 	    ],
-            },
             {
                "name": "DEA WIT - LRA",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/DCDB_NW_LGA_aoi.geojson",
