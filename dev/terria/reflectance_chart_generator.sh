@@ -11,7 +11,7 @@ tr -d '\n' > reflectance-chart.json <<EOF
     {
       "name": "Near Real-Time Surface Reflectance (Sentinel 2A)",
       "layers": "s2a_nrt_granule_nbar_t",
-      "url": "https://ows.prod.dea.ga.gov.au",
+      "url": "https://ows.dea.ga.gov.au",
       "type": "wms",
       "ignoreUnknownTileErrors": true,
       "opacity": 1,
