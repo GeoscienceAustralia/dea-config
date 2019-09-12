@@ -1672,6 +1672,183 @@
                      "opacity": 1
                   }
                ]
+            },
+            {
+               "name": "ASTER Geoscience Map of Australia",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "False Colour Mosaic",
+                     "type": "wms",
+                     "layers": "aster_false_colour",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_false_colour",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Regolith Ratios",
+                     "type": "wms",
+                     "layers": "aster_regolith_ratios",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_regolith_ratios",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Green Vegetation Content",
+                     "type": "wms",
+                     "layers": "aster_green_vegetation",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_green_vegetation",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferric Oxide Content",
+                     "type": "wms",
+                     "layers": "aster_ferric_oxide_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferric_oxide_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferric Oxide Composition",
+                     "type": "wms",
+                     "layers": "aster_ferric_oxide_composition",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferric_oxide_composition",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferrous Iron Index",
+                     "type": "wms",
+                     "layers": "aster_ferrous_iron_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferrous_iron_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Opaque Index",
+                     "type": "wms",
+                     "layers": "aster_opaque_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_opaque_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "AlOH Group Content",
+                     "type": "wms",
+                     "layers": "aster_aloh_group_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_aloh_group_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "AlOH Group Composition",
+                     "type": "wms",
+                     "layers": "aster_aloh_group_composition",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_aloh_group_composition",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Kaolin Group Index",
+                     "type": "wms",
+                     "layers": "aster_kaolin_group_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_kaolin_group_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "FeOH Group Content",
+                     "type": "wms",
+                     "layers": "aster_feoh_group_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_feoh_group_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "MgOH Group Content",
+                     "type": "wms",
+                     "layers": "aster_mgoh_group_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_mgoh_group_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "MgOH Group Composition",
+                     "type": "wms",
+                     "layers": "aster_mgoh_group_composition",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_mgoh_group_composition",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferrous Iron Content in MgOH/Carbonate",
+                     "type": "wms",
+                     "layers": "aster_ferrous_iron_content_in_mgoh",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferrous_iron_content_in_mgoh",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "TIR Silica index",
+                     "type": "wms",
+                     "layers": "aster_silica_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_silica_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "TIR Quartz Index",
+                     "type": "wms",
+                     "layers": "aster_quartz_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_quartz_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Gypsum Index",
+                     "type": "wms",
+                     "layers": "aster_gypsum_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_gypsum_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  }
+               ]
             }
          ]
       },
