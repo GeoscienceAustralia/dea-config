@@ -1413,10 +1413,69 @@
                ]
             },
             {
-               "name": "Fractional Cover Percentiles",
+               "name": "Fractional Cover",
                "type": "group",
                "preserveOrder": true,
                "items": [
+                  {
+                     "name": "Fractional Cover Daily Observations",
+                     "type": "group",
+                     "preserveOrder": true,
+                     "items": [
+                        {
+                           "name": "Fractional Cover Combined",
+                           "type": "wms",
+                           "layers": "fc_albers_combined",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "fc_albers_combined",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 5",
+                           "type": "wms",
+                           "layers": "ls5_fc_albers",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls5_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 7",
+                           "type": "wms",
+                           "layers": "ls7_fc_albers",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls7_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 8",
+                           "type": "wms",
+                           "layers": "ls8_fc_albers",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls8_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Polygon Drill",
+                           "type": "wps",
+                           "url": "https://ows.dea.ga.gov.au/wps/",
+                           "opacity": 1,
+                           "identifier": "FractionalCoverDrill",
+                           "description": "Fractional Cover Daily Observations Polygon Drill\n\nFractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover\n\nFractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.\n\nThis polygon drill uses Fractional Cover dervied from the Landsat 5, 7 and 8 satellites\n\nFor service status information, see https://status.dea.ga.gov.au"
+                        }
+                     ]
+                  },
                   {
                      "name": "Fractional Cover Percentiles Annual",
                      "type": "group",
