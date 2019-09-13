@@ -333,9 +333,9 @@ metadata:
     instrument: {name: MSI}
     platform: {code: SENTINEL_2A}
     processing_level: Level-2
-    product_type: S2MSI_DEFINITIVE_ARD
+    product_type: S2MSIARD_NBAR
 metadata_type: eo_plus
-name: ga_s2a_definitive_ard_granule
+name: ga_s2a_ard_nbar_granule
 ---
 description: Sentinel-2B MSI Definitive ARD - NBAR and Pixel Quality
 measurements:
@@ -698,7 +698,7 @@ metadata:
     instrument: {name: MSI}
     platform: {code: SENTINEL_2B}
     processing_level: Level-2
-    product_type: S2MSI_DEFINITIVE_ARD
+    product_type: S2MSIARD_NBAR
 metadata_type: eo_plus
-name: ga_s2b_definitive_ard_granule
+name: ga_s2b_ard_nbar_granule
 
