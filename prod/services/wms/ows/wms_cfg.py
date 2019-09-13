@@ -6385,7 +6385,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": [],
                 "apply_solar_corrections": False,
                 "legend": {
-                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+                    "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
                 },
                 "wcs_default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
                 "styles": [
@@ -6928,7 +6928,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": [],
                 "apply_solar_corrections": False,
                 "legend": {
-                    "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
+                    "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
                 },
                 "wcs_default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
                 "styles": [
