@@ -1,4 +1,4 @@
-name: mangrove_cover_test
+name: mangrove_cover
 
 description: Mangrove Cover, Australian Albers Equal Area projection (EPSG:3577)
 metadata_type: eo
