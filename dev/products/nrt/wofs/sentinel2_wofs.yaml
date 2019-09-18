@@ -1,0 +1,15 @@
+name: sentinel2_wofs_nrt
+description: Sentinel 2 NRT Water Observations from Space
+metadata_type: eo
+metadata:
+  product_type: wofs
+  format:
+    name: GeoTIFF
+  instrument:
+    name: MSI
+
+measurements:
+   - name: water
+     dtype: uint8
+     nodata: 0
+     units: '1'

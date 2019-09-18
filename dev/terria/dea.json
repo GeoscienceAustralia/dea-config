@@ -3,7 +3,8 @@
       "dea.ga.gov.au",
       "gsky-dev.nci.org.au",
       "gsky-test.nci.org.au",
-      "gsky.nci.org.au"
+      "gsky.nci.org.au",
+      "dea-public-data-dev.s3-ap-southeast-2.amazonaws.com"
    ],
    "homeCamera": {
       "north": -8,
@@ -13,36 +14,50 @@
    },
    "catalog": [
       {
-         "name": "GSKY DEA Development",
+         "name": "GSKY DEA Functional Testing",
          "type": "group",
          "preserveOrder": true,
          "items": [
             {
-               "name": "GSKY Daily Sentinel 2 NBART (dev)",
+               "name": "Blended service",
                "type": "wms",
-               "layers": "SENTINEL2:NBART",
-               "url": "http://130.56.242.16/ows/dea/sentinel2",
-               "linkedWcsUrl": "http://130.56.242.16/ows/dea/sentinel2",
-               "linkedWcsCoverage": "SENTINEL2:NBART",
+               "url": "http://130.56.242.6/ows/fusion",
+               "layers": "blended",
                "ignoreUnknownTileErrors": true,
-               "opacity": 1
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
             }
          ]
       },
       {
-         "name": "GSKY DEA Production (Deprecated)",
-         "type": "wms-getCapabilities",
-         "url": "https://gsky.nci.org.au/ows"
+         "name": "GSKY Blended Service",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance true colour (Beta)",
+               "type": "wms",
+               "url": "https://gsky.nci.org.au/ows/dea",
+               "layers": "blend_sentinel2_landsat_nbart_daily_true_colour",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            },
+            {
+               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance false colour (Beta)",
+               "type": "wms",
+               "url": "https://gsky.nci.org.au/ows/dea",
+               "layers": "blend_sentinel2_landsat_nbart_daily_false_colour",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            }
+         ]
       },
       {
-         "name": "GSKY DEA Production (Upcoming)",
+         "name": "GSKY DEA Production",
          "type": "wms-getCapabilities",
          "url": "http://gsky.nci.org.au/ows/dea"
-      },
-      {
-         "name": "Thredds WMS - (Davecube)",
-         "type": "wms-getCapabilities",
-         "url": "https://dave.services.devkube.dea.ga.gov.au"
       },
       {
          "name": "DEA Development",
@@ -63,8 +78,8 @@
                            "name": "Water Observations from Space Daily (WOfS Daily Observations)",
                            "type": "wms",
                            "layers": "wofs_albers",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_albers",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
@@ -72,8 +87,10 @@
                         },
                         {
                            "name": "Water Observations from Space Daily Pixel Drill",
-                           "type": "wps-getCapabilities",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/wps/"
+                           "type": "wps",
+                           "url": "https://ows.dev.dea.ga.gov.au/wps/",
+                           "identifier": "WOfSDrill",
+                           "description": "Water Observations from Space Pixel Drill\n\nWater Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.\n\nThe WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.\n\nThis Pixel Drill will output the water observations for a point through time as graph.\n\nFor service status information, see https://status.dea.ga.gov.au"
                         }
                      ]
                   },
@@ -86,8 +103,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfs April to October Statistics)",
                            "type": "wms",
                            "layers": "wofs_apr_oct_summary_wet",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -96,8 +113,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfs April to October Statistics)",
                            "type": "wms",
                            "layers": "wofs_apr_oct_summary_clear",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -106,8 +123,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfs April to October Statistics)",
                            "type": "wms",
                            "layers": "wofs_apr_oct_summary_statistics",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -116,8 +133,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfs November to March Statistics)",
                            "type": "wms",
                            "layers": "wofs_nov_mar_summary_wet",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -126,8 +143,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfs November to March Statistics)",
                            "type": "wms",
                            "layers": "wofs_nov_mar_summary_clear",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -136,8 +153,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfs November to March Statistics)",
                            "type": "wms",
                            "layers": "wofs_nov_mar_summary_statistics",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -153,8 +170,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfs Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_wet",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -163,8 +180,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfs Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_clear",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -173,8 +190,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfs Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_statistics",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -190,8 +207,8 @@
                            "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
                            "type": "wms",
                            "layers": "wofs_filtered_summary",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -200,8 +217,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
                            "type": "wms",
                            "layers": "wofs_summary_wet",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -210,8 +227,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
                            "type": "wms",
                            "layers": "wofs_summary_clear",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -220,8 +237,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
                            "type": "wms",
                            "layers": "Water Observations from Space Statistics",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "Water Observations from Space Statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -230,8 +247,8 @@
                            "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
                            "type": "wms",
                            "layers": "wofs_filtered_summary_confidence",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary_confidence",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -249,8 +266,8 @@
                      "name": "Surface Reflectance (Landsat 5)",
                      "type": "wms",
                      "layers": "ls5_nbart_geomedian_annual",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls5_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -270,8 +287,8 @@
                      "name": "Surface Reflectance (Landsat 7)",
                      "type": "wms",
                      "layers": "ls7_nbart_geomedian_annual",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls7_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -291,8 +308,8 @@
                      "name": "Surface Reflectance (Landsat 8)",
                      "type": "wms",
                      "layers": "ls8_nbart_geomedian_annual",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -319,8 +336,8 @@
                      "name": "Barest Earth 25m Mosiac",
                      "type": "wms",
                      "layers": "ls8_barest_earth_mosaic",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_barest_earth_mosaic",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -339,6 +356,79 @@
                ]
             },
             {
+               "name": "Sentinel-2 Definitive",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2A and 2B combined)",
+                     "type": "wms",
+                     "layers": "s2_ard_granule_nbar_t",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2A)",
+                     "type": "wms",
+                     "layers": "s2a_ard_granule_nbar_t",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2B)",
+                     "type": "wms",
+                     "layers": "s2b_ard_granule_nbar_t",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
                "name": "Near Real-Time",
                "type": "group",
                "preserveOrder": true,
@@ -347,8 +437,8 @@
                      "name": "Near Real-Time Surface Reflectance (Sentinel 2A and 2B combined)",
                      "type": "wms",
                      "layers": "s2_nrt_granule_nbar_t",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -369,8 +459,8 @@
                      "name": "Near Real-Time Surface Reflectance (Sentinel 2A)",
                      "type": "wms",
                      "layers": "s2a_nrt_granule_nbar_t",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2a_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -391,8 +481,8 @@
                      "name": "Near Real-Time Surface Reflectance (Sentinel 2B)",
                      "type": "wms",
                      "layers": "s2b_nrt_granule_nbar_t",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -408,6 +498,17 @@
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Near Real-Time Surface Reflectance (WOfS Water Classifier)",
+                     "type": "wms",
+                     "layers": "s2_nrt_wofs",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2_nrt_wofs",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
                   }
                ]
             },
@@ -417,7 +518,7 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Fractional Cover Daily Observationa",
+                     "name": "Fractional Cover Daily Observations",
                      "type": "group",
                      "preserveOrder": true,
                      "items": [
@@ -425,8 +526,8 @@
                            "name": "Fractional Cover Combined",
                            "type": "wms",
                            "layers": "fc_albers_combined",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fc_albers_combined",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
@@ -436,8 +537,8 @@
                            "name": "Fractional Cover Landsat 5",
                            "type": "wms",
                            "layers": "ls5_fc_albers",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls5_fc_albers",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
@@ -447,8 +548,8 @@
                            "name": "Fractional Cover Landsat 7",
                            "type": "wms",
                            "layers": "ls7_fc_albers",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls7_fc_albers",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
@@ -458,8 +559,8 @@
                            "name": "Fractional Cover Landsat 8",
                            "type": "wms",
                            "layers": "ls8_fc_albers",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls8_fc_albers",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
@@ -467,9 +568,11 @@
                         },
                         {
                            "name": "Fractional Cover Polygon Drill",
-                           "type": "wps-getCapabilities",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/wps/",
+                           "type": "wps",
+                           "url": "https://ows.dev.dea.ga.gov.au/wps/",
                            "opacity": 1,
+                           "identifier": "FractionalCoverDrill",
+                           "description": "Fractional Cover Daily Observations Polygon Drill\n\nFractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover\n\nFractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.\n\nThis polygon drill uses Fractional Cover dervied from the Landsat 5, 7 and 8 satellites\n\nFor service status information, see https://status.dea.ga.gov.au"
                         }
                      ]
                   },
@@ -482,8 +585,8 @@
                            "name": "Fractional Cover Percentiles - Median",
                            "type": "wms",
                            "layers": "fcp_rgb",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_rgb",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -492,8 +595,8 @@
                            "name": "Fractional Cover Percentiles - Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_green_veg",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -502,8 +605,8 @@
                            "name": "Fractional Cover Percentiles - Non-Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_non_green_veg",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_non_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -512,8 +615,8 @@
                            "name": "Fractional Cover Percentiles - Bare Soil",
                            "type": "wms",
                            "layers": "fcp_bare_ground",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_bare_ground",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -529,8 +632,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Median",
                            "type": "wms",
                            "layers": "fcp_seasonal_rgb",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_rgb",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -539,8 +642,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_seasonal_green_veg",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -549,8 +652,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Non-Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_seasonal_non_green_veg",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_non_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -559,8 +662,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Bare Soil",
                            "type": "wms",
                            "layers": "fcp_seasonal_bare_ground",
-                           "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_bare_ground",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -578,8 +681,8 @@
                      "name": "Mangrove Canopy Cover",
                      "type": "wms",
                      "layers": "mangrove_cover",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "mangrove_cover",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -588,18 +691,20 @@
                      "name": "National Intertidal Digital Elevation Model",
                      "type": "wms",
                      "layers": "NIDEM",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "NIDEM",
                      "ignoreUnknownTileErrors": true,
+                     "useOwnClock": true,
+                     "availableDimensions": [],
                      "opacity": 1
                   },
                   {
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
                      "type": "wms",
                      "layers": "high_tide_composite",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "high_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -608,8 +713,8 @@
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
                      "type": "wms",
                      "layers": "low_tide_composite",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "low_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -618,8 +723,8 @@
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
                      "type": "wms",
                      "layers": "ITEM_V2.0.0",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -628,8 +733,8 @@
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
                      "type": "wms",
                      "layers": "ITEM_V2.0.0_Conf",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -645,8 +750,8 @@
                      "name": "Weathering Intensity 1 degree tile (Weathering Intensity)",
                      "type": "wms",
                      "layers": "weathering_intensity",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "weathering_intensity",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -662,8 +767,8 @@
                      "name": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
                      "type": "wms",
                      "layers": "multi_scale_topographic_position",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "multi_scale_topographic_position",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -671,16 +776,16 @@
                ]
             },
             {
-               "name": "NSW Water Bodies Project",
+               "name": "Waterbody Area Mapping and Monitoring",
                "type": "group",
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "NSW Water Bodies Project",
+                     "name": "Waterbody Area Mapping and Monitoring",
                      "type": "wms",
                      "layers": "water_bodies",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "water_bodies",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -707,8 +812,8 @@
                      "name": "Historical Airborne Photography PoC",
                      "type": "wms",
                      "layers": "historical_airborne_photography",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "historical_airborne_photography",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -724,8 +829,8 @@
                      "name": "False Colour Mosaic",
                      "type": "wms",
                      "layers": "aster_false_colour",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_false_colour",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -734,8 +839,8 @@
                      "name": "Regolith Ratios",
                      "type": "wms",
                      "layers": "aster_regolith_ratios",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_regolith_ratios",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -744,138 +849,138 @@
                      "name": "Green Vegetation Content",
                      "type": "wms",
                      "layers": "aster_green_vegetation",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_green_vegetation",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Ferric oxide content",
+                     "name": "Ferric Oxide Content",
                      "type": "wms",
                      "layers": "aster_ferric_oxide_content",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferric_oxide_content",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Ferric oxide composition",
+                     "name": "Ferric Oxide Composition",
                      "type": "wms",
                      "layers": "aster_ferric_oxide_composition",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferric_oxide_composition",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Ferrous iron index",
+                     "name": "Ferrous Iron Index",
                      "type": "wms",
                      "layers": "aster_ferrous_iron_index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferrous_iron_index",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Opaque index",
+                     "name": "Opaque Index",
                      "type": "wms",
                      "layers": "aster_opaque_index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_opaque_index",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "AlOH group content",
+                     "name": "AlOH Group Content",
                      "type": "wms",
                      "layers": "aster_aloh_group_content",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_aloh_group_content",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "AlOH group composition",
+                     "name": "AlOH Group Composition",
                      "type": "wms",
                      "layers": "aster_aloh_group_composition",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_aloh_group_composition",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Kaolin group index",
+                     "name": "Kaolin Group Index",
                      "type": "wms",
                      "layers": "aster_kaolin_group_index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_kaolin_group_index",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "FeOH group content",
+                     "name": "FeOH Group Content",
                      "type": "wms",
                      "layers": "aster_feoh_group_content",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_feoh_group_content",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "MgOH group content",
+                     "name": "MgOH Group Content",
                      "type": "wms",
                      "layers": "aster_mgoh_group_content",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_mgoh_group_content",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "MgOH group composition",
+                     "name": "MgOH Group Composition",
                      "type": "wms",
                      "layers": "aster_mgoh_group_composition",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_mgoh_group_composition",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Ferrous iron content in MgOH/carbonate",
+                     "name": "Ferrous Iron Content in MgOH/Carbonate",
                      "type": "wms",
                      "layers": "aster_ferrous_iron_content_in_mgoh",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferrous_iron_content_in_mgoh",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Silica Index",
+                     "name": "TIR Silica index",
                      "type": "wms",
                      "layers": "aster_silica_index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_silica_index",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
                   {
-                     "name": "Quartz Index",
+                     "name": "TIR Quartz Index",
                      "type": "wms",
                      "layers": "aster_quartz_index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_quartz_index",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -884,8 +989,8 @@
                      "name": "Gypsum Index",
                      "type": "wms",
                      "layers": "aster_gypsum_index",
-                     "url": "https://ows.services.devkube.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.devkube.dea.ga.gov.au/",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_gypsum_index",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -913,8 +1018,8 @@
                            "name": "Water Observations from Space Daily (WOfS Daily Observations)",
                            "type": "wms",
                            "layers": "wofs_albers",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_albers",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
@@ -931,8 +1036,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfs April to October Statistics)",
                            "type": "wms",
                            "layers": "wofs_apr_oct_summary_wet",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -941,8 +1046,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfs April to October Statistics)",
                            "type": "wms",
                            "layers": "wofs_apr_oct_summary_clear",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -951,8 +1056,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfs April to October Statistics)",
                            "type": "wms",
                            "layers": "wofs_apr_oct_summary_statistics",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -961,8 +1066,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfs November to March Statistics)",
                            "type": "wms",
                            "layers": "wofs_nov_mar_summary_wet",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -971,8 +1076,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfs November to March Statistics)",
                            "type": "wms",
                            "layers": "wofs_nov_mar_summary_clear",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -981,8 +1086,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfs November to March Statistics)",
                            "type": "wms",
                            "layers": "wofs_nov_mar_summary_statistics",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -998,8 +1103,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_wet",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1008,8 +1113,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_clear",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1018,8 +1123,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfS Annual Statistics)",
                            "type": "wms",
                            "layers": "wofs_annual_summary_statistics",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1035,8 +1140,8 @@
                            "name": "Water Observations from Space 25m Filtered Summary (WOfS Filtered Statistics)",
                            "type": "wms",
                            "layers": "wofs_filtered_summary",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1045,8 +1150,8 @@
                            "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
                            "type": "wms",
                            "layers": "wofs_summary_wet",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1055,8 +1160,8 @@
                            "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
                            "type": "wms",
                            "layers": "wofs_summary_clear",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1065,8 +1170,8 @@
                            "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
                            "type": "wms",
                            "layers": "Water Observations from Space Statistics",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "Water Observations from Space Statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1075,8 +1180,8 @@
                            "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
                            "type": "wms",
                            "layers": "wofs_filtered_summary_confidence",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary_confidence",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1094,8 +1199,8 @@
                      "name": "Surface Reflectance (Landsat 5)",
                      "type": "wms",
                      "layers": "ls5_nbart_geomedian_annual",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls5_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -1115,8 +1220,8 @@
                      "name": "Surface Reflectance (Landsat 7)",
                      "type": "wms",
                      "layers": "ls7_nbart_geomedian_annual",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls7_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -1136,8 +1241,8 @@
                      "name": "Surface Reflectance (Landsat 8)",
                      "type": "wms",
                      "layers": "ls8_nbart_geomedian_annual",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -1164,8 +1269,8 @@
                      "name": "Barest Earth 25m Mosiac",
                      "type": "wms",
                      "layers": "ls8_barest_earth_mosaic",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_barest_earth_mosaic",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -1184,6 +1289,79 @@
                ]
             },
             {
+               "name": "Sentinel-2 Definitive",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2A and 2B combined)",
+                     "type": "wms",
+                     "layers": "s2_ard_granule_nbar_t",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2A)",
+                     "type": "wms",
+                     "layers": "s2a_ard_granule_nbar_t",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "Definitive Surface Reflectance (Sentinel 2B)",
+                     "type": "wms",
+                     "layers": "s2b_ard_granule_nbar_t",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        },
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
                "name": "Near Real-Time",
                "type": "group",
                "preserveOrder": true,
@@ -1192,8 +1370,8 @@
                      "name": "Near Real-Time Surface Reflectance (Sentinel 2A)",
                      "type": "wms",
                      "layers": "s2a_nrt_granule_nbar_t",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2a_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -1214,8 +1392,8 @@
                      "name": "Near Real-Time Surface Reflectance (Sentinel 2B)",
                      "type": "wms",
                      "layers": "s2b_nrt_granule_nbar_t",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
@@ -1235,10 +1413,69 @@
                ]
             },
             {
-               "name": "Fractional Cover Percentiles",
+               "name": "Fractional Cover",
                "type": "group",
                "preserveOrder": true,
                "items": [
+                  {
+                     "name": "Fractional Cover Daily Observations",
+                     "type": "group",
+                     "preserveOrder": true,
+                     "items": [
+                        {
+                           "name": "Fractional Cover Combined",
+                           "type": "wms",
+                           "layers": "fc_albers_combined",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "fc_albers_combined",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 5",
+                           "type": "wms",
+                           "layers": "ls5_fc_albers",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls5_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 7",
+                           "type": "wms",
+                           "layers": "ls7_fc_albers",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls7_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Landsat 8",
+                           "type": "wms",
+                           "layers": "ls8_fc_albers",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ls8_fc_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Fractional Cover Polygon Drill",
+                           "type": "wps",
+                           "url": "https://ows.dea.ga.gov.au/wps/",
+                           "opacity": 1,
+                           "identifier": "FractionalCoverDrill",
+                           "description": "Fractional Cover Daily Observations Polygon Drill\n\nFractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover\n\nFractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.\n\nThis polygon drill uses Fractional Cover dervied from the Landsat 5, 7 and 8 satellites\n\nFor service status information, see https://status.dea.ga.gov.au"
+                        }
+                     ]
+                  },
                   {
                      "name": "Fractional Cover Percentiles Annual",
                      "type": "group",
@@ -1248,8 +1485,8 @@
                            "name": "Fractional Cover Percentiles - Median",
                            "type": "wms",
                            "layers": "fcp_rgb",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_rgb",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1258,8 +1495,8 @@
                            "name": "Fractional Cover Percentiles - Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_green_veg",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1268,8 +1505,8 @@
                            "name": "Fractional Cover Percentiles - Non-Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_non_green_veg",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_non_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1278,8 +1515,8 @@
                            "name": "Fractional Cover Percentiles - Bare Soil",
                            "type": "wms",
                            "layers": "fcp_bare_ground",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_bare_ground",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1295,8 +1532,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Median",
                            "type": "wms",
                            "layers": "fcp_seasonal_rgb",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_rgb",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1305,8 +1542,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_seasonal_green_veg",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1315,8 +1552,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Non-Green Vegetation",
                            "type": "wms",
                            "layers": "fcp_seasonal_non_green_veg",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_non_green_veg",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1325,8 +1562,8 @@
                            "name": "Fractional Cover Percentiles Seasonal - Bare Soil",
                            "type": "wms",
                            "layers": "fcp_seasonal_bare_ground",
-                           "url": "https://ows.services.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                           "url": "https://ows.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_bare_ground",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1
@@ -1344,8 +1581,8 @@
                      "name": "Mangrove Canopy Cover",
                      "type": "wms",
                      "layers": "mangrove_cover",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "mangrove_cover",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -1354,8 +1591,8 @@
                      "name": "National Intertidal Digital Elevation Model",
                      "type": "wms",
                      "layers": "NIDEM",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "NIDEM",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -1364,8 +1601,8 @@
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
                      "type": "wms",
                      "layers": "high_tide_composite",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "high_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -1374,8 +1611,8 @@
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
                      "type": "wms",
                      "layers": "low_tide_composite",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "low_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -1384,8 +1621,8 @@
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
                      "type": "wms",
                      "layers": "ITEM_V2.0.0",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -1394,8 +1631,8 @@
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
                      "type": "wms",
                      "layers": "ITEM_V2.0.0_Conf",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -1411,8 +1648,8 @@
                      "name": "Weathering Intensity 1 degree tile (Weathering Intensity)",
                      "type": "wms",
                      "layers": "weathering_intensity",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "weathering_intensity",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
@@ -1428,9 +1665,186 @@
                      "name": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
                      "type": "wms",
                      "layers": "multi_scale_topographic_position",
-                     "url": "https://ows.services.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "multi_scale_topographic_position",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  }
+               ]
+            },
+            {
+               "name": "ASTER Geoscience Map of Australia",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "False Colour Mosaic",
+                     "type": "wms",
+                     "layers": "aster_false_colour",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_false_colour",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Regolith Ratios",
+                     "type": "wms",
+                     "layers": "aster_regolith_ratios",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_regolith_ratios",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Green Vegetation Content",
+                     "type": "wms",
+                     "layers": "aster_green_vegetation",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_green_vegetation",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferric Oxide Content",
+                     "type": "wms",
+                     "layers": "aster_ferric_oxide_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferric_oxide_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferric Oxide Composition",
+                     "type": "wms",
+                     "layers": "aster_ferric_oxide_composition",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferric_oxide_composition",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferrous Iron Index",
+                     "type": "wms",
+                     "layers": "aster_ferrous_iron_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferrous_iron_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Opaque Index",
+                     "type": "wms",
+                     "layers": "aster_opaque_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_opaque_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "AlOH Group Content",
+                     "type": "wms",
+                     "layers": "aster_aloh_group_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_aloh_group_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "AlOH Group Composition",
+                     "type": "wms",
+                     "layers": "aster_aloh_group_composition",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_aloh_group_composition",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Kaolin Group Index",
+                     "type": "wms",
+                     "layers": "aster_kaolin_group_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_kaolin_group_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "FeOH Group Content",
+                     "type": "wms",
+                     "layers": "aster_feoh_group_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_feoh_group_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "MgOH Group Content",
+                     "type": "wms",
+                     "layers": "aster_mgoh_group_content",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_mgoh_group_content",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "MgOH Group Composition",
+                     "type": "wms",
+                     "layers": "aster_mgoh_group_composition",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_mgoh_group_composition",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Ferrous Iron Content in MgOH/Carbonate",
+                     "type": "wms",
+                     "layers": "aster_ferrous_iron_content_in_mgoh",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_ferrous_iron_content_in_mgoh",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "TIR Silica index",
+                     "type": "wms",
+                     "layers": "aster_silica_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_silica_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "TIR Quartz Index",
+                     "type": "wms",
+                     "layers": "aster_quartz_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_quartz_index",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Gypsum Index",
+                     "type": "wms",
+                     "layers": "aster_gypsum_index",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "aster_gypsum_index",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   }
@@ -1447,7 +1861,7 @@
                "name": "Cambodia Geomedian Surface Reflectance (Level 2)",
                "type": "wms",
                "layers": "ls_level2_geomedian_annual",
-               "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
+               "url": "https://cambodiacube.dev.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
             },
@@ -1455,10 +1869,10 @@
                "name": "Cambodia Water Observation from Space 30m (WOfS)",
                "type": "wms",
                "layers": "cambodia_wofs",
-               "url": "https://cambodiacube.services.devkube.dea.ga.gov.au/",
+               "url": "https://cambodiacube.dev.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
-            },
+            }
          ]   
       },
       {
@@ -1470,7 +1884,7 @@
                "name": "Cambodia Geomedian Surface Reflectance (Level 2)",
                "type": "wms",
                "layers": "ls_level2_geomedian_annual",
-               "url": "https://cambodiacube.services.dea.ga.gov.au/",
+               "url": "https://cambodiacube.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
             },
@@ -1478,12 +1892,35 @@
                "name": "Cambodia Water Observation from Space 30m (WOfS)",
                "type": "wms",
                "layers": "cambodia_wofs",
-               "url": "https://cambodiacube.services.dea.ga.gov.au/",
+               "url": "https://cambodiacube.dea.ga.gov.au/",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
+            }
+         ]   
+      },
+      {
+         "name": "Hotspots",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Current Hotspots",
+               "type": "wms",
+               "layers": "hotspot_current_4326",
+               "url": "https://sentinel.ga.gov.au/geoserver/public/wms",
                "ignoreUnknownTileErrors": true,
                "opacity": 1
             },
+             {
+               "name": "Himawari 8 Mosaic ",
+               "type": "wms",
+               "layers": "himawari8_mosaic",
+               "url": "https://sentinel.ga.gov.au/geoserver/public/wms",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1
+            }
          ]   
-      },      
+      },
       {
          "name": "DEA Shapes",
          "type": "group",
@@ -1510,6 +1947,69 @@
                "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20.geojson"
             },
             {
+               "name": "DEA Wetlands Insight Tool v1.0",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_exploded6.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               }
+            },
+	    {
+              "name": "Summer Irrigation Insight Tool",
+	      "type": "group",
+	      "preserveOrder": true,
+	      "items": [
+	         {
+	            "name": "Condamine-Culgoa 2013-14",
+	            "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/CONDAMINE-CULGOA_2013_WIT.geojson",
+	            "type": "geojson",
+	            "featureInfoTemplate": {
+		     "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+	            }
+	         },
+	         {
+	            "name": "GWYDIR 2016-17",
+	            "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2016_WIT.geojson",
+	            "type": "geojson",
+	            "featureInfoTemplate": {
+		       "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+	            }
+	         },
+	         {
+	            "name": "GWYDIR 2017-18",
+	            "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2017_WIT.geojson",
+	            "type": "geojson",
+	            "featureInfoTemplate": {
+		       "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+	            }
+	         },
+	         {
+	             "name": "GWYDIR 2018-19",
+	             "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2018_WIT.geojson",
+	             "type": "geojson",
+	             "featureInfoTemplate": {
+		        "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+		     }
+                 },
+	      ]
+	    },
+            {
+               "name": "DEA WIT - LRA",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/DCDB_NW_LGA_aoi.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " OBJECTID {{OBJECTID}} in locality {{LOCALITY}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               }
+            },
+            {
+                  "name": "MODIS Marine Heat Waves Tool",
+                  "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/CMR_2013_dissolved_wgs84.geojson",
+                  "type": "geojson",
+                  "featureInfoTemplate": {
+                    "template": " {{MPA_NAME}} Marine Park in {{network}} marine network.  <p/> <figure> <img style='width: 100%' src='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'/> <figcaption>Seasonal variation of the MHW characteristics for {{MPA_NAME}} Marine Park. The MHW area is calculated as the percentage of the Marine Park observed by MODIS satellite. The mean MHW intensity is represented as degrees above the 90 percentile climatology calculated from the daily IMOS MODIS SST data between July 2002 and Oct 2018. The MHW days indicate the number of the days for which the Marine Park has been affected by MHWs. Note that the 2002 winter and the 2018 spring seasons have only 51 and 42 total numbers of days, respectively, due to the limitation of the time series.</figcaption> </figure> <p/> Download: <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'>chart image</a> | <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.csv'>timeseries CSV</a><p/>"
+                  }
+            },
+            {
                "name": "Historical Airborne Photography - Cloncurry frames",
                "type": "geojson",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/HAP/Cloncurry/Frames/frames_geojson.geojson",
@@ -1526,6 +2026,119 @@
                }
             }
          ]
-      }
+      },
+      {
+         "name": "ODC Hackathon",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "2018-2019 Fiji Summaries",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Level 3 Land Cover Classification",
+                     "type": "wms",
+                     "layers": "lccs_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Fractional Cover Annual 50th Percentile",
+                     "type": "wms",
+                     "layers": "ls_usgs_fcp_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "Water Observations from Space Annual Summary",
+                     "type": "wms",
+                     "layers": "ls_usgs_wofs_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1
+                  },
+                  {
+                     "name": "USGS Landsat 8 Geomedian",
+                     "type": "wms",
+                     "layers": "ls_usgs_geomedian_fiji",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+               ]
+            },
+            {
+               "name": "USGS Landsat 8",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 8 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls8_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "USGS Landsat 8 Fractional Cover",
+                     "type": "wms",
+                     "layers": "ls8_usgs_fc_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  },
+                  {
+                     "name": "USGS Landsat 8 Water Observation Feature Layer",
+                     "type": "wms",
+                     "layers": "ls_usgs_wofs",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
+               "name": "USGS Landsat 7",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 7 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls7_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            },
+            {
+               "name": "USGS Landsat 5",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "USGS Landsat 5 Surface Reflectance",
+                     "type": "wms",
+                     "layers": "ls5_usgs_sr_scene",
+                     "url": "https://ows.sandbox.test.frontiersi.io/?service=wms",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureTimesProperty": "data_available_for_dates"
+                  }
+               ]
+            }
+         ]   
+      },
    ]
 }

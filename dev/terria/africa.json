@@ -1,0 +1,97 @@
+{
+    "corsDomains": [
+       "dea.ga.gov.au",
+       "digitalearth.africa",
+       "dea-public-data-dev.s3-ap-southeast-2.amazonaws.com"
+    ],
+    "homeCamera": {
+       "north": -38,
+       "east": 45,
+       "south": -35,
+       "west": 20
+    },
+    "catalog": [
+       {
+          "name": "Digital Earth Africa",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+             {
+                "name": "USGS Landsat",
+                "type": "group",
+                "preserveOrder": true,
+                "items": [
+                   {
+                      "name": "Surface Reflectance (Landsat 5)",
+                      "type": "wms",
+                      "layers": "ls5_usgs_sr_scene",
+                      "url": "https://ows.digitalearth.africa/",
+                      "linkedWcsUrl": "https://ows.digitalearth.africa/",
+                      "linkedWcsCoverage": "ls5_usgs_sr_scene",
+                      "ignoreUnknownTileErrors": true,
+                      "opacity": 1,
+                      "featureTimesProperty": "data_available_for_dates",
+                      "featureInfoTemplate": {
+                         "formats": {
+                            "lat": {
+                               "maximumFractionDigits": 5
+                            },
+                            "lon": {
+                               "maximumFractionDigits": 5
+                            }
+                         },
+                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                      }
+                   },
+                   {
+                    "name": "Surface Reflectance (Landsat 7)",
+                    "type": "wms",
+                    "layers": "ls7_usgs_sr_scene",
+                    "url": "https://ows.digitalearth.africa/",
+                    "linkedWcsUrl": "https://ows.digitalearth.africa/",
+                    "linkedWcsCoverage": "ls7_usgs_sr_scene",
+                    "ignoreUnknownTileErrors": true,
+                    "opacity": 1,
+                    "featureTimesProperty": "data_available_for_dates",
+                    "featureInfoTemplate": {
+                       "formats": {
+                          "lat": {
+                             "maximumFractionDigits": 5
+                          },
+                          "lon": {
+                             "maximumFractionDigits": 5
+                          }
+                       },
+                       "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                    }
+                 },
+                 {
+                    "name": "Surface Reflectance (Landsat 8)",
+                    "type": "wms",
+                    "layers": "ls8_usgs_sr_scene",
+                    "url": "https://ows.digitalearth.africa/",
+                    "linkedWcsUrl": "https://ows.digitalearth.africa/",
+                    "linkedWcsCoverage": "ls8_usgs_sr_scene",
+                    "ignoreUnknownTileErrors": true,
+                    "opacity": 1,
+                    "featureTimesProperty": "data_available_for_dates",
+                    "featureInfoTemplate": {
+                       "formats": {
+                          "lat": {
+                             "maximumFractionDigits": 5
+                          },
+                          "lon": {
+                             "maximumFractionDigits": 5
+                          }
+                       },
+                       "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                    }
+                 }
+                ]
+             }
+             
+          ]
+       }
+    ]
+ }
+ 

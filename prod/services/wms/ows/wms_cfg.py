@@ -52,7 +52,7 @@ service_cfg = {
     },
 
     ## Required config for WCS
-    # Must be a geographic CRS in the published_CRSs list. EPSG:4326 is recommended, but any geographic CRS should work.
+    # Must be a geographic CRS in the published_CRSs list.  EPSG:4326 is recommended, but any geographic CRS should work.
     "default_geographic_CRS": "EPSG:4326",
 
     # Supported WCS formats
@@ -116,7 +116,7 @@ service_cfg = {
     },
     "fees": "",
     "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. " 
-                          "This product is released under the Creative Commons Attribution 4.0 International Licence. "
+                          "This product is released under the Creative Commons Attribution 4.0 International Licence. " 
                           "http://creativecommons.org/licenses/by/4.0/legalcode",
     "preauthenticate_s3": True,
     "geotiff_georeference_source": "INTERNAL"
@@ -136,11 +136,11 @@ layer_cfg = [
         # to describe the label to end-users.
         "products": [
             {
-            # Included as a keyword for the layer
+            # Included as a keyword  for the layer
                 "label": "Landsat 8",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Annual Geomedian",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "abstract": """
@@ -507,11 +507,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Landsat 7",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Annual Geomedian",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
@@ -878,11 +878,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Landsat 5",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Annual Geomedian",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
@@ -1273,11 +1273,11 @@ Mosaics are available for the following years:
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Landsat 8",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Barest Earth",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
@@ -1297,297 +1297,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "name": "ls8_barest_earth_mosaic",
                 # The Datacube name for the associated data product
                 "product_name": "ls8_barest_earth_albers",
-                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-                # to actual imagery occurs.
-                "min_zoom_factor": 35.0,
-                #"max_datasets_wms": 1000,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Time Zone.  In hours added to UTC (maybe negative)
-                # Used for rounding off scene times to a date.
-                # 9 is good value for imagery of Australia.
-                "time_zone": 9,
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-                "data_manual_merge": True,
-                "always_fetch_bands": [],
-                "apply_solar_corrections": False,
-                # Define layer wide legend graphic if no style is passed
-                # to GetLegendGraphic
-                "legend": {
-                    # "url": ""
-                    "styles": ["ndvi"]
-                },
-                "wcs_default_bands": ["red", "green", "blue"],
-                #
-                # See band_mapper.py
-                #
-                # The various available spectral bands, and ways to combine them
-                # into a single rgb image.
-                # The examples here are ad hoc
-                #
-                "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
-                    {
-                        "name": "simple_rgb",
-                        "title": "Simple RGB",
-                        "abstract": "Simple true-colour image, using the red, green and blue bands",
-                        "components": {
-                            "red": {
-                                "red": 1.0
-                            },
-                            "green": {
-                                "green": 1.0
-                            },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
-                        # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "infrared_green",
-                        "title": "False colour - Green, SWIR, NIR",
-                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "nir": 1.0
-                            },
-                            "blue": {
-                                "green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "ndvi",
-                        "title": "NDVI - Red, NIR",
-                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nir"] - data["red"]) / (data["nir"] + data["red"]),
-                        "needed_bands": ["red", "nir"],
-                        "color_ramp": [
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#A35F18"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#B88512"
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#CEAC0E"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#E5D609"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FFFF0C"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#C3DE09"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#88B808"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#529400"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#237100"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#114D04"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "blue",
-                        "title": "Blue - 480",
-                        "abstract": "Blue band, centered on 480nm",
-                        "components": {
-                            "red": {
-                                "blue": 1.0
-                            },
-                            "green": {
-                                "blue": 1.0
-                            },
-                            "blue": {
-                                "blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Green - 560",
-                        "abstract": "Green band, centered on 560nm",
-                        "components": {
-                            "red": {
-                                "green": 1.0
-                            },
-                            "green": {
-                                "green": 1.0
-                            },
-                            "blue": {
-                                "green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Red - 660",
-                        "abstract": "Red band, centered on 660nm",
-                        "components": {
-                            "red": {
-                                "red": 1.0
-                            },
-                            "green": {
-                                "red": 1.0
-                            },
-                            "blue": {
-                                "red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Near Infrared (NIR) - 870",
-                        "abstract": "Near infra-red band, centered on 870nm",
-                        "components": {
-                            "red": {
-                                "nir": 1.0
-                            },
-                            "green": {
-                                "nir": 1.0
-                            },
-                            "blue": {
-                                "nir": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Shortwave Infrared (SWIR) - 1610",
-                        "abstract": "Short wave infra-red band 1, centered on 1610nm",
-                        "components": {
-                            "red": {
-                                "swir1": 1.0
-                            },
-                            "green": {
-                                "swir1": 1.0
-                            },
-                            "blue": {
-                                "swir1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Shortwave Infrared (SWIR) - 2200",
-                        "abstract": "Short wave infra-red band 2, centered on 2200nm",
-                        "components": {
-                            "red": {
-                                "swir2": 1.0
-                            },
-                            "green": {
-                                "swir2": 1.0
-                            },
-                            "blue": {
-                                "swir2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    }
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "simple_rgb",
-
-            }
-        ]
-    },
-    {
-        # Name and title of the platform layer.
-        # Platform layers are not mappable. The name is for internal server use only.
-        "name": "landsat_barest_earth",
-        "title": "Barest Earth 30 Years",
-        "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
-
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
-
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
-
-Mosaics are available for the following years:
-    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
-    """,
-        # Link removed until eCat record is "published_external", not "published_internal"
-        # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
-
-        # Products available for this platform.
-        # For each product, the "name" is the Datacube name, and the label is used
-        # to describe the label to end-users.
-        "products": [
-            {
-                # Included as a keyword for the layer
-                "label": "Combined Landsat",
-                # Included as a keyword for the layer
-                "type": "albers",
-                # Included as a keyword for the layer
-                "variant": "25m",
-                "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
-
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
-
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
-
-Mosaics are available for the following years:
-    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
-
-For service status information, see https://status.dea.ga.gov.au""",
-                # Link removed until eCat record is "published_external", not "published_internal"
-                # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
-
-                # The WMS name for the layer
-                "name": "landsat_barest_earth",
-                # The Datacube name for the associated data product
-                "product_name": "landsat_barest_earth",
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
                 "min_zoom_factor": 35.0,
@@ -1912,83 +1621,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 #  not required by the standard.)
                 "default_style": "mangrove",
             },
-            {
-                "label": "Mangrove Canopy Cover V2.0.2",
-                "abstract": """
-Mangrove canopy cover version 2.0.2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-
-The mangrove canopy cover product provides valuable information about the extent and canopy density of mangroves for each year between 1987 and 2016 for the entire Australian coastline.
-The canopy cover classes are:
-20-50% (pale green), 50-80% (mid green), 80-100% (dark green).
-
-The product consists of  a sequence (one per year) of 25 meter resolution maps that are generated by analysing the Landsat fractional cover (https://doi.org/10.6084/m9.figshare.94250.v1) developed by the Joint Remote Sensing Research Program and the Global Mangrove Watch layers (https://doi.org/10.1071/MF13177) developed by the Japanese Aerospace Exploration Agency.
-
-For service status information, see https://status.dea.ga.gov.au""",
-                "type": "100km tile",
-                "variant": "25m",
-                "name": "mangrove_cover_v2_0_2",
-                "product_name": "mangrove_cover_test",
-                "min_zoom_factor": 15.0,
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                "time_zone": 9,
-                "extent_mask_func": lambda data, band: data["extent"] != data["extent"].attrs['nodata'],
-                "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["extent"],
-                "apply_solar_corrections": False,
-                "legend": {
-                    "styles": ["mangrove"]
-                },
-                "wcs_default_bands": ["canopy_cover_class", "extent"],
-                "styles": [
-                    {
-                        "name": "mangrove",
-                        "title": "Mangrove Cover",
-                        "abstract": "",
-                        "value_map": {
-                            "canopy_cover_class": [
-                                {
-                                    "title": "Not Observed",
-                                    "abstract": "(Clear Obs < 3)",
-                                    "flags": {
-                                        "notobserved": True
-                                    },
-                                    "color": "#BDBDBD"
-                                },
-                                {
-                                    "title": "Woodland",
-                                    "abstract": "(20% - 50% cover)",
-                                    "flags": {
-                                        "woodland": True
-                                    },
-                                    "color": "#9FFF4C"
-                                },
-                                {
-                                    "title": "Open Forest",
-                                    "abstract": "(50% - 80% cover)",
-                                    "flags": {
-                                        "open_forest": True
-                                    },
-                                    "color": "#5ECC00"
-                                },
-                                {
-                                    "title": "Closed Forest",
-                                    "abstract": "(>80% cover)",
-                                    "flags": {
-                                        "closed_forest": True
-                                    },
-                                    "color": "#3B7F00"
-                                },
-                            ]
-                        }
-                    }
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "mangrove",
-            },
         ]
     },
     {
@@ -2003,11 +1635,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Filtered Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Filtered Water Summary",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary",
@@ -2183,11 +1815,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "WOfS_filtered_frequency",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Wet Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_summary_wet",
@@ -2301,11 +1933,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "water_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Clear Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_summary_clear",
@@ -2420,11 +2052,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "clear_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Water Summary",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "Water Observations from Space Statistics",
@@ -2596,11 +2228,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "WOfS_frequency",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Filtered Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Confidence",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_filtered_summary_confidence",
@@ -2697,11 +2329,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "wofs_confidence",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Annual Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Wet Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_annual_summary_wet",
@@ -2815,11 +2447,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "annual_water_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Annual Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Clear Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_annual_summary_clear",
@@ -2934,11 +2566,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "annual_clear_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Annual Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Water Summary",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_annual_summary_statistics",
@@ -3102,11 +2734,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "annual_WOfS_frequency",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS April - October Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Wet Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_apr_oct_summary_wet",
@@ -3219,11 +2851,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_water_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS April - October Summary Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Clear Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_apr_oct_summary_clear",
@@ -3337,11 +2969,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_clear_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS April - October Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Water Summary",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_apr_oct_summary_statistics",
@@ -3504,11 +3136,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_WOfS_frequency",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS November - March Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Wet Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_nov_mar_summary_wet",
@@ -3621,11 +3253,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_water_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS November - March Summary Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Clear Count",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_nov_mar_summary_clear",
@@ -3739,11 +3371,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_clear_observations",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS November - March Statistics",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Water Summary",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_nov_mar_summary_statistics",
@@ -3906,11 +3538,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "seasonal_WOfS_frequency",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "WOfS Daily Observations",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "albers",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "wofs_albers",
@@ -3974,9 +3606,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["observations"]
                 },
                 "wcs_default_bands": ["water"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 "styles": [
                     {
                         "name": "observations",
@@ -4113,497 +3742,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword for the layer
-                "label": "Sentinel 2 (A and B combined)",
-                # Included as a keyword for the layer
-                "type": "",
-                # Included as a keyword for the layer
-                "variant": "Surface Reflectance",
-                "abstract":"""
-This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
-
-For more information see http://pid.geoscience.gov.au/dataset/ga/122229
-
-The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
-The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
-- Influence on the remote sensing signal from nearby land and/or atmospheric effects
-- Optically shallow water
-- Cloud cover
-Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
-
-For service status information, see https://status.dea.ga.gov.au""",
-                # The WMS name for the layer
-                "name": "s2_nrt_granule_nbar_t",
-                # The Datacube name for the associated data product
-                "multi_product": True,
-                "product_name": ["s2a_nrt_granule", "s2b_nrt_granule"],
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "s2b_nrt_granule",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_band": "pixel_quality",
-                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-                # to actual imagery occurs.
-                "min_zoom_factor": 15.0,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Time Zone.  In hours added to UTC (maybe negative)
-                # Used for rounding off scene times to a date.
-                # 9 is good value for imagery of Australia.
-                "time_zone": 9,
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-                # Define layer wide legend graphic if no style is passed
-                # to GetLegendGraphic
-                "legend": {
-                    # "url": ""
-                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
-                },
-                "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
-                # Styles.
-                #
-                # See band_mapper.py
-                #
-                # The various available spectral bands, and ways to combine them
-                # into a single rgb image.
-                # The examples here are ad hoc
-                #
-                "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
-                    {
-                        "name": "simple_rgb",
-                        "title": "Simple RGB",
-                        "abstract": "Simple true-colour image, using the red, green and blue bands",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "infrared_green",
-                        "title": "False colour - Green, SWIR, NIR",
-                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "ndvi",
-                        "title": "NDVI - Red, NIR",
-                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
-                        "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#A35F18"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#B88512"
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#CEAC0E"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#E5D609"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FFFF0C"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#C3DE09"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#88B808"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#529400"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#237100"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#114D04"
-                            }
-                        ]
-
-                    },
-                    {
-                        "name": "ndwi",
-                        "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
-                                    data["nbart_nir_1"] + data["nbart_green"]),
-                        "needed_bands": ["nbart_green", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -0.1,
-                                "color": "#f7fbff",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#d8e7f5",
-                                "legend": {
-                                    "prefix": "<"
-                                }
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#b0d2e8"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#73b3d8",
-                                "legend": { }
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#3e8ec4"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#1563aa",
-                                "legend": { }
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#08306b",
-                                "legend": {
-                                    "prefix": ">"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "mndwi",
-                        "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
-                        "needed_bands": ["nbart_green", "nbart_swir_2"],
-                        "color_ramp": [
-                            {
-                                "value": -0.1,
-                                "color": "#f7fbff",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#d8e7f5"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#b0d2e8"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#73b3d8"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#3e8ec4"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#1563aa"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#08306b"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "ndci",
-                        "title": "NDCI - Red Edge, Red",
-                        "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
-                        "color_ramp": [
-                            {
-                                "value": -0.1,
-                                "color": "#1696FF",
-                                "legend": {
-                                    "prefix" : "<"
-                                }
-                            },
-                            {
-                                "value": -0.1,
-                                "color": "#1696FF"
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#00FFDF",
-                                "legend": { }
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#FFF50E",
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#FFB50A",
-                                "legend": { }
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#FF530D",
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FF0000",
-                                "legend": {
-                                    "prefix": ">"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "aerosol",
-                        "title": "Narrow Blue - 440",
-                        "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
-                        "components": {
-                            "red": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "green": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "blue": {
-                                "nbart_coastal_aerosol": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "blue",
-                        "title": "Blue - 490",
-                        "abstract": "Blue band, approximately 453nm to 511nm",
-                        "components": {
-                            "red": {
-                                "nbart_blue": 1.0
-                            },
-                            "green": {
-                                "nbart_blue": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Green - 560",
-                        "abstract": "Green band, approximately 534nm to 588nm",
-                        "components": {
-                            "red": {
-                                "nbart_green": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Red - 670",
-                        "abstract": "Red band, roughly 637nm to 672nm",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_red": 1.0
-                            },
-                            "blue": {
-                                "nbart_red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red_edge_1",
-                        "title": "Vegetation Red Edge - 710",
-                        "abstract": "Near infra-red band, centred on 710nm",
-                        "components": {
-                            "red": {
-                                "nbart_red_edge_1": 1.0
-                            },
-                            "green": {
-                                "nbart_red_edge_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_red_edge_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red_edge_2",
-                        "title": "Vegetation Red Edge - 740",
-                        "abstract": "Near infra-red band, centred on 740nm",
-                        "components": {
-                            "red": {
-                                "nbart_red_edge_2": 1.0
-                            },
-                            "green": {
-                                "nbart_red_edge_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_red_edge_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red_edge_3",
-                        "title": "Vegetation Red Edge - 780",
-                        "abstract": "Near infra-red band, centred on 780nm",
-                        "components": {
-                            "red": {
-                                "nbart_red_edge_3": 1.0
-                            },
-                            "green": {
-                                "nbart_red_edge_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_red_edge_3": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Near Infrared (NIR) - 840",
-                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "narrow_nir",
-                        "title": "Narrow Near Infrared - 870",
-                        "abstract": "Near infra-red band, centred on 865nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Shortwave Infrared (SWIR) - 1610",
-                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Shortwave Infrared (SWIR) - 2190",
-                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_3": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    }
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "simple_rgb",
-            },
-            {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Sentinel 2B",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
                 "abstract":"""
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
@@ -4651,9 +3794,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -5084,11 +4224,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Sentinel 2A",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
@@ -5136,9 +4276,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -5569,67 +4706,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 #  not required by the standard.)
                 "default_style": "simple_rgb",
             },
-            {
-                # Included as a keyword for the layer
-                "label": "Sentinel 2 WOfS NRT",
-                # Included as a keyword for the layer
-                "type": "Water Classifier",
-                # Included as a keyword for the layer
-                "variant": "",
-                # The WMS name for the layer
-                "name": "s2_nrt_wofs",
-                # The Datacube name for the associated data product
-                "product_name": "sentinel2_wofs_nrt",
-                "abstract": """
-Sentinel 2 NRT Water Classifier.
-For service status information, see https://status.dea.ga.gov.au""",
-                "min_zoom_factor": 15.0,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Time Zone.  In hours added to UTC (maybe negative)
-                # Used for rounding off scene times to a date.
-                # 9 is good value for imagery of Australia.
-                "time_zone": 9,
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-                "legend": {
-                    # "url": ""
-                    "styles": ["water_classifier"]
-                },
-                "wcs_default_bands": ["water"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
-                "styles": [
-                    {
-                        "name": "water_classifier",
-                        "title": " Water Summary",
-                        "abstract": "WOfS NRT",
-                        "needed_bands": ["water"],
-                        "value_map": {
-                            "water": [
-                                {
-                                    "title": "Wet",
-                                    "abstract": "(100%)",
-                                    "color": "#5700E3"
-                                },
-
-                            ]
-                        }
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "water_classifier",
-            },
         ],
     },
     {
@@ -5647,497 +4723,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword for the layer
-                "label": "Sentinel 2 (A and B combined)",
-                # Included as a keyword for the layer
-                "type": "",
-                # Included as a keyword for the layer
-                "variant": "Surface Reflectance",
-                "abstract": """
-This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
-The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
-
-The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
-The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
-- Influence on the remote sensing signal from nearby land and/or atmospheric effects
-- Optically shallow water
-- Cloud cover
-Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
-
-For more information see http://pid.geoscience.gov.au/dataset/ga/129684
-For service status information, see https://status.dea.ga.gov.au""",
-                # The WMS name for the layer
-                "name": "s2_ard_granule_nbar_t",
-                # The Datacube name for the associated data product
-                "multi_product": True,
-                "product_name": ["s2a_ard_granule", "s2b_ard_granule"],
-                # The Datacube name for the associated pixel-quality product (optional)
-                # The name of the associated Datacube pixel-quality product
-                # "pq_dataset": "s2b_nrt_granule",
-                # The name of the measurement band for the pixel-quality product
-                # (Only required if pq_dataset is set)
-                # "pq_band": "pixel_quality",
-                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-                # to actual imagery occurs.
-                "min_zoom_factor": 35.0,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Time Zone.  In hours added to UTC (maybe negative)
-                # Used for rounding off scene times to a date.
-                # 9 is good value for imagery of Australia.
-                "time_zone": 9,
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-                # Define layer wide legend graphic if no style is passed
-                # to GetLegendGraphic
-                "legend": {
-                    # "url": ""
-                    "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
-                },
-                "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
-                # Styles.
-                #
-                # See band_mapper.py
-                #
-                # The various available spectral bands, and ways to combine them
-                # into a single rgb image.
-                # The examples here are ad hoc
-                #
-                "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
-                    {
-                        "name": "simple_rgb",
-                        "title": "Simple RGB",
-                        "abstract": "Simple true-colour image, using the red, green and blue bands",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "infrared_green",
-                        "title": "False colour - Green, SWIR, NIR",
-                        "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "ndvi",
-                        "title": "NDVI - Red, NIR",
-                        "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
-                        "index_function": lambda data: (data["nbart_nir_1"] - data["nbart_red"]) / (data["nbart_nir_1"] + data["nbart_red"]),
-                        "needed_bands": ["nbart_red", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -0.0,
-                                "color": "#8F3F20",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#8F3F20",
-                                "alpha": 1.0
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#A35F18"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#B88512"
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#CEAC0E"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#E5D609"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FFFF0C"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#C3DE09"
-                            },
-                            {
-                                "value": 0.7,
-                                "color": "#88B808"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#529400"
-                            },
-                            {
-                                "value": 0.9,
-                                "color": "#237100"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#114D04"
-                            }
-                        ]
-
-                    },
-                    {
-                        "name": "ndwi",
-                        "title": "NDWI - Green, NIR",
-                        "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_nir_1"]) / (
-                                    data["nbart_nir_1"] + data["nbart_green"]),
-                        "needed_bands": ["nbart_green", "nbart_nir_1"],
-                        "color_ramp": [
-                            {
-                                "value": -0.1,
-                                "color": "#f7fbff",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#d8e7f5",
-                                "legend": {
-                                    "prefix": "<"
-                                }
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#b0d2e8"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#73b3d8",
-                                "legend": { }
-                            },
-                            {
-                                "value": 0.3,
-                                "color": "#3e8ec4"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#1563aa",
-                                "legend": { }
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#08306b",
-                                "legend": {
-                                    "prefix": ">"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "mndwi",
-                        "title": "MNDWI - Green, SWIR",
-                        "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
-                        "index_function": lambda data: (data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"]),
-                        "needed_bands": ["nbart_green", "nbart_swir_2"],
-                        "color_ramp": [
-                            {
-                                "value": -0.1,
-                                "color": "#f7fbff",
-                                "alpha": 0.0
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#d8e7f5"
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#b0d2e8"
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#73b3d8"
-                            },
-                            {
-                                "value": 0.6,
-                                "color": "#3e8ec4"
-                            },
-                            {
-                                "value": 0.8,
-                                "color": "#1563aa"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#08306b"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "ndci",
-                        "title": "NDCI - Red Edge, Red",
-                        "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
-                        "index_function": lambda data: (data["nbart_red_edge_1"] - data["nbart_red"]) / (data["nbart_red_edge_1"] + data["nbart_red"]).where(((data["nbart_green"] - data["nbart_swir_2"]) / (data["nbart_green"] + data["nbart_swir_2"])) > 0.1),
-                        "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
-                        "color_ramp": [
-                            {
-                                "value": -0.1,
-                                "color": "#1696FF",
-                                "legend": {
-                                    "prefix": "<"
-                                }
-                            },
-                            {
-                                "value": -0.1,
-                                "color": "#1696FF"
-                            },
-                            {
-                                "value": 0.0,
-                                "color": "#00FFDF",
-                                "legend": {}
-                            },
-                            {
-                                "value": 0.1,
-                                "color": "#FFF50E",
-                            },
-                            {
-                                "value": 0.2,
-                                "color": "#FFB50A",
-                                "legend": {}
-                            },
-                            {
-                                "value": 0.4,
-                                "color": "#FF530D",
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#FF0000",
-                                "legend": {
-                                    "prefix": ">"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "aerosol",
-                        "title": "Narrow Blue - 440",
-                        "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
-                        "components": {
-                            "red": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "green": {
-                                "nbart_coastal_aerosol": 1.0
-                            },
-                            "blue": {
-                                "nbart_coastal_aerosol": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "blue",
-                        "title": "Blue - 490",
-                        "abstract": "Blue band, approximately 453nm to 511nm",
-                        "components": {
-                            "red": {
-                                "nbart_blue": 1.0
-                            },
-                            "green": {
-                                "nbart_blue": 1.0
-                            },
-                            "blue": {
-                                "nbart_blue": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "green",
-                        "title": "Green - 560",
-                        "abstract": "Green band, approximately 534nm to 588nm",
-                        "components": {
-                            "red": {
-                                "nbart_green": 1.0
-                            },
-                            "green": {
-                                "nbart_green": 1.0
-                            },
-                            "blue": {
-                                "nbart_green": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red",
-                        "title": "Red - 670",
-                        "abstract": "Red band, roughly 637nm to 672nm",
-                        "components": {
-                            "red": {
-                                "nbart_red": 1.0
-                            },
-                            "green": {
-                                "nbart_red": 1.0
-                            },
-                            "blue": {
-                                "nbart_red": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red_edge_1",
-                        "title": "Vegetation Red Edge - 710",
-                        "abstract": "Near infra-red band, centred on 710nm",
-                        "components": {
-                            "red": {
-                                "nbart_red_edge_1": 1.0
-                            },
-                            "green": {
-                                "nbart_red_edge_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_red_edge_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red_edge_2",
-                        "title": "Vegetation Red Edge - 740",
-                        "abstract": "Near infra-red band, centred on 740nm",
-                        "components": {
-                            "red": {
-                                "nbart_red_edge_2": 1.0
-                            },
-                            "green": {
-                                "nbart_red_edge_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_red_edge_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "red_edge_3",
-                        "title": "Vegetation Red Edge - 780",
-                        "abstract": "Near infra-red band, centred on 780nm",
-                        "components": {
-                            "red": {
-                                "nbart_red_edge_3": 1.0
-                            },
-                            "green": {
-                                "nbart_red_edge_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_red_edge_3": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "nir",
-                        "title": "Near Infrared (NIR) - 840",
-                        "abstract": "Near infra-red band, roughly 853nm to 876nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_1": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_1": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "narrow_nir",
-                        "title": "Narrow Near Infrared - 870",
-                        "abstract": "Near infra-red band, centred on 865nm",
-                        "components": {
-                            "red": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_nir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_nir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir1",
-                        "title": "Shortwave Infrared (SWIR) - 1610",
-                        "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_2": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_2": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    },
-                    {
-                        "name": "swir2",
-                        "title": "Shortwave Infrared (SWIR) - 2190",
-                        "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-                        "components": {
-                            "red": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "green": {
-                                "nbart_swir_3": 1.0
-                            },
-                            "blue": {
-                                "nbart_swir_3": 1.0
-                            }
-                        },
-                        "scale_range": [0.0, 3000.0]
-                    }
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "simple_rgb",
-            },
-            {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Sentinel 2B",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
@@ -6187,9 +4777,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -6620,11 +5207,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Sentinel 2A",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "Surface Reflectance",
                 "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
@@ -6674,9 +5261,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi", "ndci"]
                 },
                 "wcs_default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -8615,7 +7199,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "High Tide",
                 "abstract":"""
 High Tide and Low Tide Composites 2.0.0
@@ -8641,9 +7225,9 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
                 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Tidal Composite",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "high_tide_composite",
@@ -8998,7 +7582,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_rgb",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Low Tide",
                 "abstract": """
 High Tide and Low Tide Composites 2.0.0
@@ -9024,9 +7608,9 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
                 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "Tidal Composite",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "low_tide_composite",
@@ -9406,7 +7990,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # to describe the label to end-users.
         "products": [
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Relative Layer",
                 "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
@@ -9452,9 +8036,9 @@ ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
 
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "ITEM v2.0.0",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "ITEM_V2.0.0",
@@ -9542,7 +8126,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "relative_layer",
             },
             {
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "label": "Confidence Layer",
                 "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
@@ -9587,9 +8171,9 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands. 
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "type": "ITEM v2.0.0",
-                # Included as a keyword for the layer
+                # Included as a keyword  for the layer
                 "variant": "25m",
                 # The WMS name for the layer
                 "name": "ITEM_V2.0.0_Conf",
@@ -9690,164 +8274,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "confidence_layer",
-            },
-        ]
-    },
-    {
-        # Name and title of the platform layer.
-        # Platform layers are not mappable. The name is for internal server use only.
-        "name": "water_bodies",
-        "title": "Projects",
-        "abstract": "Projects",
-        # Products available for this platform.
-        # For each product, the "name" is the Datacube name, and the label is used
-        # to describe the label to end-users.
-        "products": [
-            {
-                # Included as a keyword for the layer
-                "label": "Waterbody Area Mapping and Monitoring",
-                "abstract": "Waterbody Area Mapping and Monitoring"
-                            "For service status information, see https://status.dea.ga.gov.au",
-                # Included as a keyword for the layer
-                "type": "",
-                # Included as a keyword for the layer
-                "variant": "25m",
-                # The WMS name for the layer
-                "name": "water_bodies",
-                # The Datacube name for the associated data product
-                "product_name": "water_bodies",
-                "min_zoom_factor": 15.0,
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] != 8388607,
-                # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
-                "feature_info_include_custom": lambda data: {
-                    'timeseries': f"https://data.dea.ga.gov.au"
-                    f"/projects/WaterBodies/feature_info/"
-                    f"{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
-                },
-                "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["dam_id"],
-                "apply_solar_corrections": False,
-                "legend": {
-                    "styles": []
-                },
-                "wcs_default_bands": ["dam_id"],
-                "styles": [
-                    {
-                        "name": "dam_id",
-                        "title": "Water Body",
-                        "abstract": "",
-                        "needed_bands": ["dam_id"],
-                        "color_ramp": [
-                            {
-                                'value': 0,
-                                'color': '#11ccff',
-                                'alpha': 1.0
-                            },
-                            {
-                                'value': 8388607,
-                                'color': '#11ccff',
-                                'alpha': 1.0
-                            },
-                        ],
-                        "legend": {
-                        }
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "dam_id",
-            },
-            {
-                # Included as a keyword for the layer
-                "label": "HAP",
-                # Included as a keyword for the layer
-                "type": "historical airborne photography",
-                # Included as a keyword for the layer
-                "variant": "munged",
-                # The WMS name for the layer
-                "name": "historical_airborne_photography",
-                # The Datacube name for the associated data product
-                "product_name": "historical_airborne_photography",
-                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-                # to actual imagery occurs.
-                "min_zoom_factor": 500.0,
-                # Min zoom factor (above) works well for small-tiled requests, (e.g. 256x256 as sent by Terria).
-                # However, for large-tiled requests (e.g. as sent by QGIS), large and intensive queries can still
-                # go through to the datacube.
-                # max_datasets_wms specifies a maximum number of datasets that a GetMap request can retrieve.
-                # Indicatative polygons are displayed if a request exceeds the limits imposed by EITHER max_dataset_wms
-                # OR min_zoom_factor.
-                # max_datasets_wms should be set in conjunction with min_zoom_factor so that Terria style 256x256
-                # tiled requests respond consistently - you never want to see a mixture of photographic tiles and polygon
-                # tiles at a given zoom level.  i.e. max_datasets_wms should be greater than the number of datasets
-                # required for most intensive possible photographic query given the min_zoom_factor.
-                # Note that the ideal value may vary from product to product depending on the size of the dataset
-                # extents for the product.
-                # Defaults to zero, which is interpreted as no dataset limit.
-                # 6 seems to work with a min_zoom_factor of 500.0 for "old-style" Net-CDF albers tiled data.
-                "max_datasets_wms": 6,
-                # max_datasets_wcs is the WCS equivalent of max_datasets_wms.  The main requirement for setting this
-                # value is to avoid gateway timeouts on overly large WCS requests (and reduce server load).
-                "max_datasets_wcs": 16,
-                # The fill-colour of the indicative polygons when zoomed out.
-                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                # Extent mask function
-                # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-                # Flags listed here are ignored in GetFeatureInfo requests.
-                # (defaults to empty list)
-                "ignore_info_flags": [],
-
-                'wcs_default_bands':['Band_1'],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
-
-                # Styles.
-                #
-                # See band_mapper.py
-                #
-                # The various available spectral bands, and ways to combine them
-                # into a single rgb image.
-                # The examples here are ad hoc
-                #
-                # LS7:  http://www.indexdatabase.de/db/s-single.php?id=8
-                # LS8:  http://www.indexdatabase.de/db/s-single.php?id=168
-                "styles": [
-                    # Examples of styles which are linear combinations of the available spectral bands.
-                    #
-                    {
-                        "name": "simple_gray",
-                        "title": "Simple gray",
-                        "abstract": "Simple grayscale image",
-                        "components": {
-                            "red": {
-                                "Band_1": 1.0
-                            },
-                            "green": {
-                                "Band_1": 1.0
-                            },
-                            "blue": {
-                                "Band_1": 1.0
-                            }
-                        },
-                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
-                        # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 255]
-                    }
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "simple_gray",
             }
         ]
     },
@@ -9946,9 +8372,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Define layer wide legend graphic if no style is passed
                 # to GetLegendGraphic
                 "wcs_default_bands": ["Band_1", "Band_2", "Band_3"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10065,9 +8488,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Define layer wide legend graphic if no style is passed
                 # to GetLegendGraphic
                 "wcs_default_bands": ["Band_1", "Band_2", "Band_3"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10173,9 +8593,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10343,9 +8760,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10503,9 +8917,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                 # Define layer wide legend graphic if no style is passed
                 # to GetLegendGraphic
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 "legend": {
                     # "url": ""
                     "styles": ["ramp"]
@@ -10664,9 +9075,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10828,9 +9236,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -10990,9 +9395,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11146,9 +9548,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11298,9 +9697,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11454,9 +9850,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11614,9 +10007,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11775,9 +10165,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -11937,9 +10324,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12103,9 +10487,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12271,9 +10652,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12425,9 +10803,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                     "styles": ["ramp"]
                 },
                 "wcs_default_bands": ["Band_1"],
-                # The "native" CRS for WCS.
-                # Can be omitted if the product has a single native CRS, as this will be used in preference.
-                "native_wcs_crs": "EPSG:3577",
                 # Styles.
                 #
                 # See band_mapper.py
@@ -12518,379 +10893,5 @@ For service status information, see https://status.dea.ga.gov.au """,
                 "default_style": "ramp",
             },  # ASTER TIR Quartz Index
         ],
-    },
-    {
-        "name": "Fractional Cover",
-        "title": "Fractional Cover",
-        "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
-
-For service status information, see https://status.dea.ga.gov.au""",
-        "products": [
-            {
-            # Included as a keyword for the layer
-            "label": "Fractional Cover Landsat 5",
-            # Included as a keyword for the layer
-            "type": "100km tile",
-            # Included as a keyword for the layer
-            "variant": "25m",
-            "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
-
-This product contains Fractional Cover dervied from the Landsat 5 satellite
-
-For service status information, see https://status.dea.ga.gov.au""",
-            # The WMS name for the layer
-            "name": "ls5_fc_albers",
-            # The Datacube name for the associated data product
-            "product_name": "ls5_fc_albers",
-            # The Datacube name for the associated pixel-quality product (optional)
-            # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
-            # The name of the measurement band for the pixel-quality product
-            # (Only required if pq_dataset is set)
-            "pq_band": "water",
-            # Fuse function for pq data
-            "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
-            # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-            # to actual imagery occurs.
-            "min_zoom_factor": 15.0,
-            # The fill-colour of the indicative polygons when zoomed out.
-            # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-            "zoomed_out_fill_colour": [ 150, 180, 200, 160],
-            # Time Zone.  In hours added to UTC (maybe negative)
-            # Used for rounding off scene times to a date.
-            # 9 is good value for imagery of Australia.
-            "time_zone": 9,
-            # Extent mask function
-            # Determines what portions of dataset is potentially meaningful data.
-            "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-            # Flags listed here are ignored in GetFeatureInfo requests.
-            # (defaults to empty list)
-            "ignore_info_flags": [],
-            "legend": {
-                "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-            },
-            "wcs_default_bands": ["BS", "PV", "NPV"],
-            "styles": [
-                {
-                    "name": "simple_fc",
-                    "title": "Fractional Cover",
-                    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-                    "components": {
-                        "red": {
-                            "BS": 1.0
-                        },
-                        "green": {
-                            "PV": 1.0
-                        },
-                        "blue": {
-                            "NPV": 1.0
-                        }
-                    },
-                    "scale_range": [0.0, 100.0],
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
-                }
-            ],
-            # Default style (if request does not specify style)
-            # MUST be defined in the styles list above.
-
-            # (Looks like Terria assumes this is the first style in the list, but this is
-            #  not required by the standard.)
-            "default_style": "simple_fc",
-            },
-            {
-            # Included as a keyword for the layer
-            "label": "Fractional Cover Landsat 7",
-            # Included as a keyword for the layer
-            "type": "100km tile",
-            # Included as a keyword for the layer
-            "variant": "25m",
-            "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
-
-This product contains Fractional Cover dervied from the Landsat 7 satellite
-
-For service status information, see https://status.dea.ga.gov.au""",
-            # The WMS name for the layer
-            "name": "ls7_fc_albers",
-            # The Datacube name for the associated data product
-            "product_name": "ls7_fc_albers",
-            # The Datacube name for the associated pixel-quality product (optional)
-            # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
-            # The name of the measurement band for the pixel-quality product
-            # (Only required if pq_dataset is set)
-            "pq_band": "water",
-            # Fuse function for pq data
-            "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
-            # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-            # to actual imagery occurs.
-            "min_zoom_factor": 15.0,
-            # The fill-colour of the indicative polygons when zoomed out.
-            # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-            "zoomed_out_fill_colour": [ 150, 180, 200, 160],
-            # Time Zone.  In hours added to UTC (maybe negative)
-            # Used for rounding off scene times to a date.
-            # 9 is good value for imagery of Australia.
-            "time_zone": 9,
-            # Extent mask function
-            # Determines what portions of dataset is potentially meaningful data.
-            "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-            # Flags listed here are ignored in GetFeatureInfo requests.
-            # (defaults to empty list)
-            "ignore_info_flags": [],
-            "legend": {
-                "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-            },
-            "wcs_default_bands": ["BS", "PV", "NPV"],
-            "styles": [
-                {
-                    "name": "simple_fc",
-                    "title": "Fractional Cover",
-                    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-                    "components": {
-                        "red": {
-                            "BS": 1.0
-                        },
-                        "green": {
-                            "PV": 1.0
-                        },
-                        "blue": {
-                            "NPV": 1.0
-                        }
-                    },
-                    "scale_range": [0.0, 100.0],
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
-                }
-            ],
-            # Default style (if request does not specify style)
-            # MUST be defined in the styles list above.
-
-            # (Looks like Terria assumes this is the first style in the list, but this is
-            #  not required by the standard.)
-            "default_style": "simple_fc",
-            },
-            {
-            # Included as a keyword for the layer
-            "label": "Fractional Cover Landsat 8",
-            # Included as a keyword for the layer
-            "type": "100km tile",
-            # Included as a keyword for the layer
-            "variant": "25m",
-            "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
-
-This product contains Fractional Cover dervied from the Landsat 8 satellite
-
-For service status information, see https://status.dea.ga.gov.au""",
-            # The WMS name for the layer
-            "name": "ls8_fc_albers",
-            # The Datacube name for the associated data product
-            "product_name": "ls8_fc_albers",
-            # The Datacube name for the associated pixel-quality product (optional)
-            # The name of the associated Datacube pixel-quality product
-            "pq_dataset": "wofs_albers",
-            # The name of the measurement band for the pixel-quality product
-            # (Only required if pq_dataset is set)
-            "pq_band": "water",
-            # Fuse function for pq data
-            "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
-            # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-            # to actual imagery occurs.
-            "min_zoom_factor": 15.0,
-            # The fill-colour of the indicative polygons when zoomed out.
-            # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-            "zoomed_out_fill_colour": [ 150, 180, 200, 160],
-            # Time Zone.  In hours added to UTC (maybe negative)
-            # Used for rounding off scene times to a date.
-            # 9 is good value for imagery of Australia.
-            "time_zone": 9,
-            # Extent mask function
-            # Determines what portions of dataset is potentially meaningful data.
-            "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-            # Flags listed here are ignored in GetFeatureInfo requests.
-            # (defaults to empty list)
-            "ignore_info_flags": [],
-            "legend": {
-                    "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-            },
-            "wcs_default_bands": ["BS", "PV", "NPV"],
-            "styles": [
-                {
-                    "name": "simple_fc",
-                    "title": "Fractional Cover",
-                    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-                    "components": {
-                        "red": {
-                            "BS": 1.0
-                        },
-                        "green": {
-                            "PV": 1.0
-                        },
-                        "blue": {
-                            "NPV": 1.0
-                        }
-                    },
-                    "scale_range": [0.0, 100.0],
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
-                }
-            ],
-            # Default style (if request does not specify style)
-            # MUST be defined in the styles list above.
-
-            # (Looks like Terria assumes this is the first style in the list, but this is
-            #  not required by the standard.)
-            "default_style": "simple_fc",
-            },
-            {
-            # Included as a keyword for the layer
-            "label": "Fractional Cover Combined",
-            # Included as a keyword for the layer
-            "type": "100km tile",
-            # Included as a keyword for the layer
-            "variant": "25m",
-            "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
-
-This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites
-
-For service status information, see https://status.dea.ga.gov.au""",
-            # The WMS name for the layer
-            "name": "fc_albers_combined",
-            # The Datacube name for the associated data product
-            "multi_product": True,
-            "product_name": ["ls5_fc_albers", "ls7_fc_albers", "ls8_fc_albers"],
-            # The Datacube name for the associated pixel-quality product (optional)
-            # The name of the associated Datacube pixel-quality product
-            "pq_dataset": ["wofs_albers", "wofs_albers", "wofs_albers"],
-            # The name of the measurement band for the pixel-quality product
-            # (Only required if pq_dataset is set)
-            "pq_band": "water",
-            # Fuse function for pq data
-            "pq_fuse_func": "datacube_wms.wms_utils.wofls_fuser",
-            # Min zoom factor - sets the zoom level where the cutover from indicative polygons
-            # to actual imagery occurs.
-            "min_zoom_factor": 15.0,
-            # The fill-colour of the indicative polygons when zoomed out.
-            # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
-            "zoomed_out_fill_colour": [ 150, 180, 200, 160],
-            # Time Zone.  In hours added to UTC (maybe negative)
-            # Used for rounding off scene times to a date.
-            # 9 is good value for imagery of Australia.
-            "time_zone": 9,
-            # Extent mask function
-            # Determines what portions of dataset is potentially meaningful data.
-            "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
-            # Flags listed here are ignored in GetFeatureInfo requests.
-            # (defaults to empty list)
-            "ignore_info_flags": [],
-            "legend": {
-                    "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-            },
-            "wcs_default_bands": ["BS", "PV", "NPV"],
-            "styles": [
-                {
-                    "name": "simple_fc",
-                    "title": "Fractional Cover",
-                    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-                    "components": {
-                        "red": {
-                            "BS": 1.0
-                        },
-                        "green": {
-                            "PV": 1.0
-                        },
-                        "blue": {
-                            "NPV": 1.0
-                        }
-                    },
-                    "scale_range": [0.0, 100.0],
-                    "pq_masks": [
-                        {
-                            "flags": {
-                                'dry': True
-                            },
-                        },
-                        {
-                            "flags": {
-                                "terrain_or_low_angle": False,
-                                "high_slope": False,
-                                "cloud_shadow": False,
-                                "cloud": False,
-                                "sea": False
-                            }
-                        },
-                    ]
-                }
-            ],
-            # Default style (if request does not specify style)
-            # MUST be defined in the styles list above.
-
-            # (Looks like Terria assumes this is the first style in the list, but this is
-            #  not required by the standard.)
-            "default_style": "simple_fc",
-            },
-        ]
     }
 ]
