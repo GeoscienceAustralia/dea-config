@@ -48,3 +48,15 @@ measurements:
           bits: [7, 6, 5, 4, 3, 1, 0] # Ignore sea mask
           description: Clear and Wet
           values: {128: true}
+storage:
+  crs: EPSG:3577
+  dimension_order:
+  - time
+  - y
+  - x
+  resolution:
+    x: 25
+    y: -25
+  tile_size:
+    x: 100000.0
+    y: 100000.0
