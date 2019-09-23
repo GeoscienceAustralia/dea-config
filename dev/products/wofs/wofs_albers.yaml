@@ -19,7 +19,7 @@ measurements:
         nodata:
           bits: 0
           description: No data
-          values: {1: true}
+          values: {0: false, 1: true}
         noncontiguous:
           bits: 1
           description: At least one EO band is missing over over/undersaturated
