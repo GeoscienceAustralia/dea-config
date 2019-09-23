@@ -19,7 +19,7 @@ measurements:
         nodata:
           bits: 0
           description: No data
-          values: {1: true}
+          values: {0: false, 1: true}
         noncontiguous:
           bits: 1
           description: At least one EO band is missing over over/undersaturated
@@ -48,3 +48,15 @@ measurements:
           bits: [7, 6, 5, 4, 3, 1, 0] # Ignore sea mask
           description: Clear and Wet
           values: {128: true}
+storage:
+  crs: EPSG:3577
+  dimension_order:
+  - time
+  - y
+  - x
+  resolution:
+    x: 25
+    y: -25
+  tile_size:
+    x: 100000.0
+    y: 100000.0
