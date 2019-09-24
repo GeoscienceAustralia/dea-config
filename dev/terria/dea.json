@@ -1580,10 +1580,10 @@
                   {
                      "name": "Mangrove Canopy Cover",
                      "type": "wms",
-                     "layers": "mangrove_cover",
+                     "layers": "mangrove_cover_v2_0_2",
                      "url": "https://ows.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "mangrove_cover",
+                     "linkedWcsCoverage": "mangrove_cover_v2_0_2",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1
                   },
