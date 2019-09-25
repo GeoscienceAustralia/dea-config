@@ -139,6 +139,7 @@ bands_multi_topog = {
     "regional": [], 
     "intermediate": [], 
     "local": [], 
+}
 
 bands_weathering = {
     "intensity": [], 
