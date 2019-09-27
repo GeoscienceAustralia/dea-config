@@ -2028,6 +2028,48 @@
          ]
       },
       {
+        "name": "DEA S3 Accessed data",
+        "type": "group",
+	"preserveOrder": true,
+        "isOpen": false,
+        "items": [
+            {
+               "name": "S3 DEA data accessed-Month",
+               "type": "csv",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/s3-csv/data.csv",
+               "tableStyle": {
+                  "scale": 3,
+                  "scaleByValue": true,
+                  "colorPalette": "Spectral"
+                 }
+            },
+            {
+               "name": " Products Accessed",
+               "type": "csv",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/s3-csv/data.csv",
+               "idColumns": [],
+               "tableStyle": {
+                  "scale": 3,
+                  "dataVariable": "product",
+                  "scaleByValue": false,
+                  "colorPalette": "Spectral"
+                 },
+            },
+            {
+               "name": " Hits",
+               "type": "csv",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/s3-csv/data.csv",
+               "idColumns": null,
+               "tableStyle": {
+                  "scale": 3,
+                  "dataVariable": "hits",
+                  "scaleByValue": true,
+                  "colorPalette": "Spectral"
+                 },
+            },
+         ]
+      },
+      {
          "name": "ODC Hackathon",
          "type": "group",
          "preserveOrder": true,
