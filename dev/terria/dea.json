@@ -63,7 +63,7 @@
       {
          "name": "GSKY DEA Production",
          "type": "wms-getCapabilities",
-         "url": "http://gsky.nci.org.au/ows/dea"
+         "url": "https://gsky.nci.org.au/ows/dea"
       },
       {
          "name": "DEA Development",
