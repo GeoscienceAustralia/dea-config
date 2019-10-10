@@ -2085,11 +2085,7 @@
             {
                "name": "DEA Albers Tiles grid",
                "type": "geojson",
-               "url": "https://data.dea.ga.gov.au/geomedian-australia/v2.1.0/albers_grid.geojson",
-               "style": {
-                  "fill-opacity": 0,
-                  "stroke-width": 2
-               }
+               "url": "https://data.dea.ga.gov.au/geomedian-australia/v2.1.0/albers_grid.geojson"
             },
             {
                "name": "DEA Intertidal Extents Relative Model and Confidence Layer 25m v2.0 polygons for access to data",
