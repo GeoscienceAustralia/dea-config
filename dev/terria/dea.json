@@ -24,6 +24,8 @@
                "url": "http://130.56.242.6/ows/fusion",
                "layers": "blended",
                "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             }
@@ -40,6 +42,8 @@
                "url": "https://gsky.nci.org.au/ows/dea",
                "layers": "blend_sentinel2_landsat_nbart_daily_true_colour",
                "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             },
@@ -49,6 +53,8 @@
                "url": "https://gsky.nci.org.au/ows/dea",
                "layers": "blend_sentinel2_landsat_nbart_daily_false_colour",
                "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             }
@@ -57,7 +63,7 @@
       {
          "name": "GSKY DEA Production",
          "type": "wms-getCapabilities",
-         "url": "http://gsky.nci.org.au/ows/dea"
+         "url": "https://gsky.nci.org.au/ows/dea"
       },
       {
          "name": "DEA Development",
@@ -82,6 +88,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -107,6 +115,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -117,6 +127,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -127,6 +139,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -137,6 +151,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -147,6 +163,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -157,6 +175,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -174,6 +194,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_wet",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -184,6 +206,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_clear",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -194,6 +218,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -211,6 +237,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -221,6 +249,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_wet",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -231,6 +261,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_clear",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -241,6 +273,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "Water Observations from Space Statistics",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -251,6 +285,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary_confidence",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -270,6 +306,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls5_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -291,6 +329,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls7_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -312,6 +352,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -340,6 +382,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_barest_earth_mosaic",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -368,6 +412,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2_ard_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -390,6 +436,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -412,6 +460,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -441,6 +491,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -463,6 +515,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2a_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -485,6 +539,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -507,6 +563,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2_nrt_wofs",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates"
                   }
@@ -530,6 +588,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fc_albers_combined",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -541,6 +601,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls5_fc_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -552,6 +614,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls7_fc_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -563,6 +627,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls8_fc_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -589,6 +655,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_rgb",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -599,6 +667,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -609,6 +679,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_non_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -619,6 +691,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_bare_ground",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -636,6 +710,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_rgb",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -646,6 +722,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -656,6 +734,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_non_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -666,6 +746,8 @@
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_bare_ground",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -685,6 +767,8 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "mangrove_cover_v2_0_2",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1
                   },
                   {
@@ -1022,6 +1106,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         }
@@ -1040,6 +1126,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1050,6 +1138,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1060,6 +1150,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1070,6 +1162,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1080,6 +1174,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1090,6 +1186,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -1107,6 +1205,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_wet",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1117,6 +1217,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_clear",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1127,6 +1229,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -1203,6 +1307,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls5_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1224,6 +1330,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls7_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1245,6 +1353,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_nbart_geomedian_annual",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1273,6 +1383,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_barest_earth_mosaic",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1301,6 +1413,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2_ard_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1323,6 +1437,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1345,6 +1461,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1374,6 +1492,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2a_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1396,6 +1516,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_nrt_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -1430,6 +1552,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fc_albers_combined",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -1441,6 +1565,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls5_fc_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -1452,6 +1578,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls7_fc_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -1463,6 +1591,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "ls8_fc_albers",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates"
                         },
@@ -1489,6 +1619,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_rgb",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1499,6 +1631,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1509,6 +1643,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_non_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1519,6 +1655,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_bare_ground",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -1536,6 +1674,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_rgb",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1546,6 +1686,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1556,6 +1698,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_non_green_veg",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         },
                         {
@@ -1566,6 +1710,8 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "fcp_seasonal_bare_ground",
                            "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
                            "opacity": 1
                         }
                      ]
@@ -1585,6 +1731,8 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "mangrove_cover_v2_0_2",
                      "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
                      "opacity": 1
                   },
                   {
@@ -1863,6 +2011,8 @@
                "layers": "ls_level2_geomedian_annual",
                "url": "https://cambodiacube.dev.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
                "opacity": 1
             },
              {
@@ -1871,6 +2021,8 @@
                "layers": "cambodia_wofs",
                "url": "https://cambodiacube.dev.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
                "opacity": 1
             }
          ]   
@@ -1886,6 +2038,8 @@
                "layers": "ls_level2_geomedian_annual",
                "url": "https://cambodiacube.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
                "opacity": 1
             },
              {
@@ -1894,6 +2048,8 @@
                "layers": "cambodia_wofs",
                "url": "https://cambodiacube.dea.ga.gov.au/",
                "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
                "opacity": 1
             }
          ]   
