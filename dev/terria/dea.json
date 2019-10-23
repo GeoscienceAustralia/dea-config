@@ -370,12 +370,13 @@
                ]
             },
             {
-               "name": "Barest Earth (Landsat 8)",
+               "name": "Landsat-8 Barest Earth",
+
                "type": "group",
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Barest Earth 25m Mosiac",
+                     "name": "Landsat-8 Barest Earth 25m Mosiac",
                      "type": "wms",
                      "layers": "ls8_barest_earth_mosaic",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -1371,12 +1372,12 @@
                ]
             },
             {
-               "name": "Barest Earth (Landsat 8)",
+               "name": "Landsat-8 Barest Earth",
                "type": "group",
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Barest Earth 25m Mosiac",
+                     "name": "Landsat-8 Barest Earth 25m Mosiac",
                      "type": "wms",
                      "layers": "ls8_barest_earth_mosaic",
                      "url": "https://ows.dea.ga.gov.au/",
