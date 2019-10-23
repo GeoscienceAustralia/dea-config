@@ -1254,7 +1254,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat8_barest_earth",
-        "title": "Barest Earth",
+        "title": "Landsat-8 Barest Earth",
         "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
 
@@ -1274,7 +1274,7 @@ Mosaics are available for the following years:
         "products": [
             {
                 # Included as a keyword for the layer
-                "label": "Landsat 8",
+                "label": "Landsat-8",
                 # Included as a keyword for the layer
                 "type": "Barest Earth",
                 # Included as a keyword for the layer
@@ -1545,13 +1545,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat_barest_earth",
-        "title": "Barest Earth 30 Years",
+        "title": "Landsat 30+ Barest Earth",
         "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
+A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 – 2018).  The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8’s OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth.
 
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
-
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+Reference: Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest Dale Roberts1,*, John Wilford2, and Omar Ghattas1 Ghattas (2019). Nature communications xx
 
 Mosaics are available for the following years:
     Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
@@ -1571,11 +1569,10 @@ Mosaics are available for the following years:
                 # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
 
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 – 2018).  The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8’s OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth.
 
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+Reference: Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest Dale Roberts1,*, John Wilford2, and Omar Ghattas1 Ghattas (2019). Nature communications xx
 
 Mosaics are available for the following years:
     Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
@@ -1831,172 +1828,172 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "color_ramp": [
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#288DC0",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#61A4B5",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.1,
-                                "color": "#A35F18"
+                                "color": "#83B3A9"
                             },
                             {
                                 "value": 0.2,
-                                "color": "#B88512"
+                                "color": "#9FC29D"
                             },
                             {
                                 "value": 0.3,
-                                "color": "#CEAC0E"
+                                "color": "#B6CF8C"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#E5D609"
+                                "color": "#D2E07E"
                             },
                             {
                                 "value": 0.5,
-                                "color": "#FFFF0C"
+                                "color": "#F2F56C"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#C3DE09"
+                                "color": "#FCDE56"
                             },
                             {
                                 "value": 0.7,
-                                "color": "#88B808"
+                                "color": "#FCBD48"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#529400"
+                                "color": "#F7732C"
                             },
                             {
                                 "value": 0.9,
-                                "color": "#237100"
+                                "color": "#ED361A"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#114D04"
+                                "color": "#E81515"
                             }
                         ]
                     },
                     {
                         "name": "ndvi_soil",
-                        "title": "Normalised Difference soil index - (nir-swir1 / nir+swir1)",
-                        "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of Soil",
-                        "index_function": lambda data: (data["nir"] - data["swir1"]) / (data["nir"] + data["swir1"]),
+                        "title": "Normalised Difference soil index - (swir1-nir / swir1+nir)",
+                        "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
+                        "index_function": lambda data: (data["swir1"] - data["nir"]) / (data["swir1"] + data["nir"]),
                         "needed_bands": ["nir", "swir1"],
                         "color_ramp": [
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#FFF5EB",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#FEFEF3",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.1,
-                                "color": "#A35F18"
+                                "color": "#FEE6CE"
                             },
                             {
                                 "value": 0.2,
-                                "color": "#B88512"
+                                "color": "#FDD0A2"
                             },
                             {
                                 "value": 0.3,
-                                "color": "#CEAC0E"
+                                "color": "#FDAE6B"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#E5D609"
+                                "color": "#FD8D3C"
                             },
                             {
                                 "value": 0.5,
-                                "color": "#FFFF0C"
+                                "color": "#F35A4B"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#C3DE09"
+                                "color": "#F16913"
                             },
                             {
                                 "value": 0.7,
-                                "color": "#88B808"
+                                "color": "#EC24F3"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#529400"
+                                "color": "#D94801"
                             },
                             {
                                 "value": 0.9,
-                                "color": "#237100"
+                                "color": "#A63603"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#114D04"
+                                "color": "#7F2704"
                             }
                         ]
                     },
                     {
                         "name": "ndvi_clay_mica",
                         "title": "Clay and Mica Minerals - (swir1- swir2 / swir1+swir2)",
-                        "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of clay and mica minerals",
+                        "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals)",
                         "index_function": lambda data: (data["swir1"] - data["swir2"]) / (
                                     data["swir1"] + data["swir2"]),
                         "needed_bands": ["swir1", "swir2"],
                         "color_ramp": [
                             {
                                 "value": -0.0,
-                                "color": "#8F3F20",
+                                "color": "#ffffb2",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#8F3F20",
+                                "color": "#ffef97",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.1,
-                                "color": "#A35F18"
+                                "color": "#ffe07d"
                             },
                             {
                                 "value": 0.2,
-                                "color": "#B88512"
+                                "color": "#fecc5c"
                             },
                             {
                                 "value": 0.3,
-                                "color": "#CEAC0E"
+                                "color": "#feb450"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#E5D609"
+                                "color": "#fd8d3c"
                             },
                             {
                                 "value": 0.5,
-                                "color": "#FFFF0C"
+                                "color": "#f86b30"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#C3DE09"
+                                "color": "#f44f26"
                             },
                             {
                                 "value": 0.7,
-                                "color": "#88B808"
+                                "color": "#f03b20"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#529400"
+                                "color": "#de2522"
                             },
                             {
                                 "value": 0.9,
-                                "color": "#237100"
+                                "color": "#cc1024"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#114D04"
+                                "color": "#bd0026"
                             }
                         ]
                     }
