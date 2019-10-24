@@ -1844,6 +1844,33 @@
                ]
             },
             {
+               "name": "Waterbody Area Mapping and Monitoring",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Waterbody Area Mapping and Monitoring",
+                     "type": "wms",
+                     "layers": "water_bodies",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "water_bodies",
+                     "ignoreUnknownTileErrors": true,
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     }
+                  }
+               ]
+            },
+            {
                "name": "ASTER Geoscience Map of Australia",
                "type": "group",
                "preserveOrder": true,
@@ -2374,7 +2401,7 @@
                   }
                ]
             }
-         ]   
-      },
+         ]
+      }
    ]
 }
