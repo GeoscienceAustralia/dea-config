@@ -1276,7 +1276,7 @@ Mosaics are available for the following years:
                 # Included as a keyword for the layer
                 "label": "Landsat-8",
                 # Included as a keyword for the layer
-                "type": "Barest Earth",
+                "type": "albers",
                 # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
@@ -1820,7 +1820,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "scale_range": [0.0, 3000.0]
                     },
                     {
-                        "name": "ndvi_ferric_iron",
+                        "name": "nd_ferric_iron",
                         "title": "Ferric Iron - (red-blue / red+blue)",
                         "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
                         "index_function": lambda data: (data["red"] - data["blue"]) / (data["red"] + data["blue"]),
@@ -1879,8 +1879,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         ]
                     },
                     {
-                        "name": "ndvi_soil",
-                        "title": "Normalised Difference soil index - (swir1-nir / swir1+nir)",
+                        "name": "nd_soil",
+                        "title": "Normalised Difference Soil Index - (swir1-nir / swir1+nir)",
                         "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
                         "index_function": lambda data: (data["swir1"] - data["nir"]) / (data["swir1"] + data["nir"]),
                         "needed_bands": ["nir", "swir1"],
@@ -1938,11 +1938,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                         ]
                     },
                     {
-                        "name": "ndvi_clay_mica",
+                        "name": "nd_clay_mica",
                         "title": "Clay and Mica Minerals - (swir1- swir2 / swir1+swir2)",
                         "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals)",
-                        "index_function": lambda data: (data["swir1"] - data["swir2"]) / (
-                                    data["swir1"] + data["swir2"]),
+                        "index_function": lambda data: (data["swir1"] - data["swir2"]) / (data["swir1"] + data["swir2"]),
                         "needed_bands": ["swir1", "swir2"],
                         "color_ramp": [
                             {

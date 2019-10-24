@@ -370,13 +370,12 @@
                ]
             },
             {
-               "name": "Landsat-8 Barest Earth",
-
+               "name": "Barest Earth",
                "type": "group",
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Landsat-8 Barest Earth 25m Mosiac",
+                     "name": "Landsat-8 Barest Earth 25m Mosiac (Landsat-8)",
                      "type": "wms",
                      "layers": "ls8_barest_earth_mosaic",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -396,6 +395,28 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     }
+                  },
+                  {
+                     "name": "Landsat 30+ Barest Earth 25m Albers (Combined Landsat)",
+                     "type": "wms",
+                     "layers": "landsat_barest_earth",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "landsat_barest_earth",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
                      }
                   }
                ]
