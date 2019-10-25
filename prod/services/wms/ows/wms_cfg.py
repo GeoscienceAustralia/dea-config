@@ -1254,7 +1254,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat8_barest_earth",
-        "title": "Barest Earth 2019",
+        "title": "Barest Earth",
         "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
 
