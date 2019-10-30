@@ -33,7 +33,7 @@
                      "chartColor": "white",
                      "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates",
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Daily Landsat and Sentinel-2 satellite images false colour",
@@ -45,7 +45,7 @@
                      "chartColor": "white",
                      "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates",
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   }
                ]
             },
@@ -82,7 +82,7 @@
                               "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                            },
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Expedited Sentinel 2A satellite images",
@@ -107,7 +107,7 @@
                               "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                            },
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Expedited Sentinel 2B satellite images",
@@ -132,7 +132,7 @@
                               "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                            },
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   },
@@ -164,7 +164,7 @@
                               "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                            },
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Sentinel 2a satellite images",
@@ -189,7 +189,7 @@
                               "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                            },
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Sentinel 2b satellite images",
@@ -214,7 +214,7 @@
                               "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                            },
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   }
@@ -247,7 +247,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Daily Landsat 7 satellite images",
@@ -271,7 +271,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Daily Landsat 5 satellite images",
@@ -295,7 +295,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   }
                ]
             },
@@ -326,7 +326,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Landsat 7 satellite 16-day composite",
@@ -350,7 +350,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Landsat 5 satellite 16-day composite",
@@ -374,7 +374,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   }
                ]
             },
@@ -405,7 +405,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Yearly average Landsat 7 satellite images",
@@ -429,7 +429,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Yearly average Landsat 5 satellite images",
@@ -453,7 +453,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   }
                ]
             },
@@ -484,7 +484,7 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   }
                ]
             }
@@ -515,7 +515,7 @@
                   },
                   "template": "<div style='width:600px'><h3>Water Body Identifier: {{bands.dam_id}}</h3><br/><chart id='{{bands.dam_id}}' title='Water Body {{bands.dam_id}}' preview-x-label='Water Observed' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage,Pixel Count' column-units='Date,%,#'></chart></div>"
                },
-               "leafletUpdateInterval": 500
+               "leafletUpdateInterval": 750
             },
             {
                "name": "Water Observations from Space",
@@ -534,7 +534,7 @@
                      "chartColor": "white",
                      "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates",
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "April-October water observations",
@@ -547,7 +547,7 @@
                      "chartType": "momentPoints",
                      "chartColor": "white",
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "November-March water observations",
@@ -560,7 +560,7 @@
                      "chartType": "momentPoints",
                      "chartColor": "white",
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Annual water observations",
@@ -573,7 +573,7 @@
                      "chartType": "momentPoints",
                      "chartColor": "white",
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "All water observations",
@@ -584,7 +584,7 @@
                      "linkedWcsCoverage": "wofs_filtered_summary",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "April-October water observations source data",
@@ -602,7 +602,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "April-October wet observations",
@@ -615,7 +615,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   },
@@ -635,7 +635,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "November-March wet observations",
@@ -648,7 +648,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   },
@@ -668,7 +668,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Annual wet observations",
@@ -681,7 +681,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   },
@@ -699,7 +699,7 @@
                            "linkedWcsCoverage": "wofs_summary_clear",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "All wet observations",
@@ -710,7 +710,7 @@
                            "linkedWcsCoverage": "wofs_summary_wet",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Unfiltered summary of all water observations",
@@ -721,7 +721,7 @@
                            "linkedWcsCoverage": "Water Observations from Space Statistics",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Water observations confidence",
@@ -732,7 +732,7 @@
                            "linkedWcsCoverage": "wofs_filtered_summary_confidence",
                            "ignoreUnknownTileErrors": true,
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   }
@@ -756,7 +756,7 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "leafletUpdateInterval": 500
+               "leafletUpdateInterval": 750
             },
             {
                "name": "Fractional Cover",
@@ -775,7 +775,7 @@
                      "chartColor": "white",
                      "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates",
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Seasonal Fractional Cover",
@@ -788,7 +788,7 @@
                      "chartType": "momentPoints",
                      "chartColor": "white",
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Annual Fractional Cover",
@@ -801,7 +801,7 @@
                      "chartType": "momentPoints",
                      "chartColor": "white",
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Daily Fractional Cover observations by sensor",
@@ -820,7 +820,7 @@
                            "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Daily Landsat 7 Fractional Cover observations",
@@ -834,7 +834,7 @@
                            "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Daily Landsat 5 Fractional Cover observations",
@@ -848,7 +848,7 @@
                            "chartColor": "white",
                            "opacity": 1,
                            "featureTimesProperty": "data_available_for_dates",
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   },
@@ -868,7 +868,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Seasonal Non-Green Vegetation",
@@ -881,7 +881,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Seasonal Bare Ground",
@@ -894,7 +894,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   },
@@ -914,7 +914,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Annual Non-Green Vegetation",
@@ -927,7 +927,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         },
                         {
                            "name": "Annual Bare Ground",
@@ -940,7 +940,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "leafletUpdateInterval": 500
+                           "leafletUpdateInterval": 750
                         }
                      ]
                   }
@@ -962,7 +962,7 @@
                "linkedWcsCoverage": "NIDEM",
                "ignoreUnknownTileErrors": true,
                "opacity": 1,
-               "leafletUpdateInterval": 500
+               "leafletUpdateInterval": 750
             },
             {
                "name": "Intertidal extent model",
@@ -978,7 +978,7 @@
                      "linkedWcsCoverage": "ITEM_V2.0.0",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Intertidal Extent Polygons data access",
@@ -1029,7 +1029,7 @@
                      "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   }
                ]
             },
@@ -1047,7 +1047,7 @@
                      "linkedWcsCoverage": "low_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "Low Tide Polygons for data access",
@@ -1095,7 +1095,7 @@
                      "linkedWcsCoverage": "high_tide_composite",
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
-                     "leafletUpdateInterval": 500
+                     "leafletUpdateInterval": 750
                   },
                   {
                      "name": "High Tide Polygons for data access",
