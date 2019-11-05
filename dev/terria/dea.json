@@ -2161,6 +2161,14 @@
                }
             },
             {
+               "name": "DEA MDBA Wetlands Insight Tool v1.0",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/SEA_2018_survey_envelopes.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " {{Subwetland}} in {{WetlandNam}}, feature {{FID}} in the MDBA wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/area_percent{{FID}}_0.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WetlandNam}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/area_percent{{FID}}_0.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/area_percent{{FID}}_0.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               }
+            },
+            {
                "name": "DEA WIT QLD Palustrine v1.0",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/Wet_WGS84_P_run_v1.geojson",
                "type": "geojson",
