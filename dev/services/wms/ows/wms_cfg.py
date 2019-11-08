@@ -1821,66 +1821,66 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     {
                         "name": "nd_ferric_iron",
-                        "title": "Ferric Iron - (red-blue / red+blue)",
+                        "title": "Ferric Iron ",
                         "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
                         "index_function": lambda data: (data["red"] - data["blue"]) / (data["red"] + data["blue"]),
                         "needed_bands": ["blue", "red"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
-                                "color": "#00ffff",
+                                "value": -0.1,
+                                "color": "#3B97C3",
                                 "alpha": 0.0
                             },
                             {
                                 "value": 0.0,
-                                "color": "#00ffff",
+                                "color": "#6EA9B0",
                                 "alpha": 1.0
                             },
                             {
                                 "value": 0.1,
-                                "color": "#05eaff"
+                                "color": "#83B3A9"
                             },
                             {
                                 "value": 0.2,
-                                "color": "#52f9ff"
+                                "color": "#9FC29D"
                             },
                             {
                                 "value": 0.3,
-                                "color": "#ffff8a"
+                                "color": "#F3F56C"
                             },
                             {
                                 "value": 0.4,
-                                "color": "#fff41f"
+                                "color": "#FCDE56"
                             },
                             {
                                 "value": 0.5,
-                                "color": "#ff6d45"
+                                "color": "#FCC54C"
                             },
                             {
                                 "value": 0.6,
-                                "color": "#ff582e"
+                                "color": "#F77F2F"
                             },
                             {
                                 "value": 0.7,
-                                "color": "#ff502e"
+                                "color": "#F55F25"
                             },
                             {
                                 "value": 0.8,
-                                "color": "#ff4b19"
+                                "color": "#F25622"
                             },
                             {
                                 "value": 0.9,
-                                "color": "#ff1b0a"
+                                "color": "#EB1E15"
                             },
                             {
                                 "value": 1.0,
-                                "color": "#ff0000"
+                                "color": "#E81515"
                             }
                         ]
                     },
                     {
                         "name": "nd_soil",
-                        "title": "Normalised Difference Soil Index - (swir1-nir / swir1+nir)",
+                        "title": "Normalised Difference Soil Index ",
                         "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
                         "index_function": lambda data: (data["swir1"] - data["nir"]) / (data["swir1"] + data["nir"]),
                         "needed_bands": ["nir", "swir1"],
@@ -1918,13 +1918,13 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     {
                         "name": "nd_clay_mica",
-                        "title": "Clay and Mica Minerals - (swir1- swir2 / swir1+swir2)",
+                        "title": "Clay and Mica Minerals ",
                         "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals)",
                         "index_function": lambda data: (data["swir1"] - data["swir2"]) / (data["swir1"] + data["swir2"]),
                         "needed_bands": ["swir1", "swir2"],
                         "color_ramp": [
                             {
-                                "value": -0.0,
+                                "value": -0.1,
                                 "color": "#ffffb2",
                                 "alpha": 0.0
                             },
