@@ -12615,7 +12615,7 @@ For service status information, see https://status.dea.ga.gov.au """,
                 "type": "Annual Surface Reflectance TMAD",
                 # Included as a keyword for the layer
                 "variant": "25m",
-                # The WMS name for the layer
+
                 "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
