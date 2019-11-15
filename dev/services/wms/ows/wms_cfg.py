@@ -12598,6 +12598,450 @@ For service status information, see https://status.dea.ga.gov.au """,
         ],
     },
     {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "TMAD_AU_NBART",
+        "title": "Surface Reflectance Triple Median Absolute Deviation",
+        "abstract": "Surface Reflectance Triple Median Absolute Deviation 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)",
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword for the layer
+                "label": "Landsat 8",
+                # Included as a keyword for the layer
+                "type": "Annual Surface Reflectance TMAD",
+                # Included as a keyword for the layer
+                "variant": "25m",
+
+                "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+
+For service status information, see https://status.dea.ga.gov.au""",
+                # The WMS name for the layer
+                "name": "ls8_nbart_tmad_annual",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_nbart_tmad_annual",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["sdev", "edev", "bcdev"]
+                },
+                "wcs_default_bands": ["sdev", "edev", "bcdev"],
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "sdev",
+                        "title": "sdev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "sdev": 1.0
+                            },
+                            "green": {
+                                "sdev": 1.0
+                            },
+                            "blue": {
+                                "sdev": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "edev",
+                        "title": "edev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "edev": 1.0
+                            },
+                            "green": {
+                                "edev": 1.0
+                            },
+                            "blue": {
+                                "edev": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "bcdev",
+                        "title": "bcdev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "bcdev": 1.0
+                            },
+                            "green": {
+                                "bcdev": 1.0
+                            },
+                            "blue": {
+                                "bcdev": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "sdev",
+            },
+            {
+                # Included as a keyword for the layer
+                "label": "Landsat 7",
+                # Included as a keyword for the layer
+                "type": "Annual Surface Reflectance TMAD",
+                # Included as a keyword for the layer
+                "variant": "25m",
+                "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+
+For service status information, see https://status.dea.ga.gov.au""",
+                # The WMS name for the layer
+                "name": "ls7_nbart_tmad_annual",
+                # The Datacube name for the associated data product
+                "product_name": "ls7_nbart_tmad_annual",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["sdev", "edev", "bcdev"]
+                },
+                "wcs_default_bands": ["sdev", "edev", "bcdev"],
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "sdev",
+                        "title": "sdev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "sdev": 1.0
+                            },
+                            "green": {
+                                "sdev": 1.0
+                            },
+                            "blue": {
+                                "sdev": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "edev",
+                        "title": "edev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "edev": 1.0
+                            },
+                            "green": {
+                                "edev": 1.0
+                            },
+                            "blue": {
+                                "edev": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "bcdev",
+                        "title": "bcdev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "bcdev": 1.0
+                            },
+                            "green": {
+                                "bcdev": 1.0
+                            },
+                            "blue": {
+                                "bcdev": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "sdev",
+            },
+            {
+                # Included as a keyword for the layer
+                "label": "Landsat 5",
+                # Included as a keyword for the layer
+                "type": "Annual Surface Reflectance TMAD",
+                # Included as a keyword for the layer
+                "variant": "25m",
+
+                "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+
+For service status information, see https://status.dea.ga.gov.au""",
+                # The WMS name for the layer
+                "name": "ls5_nbart_tmad_annual",
+                # The Datacube name for the associated data product
+                "product_name": "ls5_nbart_tmad_annual",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 35.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
+
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["sdev", "edev", "bcdev"]
+                },
+                "wcs_default_bands": ["sdev", "edev", "bcdev"],
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "sdev",
+                        "title": "sdev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "sdev": 1.0
+                            },
+                            "green": {
+                                "sdev": 1.0
+                            },
+                            "blue": {
+                                "sdev": 1.0
+                            }
+                        },
+                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
+                        # Band values outside this range are clipped to 0 or 255 as appropriate.
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "edev",
+                        "title": "edev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "edev": 1.0
+                            },
+                            "green": {
+                                "edev": 1.0
+                            },
+                            "blue": {
+                                "edev": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "bcdev",
+                        "title": "bcdev",
+                        "abstract": "",
+                        "components": {
+                            "red": {
+                                "bcdev": 1.0
+                            },
+                            "green": {
+                                "bcdev": 1.0
+                            },
+                            "blue": {
+                                "bcdev": 1.0
+                            }
+                        },
+                        "scale_range": [0.0, 3000.0]
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "sdev",
+            }
+        ]
+    },
+    {
         "name": "Fractional Cover",
         "title": "Fractional Cover",
         "abstract": """
