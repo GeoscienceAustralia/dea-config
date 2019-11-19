@@ -14,6 +14,34 @@
    },
    "catalog": [
       {
+         "name":"Hotspots",
+         "type": "group",
+         "preserveOrder": true,
+         "items" :[
+            {
+               "name": "Himawari-8 Mosaic, Last 10m",
+               "type": "wms",
+               "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+               "layers": "public:himawari8_mosaic",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "leafletUpdateInterval": 750,
+            },
+            {
+               "name": "Hotspots, Last 24h",
+               "type": "wms",
+               "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+               "layers": "public:hotspots_three_days",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "leafletUpdateInterval": 750,
+               "parameters": {
+                  "cql_filter":"hours_since_hotspot<=24 AND sensor IN ('AVHRR','MODIS','VIIRS') AND product IN ('SRSS','MOD14','AFMOD','EDR')"
+               }
+            }
+         ]
+      },
+      {
          "name": "Satellite images",
          "type": "group",
          "preserveOrder": true,
