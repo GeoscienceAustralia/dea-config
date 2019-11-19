@@ -52,22 +52,10 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Daily Landsat and Sentinel-2 satellite images true colour",
+                     "name": "Daily Landsat and Sentinel-2 satellite images ",
                      "type": "wms",
                      "url": "https://gsky.nci.org.au/ows/dea",
-                     "layers": "blend_sentinel2_landsat_nbart_daily_true_colour",
-                     "ignoreUnknownTileErrors": true,
-                     "chartType": "momentPoints",
-                     "chartColor": "white",
-                     "opacity": 1,
-                     "featureTimesProperty": "data_available_for_dates",
-                     "leafletUpdateInterval": 750
-                  },
-                  {
-                     "name": "Daily Landsat and Sentinel-2 satellite images false colour",
-                     "type": "wms",
-                     "url": "https://gsky.nci.org.au/ows/dea",
-                     "layers": "blend_sentinel2_landsat_nbart_daily_false_colour",
+                     "layers": "blend_sentinel2_landsat_nbart_daily",
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
