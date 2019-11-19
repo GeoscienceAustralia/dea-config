@@ -12696,54 +12696,178 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "sdev",
                         "title": "sdev",
                         "abstract": "",
-                        "components": {
-                            "red": {
-                                "sdev": 1.0
+                        "index_function": lambda data: data["sdev"],
+                        "needed_bands": ["red", "green", "blue"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#F60B0B",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "sdev": 1.0
+                            {
+                                "value": 0.0,
+                                "color": "#FB0041",
+                                "alpha": 1.0
                             },
-                            "blue": {
-                                "sdev": 1.0
+                            {
+                                "value": 0.1,
+                                "color": "#F2006C"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#D90094"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#AF00B7"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#8F3ED0"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#6458E2"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#006BED"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#0081E6"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#0087AE"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#008462"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#127C17"
                             }
-                        },
-                        # The raw band value range to be compressed to an 8 bit range for the output image tiles.
-                        # Band values outside this range are clipped to 0 or 255 as appropriate.
-                        "scale_range": [0.0, 3000.0]
+                        ]
                     },
                     {
                         "name": "edev",
                         "title": "edev",
                         "abstract": "",
-                        "components": {
-                            "red": {
-                                "edev": 1.0
+                        "index_function": lambda data: data["edev"],
+                        "needed_bands": ["red", "green", "blue"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#F60B0B",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "edev": 1.0
+                            {
+                                "value": 0.0,
+                                "color": "#FB0041",
+                                "alpha": 1.0
                             },
-                            "blue": {
-                                "edev": 1.0
+                            {
+                                "value": 0.1,
+                                "color": "#F2006C"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#D90094"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#AF00B7"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#8F3ED0"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#6458E2"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#006BED"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#0081E6"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#0087AE"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#008462"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#127C17"
                             }
-                        },
-                        "scale_range": [0.0, 3000.0]
+                        ]
                     },
                     {
                         "name": "bcdev",
                         "title": "bcdev",
                         "abstract": "",
-                        "components": {
-                            "red": {
-                                "bcdev": 1.0
+                        "index_function": lambda data: data["bcdev"],
+                        "needed_bands": ["red", "green", "blue"],
+                        "color_ramp": [
+                            {
+                                "value": -0.0,
+                                "color": "#F60B0B",
+                                "alpha": 0.0
                             },
-                            "green": {
-                                "bcdev": 1.0
+                            {
+                                "value": 0.0,
+                                "color": "#FB0041",
+                                "alpha": 1.0
                             },
-                            "blue": {
-                                "bcdev": 1.0
+                            {
+                                "value": 0.1,
+                                "color": "#F2006C"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#D90094"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#AF00B7"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#8F3ED0"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#6458E2"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#006BED"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#0081E6"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#0087AE"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#008462"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#127C17"
                             }
-                        },
-                        "scale_range": [0.0, 3000.0]
+                        ]
                     }
                 ],
                 # Default style (if request does not specify style)
