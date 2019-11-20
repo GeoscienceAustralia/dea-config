@@ -9794,7 +9794,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "name": "water_bodies",
                 # The Datacube name for the associated data product
                 "product_name": "water_bodies",
-                "min_zoom_factor": 15.0,
+                #"min_zoom_factor": 15.0,
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
                 "time_zone": 9,
                 "extent_mask_func": lambda data, band: data[band] != 8388607,
