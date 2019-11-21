@@ -1,3 +1,5 @@
+import math
+
 # Static config for the wms metadata.
 response_cfg = {
     "Access-Control-Allow-Origin": "*",  # CORS header
@@ -12610,11 +12612,11 @@ For service status information, see https://status.dea.ga.gov.au """,
         "products": [
             {
                 # Included as a keyword for the layer
-                "label": "Landsat 8",
+                "label": "Landsat 8 Annual Surface Reflectance TMAD",
                 # Included as a keyword for the layer
-                "type": "Annual Surface Reflectance TMAD",
+                "type": "",
                 # Included as a keyword for the layer
-                "variant": "25m",
+                "variant": "",
 
                 "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
@@ -12645,7 +12647,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 35.0,
+                "min_zoom_factor": 10.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -12696,58 +12698,74 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "sdev",
                         "title": "sdev",
                         "abstract": "",
-                        "index_function": lambda data: data["sdev"],
+                        "index_function": lambda data: -math.log(data["sdev"]) / 10,
                         "needed_bands": ["sdev"],
                         "color_ramp": [
                             {
-                                "value": 0.0,
-                                "color": "#F60B0B",
-                                "alpha": 0.0
+                                "value": 1.0,
+                                "color": "#127C17"
                             },
                             {
-                                "value": 0.0009765625,
-                                "color": "#FB0041",
-                                "alpha": 1.0
+                                "value": 0.9,
+                                "color": "#008462",
+                                "legend": {
+                                    "label": "$10^{-5}$"
+                                }
                             },
                             {
-                                "value": 0.001953125,
-                                "color": "#F2006C"
-                            },
-                            {
-                                "value": 0.00390625,
-                                "color": "#D90094"
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.015625,
-                                "color": "#8F3ED0"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#006BED"
-                            },
-                            {
-                                "value": 0.125,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.25,
+                                "value": 0.8,
                                 "color": "#0087AE"
                             },
                             {
-                                "value": 0.5,
-                                "color": "#008462"
+                                "value": 0.7,
+                                "color": "#0081E6",
+                                "legend": {
+                                    "label": "$10^{-3}$"
+                                }
                             },
                             {
-                                "value": 1.0,
-                                "color": "#127C17"
+                                "value": 0.6,
+                                "color": "#006BED"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#6458E2",
+                                "legend": {
+                                    "label": "0.007"
+                                }
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#8F3ED0"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#AF00B7",
+                                "legend": {
+                                    "label": "0.05"
+                                }
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#D90094"
+                            },
+                            {
+                                "value": 0.15,
+                                "color": "#F2006C",
+                                "legend": {
+                                    "label": "0.21"
+                                }
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#FB0041"
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#F60B0B",
+                                "legend": {
+                                    "label": "1.0"
+                                }
                             }
                         ]
                     },
@@ -12878,11 +12896,11 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             {
                 # Included as a keyword for the layer
-                "label": "Landsat 7",
+                "label": "Landsat 7 Annual Surface Reflectance TMAD",
                 # Included as a keyword for the layer
-                "type": "Annual Surface Reflectance TMAD",
+                "type": "",
                 # Included as a keyword for the layer
-                "variant": "25m",
+                "variant": "",
                 "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -12912,7 +12930,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 35.0,
+                "min_zoom_factor": 10.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -13145,12 +13163,11 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             {
                 # Included as a keyword for the layer
-                "label": "Landsat 5",
+                "label": "Landsat 5 Annual Surface Reflectance TMAD",
                 # Included as a keyword for the layer
-                "type": "Annual Surface Reflectance TMAD",
+                "type": "",
                 # Included as a keyword for the layer
-                "variant": "25m",
-
+                "variant": "",
                 "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -13180,7 +13197,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 35.0,
+                "min_zoom_factor": 10.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
