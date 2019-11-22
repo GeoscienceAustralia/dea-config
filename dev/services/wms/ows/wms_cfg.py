@@ -12645,7 +12645,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 10.0,
+                "min_zoom_factor": 35.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -12696,7 +12696,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": "sdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1/1000.0)) - 1)),
-                        "needed_bands": ["sdev"],
+                        "needed_bands": ["log_sdev"],
                         "color_ramp": [
                             {
                                 "value": 1.0,
@@ -12774,7 +12774,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": "edev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["edev"] ** (1/1000.0)) - 1)),
-                        "needed_bands": ["edev"],
+                        "needed_bands": ["log_edev"],
                         "color_ramp": [
                             {
                                 "value": 1.0,
@@ -12852,7 +12852,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": "bcdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1/1000.0)) - 1)),
-                        "needed_bands": ["bcdev"],
+                        "needed_bands": ["log_bcdev"],
                         "color_ramp": [
                             {
                                 "value": 1.0,
