@@ -12645,7 +12645,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                #"min_zoom_factor": 10.0,
+                "min_zoom_factor": 10.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -12694,15 +12694,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                     #
                     {
                         "name": "sdev",
-                        "title": "sdev",
+                        "title": "log(sdev) ",
                         "abstract": "",
-                        "index_function": lambda data: (-1000.0 * ((data["sdev"] ** (1/1000.0)) - 1) / 10),
+                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1/1000.0)) - 1)),
                         "needed_bands": ["sdev"],
                         "color_ramp": [
                             {
                                 "value": 1.0,
                                 "color": "#127C17",
-                                "alpha": 0.0,
                                 "legend": {
                                     "label": "1.0"
                                 }
@@ -12713,7 +12712,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.8,
-                                "color": "#0087AE"
+                                "color": "#0087AE",
+                                "legend": {
+                                    "label": "0.8"
+                                }
                             },
                             {
                                 "value": 0.7,
@@ -12721,7 +12723,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.6,
-                                "color": "#006BED"
+                                "color": "#006BED",
+                                "legend": {
+                                    "label": "0.6"
+                                }
                             },
                             {
                                 "value": 0.5,
@@ -12729,7 +12734,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.4,
-                                "color": "#8F3ED0"
+                                "color": "#8F3ED0",
+                                "legend": {
+                                    "label": "0.4"
+                                }
                             },
                             {
                                 "value": 0.3,
@@ -12737,7 +12745,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.2,
-                                "color": "#D90094"
+                                "color": "#D90094",
+                                "legend": {
+                                    "label": "0.2"
+                                }
                             },
                             {
                                 "value": 0.15,
@@ -12756,20 +12767,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         ],
                         "legend": {
-                            "units": "Green low tmad value,\nRed is high tmad value",
+                            "units": "Green is high tmad raw band value,\nRed is low tmad raw band value",
                         }
                     },
                     {
                         "name": "edev",
-                        "title": "edev",
+                        "title": "log(edev) ",
                         "abstract": "",
-                        "index_function": lambda data: (-1000.0 * ((data["edev"] ** (1/1000.0)) - 1) / 10),
+                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1/1000.0)) - 1)),
                         "needed_bands": ["edev"],
                         "color_ramp": [
                             {
                                 "value": 1.0,
                                 "color": "#127C17",
-                                "alpha": 0.0,
                                 "legend": {
                                     "label": "1.0"
                                 }
@@ -12780,7 +12790,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.8,
-                                "color": "#0087AE"
+                                "color": "#0087AE",
+                                "legend": {
+                                    "label": "0.8"
+                                }
                             },
                             {
                                 "value": 0.7,
@@ -12788,7 +12801,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.6,
-                                "color": "#006BED"
+                                "color": "#006BED",
+                                "legend": {
+                                    "label": "0.6"
+                                }
                             },
                             {
                                 "value": 0.5,
@@ -12796,7 +12812,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.4,
-                                "color": "#8F3ED0"
+                                "color": "#8F3ED0",
+                                "legend": {
+                                    "label": "0.4"
+                                }
                             },
                             {
                                 "value": 0.3,
@@ -12804,7 +12823,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.2,
-                                "color": "#D90094"
+                                "color": "#D90094",
+                                "legend": {
+                                    "label": "0.2"
+                                }
                             },
                             {
                                 "value": 0.15,
@@ -12823,20 +12845,19 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         ],
                         "legend": {
-                            "units": "Green low tmad value,\nRed is high tmad value",
+                            "units": "Green is high tmad raw band value,\nRed is low tmad raw band value",
                         }
                     },
                     {
                         "name": "bcdev",
-                        "title": "bcdev",
+                        "title": "log(bcdev) ",
                         "abstract": "",
-                        "index_function": lambda data: (-1000.0 * ((data["bcdev"] ** (1/1000.0)) - 1) / 10),
+                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1/1000.0)) - 1)),
                         "needed_bands": ["bcdev"],
                         "color_ramp": [
                             {
                                 "value": 1.0,
                                 "color": "#127C17",
-                                "alpha": 0.0,
                                 "legend": {
                                     "label": "1.0"
                                 }
@@ -12847,7 +12868,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.8,
-                                "color": "#0087AE"
+                                "color": "#0087AE",
+                                "legend": {
+                                    "label": "0.8"
+                                }
                             },
                             {
                                 "value": 0.7,
@@ -12855,7 +12879,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.6,
-                                "color": "#006BED"
+                                "color": "#006BED",
+                                "legend": {
+                                    "label": "0.6"
+                                }
                             },
                             {
                                 "value": 0.5,
@@ -12863,7 +12890,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.4,
-                                "color": "#8F3ED0"
+                                "color": "#8F3ED0",
+                                "legend": {
+                                    "label": "0.4"
+                                }
                             },
                             {
                                 "value": 0.3,
@@ -12871,7 +12901,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 "value": 0.2,
-                                "color": "#D90094"
+                                "color": "#D90094",
+                                "legend": {
+                                    "label": "0.2"
+                                }
                             },
                             {
                                 "value": 0.15,
@@ -12890,7 +12923,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         ],
                         "legend": {
-                            "units": "Green low tmad value,\nRed is high tmad value",
+                            "units": "Green is high tmad raw band value,\nRed is low tmad raw band value",
                         }
                     }
                 ],
@@ -12936,7 +12969,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                #"min_zoom_factor": 10.0,
+                "min_zoom_factor": 10.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -13203,7 +13236,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                #"min_zoom_factor": 10.0,
+                "min_zoom_factor": 10.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
