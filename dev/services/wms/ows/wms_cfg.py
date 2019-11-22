@@ -12655,8 +12655,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "time_zone": 9,
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
-
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
@@ -12667,7 +12666,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["sdev", "edev", "bcdev"]
+                    "styles": ["log_sdev", "log_edev", "log_bcdev"]
                 },
                 "wcs_default_bands": ["sdev", "edev", "bcdev"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -12693,8 +12692,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                     # Examples of styles which are linear combinations of the available spectral bands.
                     #
                     {
-                        "name": "sdev",
-                        "title": "log(sdev) ",
+                        "name": "log_sdev ",
+                        "title": "sdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1/1000.0)) - 1)),
                         "needed_bands": ["sdev"],
@@ -12771,8 +12770,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         }
                     },
                     {
-                        "name": "edev",
-                        "title": "log(edev) ",
+                        "name": "log_edev ",
+                        "title": "edev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["edev"] ** (1/1000.0)) - 1)),
                         "needed_bands": ["edev"],
@@ -12849,8 +12848,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         }
                     },
                     {
-                        "name": "bcdev",
-                        "title": "log(bcdev) ",
+                        "name": "log_bcdev ",
+                        "title": "bcdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1/1000.0)) - 1)),
                         "needed_bands": ["bcdev"],
@@ -12931,7 +12930,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # MUST be defined in the styles list above.
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "sdev",
+                "default_style": "log_sdev",
             },
             {
                 # Included as a keyword for the layer
@@ -12979,8 +12978,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "time_zone": 9,
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
-
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
@@ -13246,8 +13244,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "time_zone": 9,
                 # Extent mask function
                 # Determines what portions of dataset is potentially meaningful data.
-                "extent_mask_func": lambda data, band: data[band] != data[band].attrs['nodata'],
-
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
                 # Flags listed here are ignored in GetFeatureInfo requests.
                 # (defaults to empty list)
                 "ignore_info_flags": [],
