@@ -12696,69 +12696,69 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": "sdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1/1000.0)) - 1)),
-                        "needed_bands": ["log_sdev"],
+                        "needed_bands": ["sdev"],
                         "color_ramp": [
                             {
-                                "value": 1.0,
+                                "value": 0.0001,
                                 "color": "#127C17",
                                 "legend": {
                                     "label": "1.0"
                                 }
                             },
                             {
-                                "value": 0.9,
+                                "value": 0.0003,
                                 "color": "#008462"
                             },
                             {
-                                "value": 0.8,
+                                "value": 0.0006,
                                 "color": "#0087AE",
                                 "legend": {
                                     "label": "0.8"
                                 }
                             },
                             {
-                                "value": 0.7,
+                                "value": 0.0009,
                                 "color": "#0081E6"
                             },
                             {
-                                "value": 0.6,
+                                "value": 0.0015,
                                 "color": "#006BED",
                                 "legend": {
                                     "label": "0.6"
                                 }
                             },
                             {
-                                "value": 0.5,
+                                "value": 0.0034,
                                 "color": "#6458E2"
                             },
                             {
-                                "value": 0.4,
+                                "value": 0.0077,
                                 "color": "#8F3ED0",
                                 "legend": {
                                     "label": "0.4"
                                 }
                             },
                             {
-                                "value": 0.3,
+                                "value": 0.0173,
                                 "color": "#AF00B7"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.0390,
                                 "color": "#D90094",
                                 "legend": {
                                     "label": "0.2"
                                 }
                             },
                             {
-                                "value": 0.15,
+                                "value": 0.0878,
                                 "color": "#F2006C"
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.1975,
                                 "color": "#FB0041"
                             },
                             {
-                                "value": 0.0,
+                                "value": 0.3456,
                                 "color": "#F60B0B",
                                 "legend": {
                                     "label": "0.0"
@@ -12774,69 +12774,69 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": "edev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["edev"] ** (1/1000.0)) - 1)),
-                        "needed_bands": ["log_edev"],
+                        "needed_bands": ["edev"],
                         "color_ramp": [
                             {
-                                "value": 1.0,
+                                "value": 0.0001,
                                 "color": "#127C17",
                                 "legend": {
                                     "label": "1.0"
                                 }
                             },
                             {
-                                "value": 0.9,
+                                "value": 0.0003,
                                 "color": "#008462"
                             },
                             {
-                                "value": 0.8,
+                                "value": 0.0006,
                                 "color": "#0087AE",
                                 "legend": {
                                     "label": "0.8"
                                 }
                             },
                             {
-                                "value": 0.7,
+                                "value": 0.0009,
                                 "color": "#0081E6"
                             },
                             {
-                                "value": 0.6,
+                                "value": 0.0015,
                                 "color": "#006BED",
                                 "legend": {
                                     "label": "0.6"
                                 }
                             },
                             {
-                                "value": 0.5,
+                                "value": 0.0034,
                                 "color": "#6458E2"
                             },
                             {
-                                "value": 0.4,
+                                "value": 0.0077,
                                 "color": "#8F3ED0",
                                 "legend": {
                                     "label": "0.4"
                                 }
                             },
                             {
-                                "value": 0.3,
+                                "value": 0.0173,
                                 "color": "#AF00B7"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.0390,
                                 "color": "#D90094",
                                 "legend": {
                                     "label": "0.2"
                                 }
                             },
                             {
-                                "value": 0.15,
+                                "value": 0.0878,
                                 "color": "#F2006C"
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.1975,
                                 "color": "#FB0041"
                             },
                             {
-                                "value": 0.0,
+                                "value": 0.3456,
                                 "color": "#F60B0B",
                                 "legend": {
                                     "label": "0.0"
@@ -12852,69 +12852,69 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "title": "bcdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1/1000.0)) - 1)),
-                        "needed_bands": ["log_bcdev"],
+                        "needed_bands": ["bcdev"],
                         "color_ramp": [
                             {
-                                "value": 1.0,
+                                "value": 0.0001,
                                 "color": "#127C17",
                                 "legend": {
                                     "label": "1.0"
                                 }
                             },
                             {
-                                "value": 0.9,
+                                "value": 0.0003,
                                 "color": "#008462"
                             },
                             {
-                                "value": 0.8,
+                                "value": 0.0006,
                                 "color": "#0087AE",
                                 "legend": {
                                     "label": "0.8"
                                 }
                             },
                             {
-                                "value": 0.7,
+                                "value": 0.0009,
                                 "color": "#0081E6"
                             },
                             {
-                                "value": 0.6,
+                                "value": 0.0015,
                                 "color": "#006BED",
                                 "legend": {
                                     "label": "0.6"
                                 }
                             },
                             {
-                                "value": 0.5,
+                                "value": 0.0034,
                                 "color": "#6458E2"
                             },
                             {
-                                "value": 0.4,
+                                "value": 0.0077,
                                 "color": "#8F3ED0",
                                 "legend": {
                                     "label": "0.4"
                                 }
                             },
                             {
-                                "value": 0.3,
+                                "value": 0.0173,
                                 "color": "#AF00B7"
                             },
                             {
-                                "value": 0.2,
+                                "value": 0.0390,
                                 "color": "#D90094",
                                 "legend": {
                                     "label": "0.2"
                                 }
                             },
                             {
-                                "value": 0.15,
+                                "value": 0.0878,
                                 "color": "#F2006C"
                             },
                             {
-                                "value": 0.1,
+                                "value": 0.1975,
                                 "color": "#FB0041"
                             },
                             {
-                                "value": 0.0,
+                                "value": 0.3456,
                                 "color": "#F60B0B",
                                 "legend": {
                                     "label": "0.0"
