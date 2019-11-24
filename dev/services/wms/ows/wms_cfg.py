@@ -12692,7 +12692,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     # Examples of styles which are linear combinations of the available spectral bands.
                     #
                     {
-                        "name": "log_sdev ",
+                        "name": "log_sdev",
                         "title": "sdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1/1000.0)) - 1)),
@@ -12770,7 +12770,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         }
                     },
                     {
-                        "name": "log_edev ",
+                        "name": "log_edev",
                         "title": "edev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["edev"] ** (1/1000.0)) - 1)),
@@ -12848,7 +12848,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         }
                     },
                     {
-                        "name": "log_bcdev ",
+                        "name": "log_bcdev",
                         "title": "bcdev",
                         "abstract": "",
                         "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1/1000.0)) - 1)),
