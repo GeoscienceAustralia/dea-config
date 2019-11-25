@@ -12705,20 +12705,20 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 'value': 0.1,
-                                'color': '#2972a8',
+                                'color': '#A02406',
                                 'legend': {
-                                    'label': 'High\nraw tmad'
+                                    'label': 'High\ntmad'
                                 }
                             },
                             {
                                 'value': 0.5,
-                                'color': '#fcf24b'
+                                'color': '#FCF24B'
                             },
                             {
                                 'value': 0.9,
-                                'color': '#a02406',
+                                'color': '#0CCD1D',
                                 'legend': {
-                                    'label': 'Low\nraw tmad'
+                                    'label': 'Low\ntmad'
                                 }
                             }
                         ],
@@ -12739,20 +12739,20 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 'value': 0.1,
-                                'color': '#2972a8',
+                                'color': '#A02406',
                                 'legend': {
-                                    'label': 'High\nraw tmad'
+                                    'label': 'High\ntmad'
                                 }
                             },
                             {
                                 'value': 0.5,
-                                'color': '#fcf24b'
+                                'color': '#FCF24B'
                             },
                             {
                                 'value': 0.9,
-                                'color': '#a02406',
+                                'color': '#0CCD1D',
                                 'legend': {
-                                    'label': 'Low\nraw tmad'
+                                    'label': 'Low\ntmad'
                                 }
                             }
                         ],
@@ -12773,20 +12773,20 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             {
                                 'value': 0.1,
-                                'color': '#2972a8',
+                                'color': '#A02406',
                                 'legend': {
-                                    'label': 'High\nraw tmad'
+                                    'label': 'High\ntmad'
                                 }
                             },
                             {
                                 'value': 0.5,
-                                'color': '#fcf24b'
+                                'color': '#FCF24B'
                             },
                             {
                                 'value': 0.9,
-                                'color': '#a02406',
+                                'color': '#0CCD1D',
                                 'legend': {
-                                    'label': 'Low\nraw tmad'
+                                    'label': 'Low\ntmad'
                                 }
                             }
                         ],
