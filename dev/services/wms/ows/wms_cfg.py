@@ -12645,7 +12645,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 35.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -12699,74 +12699,30 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "needed_bands": ["sdev"],
                         "color_ramp": [
                             {
-                                "value": 1.0,
-                                "color": "#127C17",
-                                "legend": {
-                                    "label": "1.0"
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#2972a8',
+                                'legend': {
+                                    'label': 'High\nraw tmad'
                                 }
                             },
                             {
-                                "value": 0.25,
-                                "color": "#008462"
+                                'value': 0.5,
+                                'color': '#fcf24b'
                             },
                             {
-                                "value": 0.125,
-                                "color": "#0087AE",
-                                "legend": {
-                                    "label": "0.8"
-                                }
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#006BED",
-                                "legend": {
-                                    "label": "0.6"
-                                }
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.00390625,
-                                "color": "#8F3ED0",
-                                "legend": {
-                                    "label": "0.4"
-                                }
-                            },
-                            {
-                                "value": 0.00195,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.00097,
-                                "color": "#D90094",
-                                "legend": {
-                                    "label": "0.2"
-                                }
-                            },
-                            {
-                                "value": 0.00055,
-                                "color": "#F2006C"
-                            },
-                            {
-                                "value": 0.00025,
-                                "color": "#FB0041"
-                            },
-                            {
-                                "value": 0.000095,
-                                "color": "#F60B0B",
-                                "legend": {
-                                    "label": "0.0"
+                                'value': 0.9,
+                                'color': '#a02406',
+                                'legend': {
+                                    'label': 'Low\nraw tmad'
                                 }
                             }
                         ],
                         "legend": {
-                            "units": "Green is high tmad raw band value,\nRed is low tmad raw band value",
                         }
                     },
                     {
@@ -12777,74 +12733,30 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "needed_bands": ["edev"],
                         "color_ramp": [
                             {
-                                "value": 1.0,
-                                "color": "#127C17",
-                                "legend": {
-                                    "label": "1.0"
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#2972a8',
+                                'legend': {
+                                    'label': 'High\nraw tmad'
                                 }
                             },
                             {
-                                "value": 0.25,
-                                "color": "#008462"
+                                'value': 0.5,
+                                'color': '#fcf24b'
                             },
                             {
-                                "value": 0.125,
-                                "color": "#0087AE",
-                                "legend": {
-                                    "label": "0.8"
-                                }
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#006BED",
-                                "legend": {
-                                    "label": "0.6"
-                                }
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.00390625,
-                                "color": "#8F3ED0",
-                                "legend": {
-                                    "label": "0.4"
-                                }
-                            },
-                            {
-                                "value": 0.00195,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.00097,
-                                "color": "#D90094",
-                                "legend": {
-                                    "label": "0.2"
-                                }
-                            },
-                            {
-                                "value": 0.00055,
-                                "color": "#F2006C"
-                            },
-                            {
-                                "value": 0.00025,
-                                "color": "#FB0041"
-                            },
-                            {
-                                "value": 0.000095,
-                                "color": "#F60B0B",
-                                "legend": {
-                                    "label": "0.0"
+                                'value': 0.9,
+                                'color': '#a02406',
+                                'legend': {
+                                    'label': 'Low\nraw tmad'
                                 }
                             }
                         ],
                         "legend": {
-                            "units": "Green is high tmad raw band value,\nRed is low tmad raw band value",
                         }
                     },
                     {
@@ -12855,74 +12767,30 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "needed_bands": ["bcdev"],
                         "color_ramp": [
                             {
-                                "value": 1.0,
-                                "color": "#127C17",
-                                "legend": {
-                                    "label": "1.0"
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#2972a8',
+                                'legend': {
+                                    'label': 'High\nraw tmad'
                                 }
                             },
                             {
-                                "value": 0.25,
-                                "color": "#008462"
+                                'value': 0.5,
+                                'color': '#fcf24b'
                             },
                             {
-                                "value": 0.125,
-                                "color": "#0087AE",
-                                "legend": {
-                                    "label": "0.8"
-                                }
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#006BED",
-                                "legend": {
-                                    "label": "0.6"
-                                }
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.00390625,
-                                "color": "#8F3ED0",
-                                "legend": {
-                                    "label": "0.4"
-                                }
-                            },
-                            {
-                                "value": 0.00195,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.00097,
-                                "color": "#D90094",
-                                "legend": {
-                                    "label": "0.2"
-                                }
-                            },
-                            {
-                                "value": 0.00055,
-                                "color": "#F2006C"
-                            },
-                            {
-                                "value": 0.00025,
-                                "color": "#FB0041"
-                            },
-                            {
-                                "value": 0.000095,
-                                "color": "#F60B0B",
-                                "legend": {
-                                    "label": "0.0"
+                                'value': 0.9,
+                                'color': '#a02406',
+                                'legend': {
+                                    'label': 'Low\nraw tmad'
                                 }
                             }
                         ],
                         "legend": {
-                            "units": "Green is high tmad raw band value,\nRed is low tmad raw band value",
                         }
                     }
                 ],
@@ -12968,7 +12836,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 10.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
@@ -13234,7 +13102,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # "always_fetch_bands": [ "quality" ],
                 # Min zoom factor - sets the zoom level where the cutover from indicative polygons
                 # to actual imagery occurs.
-                "min_zoom_factor": 10.0,
+                "min_zoom_factor": 15.0,
                 # The fill-colour of the indicative polygons when zoomed out.
                 # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
                 "zoomed_out_fill_colour": [150, 180, 200, 160],
