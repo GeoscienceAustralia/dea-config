@@ -12615,7 +12615,6 @@ For service status information, see https://status.dea.ga.gov.au """,
                 "type": "",
                 # Included as a keyword for the layer
                 "variant": "",
-
                 "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -12695,7 +12694,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "log_sdev",
                         "title": "sdev",
                         "abstract": "",
-                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1/1000.0)) - 1)),
+                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["sdev"],
                         "color_ramp": [
                             {
@@ -12729,7 +12728,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "log_edev",
                         "title": "edev",
                         "abstract": "",
-                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1/1000.0)) - 1)),
+                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["edev"],
                         "color_ramp": [
                             {
@@ -12763,7 +12762,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "name": "log_bcdev",
                         "title": "bcdev",
                         "abstract": "",
-                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1/1000.0)) - 1)),
+                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["bcdev"],
                         "color_ramp": [
                             {
@@ -12857,7 +12856,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["sdev", "edev", "bcdev"]
+                    "styles": ["log_sdev", "log_edev", "log_bcdev"]
                 },
                 "wcs_default_bands": ["sdev", "edev", "bcdev"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -12883,188 +12882,113 @@ For service status information, see https://status.dea.ga.gov.au""",
                     # Examples of styles which are linear combinations of the available spectral bands.
                     #
                     {
-                        "name": "sdev",
+                        "name": "log_sdev",
                         "title": "sdev",
                         "abstract": "",
-                        "index_function": lambda data: data["sdev"],
+                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["sdev"],
                         "color_ramp": [
                             {
-                                "value": 0.0,
-                                "color": "#F60B0B",
-                                "alpha": 0.0
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
                             },
                             {
-                                "value": 0.0009765625,
-                                "color": "#FB0041",
-                                "alpha": 1.0
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
                             },
                             {
-                                "value": 0.001953125,
-                                "color": "#F2006C"
+                                'value': 0.5,
+                                'color': '#FCF24B'
                             },
                             {
-                                "value": 0.00390625,
-                                "color": "#D90094"
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.015625,
-                                "color": "#8F3ED0"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#006BED"
-                            },
-                            {
-                                "value": 0.125,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.25,
-                                "color": "#0087AE"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#008462"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#127C17"
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
                             }
-                        ]
+                        ],
+                        "legend": {
+                        }
                     },
                     {
-                        "name": "edev",
+                        "name": "log_edev",
                         "title": "edev",
                         "abstract": "",
-                        "index_function": lambda data: data["edev"],
+                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["edev"],
                         "color_ramp": [
                             {
-                                "value": 0.0,
-                                "color": "#F60B0B",
-                                "alpha": 0.0
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
                             },
                             {
-                                "value": 0.0009765625,
-                                "color": "#FB0041",
-                                "alpha": 1.0
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
                             },
                             {
-                                "value": 0.001953125,
-                                "color": "#F2006C"
+                                'value': 0.5,
+                                'color': '#FCF24B'
                             },
                             {
-                                "value": 0.00390625,
-                                "color": "#D90094"
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.015625,
-                                "color": "#8F3ED0"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#006BED"
-                            },
-                            {
-                                "value": 0.125,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.25,
-                                "color": "#0087AE"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#008462"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#127C17"
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
                             }
-                        ]
+                        ],
+                        "legend": {
+                        }
                     },
                     {
-                        "name": "bcdev",
+                        "name": "log_bcdev",
                         "title": "bcdev",
                         "abstract": "",
-                        "index_function": lambda data: data["bcdev"],
+                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["bcdev"],
                         "color_ramp": [
                             {
-                                "value": 0.0,
-                                "color": "#F60B0B",
-                                "alpha": 0.0
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
                             },
                             {
-                                "value": 0.0009765625,
-                                "color": "#FB0041",
-                                "alpha": 1.0
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
                             },
                             {
-                                "value": 0.001953125,
-                                "color": "#F2006C"
+                                'value': 0.5,
+                                'color': '#FCF24B'
                             },
                             {
-                                "value": 0.00390625,
-                                "color": "#D90094"
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.015625,
-                                "color": "#8F3ED0"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#006BED"
-                            },
-                            {
-                                "value": 0.125,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.25,
-                                "color": "#0087AE"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#008462"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#127C17"
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
                             }
-                        ]
+                        ],
+                        "legend": {
+                        }
                     }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "sdev",
+                "default_style": "log_sdev",
             },
             {
                 # Included as a keyword for the layer
@@ -13123,7 +13047,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["sdev", "edev", "bcdev"]
+                    "styles": ["log_sdev", "log_edev", "log_bcdev"]
                 },
                 "wcs_default_bands": ["sdev", "edev", "bcdev"],
                 # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
@@ -13149,188 +13073,113 @@ For service status information, see https://status.dea.ga.gov.au""",
                     # Examples of styles which are linear combinations of the available spectral bands.
                     #
                     {
-                        "name": "sdev",
+                        "name": "log_sdev",
                         "title": "sdev",
                         "abstract": "",
-                        "index_function": lambda data: data["sdev"],
+                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["sdev"],
                         "color_ramp": [
                             {
-                                "value": 0.0,
-                                "color": "#F60B0B",
-                                "alpha": 0.0
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
                             },
                             {
-                                "value": 0.0009765625,
-                                "color": "#FB0041",
-                                "alpha": 1.0
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
                             },
                             {
-                                "value": 0.001953125,
-                                "color": "#F2006C"
+                                'value': 0.5,
+                                'color': '#FCF24B'
                             },
                             {
-                                "value": 0.00390625,
-                                "color": "#D90094"
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.015625,
-                                "color": "#8F3ED0"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#006BED"
-                            },
-                            {
-                                "value": 0.125,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.25,
-                                "color": "#0087AE"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#008462"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#127C17"
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
                             }
-                        ]
+                        ],
+                        "legend": {
+                        }
                     },
                     {
-                        "name": "edev",
+                        "name": "log_edev",
                         "title": "edev",
                         "abstract": "",
-                        "index_function": lambda data: data["edev"],
+                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["edev"],
                         "color_ramp": [
                             {
-                                "value": 0.0,
-                                "color": "#F60B0B",
-                                "alpha": 0.0
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
                             },
                             {
-                                "value": 0.0009765625,
-                                "color": "#FB0041",
-                                "alpha": 1.0
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
                             },
                             {
-                                "value": 0.001953125,
-                                "color": "#F2006C"
+                                'value': 0.5,
+                                'color': '#FCF24B'
                             },
                             {
-                                "value": 0.00390625,
-                                "color": "#D90094"
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.015625,
-                                "color": "#8F3ED0"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#006BED"
-                            },
-                            {
-                                "value": 0.125,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.25,
-                                "color": "#0087AE"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#008462"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#127C17"
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
                             }
-                        ]
+                        ],
+                        "legend": {
+                        }
                     },
                     {
-                        "name": "bcdev",
+                        "name": "log_bcdev",
                         "title": "bcdev",
                         "abstract": "",
-                        "index_function": lambda data: data["bcdev"],
+                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1 / 1000.0)) - 1)),
                         "needed_bands": ["bcdev"],
                         "color_ramp": [
                             {
-                                "value": 0.0,
-                                "color": "#F60B0B",
-                                "alpha": 0.0
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
                             },
                             {
-                                "value": 0.0009765625,
-                                "color": "#FB0041",
-                                "alpha": 1.0
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
                             },
                             {
-                                "value": 0.001953125,
-                                "color": "#F2006C"
+                                'value': 0.5,
+                                'color': '#FCF24B'
                             },
                             {
-                                "value": 0.00390625,
-                                "color": "#D90094"
-                            },
-                            {
-                                "value": 0.0078125,
-                                "color": "#AF00B7"
-                            },
-                            {
-                                "value": 0.015625,
-                                "color": "#8F3ED0"
-                            },
-                            {
-                                "value": 0.03125,
-                                "color": "#6458E2"
-                            },
-                            {
-                                "value": 0.0625,
-                                "color": "#006BED"
-                            },
-                            {
-                                "value": 0.125,
-                                "color": "#0081E6"
-                            },
-                            {
-                                "value": 0.25,
-                                "color": "#0087AE"
-                            },
-                            {
-                                "value": 0.5,
-                                "color": "#008462"
-                            },
-                            {
-                                "value": 1.0,
-                                "color": "#127C17"
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
                             }
-                        ]
+                        ],
+                        "legend": {
+                        }
                     }
                 ],
                 # Default style (if request does not specify style)
                 # MUST be defined in the styles list above.
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
-                "default_style": "sdev",
+                "default_style": "log_sdev",
             }
         ]
     },
