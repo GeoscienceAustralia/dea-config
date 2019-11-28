@@ -3972,6 +3972,7 @@ ows_cfg = {
             },
         },
         "allowed_urls": [
+                "http://ows-configrefactor.dev.dea.ga.gov.au",
                 "https://ows.services.dea.ga.gov.au",
                 "https://ows.services.dev.dea.ga.gov.au",
                 "https://ows.dev.dea.ga.gov.au",
