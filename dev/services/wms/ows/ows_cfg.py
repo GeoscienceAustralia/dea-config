@@ -4075,7 +4075,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
                         "manual_merge": True,
                     },
@@ -4113,7 +4113,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
                         "manual_merge": True,
                     },
@@ -4151,7 +4151,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
                         "manual_merge": True,
                     },
@@ -4205,7 +4205,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
                         "manual_merge": True,
                     },
@@ -4259,7 +4259,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
                         "manual_merge": True,
                     },
@@ -4302,7 +4302,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_mangrove,
                     "resource_limits": reslim_mangrove,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_extent_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_extent_val",
                         "always_fetch_bands": [ "extent" ],
                         "manual_merge": False,
                     },
@@ -4341,7 +4341,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_filt_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4375,7 +4375,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4408,7 +4408,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4441,7 +4441,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4475,7 +4475,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_filt_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4508,7 +4508,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4541,7 +4541,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4574,7 +4574,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4607,7 +4607,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4639,7 +4639,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4671,7 +4671,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4704,7 +4704,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4736,7 +4736,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4768,7 +4768,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4800,7 +4800,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_obs,
                     "resource_limits": reslim_wofs_obs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_bitflag",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -4853,7 +4853,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4897,7 +4897,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4941,7 +4941,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -4975,7 +4975,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_wofs_obs,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5026,7 +5026,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2_ard,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5071,7 +5071,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2_ard,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5116,7 +5116,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2_ard,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5170,7 +5170,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_weathering,
                     "resource_limits": reslim_weathering,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5228,7 +5228,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_multi_topog,
                     "resource_limits": reslim_multi_topog,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5272,7 +5272,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5315,7 +5315,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5358,7 +5358,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5402,7 +5402,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5446,7 +5446,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5484,7 +5484,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5522,7 +5522,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5560,7 +5560,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5638,7 +5638,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "ignore_info_flags": [],
                     },
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5703,7 +5703,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5753,7 +5753,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5834,7 +5834,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_item,
                     "resource_limits": reslim_item,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5899,7 +5899,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_item_conf,
                     "resource_limits": reslim_item,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -5929,7 +5929,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_wamm,
                     "resource_limits": reslim_wamm,
                     "image_processing": {
-                        "extent_mask_function": {
+                        "extent_mask_func": {
                             "function": "datacube_ows.ogc_utils.mask_by_val",
                             "pass_product_cfg": False,
                             "kwargs": {
@@ -5970,7 +5970,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_hap,
                     "resource_limits": reslim_hap,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6048,7 +6048,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6100,7 +6100,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6153,7 +6153,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6214,7 +6214,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6269,7 +6269,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6317,7 +6317,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6372,7 +6372,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6425,7 +6425,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6472,7 +6472,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6515,7 +6515,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6562,7 +6562,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6613,7 +6613,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6665,7 +6665,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6718,7 +6718,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6775,7 +6775,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6834,7 +6834,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6879,7 +6879,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_aster_single_band,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6924,7 +6924,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -6963,7 +6963,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -7002,7 +7002,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
@@ -7042,7 +7042,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
                     "image_processing": {
-                        "extent_mask_function": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
