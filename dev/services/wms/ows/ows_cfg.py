@@ -5947,7 +5947,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "include_custom": {
                             # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
                             "timeseries": {
-                                "function": "datacube_ows_ogc_utils.feature_info_url_template",
+                                "function": "datacube_ows.ogc_utils.feature_info_url_template",
                                 "pass_product_cfg": False,
                                 "kwargs": {
                                     "template": "https://data.dea.ga.gov.au/projects/WaterBodies/feature_info/{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
