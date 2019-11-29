@@ -583,6 +583,7 @@ style_nd_ferric_iron = {
     "title": "Ferric Iron",
     "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
     "index_function": lambda data: (data["red"] - data["blue"]) / (data["red"] + data["blue"]),
+    "needed_bands": [ 'red', 'blue' ],
     "color_ramp": [
         {
             "value": -0.1,
