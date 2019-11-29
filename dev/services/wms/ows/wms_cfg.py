@@ -9886,11 +9886,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "abstract": """
 The Waterbody Area Mapping and Monitoring (WAMM) service provides insights into both the location and dynamics of waterbodies across Australia. It supports decision-makers by providing insight into both the location and extent of surface water  across Australia since 1987.  It does not provide any insights into the volume or the source of water.
 
-How it works
 WAMM derives a water classification for every available Landsat satellite image and maps the locations of water bodies across Australia, over the period 1987 - 2018. This analysis was used to identify waterbodies that are present more than 10% of the time over this same 31 year period and are larger than 3120m2 (5 Landsat pixels). This threshold was chosen to capture the locations of persistent water bodies and minimise the chances of picking up flood irrigation, flood events or saturated areas in the landscape.
 The graphs show the change in surface area for every waterbody identified using the methods outlined above. The revisit time for each Landsat satellite is 16 days, and more frequent observations occur when more than one satellite is in operation.   In this tool 100% (y-axis) refers to the maximum observed surface area in the water body between 1987 and 2018. The graphs show the percentage of the total polygon that has been classified as 'wet' for every available time step. Data is only included if at least 90% of the polygon is observed in the underlying satellite scene, removing the effects of clouds and missing data on the analysis. The analysis is currently updated on at least a  monthly basis, in the future it will be updated as new satellite images are acquired.
 
-What can it be used for?
 The WAMM tool provides insights into the locations of water (or lack thereof) using the observed locations of water from satellite imagery to identify Australia's natural and man-made waterbodies. It supports decision makers to:
 - characterise the severity and spatial distribution of the impacts of drought 
 - identify presence/absence of water for use emergency management planning and response
@@ -9900,8 +9898,9 @@ The WAMM tool provides insights into the locations of water (or lack thereof) us
 - better characterise water availability in northern Australia
 
 For more information on the Waterbody Area Mapping and Monitoring service, see https://www.ga.gov.au/dea/products
-"""
-"For service status information, see https://status.dea.ga.gov.au",
+
+For service status information, see https://status.dea.ga.gov.au
+""",
                 # Included as a keyword for the layer
                 "type": "",
                 # Included as a keyword for the layer
