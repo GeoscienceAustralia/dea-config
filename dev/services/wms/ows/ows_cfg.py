@@ -582,7 +582,14 @@ style_nd_ferric_iron = {
     "name": "nd_ferric_iron",
     "title": "Ferric Iron",
     "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
-    "index_function": lambda data: (data["red"] - data["blue"]) / (data["red"] + data["blue"]),
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band1": "red",
+            "band2": "blue"
+        }
+    },
     "needed_bands": [ 'red', 'blue' ],
     "color_ramp": [
         {
@@ -642,7 +649,14 @@ style_nd_soil = {
     "name": "nd_soil",
     "title": "Normalised Difference Soil Index",
     "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
-    "index_function": lambda data: (data["swir1"] - data["nir"]) / (data["swir1"] + data["nir"]),
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band1": "swir1",
+            "band2": "nir"
+        }
+    },
     "needed_bands": ["nir", "swir1"],
     "color_ramp": [
         {
@@ -681,7 +695,14 @@ style_nd_clay_mica = {
     "name": "nd_clay_mica",
     "title": "Clay and Mica Minerals",
     "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals",
-    "index_function": lambda data: (data["swir1"] - data["swir2"]) / (data["swir1"] + data["swir2"]),
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band1": "swir1",
+            "band2": "swir2"
+        }
+    },
     "needed_bands": ["swir1", "swir2"],
     "color_ramp": [
         {
@@ -5563,7 +5584,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "abstract": "",
             "layers": [
                 {
-                    "title": "Fractional Cover Percentiles - Green Vegetation",
+                    "title": "Fractional Cover Percentiles - Green Vegetation 25m 100km tile (Fractional Cover Percentiles - Green Vegetation)",
                     "name": "fcp_green_veg",
                     "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -5606,7 +5627,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "abstract": "",
             "layers": [
                 {
-                    "title": "Fractional Cover Percentiles - Non Green Vegetation",
+                    "title": "Fractional Cover Percentiles - Non Green Vegetation 25m 100km tile (Fractional Cover Percentiles - Non Green Vegetation)",
                     "name": "fcp_non_green_veg",
                     "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -5649,17 +5670,10 @@ For service status information, see https://status.dea.ga.gov.au""",
             "abstract": "",
             "layers": [
                 {
-                    "title": "Fractional Cover Percentiles - Bare Soil",
+                    "title": "Fractional Cover Percentiles - Bare Soil 25m 100km tile (Fractional Cover Percentiles - Bare Soil)",
                     "name": "fcp_bare_ground",
                     "abstract": """
-Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-This contains the percentage of bare soil per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year.
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
-
-For service status information, see https://status.dea.ga.gov.au""",
+	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover This contains the percentage of bare soil per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year. Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "fc_percentile_albers_annual",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
@@ -5692,7 +5706,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "abstract": "",
             "layers": [
                 {
-                    "title": "Fractional Cover Percentiles - Median",
+                    "title": "Fractional Cover Percentiles - Median 25m 100km tile (Fractional Cover Percentiles - Median)",
                     "name": "fcp_rgb",
                     "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -5723,9 +5737,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
-                        "default_style": "fc_rgb",
+                        "default_style": "simple_rgb",
                         "styles": [
-                            style_fc_rgb
+                            style_ls_simple_rgb
                         ]
                     }
                 }
@@ -5736,7 +5750,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "abstract": "",
             "layers": [
                 {
-                    "title": "Green Vegetation Seasonal",
+                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Green Vegetation)",
                     "name": "fcp_seasonal_green_veg",
                     "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -5774,7 +5788,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Non Green Vegetation Seasonal",
+                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Non Green Vegetation)",
                     "name": "fcp_seasonal_non_green_veg",
                     "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -5812,17 +5826,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Bare Soil Seasonal",
+                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Bare Soil)",
                     "name": "fcp_seasonal_bare_ground",
                     "abstract": """
-Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
- FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
-
-For service status information, see https://status.dea.ga.gov.au
+	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "fc_percentile_albers_seasonal",
                     "bands": bands_fc_percentile,
@@ -5850,17 +5857,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Median Seasonal",
+                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Median)",
                     "name": "fcp_seasonal_rgb",
                     "abstract": """
-Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
- FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
-
-For service status information, see https://status.dea.ga.gov.au
+	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program. FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "fc_percentile_albers_seasonal",
                     "bands": bands_fc_percentile,
@@ -5881,9 +5881,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
-                        "default_style": "fc_rgb",
+                        "default_style": "simple_rgb",
                         "styles": [
-                            style_fc_rgb,
+                            style_ls_simple_rgb,
                         ]
                     }
                 },
@@ -5895,7 +5895,7 @@ For service status information, see https://status.dea.ga.gov.au
             "layers": [
                 {
                     "name": "NIDEM",
-                    "title": "NIDEM 25m",
+                    "title": "National Intertidal Digital Elevation Model nidem_v1.0.0 grid (NIDEM 25m)",
                     "abstract": """            
 The National Intertidal Digital Elevation Model (NIDEM; Bishop-Taylor et al. 2019) is a continental-scale elevation dataset for Australia's exposed intertidal zone. NIDEM provides the first three-dimensional representation of Australia's intertidal sandy beaches and shores, tidal flats and rocky shores and reefs at 25 m spatial resolution, addressing a key gap between the availability of sub-tidal bathymetry and terrestrial elevation data. NIDEM was generated by combining global tidal modelling with a 30-year time series archive of spatially and spectrally calibrated Landsat satellite data managed within the Digital Earth Australia (DEA) platform. NIDEM complements existing intertidal extent products, and provides data to support a new suite of use cases that require a more detailed understanding of the three-dimensional topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management and ecological habitat mapping.
                             
@@ -5986,7 +5986,7 @@ and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described full
             "layers": [
                 {
                     "name": "high_tide_composite",
-                    "title": "Tidal Composite - High Tide",
+                    "title": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
                     "abstract":"""
 High Tide and Low Tide Composites 2.0.0
                
@@ -6027,7 +6027,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "default_style": "simple_rgb",
                         "styles": [
                             style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi,
+                            style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
                             style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
                             style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
                         ]
@@ -6076,8 +6076,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "simple_rgb",
                         "styles": [
-                            style_ls_simple_rgb, style_ls_mndwi,
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi,
+                            style_ls_simple_rgb, 
+                            style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
                             style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
                             style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
                         ]
@@ -6162,7 +6162,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     }
                 },
                 {
-                    "title": "ITEM Confidence Layer",
+                    "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
                     "name": "ITEM_V2.0.0_Conf",
                     "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
@@ -7220,10 +7220,10 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "layers": [
                 {
-                    "title": "Fractional Cover Landsat 5",
+                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 5)",
                     "name": "ls5_fc_albers",
                     "abstract": """
-ractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
@@ -7259,10 +7259,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Fractional Cover Landsat 7",
+                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 7)",
                     "name": "ls7_fc_albers",
                     "abstract": """
-ractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
@@ -7298,10 +7298,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Fractional Cover Landsat 8",
+                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 8)",
                     "name": "ls8_fc_albers",
                     "abstract": """
-ractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
