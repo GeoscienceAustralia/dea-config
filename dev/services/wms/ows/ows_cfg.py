@@ -4865,7 +4865,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
-                        "default_style": "wet_count",
+                        "default_style": "annual_water_observations",
                         "styles": [
                             style_wofs_summary_wet,
                         ]
@@ -4890,7 +4890,7 @@ Water Observations from Space - Annual Statistics is a set of annual statistical
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
-                        "default_style": "clear_count",
+                        "default_style": "annual_clear_observations",
                         "styles": [
                             style_wofs_summary_clear,
                         ]
@@ -4956,7 +4956,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
-                        "default_style": "wet_count",
+                        "default_style": "annual_water_observations",
                         "styles": [
                             style_wofs_summary_wet,
                         ]
@@ -4988,7 +4988,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
-                        "default_style": "clear_count",
+                        "default_style": "annual_clear_observations",
                         "styles": [
                             style_wofs_summary_clear,
                         ]
@@ -5046,7 +5046,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
-                        "default_style": "wet_count",
+                        "default_style": "annual_water_observations",
                         "styles": [
                             style_wofs_summary_wet,
                         ]
@@ -5078,7 +5078,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
-                        "default_style": "clear_count",
+                        "default_style": "annual_clear_observations",
                         "styles": [
                             style_wofs_summary_clear,
                         ]
@@ -5318,7 +5318,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": [ "water" ]
                     },
                     "styling": {
-                        "default_style": "water_classifer",
+                        "default_style": "water_classifier",
                         "styles": [ style_s2_water_classifier ],
                     }
                 } 
@@ -5653,7 +5653,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
+                        "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
@@ -5777,7 +5777,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
+                        "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
@@ -6155,7 +6155,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
-                        "default_style": "relative",
+                        "default_style": "relative_layer",
                         "styles": [
                             style_item_relative,
                         ]
