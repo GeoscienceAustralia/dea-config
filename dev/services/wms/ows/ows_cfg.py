@@ -416,6 +416,24 @@ style_ls_pure_blue = {
     "scale_range": [0.0, 3000.0]
 }
 
+style_sentinel_pure_blue = {
+    "name": "blue",
+    "title": "Blue - 490",
+    "abstract": "Blue band, centered on 490nm",
+    "components": {
+        "red": {
+            "blue": 1.0
+        },
+        "green": {
+            "blue": 1.0
+        },
+        "blue": {
+            "blue": 1.0
+        }
+    },
+    "scale_range": [0.0, 3000.0]
+}
+
 style_ls_pure_green = {
     "name": "green",
     "title": "Green - 560",
@@ -454,6 +472,24 @@ style_ls_pure_red = {
 
 style_ls_pure_nir = {
     "name": "nir",
+    "title": "Near Infrared (NIR) - 840",
+    "abstract": "Near infra-red band, centered on 840nm",
+    "components": {
+        "red": {
+            "nir": 1.0
+        },
+        "green": {
+            "nir": 1.0
+        },
+        "blue": {
+            "nir": 1.0
+        }
+    },
+    "scale_range": [0.0, 3000.0]
+}
+
+style_sentinel_pure_nir = {
+    "name": "nir",
     "title": "Near Infrared (NIR) - 870",
     "abstract": "Near infra-red band, centered on 870nm",
     "components": {
@@ -471,6 +507,24 @@ style_ls_pure_nir = {
 }
 
 style_ls_pure_swir1 = {
+    "name": "swir1",
+    "title": "Shortwave Infrared (SWIR) - 1650",
+    "abstract": "Short wave infra-red band 1, centered on 1650nm",
+    "components": {
+        "red": {
+            "swir1": 1.0
+        },
+        "green": {
+            "swir1": 1.0
+        },
+        "blue": {
+            "swir1": 1.0
+        }
+    },
+    "scale_range": [0.0, 3000.0]
+}
+
+style_sentinel_pure_swir1 = {
     "name": "swir1",
     "title": "Shortwave Infrared (SWIR) - 1610",
     "abstract": "Short wave infra-red band 1, centered on 1610nm",
@@ -490,6 +544,24 @@ style_ls_pure_swir1 = {
 
 style_ls_pure_swir2 = {
     "name": "swir2",
+    "title": "Shortwave Infrared (SWIR) - 2220",
+    "abstract": "Short wave infra-red band 2, centered on 2220nm",
+    "components": {
+        "red": {
+            "swir2": 1.0
+        },
+        "green": {
+            "swir2": 1.0
+        },
+        "blue": {
+            "swir2": 1.0
+        }
+    },
+    "scale_range": [0.0, 3000.0]
+}
+
+style_sentinel_pure_swir2 = {
+    "name": "swir2",
     "title": "Shortwave Infrared (SWIR) - 2200",
     "abstract": "Short wave infra-red band 2, centered on 2200nm",
     "components": {
@@ -504,6 +576,164 @@ style_ls_pure_swir2 = {
         }
     },
     "scale_range": [0.0, 3000.0]
+}
+
+style_nd_ferric_iron = {
+    "name": "nd_ferric_iron",
+    "title": "Ferric Iron",
+    "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
+    "index_function": lambda data: (data["red"] - data["blue"]) / (data["red"] + data["blue"]),
+    "color_ramp": [
+        {
+            "value": -0.1,
+            "color": "#3B97C3",
+            "alpha": 0.0
+        },
+        {
+            "value": 0.0,
+            "color": "#6EA9B0",
+            "alpha": 1.0
+        },
+        {
+            "value": 0.1,
+            "color": "#83B3A9"
+        },
+        {
+            "value": 0.2,
+            "color": "#9FC29D"
+        },
+        {
+            "value": 0.3,
+            "color": "#F3F56C"
+        },
+        {
+            "value": 0.4,
+            "color": "#FCDE56"
+        },
+        {
+            "value": 0.5,
+            "color": "#FCC54C"
+        },
+        {
+            "value": 0.6,
+            "color": "#F77F2F"
+        },
+        {
+            "value": 0.7,
+            "color": "#F55F25"
+        },
+        {
+            "value": 0.8,
+            "color": "#F25622"
+        },
+        {
+            "value": 0.9,
+            "color": "#EB1E15"
+        },
+        {
+            "value": 1.0,
+            "color": "#E81515"
+        }
+    ]
+}
+
+style_nd_soil = {
+    "name": "nd_soil",
+    "title": "Normalised Difference Soil Index",
+    "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
+    "index_function": lambda data: (data["swir1"] - data["nir"]) / (data["swir1"] + data["nir"]),
+    "needed_bands": ["nir", "swir1"],
+    "color_ramp": [
+        {
+            "value": -0.1,
+            "color": "#f7fbff",
+            "alpha": 0.0
+        },
+        {
+            "value": 0.0,
+            "color": "#d8e7f5"
+        },
+        {
+            "value": 0.2,
+            "color": "#b0d2e8"
+        },
+        {
+            "value": 0.4,
+            "color": "#73b3d8"
+        },
+        {
+            "value": 0.6,
+            "color": "#3e8ec4"
+        },
+        {
+            "value": 0.8,
+            "color": "#1563aa"
+        },
+        {
+            "value": 1.0,
+            "color": "#08306b"
+        }
+    ]
+}
+
+style_nd_clay_mica = {
+    "name": "nd_clay_mica",
+    "title": "Clay and Mica Minerals",
+    "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals",
+    "index_function": lambda data: (data["swir1"] - data["swir2"]) / (data["swir1"] + data["swir2"]),
+    "needed_bands": ["swir1", "swir2"],
+    "color_ramp": [
+        {
+            "value": -0.1,
+            "color": "#ffffb2",
+            "alpha": 0.0
+        },
+        {
+            "value": 0.0,
+            "color": "#ffef97",
+            "alpha": 1.0
+        },
+        {
+            "value": 0.1,
+            "color": "#ffe07d"
+        },
+        {
+            "value": 0.2,
+            "color": "#fecc5c"
+        },
+        {
+            "value": 0.3,
+            "color": "#feb450"
+        },
+        {
+            "value": 0.4,
+            "color": "#fd8d3c"
+        },
+        {
+            "value": 0.5,
+            "color": "#f86b30"
+        },
+        {
+            "value": 0.6,
+            "color": "#f44f26"
+        },
+        {
+            "value": 0.7,
+            "color": "#f03b20"
+        },
+        {
+            "value": 0.8,
+            "color": "#de2522"
+        },
+        {
+            "value": 0.9,
+            "color": "#cc1024"
+        },
+        {
+            "value": 1.0,
+            "color": "#bd0026"
+        }
+    ]
 }
 
 style_mangrove_cover_v2 = {
@@ -1058,7 +1288,7 @@ style_wofs_confidence = {
 }
 
 style_wofs_summary_wet = {
-    "name": "wet_count",
+    "name": "annual_water_observations",
     "title": "Wet Count",
     "abstract": "WOfS annual summary showing the count of water observations",
     "index_function": {
@@ -1136,7 +1366,7 @@ style_wofs_summary_wet = {
 }
 
 style_wofs_summary_clear = {
-    "name": "clear_count",
+    "name": "annual_clear_observations",
     "title": "Clear Count",
     "abstract": "WOfS annual summary showing the count of clear observations",
     "index_function": {
@@ -1214,8 +1444,8 @@ style_wofs_summary_clear = {
     }
 }
 
-style_wofs_summary_frequency = {
-    "name": "WOfS_frequency",
+style_annual_wofs_summary_frequency = {
+    "name": "annual_WOfS_frequency",
     "title": "Water Summary",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
@@ -1293,8 +1523,79 @@ style_wofs_summary_frequency = {
     }
 }
 
-style_wofs_summary_frequency_blue = {
-    "name": "WOfS_frequency_blues_transparent",
+style_seasonal_wofs_summary_frequency = {
+    "name": "seasonal_WOfS_frequency",
+    "title": " Water Summary",
+    "abstract": "WOfS seasonal summary showing the frequency of Wetness",
+    "needed_bands": ["frequency"],
+    "color_ramp": [
+        {
+            "value": 0.0,
+            "color": "#000000",
+            "alpha": 0.0
+        },
+        {
+            "value": 0.02,
+            "color": "#000000",
+            "alpha": 0.0
+        },
+        {
+            "value": 0.05,
+            "color": "#8e0101",
+            "alpha": 0.25
+        },
+        {
+            "value": 0.1,
+            "color": "#cf2200",
+            "alpha": 0.75
+        },
+        {
+            "value": 0.2,
+            "color": "#e38400"
+        },
+        {
+            "value": 0.3,
+            "color": "#e3df00"
+        },
+        {
+            "value": 0.4,
+            "color": "#62e300"
+        },
+        {
+            "value": 0.5,
+            "color": "#00e32d"
+        },
+        {
+            "value": 0.6,
+            "color": "#00e3c8"
+        },
+        {
+            "value": 0.7,
+            "color": "#0097e3"
+        },
+        {
+            "value": 0.8,
+            "color": "#005fe3"
+        },
+        {
+            "value": 0.9,
+            "color": "#000fe3"
+        },
+        {
+            "value": 1.0,
+            "color": "#5700e3"
+        }
+    ],
+    "legend": {
+        "units": "%",
+        "radix_point": 0,
+        "scale_by": 100.0,
+        "major_ticks": 0.1
+    } 
+}
+
+style_annual_wofs_summary_frequency_blue = {
+    "name": "annual_WOfS_frequency_blues_transparent",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
@@ -1348,6 +1649,55 @@ style_wofs_summary_frequency_blue = {
         "scale_by": 100.0,
         "major_ticks": 0.1
     }
+}
+
+style_seasonal_wofs_summary_frequency_blue = {
+    "name": "seasonal_WOfS_frequency_blues_transparent",
+    "title": "Water Summary (Blue)",
+    "abstract": "WOfS seasonal summary showing the frequency of Wetness",
+    "needed_bands": ["frequency"],
+    "color_ramp": [
+        {
+            "value": 0.0,
+            "color": "#ffffff",
+            "alpha": 0.0,
+        },
+        {
+            "value": 0.001,
+            "color": "#d5fef9",
+            "alpha": 0.0,
+        },
+        {
+            "value": 0.02,
+            "color": "#d5fef9",
+        },
+        {
+            "value": 0.2,
+            "color": "#71e3ff"
+        },
+        {
+            "value": 0.4,
+            "color": "#01ccff"
+        },
+        {
+            "value": 0.6,
+            "color": "#0178ff"
+        },
+        {
+            "value": 0.8,
+            "color": "#2701ff"
+        },
+        {
+            "value": 1.0,
+            "color": "#5700e3"
+        }
+    ],
+    "legend": {
+        "units": "%",
+        "radix_point": 0,
+        "scale_by": 100.0,
+        "major_ticks": 0.1
+    }    
 }
 
 style_wofs_obs = {
@@ -4051,13 +4401,18 @@ ows_cfg = {
         "native_format": "GeoTIFF",
     }, # END OF wcs SECTION
     "layers": [
+                        {
+                    "title": "Digital Earth Australia - OGC Web Services",
+                    "abstract": "Digital Earth Australia OGC Web Services",
+                    "layers": [
         # Hierarchical list of layers.  May be a combination of unnamed/unmappable folder-layers or named mappable layers.
         {
-            "title": "Landsat Series Geomedian Surface Reflectance",
+            "title": "Surface Reflectance",
             "abstract": "",
             "layers": [
+
                 {
-                    "title": "Landsat 8 Annual Geomedian",
+                    "title": "Surface Reflectance 25m Annual Geomedian (Landsat 8)",
                     "name": "ls8_nbart_geomedian_annual",
                     "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
@@ -4090,12 +4445,12 @@ For service status information, see https://status.dea.ga.gov.au
                             style_ls_simple_rgb,
                             style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
                             style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
+                            style_sentinel_pure_nir, style_sentinel_pure_swir1, style_sentinel_pure_swir2,
                         ]
                     }
                 },
                 {
-                    "title": "Landsat 7 Annual Geomedian",
+                    "title": "Surface Reflectance 25m Annual Geomedian (Landsat 7)",
                     "name": "ls7_nbart_geomedian_annual",
                     "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
@@ -4127,13 +4482,13 @@ For service status information, see https://status.dea.ga.gov.au
                         "styles": [
                             style_ls_simple_rgb,
                             style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-                            style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
+                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
                             style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
                         ]
                     }
                 },
                 {
-                    "title": "Landsat 5 Annual Geomedian",
+                    "title": "Surface Reflectance 25m Annual Geomedian (Landsat 5)",
                     "name": "ls5_nbart_geomedian_annual",
                     "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
@@ -4165,7 +4520,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "styles": [
                             style_ls_simple_rgb,
                             style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-                            style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
+                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
                             style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
                         ]
                     }
@@ -4173,7 +4528,7 @@ For service status information, see https://status.dea.ga.gov.au
             ]
         },
         {
-            "title": "Barest Earth",
+            "title": "Landsat-8 Barest Earth",
             "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
 
@@ -4183,12 +4538,10 @@ Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Au
 
 Mosaics are available for the following years:
     Landsat 8: 2013 to 2017;
-
-For service status information, see https://status.dea.ga.gov.au
             """,
             "layers": [
                 {
-                    "title": "Landsat 8 Barest Earth",
+                    "title": "Landsat-8 Barest Earth 25m albers (Landsat-8)",
                     "name": "ls8_barest_earth_mosaic",
                     "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
@@ -4220,7 +4573,7 @@ For service status information, see https://status.dea.ga.gov.au
                             style_ls_simple_rgb,
                             style_ls_irg, style_ls_ndvi,
                             style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
+                            style_sentinel_pure_nir, style_sentinel_pure_swir1, style_sentinel_pure_swir2,
                         ]
                     }
 
@@ -4228,33 +4581,20 @@ For service status information, see https://status.dea.ga.gov.au
             ]
         },
         {
-            "title": "Barest Earth 30 Years",
+            "title": "Landsat 30+ Barest Earth",
             "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
-
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
-
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
-
-Mosaics are available for the following years:
-    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
+	An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth. Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018;
 
             """,
             "layers": [
                 {
-                    "title": "Combined Landsat Barest Earth",
+                    "title": "Landsat 30+ Barest Earth 25m albers (Combined Landsat)",
                     "name": "landsat_barest_earth",
                     "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
-
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
-
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
-
-Mosaics are available for the following years:
-    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
-
-For service status information, see https://status.dea.ga.gov.au
+	An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). 
+    The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. 
+    This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth. 
+    Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018; For service status information, see https://status.dea.ga.gov.au
                     """,
                     "product_name": "landsat_barest_earth",
                     "bands": bands_ls,
@@ -4271,10 +4611,11 @@ For service status information, see https://status.dea.ga.gov.au
                     "styling": {
                         "default_style": "simple_rgb",
                         "styles": [
-                            style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi,
+                            style_ls_simple_rgb, 
+                            style_ls_irg, style_ls_ndvi,
                             style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
+                            style_sentinel_pure_nir, style_sentinel_pure_swir1, style_sentinel_pure_swir2,
+                            style_nd_ferric_iron, style_nd_soil, style_nd_clay_mica,
                         ]
                     }
 
@@ -4286,8 +4627,8 @@ For service status information, see https://status.dea.ga.gov.au
             "abstract": "",
             "layers": [
                 {
-                    "title": "Mangrove Canopy Cover V2.0.2",
                     "name": "mangrove_cover_v2_0_2",
+                    "title": "Mangrove Canopy Cover 25m 100km tile (Mangrove Canopy Cover V2.0.2)",
                     "abstract": """
 Mangrove canopy cover version 2.0.2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 
@@ -4325,18 +4666,10 @@ For service status information, see https://status.dea.ga.gov.au
             "abstract": "WOfS",
             "layers": [
                 {
-                    "title": "WOfS Filtered Statistics",
+                    "title": "Water Observations from Space 25m Filtered Water Summary (WOfS Filtered Statistics)",
                     "name": "wofs_filtered_summary",
                     "abstract": """
-Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. 
-
-This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level.  No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
-
-The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. 
-
-For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
-
-For service status information, see https://status.dea.ga.gov.au
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level. No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_filtered_summary",
                     "bands": bands_wofs_filt_sum,
@@ -4359,7 +4692,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS Statistics - Wet Count",
+                    "title": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
                     "name": "wofs_summary_wet",
                     "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. 
@@ -4392,7 +4725,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS Statistics - Clear Count",
+                    "title": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
                     "name": "wofs_summary_clear",
                     "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. 
@@ -4425,8 +4758,8 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS Statistics - Water Summary",
-                    "name": "wofs_summary",
+                    "title": "Water Observations from Space 25m Water Summary (WOfS Statistics)	",
+                    "name": "Water Observations from Space Statistics",
                     "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary). 
 
@@ -4459,18 +4792,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS Filtered Statistics - Confidence",
+                    "title": "Water Observations from Space 25m Confidence (WOfS Filtered Statistics)",
                     "name": "wofs_filtered_summary_confidence",
                     "abstract": """
-Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low.
- 
-This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green.
-
-The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. 
-
-For more information please see: https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
-
-For service status information, see https://status.dea.ga.gov.au
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green. The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. For more information please see: https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_filtered_summary_confidence",
                     "bands": bands_wofs_filt_sum,
@@ -4492,7 +4817,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS Annual Statistics - Wet Count",
+                    "title": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
                     "name": "wofs_annual_summary_wet",
                     "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -4525,18 +4850,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS Annual Statistics - Clear Count",
+                    "title": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
                     "name": "wofs_annual_summary_clear",
                     "abstract": """
-Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
-
-This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
-
-This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/v2.1.5/Product%20Description.pdf
-
-For service status information, see https://status.dea.ga.gov.au
+Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/v2.1.5/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_annual_summary",
                     "bands": bands_wofs_sum,
@@ -4558,7 +4875,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS Annual Statistics - Water Summary",
+                    "title": "Water Observations from Space 25m Water Summary (WOfS Annual Statistics)",
                     "name": "wofs_annual_summary_statistics",
                     "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -4584,15 +4901,15 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["frequency"]
                     },
                     "styling": {
-                        "default_style": "WOfS_frequency", 
+                        "default_style": "annual_WOfS_frequency", 
                         "styles": [
-                            style_wofs_summary_frequency,
-                            style_wofs_summary_frequency_blue,
+                            style_annual_wofs_summary_frequency,
+                            style_annual_wofs_summary_frequency_blue,
                         ]
                     }
                 },
                 {
-                    "title": "WOfS April-October Statistics - Wet Count",
+                    "title": "Water Observations from Space 25m Wet Count (WOfS April - October Statistics)",
                     "name": "wofs_apr_oct_summary_wet",
                     "abstract": """
 Water Observations from Space - April to October Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -4656,17 +4973,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS April-October Statistics - Water Summary",
+                    "title": "Water Observations from Space 25m Water Summary (WOfS April - October Statistics)",
                     "name": "wofs_apr_oct_summary_statistics",
                     "abstract": """
-Water Observations from Space - April to October Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
-
-This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
-
-This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-
-For service status information, see https://status.dea.ga.gov.au
+	Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_apr_oct_summary",
                     "bands": bands_wofs_sum,
@@ -4681,15 +4991,15 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["frequency"]
                     },
                     "styling": {
-                        "default_style": "WOfS_frequency",
+                        "default_style": "seasonal_WOfS_frequency",
                         "styles": [
-                            style_wofs_summary_frequency,
-                            style_wofs_summary_frequency_blue,
+                            style_seasonal_wofs_summary_frequency,
+                            style_seasonal_wofs_summary_frequency_blue,
                         ]
                     }
                 },
                 {
-                    "title": "WOfS November-March Statistics - Wet Count",
+                    "title": "Water Observations from Space 25m Wet Count (WOfS November - March Statistics)	",
                     "name": "wofs_nov_mar_summary_wet",
                     "abstract": """
 Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -4721,7 +5031,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS November-March Statistics - Clear Count",
+                    "title": "Water Observations from Space 25m Clear Count (WOfS November - March Summary Statistics)",
                     "name": "wofs_nov_mar_summary_clear",
                     "abstract": """
 Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -4753,8 +5063,8 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "WOfS November-March Statistics - Water Summary",
-                    "name": "wofs_nov_mar_summary_statistics",
+                    "title": "Water Observations from Space 25m Wet Count (WOfS November - March Statistics)",
+                    "name": "wofs_nov_mar_summary_wet",
                     "abstract": """
 Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -4778,15 +5088,15 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["frequency"]
                     },
                     "styling": {
-                        "default_style": "WOfS_frequency",
+                        "default_style": "annual_WOfS_frequency",
                         "styles": [
-                            style_wofs_summary_frequency,
-                            style_wofs_summary_frequency_blue,
+                            style_annual_wofs_summary_frequency,
+                            style_annual_wofs_summary_frequency_blue,
                         ]
                     }
                 },
                 {
-                    "title": "WOfS Daily Observations",
+                    "title": "Water Observations from Space 25m albers (WOfS Daily Observations)",
                     "name": "wofs_albers",
                     "abstract": """
 Water Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.
@@ -5717,7 +6027,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "styles": [
                             style_ls_simple_rgb,
                             style_ls_irg, style_ls_ndvi, style_ls_ndwi,
-                            style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
+                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
                             style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
                         ]
                     }
@@ -5725,7 +6035,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 },
                 {
                     "name": "low_tide_composite",
-                    "title": "Tidal Composite - Low Tide",
+                    "title": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
                     "abstract":"""
 High Tide and Low Tide Composites 2.0.0
                
@@ -5765,9 +6075,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "simple_rgb",
                         "styles": [
-                            style_ls_simple_rgb,
+                            style_ls_simple_rgb, style_ls_mndwi,
                             style_ls_irg, style_ls_ndvi, style_ls_ndwi,
-                            style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
+                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
                             style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
                         ]
                     }
@@ -5775,7 +6085,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             ]
         },
         {
-            "title": "Intertidal Extents Model (ITEM)",
+            "title": "Intertidal Extents Model",
             "abstract": """
 The Intertidal Extents Model (ITEM) product is a national dataset of the exposed intertidal zone;
 the land between the observed highest and lowest tide. ITEM provides the extent and topography of 
@@ -5786,7 +6096,7 @@ bathymetry data, enabling a more realistic representation of the land and ocean 
 """,
             "layers": [
                 {
-                    "title": "ITEM Relative Layer",
+                    "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
                     "name": "ITEM_V2.0.0",
                     "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
@@ -7065,6 +7375,8 @@ For service status information, see https://status.dea.ga.gov.au
                         ]
                     }
                 },
+            ]
+        }
             ]
         },
     ] # End of Layers List
