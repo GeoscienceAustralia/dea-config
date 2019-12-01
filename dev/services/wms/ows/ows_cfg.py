@@ -95,7 +95,8 @@ bands_mangrove = {
 }
 
 bands_wofs_filt_sum = {
-    "confidence": []
+    "confidence": [],
+    "wofs_filtered_summary": []
 }
 
 bands_wofs_sum = {
@@ -4819,7 +4820,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "abstract": """
 Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green. The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. For more information please see: https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_filtered_summary_confidence",
+                    "product_name": "wofs_filtered_summary",
                     "bands": bands_wofs_filt_sum,
                     "resource_limits": reslim_wofs,
                     "image_processing": {
@@ -6287,6 +6288,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 1.0, 1.0 ],
                     },
@@ -6365,6 +6367,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1", "Band_2", "Band_3"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6417,6 +6420,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1", "Band_2", "Band_3"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6470,6 +6474,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6531,6 +6536,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6634,6 +6640,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6689,6 +6696,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6742,6 +6750,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6789,6 +6798,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6832,6 +6842,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6879,6 +6890,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6930,6 +6942,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -6982,6 +6995,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -7035,6 +7049,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -7092,6 +7107,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -7151,6 +7167,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -7196,6 +7213,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["Band_1"],
                         "native_resolution": [ 15.0, 15.0 ],
                     },
@@ -7248,6 +7266,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
                         "native_resolution": [ 25.0, 25.0 ],
                     },
@@ -7287,6 +7306,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
                         "native_resolution": [ 25.0, 25.0 ],
                     },
@@ -7326,6 +7346,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
                         "native_resolution": [ 25.0, 25.0 ],
                     },
@@ -7366,6 +7387,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
                     },
                     "wcs": {
+                        "native_wcs_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
                         "native_resolution": [ 25.0, 25.0 ],
                     },
