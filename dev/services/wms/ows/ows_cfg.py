@@ -35,6 +35,17 @@ reslim_aster = {
     }
 }
 
+reslim_tmad = {
+    "wms": {
+        "zoomed_out_fill_colour": [150,180,200,160],
+        "min_zoom_factor": 15.0,
+        # "max_datasets": 16, # Defaults to no dataset limit
+    },
+    "wcs": {
+        # "max_datasets": 16, # Defaults to no dataset limit
+    }    
+}
+
 reslim_wofs = reslim_mangrove
 
 reslim_wofs_obs = reslim_landsat
@@ -162,6 +173,12 @@ bands_fc = {
     "NPV": [ "non_photosynthetic_vegetation", "brown_vegetation" ],
 }
 
+bands_tmad = {
+    "sdev" : [],
+    "edev": [],
+    "bcdev": [],
+}
+
 bands_nidem = { 
     "nidem": [] 
 }
@@ -212,6 +229,31 @@ style_ls_simple_rgb = {
         "scale_range": [0.0, 3000.0]
 }
 
+style_fc_simple_rgb  = {
+        "name": "simple_rgb",
+        "title": "Simple RGB",
+        "abstract": "Simple true-colour image, using the red, green and blue bands",
+        "components": {
+            "red": {
+                "BS_PC_50": 1.0
+            },
+            "green": {
+                "PV_PC_50": 1.0
+            },
+            "blue": {
+                "NPV_PC_50": 1.0
+            }
+        },
+        "scale_range": [0.0, 100.0],
+        "pq_masks": [
+            {
+                "flags": {
+                    'sea': True,
+                },
+                "invert": True,
+            },
+        ],    
+}
 style_ls_irg = {
     "name": "infrared_green",
     "title": "False colour - Green, SWIR, NIR",
@@ -693,7 +735,7 @@ style_nd_soil = {
 style_nd_clay_mica = {
     "name": "nd_clay_mica",
     "title": "Clay and Mica Minerals",
-    "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals",
+    "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
@@ -1308,6 +1350,83 @@ style_wofs_confidence = {
     }
 }
 
+style_wofs_seasonal_wet = {
+    "name": "seasonal_water_observations",
+    "title": "Wet Count",
+    "abstract": "WOfS seasonal summary showing the count of water observations",
+    "needed_bands": ["count_wet"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "count_wet",
+        }
+    },
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#666666",
+            "alpha": 0
+        },
+        {
+            # purely for legend display
+            # we should not get fractional
+            # values in this styles
+            "value": 0.2,
+            "color": "#990000",
+            "alpha": 1
+        },
+        {
+            "value": 2,
+            "color": "#990000"
+        },
+        {
+            "value": 4,
+            "color": "#E38400"
+        },
+        {
+            "value": 6,
+            "color": "#E3DF00"
+        },
+        {
+            "value": 8,
+            "color": "#00E32D"
+        },
+        {
+            "value": 10,
+            "color": "#00E3C8"
+        },
+        {
+            "value": 12,
+            "color": "#0097E3"
+        },
+        {
+            "value": 14,
+            "color": "#005FE3"
+        },
+        {
+            "value": 16,
+            "color": "#000FE3"
+        },
+        {
+            "value": 18,
+            "color": "#000EA9"
+        },
+        {
+            "value": 20,
+            "color": "#5700E3",
+            "legend": {
+                "prefix": ">"
+            }
+        }
+    ],
+    "legend": {
+        "radix_point": 0,
+        "scale_by": 1,
+        "major_ticks": 10
+    }
+}
+
 style_wofs_summary_wet = {
     "name": "annual_water_observations",
     "title": "Wet Count",
@@ -1399,6 +1518,84 @@ style_wofs_summary_clear = {
     },
     "include_in_feature_info": False,
     "needed_bands": ["count_clear"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#FFFFFF",
+            "alpha": 0
+        },
+        {
+            # purely for legend display
+            # we should not get fractional
+            # values in this styles
+            "value": 0.2,
+            "color": "#B21800",
+            "alpha": 1
+        },
+        {
+            "value": 1,
+            "color": "#B21800"
+        },
+        {
+            "value": 4,
+            "color": "#ef8500"
+        },
+        {
+            "value": 8,
+            "color": "#ffb800"
+        },
+        {
+            "value": 10,
+            "color": "#ffd000"
+        },
+        {
+            "value": 13,
+            "color": "#fff300"
+        },
+        {
+            "value": 16,
+            "color": "#fff300"
+        },
+        {
+            "value": 20,
+            "color": "#c1ec00"
+        },
+        {
+            "value": 24,
+            "color": "#6ee100"
+        },
+        {
+            "value": 28,
+            "color": "#39a500"
+        },
+        {
+            "value": 30,
+            "color": "#026900",
+            "legend": {
+                "prefix": ">"
+            }
+        }
+    ],
+    "legend": {
+        "radix_point": 0,
+        "scale_by": 1,
+        "major_ticks": 10,
+        "axes_position": [0.05, 0.5, 0.89, 0.15]
+    }
+}
+
+style_wofs_seasonal_clear = {
+    "name": "seasonal_clear_observations",
+    "title": "Clear Count",
+    "abstract": "WOfS seasonal summary showing the count of clear observations",
+    "needed_bands": ["count_clear"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "count_clear",
+        }
+    },
     "color_ramp": [
         {
             "value": 0,
@@ -1989,7 +2186,7 @@ style_s2_pure_aerosol = {
 
 style_s2_pure_blue = {
     "name": "blue",
-    "title": "Narrow Blue - 490",
+    "title": "Blue - 490",
     "abstract": "Blue band, approximately 453nm to 511nm",
     "components": {
         "red": {
@@ -2009,7 +2206,7 @@ style_s2_pure_blue = {
 style_s2_pure_green = {
     "name": "green",
     "title": "Green - 560",
-    "abstract": "Coastal Aerosol or Narrow Blue band, approximately 534nm to 588nm",
+    "abstract": "Green band, approximately 534nm to 588nm",
     "components": {
         "red": {
             "green": 1.0
@@ -4308,6 +4505,135 @@ style_aster_quartz_idx_ramp = {
     }
 }
 
+style_tmad_sdev = {
+    "name": "log_sdev",
+    "title": "sdev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "sdev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["sdev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+            'legend': {
+                'label': 'High\ntmad'
+            }
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+            'legend': {
+                'label': 'Low\ntmad'
+            }
+        }
+    ],
+    "legend": {
+    }
+}
+
+style_tmad_edev = {
+    "name": "log_edev",
+    "title": "edev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "edev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["edev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+            'legend': {
+                'label': 'High\ntmad'
+            }
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+            'legend': {
+                'label': 'Low\ntmad'
+            }
+        }
+    ],
+    "legend": {
+    }
+}
+
+style_tmad_bcdev = {
+    "name": "log_bcdev",
+    "title": "bcdev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "bcdev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["bcdev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+            'legend': {
+                'label': 'High\ntmad'
+            }
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+            'legend': {
+                'label': 'Low\ntmad'
+            }
+        }
+    ],
+    "legend": {
+    }
+}
+
 style_fc_simple = {
     "name": "simple_fc",
     "title": "Fractional Cover",
@@ -4989,24 +5315,17 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
-                        "default_style": "annual_water_observations",
+                        "default_style": "seasonal_water_observations",
                         "styles": [
-                            style_wofs_summary_wet,
+                            style_wofs_seasonal_wet,
                         ]
                     }
                 },
                 {
-                    "title": "WOfS April-October Statistics - Clear Count",
+                    "title": "Water Observations from Space 25m Clear Count (WOfS April - October Summary Statistics)",
                     "name": "wofs_apr_oct_summary_clear",
                     "abstract": """
-Water Observations from Space - April to October Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
-
-This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
-
-This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-
-For service status information, see https://status.dea.ga.gov.au
+Water Observations from Space - April to October Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_apr_oct_summary",
                     "bands": bands_wofs_sum,
@@ -5021,9 +5340,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
-                        "default_style": "annual_clear_observations",
+                        "default_style": "seasonal_clear_observations",
                         "styles": [
-                            style_wofs_summary_clear,
+                            style_wofs_seasonal_clear,
                         ]
                     }
                 },
@@ -5079,9 +5398,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
-                        "default_style": "annual_water_observations",
+                        "default_style": "seasonal_clear_observations",
                         "styles": [
-                            style_wofs_summary_wet,
+                            style_wofs_seasonal_clear,
                         ]
                     }
                 },
@@ -5089,14 +5408,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Water Observations from Space 25m Clear Count (WOfS November - March Summary Statistics)",
                     "name": "wofs_nov_mar_summary_clear",
                     "abstract": """
-Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
-
-This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
-
-This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-
-For service status information, see https://status.dea.ga.gov.au
+	Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_nov_mar_summary",
                     "bands": bands_wofs_sum,
@@ -5111,24 +5423,17 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
-                        "default_style": "annual_clear_observations",
+                        "default_style": "seasonal_clear_observations",
                         "styles": [
-                            style_wofs_summary_clear,
+                            style_wofs_seasonal_clear,
                         ]
                     }
                 },
                 {
-                    "title": "Water Observations from Space 25m Wet Count (WOfS November - March Statistics)",
-                    "name": "wofs_nov_mar_summary_wet",
+                    "title": "Water Observations from Space 25m Water Summary (WOfS November - March Statistics)",
+                    "name": "wofs_nov_mar_summary_statistics",
                     "abstract": """
-Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
-
-This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
-The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary.
-
-This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
-
-For service status information, see https://status.dea.ga.gov.au
+Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au	
 """,
                     "product_name": "wofs_nov_mar_summary",
                     "bands": bands_wofs_sum,
@@ -5143,10 +5448,10 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["frequency"]
                     },
                     "styling": {
-                        "default_style": "annual_WOfS_frequency",
+                        "default_style": "seasonal_WOfS_frequency",
                         "styles": [
-                            style_annual_wofs_summary_frequency,
-                            style_annual_wofs_summary_frequency_blue,
+                            style_seasonal_wofs_summary_frequency,
+                            style_seasonal_wofs_summary_frequency_blue,
                         ]
                     }
                 },
@@ -5187,7 +5492,7 @@ For service status information, see https://status.dea.ga.gov.au
             ]
         },
         {
-            "title": "Sentinel-2 Near Real-Time",
+            "title": "Near Real-Time",
             "abstract": """ 
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data.
 
@@ -5199,7 +5504,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
             "layers": [
                 {
                     "name": "s2_nrt_granule_nbar_t",
-                    "title": "Sentinel 2 (A and B combined) Surface Reflectance, Near Real-Time",
+                    "title": "Near Real-Time Surface Reflectance (Sentinel 2 (A and B combined))",
                     "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
@@ -5243,8 +5548,8 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 }, 
                 {
-                    "name": "s2a_nrt_granule_nbar_t",
-                    "title": "Sentinel 2A Surface Reflectance, Near Real-Time",
+                    "name": "s2b_nrt_granule_nbar_t",
+                    "title": "Near Real-Time Surface Reflectance (Sentinel 2B)",
                     "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
@@ -5287,8 +5592,8 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 }, 
                 {
-                    "name": "s2b_nrt_granule_nbar_t",
-                    "title": "Sentinel 2B Surface Reflectance, Near Real-Time",
+                    "name": "s2a_nrt_granule_nbar_t",
+                    "title": "Near Real-Time Surface Reflectance (Sentinel 2A)",
                     "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
@@ -5332,10 +5637,8 @@ For service status information, see https://status.dea.ga.gov.au
                 }, 
                 {
                     "name": "s2_nrt_wofs",
-                    "title": "Sentinel 2 Water Observations from Space (WOfS), Near Real-Time",
-                    "abstract": """Sentinel 2 NRT Water Classifier
-
-For service status information, see https://status.dea.ga.gov.au
+                    "title": "	Near Real-Time Water Classifier (Sentinel 2 WOfS NRT)",
+                    "abstract": """	Sentinel 2 NRT Water Classifier. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "sentinel2_wofs_nrt",
                     "bands": bands_wofs_obs,
@@ -5358,20 +5661,14 @@ For service status information, see https://status.dea.ga.gov.au
             ]
         },
         {
-            "title": "Sentinel-2 Definitive",
+            "title": "Sentinel Definitive",
             "abstract": """ 
-This is a definitive archive of daily Sentinel-2 data.
-
-The Surface Reflectance product has been corrected to account for variations caused by atmospheric 
-properties, sun position and sensor view angle at time of image capture.
-
-These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
-For more information see http://pid.geoscience.gov.au/dataset/ga/129684
+	This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variationscaused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
 """,
             "layers": [
                 {
                     "name": "s2_ard_granule_nbar_t",
-                    "title": "Sentinel 2 (A and B combined) Surface Reflectance",
+                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2 (A and B combined))",
                     "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
 The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
@@ -5416,22 +5713,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 }, 
                 {
-                    "name": "s2a_ard_granule_nbar_t",
-                    "title": "Sentinel 2A Surface Reflectance",
+                    "name": "s2b_ard_granule_nbar_t",
+                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
                     "abstract": """
-This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
-The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
-
-The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
-The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
-- Influence on the remote sensing signal from nearby land and/or atmospheric effects
-- Optically shallow water
-- Cloud cover
-Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
-
-For more information see http://pid.geoscience.gov.au/dataset/ga/129684
-
-For service status information, see https://status.dea.ga.gov.au
+This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "s2a_ard_granule",
                     "bands": bands_sentinel2,
@@ -5461,22 +5746,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 }, 
                 {
-                    "name": "s2b_ard_granule_nbar_t",
-                    "title": "Sentinel 2B Surface Reflectance",
+                    "name": "s2a_ard_granule_nbar_t",
+                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
                     "abstract": """
-This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
-The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
-
-The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
-The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
-- Influence on the remote sensing signal from nearby land and/or atmospheric effects
-- Optically shallow water
-- Cloud cover
-Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
-
-For more information see http://pid.geoscience.gov.au/dataset/ga/129684
-
-For service status information, see https://status.dea.ga.gov.au
+	This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "s2b_ard_granule",
                     "bands": bands_sentinel2,
@@ -5512,7 +5785,7 @@ For service status information, see https://status.dea.ga.gov.au
             "abstract": "",
             "layers": [
                 {
-                    "title": "Multi-Scale Topographic Position",
+                    "title": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
                     "name": "multi_scale_topographic_position",
                     "abstract": """
 A Multi-scale topographic position image of Australia has been generated by combining 
@@ -5559,7 +5832,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "abstract": "",
             "layers": [
                 {
-                    "title": "Weathering Intensity",
+                    "title": "Weathering Intensity 1 degree tile (Weathering Intensity)",
                     "name": "weathering_intensity",
                     "abstract": """
     Weathering intensity or the degree of weathering is an important characteristic of the 
@@ -5770,9 +6043,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
-                        "default_style": "fc_rgb",
+                        "default_style": "simple_rbg",
                         "styles": [
-                            style_fc_rgb
+                            style_fc_simple_rgb
                         ]
                     }
                 }
@@ -5914,9 +6187,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
-                        "default_style": "fc_rgb",
+                        "default_style": "simple_rbg",
                         "styles": [
-                            style_fc_rgb,
+                            style_fc_simple_rgb
                         ]
                     }
                 },
@@ -6130,7 +6403,7 @@ bathymetry data, enabling a more realistic representation of the land and ocean 
 """,
             "layers": [
                 {
-                    "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
+                    "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
                     "name": "ITEM_V2.0.0",
                     "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
@@ -6263,54 +6536,12 @@ For service status information, see https://status.dea.ga.gov.au""",
         },
         {
             "title": "Projects",
-            "abstract": "Projects",
+            "abstract": "",
             "layers": [
                 {
-                    "title": "Waterbody Area Mapping and Monitoring",
-                    "name": "water_bodies",
-                    "abstract": "Waterbody Area Mapping and Monitoring"
-                                "For service status information, see https://status.dea.ga.gov.au",
-                    "product_name": "water_bodies",
-                    "bands": bands_wamm,
-                    "resource_limits": reslim_wamm,
-                    "image_processing": {
-                        "extent_mask_func": {
-                            "function": "datacube_ows.ogc_utils.mask_by_val",
-                            "pass_product_cfg": False,
-                            "kwargs": {
-                                "val": 8388607,
-                            }
-                        },
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "default_bands": ["dam_id"],
-                        "native_resolution": [ 25.0, 25.0 ],
-                    },
-                    "feature_info": {
-                        "include_custom": {
-                            # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
-                            "timeseries": {
-                                "function": "datacube_ows.ogc_utils.feature_info_url_template",
-                                "pass_product_cfg": False,
-                                "kwargs": {
-                                    "template": "https://data.dea.ga.gov.au/projects/WaterBodies/feature_info/{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
-                                },
-                            }
-                        },
-                    },
-                    "styling": {
-                        "default_style": "dam_id",
-                        "styles": [
-                            style_wamm_dam_id,
-                        ]
-                    }
-                },
-                {
-                    "title": "HAP",
+                    "title": "Projects munged historical airborne photography (HAP)",
                     "name": "historical_airborne_photography",
-                    "abstract": "Historical Airborne Photography Example Mosaic(s)",
+                    "abstract": "Historical Airborne Photography",
                     "product_name": "historical_airborne_photography",
                     "bands": bands_hap,
                     "resource_limits": reslim_hap,
@@ -6363,7 +6594,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
 """,
             "layers": [
                 {
-                    "title": "False Colour Mosaic",
+                    "title": "ASTER Geoscience Map of Australia (False Colour Mosaic)",
                     "name": "aster_false_colour",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6412,7 +6643,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Regolith Ratios",
+                    "title": "ASTER Geoscience Map of Australia (Regolith Ratios)",
                     "name": "aster_regolith_ratios",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6464,7 +6695,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "AlOH Group Composition",
+                    "title": "ASTER Geoscience Map of Australia (AlOH Group Composition)",
                     "name": "aster_aloh_group_composition",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6518,10 +6749,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "AlOH Group Content",
+                    "title": "ASTER Geoscience Map of Australia (AlOH Group Content)",
                     "name": "aster_aloh_group_content",
                     "abstract": """
-he National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
+The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
 
@@ -6580,8 +6811,8 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "FeOH Group Content",
-                    "name": "aster_aloh_group_content",
+                    "title": "ASTER Geoscience Map of Australia (FeOH Group Content)",
+                    "name": "aster_feoh_group_content",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
@@ -6636,7 +6867,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Ferric Oxide Composition",
+                    "title": "ASTER Geoscience Map of Australia (Ferric Oxide Composition)",
                     "name": "aster_ferric_oxide_composition",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6685,7 +6916,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Ferric Oxide Content",
+                    "title": "ASTER Geoscience Map of Australia (Ferric Oxide Content)",
                     "name": "aster_ferric_oxide_content",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6741,7 +6972,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Ferrous Iron Content in MgOH/Carbonate",
+                    "title": "ASTER Geoscience Map of Australia (Ferrous Iron Content in MgOH/Carbonate)",
                     "name": "aster_ferrous_iron_content_in_mgoh",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6795,7 +7026,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Ferrous Iron Index",
+                    "title": "ASTER Geoscience Map of Australia (Ferrous Iron Index)",
                     "name": "aster_ferrous_iron_index",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6843,7 +7074,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Green Vegetation Content",
+                    "title": "ASTER Geoscience Map of Australia (Green Vegetation Content)",
                     "name": "aster_green_vegetation",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6887,7 +7118,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Gypsum Index",
+                    "title": "ASTER Geoscience Map of Australia (Gypsum Index)",
                     "name": "aster_gypsum_index",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6935,7 +7166,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Kaolin Group Index",
+                    "title": "ASTER Geoscience Map of Australia (Kaolin Group Index)",
                     "name": "aster_kaolin_group_index",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -6987,7 +7218,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "MgOH Group Composition",
+                    "title": "ASTER Geoscience Map of Australia (MgOH Group Composition)",
                     "name": "aster_mgoh_group_composition",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -7040,7 +7271,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "MgOH Group Content",
+                    "title": "ASTER Geoscience Map of Australia (MgOH Group Content)",
                     "name": "aster_mgoh_group_content",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -7094,7 +7325,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Opaque Index",
+                    "title": "ASTER Geoscience Map of Australia (Opaque Index)",
                     "name": "aster_opaque_index",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -7152,7 +7383,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "TIR Silica Index",
+                    "title": "ASTER Geoscience Map of Australia (TIR Silica index)",
                     "name": "aster_silica_index",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -7212,7 +7443,7 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "TIR Quartz Index",
+                    "title": "ASTER Geoscience Map of Australia (TIR Quartz Index)",
                     "name": "aster_quartz_index",
                     "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
@@ -7254,6 +7485,123 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_style": "ramp",
                         "styles": [
                             style_aster_quartz_idx_ramp,
+                        ]
+                    }
+                },
+            ]
+        },
+        {
+            "title": "Surface Reflectance Triple Median Absolute Deviation",
+            "abstract": "Surface Reflectance Triple Median Absolute Deviation 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)",
+            "layers": [
+                {
+                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
+                    "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+For service status information, see https://status.dea.ga.gov.au""",
+                    # The WMS name for the layer
+                    "name": "ls8_nbart_tmad_annual",
+                    # The Datacube name for the associated data product
+                    "product_name": "ls8_nbart_tmad_annual",
+                    "bands": bands_tmad,
+                    "resource_limits": reslim_tmad,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "always_fetch_bands": [ ],
+                        "manual_merge": False,
+                    },
+                    "wcs": {
+                        "native_crs": "EPSG:3577",
+                        "default_bands": ["sdev", "edev", "bcdev"],
+                        "native_resolution": [ 25.0, 25.0 ],
+                    },
+                    "styling": {
+                        "default_style": "log_sdev",
+                        "styles": [
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                        ]
+                    }
+                },
+                {
+                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
+                    "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+For service status information, see https://status.dea.ga.gov.au""",
+                    # The WMS name for the layer
+                    "name": "ls8_nbart_tmad_annual",
+                    # The Datacube name for the associated data product
+                    "product_name": "ls8_nbart_tmad_annual",
+                    "bands": bands_tmad,
+                    "resource_limits": reslim_tmad,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "always_fetch_bands": [ ],
+                        "manual_merge": False,
+                    },
+                    "wcs": {
+                        "native_crs": "EPSG:3577",
+                        "default_bands": ["sdev", "edev", "bcdev"],
+                        "native_resolution": [ 25.0, 25.0 ],
+                    },
+                    "styling": {
+                        "default_style": "log_sdev",
+                        "styles": [
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                        ]
+                    }
+                },
+                {
+                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
+                    "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+For service status information, see https://status.dea.ga.gov.au""",
+                    # The WMS name for the layer
+                    "name": "ls5_nbart_tmad_annual",
+                    # The Datacube name for the associated data product
+                    "product_name": "ls5_nbart_tmad_annual",
+                    "bands": bands_tmad,
+                    "resource_limits": reslim_tmad,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "always_fetch_bands": [ ],
+                        "manual_merge": False,
+                    },
+                    "wcs": {
+                        "native_crs": "EPSG:3577",
+                        "default_bands": ["sdev", "edev", "bcdev"],
+                        "native_resolution": [ 25.0, 25.0 ],
+                    },
+                    "styling": {
+                        "default_style": "log_sdev",
+                        "styles": [
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
                         ]
                     }
                 },
@@ -7391,17 +7739,10 @@ For service status information, see https://status.dea.ga.gov.au
                     }
                 },
                 {
-                    "title": "Fractional Cover Combined",
+                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Combined)",
                     "name": "fc_albers_combined",
                     "abstract": """
-ractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
-
-Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
-
-This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites.
-
-For service status information, see https://status.dea.ga.gov.au
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites For service status information, see https://status.dea.ga.gov.au	
 """,
                     "multi_product": True,
                     "product_names": [ "ls5_fc_albers", "ls7_fc_albers", "ls8_fc_albers" ],
