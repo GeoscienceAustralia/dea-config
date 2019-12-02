@@ -132,8 +132,6 @@ bands_sentinel2 = {
     "nbart_nir_2":  [ "nir_2", "nbart_near_infrared_2" ],
     "nbart_swir_2": [ "swir_2", "nbart_shortwave_infrared_2" ],
     "nbart_swir_3": [ "swir_3", "nbart_shortwave_infrared_3" ],
-
-    "quality": [],
 }
 
 bands_multi_topog = {
@@ -1551,6 +1549,13 @@ style_seasonal_wofs_summary_frequency = {
     "title": " Water Summary",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "frequency",
+        }
+    },
     "color_ramp": [
         {
             "value": 0.0,
@@ -1678,6 +1683,13 @@ style_seasonal_wofs_summary_frequency_blue = {
     "name": "seasonal_WOfS_frequency_blues_transparent",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "frequency",
+        }
+    },
     "needed_bands": ["frequency"],
     "color_ramp": [
         {
@@ -2189,6 +2201,13 @@ style_wii = {
     "title": "Weathering Intensity",
     "abstract": "Weather Intensity Index (0-6)",
     "needed_bands": ["intensity"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "intensity",
+        }
+    },
     "color_ramp": [
         {
             "value": 0,
@@ -4303,11 +4322,7 @@ style_fc_simple = {
                 "sea": False
             }
         },
-    ],
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/fractional-cover/fc-percentile/annual/v2.1.0/fcp_legend.png",
-    }
+    ]
 }
 
 # Actual Configuration
@@ -5501,7 +5516,7 @@ Geomorphology 245, 51–61.
 
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "multi_scale_topographic_position",
-                    "bands": bands_weathering,
+                    "bands": bands_multi_topog,
                     "resource_limits": reslim_weathering,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -5559,7 +5574,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     distribution of weathering processes occurring within the upper regolith.
     For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "weathering_intensity",
-                    "bands": bands_multi_topog,
+                    "bands": bands_weathering,
                     "resource_limits": reslim_multi_topog,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -7381,7 +7396,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "flags": {
                         "band": "water",
-                        "dataset": "wofs_albers",
+                        "datasets": ['wofs_albers', 'wofs_albers', 'wofs_albers'],
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
