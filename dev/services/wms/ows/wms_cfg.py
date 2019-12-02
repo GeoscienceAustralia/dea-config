@@ -9869,6 +9869,89 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_gray",
             }
         ]
+    },            
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "water_bodies",
+        "title": "Water Bodies",
+        "abstract": "Waterbody Area Mapping and Monitoring",
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword for the layer
+                "label": "Waterbody Area Mapping and Monitoring",
+                "abstract": """
+The Waterbody Area Mapping and Monitoring (WAMM) service provides insights into both the location and dynamics of waterbodies across Australia. It supports decision-makers by providing insight into both the location and extent of surface water  across Australia since 1987.  It does not provide any insights into the volume or the source of water.
+WAMM derives a water classification for every available Landsat satellite image and maps the locations of water bodies across Australia, over the period 1987 - 2018. This analysis was used to identify waterbodies that are present more than 10% of the time over this same 31 year period and are larger than 3120m2 (5 Landsat pixels). This threshold was chosen to capture the locations of persistent water bodies and minimise the chances of picking up flood irrigation, flood events or saturated areas in the landscape.
+The graphs show the change in surface area for every waterbody identified using the methods outlined above. The revisit time for each Landsat satellite is 16 days, and more frequent observations occur when more than one satellite is in operation.   In this tool 100% (y-axis) refers to the maximum observed surface area in the water body between 1987 and 2018. The graphs show the percentage of the total polygon that has been classified as 'wet' for every available time step. Data is only included if at least 90% of the polygon is observed in the underlying satellite scene, removing the effects of clouds and missing data on the analysis. The analysis is currently updated on at least a  monthly basis, in the future it will be updated as new satellite images are acquired.
+The WAMM tool provides insights into the locations of water (or lack thereof) using the observed locations of water from satellite imagery to identify Australia's natural and man-made waterbodies. It supports decision makers to:
+- characterise the severity and spatial distribution of the impacts of drought 
+- identify presence/absence of water for use emergency management planning and response
+- monitor and manage wetlands
+- monitor water within water-limited environments
+- assist land managers to understand surface water availability for on farm use
+- better characterise water availability in northern Australia
+For more information on the Waterbody Area Mapping and Monitoring service, see https://www.ga.gov.au/dea/products
+For service status information, see https://status.dea.ga.gov.au
+""",
+                # Included as a keyword for the layer
+                "type": "",
+                # Included as a keyword for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "water_bodies",
+                # The Datacube name for the associated data product
+                "product_name": "water_bodies",
+                "min_zoom_factor": 0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != 8388607,
+                # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
+                "feature_info_include_custom": lambda data: {
+                    'timeseries': f"https://data.dea.ga.gov.au"
+                    f"/projects/WaterBodies/feature_info/"
+                    f"{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
+                },
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["dam_id"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": []
+                },
+                "wcs_default_bands": ["dam_id"],
+                "styles": [
+                    {
+                        "name": "dam_id",
+                        "title": "Water Body",
+                        "abstract": "",
+                        "needed_bands": ["dam_id"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#11ccff',
+                                'alpha': 1.0
+                            },
+                            {
+                                'value': 8388607,
+                                'color': '#11ccff',
+                                'alpha': 1.0
+                            },
+                        ],
+                        "legend": {
+                        }
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "dam_id",
+            }
+        ]
     },
     {
         # Name and title of the platform layer.
