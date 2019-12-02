@@ -9873,28 +9873,22 @@ For service status information, see https://status.dea.ga.gov.au""",
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
-        "name": "water_bodies",
-        "title": "Water Bodies",
-        "abstract": "Waterbody Area Mapping and Monitoring",
+        "name": "waterbody_area",
+        "title": "Waterbody Area tool",
+        "abstract": "Waterbody Area tool",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
         "products": [
             {
                 # Included as a keyword for the layer
-                "label": "Waterbody Area Mapping and Monitoring",
+                "label": "Waterbody Area tool",
                 "abstract": """
-The Waterbody Area Mapping and Monitoring (WAMM) service provides insights into both the location and dynamics of waterbodies across Australia. It supports decision-makers by providing insight into both the location and extent of surface water  across Australia since 1987.  It does not provide any insights into the volume or the source of water.
-WAMM derives a water classification for every available Landsat satellite image and maps the locations of water bodies across Australia, over the period 1987 - 2018. This analysis was used to identify waterbodies that are present more than 10% of the time over this same 31 year period and are larger than 3120m2 (5 Landsat pixels). This threshold was chosen to capture the locations of persistent water bodies and minimise the chances of picking up flood irrigation, flood events or saturated areas in the landscape.
-The graphs show the change in surface area for every waterbody identified using the methods outlined above. The revisit time for each Landsat satellite is 16 days, and more frequent observations occur when more than one satellite is in operation.   In this tool 100% (y-axis) refers to the maximum observed surface area in the water body between 1987 and 2018. The graphs show the percentage of the total polygon that has been classified as 'wet' for every available time step. Data is only included if at least 90% of the polygon is observed in the underlying satellite scene, removing the effects of clouds and missing data on the analysis. The analysis is currently updated on at least a  monthly basis, in the future it will be updated as new satellite images are acquired.
-The WAMM tool provides insights into the locations of water (or lack thereof) using the observed locations of water from satellite imagery to identify Australia's natural and man-made waterbodies. It supports decision makers to:
-- characterise the severity and spatial distribution of the impacts of drought 
-- identify presence/absence of water for use emergency management planning and response
-- monitor and manage wetlands
-- monitor water within water-limited environments
-- assist land managers to understand surface water availability for on farm use
-- better characterise water availability in northern Australia
-For more information on the Waterbody Area Mapping and Monitoring service, see https://www.ga.gov.au/dea/products
+The Waterbody Area tool uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
+The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
+The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying). 
+The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
+For more information on the Waterbody Area tool, see [hyperlink to full product page text].
 For service status information, see https://status.dea.ga.gov.au
 """,
                 # Included as a keyword for the layer
@@ -9902,7 +9896,7 @@ For service status information, see https://status.dea.ga.gov.au
                 # Included as a keyword for the layer
                 "variant": "25m",
                 # The WMS name for the layer
-                "name": "water_bodies",
+                "name": "waterbody_area",
                 # The Datacube name for the associated data product
                 "product_name": "water_bodies",
                 "min_zoom_factor": 0,
