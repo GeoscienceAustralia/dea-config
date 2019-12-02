@@ -6043,7 +6043,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
-                        "default_style": "simple_rbg",
+                        "default_style": "simple_rgb",
                         "styles": [
                             style_fc_simple_rgb
                         ]
@@ -6187,7 +6187,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "native_resolution": [ 25.0, 25.0 ],
                     },
                     "styling": {
-                        "default_style": "simple_rbg",
+                        "default_style": "simple_rgb",
                         "styles": [
                             style_fc_simple_rgb
                         ]
