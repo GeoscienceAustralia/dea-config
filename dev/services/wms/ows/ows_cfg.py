@@ -5398,9 +5398,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
-                        "default_style": "seasonal_clear_observations",
+                        "default_style": "seasonal_water_observations",
                         "styles": [
-                            style_wofs_seasonal_clear,
+                            style_wofs_seasonal_wet,
                         ]
                     }
                 },
@@ -7509,9 +7509,9 @@ median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
 For service status information, see https://status.dea.ga.gov.au""",
                     # The WMS name for the layer
-                    "name": "ls7_nbart_tmad_annual",
+                    "name": "ls8_nbart_tmad_annual",
                     # The Datacube name for the associated data product
-                    "product_name": "ls7_nbart_tmad_annual",
+                    "product_name": "ls8_nbart_tmad_annual",
                     "bands": bands_tmad,
                     "resource_limits": reslim_tmad,
                     "image_processing": {
@@ -7546,9 +7546,9 @@ median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
 For service status information, see https://status.dea.ga.gov.au""",
                     # The WMS name for the layer
-                    "name": "ls8_nbart_tmad_annual",
+                    "name": "ls7_nbart_tmad_annual",
                     # The Datacube name for the associated data product
-                    "product_name": "ls8_nbart_tmad_annual",
+                    "product_name": "ls7_nbart_tmad_annual",
                     "bands": bands_tmad,
                     "resource_limits": reslim_tmad,
                     "image_processing": {
