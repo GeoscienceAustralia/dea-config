@@ -9869,84 +9869,84 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_gray",
             }
         ]
-    },            
-    {
-        # Name and title of the platform layer.
-        # Platform layers are not mappable. The name is for internal server use only.
-        "name": "waterbody_area",
-        "title": "Digital Earth Australia Waterbodies",
-        "abstract": "Digital Earth Australia Waterbodies",
-        # Products available for this platform.
-        # For each product, the "name" is the Datacube name, and the label is used
-        # to describe the label to end-users.
-        "products": [
-            {
-                # Included as a keyword for the layer
-                "label": "Digital Earth Australia Waterbodies",
-                "abstract": """
-Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
-The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
-The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying). 
-The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
-For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
-For service status information, see https://status.dea.ga.gov.au
-""",
-                # Included as a keyword for the layer
-                "type": "",
-                # Included as a keyword for the layer
-                "variant": "25m",
-                # The WMS name for the layer
-                "name": "waterbody_area",
-                # The Datacube name for the associated data product
-                "product_name": "water_bodies",
-                "min_zoom_factor": 0,
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] != 8388607,
-                # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
-                "feature_info_include_custom": lambda data: {
-                    'timeseries': f"https://data.dea.ga.gov.au"
-                    f"/projects/WaterBodies/feature_info/"
-                    f"{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
-                },
-                "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["dam_id"],
-                "apply_solar_corrections": False,
-                "legend": {
-                    "styles": []
-                },
-                "wcs_default_bands": ["dam_id"],
-                "styles": [
-                    {
-                        "name": "dam_id",
-                        "title": "Waterbody",
-                        "abstract": "",
-                        "needed_bands": ["dam_id"],
-                        "color_ramp": [
-                            {
-                                'value': 0,
-                                'color': '#11ccff',
-                                'alpha': 1.0
-                            },
-                            {
-                                'value': 8388607,
-                                'color': '#11ccff',
-                                'alpha': 1.0
-                            },
-                        ],
-                        "legend": {
-                        }
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "dam_id",
-            }
-        ]
     },
+#     {
+#         # Name and title of the platform layer.
+#         # Platform layers are not mappable. The name is for internal server use only.
+#         "name": "waterbody_area",
+#         "title": "Digital Earth Australia Waterbodies",
+#         "abstract": "Digital Earth Australia Waterbodies",
+#         # Products available for this platform.
+#         # For each product, the "name" is the Datacube name, and the label is used
+#         # to describe the label to end-users.
+#         "products": [
+#             {
+#                 # Included as a keyword for the layer
+#                 "label": "Digital Earth Australia Waterbodies",
+#                 "abstract": """
+# Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
+# The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
+# The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying).
+# The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
+# For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
+# For service status information, see https://status.dea.ga.gov.au
+# """,
+#                 # Included as a keyword for the layer
+#                 "type": "",
+#                 # Included as a keyword for the layer
+#                 "variant": "25m",
+#                 # The WMS name for the layer
+#                 "name": "waterbody_area",
+#                 # The Datacube name for the associated data product
+#                 "product_name": "water_bodies",
+#                 "min_zoom_factor": 0,
+#                 "zoomed_out_fill_colour": [150, 180, 200, 160],
+#                 "time_zone": 9,
+#                 "extent_mask_func": lambda data, band: data[band] != 8388607,
+#                 # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
+#                 "feature_info_include_custom": lambda data: {
+#                     'timeseries': f"https://data.dea.ga.gov.au"
+#                     f"/projects/WaterBodies/feature_info/"
+#                     f"{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
+#                 },
+#                 "ignore_info_flags": [],
+#                 "data_manual_merge": False,
+#                 "always_fetch_bands": ["dam_id"],
+#                 "apply_solar_corrections": False,
+#                 "legend": {
+#                     "styles": []
+#                 },
+#                 "wcs_default_bands": ["dam_id"],
+#                 "styles": [
+#                     {
+#                         "name": "dam_id",
+#                         "title": "Waterbody",
+#                         "abstract": "",
+#                         "needed_bands": ["dam_id"],
+#                         "color_ramp": [
+#                             {
+#                                 'value': 0,
+#                                 'color': '#11ccff',
+#                                 'alpha': 1.0
+#                             },
+#                             {
+#                                 'value': 8388607,
+#                                 'color': '#11ccff',
+#                                 'alpha': 1.0
+#                             },
+#                         ],
+#                         "legend": {
+#                         }
+#                     },
+#                 ],
+#                 # Default style (if request does not specify style)
+#                 # MUST be defined in the styles list above.
+#                 # (Looks like Terria assumes this is the first style in the list, but this is
+#                 #  not required by the standard.)
+#                 "default_style": "dam_id",
+#             }
+#         ]
+#     },
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
