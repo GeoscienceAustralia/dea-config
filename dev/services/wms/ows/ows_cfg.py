@@ -7509,9 +7509,9 @@ median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
 For service status information, see https://status.dea.ga.gov.au""",
                     # The WMS name for the layer
-                    "name": "ls8_nbart_tmad_annual",
+                    "name": "ls7_nbart_tmad_annual",
                     # The Datacube name for the associated data product
-                    "product_name": "ls8_nbart_tmad_annual",
+                    "product_name": "ls7_nbart_tmad_annual",
                     "bands": bands_tmad,
                     "resource_limits": reslim_tmad,
                     "image_processing": {
@@ -7569,7 +7569,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     }
                 },
                 {
-                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
+                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 5 Annual Surface Reflectance TMAD)",
                     "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
