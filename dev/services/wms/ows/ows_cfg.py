@@ -4673,7 +4673,7 @@ style_fc_simple = {
 ows_cfg = {
     "global": {
         # Master config for all services and products.
-        "resonse_headers": {
+        "response_headers": {
             "Access-Control-Allow-Origin": "*",  # CORS header
         },
         "services": {
