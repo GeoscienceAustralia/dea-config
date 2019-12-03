@@ -9874,15 +9874,15 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "waterbody_area",
-        "title": "Waterbody Area tool",
-        "abstract": "Waterbody Area tool",
+        "title": "Digital Earth Australia Waterbodies",
+        "abstract": "Digital Earth Australia Waterbodies",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
         "products": [
             {
                 # Included as a keyword for the layer
-                "label": "Waterbody Area tool",
+                "label": "Digital Earth Australia Waterbodies",
                 "abstract": """
 The Waterbody Area tool uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
 The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
@@ -9920,7 +9920,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "styles": [
                     {
                         "name": "dam_id",
-                        "title": "Water Body",
+                        "title": "Waterbody",
                         "abstract": "",
                         "needed_bands": ["dam_id"],
                         "color_ramp": [
