@@ -4719,7 +4719,7 @@ ows_cfg = {
         # Metadata to go straight into GetCapabilities documents
         "title": "Digital Earth Australia - OGC Web Services",
         "abstract": "Digital Earth Australia OGC Web Services",
-        "info_url": "https://dea.ga.gov.au/",
+        "info_url": "dea.ga.gov.au/",
         "keywords": [
             "geomedian",
             "WOfS",
