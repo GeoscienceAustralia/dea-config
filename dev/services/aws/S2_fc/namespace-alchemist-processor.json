@@ -1,0 +1,11 @@
+# kubectl create -f namespace-alchemist-processor.json
+{
+  "kind": "Namespace",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "alchemist-processor",
+    "labels": {
+      "name": "alchemist-processor"
+    }
+  }
+}

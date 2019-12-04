@@ -1,0 +1,82 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-dev
+  namespace: alchemist-processor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-dev
+  template:
+    metadata:
+      labels:
+        app: k8s-dev
+      annotations:
+        iam.amazonaws.com/role: svc-sandbox-alchemist
+        #iam.amazonaws.com/role: dea-sandbox-wms
+    spec:
+      containers:
+      - name: k8s-dev
+        image: opendatacube/datacube-alchemist:latest
+        command:
+          - "/bin/bash"
+          - "-c"
+          - "--"
+        args: [ 'printf "\n[datacube]\ndb_database: $DB_DATABASE\ndb_hostname: $DB_HOSTNAME\ndb_port:     $DB_PORT\ndb_username: $DB_USERNAME" > /opt/datacube.conf; while true; do sleep 30; done;' ]
+        resources:
+          requests:
+            cpu: 1
+            memory: 8192Mi
+          limits:
+            memory: 8192Mi
+        tty: true
+        stdin: true
+        env:
+          - name: DATACUBE_CONFIG_PATH
+            value: /opt/datacube.conf
+          - name: SQS_QUEUE
+            value: ""
+          - name: DC_S3_INDEX_BUCKET
+            value: "dea-public-data"
+          - name: DC_S3_INDEX_PREFIX
+            value: ""
+          - name: DC_S3_INDEX_SUFFIX
+            value: ".yaml"
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: sandbox-datacube
+                key: postgres-username
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: sandbox-datacube
+                key: postgres-password
+          - name: DB_DATABASE
+            value: "sandbox"
+          - name: DB_HOSTNAME
+            value: "database.local"
+          - name: DB_PORT
+            value: "5432"
+          - name: PGPASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: sandbox-datacube
+                key: postgres-password
+          - name: AWS_ACCESS_KEY_ID
+            valueFrom:
+              secretKeyRef:
+                name: svc-sandbox-alchemist
+                key: AWS_ACCESS_KEY_ID
+          - name: AWS_SECRET_ACCESS_KEY
+            valueFrom:
+              secretKeyRef:
+                name: svc-sandbox-alchemist
+                key: AWS_SECRET_ACCESS_KEY
+          - name: AWS_DEFAULT_REGION
+            valueFrom:
+              secretKeyRef:
+                name: svc-sandbox-alchemist
+                key: AWS_DEFAULT_REGION
