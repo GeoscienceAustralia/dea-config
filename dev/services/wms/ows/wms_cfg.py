@@ -9869,7 +9869,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "simple_gray",
             }
         ]
-    },            
+    },
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
@@ -9886,7 +9886,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "abstract": """
 Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
 The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
-The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying). 
+The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying).
 The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
 For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
 For service status information, see https://status.dea.ga.gov.au
