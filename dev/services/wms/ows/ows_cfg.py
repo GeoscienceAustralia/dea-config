@@ -5818,6 +5818,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "native_resolution": [ 90.0, 90.0 ],
                         "default_bands": [ "regional", "intermediate", "local" ]
                     },
+                    "legend": {
+                        "url": "https://data.dea.ga.gov.au/multi-scale-topographic-position/mstp_legend.png",
+                    },
                     "styling": {
                         "default_style": "mstp_rgb",
                         "styles": [
@@ -6517,7 +6520,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_item_conf,
                     "resource_limits": reslim_item,
                     "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
