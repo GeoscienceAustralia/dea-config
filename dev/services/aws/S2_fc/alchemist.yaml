@@ -33,7 +33,15 @@ spec:
             memory: 8192Mi
         tty: true
         stdin: true
-        env:
+        env:	
+          - name: ALCHEMIST_ADDTOQUEUE_MESSAGE_QUEUE
+            value: "alchemist-standard"
+          - name: ALCHEMIST_ADDTOQUEUE_ENVIRONMENT
+            value: "datacube"
+          - name: ALCHEMIST_ADDTOQUEUE_LIMIT
+            value: "2"
+          - name: ALCHEMIST_ADDTOQUEUE_CONFIG_FILE
+            value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_S2A.yaml"
           - name: DATACUBE_CONFIG_PATH
             value: /opt/datacube.conf
           - name: SQS_QUEUE
