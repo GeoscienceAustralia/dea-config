@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: x-fc-add-to-alchemist
+  name: fc-add-to-alchemist
   namespace: alchemist-processor
   labels:
     app: alchemist-add-processor
@@ -9,7 +9,7 @@ metadata:
     iam.amazonaws.com/role: svc-sandbox-alchemist
 spec:
   containers:
-  - name:  x-fc-add-to-alchemist
+  - name:  fc-add-to-alchemist
     image: opendatacube/datacube-alchemist:latest
     #args: ["/usr/bin/env", "sleep", "600"]
     args: [ "datacube-alchemist", "addtoqueue"]
