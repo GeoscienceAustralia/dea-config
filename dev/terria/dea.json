@@ -919,37 +919,6 @@
                ]
             },
             {
-               "name": "Digital Earth Australia Waterbodies",
-               "type": "group",
-               "preserveOrder": true,
-               "items": [
-                  {
-                     "name": "Digital Earth Australia Waterbodies",
-                     "type": "wms",
-                     "layers": "waterbody_area",
-                     "url": "https://ows.dev.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "water_bodies",
-                     "ignoreUnknownTileErrors": true,
-                     "opacity": 0.6,
-                     "featureInfoTemplate": {
-                        "formats": {
-                           "lat": {
-                              "maximumFractionDigits": 5
-                           },
-                           "lon": {
-                              "maximumFractionDigits": 5
-                           }
-                        },
-                        "template": "<div style='width:600px'><h3>Waterbody Identifier: {{bands.dam_id}}<br /> Percentage of total surface area observed as wet</h3><br/><chart id='{{bands.dam_id}}' title='Waterbody {{bands.dam_id}}' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
-                        "partials": {
-                             "disclaimer": "<p>This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. For more detailed information see [hyperlink to product page]."
-                        }
-                     }
-                  }
-               ]
-            },
-            {
                "name": "Historical Airborne Photography PoC",
                "type": "group",
                "preserveOrder": true,
