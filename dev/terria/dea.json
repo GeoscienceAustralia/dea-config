@@ -943,7 +943,7 @@
                         },
                         "template": "<div style='width:600px'><h3>Waterbody Identifier: {{bands.dam_id}}<br /> Percentage of total surface area observed as wet</h3><br/><chart id='{{bands.dam_id}}' title='Waterbody {{bands.dam_id}}' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
                         "partials": {
-                             "disclaimer": "<p>This graph shows the change in surface area for a selected waterbody through time. The observations are made by satellites every 16 days unless obscured by cloud.  In this graph 100% refers to the maximum observed surface area of the waterbody between 1987 and 2018. It does not provide any direct information about the volume or source of water, nor the legality of water capture. For more detailed information see [hyperlink to product page]."
+                             "disclaimer": "<p>This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. For more detailed information see [hyperlink to product page]."
                         }
                      }
                   }
