@@ -9,7 +9,7 @@ metadata:
     iam.amazonaws.com/role: svc-sandbox-alchemist
 spec:
   containers:
-  - name:  fc-add-to-alchemist
+  - name:  alchemist-processor-container
     image: opendatacube/datacube-alchemist:latest
     #args: ["/usr/bin/env", "sleep", "600"]
     args: [ "datacube-alchemist", "addtoqueue"]
