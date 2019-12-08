@@ -6,7 +6,7 @@ metadata:
   labels:
     app: alchemist-pull-job
 spec:
-  parallelism: 9
+  parallelism: 10
   template:
     metadata:
       annotations:
@@ -15,15 +15,15 @@ spec:
       labels:
         app: alchemist-pull-job
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: nodetype
-                    operator: In
-                    values:
-                      - spot
+#      affinity:
+ #       nodeAffinity:
+  #        requiredDuringSchedulingIgnoredDuringExecution:
+   #         nodeSelectorTerms:
+    #          - matchExpressions:
+     #             - key: nodetype
+      #              operator: In
+       #             values:
+        #              - spot
       restartPolicy: OnFailure
       containers:
       - name: alchemist-processor-container
