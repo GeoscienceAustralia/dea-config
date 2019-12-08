@@ -1,0 +1,82 @@
+apiVersion: batch/v1
+kind: Deployment
+metadata:
+  name: alchemist-pull-dep
+  namespace: alchemist-processor
+  labels:
+    app: alchemist-pull-job
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: alchemist-pull-dep
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: svc-sandbox-alchemist
+        #iam.amazonaws.com/role: deafrica-eks-c2-indexing
+      labels:
+        app: alchemist-pull-dep
+    spec:
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+#      affinity:
+#        nodeAffinity:
+#          requiredDuringSchedulingIgnoredDuringExecution:
+#            nodeSelectorTerms:
+#              - matchExpressions:
+#                  - key: nodetype
+#                    operator: In
+#                    values:
+#                      - spot
+      containers:
+      - name: alchemist-processor-container
+        image: opendatacube/datacube-alchemist
+        #command: ["/bin/sh", "-ec", "docker-entrypoint.sh && while :; do echo '.'; sleep 5 ; done"]
+        command: [ "datacube-alchemist", "processqueue" ]
+        resources:
+          requests:
+            cpu: 2.0
+            memory: 8192Mi
+          limits:
+            cpu: 3
+            memory: 8192Mi
+        tty: true
+        stdin: true
+        env:
+        - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
+          value: "alchemist-standard"
+        - name: AWS_DEFAULT_REGION
+          valueFrom:
+            secretKeyRef:
+              name: svc-sandbox-alchemist
+              key: AWS_DEFAULT_REGION
+        - name: DATACUBE_CONFIG_PATH
+          value: "/opt/custom-config.conf"
+        - name: DB_DATABASE
+          value: "sandbox"
+        - name: DB_HOSTNAME
+          value: "database.local"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: sandbox-datacube
+              key: postgres-username
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: sandbox-datacube
+              key: postgres-password
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: svc-sandbox-alchemist
+              key: AWS_ACCESS_KEY_ID
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: svc-sandbox-alchemist
+              key: AWS_SECRET_ACCESS_KEY
+      
