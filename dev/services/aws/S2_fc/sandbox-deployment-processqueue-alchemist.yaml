@@ -28,7 +28,7 @@ spec:
 #                  - key: nodetype
 #                    operator: In
 #                    values:
-#                      - spot
+#                      - ondemand
       containers:
       - name: alchemist-processor-container
         image: opendatacube/datacube-alchemist
