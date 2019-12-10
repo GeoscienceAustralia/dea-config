@@ -6,7 +6,7 @@ metadata:
   labels:
     app: alchemist-pull-job
 spec:
-  replicas: 10
+  replicas: 11
   selector:
     matchLabels:
       app: alchemist-pull-dep
@@ -20,15 +20,15 @@ spec:
     spec:
       nodeSelector:
         beta.kubernetes.io/os: linux
-#      affinity:
-#        nodeAffinity:
-#          requiredDuringSchedulingIgnoredDuringExecution:
-#            nodeSelectorTerms:
-#              - matchExpressions:
-#                  - key: nodetype
-#                    operator: In
-#                    values:
-#                      - ondemand
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: nodetype
+                    operator: In
+                    values:
+                      - spot
       containers:
       - name: alchemist-processor-container
         image: opendatacube/datacube-alchemist
