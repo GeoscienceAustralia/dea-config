@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fc-alchemist-processqueue-alextest
+  namespace: alchemist-processor
+  labels:
+    app: fc-alchemist-processqueue-alextest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fc-alchemist-processqueue-alextest
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: svc-sandbox-alchemist
+      labels:
+        app: fc-alchemist-processqueue-alextest
+    spec:
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: nodetype
+                    operator: In
+                    values:
+                      - spot
+      containers:
+      - name: alchemist-processor-container
+        image: opendatacube/datacube-alchemist
+        command: [ "datacube-alchemist", "processqueue" ]
+        resources:
+          requests:
+            cpu: 2.0
+            memory: 2048Mi
+          limits:
+            cpu: 3.0
+            memory: 4096Mi
+        tty: true
+        stdin: true
+        env:
+        - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
+          value: "alex-alchemist-alive"
+        - name: AWS_DEFAULT_REGION
+          value: ap-southeast-2
+        - name: DATACUBE_CONFIG_PATH
+          value: "/opt/custom-config.conf"
+        - name: DB_DATABASE
+          value: "sandbox"
+        - name: DB_HOSTNAME
+          value: "database.local"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: sandbox-datacube
+              key: postgres-username
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: sandbox-datacube
+              key: postgres-password
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: svc-sandbox-alchemist
+              key: AWS_ACCESS_KEY_ID
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: svc-sandbox-alchemist
+              key: AWS_SECRET_ACCESS_KEY

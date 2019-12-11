@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fc-addqueue-alextest
+  namespace: alchemist-processor
+  labels:
+    app: fc-addqueue-alextest
+  annotations:
+    iam.amazonaws.com/role: svc-sandbox-alchemist
+spec:
+  containers:
+  - name:  alchemist-addqueue-alextest
+    image: opendatacube/datacube-alchemist:latest
+    args:
+      - datacube-alchemist
+      - addtoqueue
+      - 'lon in range(152,153)'
+      - 'lat in range(-28,-27)'
+      - 'time in [2018-01-01,2018-01-31]'
+    resources:
+      requests:
+        cpu: 1
+        memory: 512Mi
+      limits:
+        memory: 1024Mi
+    tty: true
+    stdin: true
+    env:
+    - name: AWS_DEFAULT_REGION
+      valueFrom:
+        secretKeyRef:
+          name: svc-sandbox-alchemist
+          key: AWS_DEFAULT_REGION
+    - name: ALCHEMIST_ADDTOQUEUE_MESSAGE_QUEUE
+      value: "alex-alchemist-alive"
+    - name: ALCHEMIST_ADDTOQUEUE_ENVIRONMENT
+      value: "datacube"
+    - name: ALCHEMIST_ADDTOQUEUE_LIMIT
+      value: "200"
+    - name: ALCHEMIST_ADDTOQUEUE_CONFIG_FILE
+      value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_alex.yaml"
+    - name: DB_USERNAME
+      valueFrom:
+        secretKeyRef:
+          name: sandbox-datacube
+          key: postgres-username
+    - name: DB_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: sandbox-datacube
+          key: postgres-password
+    - name: DATACUBE_CONFIG_PATH
+      value: "/opt/custom-config.conf"
+    - name: DB_DATABASE
+      value: "sandbox"
+    - name: DB_HOSTNAME
+      value: "database.local"
+    - name: DB_PORT
+      value: "5432"
+    - name: AWS_ACCESS_KEY_ID
+      valueFrom:
+        secretKeyRef:
+          name: svc-sandbox-alchemist
+          key: AWS_ACCESS_KEY_ID
+    - name: AWS_SECRET_ACCESS_KEY
+      valueFrom:
+        secretKeyRef:
+          name: svc-sandbox-alchemist
+          key: AWS_SECRET_ACCESS_KEY
+    - name: LOG_LEVEL
+      value: "INFO"
+  nodeSelector:
+    beta.kubernetes.io/os: linux
+  restartPolicy: Never
