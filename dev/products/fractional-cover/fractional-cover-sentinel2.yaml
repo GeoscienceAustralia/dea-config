@@ -1,0 +1,35 @@
+name: ga_s2_fc
+
+description: Sentinel 2 Fractional Cover in original UTM projections.
+metadata_type: eo3
+
+metadata:
+  platform:
+    code: SENTINEL_2
+  format:
+    name: GeoTIFF
+  instrument:
+    name: MSI
+  product_type: fractional_cover
+
+measurements:
+    - name: bs
+      units: "percent"
+      dtype: uint8
+      nodata: 255
+      aliases: ["bare"]
+    - name: pv
+      units: "percent"
+      dtype: uint8
+      nodata: 255
+      aliases: ["green_veg"]
+    - name: npv
+      units: "percent"
+      dtype: uint8
+      nodata: 255
+      aliases: ["dead_veg"]
+    - name: ue
+      units: "1"
+      dtype: uint8
+      nodata: 255
+      aliases: ["err"]
