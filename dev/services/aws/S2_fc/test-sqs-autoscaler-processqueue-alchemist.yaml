@@ -80,7 +80,7 @@ spec:
                       - ondemand
       containers:
         - name: alchemist-processor-container
-          image: opendatacube/datacube-alchemist:unstable-1.0.1
+          image: opendatacube/datacube-alchemist:unstable-1.0.2
           command: [ "datacube-alchemist", "processqueue" ]
           resources:
             requests:
@@ -105,9 +105,15 @@ spec:
             - name: DB_PORT
               value: "5432"
             - name: DB_USERNAME
-              value: "sandbox"
+              valueFrom:
+                secretKeyRef:
+                  name: sandbox-datacube
+                  key: postgres-username
             - name: DB_PASSWORD
-              value: "TRW9Sut3ILLIhzn6"
+              valueFrom:
+                secretKeyRef:
+                  name: sandbox-datacube
+                  key: postgres-password
 
 ---
 # Autoscale alchemist based on sqs queue
