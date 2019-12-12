@@ -1,112 +1,26 @@
+#---
+## Namespace holds all the resources
+#apiVersion: v1
+#kind: Namespace
+#metadata:
+#  name: alchemist-processor-with-serviceaccount
+#
 ---
-# Alchemist deployment
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: xd4-alchemist-pull-dep
-  namespace: alchemist-processor
-  labels:
-    app: xd4-alchemist-pull-dep
-spec:
-#  replicas: 1
-  selector:
-    matchLabels:
-      app: xd4-alchemist-pull-dep
-  template:
-    metadata:
-      annotations:
-        iam.amazonaws.com/role: deafrica-ec2-s3_access
-        #iam.amazonaws.com/role: deafrica-eks-c2-indexing
-      labels:
-        app: xd4-alchemist-pull-dep
-    spec:
-      nodeSelector:
-        beta.kubernetes.io/os: linux
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: nodetype
-                    operator: In
-                    values:
-                      - spot
-      containers:
-        - name: alchemist-processor-container
-          image: opendatacube/datacube-alchemist
-          command: [ "datacube-alchemist", "processqueue" ]
-          resources:
-            requests:
-              cpu: 2.0
-              memory: 8192Mi
-            limits:
-              cpu: 3
-              memory: 8192Mi
-          tty: true
-          stdin: true
-          env:
-            - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
-              value: "alchemist-standard-auto"
-              #value: "fc-alchemist"
-            - name: AWS_DEFAULT_REGION
-              valueFrom:
-                secretKeyRef:
-                  name: svc-sandbox-alchemist
-                  key: AWS_DEFAULT_REGION
-            - name: DATACUBE_CONFIG_PATH
-              value: "/opt/custom-config.conf"
-            - name: DB_DATABASE
-              value: "sandbox"
-            - name: DB_HOSTNAME
-              value: "database.local"
-            - name: DB_PORT
-              value: "5432"
-            - name: DB_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: sandbox-datacube
-                  key: postgres-username
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: sandbox-datacube
-                  key: postgres-password
-            - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  name: svc-sandbox-alchemist
-                  key: AWS_ACCESS_KEY_ID
-            - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: svc-sandbox-alchemist
-                  key: AWS_SECRET_ACCESS_KEY
----
-# Service account for autoscaler
+# Service account
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: sqs-scaler
-  namespace: alchemist-processor
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: sqs-scaler
-  namespace: alchemist-processor
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: sqs-scaler
-subjects:
-  - kind: ServiceAccount
-    name: sqs-scaler
+  name: alchemist-processor-sa
+  namespace: alchemist-processor-with-serviceaccount
+  annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::060378307146:role/dea-sandbox-nikita-test
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: sqs-scaler
-  namespace: alchemist-processor
+  name: alchemist-processor-deployment-role
+  namespace: alchemist-processor-with-serviceaccount
 rules:
   - apiGroups:
       - extensions
@@ -119,28 +33,117 @@ rules:
       - list
       - watch
       - patch
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: alchemist-processor-deployment-rolebinding
+  namespace: alchemist-processor-with-serviceaccount
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: alchemist-processor-deployment-role
+subjects:
+  - kind: ServiceAccount
+    name: alchemist-processor-sa
+
+---
+# Alchemist deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xd4-alchemist-pull-dep
+  namespace: alchemist-processor-with-serviceaccount
+  labels:
+    app: xd4-alchemist-pull-dep
+spec:
+  selector:
+    matchLabels:
+      app: xd4-alchemist-pull-dep
+  template:
+    metadata:
+      labels:
+        app: xd4-alchemist-pull-dep
+    spec:
+      serviceAccountName: alchemist-processor-sa
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: nodetype
+                    operator: In
+                    values:
+                      - ondemand
+      containers:
+        - name: alchemist-processor-container
+          image: opendatacube/datacube-alchemist:unstable-1.0.1
+          command: [ "datacube-alchemist", "processqueue" ]
+          resources:
+            requests:
+              cpu: 2
+              memory: 8192Mi
+            limits:
+              cpu: 3
+              memory: 8192Mi
+          tty: true
+          stdin: true
+          env:
+            - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
+              value: "alchemist-standard-test"
+            - name: AWS_DEFAULT_REGION
+              value: "ap-southeast-2"
+            - name: DATACUBE_CONFIG_PATH
+              value: "/opt/custom-config.conf"
+            - name: DB_DATABASE
+              value: "sandbox"
+            - name: DB_HOSTNAME
+              value: "database.local"
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_USERNAME
+              value: "sandbox"
+            - name: DB_PASSWORD
+              value: "TRW9Sut3ILLIhzn6"
+
 ---
 # Autoscale alchemist based on sqs queue
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xd4-alchemist-sqs-autoscaler
-  namespace: alchemist-processor
+  name: sqs-autoscaler
+  namespace: alchemist-processor-with-serviceaccount
 spec:
   selector:
     matchLabels:
-      app: xd4-alchemist-sqs-autoscaler
+      app: sqs-autoscaler
   revisionHistoryLimit: 1
   replicas: 1
   template:
     metadata:
       labels:
-        app: xd4-alchemist-sqs-autoscaler
+        app: sqs-autoscaler
     spec:
-      serviceAccountName: sqs-scaler
+      serviceAccountName: alchemist-processor-sa
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: nodetype
+                    operator: In
+                    values:
+                      - spot
       containers:
         - name: k8s-sqs-autoscaler
-          image: opendatacube/k8s-sqs-autoscaler:1.0.2
+          image: opendatacube/k8s-sqs-autoscaler:1.0.5
+#          command: [ "/bin/bash", "-c", "--" ]
+#          args: [ "while true; do sleep 30; done;" ]
           command:
             - ./k8s-sqs-autoscaler
             - --sqs-queue-name=$(SQS_QUEUE_NAME)  # required
@@ -148,9 +151,9 @@ spec:
             - --kubernetes-namespace=$(K8S_NAMESPACE) # required
             - --aws-region=$(AWS_DEFAULT_REGION)  #required
             - --poll-period=1 # poll every second
-            - --scale-up-messages=20 # should match max pods
-            - --scale-down-messages=20 # should match max pods
-            - --max-pods=20 # optional
+            - --scale-up-messages=5 # should match max pods
+            - --scale-down-messages=5 # should match max pods
+            - --max-pods=5 # optional
             - --min-pods=0  # optional
             - --scale-down-cool-down=10 # optional
             - --scale-up-cool-down=10 # optional
@@ -164,23 +167,9 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
             - name: SQS_QUEUE_NAME
-              value: alchemist-standard-auto
+              value: alchemist-standard-test
             - name: AWS_DEFAULT_REGION
-                valueFrom:
-                  secretKeyRef:
-                    name: svc-sandbox-alchemist
-                    key: AWS_DEFAULT_REGION
-              value: us-west-2
-            - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  name: aws-service-process-data
-                  key: aws-data-access-key
-            - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: aws-service-process-data
-                  key: aws-process-data-secret-key
+              value: ap-southeast-2
           resources:
             requests:
               memory: "64Mi"
