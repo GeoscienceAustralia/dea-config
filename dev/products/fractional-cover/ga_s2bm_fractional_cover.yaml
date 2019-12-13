@@ -4,8 +4,8 @@ metadata_type: eo3
 
 metadata:
   product:
-      name: ga_s2bm_fractional_cover
-      href: https://collections.dea.ga.gov.au/product/ga_s2bm_fractional_cover
+      name: ga_s2bm_fractional_cover_2
+      href: https://collections.dea.ga.gov.au/product/ga_s2bm_fractional_cover_2
 
 measurements:
     - name: bs

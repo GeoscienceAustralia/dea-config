@@ -14,6 +14,9 @@ logging.getLogger('urllib3').setLevel(logging.CRITICAL)
 QUEUE = os.environ.get('QUEUE', 'alex-alchemist-alive')
 DLQUEUE = os.environ.get('DLQUEUE', 'alex-alchemist-dead')
 
+# QUEUE = os.environ.get('QUEUE', 'belle-test')
+# DLQUEUE = os.environ.get('DLQUEUE', 'belle-test-dead')
+
 # Set up some AWS stuff
 s3 = boto3.client('s3')
 s3r = boto3.resource('s3')
