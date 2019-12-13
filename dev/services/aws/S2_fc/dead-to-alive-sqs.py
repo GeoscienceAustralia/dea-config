@@ -3,7 +3,6 @@
 import os
 import boto3
 import logging
-import time
 
 # Set us up some logging
 logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
@@ -41,7 +40,7 @@ def dead2living():
     queue.send_message(MessageBody=message.body, MessageAttributes=messatts)
     logging.info("Message is {}.".format(message.body))
     message.delete()
-    time.sleep(.300)
+    # time.sleep(.300)
     logging.info("Pushed a message to the living...")
 
 
