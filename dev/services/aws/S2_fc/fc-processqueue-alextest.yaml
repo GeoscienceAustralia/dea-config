@@ -6,7 +6,7 @@ metadata:
   labels:
     app: fc-alchemist-processqueue-alextest
 spec:
-  replicas: 1
+  replicas: 100
   selector:
     matchLabels:
       app: fc-alchemist-processqueue-alextest
@@ -34,16 +34,18 @@ spec:
         command: [ "datacube-alchemist", "processqueue" ]
         resources:
           requests:
-            cpu: 2.0
+            cpu: 1.5
             memory: 2048Mi
           limits:
-            cpu: 3.0
+            cpu: 2.0
             memory: 4096Mi
         tty: true
         stdin: true
         env:
         - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
           value: "alex-alchemist-alive"
+        - name: ALCHEMIST_PROCESSQUEUE_SQS_TIMEOUT
+          value: "900"
         - name: AWS_DEFAULT_REGION
           value: ap-southeast-2
         - name: DATACUBE_CONFIG_PATH

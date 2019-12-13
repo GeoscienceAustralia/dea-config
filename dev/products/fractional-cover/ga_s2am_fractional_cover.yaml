@@ -1,16 +1,11 @@
-name: ga_s2_fc
-
+name: ga_s2am_fractional_cover
 description: Sentinel 2 Fractional Cover in original UTM projections.
 metadata_type: eo3
 
 metadata:
-  platform:
-    code: SENTINEL_2
-  format:
-    name: GeoTIFF
-  instrument:
-    name: MSI
-  product_type: fractional_cover
+  product:
+      name: ga_s2am_fractional_cover
+      href: https://collections.dea.ga.gov.au/product/ga_s2am_fractional_cover
 
 measurements:
     - name: bs
