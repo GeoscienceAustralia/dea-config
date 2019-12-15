@@ -8,7 +8,6 @@ import logging
 logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
 logging.getLogger('boto3').setLevel(logging.CRITICAL)
 logging.getLogger('botocore').setLevel(logging.CRITICAL)
-logging.getLogger('s3transfer').setLevel(logging.CRITICAL)
 logging.getLogger('urllib3').setLevel(logging.CRITICAL)
 
 QUEUE = os.environ.get('QUEUE', 'alex-alchemist-alive')
@@ -18,8 +17,7 @@ DLQUEUE = os.environ.get('DLQUEUE', 'alex-alchemist-dead')
 # DLQUEUE = os.environ.get('DLQUEUE', 'belle-test-dead')
 
 # Set up some AWS stuff
-s3 = boto3.client('s3')
-s3r = boto3.resource('s3')
+# pylint: disable=E1101
 sqs = boto3.resource('sqs', region_name='ap-southeast-2')
 queue = sqs.get_queue_by_name(QueueName=QUEUE)
 dlqueue = sqs.get_queue_by_name(QueueName=DLQUEUE)
@@ -43,7 +41,6 @@ def dead2living():
     queue.send_message(MessageBody=message.body, MessageAttributes=messatts)
     logging.info("Message is {}.".format(message.body))
     message.delete()
-    # time.sleep(.300)
     logging.info("Pushed a message to the living...")
 
 
