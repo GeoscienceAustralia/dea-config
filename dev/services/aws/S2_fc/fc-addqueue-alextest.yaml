@@ -14,16 +14,15 @@ spec:
     args:
       - datacube-alchemist
       - addtoqueue
-      # Tas: -43.939628, 144.009612  -39.635606, 148.662796
-      - 'lon in range(144,149)'
-      - 'lat in range(-44,-39.5)'
-      - 'time in [2019-01-01,2019-01-31]'
+      # - 'lon in range(144,149)'
+      # - 'lat in range(-44,-39.5)'
+      # - 'time in [2019-01-01,2019-01-31]'
     resources:
       requests:
         cpu: 1
         memory: 512Mi
       limits:
-        memory: 1024Mi
+        memory: 4048Mi
     tty: true
     stdin: true
     env:
@@ -38,11 +37,11 @@ spec:
       value: "datacube"
     - name: ALCHEMIST_ADDTOQUEUE_LIMIT
     # Here's the LIMIT! 
-      value: "200"
+      value: "200000"
     - name: ALCHEMIST_ADDTOQUEUE_CONFIG_FILE
     # Need to add both A and B
-      value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_alex.yaml"
-      # value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2b_alex.yaml"
+      # value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_alex.yaml"
+      value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2b_alex.yaml"
     - name: DB_USERNAME
       valueFrom:
         secretKeyRef:

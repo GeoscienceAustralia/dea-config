@@ -6,7 +6,7 @@ metadata:
   labels:
     app: fc-alchemist-processqueue-alextest
 spec:
-  replicas: 200
+  replicas: 10
   selector:
     matchLabels:
       app: fc-alchemist-processqueue-alextest

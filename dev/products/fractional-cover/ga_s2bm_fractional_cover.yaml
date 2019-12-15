@@ -1,5 +1,5 @@
 name: ga_s2bm_fractional_cover_2
-description: Sentinel 2 Fractional Cover in original UTM projections.
+description: Sentinel-2B Fractional Cover in original UTM projections.
 metadata_type: eo3
 
 metadata:
