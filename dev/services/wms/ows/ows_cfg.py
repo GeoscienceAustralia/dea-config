@@ -219,6 +219,13 @@ bands_aster_single_band = {
     "Band_1": [],
 }
 
+insar_ew_bands = {
+    "ew": ["displacement", ]
+}
+insar_ud_bands = {
+    "ud": ["displacement", ]
+}
+
 # Reusable Chunks 3. Styles
 
 style_ls_simple_rgb = {
@@ -4681,6 +4688,50 @@ style_fc_simple = {
     ]
 }
 
+style_insar_velocity = {
+    "name": "insar_velocity",
+    "title": "InSAR Displacement Velocity",
+    "abstract": "Average InSAR Displacment velocity in mm/year",
+    "needed_bands": ["velocity"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "velocity",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [-35.0, 35.0],
+    "mpl_ramp": "RdBu_r",
+    "legend": {
+        "units": "mm/year",
+    }
+}
+
+style_insar_displacement = {
+    "name": "insar_displacement",
+    "title": "InSAR Cumulative Displacement",
+    "abstract": "Cumulative InSAR Displacment mm",
+    "needed_bands": ["displacement"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "displacement",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [-110.0, 110.0],
+    "mpl_ramp": "RdBu_r",
+    "legend": {
+        "units": "mm",
+    }
+}
+
 # Actual Configuration
 
 ows_cfg = {
@@ -7823,6 +7874,60 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                         ]
                     }
                 },
+            ]
+        },
+        {
+            "title": "New South Wales InSAR",
+            "abstract": "InSAR Derived Displacement and Velocity over a test area in NSW",
+            "keywords": [
+                "alos-palsar",
+                "radarsat-2",
+                "sentinel-1",
+                "envisat",
+                "insar"
+            ],
+            "attribution": {
+                "title": "Digital Earth Australia",
+                "url": "http://www.ga.gov.au/dea",
+                "logo": {
+                    "width": 370,
+                    "height": 73,
+                    "url": "https://www.ga.gov.au/__data/assets/image/0011/61589/GA-DEA-Logo-Inline-370x73.png",
+                    "format": "image/png",
+                }
+            },
+            "layers": [
+                {
+                    "title": "ALOS-PALSAR Displacement up-down",
+                    "abstract": "InSAR Derived Displacement over NSW in vertical axis",
+                    "name": "alos_displacement_ud",
+                    "product_name": "camden_insar_alos_displacement",
+                    "bands": insar_ud_bands,
+                    "resource_limits": reslim_nidem,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_displacement",
+                        "styles": [style_insar_displacement]
+                    }
+                },
+                {
+                    "title": "ALOS-PALSAR Displacement east-west",
+                    "abstract": "InSAR Derived Displacement over NSW in lateral axis",
+                    "name": "alos_displacement_ew",
+                    "product_name": "camden_insar_alos_displacement",
+
+                    "bands": insar_ew_bands,
+                    "resource_limits": reslim_nidem,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_displacement",
+                        "styles": [style_insar_displacement]
+                    }
+                }
             ]
         }
             ]
