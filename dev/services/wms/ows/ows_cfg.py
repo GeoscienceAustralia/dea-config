@@ -46,6 +46,16 @@ reslim_tmad = {
     }    
 }
 
+reslim_waterbody = {
+    "wms": {
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
+        "min_zoom_factor": 0,
+    },
+    "wcs": {
+    }
+
+}
+
 reslim_wofs = reslim_mangrove
 
 reslim_wofs_obs = reslim_landsat
@@ -3223,7 +3233,7 @@ style_item_confidence = {
 
 style_wamm_dam_id = {
     "name": "dam_id",
-    "title": "Water Body",
+    "title": "WaterBody",
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -6565,6 +6575,41 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "default_style": "simple_gray",
                         "styles": [
                             style_hap_simple_gray,
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Digital Earth Australia Waterbodies",
+            "abstract": """Digital Earth Australia Waterbodies""",
+            "layers": [
+                {
+                    "title": "Digital Earth Australia Waterbodies",
+                    "name": "historical_airborne_photography",
+                    "abstract": """Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
+The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
+The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying).
+The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
+For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
+For service status information, see https://status.dea.ga.gov.au""",
+                    "product_name": "waterbody_area",
+                    "bands": dam_id,
+                    "resource_limits": reslim_waterbody,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "always_fetch_bands": ["dam_id"],
+                        "manual_merge": False,
+                    },
+                    "wcs": {
+                        "native_crs": "EPSG:3577",
+                        "default_bands": ["Band_1"],
+                        "native_resolution": [ 1.0, 1.0 ],
+                    },
+                    "styling": {
+                        "default_style": "dam_id",
+                        "styles": [
+                            style_wamm_dam_id,
                         ]
                     }
                 }
