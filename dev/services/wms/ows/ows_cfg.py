@@ -3240,7 +3240,7 @@ style_item_confidence = {
 
 style_wamm_dam_id = {
     "name": "dam_id",
-    "title": "WaterBody",
+    "title": "waterbody",
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -6636,25 +6636,39 @@ For service status information, see https://status.dea.ga.gov.au""",
             "abstract": """Digital Earth Australia Waterbodies""",
             "layers": [
                 {
-                    "title": "Digital Earth Australia Waterbodies",
-                    "name": "historical_airborne_photography",
+                    "title": "Digital Earth Australia Waterbodies 25m (Digital Earth Australia Waterbodies)",
+                    "name": "waterbody_area",
                     "abstract": """Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
 The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
 The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying).
 The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
 For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "waterbody_area",
-                    "bands": dam_id,
+                    "product_name": "water_bodies",
+                    "bands": bands_wamm,
                     "resource_limits": reslim_waterbody,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": ["dam_id"],
                         "manual_merge": False,
+                        "kwargs": {
+                             "val": 8388607
+                        }
+                    },
+                    "feature_info": {
+                        "include_custom": {
+                            "timeseries": {
+                                "function" : "datacube_ows.ogc_utils.feature_info_url_template",
+                                "pass_product_cfg": False,
+                                "kwargs" : {
+                                    "template": "https://data.dea.ga.gov.au/projects/WaterBodies/feature_info/{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
+                                }
+                            }
+                        }
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
+                        "default_bands": ["dam_id"],
                         "native_resolution": [ 1.0, 1.0 ],
                     },
                     "styling": {
