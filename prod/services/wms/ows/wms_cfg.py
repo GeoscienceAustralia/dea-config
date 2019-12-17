@@ -136,7 +136,7 @@ layer_cfg = [
         # to describe the label to end-users.
         "products": [
             {
-            # Included as a keyword  for the layer
+                # Included as a keyword  for the layer
                 "label": "Landsat 8",
                 # Included as a keyword  for the layer
                 "type": "Annual Geomedian",
@@ -194,8 +194,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styles": ["ndvi", "ndwi", "mndwi"]
                 },
                 "wcs_default_bands": ["red", "green", "blue"],
-                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
-                # If None or not specified, the product has no sub-layers.
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should
+                # return a (small) integer if None or not specified, the product has no sub-layers.
                 # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
                 # A prefix used to describe the sub-layer in the GetCapabilities response.
                 # E.g. sub-layer 109 will be described as "Landsat Path 109"
@@ -8274,7 +8274,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "confidence_layer",
-            }
+            },
         ]
     },
     {

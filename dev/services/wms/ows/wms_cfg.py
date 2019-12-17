@@ -1254,7 +1254,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat8_barest_earth",
-        "title": "Barest Earth",
+        "title": "Landsat-8 Barest Earth",
         "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
 
@@ -1274,9 +1274,9 @@ Mosaics are available for the following years:
         "products": [
             {
                 # Included as a keyword for the layer
-                "label": "Landsat 8",
+                "label": "Landsat-8",
                 # Included as a keyword for the layer
-                "type": "Barest Earth",
+                "type": "albers",
                 # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
@@ -1545,16 +1545,14 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
         "name": "landsat_barest_earth",
-        "title": "Barest Earth 30 Years",
+        "title": "Landsat 30+ Barest Earth",
         "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
+An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth.
 
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
-
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications.
 
 Mosaics are available for the following years:
-    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
+    Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018;
     """,
         # Link removed until eCat record is "published_external", not "published_internal"
         # For more information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/122573
@@ -1571,14 +1569,13 @@ Mosaics are available for the following years:
                 # Included as a keyword for the layer
                 "variant": "25m",
                 "abstract": """
-A `weighted geometric median` approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-5 TM / Landsat-7 ETM+ / Landsat-8 OLI observations from 1980 to 2018 to generate a six-band Landsat Barest Earth pixel composite mosaic over the Australian continent.
 
-The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth.
 
-Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Australian Continent at its Barest, submitted.
+Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications.
 
 Mosaics are available for the following years:
-    Landsat 5 / Landsat 7 / Landsat 8 - 1980 to 2018;
+    Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018;
 
 For service status information, see https://status.dea.ga.gov.au""",
                 # Link removed until eCat record is "published_external", not "published_internal"
@@ -1612,7 +1609,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # to GetLegendGraphic
                 "legend": {
                     # "url": ""
-                    "styles": ["ndvi"]
+                    "styles": ["ndvi", "nd_ferric_iron", "nd_soil", "nd_clay_mica"]
                 },
                 "wcs_default_bands": ["red", "green", "blue"],
                 #
@@ -1821,6 +1818,162 @@ For service status information, see https://status.dea.ga.gov.au""",
                             }
                         },
                         "scale_range": [0.0, 3000.0]
+                    },
+                    {
+                        "name": "nd_ferric_iron",
+                        "title": "Ferric Iron ",
+                        "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
+                        "index_function": lambda data: (data["red"] - data["blue"]) / (data["red"] + data["blue"]),
+                        "needed_bands": ["blue", "red"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#3B97C3",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#6EA9B0",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#83B3A9"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#9FC29D"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#F3F56C"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#FCDE56"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#FCC54C"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#F77F2F"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#F55F25"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#F25622"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#EB1E15"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#E81515"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "nd_soil",
+                        "title": "Normalised Difference Soil Index ",
+                        "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
+                        "index_function": lambda data: (data["swir1"] - data["nir"]) / (data["swir1"] + data["nir"]),
+                        "needed_bands": ["nir", "swir1"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#f7fbff",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#d8e7f5"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#b0d2e8"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#73b3d8"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#3e8ec4"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#1563aa"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#08306b"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "nd_clay_mica",
+                        "title": "Clay and Mica Minerals ",
+                        "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals)",
+                        "index_function": lambda data: (data["swir1"] - data["swir2"]) / (data["swir1"] + data["swir2"]),
+                        "needed_bands": ["swir1", "swir2"],
+                        "color_ramp": [
+                            {
+                                "value": -0.1,
+                                "color": "#ffffb2",
+                                "alpha": 0.0
+                            },
+                            {
+                                "value": 0.0,
+                                "color": "#ffef97",
+                                "alpha": 1.0
+                            },
+                            {
+                                "value": 0.1,
+                                "color": "#ffe07d"
+                            },
+                            {
+                                "value": 0.2,
+                                "color": "#fecc5c"
+                            },
+                            {
+                                "value": 0.3,
+                                "color": "#feb450"
+                            },
+                            {
+                                "value": 0.4,
+                                "color": "#fd8d3c"
+                            },
+                            {
+                                "value": 0.5,
+                                "color": "#f86b30"
+                            },
+                            {
+                                "value": 0.6,
+                                "color": "#f44f26"
+                            },
+                            {
+                                "value": 0.7,
+                                "color": "#f03b20"
+                            },
+                            {
+                                "value": 0.8,
+                                "color": "#de2522"
+                            },
+                            {
+                                "value": 0.9,
+                                "color": "#cc1024"
+                            },
+                            {
+                                "value": 1.0,
+                                "color": "#bd0026"
+                            }
+                        ]
                     }
                 ],
                 # Default style (if request does not specify style)
@@ -9621,72 +9774,13 @@ For service status information, see https://status.dea.ga.gov.au""",
     {
         # Name and title of the platform layer.
         # Platform layers are not mappable. The name is for internal server use only.
-        "name": "water_bodies",
+        "name": "projects",
         "title": "Projects",
         "abstract": "Projects",
         # Products available for this platform.
         # For each product, the "name" is the Datacube name, and the label is used
         # to describe the label to end-users.
         "products": [
-            {
-                # Included as a keyword for the layer
-                "label": "Waterbody Area Mapping and Monitoring",
-                "abstract": "Waterbody Area Mapping and Monitoring"
-                            "For service status information, see https://status.dea.ga.gov.au",
-                # Included as a keyword for the layer
-                "type": "",
-                # Included as a keyword for the layer
-                "variant": "25m",
-                # The WMS name for the layer
-                "name": "water_bodies",
-                # The Datacube name for the associated data product
-                "product_name": "water_bodies",
-                "min_zoom_factor": 15.0,
-                "zoomed_out_fill_colour": [150, 180, 200, 160],
-                "time_zone": 9,
-                "extent_mask_func": lambda data, band: data[band] != 8388607,
-                # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
-                "feature_info_include_custom": lambda data: {
-                    'timeseries': f"https://data.dea.ga.gov.au"
-                    f"/projects/WaterBodies/feature_info/"
-                    f"{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
-                },
-                "ignore_info_flags": [],
-                "data_manual_merge": False,
-                "always_fetch_bands": ["dam_id"],
-                "apply_solar_corrections": False,
-                "legend": {
-                    "styles": []
-                },
-                "wcs_default_bands": ["dam_id"],
-                "styles": [
-                    {
-                        "name": "dam_id",
-                        "title": "Water Body",
-                        "abstract": "",
-                        "needed_bands": ["dam_id"],
-                        "color_ramp": [
-                            {
-                                'value': 0,
-                                'color': '#11ccff',
-                                'alpha': 1.0
-                            },
-                            {
-                                'value': 8388607,
-                                'color': '#11ccff',
-                                'alpha': 1.0
-                            },
-                        ],
-                        "legend": {
-                        }
-                    },
-                ],
-                # Default style (if request does not specify style)
-                # MUST be defined in the styles list above.
-                # (Looks like Terria assumes this is the first style in the list, but this is
-                #  not required by the standard.)
-                "default_style": "dam_id",
-            },
             {
                 # Included as a keyword for the layer
                 "label": "HAP",
@@ -9773,6 +9867,83 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # (Looks like Terria assumes this is the first style in the list, but this is
                 #  not required by the standard.)
                 "default_style": "simple_gray",
+            }
+        ]
+    },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "waterbody_area",
+        "title": "Digital Earth Australia Waterbodies",
+        "abstract": "Digital Earth Australia Waterbodies",
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword for the layer
+                "label": "Digital Earth Australia Waterbodies",
+                "abstract": """
+Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
+The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
+The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying).
+The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
+For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
+For service status information, see https://status.dea.ga.gov.au
+""",
+                # Included as a keyword for the layer
+                "type": "",
+                # Included as a keyword for the layer
+                "variant": "25m",
+                # The WMS name for the layer
+                "name": "waterbody_area",
+                # The Datacube name for the associated data product
+                "product_name": "water_bodies",
+                "min_zoom_factor": 0,
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                "time_zone": 9,
+                "extent_mask_func": lambda data, band: data[band] != 8388607,
+                # include links to csv, {dam_id: 2611} becomes ".../0026/002611.csv"
+                "feature_info_include_custom": lambda data: {
+                    'timeseries': f"https://data.dea.ga.gov.au"
+                    f"/projects/WaterBodies/feature_info/"
+                    f"{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
+                },
+                "ignore_info_flags": [],
+                "data_manual_merge": False,
+                "always_fetch_bands": ["dam_id"],
+                "apply_solar_corrections": False,
+                "legend": {
+                    "styles": []
+                },
+                "wcs_default_bands": ["dam_id"],
+                "styles": [
+                    {
+                        "name": "dam_id",
+                        "title": "Waterbody",
+                        "abstract": "",
+                        "needed_bands": ["dam_id"],
+                        "color_ramp": [
+                            {
+                                'value': 0,
+                                'color': '#11ccff',
+                                'alpha': 1.0
+                            },
+                            {
+                                'value': 8388607,
+                                'color': '#11ccff',
+                                'alpha': 1.0
+                            },
+                        ],
+                        "legend": {
+                        }
+                    },
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "dam_id",
             }
         ]
     },
@@ -12443,6 +12614,592 @@ For service status information, see https://status.dea.ga.gov.au """,
                 "default_style": "ramp",
             },  # ASTER TIR Quartz Index
         ],
+    },
+    {
+        # Name and title of the platform layer.
+        # Platform layers are not mappable. The name is for internal server use only.
+        "name": "TMAD_AU_NBART",
+        "title": "Surface Reflectance Triple Median Absolute Deviation",
+        "abstract": "Surface Reflectance Triple Median Absolute Deviation 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)",
+
+        # Products available for this platform.
+        # For each product, the "name" is the Datacube name, and the label is used
+        # to describe the label to end-users.
+        "products": [
+            {
+                # Included as a keyword for the layer
+                "label": "Landsat 8 Annual Surface Reflectance TMAD",
+                # Included as a keyword for the layer
+                "type": "",
+                # Included as a keyword for the layer
+                "variant": "",
+                "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+
+For service status information, see https://status.dea.ga.gov.au""",
+                # The WMS name for the layer
+                "name": "ls8_nbart_tmad_annual",
+                # The Datacube name for the associated data product
+                "product_name": "ls8_nbart_tmad_annual",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["log_sdev", "log_edev", "log_bcdev"]
+                },
+                "wcs_default_bands": ["sdev", "edev", "bcdev"],
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "log_sdev",
+                        "title": "sdev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["sdev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    },
+                    {
+                        "name": "log_edev",
+                        "title": "edev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["edev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    },
+                    {
+                        "name": "log_bcdev",
+                        "title": "bcdev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["bcdev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "log_sdev",
+            },
+            {
+                # Included as a keyword for the layer
+                "label": "Landsat 7 Annual Surface Reflectance TMAD",
+                # Included as a keyword for the layer
+                "type": "",
+                # Included as a keyword for the layer
+                "variant": "",
+                "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+
+For service status information, see https://status.dea.ga.gov.au""",
+                # The WMS name for the layer
+                "name": "ls7_nbart_tmad_annual",
+                # The Datacube name for the associated data product
+                "product_name": "ls7_nbart_tmad_annual",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["log_sdev", "log_edev", "log_bcdev"]
+                },
+                "wcs_default_bands": ["sdev", "edev", "bcdev"],
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "log_sdev",
+                        "title": "sdev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["sdev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    },
+                    {
+                        "name": "log_edev",
+                        "title": "edev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["edev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    },
+                    {
+                        "name": "log_bcdev",
+                        "title": "bcdev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["bcdev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "log_sdev",
+            },
+            {
+                # Included as a keyword for the layer
+                "label": "Landsat 5 Annual Surface Reflectance TMAD",
+                # Included as a keyword for the layer
+                "type": "",
+                # Included as a keyword for the layer
+                "variant": "",
+                "abstract": """
+The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+median of that data.
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+
+For service status information, see https://status.dea.ga.gov.au""",
+                # The WMS name for the layer
+                "name": "ls5_nbart_tmad_annual",
+                # The Datacube name for the associated data product
+                "product_name": "ls5_nbart_tmad_annual",
+                # The Datacube name for the associated pixel-quality product (optional)
+                # The name of the associated Datacube pixel-quality product
+                # "pq_dataset": "ls8_level1_usgs",
+                # The name of the measurement band for the pixel-quality product
+                # (Only required if pq_dataset is set)
+                # "pq_manual_data_merge": True,
+                # "data_manual_merge": True,
+                # "pq_band": "quality",
+                # "always_fetch_bands": [ "quality" ],
+                # Min zoom factor - sets the zoom level where the cutover from indicative polygons
+                # to actual imagery occurs.
+                "min_zoom_factor": 15.0,
+                # The fill-colour of the indicative polygons when zoomed out.
+                # Triplets (rgb) or quadruplets (rgba) of integers 0-255.
+                "zoomed_out_fill_colour": [150, 180, 200, 160],
+                # Time Zone.  In hours added to UTC (maybe negative)
+                # Used for rounding off scene times to a date.
+                # 9 is good value for imagery of Australia.
+                "time_zone": 9,
+                # Extent mask function
+                # Determines what portions of dataset is potentially meaningful data.
+                "extent_mask_func": lambda data, band: (data[band] != data[band].attrs['nodata']),
+                # Flags listed here are ignored in GetFeatureInfo requests.
+                # (defaults to empty list)
+                "ignore_info_flags": [],
+                "data_manual_merge": True,
+                "always_fetch_bands": [],
+                "apply_solar_corrections": False,
+                # Define layer wide legend graphic if no style is passed
+                # to GetLegendGraphic
+                "legend": {
+                    # "url": ""
+                    "styles": ["log_sdev", "log_edev", "log_bcdev"]
+                },
+                "wcs_default_bands": ["sdev", "edev", "bcdev"],
+                # A function that extracts the "sub-product" id (e.g. path number) from a dataset. Function should return a (small) integer
+                # If None or not specified, the product has no sub-layers.
+                # "sub_product_extractor": lambda ds: int(s3_path_pattern.search(ds.uris[0]).group("path")),
+                # A prefix used to describe the sub-layer in the GetCapabilities response.
+                # E.g. sub-layer 109 will be described as "Landsat Path 109"
+                # "sub_product_label": "Landsat Path",
+
+                # Bands to include in time-dimension "pixel drill".
+                # Don't activate in production unless you really know what you're doing.
+                # "band_drill": ["nir", "red", "green", "blue"],
+
+                # Styles.
+                #
+                # See band_mapper.py
+                #
+                # The various available spectral bands, and ways to combine them
+                # into a single rgb image.
+                # The examples here are ad hoc
+                #
+                "styles": [
+                    # Examples of styles which are linear combinations of the available spectral bands.
+                    #
+                    {
+                        "name": "log_sdev",
+                        "title": "sdev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["sdev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["sdev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    },
+                    {
+                        "name": "log_edev",
+                        "title": "edev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["edev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["edev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    },
+                    {
+                        "name": "log_bcdev",
+                        "title": "bcdev",
+                        "abstract": "",
+                        "index_function": lambda data: (-100.0 * ((data["bcdev"] ** (1 / 1000.0)) - 1)),
+                        "needed_bands": ["bcdev"],
+                        "color_ramp": [
+                            {
+                                'value': 0.0,
+                                'color': '#ffffff',
+                                'alpha': 0
+                            },
+                            {
+                                'value': 0.1,
+                                'color': '#A02406',
+                                'legend': {
+                                    'label': 'High\ntmad'
+                                }
+                            },
+                            {
+                                'value': 0.5,
+                                'color': '#FCF24B'
+                            },
+                            {
+                                'value': 0.9,
+                                'color': '#0CCD1D',
+                                'legend': {
+                                    'label': 'Low\ntmad'
+                                }
+                            }
+                        ],
+                        "legend": {
+                        }
+                    }
+                ],
+                # Default style (if request does not specify style)
+                # MUST be defined in the styles list above.
+                # (Looks like Terria assumes this is the first style in the list, but this is
+                #  not required by the standard.)
+                "default_style": "log_sdev",
+            }
+        ]
     },
     {
         "name": "Fractional Cover",

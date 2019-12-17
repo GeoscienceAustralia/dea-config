@@ -109,8 +109,8 @@ layer_cfg = [
                     "image is the statistical median of all observations for that pixel from a calendar year. "
                     "Annual mosaics are available for the following years: "
                     "Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011; "
-                    "Landsat 7: 2000 to 2017; "
-                    "Landsat 8: 2013 to 2017; "
+                    "Landsat 7: 2000 to 2018; "
+                    "Landsat 8: 2013 to 2018; "
                     "For more information, see http://pid.geoscience.gov.au/dataset/ga/120374",
 
         # Products available for this platform.
