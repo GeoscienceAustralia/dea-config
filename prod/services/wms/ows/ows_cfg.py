@@ -6601,36 +6601,36 @@ For service status information, see https://status.dea.ga.gov.au""",
                 },
             ]
         },
-        {
-            "title": "Projects",
-            "abstract": "",
-            "layers": [
-                {
-                    "title": "Projects munged historical airborne photography (HAP)",
-                    "name": "historical_airborne_photography",
-                    "abstract": "Historical Airborne Photography",
-                    "product_name": "historical_airborne_photography",
-                    "bands": bands_hap,
-                    "resource_limits": reslim_hap,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 1.0, 1.0 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_gray",
-                        "styles": [
-                            style_hap_simple_gray,
-                        ]
-                    }
-                }
-            ]
-        },
+#         {
+#             "title": "Projects",
+#             "abstract": "",
+#             "layers": [
+#                 {
+#                     "title": "Projects munged historical airborne photography (HAP)",
+#                     "name": "historical_airborne_photography",
+#                     "abstract": "Historical Airborne Photography",
+#                     "product_name": "historical_airborne_photography",
+#                     "bands": bands_hap,
+#                     "resource_limits": reslim_hap,
+#                     "image_processing": {
+#                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+#                         "always_fetch_bands": [ ],
+#                         "manual_merge": False,
+#                     },
+#                     "wcs": {
+#                         "native_crs": "EPSG:3577",
+#                         "default_bands": ["Band_1"],
+#                         "native_resolution": [ 1.0, 1.0 ],
+#                     },
+#                     "styling": {
+#                         "default_style": "simple_gray",
+#                         "styles": [
+#                             style_hap_simple_gray,
+#                         ]
+#                     }
+#                 }
+#             ]
+#         },
 #         {
 #             "title": "Digital Earth Australia Waterbodies",
 #             "abstract": """Digital Earth Australia Waterbodies""",
@@ -7684,43 +7684,43 @@ For service status information, see https://status.dea.ga.gov.au""",
                         ]
                     }
                 },
-                {
-                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 5 Annual Surface Reflectance TMAD)",
-                    "abstract": """
-The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
-time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
-multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
-to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
-default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
-series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
-product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
-terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
-median of that data.
-For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
-For service status information, see https://status.dea.ga.gov.au""",
-                    # The WMS name for the layer
-                    "name": "ls5_nbart_tmad_annual",
-                    # The Datacube name for the associated data product
-                    "product_name": "ls5_nbart_tmad_annual",
-                    "bands": bands_tmad,
-                    "resource_limits": reslim_tmad,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["sdev", "edev", "bcdev"],
-                        "native_resolution": [ 25.0, 25.0 ],
-                    },
-                    "styling": {
-                        "default_style": "log_sdev",
-                        "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
-                        ]
-                    }
-                },
+#                 {
+#                     "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 5 Annual Surface Reflectance TMAD)",
+#                     "abstract": """
+# The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
+# time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
+# multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
+# to the time series.  The TMAD is calculated over annual time periods on Earth observations from a single sensor by
+# default (such as the annual time series of Landsat 8 observations); however, it is applicable to multi-sensor time
+# series of any length that computing resources can support. For the purposes of the default Digital Earth Australia
+# product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 and Landsat 8) from
+# terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
+# median of that data.
+# For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+# For service status information, see https://status.dea.ga.gov.au""",
+#                     # The WMS name for the layer
+#                     "name": "ls5_nbart_tmad_annual",
+#                     # The Datacube name for the associated data product
+#                     "product_name": "ls5_nbart_tmad_annual",
+#                     "bands": bands_tmad,
+#                     "resource_limits": reslim_tmad,
+#                     "image_processing": {
+#                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+#                         "always_fetch_bands": [ ],
+#                         "manual_merge": False,
+#                     },
+#                     "wcs": {
+#                         "native_crs": "EPSG:3577",
+#                         "default_bands": ["sdev", "edev", "bcdev"],
+#                         "native_resolution": [ 25.0, 25.0 ],
+#                     },
+#                     "styling": {
+#                         "default_style": "log_sdev",
+#                         "styles": [
+#                             style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+#                         ]
+#                     }
+#                 },
             ]
         },
         {
