@@ -1,6 +1,7 @@
 {
    "corsDomains": [
       "dea.ga.gov.au",
+      "hotspots.dea.ga.gov.au",
       "gsky-dev.nci.org.au",
       "gsky-test.nci.org.au",
       "gsky.nci.org.au",
