@@ -78,6 +78,8 @@ reslim_wamm = reslim_mangrove
 
 reslim_ls_fc = reslim_aster
 
+reslim_insar = reslim_nidem
+
 reslim_hap = {
     "wms": {
         "zoomed_out_fill_colour": [150,180,200,160],
@@ -219,11 +221,21 @@ bands_aster_single_band = {
     "Band_1": [],
 }
 
+# InSAR Displacements / Velocity
 insar_ew_bands = {
-    "ew": ["displacement", ]
+    "ew": ["displacement", "velocity"]
 }
+
 insar_ud_bands = {
-    "ud": ["displacement", ]
+    "ud": ["displacement", "velocity"]
+}
+
+insar_ew_stddev_bands = {
+    "ewstd": ["disp_std", "vel_std"]
+}
+
+insar_ud_stddev_bands = {
+    "upstd": ["disp_std", "vel_std"]
 }
 
 # Reusable Chunks 3. Styles
@@ -4688,6 +4700,17 @@ style_fc_simple = {
     ]
 }
 
+###############################################################################################
+# Styling Summary of InSAR:
+# Velocities in mm/yr (for all satellites): -30 (blue) … 0 (white) … + 30 (red)
+# Standard deviation of velocities in mm/yr (for Envisat and Radarsat-2): 0 (white) … +6 (red) 
+# Standard deviation of velocities in mm/yr (for ALOS): 0 (white) … +24 (red)
+# Displacements in mm (for all satellites): -100 (blue) … 0 (white) … + 100 (red)
+# Standard deviation of displacements in mm (for Envisat and Radarsat-2): 0 (white) … +20 (red)
+# Standard deviation of displacements in mm (for ALOS): 0 (white) … +80 (red)
+###############################################################################################
+
+
 style_insar_velocity = {
     "name": "insar_velocity",
     "title": "InSAR Displacement Velocity",
@@ -4703,10 +4726,14 @@ style_insar_velocity = {
     # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
     # Defaults to true for style types with an index function.
     "include_in_feature_info": False,
-    "range": [-35.0, 35.0],
+    "range": [-30.0, 30.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
         "units": "mm/year",
+        "radix_point": 0,
+        "scale_by": 1.0,
+        "major_ticks": 5,
+        "offset": 0.0
     }
 }
 
@@ -4725,10 +4752,66 @@ style_insar_displacement = {
     # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
     # Defaults to true for style types with an index function.
     "include_in_feature_info": False,
-    "range": [-110.0, 110.0],
+    "range": [-100.0, 100.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
         "units": "mm",
+        "radix_point": 0,
+        "scale_by": 1.0,
+        "major_ticks": 10,
+        "offset": 0.0
+    }
+}
+
+style_insar_stddev_l = {
+    "name": "insar_stddev_l",
+    "title": "InSAR Cumulative Displacement Std-dev",
+    "abstract": "Standard Deviation in mm",
+    "needed_bands": ["disp_std"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "disp_std",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [0.0, 80.0],
+    "mpl_ramp": "Reds",
+    "legend": {
+        "units": "mm",
+        "radix_point": 0,
+        "scale_by": 1.0,
+        "major_ticks": 5,
+        "offset": 0.0
+    }
+}
+
+style_insar_stddev_lv = {
+    "name": "insar_stddev_lv",
+    "title": "InSAR Velocity Std-dev",
+    "abstract": "Standard Deviation in mm",
+    "needed_bands": ["vel_std"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "vel_std",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [0.0, 24.0],
+    "mpl_ramp": "Reds",
+    "legend": {
+        "units": "mm/year",
+        "radix_point": 0,
+        "scale_by": 1.0,
+        "major_ticks": 2,
+        "offset": 0.0
     }
 }
 
@@ -7890,9 +7973,19 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                 },
             ]
         },
-        {
-            "title": "New South Wales InSAR",
-            "abstract": "InSAR Derived Displacement and Velocity over a test area in NSW",
+         {
+            # NOTE: This layer is a folder - it is NOT "named layer" that can be selected in GetMap requests
+            # Every layer must have a human-readable title
+            "title": "CEMP InSAR",
+            # Top level layers must have a human-readable abstract. The abstract is optional for child-layers - defaulting
+            # to that of the parent layer.
+            "abstract": "InSAR Derived Displacement and Velocity",
+            # NOTE: Folder-layers do not have a layer "name".
+
+            # Keywords are optional, but can be added at any folder level and are cumulative.
+            # A layer combines its own keywords, the keywords of it's parent (and grandparent, etc) layers,
+            # and any keywords defined in the global section above.
+            #
             "keywords": [
                 "alos-palsar",
                 "radarsat-2",
@@ -7900,24 +7993,39 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                 "envisat",
                 "insar"
             ],
+            # Attribution.  This entire section is optional.  If provided, it overrides any
+            #               attribution defined in the wms section above or any higher layers, and
+            #               applies to this layer and all child layers under this layer unless itself
+            #               overridden.
             "attribution": {
+                # Attribution must contain at least one of ("title", "url" and "logo")
+                # A human readable title for the attribution - e.g. the name of the attributed organisation
                 "title": "Digital Earth Australia",
+                # The associated - e.g. URL for the attributed organisation
                 "url": "http://www.ga.gov.au/dea",
+                # Logo image - e.g. for the attributed organisation
                 "logo": {
+                    # Image width in pixels (optional)
                     "width": 370,
+                    # Image height in pixels (optional)
                     "height": 73,
+                    # URL for the logo image. (required if logo specified)
                     "url": "https://www.ga.gov.au/__data/assets/image/0011/61589/GA-DEA-Logo-Inline-370x73.png",
+                    # Image MIME type for the logo - should match type referenced in the logo url (required if logo specified.)
                     "format": "image/png",
                 }
             },
+            # Folder-type layers include a list of sub-layers
             "layers": [
                 {
-                    "title": "ALOS-PALSAR Displacement up-down",
-                    "abstract": "InSAR Derived Displacement over NSW in vertical axis",
+                    "title": "ALOS Displacement up-down",
+                    "abstract": "InSAR Derived Displacement in vertical axis",
                     "name": "alos_displacement_ud",
-                    "product_name": "camden_insar_alos_displacement",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_displacement",
+
                     "bands": insar_ud_bands,
-                    "resource_limits": reslim_nidem,
+                    "resource_limits": reslim_insar,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                     },
@@ -7927,21 +8035,124 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     }
                 },
                 {
-                    "title": "ALOS-PALSAR Displacement east-west",
-                    "abstract": "InSAR Derived Displacement over NSW in lateral axis",
+                    "title": "ALOS Displacement east-west",
+                    "abstract": "InSAR Derived Displacement in lateral axis",
                     "name": "alos_displacement_ew",
-                    "product_name": "camden_insar_alos_displacement",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_displacement",
 
                     "bands": insar_ew_bands,
-                    "resource_limits": reslim_nidem,
+                    "resource_limits": reslim_insar,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                     },
                     "styling": {
                         "default_style": "insar_displacement",
                         "styles": [style_insar_displacement]
+                    },
+                },
+                {
+                    "title": "ALOS Displacement Std-Dev up-down",
+                    "abstract": "InSAR Derived Displacement Std-Deviation in vertical axis",
+                    "name": "alos_displacement_ud_stddev",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_displacement",
+
+                    "bands": insar_ud_stddev_bands,
+                    "resource_limits": reslim_insar,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_stddev_l",
+                        "styles": [style_insar_stddev_l]
                     }
-                }
+                },
+                {
+                    "title": "ALOS Displacement Std-Dev east-west",
+                    "abstract": "InSAR Derived Displacement Std-Deviation in lateral axis",
+                    "name": "alos_displacement_ew_stddev",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_displacement",
+
+                    "bands": insar_ew_stddev_bands,
+                    "resource_limits": reslim_insar,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_stddev_l",
+                        "styles": [style_insar_stddev_l]
+                    }
+                },
+                {
+                    "title": "ALOS Velocity up-down",
+                    "abstract": "InSAR Derived Velocity in vertical axis",
+                    "name": "alos_velocity_ud",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_velocity",
+
+                    "bands": insar_ud_bands,
+                    "resource_limits": reslim_insar,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_velocity",
+                        "styles": [style_insar_velocity]
+                    }
+                },
+                {
+                    "title": "ALOS Velocity east-west",
+                    "abstract": "InSAR Derived Velocity in lateral axis",
+                    "name": "alos_velocity_ew",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_velocity",
+
+                    "bands": insar_ew_bands,
+                    "resource_limits": reslim_insar,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_velocity",
+                        "styles": [style_insar_velocity]
+                    }
+                },
+                {
+                    "title": "ALOS Velocity Std-dev up-down",
+                    "abstract": "InSAR Derived Velocity Std-dev in vertical axis",
+                    "name": "alos_velocity_ud_sd",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_velocity",
+
+                    "bands": insar_ew_stddev_bands,
+                    "resource_limits": reslim_insar,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_stddev_lv",
+                        "styles": [style_insar_stddev_lv]
+                    }
+                },
+                {
+                    "title": "ALOS Velocity Std-dev east-west",
+                    "abstract": "InSAR Derived Velocity Std-dev in lateral axis",
+                    "name": "alos_velocity_ew_sd",
+                    # The ODC product name for the associated data product
+                    "product_name": "cemp_insar_alos_velocity",
+
+                    "bands": insar_ud_stddev_bands,
+                    "resource_limits": reslim_insar,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                    },
+                    "styling": {
+                        "default_style": "insar_stddev_lv",
+                        "styles": [style_insar_stddev_lv]
+                    }
+                },
             ]
         }
             ]
