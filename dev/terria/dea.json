@@ -2417,34 +2417,107 @@
          ]
       },
       {
-         "name": "NSW InSAR Displacement/Velocity",
+         "name": "CEMP InSAR",
          "type": "group",
          "preserveOrder": true,
          "items": [
-            {
-               "name": "ALOS-PALSAR Derived Displacement/Velocity",
-               "type": "group",
-               "preserveOrder": true,
-               "items": [
-                  {
-                     "name": "ALOS-PALSAR Vertical Displacement",
-                     "type": "wms",
-                     "layers": "alos_displacement_ud",
-                     "url": "https://ows.dev.dea.ga.gov.au/?service=WMS",
-                     "ignoreUnknownTileErrors": true,
-                     "opacity": 1
-                  },
-                  {
-                     "name": "ALOS-PALSAR Lateral Displacement",
-                     "type": "wms",
-                     "layers": "alos_displacement_ew",
-                     "url": "https://ows.dev.dea.ga.gov.au/?service=WMS",
-                     "ignoreUnknownTileErrors": true,
-                     "opacity": 1
-                  }
-               ]
-            }
+           {
+             "name": "ALOS Displacement up-down",
+             "type": "wms",
+             "layers": "alos_displacement_ud",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_displacement_ud",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           },
+           {
+             "name": "ALOS Displacement east-west",
+             "type": "wms",
+             "layers": "alos_displacement_ew",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_displacement_ew",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           },
+           {
+             "name": "ALOS Displacement Std-Dev up-down",
+             "type": "wms",
+             "layers": "alos_displacement_ud_stddev",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_displacement_ud_stddev",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           },
+           {
+             "name": "ALOS Displacement Std-Dev east-west",
+             "type": "wms",
+             "layers": "alos_displacement_ew_stddev",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_displacement_ew_stddev",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           },
+           {
+             "name": "ALOS Velocity up-down",
+             "type": "wms",
+             "layers": "alos_velocity_ud",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_velocity_ud",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           },
+           {
+             "name": "ALOS Velocity east-west",
+             "type": "wms",
+             "layers": "alos_velocity_ew",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_velocity_ew",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           },
+           {
+             "name": "ALOS Velocity Std-dev up-down",
+             "type": "wms",
+             "layers": "alos_velocity_ud_sd",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_velocity_ud_sd",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           },
+           {
+             "name": "ALOS Velocity Std-dev east-west",
+             "type": "wms",
+             "layers": "alos_velocity_ew_sd",
+             "url": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+             "linkedWcsCoverage": "alos_velocity_ew_sd",
+             "ignoreUnknownTileErrors": true,
+             "chartType": "momentPoints",
+             "chartColor": "white",
+             "opacity": 1
+           }
          ]
-      }
+       }
    ]
 }
