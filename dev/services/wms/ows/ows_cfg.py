@@ -5040,7 +5040,7 @@ envisat_layers = [
         "abstract": "InSAR Derived Velocity in vertical axis",
         "name": "envisat_velocity_ud",
         # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_velocty",
+        "product_name": "cemp_insar_envisat_velocity",
 
         "bands": insar_ud_bands,
         "resource_limits": reslim_insar,
@@ -5057,7 +5057,7 @@ envisat_layers = [
         "abstract": "InSAR Derived Velocity in lateral axis",
         "name": "envisat_velocity_ew",
         # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_velocty",
+        "product_name": "cemp_insar_envisat_velocity",
 
         "bands": insar_ew_bands,
         "resource_limits": reslim_insar,
@@ -5074,7 +5074,7 @@ envisat_layers = [
         "abstract": "InSAR Derived Velocity Std-Deviation in vertical axis",
         "name": "envisat_velocity_ud_stddev",
         # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_velocty",
+        "product_name": "cemp_insar_envisat_velocity",
 
         "bands": insar_ud_stddev_bands,
         "resource_limits": reslim_insar,
@@ -5091,7 +5091,7 @@ envisat_layers = [
         "abstract": "InSAR Derived Velocity Std-Deviation in lateral axis",
         "name": "envisat_velocity_ew_stddev",
         # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_velocty",
+        "product_name": "cemp_insar_envisat_velocity",
 
         "bands": insar_ew_stddev_bands,
         "resource_limits": reslim_insar,
