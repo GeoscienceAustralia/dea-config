@@ -30,7 +30,7 @@
                "legendUrls": []
             },
             {
-               "name": "Hotspots, Last 24h",
+               "name": "Hotspots, Last 72h",
                "type": "wms",
                "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
                "layers": "public:hotspots_three_days",
