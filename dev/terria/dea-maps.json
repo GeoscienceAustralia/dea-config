@@ -30,17 +30,14 @@
                "legendUrls": []
             },
             {
-               "name": "Hotspots, Last 24h",
+               "name": "Hotspots, Last 72h",
                "type": "wms",
                "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
                "layers": "public:hotspots_three_days",
                "ignoreUnknownTileErrors": true,
                "opacity": 1,
                "leafletUpdateInterval": 750,
-               "legendUrls": [],
-               "parameters": {
-                  "cql_filter":"hours_since_hotspot<=24 AND sensor IN ('AVHRR','MODIS','VIIRS') AND product IN ('SRSS','MOD14','AFMOD','EDR')"
-               }
+               "legendUrls": []
             }
          ]
       },
