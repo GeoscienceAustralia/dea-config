@@ -4714,8 +4714,8 @@ style_fc_simple = {
 
 style_insar_velocity = {
     "name": "insar_velocity",
-    "title": "InSAR Displacement Velocity",
-    "abstract": "Average InSAR Displacment velocity in mm/year",
+    "title": "InSAR Velocity",
+    "abstract": "Average InSAR Velocity in mm/year",
     "needed_bands": ["velocity"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
