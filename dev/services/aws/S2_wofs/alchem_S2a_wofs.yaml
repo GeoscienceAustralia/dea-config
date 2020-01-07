@@ -1,7 +1,7 @@
 specification:
   product: ga_s2a_ard_nbar_granule
-  measurements: ['nbar_blue','nbar_green', 'nbar_red', 'nbar_nir_1', 'nbar_swir_2', 'nbar_swir_3']
-  measurement_renames:
+  measurements: ['nbar_blue','nbar_green', 'nbar_red', 'nbar_nir_1', 'nbar_swir_2', 'nbar_swir_3', 'fmask']
+  measurement_renames:   # x: y A measurement if x will be renamed to y
     nbar_blue: nbart_blue
     nbar_green: nbart_green
     nbar_red: nbart_red
@@ -10,7 +10,7 @@ specification:
     nbar_swir_3: nbart_swir_2
 
   override_product_family: ard # The relationship of the source dataset to the newly derived dataset
-  basis: nbart_green
+  basis: nbar_green    # Before the renaming
 
   transform: wofs.virtualproduct.WOfSClassifier
   
