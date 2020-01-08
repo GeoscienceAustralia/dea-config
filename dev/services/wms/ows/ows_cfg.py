@@ -1,5 +1,6 @@
 # Migration of wms_cfg.py.  As at commit  c44c5e61c7fb9
 import copy
+from functools import partial
 
 # Reusable Chunks 1. Resource limit configurations
 
@@ -4701,6 +4702,31 @@ style_fc_simple = {
     ]
 }
 
+##############################################################################################
+#
+#  Rescale styles for tide layers
+#
+##############################################################################################
+
+ls_style_list = [
+    style_ls_simple_rgb,
+    style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
+    style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
+    style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
+]
+
+# HACK: Move this to a utils to allow style reusability
+def swap_scale(new_scale : list, style : dict):
+    if "scale_range" in style:
+        new_style = copy.copy(style)
+        new_style["scale_range"] = new_scale
+        return new_style
+    return style
+
+swap_scale_p = partial(swap_scale, [0.0,0.3])
+
+tide_style_list = list([swap_scale_p(s) for s in ls_style_list])
+
 ###############################################################################################
 # Styling Summary of InSAR:
 # Velocities in mm/yr (for all satellites): -30 (blue) … 0 (white) … + 30 (red)
@@ -6915,12 +6941,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "styling": {
                         "default_style": "simple_rgb",
-                        "styles": [
-                            style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
-                        ]
+                        "styles": tide_style_list
                     }
 
                 },
@@ -6965,12 +6986,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "styling": {
                         "default_style": "simple_rgb",
-                        "styles": [
-                            style_ls_simple_rgb, 
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
-                        ]
+                        "styles": tide_style_list
                     }
                 },
             ]
