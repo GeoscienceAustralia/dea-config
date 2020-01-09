@@ -224,21 +224,20 @@ bands_aster_single_band = {
 }
 
 # InSAR Displacements / Velocity
-insar_ew_bands = {
-    "ew": ["displacement", "velocity"]
+insar_disp_bands = {
+    "ew": [],
+    "ud": [],
+    "ewstd": [],
+    "upstd": []
 }
 
-insar_ud_bands = {
-    "ud": ["displacement", "velocity"]
+insar_vel_bands = {
+    "ew": [],
+    "ud": [],
+    "ewstd": [],
+    "upstd": []
 }
 
-insar_ew_stddev_bands = {
-    "ewstd": ["disp_std", "vel_std"]
-}
-
-insar_ud_stddev_bands = {
-    "upstd": ["disp_std", "vel_std"]
-}
 
 # Reusable Chunks 3. Styles
 
@@ -4737,7 +4736,6 @@ tide_style_list = list([swap_scale_p(s) for s in ls_style_list])
 # Standard deviation of displacements in mm (for ALOS): 0 (white) … +80 (red)
 ###############################################################################################
 
-
 style_insar_velocity = {
     "name": "insar_velocity",
     "title": "InSAR Velocity",
@@ -4763,6 +4761,18 @@ style_insar_velocity = {
         "offset": 0.0
     }
 }
+
+style_insar_velocity_ud = copy.deepcopy(style_insar_velocity)
+style_insar_velocity_ud["name"] = "insar_velocity_ud"
+style_insar_velocity_ud["title"] = "InSAR Velocity Up-Down"
+style_insar_velocity_ud["needed_bands"] = ["ud"]
+style_insar_velocity_ud["index_function"]["kwargs"]["band"] = "ud"
+
+style_insar_velocity_ew = copy.deepcopy(style_insar_velocity)
+style_insar_velocity_ew["name"] = "insar_velocity_ew"
+style_insar_velocity_ew["title"] = "InSAR Velocity East-West"
+style_insar_velocity_ew["needed_bands"] = ["ew"]
+style_insar_velocity_ew["index_function"]["kwargs"]["band"] = "ew"
 
 style_insar_displacement = {
     "name": "insar_displacement",
@@ -4790,6 +4800,18 @@ style_insar_displacement = {
     }
 }
 
+style_insar_disp_ud = copy.deepcopy(style_insar_displacement)
+style_insar_disp_ud["name"] = "insar_disp_ud"
+style_insar_disp_ud["title"] = "InSAR Displacement Up-Down"
+style_insar_disp_ud["needed_bands"] = ["ud"]
+style_insar_disp_ud["index_function"]["kwargs"]["band"] = "ud"
+
+style_insar_disp_ew = copy.deepcopy(style_insar_displacement)
+style_insar_disp_ew["name"] = "insar_disp_ew"
+style_insar_disp_ew["title"] = "InSAR Displacement East-West"
+style_insar_disp_ew["needed_bands"] = ["ew"]
+style_insar_disp_ew["index_function"]["kwargs"]["band"] = "ew"
+
 style_insar_stddev_l = {
     "name": "insar_stddev_l",
     "title": "InSAR Cumulative Displacement Std-dev",
@@ -4816,10 +4838,25 @@ style_insar_stddev_l = {
     }
 }
 
+# Create up-down/east-west varieties using deepcopy
+style_insar_stddev_l_ud = copy.deepcopy(style_insar_stddev_l)
+style_insar_stddev_l_ud["name"] = "insar_disp_ud_std"
+style_insar_stddev_l_ud["title"] = "InSAR Displacement Std-Dev Up-Down"
+style_insar_stddev_l_ud["needed_bands"] = ["upstd"]
+style_insar_stddev_l_ud["index_function"]["kwargs"]["band"] = "upstd"
+
+style_insar_stddev_l_ew = copy.deepcopy(style_insar_stddev_l)
+style_insar_stddev_l_ew["name"] = "insar_disp_ew_std"
+style_insar_stddev_l_ew["title"] = "InSAR Displacement Std-Dev East-West"
+style_insar_stddev_l_ew["needed_bands"] = ["ewstd"]
+style_insar_stddev_l_ew["index_function"]["kwargs"]["band"] = "ewstd"
+
 # Create C-band style using a copy constructor
-style_insar_stddev_c = copy.copy(style_insar_stddev_l)
-style_insar_stddev_c["name"] = "insar_stddev_c"
-style_insar_stddev_c["range"] = [0.0, 20.0]
+style_insar_stddev_c_ud = copy.copy(style_insar_stddev_l_ud)
+style_insar_stddev_c_ud["range"] = [0.0, 20.0]
+
+style_insar_stddev_c_ew = copy.copy(style_insar_stddev_l_ew)
+style_insar_stddev_c_ew["range"] = [0.0, 20.0]
 
 style_insar_stddev_lv = {
     "name": "insar_stddev_lv",
@@ -4847,425 +4884,152 @@ style_insar_stddev_lv = {
     }
 }
 
+# Create up-down/east-west varieties using deepcopy
+style_insar_stddev_lv_ud = copy.deepcopy(style_insar_stddev_lv)
+style_insar_stddev_lv_ud["name"] = "insar_vel_ud_std"
+style_insar_stddev_lv_ud["title"] = "InSAR Velocity Std-Dev Up-Down"
+style_insar_stddev_lv_ud["needed_bands"] = ["upstd"]
+style_insar_stddev_lv_ud["index_function"]["kwargs"]["band"] = "upstd"
+
+style_insar_stddev_lv_ew = copy.deepcopy(style_insar_stddev_lv)
+style_insar_stddev_lv_ew["name"] = "insar_vel_ew_std"
+style_insar_stddev_lv_ew["title"] = "InSAR Velocity Std-Dev East-West"
+style_insar_stddev_lv_ew["needed_bands"] = ["ewstd"]
+style_insar_stddev_lv_ew["index_function"]["kwargs"]["band"] = "ewstd"
+
 # Create C-band style using a copy constructor
-style_insar_stddev_cv = copy.copy(style_insar_stddev_lv)
-style_insar_stddev_cv["name"] = "insar_stddev_cv"
-style_insar_stddev_cv["range"] = [0.0, 6.0]
+style_insar_stddev_cv_ud = copy.copy(style_insar_stddev_lv_ud)
+style_insar_stddev_cv_ud["range"] = [0.0, 6.0]
+
+style_insar_stddev_cv_ew = copy.copy(style_insar_stddev_lv_ew)
+style_insar_stddev_cv_ew["range"] = [0.0, 6.0]
 
 # Layer segments for various INSAR Datasets
 alos_layers = [
     {
-        "title": "ALOS Displacement up-down",
-        "abstract": "InSAR Derived Displacement in vertical axis",
-        "name": "alos_displacement_ud",
+        "title": "ALOS Displacement",
+        "abstract": "InSAR Derived Cumulative Displacement",
+        "name": "alos_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_displacement",
 
-        "bands": insar_ud_bands,
+        "bands": insar_disp_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
         "styling": {
-            "default_style": "insar_displacement",
-            "styles": [style_insar_displacement]
+            "default_style": "insar_disp_ud",
+            "styles": [style_insar_disp_ud,
+                       style_insar_disp_ew,
+                       style_insar_stddev_l_ud,
+                       style_insar_stddev_l_ew]
         }
     },
     {
-        "title": "ALOS Displacement east-west",
-        "abstract": "InSAR Derived Displacement in lateral axis",
-        "name": "alos_displacement_ew",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_alos_displacement",
-
-        "bands": insar_ew_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_displacement",
-            "styles": [style_insar_displacement]
-        },
-    },
-    {
-        "title": "ALOS Displacement Std-Dev up-down",
-        "abstract": "InSAR Derived Displacement Std-Deviation in vertical axis",
-        "name": "alos_displacement_ud_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_alos_displacement",
-
-        "bands": insar_ud_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_l",
-            "styles": [style_insar_stddev_l]
-        }
-    },
-    {
-        "title": "ALOS Displacement Std-Dev east-west",
-        "abstract": "InSAR Derived Displacement Std-Deviation in lateral axis",
-        "name": "alos_displacement_ew_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_alos_displacement",
-
-        "bands": insar_ew_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_l",
-            "styles": [style_insar_stddev_l]
-        }
-    },
-    {
-        "title": "ALOS Velocity up-down",
-        "abstract": "InSAR Derived Velocity in vertical axis",
-        "name": "alos_velocity_ud",
+        "title": "ALOS Velocity",
+        "abstract": "InSAR Derived Velocity",
+        "name": "alos_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_velocity",
 
-        "bands": insar_ud_bands,
+        "bands": insar_vel_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
         "styling": {
-            "default_style": "insar_velocity",
-            "styles": [style_insar_velocity]
-        }
-    },
-    {
-        "title": "ALOS Velocity east-west",
-        "abstract": "InSAR Derived Velocity in lateral axis",
-        "name": "alos_velocity_ew",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_alos_velocity",
-
-        "bands": insar_ew_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_velocity",
-            "styles": [style_insar_velocity]
-        }
-    },
-    {
-        "title": "ALOS Velocity Std-dev up-down",
-        "abstract": "InSAR Derived Velocity Std-dev in vertical axis",
-        "name": "alos_velocity_ud_sd",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_alos_velocity",
-
-        "bands": insar_ew_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_lv",
-            "styles": [style_insar_stddev_lv]
-        }
-    },
-    {
-        "title": "ALOS Velocity Std-dev east-west",
-        "abstract": "InSAR Derived Velocity Std-dev in lateral axis",
-        "name": "alos_velocity_ew_sd",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_alos_velocity",
-
-        "bands": insar_ud_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_lv",
-            "styles": [style_insar_stddev_lv]
+            "default_style": "insar_velocity_ud",
+            "styles": [style_insar_velocity_ud,
+                       style_insar_velocity_ew,
+                       style_insar_stddev_lv_ud,
+                       style_insar_stddev_lv_ew]
         }
     },
 ]
 
 envisat_layers = [
     {
-        "title": "ENVISAT Displacement up-down",
-        "abstract": "InSAR Derived Displacement in vertical axis",
-        "name": "envisat_displacement_ud",
+        "title": "ENVISAT Displacement",
+        "abstract": "InSAR Derived Cumulative Displacement",
+        "name": "envisat_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_displacement",
 
-        "bands": insar_ud_bands,
+        "bands": insar_disp_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
         "styling": {
-            "default_style": "insar_displacement",
-            "styles": [style_insar_displacement]
+            "default_style": "insar_disp_ud",
+            "styles": [style_insar_disp_ud,
+                       style_insar_disp_ew,
+                       style_insar_stddev_c_ud,
+                       style_insar_stddev_c_ew]
         }
     },
     {
-        "title": "ENVISAT Displacement east-west",
-        "abstract": "InSAR Derived Displacement in lateral axis",
-        "name": "envisat_displacement_ew",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_displacement",
-
-        "bands": insar_ew_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_displacement",
-            "styles": [style_insar_displacement]
-        },
-    },
-    {
-        "title": "ENVISAT Displacement Std-Dev up-down",
-        "abstract": "InSAR Derived Displacement Std-Deviation in vertical axis",
-        "name": "envisat_displacement_ud_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_displacement",
-
-        "bands": insar_ud_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_c",
-            "styles": [style_insar_stddev_c]
-        }
-    },
-    {
-        "title": "ENVISAT Displacement Std-Dev east-west",
-        "abstract": "InSAR Derived Displacement Std-Deviation in lateral axis",
-        "name": "envisat_displacement_ew_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_displacement",
-
-        "bands": insar_ew_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_c",
-            "styles": [style_insar_stddev_c]
-        }
-    },
-    {
-        "title": "ENVISAT Velocity up-down",
-        "abstract": "InSAR Derived Velocity in vertical axis",
-        "name": "envisat_velocity_ud",
+        "title": "ENVISAT Velocity",
+        "abstract": "InSAR Derived Velocity",
+        "name": "envisat_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_velocity",
 
-        "bands": insar_ud_bands,
+        "bands": insar_vel_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
         "styling": {
-            "default_style": "insar_velocity",
-            "styles": [style_insar_velocity]
-        }
-    },
-    {
-        "title": "ENVISAT Velocity east-west",
-        "abstract": "InSAR Derived Velocity in lateral axis",
-        "name": "envisat_velocity_ew",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_velocity",
-
-        "bands": insar_ew_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_velocity",
-            "styles": [style_insar_velocity]
-        },
-    },
-    {
-        "title": "ENVISAT Velocity Std-Dev up-down",
-        "abstract": "InSAR Derived Velocity Std-Deviation in vertical axis",
-        "name": "envisat_velocity_ud_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_velocity",
-
-        "bands": insar_ud_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_cv",
-            "styles": [style_insar_stddev_cv]
-        }
-    },
-    {
-        "title": "ENVISAT Velocity Std-Dev east-west",
-        "abstract": "InSAR Derived Velocity Std-Deviation in lateral axis",
-        "name": "envisat_velocity_ew_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_envisat_velocity",
-
-        "bands": insar_ew_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_cv",
-            "styles": [style_insar_stddev_cv]
+            "default_style": "insar_velocity_ud",
+            "styles": [style_insar_velocity_ud,
+                       style_insar_velocity_ew,
+                       style_insar_stddev_cv_ud,
+                       style_insar_stddev_cv_ew]
         }
     },
 ]
 
 rs2_layers = [
     {
-        "title": "RADARSAT-2 Displacement up-down",
-        "abstract": "InSAR Derived Displacement in vertical axis",
-        "name": "radarsat2_displacement_ud",
+        "title": "RADARSAT2 Displacement",
+        "abstract": "InSAR Derived Cumulative Displacement",
+        "name": "radarsat2_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_displacement",
 
-        "bands": insar_ud_bands,
+        "bands": insar_disp_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
         "styling": {
-            "default_style": "insar_displacement",
-            "styles": [style_insar_displacement]
+            "default_style": "insar_disp_ud",
+            "styles": [style_insar_disp_ud,
+                       style_insar_disp_ew,
+                       style_insar_stddev_c_ud,
+                       style_insar_stddev_c_ew]
         }
     },
     {
-        "title": "RADARSAT-2 Displacement east-west",
-        "abstract": "InSAR Derived Displacement in lateral axis",
-        "name": "radarsat2_displacement_ew",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_radarsat2_displacement",
-
-        "bands": insar_ew_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_displacement",
-            "styles": [style_insar_displacement]
-        },
-    },
-    {
-        "title": "RADARSAT-2 Displacement Std-Dev up-down",
-        "abstract": "InSAR Derived Displacement Std-Deviation in vertical axis",
-        "name": "radarsat2_displacement_ud_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_radarsat2_displacement",
-
-        "bands": insar_ud_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_c",
-            "styles": [style_insar_stddev_c]
-        }
-    },
-    {
-        "title": "RADARSAT-2 Displacement Std-Dev east-west",
-        "abstract": "InSAR Derived Displacement Std-Deviation in lateral axis",
-        "name": "radarsat2_displacement_ew_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_radarsat2_displacement",
-
-        "bands": insar_ew_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_c",
-            "styles": [style_insar_stddev_c]
-        }
-    },
-    {
-        "title": "RADARSAT-2 Velocity up-down",
-        "abstract": "InSAR Derived Velocity in vertical axis",
-        "name": "radarsat2_velocity_ud",
+        "title": "RADARSAT2 Velocity",
+        "abstract": "InSAR Derived Velocity",
+        "name": "radarsat2_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_velocity",
 
-        "bands": insar_ud_bands,
+        "bands": insar_vel_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
         "styling": {
-            "default_style": "insar_velocity",
-            "styles": [style_insar_velocity]
-        }
-    },
-    {
-        "title": "RADARSAT-2 Velocity east-west",
-        "abstract": "InSAR Derived Velocity in lateral axis",
-        "name": "radarsat2_velocity_ew",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_radarsat2_velocity",
-
-        "bands": insar_ew_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_velocity",
-            "styles": [style_insar_velocity]
-        },
-    },
-    {
-        "title": "RADARSAT-2 Velocity Std-Dev up-down",
-        "abstract": "InSAR Derived Velocity Std-Deviation in vertical axis",
-        "name": "radarsat2_velocity_ud_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_radarsat2_velocity",
-
-        "bands": insar_ud_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_cv",
-            "styles": [style_insar_stddev_cv]
-        }
-    },
-    {
-        "title": "RADARSAT-2 Velocity Std-Dev east-west",
-        "abstract": "InSAR Derived Velocity Std-Deviation in lateral axis",
-        "name": "radarsat2_velocity_ew_stddev",
-        # The ODC product name for the associated data product
-        "product_name": "cemp_insar_radarsat2_velocity",
-
-        "bands": insar_ew_stddev_bands,
-        "resource_limits": reslim_insar,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        },
-        "styling": {
-            "default_style": "insar_stddev_cv",
-            "styles": [style_insar_stddev_cv]
+            "default_style": "insar_velocity_ud",
+            "styles": [style_insar_velocity_ud,
+                       style_insar_velocity_ew,
+                       style_insar_stddev_cv_ud,
+                       style_insar_stddev_cv_ew]
         }
     },
 ]
