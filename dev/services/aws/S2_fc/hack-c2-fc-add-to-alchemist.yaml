@@ -11,8 +11,8 @@ spec:
   containers:
   - name:  alchemist-processor-container
     image: opendatacube/datacube-alchemist:latest
-    args: ["/usr/bin/env", "sleep", "600"]
-    #args: [ "datacube-alchemist", "addtoqueue"]
+    #args: ["/usr/bin/env", "sleep", "600"]
+    args: [ "datacube-alchemist", "addtoqueue"]
     resources:
       requests:
         cpu: 1
