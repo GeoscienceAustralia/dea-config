@@ -6130,6 +6130,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_names": [ "s2a_nrt_granule", "s2b_nrt_granule" ],
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6174,6 +6175,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "s2a_nrt_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6218,6 +6220,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "s2b_nrt_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
