@@ -18,6 +18,11 @@ update-workers:
 undeploy-workers:
 	kubectl delete -f wofs-processqueue.yaml
 
+deploy-dev:
+	kubectl create -f dev-box.yaml
+
+undeploy-dev:
+	kubectl delete -f dev-box.yaml
 
 get-cmd:
-	kubectl exec -it -n alchemist-processor k8s-dev-6688874fbb-b68gc bash
+	kubectl exec -it dev-box /bin/bash --namespace=alchemist-processor
