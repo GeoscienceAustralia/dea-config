@@ -5783,6 +5783,7 @@ For service status information, see https://status.dea.ga.gov.au
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
+                    "dynamic": True,
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "native_resolution": [ 10.0, 10.0 ],
@@ -5821,6 +5822,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                         "native_resolution": [ 10.0, 10.0 ],
                         "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
                     },
+                    "dynamic": True,
                     "styling": {
                         "default_style": "simple_rgb",
                         "styles": [
@@ -5854,6 +5856,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                         "native_resolution": [ 10.0, 10.0 ],
                         "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
                     },
+                    "dynamic": True,
                     "styling": {
                         "default_style": "simple_rgb",
                         "styles": [
