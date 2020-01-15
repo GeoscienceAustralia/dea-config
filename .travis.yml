@@ -11,7 +11,7 @@ jobs:
   include:
     - stage: test
       script: 
-        - pip install pylint
+        - pip install pylint boto3
         - ./check-code.sh || travis_terminate 1
     - stage: deploy
       if: (branch = master OR (tag = branch)) AND type = push
