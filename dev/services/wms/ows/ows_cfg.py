@@ -8231,7 +8231,16 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
             "title": "Camden Environmental Monitoring Project InSAR",
             # Top level layers must have a human-readable abstract. The abstract is optional for child-layers - defaulting
             # to that of the parent layer.
-            "abstract": "InSAR Derived Displacement and Velocity",
+            "abstract": """
+            These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project. 
+            Products are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2. 
+            Products are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction. 
+            Negative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.
+            Uncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.
+            The InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.
+            ALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.
+            A full description of the project and methods used to derive these InSAR products is given in the associated GA Record.
+            """,
             # NOTE: Folder-layers do not have a layer "name".
 
             # Keywords are optional, but can be added at any folder level and are cumulative.
