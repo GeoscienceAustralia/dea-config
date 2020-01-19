@@ -1,0 +1,14 @@
+generatorOptions:
+  disableNameSuffixHash: true
+secretGenerator:
+- name: sandbox-datacube
+  namespace: alchemist-processor
+  literals:
+    - postgres-username=sandbox
+    - postgres-password=TR***********6
+- name: svc-sandbox-alchemist
+  namespace: alchemist-processor
+  literals:
+    - AWS_ACCESS_KEY_ID=AK***********************2MN
+    - AWS_SECRET_ACCESS_KEY=v*******************************O
+    - AWS_DEFAULT_REGION=ap-southeast-2
