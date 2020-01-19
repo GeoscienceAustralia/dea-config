@@ -4908,7 +4908,13 @@ style_insar_stddev_cv_ew["range"] = [0.0, 6.0]
 alos_layers = [
     {
         "title": "ALOS Displacement",
-        "abstract": "InSAR Derived Cumulative Displacement",
+        "abstract": """
+            Cumulative displacement time series derived from combination of
+             ascending and descending line-of-sight InSAR data from six ALOS data stacks in
+             the Sydney Basin area. Original data points were interpolated to 50 m pixel spacing.
+             The time series spans the period 2008-02-11 to 2010-10-22, interpolated to 12-day sampling.
+             The reference (i.e. zero displacement) for the time series is 2008-04-23.
+            """,
         "name": "alos_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_displacement",
@@ -4928,7 +4934,12 @@ alos_layers = [
     },
     {
         "title": "ALOS Velocity",
-        "abstract": "InSAR Derived Velocity",
+        "abstract": """
+            Velocity (linear displacement rate) of ground movement derived from combination
+             of ascending and descending line-of-sight InSAR data from six ALOS data
+             stacks in the Sydney Basin area. Original data points were interpolated to 50 m
+             pixel spacing. The velocity is calculated for the period 2006-05-16 to 2011-01-07.
+            """,
         "name": "alos_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_velocity",
@@ -4951,7 +4962,13 @@ alos_layers = [
 envisat_layers = [
     {
         "title": "ENVISAT Displacement",
-        "abstract": "InSAR Derived Cumulative Displacement",
+        "abstract": """
+            Cumulative displacement time series derived from combination of ascending and descending
+            line-of-sight InSAR data from seven Envisat data stacks in the Sydney Basin area. Original
+            data points were interpolated to 50 m pixel spacing. The time series spans the period 2006-06-26
+            to 2010-08-28, interpolated to 12-day sampling. The reference (i.e. zero displacement) for
+            the time series is 2007-04-10.
+            """,
         "name": "envisat_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_displacement",
@@ -4971,7 +4988,12 @@ envisat_layers = [
     },
     {
         "title": "ENVISAT Velocity",
-        "abstract": "InSAR Derived Velocity",
+        "abstract": """
+            Velocity (linear displacement rate) of ground movement derived from combination of ascending
+            and descending line-of-sight InSAR data from seven Envisat data stacks in the Sydney Basin area.
+            Original data points were interpolated to 50 m pixel spacing. The velocity is calculated for the
+            period 2006-06-02 to 2010-09-25.
+            """,
         "name": "envisat_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_velocity",
@@ -4994,7 +5016,14 @@ envisat_layers = [
 rs2_layers = [
     {
         "title": "RADARSAT2 Displacement",
-        "abstract": "InSAR Derived Cumulative Displacement",
+        "abstract":"""
+            Cumulative displacement time series derived from combination of ascending
+             and descending line-of-sight InSAR data from two Radarsat-2 data stacks
+             in the Sydney Basin area. Original data points were interpolated to 50
+             m pixel spacing. The time series spans the period 2015-07-15 to 2019-05-31,
+             interpolated to 12-day sampling. The reference (i.e. zero displacement) for
+             the time series is 2015-07-15.
+            """,
         "name": "radarsat2_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_displacement",
@@ -5014,7 +5043,13 @@ rs2_layers = [
     },
     {
         "title": "RADARSAT2 Velocity",
-        "abstract": "InSAR Derived Velocity",
+        "abstract": """
+        Velocity (linear displacement rate) of ground movement derived from combination
+         of ascending and descending line-of-sight InSAR data from two Radarsat-2 data
+         stacks in the Sydney Basin area. Original data points were interpolated to 50
+         m pixel spacing. The velocity is calculated for the period 2015-07-15 to
+         2019-05-31.
+        """,
         "name": "radarsat2_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_velocity",
@@ -8192,10 +8227,19 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
         {
             # NOTE: This layer is a folder - it is NOT "named layer" that can be selected in GetMap requests
             # Every layer must have a human-readable title
-            "title": "CEMP InSAR",
+            "title": "Camden Environmental Monitoring Project InSAR",
             # Top level layers must have a human-readable abstract. The abstract is optional for child-layers - defaulting
             # to that of the parent layer.
-            "abstract": "InSAR Derived Displacement and Velocity",
+            "abstract": """
+            These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project. 
+            Products are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2. 
+            Products are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction. 
+            Negative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.
+            Uncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.
+            The InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.
+            ALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.
+            A full description of the project and methods used to derive these InSAR products is given in the associated GA Record.
+            """,
             # NOTE: Folder-layers do not have a layer "name".
 
             # Keywords are optional, but can be added at any folder level and are cumulative.
