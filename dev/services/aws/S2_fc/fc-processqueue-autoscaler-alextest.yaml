@@ -1,0 +1,98 @@
+---
+# Service account for autoscaler
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sqs-scaler
+  namespace: alchemist-processor
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::060378307146:role/dea-sandbox-alchemist
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: sqs-scaler
+  namespace: alchemist-processor
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: sqs-scaler
+subjects:
+  - kind: ServiceAccount
+    name: sqs-scaler
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: sqs-scaler
+  namespace: alchemist-processor
+rules:
+  - apiGroups:
+      - extensions
+      - apps
+    resources:
+      - deployments
+      - replicasets
+    verbs:
+      - get
+      - list
+      - watch
+      - patch
+---
+# Autoscale alchemist based on sqs queue
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xd4-alchemist-sqs-autoscaler
+  namespace: alchemist-processor
+spec:
+  selector:
+    matchLabels:
+      app: xd4-alchemist-sqs-autoscaler
+  revisionHistoryLimit: 1
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: xd4-alchemist-sqs-autoscaler
+    spec:
+      serviceAccountName: sqs-scaler
+      containers:
+        - name: k8s-sqs-autoscaler
+          image: opendatacube/k8s-sqs-autoscaler:1.0.5
+          command:
+            - ./k8s-sqs-autoscaler
+            - --sqs-queue-name=$(SQS_QUEUE_NAME)  # required
+            - --kubernetes-deployment=$(KUBERNETES_DEPLOYMENT) # required
+            - --kubernetes-namespace=$(K8S_NAMESPACE) # required
+            - --aws-region=$(AWS_DEFAULT_REGION)  #required
+            - --poll-period=10 # poll every second
+            - --scale-up-messages=5 # should match max pods
+            - --scale-down-messages=5 # should match max pods
+            - --max-pods=100 # optional
+            - --min-pods=0  # optional
+            - --scale-down-cool-down=10 # optional
+            - --scale-up-cool-down=10 # optional
+          env:
+            - name: LOGGING_LEVEL
+              value: DEBUG
+            - name: KUBERNETES_DEPLOYMENT
+              value: fc-alchemist-processqueue-alextest
+            - name: K8S_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: SQS_QUEUE_NAME
+              value: alex-alchemist-alive
+            - name: AWS_DEFAULT_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: svc-sandbox-alchemist
+                  key: AWS_DEFAULT_REGION
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1512Mi"
+              cpu: "500m"

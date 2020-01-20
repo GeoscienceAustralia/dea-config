@@ -1112,7 +1112,26 @@
                      "opacity": 1
                   }
                ]
-            }
+            },
+	    {
+               "name": "Digital Earth Australia Waterbodies",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Digital Earth Australia Waterbodies",
+                     "type": "wms",
+                     "url": "https://hotspots.dea.ga.gov.au/geoserver/public/wms",
+                     "layers": "Digital Earth Australia Waterbodies",
+                     "featureInfoTemplate": {
+                        "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of total surface area observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
+                        "partials": {
+                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. For more detailed information see https://www.ga.gov.au/dea/products."
+                        }
+		     }
+                  }
+               ]
+            }	 
          ]
       },
       {
