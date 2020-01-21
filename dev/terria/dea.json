@@ -1112,7 +1112,26 @@
                      "opacity": 1
                   }
                ]
-            }
+            },
+	    {
+               "name": "Digital Earth Australia Waterbodies",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Digital Earth Australia Waterbodies",
+                     "type": "wms",
+                     "url": "https://hotspots.dea.ga.gov.au/geoserver/public/wms",
+                     "layers": "Digital Earth Australia Waterbodies",
+                     "featureInfoTemplate": {
+                        "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of total surface area observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
+                        "partials": {
+                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. For more detailed information see https://www.ga.gov.au/dea/products."
+                        }
+		     }
+                  }
+               ]
+            }	 
          ]
       },
       {
@@ -2417,293 +2436,83 @@
          ]
       },
       {
-         "name": "CEMP InSAR",
+         "name": "Camden Environmental Monitoring Project InSAR",
          "type": "group",
          "preserveOrder": true,
+         "info": [
+            {
+               "name": "Details",
+               "content" : "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
+            }
+         ],
          "items": [
            {
-             "name": "ALOS Displacement up-down",
+             "name": "ALOS Displacement",
              "type": "wms",
-             "layers": "alos_displacement_ud",
+             "layers": "alos_displacement",
              "url": "https://ows.dev.dea.ga.gov.au/",
              "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_displacement_ud",
+             "linkedWcsCoverage": "alos_displacement",
              "ignoreUnknownTileErrors": true,
              "chartType": "momentPoints",
              "chartColor": "white",
              "opacity": 1
            },
            {
-             "name": "ALOS Displacement east-west",
+             "name": "ALOS Velocity",
              "type": "wms",
-             "layers": "alos_displacement_ew",
+             "layers": "alos_velocity",
              "url": "https://ows.dev.dea.ga.gov.au/",
              "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_displacement_ew",
+             "linkedWcsCoverage": "alos_velocity",
              "ignoreUnknownTileErrors": true,
              "chartType": "momentPoints",
              "chartColor": "white",
              "opacity": 1
            },
            {
-             "name": "ALOS Displacement Std-Dev up-down",
+             "name": "ENVISAT Displacement",
              "type": "wms",
-             "layers": "alos_displacement_ud_stddev",
+             "layers": "envisat_displacement",
              "url": "https://ows.dev.dea.ga.gov.au/",
              "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_displacement_ud_stddev",
+             "linkedWcsCoverage": "envisat_displacement",
              "ignoreUnknownTileErrors": true,
              "chartType": "momentPoints",
              "chartColor": "white",
              "opacity": 1
            },
            {
-             "name": "ALOS Displacement Std-Dev east-west",
+             "name": "ENVISAT Velocity",
              "type": "wms",
-             "layers": "alos_displacement_ew_stddev",
+             "layers": "envisat_velocity",
              "url": "https://ows.dev.dea.ga.gov.au/",
              "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_displacement_ew_stddev",
+             "linkedWcsCoverage": "envisat_velocity",
              "ignoreUnknownTileErrors": true,
              "chartType": "momentPoints",
              "chartColor": "white",
              "opacity": 1
            },
            {
-             "name": "ALOS Velocity up-down",
+             "name": "RADARSAT2 Displacement",
              "type": "wms",
-             "layers": "alos_velocity_ud",
+             "layers": "radarsat2_displacement",
              "url": "https://ows.dev.dea.ga.gov.au/",
              "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_velocity_ud",
+             "linkedWcsCoverage": "radarsat2_displacement",
              "ignoreUnknownTileErrors": true,
              "chartType": "momentPoints",
              "chartColor": "white",
              "opacity": 1
            },
            {
-             "name": "ALOS Velocity east-west",
+             "name": "RADARSAT2 Velocity",
              "type": "wms",
-             "layers": "alos_velocity_ew",
+             "layers": "radarsat2_velocity",
              "url": "https://ows.dev.dea.ga.gov.au/",
              "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_velocity_ew",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ALOS Velocity Std-dev up-down",
-             "type": "wms",
-             "layers": "alos_velocity_ud_sd",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_velocity_ud_sd",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ALOS Velocity Std-dev east-west",
-             "type": "wms",
-             "layers": "alos_velocity_ew_sd",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_velocity_ew_sd",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Displacement up-down",
-             "type": "wms",
-             "layers": "envisat_displacement_ud",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_displacement_ud",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Displacement east-west",
-             "type": "wms",
-             "layers": "envisat_displacement_ew",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_displacement_ew",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Displacement Std-Dev up-down",
-             "type": "wms",
-             "layers": "envisat_displacement_ud_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_displacement_ud_stddev",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Displacement Std-Dev east-west",
-             "type": "wms",
-             "layers": "envisat_displacement_ew_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_displacement_ew_stddev",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Velocity up-down",
-             "type": "wms",
-             "layers": "envisat_velocity_ud",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_velocity_ud",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Velocity east-west",
-             "type": "wms",
-             "layers": "envisat_velocity_ew",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_velocity_ew",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Velocity Std-Dev up-down",
-             "type": "wms",
-             "layers": "envisat_velocity_ud_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_velocity_ud_stddev",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "ENVISAT Velocity Std-Dev east-west",
-             "type": "wms",
-             "layers": "envisat_velocity_ew_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_velocity_ew_stddev",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Displacement up-down",
-             "type": "wms",
-             "layers": "radarsat2_displacement_ud",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_displacement_ud",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Displacement east-west",
-             "type": "wms",
-             "layers": "radarsat2_displacement_ew",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_displacement_ew",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Displacement Std-Dev up-down",
-             "type": "wms",
-             "layers": "radarsat2_displacement_ud_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_displacement_ud_stddev",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Displacement Std-Dev east-west",
-             "type": "wms",
-             "layers": "radarsat2_displacement_ew_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_displacement_ew_stddev",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Velocity up-down",
-             "type": "wms",
-             "layers": "radarsat2_velocity_ud",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_velocity_ud",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Velocity east-west",
-             "type": "wms",
-             "layers": "radarsat2_velocity_ew",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_velocity_ew",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Velocity Std-Dev up-down",
-             "type": "wms",
-             "layers": "radarsat2_velocity_ud_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_velocity_ud_stddev",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1
-           },
-           {
-             "name": "RADARSAT-2 Velocity Std-Dev east-west",
-             "type": "wms",
-             "layers": "radarsat2_velocity_ew_stddev",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_velocity_ew_stddev",
+             "linkedWcsCoverage": "radarsat2_velocity",
              "ignoreUnknownTileErrors": true,
              "chartType": "momentPoints",
              "chartColor": "white",
