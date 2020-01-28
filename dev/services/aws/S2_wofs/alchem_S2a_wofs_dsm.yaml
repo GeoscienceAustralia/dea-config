@@ -1,0 +1,43 @@
+specification:
+  product: ga_s2a_ard_nbar_granule
+  measurements: ['nbar_blue','nbar_green', 'nbar_red', 'nbar_nir_1', 'nbar_swir_2', 'nbar_swir_3', 'fmask']
+  measurement_renames:   # x: y A measurement if x will be renamed to y
+    nbar_blue: nbart_blue
+    nbar_green: nbart_green
+    nbar_red: nbart_red
+    nbar_nir_1: nbart_nir
+    nbar_swir_2: nbart_swir_1
+    nbar_swir_3: nbart_swir_2
+
+  override_product_family: ard # The relationship of the source dataset to the newly derived dataset
+  basis: nbar_green    # Before the renaming
+
+  transform: wofs.virtualproduct.WOfSClassifier
+  
+# Warning, no dsm
+# And an example of passing no arguments
+  transform_args:
+    s2: True
+    dsm_path:  's3://dea-non-public-data/dsm/dsm1sv1_0_Clean.tiff'
+    
+output:
+  #location: 's3://dea-sandbox-data-staging/fractional-cover/fc/v2.2.1'
+  #location: 's3://dea-public-data-dev/alchemist/wofs-s2-alchemist-tests-download'
+  location:  '/home/osboxes/dump/dsg-wofs-oz-S2-testing'
+  dtype: uint8 # single value for all bands
+  nodata: 255 # single value for all bands
+  #preview_image: [bs, pv, npv]
+  write_data_settings:
+      overview_resampling: nearest
+  metadata: # metadata are settings available on DatasetAssembler
+    product_family: wofs
+    producer: ga.gov.au
+    dataset_version: 2.2.1
+  properties: # Properties can be anything and everything
+    # dataset maturity must be nrt, interim or final
+    dea:dataset_maturity: interim
+
+processing:
+  dask_chunks:
+    x: 4000
+    y: 4000
