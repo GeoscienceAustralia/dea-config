@@ -775,7 +775,8 @@
                              "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.ga.gov.au/dea/products/dea-waterbodies."
                         }
                     }
-                  ]
+                  }
+                ]
               }
            ]
       },
