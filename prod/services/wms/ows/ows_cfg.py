@@ -5655,7 +5655,7 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2a_nrt_granule",
+                    "product_name": "s2b_nrt_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
                     "image_processing": {
@@ -5700,7 +5700,7 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2b_nrt_granule",
+                    "product_name": "s2a_nrt_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
                     "image_processing": {
