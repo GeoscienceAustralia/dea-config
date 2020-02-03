@@ -2163,6 +2163,14 @@
                "featureInfoTemplate": {
                   "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                }
+            },	 
+            {
+               "name": "DEA Wetlands Insight Tool v2.0",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/ramsar_wetlands_2018_exploded_WGS84.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               }
             },
             {
                "name": "DEA MDBA Wetlands Insight Tool v1.0",
