@@ -28,4 +28,4 @@ undeploy-workers:
 # 	kubectl delete -f fc-processqueue-autoscaler-alextest.yaml
 
 get-cmd:
-	kubectl exec -it -n alchemist-processor k8s-dev-6688874fbb-b68gc bash
+	kubectl exec -it -n alchemist-processor k8s-dev-6688874fbb-qs9bb bash

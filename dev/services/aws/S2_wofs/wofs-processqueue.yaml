@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fc-alchemist-processqueue-dsgtest
+  name: alchemist-processqueue
   namespace: alchemist-processor
   labels:
-    app: fc-alchemist-processqueue-dsgtest
+    app: alchemist-processqueue
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: fc-alchemist-processqueue-dsgtest
+      app: alchemist-processqueue
   template:
     metadata:
       annotations:
         iam.amazonaws.com/role: svc-sandbox-alchemist
       labels:
-        app: fc-alchemist-processqueue-dsgtest
+        app: alchemist-processqueue
     spec:
       nodeSelector:
         beta.kubernetes.io/os: linux
