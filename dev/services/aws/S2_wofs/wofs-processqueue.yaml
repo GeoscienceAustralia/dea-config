@@ -43,7 +43,7 @@ spec:
         stdin: true
         env:
         - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
-          value: "alchemist-standard-test"
+          value: "alchemist-standard"
         - name: ALCHEMIST_PROCESSQUEUE_SQS_TIMEOUT
           value: "900"
         - name: AWS_DEFAULT_REGION
