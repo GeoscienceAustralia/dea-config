@@ -16,9 +16,8 @@ specification:
   
 # Warning, no dsm
 # And an example of passing no arguments
-  transform_args:
-    s2: True
-    
+  transform_args: {}
+   
 output:
   #location: 's3://dea-sandbox-data-staging/fractional-cover/fc/v2.2.1'
   #location: 's3://dea-public-data-dev/alchemist/wofs-s2-alchemist-tests-download'
