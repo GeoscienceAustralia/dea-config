@@ -14,8 +14,10 @@ spec:
     args:
       - datacube-alchemist
       - addtoqueue
-      # - 'lon in range(144,149)'
-      # - 'lat in range(-44,-39.5)'
+      - 'time in 2018-01-20'
+      # - 'time in 2018-01-20' # works
+      - 'lon in range(152.4,152.5)'
+      - 'lat in range(-28,-27.1)'
       # - 'time in [2019-01-01,2019-01-31]'
     resources:
       requests:
@@ -32,12 +34,12 @@ spec:
           name: svc-sandbox-alchemist
           key: AWS_DEFAULT_REGION
     - name: ALCHEMIST_ADDTOQUEUE_MESSAGE_QUEUE
-      value: "alchemist-standard-test"
+      value: "alchemist-standard"
     - name: ALCHEMIST_ADDTOQUEUE_ENVIRONMENT
       value: "datacube"
     - name: ALCHEMIST_ADDTOQUEUE_LIMIT
     # Here's the LIMIT! 
-      value: "2"
+      value: "999999"
     - name: ALCHEMIST_ADDTOQUEUE_CONFIG_FILE
     # Need to add both A and B
       # value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_alex.yaml"

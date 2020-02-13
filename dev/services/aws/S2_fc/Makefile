@@ -1,22 +1,29 @@
 # Do stuff with the queue
 add-to-queue:
-	kubectl create -f fc-addqueue-alextest.yaml
+	kubectl create -f fc-addqueue-dsgtest.yaml
 
 kill-queue:
-	kubectl delete -f fc-addqueue-alextest.yaml
+	kubectl delete -f fc-addqueue-dsgtest.yaml
 
 redo-queue:
 	make kill-queue
 	make add-to-queue
 
+logs:
+	kubectl logs -f fc-addqueue-dsgtest   --namespace=alchemist-processor
+
+getpods:
+	kubectl get pods   --namespace=alchemist-processor
+
+
 deploy-workers:
-	kubectl create -f fc-processqueue-alextest.yaml
+	kubectl create -f sandbox-deployment-processqueue-alchemist.yaml
 
 update-workers:
-	kubectl replace -f fc-processqueue-alextest.yaml
+	kubectl replace -f sandbox-deployment-processqueue-alchemist.yaml
 
 undeploy-workers:
-	kubectl delete -f fc-processqueue-alextest.yaml
+	kubectl delete -f sandbox-deployment-processqueue-alchemist.yaml
 
 # deploy-autoscaler:
 # 	kubectl create -f fc-processqueue-autoscaler-alextest.yaml
