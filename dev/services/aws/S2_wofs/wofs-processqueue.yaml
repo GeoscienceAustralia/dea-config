@@ -6,7 +6,7 @@ metadata:
   labels:
     app: alchemist-processqueue
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: alchemist-processqueue
@@ -35,10 +35,10 @@ spec:
         resources:
           requests:
             cpu: 1.5
-            memory: 3072Mi
+            memory: 6072Mi
           limits:
             cpu: 2.0
-            memory: 4096Mi
+            memory: 8096Mi
         tty: true
         stdin: true
         env:

@@ -24,5 +24,9 @@ deploy-dev:
 undeploy-dev:
 	kubectl delete -f dev-box.yaml
 
+restart-dev:
+	make undeploy-dev
+	make deploy-dev
+
 cmd:
 	kubectl exec -it dev-box /bin/bash --namespace=alchemist-processor
