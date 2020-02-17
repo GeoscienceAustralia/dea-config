@@ -32,7 +32,11 @@ spec:
       value: "datacube"
     - name: ALCHEMIST_ADDTOQUEUE_LIMIT
     # Here's the LIMIT! 
-      value: "2"
+      value: "9000000"
+    - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
+      value: "alchemist-standard"
+    - name: ALCHEMIST_PROCESSQUEUE_SQS_TIMEOUT
+      value: "900"
     - name: ALCHEMIST_ADDTOQUEUE_CONFIG_FILE
     # Need to add both A and B
       # value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_alex.yaml"
