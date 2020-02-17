@@ -14,10 +14,11 @@ spec:
     #args: ["/usr/bin/env", "sleep", "60000"]
     resources:
       requests:
-        cpu: 1
-        memory: 512Mi
+        cpu: 1.5
+        memory: 3072Mi
       limits:
-        memory: 4048Mi
+        cpu: 2
+        memory: 4096Mi
     tty: true
     stdin: true
     env:
