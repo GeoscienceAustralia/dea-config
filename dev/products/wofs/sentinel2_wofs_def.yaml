@@ -10,7 +10,7 @@ metadata:
 
 measurements:
    - name: water
-     dtype: int16
+     dtype: uint8
      nodata: 1
      units: '1'
      flags_definition:
