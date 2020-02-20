@@ -1,4 +1,4 @@
-#datacube product add https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/dsg2/dev/products/wofs/sentinel2_wofs_def.yaml #
+datacube product add https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/dsg2/dev/products/wofs/sentinel2_wofs_def.yaml #
 
 s3-find 's3://dea-public-data-dev/wofs/ga_s2am_wofs_2/54/HUF/2018/01/02/*/*.odc-metadata.yaml'  | s3-to-tar --xz > two_wofls.tar.xz
 dc-index-from-tar --xz --ignore-lineage --eo3 two_wofls.tar.xz
