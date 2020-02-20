@@ -1,6 +1,6 @@
 name: sentinel2_wofs_def
 description: Sentinel 2 Definitive Water Observations from Space
-metadata_type: eo_plus
+metadata_type: eo
 metadata:
     format:
         name: GeoTIFF
