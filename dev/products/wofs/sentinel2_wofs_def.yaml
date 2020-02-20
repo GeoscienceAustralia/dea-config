@@ -1,11 +1,12 @@
 name: sentinel2_wofs_def
 description: Sentinel 2 Definitive Water Observations from Space
-metadata_type: eo
+metadata_type: eo_plus
 metadata:
-    properties:
-      odc:product_family: wofs
-      eo:instrument: MSI
-      odc:file_format: GeoTIFF
+    format:
+        name: GeoTIFF
+    instrument:
+        name: MSI
+    product_type: wofs
 measurements:
    - name: water
      dtype: uint8
