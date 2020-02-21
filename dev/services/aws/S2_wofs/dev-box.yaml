@@ -10,14 +10,16 @@ metadata:
 spec:
   containers:
   - name:  dev-box
-    image: opendatacube/datacube-alchemist:latest
-    args: ["/usr/bin/env", "sleep", "60000"]
+    image: opendatacube/datacube-index:latest
+    #image: opendatacube/datacube-alchemist:latest
+    #args: ["/usr/bin/env", "sleep", "60000"]
     resources:
       requests:
-        cpu: 1
-        memory: 512Mi
+        cpu: 1.5
+        memory: 8072Mi
       limits:
-        memory: 4048Mi
+        cpu: 2
+        memory: 8096Mi
     tty: true
     stdin: true
     env:
@@ -32,7 +34,11 @@ spec:
       value: "datacube"
     - name: ALCHEMIST_ADDTOQUEUE_LIMIT
     # Here's the LIMIT! 
-      value: "2"
+      value: "9000000"
+    - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
+      value: "alchemist-standard"
+    - name: ALCHEMIST_PROCESSQUEUE_SQS_TIMEOUT
+      value: "900"
     - name: ALCHEMIST_ADDTOQUEUE_CONFIG_FILE
     # Need to add both A and B
       # value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_alex.yaml"
@@ -67,6 +73,7 @@ spec:
           key: AWS_SECRET_ACCESS_KEY
     - name: LOG_LEVEL
       value: "INFO"
+    command: ["/bin/sh", "-ec", "docker-entrypoint.sh && while :; do echo '.'; sleep 5 ; done"]
   nodeSelector:
     beta.kubernetes.io/os: linux
   restartPolicy: Never

@@ -16,12 +16,14 @@ specification:
   
 # Warning, no dsm
 # And an example of passing no arguments
-  transform_args: {}
-   
+  transform_args:
+    dsm_path:  's3://dea-non-public-data/dsm/dsm1sv1_0_Clean.tiff'
+    
 output:
-  #location: 's3://dea-sandbox-data-staging/fractional-cover/fc/v2.2.1'
+  location: 's3://dea-dev-sandbox-data-staging/wofs'
   #location: 's3://dea-public-data-dev/alchemist/wofs-s2-alchemist-tests-download'
-  location:  '/home/osboxes/dump/dsg-wofs-oz-S2-testing'
+  #location: 's3://dsg-alchemist-test/alchemist/wofs-s2-alchemist-tests-download'
+  #location:  '/home/osboxes/dump/dsg-wofs-oz-S2-testing'
   dtype: uint8 # single value for all bands
   nodata: 255 # single value for all bands
   #preview_image: [bs, pv, npv]

@@ -1,4 +1,6 @@
-# Do stuff with the queue
+# Do stuff with k8s
+get-pods:
+	kubectl get pods  --namespace=alchemist-processor
 add-to-queue:
 	kubectl create -f wofs-addqueue.yaml
 
@@ -18,11 +20,18 @@ update-workers:
 undeploy-workers:
 	kubectl delete -f wofs-processqueue.yaml
 
+logs:
+	kubectl --namespace=alchemist-processor logs -f $(pod)
+
 deploy-dev:
 	kubectl create -f dev-box.yaml
 
 undeploy-dev:
 	kubectl delete -f dev-box.yaml
 
-get-cmd:
+restart-dev:
+	make undeploy-dev
+	make deploy-dev
+
+cmd:
 	kubectl exec -it dev-box /bin/bash --namespace=alchemist-processor
