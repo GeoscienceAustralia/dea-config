@@ -4729,11 +4729,11 @@ tide_style_list = list([swap_scale_p(s) for s in ls_style_list])
 ###############################################################################################
 # Styling Summary of InSAR:
 # Velocities in mm/yr (for all satellites): -30 (blue) … 0 (white) … + 30 (red)
-# Standard deviation of velocities in mm/yr (for Envisat and Radarsat-2): 0 (white) … +6 (red) 
-# Standard deviation of velocities in mm/yr (for ALOS): 0 (white) … +24 (red)
+# Uncertainty (std-dev) of velocities in mm/yr (for Envisat and Radarsat-2): 0 (white) … +6 (red) 
+# Uncertainty (std-dev) of velocities in mm/yr (for ALOS): 0 (white) … +24 (red)
 # Displacements in mm (for all satellites): -100 (blue) … 0 (white) … + 100 (red)
-# Standard deviation of displacements in mm (for Envisat and Radarsat-2): 0 (white) … +20 (red)
-# Standard deviation of displacements in mm (for ALOS): 0 (white) … +80 (red)
+# Uncertainty (std-dev) of displacements in mm (for Envisat and Radarsat-2): 0 (white) … +20 (red)
+# Uncertainty (std-dev) of displacements in mm (for ALOS): 0 (white) … +80 (red)
 ###############################################################################################
 
 style_insar_velocity = {
@@ -4764,13 +4764,13 @@ style_insar_velocity = {
 
 style_insar_velocity_ud = copy.deepcopy(style_insar_velocity)
 style_insar_velocity_ud["name"] = "insar_velocity_ud"
-style_insar_velocity_ud["title"] = "InSAR Velocity Up-Down"
+style_insar_velocity_ud["title"] = "InSAR Velocity Up-Down "
 style_insar_velocity_ud["needed_bands"] = ["ud"]
 style_insar_velocity_ud["index_function"]["kwargs"]["band"] = "ud"
 
 style_insar_velocity_ew = copy.deepcopy(style_insar_velocity)
 style_insar_velocity_ew["name"] = "insar_velocity_ew"
-style_insar_velocity_ew["title"] = "InSAR Velocity East-West"
+style_insar_velocity_ew["title"] = "InSAR Velocity East-West "
 style_insar_velocity_ew["needed_bands"] = ["ew"]
 style_insar_velocity_ew["index_function"]["kwargs"]["band"] = "ew"
 
@@ -4802,20 +4802,20 @@ style_insar_displacement = {
 
 style_insar_disp_ud = copy.deepcopy(style_insar_displacement)
 style_insar_disp_ud["name"] = "insar_disp_ud"
-style_insar_disp_ud["title"] = "InSAR Displacement Up-Down"
+style_insar_disp_ud["title"] = "InSAR Displacement Up-Down "
 style_insar_disp_ud["needed_bands"] = ["ud"]
 style_insar_disp_ud["index_function"]["kwargs"]["band"] = "ud"
 
 style_insar_disp_ew = copy.deepcopy(style_insar_displacement)
 style_insar_disp_ew["name"] = "insar_disp_ew"
-style_insar_disp_ew["title"] = "InSAR Displacement East-West"
+style_insar_disp_ew["title"] = "InSAR Displacement East-West "
 style_insar_disp_ew["needed_bands"] = ["ew"]
 style_insar_disp_ew["index_function"]["kwargs"]["band"] = "ew"
 
 style_insar_stddev_l = {
     "name": "insar_stddev_l",
-    "title": "InSAR Cumulative Displacement Std-dev",
-    "abstract": "Standard Deviation in mm",
+    "title": "InSAR Cumulative Displacement Uncertainty",
+    "abstract": "Uncertainty in mm",
     "needed_bands": ["disp_std"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -4841,13 +4841,13 @@ style_insar_stddev_l = {
 # Create up-down/east-west varieties using deepcopy
 style_insar_stddev_l_ud = copy.deepcopy(style_insar_stddev_l)
 style_insar_stddev_l_ud["name"] = "insar_disp_ud_std"
-style_insar_stddev_l_ud["title"] = "InSAR Displacement Std-Dev Up-Down"
+style_insar_stddev_l_ud["title"] = "InSAR Displacement Uncertainty Up-Down "
 style_insar_stddev_l_ud["needed_bands"] = ["upstd"]
 style_insar_stddev_l_ud["index_function"]["kwargs"]["band"] = "upstd"
 
 style_insar_stddev_l_ew = copy.deepcopy(style_insar_stddev_l)
 style_insar_stddev_l_ew["name"] = "insar_disp_ew_std"
-style_insar_stddev_l_ew["title"] = "InSAR Displacement Std-Dev East-West"
+style_insar_stddev_l_ew["title"] = "InSAR Displacement Uncertainty East-West "
 style_insar_stddev_l_ew["needed_bands"] = ["ewstd"]
 style_insar_stddev_l_ew["index_function"]["kwargs"]["band"] = "ewstd"
 
@@ -4860,8 +4860,8 @@ style_insar_stddev_c_ew["range"] = [0.0, 20.0]
 
 style_insar_stddev_lv = {
     "name": "insar_stddev_lv",
-    "title": "InSAR Velocity Std-dev",
-    "abstract": "Standard Deviation in mm",
+    "title": "InSAR Velocity Uncertainty",
+    "abstract": "Uncertainty in mm",
     "needed_bands": ["vel_std"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -4887,13 +4887,13 @@ style_insar_stddev_lv = {
 # Create up-down/east-west varieties using deepcopy
 style_insar_stddev_lv_ud = copy.deepcopy(style_insar_stddev_lv)
 style_insar_stddev_lv_ud["name"] = "insar_vel_ud_std"
-style_insar_stddev_lv_ud["title"] = "InSAR Velocity Std-Dev Up-Down"
+style_insar_stddev_lv_ud["title"] = "InSAR Velocity Uncertainty Up-Down "
 style_insar_stddev_lv_ud["needed_bands"] = ["upstd"]
 style_insar_stddev_lv_ud["index_function"]["kwargs"]["band"] = "upstd"
 
 style_insar_stddev_lv_ew = copy.deepcopy(style_insar_stddev_lv)
 style_insar_stddev_lv_ew["name"] = "insar_vel_ew_std"
-style_insar_stddev_lv_ew["title"] = "InSAR Velocity Std-Dev East-West"
+style_insar_stddev_lv_ew["title"] = "InSAR Velocity Uncertainty East-West "
 style_insar_stddev_lv_ew["needed_bands"] = ["ewstd"]
 style_insar_stddev_lv_ew["index_function"]["kwargs"]["band"] = "ewstd"
 
@@ -5113,13 +5113,8 @@ ows_cfg = {
                 "https://ows.services.dev.dea.ga.gov.au",
                 "https://ows.dev.dea.ga.gov.au",
                 "https://ows.dea.ga.gov.au",
-                "https://ows.services.devkube.dea.ga.gov.au",
-                "https://nrt.services.dea.ga.gov.au",
-                "https://geomedian.services.dea.ga.gov.au",
-                "https://geomedianau.dea.ga.gov.au",
-                "https://geomedian.dea.ga.gov.au",
-                "https://nrt.dea.ga.gov.au",
-                "https://nrt-au.dea.ga.gov.au"],
+                "https://nc-ows.dev.dea.ga.gov.au"
+        ],
 
         # Metadata to go straight into GetCapabilities documents
         "title": "Digital Earth Australia - OGC Web Services",
@@ -5970,7 +5965,7 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2a_nrt_granule",
+                    "product_name": "s2b_nrt_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
                     "dynamic": True,
@@ -6015,7 +6010,7 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2b_nrt_granule",
+                    "product_name": "s2a_nrt_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2,
                     "dynamic": True,
