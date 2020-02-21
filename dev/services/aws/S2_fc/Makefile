@@ -1,16 +1,16 @@
 # Do stuff with the queue
 add-to-queue:
-	kubectl create -f fc-addqueue-dsgtest.yaml
+	kubectl create -f fc-addqueue.yaml
 
 kill-queue:
-	kubectl delete -f fc-addqueue-dsgtest.yaml
+	kubectl delete -f fc-addqueue.yaml
 
 redo-queue:
 	make kill-queue
 	make add-to-queue
 
 logs:
-	kubectl logs -f fc-addqueue-dsgtest   --namespace=alchemist-processor
+	kubectl logs -f fc-addqueue   --namespace=alchemist-processor
 
 getpods:
 	kubectl get pods   --namespace=alchemist-processor
