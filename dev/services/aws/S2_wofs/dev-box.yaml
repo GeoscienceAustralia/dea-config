@@ -10,7 +10,8 @@ metadata:
 spec:
   containers:
   - name:  dev-box
-    image: opendatacube/datacube-alchemist:latest
+    image: opendatacube/datacube-index:latest
+    #image: opendatacube/datacube-alchemist:latest
     #args: ["/usr/bin/env", "sleep", "60000"]
     resources:
       requests:
