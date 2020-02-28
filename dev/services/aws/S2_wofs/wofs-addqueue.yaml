@@ -15,13 +15,8 @@ spec:
       - datacube-alchemist
       - addtoqueue
       - 'time in 2018'
-
-      # Note the region code hasn't been added.
-      # I don't know how to add it.
-      # region_code='"56HKH"'
-      # - 'lon in range(144,149)'
-      # - 'lat in range(-44,-39.5)'
-      # - 'time in [2019-01-01,2019-01-31]'
+      # Example of specifying time and region
+      # 'time in 2018 lon in range(144,149) lat in range(-44,-39.5)'
     resources:
       requests:
         cpu: 1
