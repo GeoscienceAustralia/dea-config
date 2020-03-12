@@ -5215,7 +5215,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": False,
+                        "manual_merge": True,
                     },
                     "wcs": {
                         "native_resolution": [25.0, 25.0],
