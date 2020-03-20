@@ -6344,6 +6344,7 @@ While image compositing and masking methods have been applied to remove the majo
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "nidem",
                     "bands": bands_nidem,
+                    "time_resolution": "year",
                     "resource_limits": reslim_nidem,
                     "flags": {
                         "band": "land",
@@ -6416,6 +6417,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "high_tide_comp_20p",
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
+                    "time_resolution": "year",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6459,6 +6461,7 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "low_tide_comp_20p",
+                    "time_resolution": "year",
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
@@ -6537,6 +6540,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "item_v2",
                     "bands": bands_item,
                     "resource_limits": reslim_item,
+                    "time_resolution": "year",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6602,6 +6606,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "item_v2_conf",
                     "bands": bands_item_conf,
                     "resource_limits": reslim_item,
+                    "time_resolution": "year",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                         "always_fetch_bands": [ ],
