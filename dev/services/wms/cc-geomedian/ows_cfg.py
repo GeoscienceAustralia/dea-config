@@ -344,19 +344,14 @@ ows_cfg = {
                 "horizontal_coord": "x",
                 "vertical_coord": "y",
             },
-            "EPSG:32648": {  # Web Mercator
-                "geographic": False,
-                "horizontal_coord": "x",
-                "vertical_coord": "y",
-            },
             "EPSG:4326": {  # WGS-84
                 "geographic": True,
                 "vertical_coord_first": True
             },
-            "EPSG:3577": {  # GDA-94, internal representation
+            "EPSG:32648": {  # WGS 84 / UTM zone 48N
                 "geographic": False,
-                "horizontal_coord": "easting",
-                "vertical_coord": "northing",
+                "horizontal_coord": "x",
+                "vertical_coord": "y",
             },
         },
         "allowed_urls": [
