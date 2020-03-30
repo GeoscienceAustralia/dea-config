@@ -348,10 +348,10 @@ ows_cfg = {
                 "geographic": True,
                 "vertical_coord_first": True
             },
-            "EPSG:3577": {  # GDA-94, internal representation
+            "EPSG:32648": {  # WGS 84 / UTM zone 48N
                 "geographic": False,
-                "horizontal_coord": "easting",
-                "vertical_coord": "northing",
+                "horizontal_coord": "x",
+                "vertical_coord": "y",
             },
         },
         "allowed_urls": [
@@ -440,8 +440,9 @@ ows_cfg = {
                                 "manual_merge": True,
                             },
                             "wcs": {
+                                "native_crs": "EPSG:32648",
                                 "native_resolution": [25.0, 25.0],
-                                "default_bands": ["red", "green", "blue"]
+                                "default_bands": ["red", "green", "blue"],
                             },
                             "styling": {
                                 "default_style": "simple_rgb",
@@ -462,7 +463,7 @@ Water Observations from Space (WOfS) for Cambodia based pn USGS level 2 landsat 
 WOfS is produced by using a water classifier to classify when water is observed on the ground surface, next the presence of water is divided by the total observations to create a percentage of water presence over all observations. 
 The WOfS layer was calculated with the datacube-stats.""",
                             "product_name": "wofs_grids_1987_2017",
-                            "bands": bands_ls,
+                            "bands": bands_wofs,
                             "resource_limits": reslim_cambodia,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -470,8 +471,9 @@ The WOfS layer was calculated with the datacube-stats.""",
                                 "manual_merge": True,
                             },
                             "wcs": {
+                                "native_crs": "EPSG:32648",
                                 "native_resolution": [25.0, 25.0],
-                                "default_bands": ["wofs"]
+                                "default_bands": ["wofs"],
                             },
                             "styling": {
                                 "default_style": "WOfS_frequency",
