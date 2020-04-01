@@ -15,22 +15,9 @@
    },
    "catalog": [
       {
-         "name": "GSKY DEA Functional Testing",
-         "type": "group",
-         "preserveOrder": true,
-         "items": [
-            {
-               "name": "Blended service",
-               "type": "wms",
-               "url": "http://130.56.242.6/ows/fusion",
-               "layers": "blended",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
-            }
-         ]
+         "name": "GSKY DEA Collection 3 Beta",
+         "type": "wms-getCapabilities",
+         "url": "http://gsky.nci.org.au/ows/beta-dea"
       },
       {
          "name": "GSKY Blended Service",
