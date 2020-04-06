@@ -140,7 +140,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfs April to October Statistics)",
@@ -152,7 +156,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfs April to October Statistics)",
@@ -164,7 +172,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Wet Count (WOfs November to March Statistics)",
@@ -176,7 +188,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfs November to March Statistics)",
@@ -188,7 +204,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfs November to March Statistics)",
@@ -200,7 +220,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   },
@@ -219,7 +243,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfs Annual Statistics)",
@@ -231,7 +259,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfs Annual Statistics)",
@@ -243,7 +275,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   },
@@ -262,7 +298,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
@@ -274,7 +314,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
@@ -286,7 +330,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
@@ -298,7 +346,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
@@ -310,7 +362,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   }
@@ -342,6 +398,10 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   },
                   {
@@ -365,6 +425,10 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   },
                   {
@@ -388,6 +452,10 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   }
                ]
@@ -418,6 +486,10 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   },
                   {
@@ -440,6 +512,10 @@
                               "maximumFractionDigits": 5
                            }
                         }
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   }
                ]
@@ -649,7 +725,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "featureTimesProperty": "data_available_for_dates"
+                           "featureTimesProperty": "data_available_for_dates"                       
                         },
                         {
                            "name": "Fractional Cover Landsat 7",
@@ -702,7 +778,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Fractional Cover Percentiles - Green Vegetation",
@@ -714,7 +794,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Fractional Cover Percentiles - Non-Green Vegetation",
@@ -726,7 +810,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Fractional Cover Percentiles - Bare Soil",
@@ -738,7 +826,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   },
@@ -814,7 +906,11 @@
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "National Intertidal Digital Elevation Model",
@@ -826,7 +922,11 @@
                      "ignoreUnknownTileErrors": true,
                      "useOwnClock": true,
                      "availableDimensions": [],
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
@@ -836,7 +936,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "high_tide_composite",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
@@ -846,7 +950,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "low_tide_composite",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
@@ -856,7 +964,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
@@ -866,7 +978,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             },
@@ -883,7 +999,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "weathering_intensity",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             },
@@ -900,7 +1020,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "multi_scale_topographic_position",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             },
@@ -917,7 +1041,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls8_nbart_tmad_annual",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "ls7_nbart_tmad_annual",
@@ -927,7 +1055,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls7_nbart_tmad_annual",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "ls5_nbart_tmad_annual",
@@ -937,7 +1069,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ls5_nbart_tmad_annual",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             },
@@ -954,7 +1090,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "historical_airborne_photography",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             },
@@ -971,7 +1111,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_false_colour",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }                     
                   },
                   {
                      "name": "Regolith Ratios",
@@ -981,7 +1125,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_regolith_ratios",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Green Vegetation Content",
@@ -991,7 +1139,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_green_vegetation",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Ferric Oxide Content",
@@ -1001,7 +1153,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferric_oxide_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Ferric Oxide Composition",
@@ -1011,7 +1167,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferric_oxide_composition",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Ferrous Iron Index",
@@ -1021,7 +1181,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferrous_iron_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Opaque Index",
@@ -1031,7 +1195,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_opaque_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "AlOH Group Content",
@@ -1041,7 +1209,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_aloh_group_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "AlOH Group Composition",
@@ -1051,7 +1223,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_aloh_group_composition",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Kaolin Group Index",
@@ -1071,7 +1247,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_feoh_group_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "MgOH Group Content",
@@ -1081,7 +1261,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_mgoh_group_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "MgOH Group Composition",
@@ -1091,7 +1275,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_mgoh_group_composition",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Ferrous Iron Content in MgOH/Carbonate",
@@ -1101,7 +1289,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferrous_iron_content_in_mgoh",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "TIR Silica index",
@@ -1111,7 +1303,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_silica_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "TIR Quartz Index",
@@ -1121,7 +1317,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_quartz_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Gypsum Index",
@@ -1131,7 +1331,11 @@
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_gypsum_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             }
@@ -1182,7 +1386,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfs April to October Statistics)",
@@ -1194,7 +1402,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfs April to October Statistics)",
@@ -1206,7 +1418,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Wet Count (WOfs November to March Statistics)",
@@ -1218,7 +1434,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfs November to March Statistics)",
@@ -1230,7 +1450,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfs November to March Statistics)",
@@ -1242,7 +1466,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   },
@@ -1261,7 +1489,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
@@ -1273,7 +1505,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfS Annual Statistics)",
@@ -1285,7 +1521,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   },
@@ -1302,7 +1542,11 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary",
                            "ignoreUnknownTileErrors": true,
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
@@ -1312,7 +1556,11 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_wet",
                            "ignoreUnknownTileErrors": true,
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
@@ -1322,7 +1570,11 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_summary_clear",
                            "ignoreUnknownTileErrors": true,
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
@@ -1332,7 +1584,11 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "Water Observations from Space Statistics",
                            "ignoreUnknownTileErrors": true,
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Water Observations from Space 25m Confidence (WOfs Filtered Statistics)",
@@ -1342,7 +1598,11 @@
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_filtered_summary_confidence",
                            "ignoreUnknownTileErrors": true,
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   }
@@ -1374,7 +1634,11 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
-                     }
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }                     
                   },
                   {
                      "name": "Surface Reflectance (Landsat 7)",
@@ -1397,6 +1661,10 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   },
                   {
@@ -1420,6 +1688,10 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   }
                ]
@@ -1450,6 +1722,10 @@
                            }
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   },
                   {
@@ -1472,6 +1748,10 @@
                               "maximumFractionDigits": 5
                            }
                         }
+                     },
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
                      }
                   }
                ]
@@ -1721,7 +2001,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Fractional Cover Percentiles - Green Vegetation",
@@ -1733,7 +2017,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Fractional Cover Percentiles - Non-Green Vegetation",
@@ -1745,7 +2033,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         },
                         {
                            "name": "Fractional Cover Percentiles - Bare Soil",
@@ -1757,7 +2049,11 @@
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
-                           "opacity": 1
+                           "opacity": 1,
+                           "dateFormat": {
+                              "currentTime": "'Year: 'yyyy",
+                              "timelineTic": "yyyy"
+                           }
                         }
                      ]
                   },
@@ -1833,7 +2129,11 @@
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "National Intertidal Digital Elevation Model",
@@ -1843,7 +2143,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "NIDEM",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
@@ -1853,7 +2157,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "high_tide_composite",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
@@ -1863,7 +2171,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "low_tide_composite",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
@@ -1873,7 +2185,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
@@ -1883,7 +2199,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             },
@@ -1900,7 +2220,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "weathering_intensity",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }                     
                   }
                ]
             },
@@ -1917,7 +2241,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "multi_scale_topographic_position",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }                     
                   }
                ]
             },
@@ -1934,7 +2262,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_false_colour",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Regolith Ratios",
@@ -1944,7 +2276,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_regolith_ratios",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Green Vegetation Content",
@@ -1954,7 +2290,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_green_vegetation",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Ferric Oxide Content",
@@ -1964,7 +2304,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferric_oxide_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Ferric Oxide Composition",
@@ -1984,7 +2328,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_ferrous_iron_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Opaque Index",
@@ -1994,7 +2342,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_opaque_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "AlOH Group Content",
@@ -2004,7 +2356,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_aloh_group_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "AlOH Group Composition",
@@ -2014,7 +2370,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_aloh_group_composition",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Kaolin Group Index",
@@ -2024,7 +2384,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_kaolin_group_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "FeOH Group Content",
@@ -2034,7 +2398,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_feoh_group_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "MgOH Group Content",
@@ -2044,7 +2412,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_mgoh_group_content",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "MgOH Group Composition",
@@ -2054,7 +2426,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_mgoh_group_composition",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Ferrous Iron Content in MgOH/Carbonate",
@@ -2074,7 +2450,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_silica_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "TIR Quartz Index",
@@ -2084,7 +2464,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_quartz_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   },
                   {
                      "name": "Gypsum Index",
@@ -2094,7 +2478,11 @@
                      "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                      "linkedWcsCoverage": "aster_gypsum_index",
                      "ignoreUnknownTileErrors": true,
-                     "opacity": 1
+                     "opacity": 1,
+                     "dateFormat": {
+                        "currentTime": "'Year: 'yyyy",
+                        "timelineTic": "yyyy"
+                     }
                   }
                ]
             }
