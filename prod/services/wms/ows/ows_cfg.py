@@ -4793,18 +4793,15 @@ ows_cfg = {
             },
         },
         "allowed_urls": [
-                "http://ows-configrefactor.dev.dea.ga.gov.au",
                 "https://ows.services.dea.ga.gov.au",
-                "https://ows.services.dev.dea.ga.gov.au",
-                "https://ows.dev.dea.ga.gov.au",
                 "https://ows.dea.ga.gov.au",
-                "https://ows.services.devkube.dea.ga.gov.au",
                 "https://nrt.services.dea.ga.gov.au",
                 "https://geomedian.services.dea.ga.gov.au",
                 "https://geomedianau.dea.ga.gov.au",
                 "https://geomedian.dea.ga.gov.au",
                 "https://nrt.dea.ga.gov.au",
-                "https://nrt-au.dea.ga.gov.au"],
+                "https://nrt-au.dea.ga.gov.au"
+        ],
 
         # Metadata to go straight into GetCapabilities documents
         "title": "Digital Earth Australia - OGC Web Services",
