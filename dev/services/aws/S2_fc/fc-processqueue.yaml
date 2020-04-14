@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fc-alchemist-processqueue-dsgtest
+  name: fc-alchemist-processqueue
   namespace: alchemist-processor
   labels:
-    app: fc-alchemist-processqueue-dsgtest
+    app: fc-alchemist-processqueue
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: fc-alchemist-processqueue-dsgtest
+      app: fc-alchemist-processqueue
   template:
     metadata:
       annotations:
         iam.amazonaws.com/role: svc-sandbox-alchemist
       labels:
-        app: fc-alchemist-processqueue-dsgtest
+        app: fc-alchemist-processqueue
     spec:
       nodeSelector:
         beta.kubernetes.io/os: linux
@@ -43,7 +43,7 @@ spec:
         stdin: true
         env:
         - name: ALCHEMIST_PROCESSQUEUE_MESSAGE_QUEUE
-          value: "alchemist-standard-test"
+          value: "alchemist-standard"
         - name: ALCHEMIST_PROCESSQUEUE_SQS_TIMEOUT
           value: "900"
         - name: AWS_DEFAULT_REGION

@@ -4793,12 +4793,8 @@ ows_cfg = {
             },
         },
         "allowed_urls": [
-                "http://ows-configrefactor.dev.dea.ga.gov.au",
                 "https://ows.services.dea.ga.gov.au",
-                "https://ows.services.dev.dea.ga.gov.au",
-                "https://ows.dev.dea.ga.gov.au",
                 "https://ows.dea.ga.gov.au",
-                "https://ows.services.devkube.dea.ga.gov.au",
                 "https://nrt.services.dea.ga.gov.au",
                 "https://geomedian.services.dea.ga.gov.au",
                 "https://geomedianau.dea.ga.gov.au",
@@ -5811,7 +5807,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2a_ard_granule",
+                    "product_name": "s2b_ard_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2_ard,
                     "image_processing": {
@@ -5844,7 +5840,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                     "abstract": """
 	This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2b_ard_granule",
+                    "product_name": "s2a_ard_granule",
                     "bands": bands_sentinel2,
                     "resource_limits": reslim_s2_ard,
                     "image_processing": {
@@ -6344,6 +6340,7 @@ While image compositing and masking methods have been applied to remove the majo
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "nidem",
                     "bands": bands_nidem,
+                    "time_resolution": "year",
                     "resource_limits": reslim_nidem,
                     "flags": {
                         "band": "land",
@@ -6416,6 +6413,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "high_tide_comp_20p",
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
+                    "time_resolution": "year",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6459,6 +6457,7 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "low_tide_comp_20p",
+                    "time_resolution": "year",
                     "bands": bands_ls,
                     "resource_limits": reslim_landsat,
                     "image_processing": {
@@ -6537,6 +6536,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "item_v2",
                     "bands": bands_item,
                     "resource_limits": reslim_item,
+                    "time_resolution": "year",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6602,6 +6602,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "item_v2_conf",
                     "bands": bands_item_conf,
                     "resource_limits": reslim_item,
+                    "time_resolution": "year",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                         "always_fetch_bands": [ ],

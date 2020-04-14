@@ -14,9 +14,9 @@ spec:
     args:
       - datacube-alchemist
       - addtoqueue
-      # - 'lon in range(144,149)'
-      # - 'lat in range(-44,-39.5)'
-      # - 'time in [2019-01-01,2019-01-31]'
+      - 'time in 2018'
+      # Example of specifying time and region
+      # 'time in 2018 lon in range(144,149) lat in range(-44,-39.5)'
     resources:
       requests:
         cpu: 1
@@ -32,7 +32,7 @@ spec:
           name: svc-sandbox-alchemist
           key: AWS_DEFAULT_REGION
     - name: ALCHEMIST_ADDTOQUEUE_MESSAGE_QUEUE
-      value: "alchemist-standard-test"
+      value: "alchemist-standard"
     - name: ALCHEMIST_ADDTOQUEUE_ENVIRONMENT
       value: "datacube"
     - name: ALCHEMIST_ADDTOQUEUE_LIMIT
@@ -40,8 +40,8 @@ spec:
       value: "2"
     - name: ALCHEMIST_ADDTOQUEUE_CONFIG_FILE
     # Need to add both A and B
-      # value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_alex.yaml"
-      value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_dsg_test.yaml"
+      # value: "https://raw.githubusercontent.com/opendatacube/datacube-alchemist/master/examples/fc_config_sentinel2a_dsg_test.yaml"
+      value: "https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/dev/services/aws/S2_wofs/alchem_S2a_wofs_dsm.yaml"
     - name: DB_USERNAME
       valueFrom:
         secretKeyRef:
