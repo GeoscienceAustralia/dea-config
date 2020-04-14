@@ -15,15 +15,48 @@
    },
    "catalog": [
       {
-         "name": "GSKY DEA Functional Testing",
-         "type": "group",
+         "name": "GSKY DEA Collection 3 Beta",
+	 "type": "group",
          "preserveOrder": true,
          "items": [
             {
-               "name": "Blended service",
+               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance (Beta)",
                "type": "wms",
-               "url": "http://130.56.242.6/ows/fusion",
-               "layers": "blended",
+               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "layers": "blend_sentinel2_landsat_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            },
+	    {
+               "name": "Landsat 8 Daily",
+               "type": "wms",
+               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            },
+	    {
+               "name": "Landsat 7 Daily",
+               "type": "wms",
+               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "layers": "landsat7_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            },
+	    {
+               "name": "Landsat 5 Daily",
+               "type": "wms",
+               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "layers": "landsat5_nbart_daily",
                "ignoreUnknownTileErrors": true,
                "chartType": "momentPoints",
                "chartColor": "white",
@@ -41,18 +74,7 @@
                "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance true colour (Beta)",
                "type": "wms",
                "url": "https://gsky.nci.org.au/ows/dea",
-               "layers": "blend_sentinel2_landsat_nbart_daily_true_colour",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
-            },
-            {
-               "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance false colour (Beta)",
-               "type": "wms",
-               "url": "https://gsky.nci.org.au/ows/dea",
-               "layers": "blend_sentinel2_landsat_nbart_daily_false_colour",
+               "layers": "blend_sentinel2_landsat_nbart_daily",
                "ignoreUnknownTileErrors": true,
                "chartType": "momentPoints",
                "chartColor": "white",
