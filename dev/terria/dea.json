@@ -2489,60 +2489,6 @@
          ]
       },
       {
-         "name": "Cambodia Development",
-         "type": "group",
-         "preserveOrder": true,
-         "items": [
-            {
-               "name": "Cambodia Geomedian Surface Reflectance (Level 2)",
-               "type": "wms",
-               "layers": "ls_level2_geomedian_annual",
-               "url": "https://cambodiacube.dev.dea.ga.gov.au/",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1
-            },
-             {
-               "name": "Cambodia Water Observation from Space 30m (WOfS)",
-               "type": "wms",
-               "layers": "cambodia_wofs",
-               "url": "https://cambodiacube.dev.dea.ga.gov.au/",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1
-            }
-         ]   
-      },
-      {
-         "name": "Cambodia Production",
-         "type": "group",
-         "preserveOrder": true,
-         "items": [
-            {
-               "name": "Cambodia Geomedian Surface Reflectance (Level 2)",
-               "type": "wms",
-               "layers": "ls_level2_geomedian_annual",
-               "url": "https://cambodiacube.dea.ga.gov.au/",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1
-            },
-             {
-               "name": "Cambodia Water Observation from Space 30m (WOfS)",
-               "type": "wms",
-               "layers": "cambodia_wofs",
-               "url": "https://cambodiacube.dea.ga.gov.au/",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1
-            }
-         ]   
-      },
-      {
          "name": "Hotspots",
          "type": "group",
          "preserveOrder": true,

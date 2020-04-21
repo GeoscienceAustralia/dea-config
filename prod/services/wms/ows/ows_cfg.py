@@ -4800,7 +4800,8 @@ ows_cfg = {
                 "https://geomedianau.dea.ga.gov.au",
                 "https://geomedian.dea.ga.gov.au",
                 "https://nrt.dea.ga.gov.au",
-                "https://nrt-au.dea.ga.gov.au"],
+                "https://nrt-au.dea.ga.gov.au"
+        ],
 
         # Metadata to go straight into GetCapabilities documents
         "title": "Digital Earth Australia - OGC Web Services",
