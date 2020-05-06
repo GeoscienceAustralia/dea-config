@@ -2552,6 +2552,14 @@
                   "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                }
             },
+	    {
+               "name": "DEA Ramsar Wetlands Insight Tool v3.0",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/ramsar_wetlands_3577_20190403.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " {{WETLAND_NA}} in {{STATE}}, reference {{REFCODE}} in the Ramsar Wetlands of Australia catalogue as at 2020-03-19.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{REFCODE}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{REFCODE}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{REFCODE}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               }
+            },	 
             {
                "name": "DEA MDBA Wetlands Insight Tool v1.0",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/SEA_2018_survey_envelopes.geojson",
