@@ -11,4 +11,5 @@ https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/prod/pro
 
 # Dependants
 
-[Datacube ECS](https://github.com/opendatacube/datacube-ecs) - Containerised Web Services for DEA
+[Datacube EKS](https://github.com/opendatacube/datacube-k8s-eks) - Containerised Web Services for DEA running on
+AWS EKS.
