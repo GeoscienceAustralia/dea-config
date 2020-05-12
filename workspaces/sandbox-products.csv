@@ -1,4 +1,4 @@
-camden_insar_alos_displacement
+camden_insar_alos_displacement,https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/develop/digitalearthau/config/products/cemp_insar_alos_displacement.yaml,s3://dea-public-data/cemp_insar/insar/displacement/alos/
 fc_percentile_albers_annual
 fc_percentile_albers_seasonal
 ga_ls5t_ard_3
