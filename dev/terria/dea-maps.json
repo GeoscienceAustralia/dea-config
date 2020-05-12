@@ -1074,7 +1074,7 @@
                ]
             },
             {
-               "name": "Low tide satelitte images",
+               "name": "Low tide satellite images",
                "type": "group",
                "preserveOrder": true,
                "items": [
@@ -1122,7 +1122,7 @@
                ]
             },
             {
-               "name": "High tide satelitte images",
+               "name": "High tide satellite images",
                "type": "group",
                "preserveOrder": true,
                "items": [
