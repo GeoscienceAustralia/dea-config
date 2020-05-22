@@ -63,7 +63,7 @@
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             },
-	    {
+            {
                "name": "Landsat 8 16-day composite",
                "type": "wms",
                "url": "http://gsky.nci.org.au/ows/beta-dea",
@@ -74,7 +74,7 @@
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             },
-	    {
+            {
                "name": "Landsat 7 16-day composite",
                "type": "wms",
                "url": "http://gsky.nci.org.au/ows/beta-dea",
@@ -85,7 +85,7 @@
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             },
-	    {
+            {
                "name": "Landsat 5 16-day composite",
                "type": "wms",
                "url": "http://gsky.nci.org.au/ows/beta-dea",
