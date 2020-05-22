@@ -62,6 +62,39 @@
                "chartColor": "white",
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
+            },
+            {
+               "name": "Landsat 8 16-day composite",
+               "type": "wms",
+               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "layers": "landsat8_nbart_16day",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            },
+            {
+               "name": "Landsat 7 16-day composite",
+               "type": "wms",
+               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "layers": "landsat7_nbart_16day",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
+            },
+            {
+               "name": "Landsat 5 16-day composite",
+               "type": "wms",
+               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "layers": "landsat5_nbart_16day",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureTimesProperty": "data_available_for_dates"
             }
          ]
       },
