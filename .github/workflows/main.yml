@@ -4,6 +4,10 @@ on:
   push:
     paths:
       - 'dev/terria/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'dev/terria/**'
 
 jobs:
   build:
