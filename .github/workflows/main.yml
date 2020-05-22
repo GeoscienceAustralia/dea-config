@@ -1,4 +1,4 @@
-name : Deploy Terria Config
+name : Terria Config
 
 on:
   push:
