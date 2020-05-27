@@ -568,6 +568,7 @@
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
+                     "supportsDeltaComparison": true,
                      "opacity": 1,
                      "featureInfoTemplate": {
                         "formats": {
@@ -591,6 +592,7 @@
                      "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
+                     "supportsDeltaComparison": true,
                      "chartColor": "white",
                      "opacity": 1,
                      "featureInfoTemplate": {
@@ -613,6 +615,7 @@
                      "url": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
+                     "supportsDeltaComparison": true,
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
@@ -644,6 +647,7 @@
                      "url": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2_nrt_granule_nbar_t",
+                     "supportsDeltaComparison": true,
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
@@ -668,6 +672,7 @@
                      "url": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2a_nrt_granule_nbar_t",
+                     "supportsDeltaComparison": true,
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
@@ -692,6 +697,7 @@
                      "url": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                      "linkedWcsCoverage": "s2b_nrt_granule_nbar_t",
+                     "supportsDeltaComparison": true,
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
@@ -758,7 +764,7 @@
                            "chartType": "momentPoints",
                            "chartColor": "white",
                            "opacity": 1,
-                           "featureTimesProperty": "data_available_for_dates"                       
+                           "featureTimesProperty": "data_available_for_dates"
                         },
                         {
                            "name": "Fractional Cover Landsat 7",
@@ -1148,7 +1154,7 @@
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
                         "timelineTic": "yyyy"
-                     }                     
+                     }
                   },
                   {
                      "name": "Regolith Ratios",
@@ -1671,7 +1677,7 @@
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
                         "timelineTic": "yyyy"
-                     }                     
+                     }
                   },
                   {
                      "name": "Surface Reflectance (Landsat 7)",
@@ -2257,7 +2263,7 @@
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
                         "timelineTic": "yyyy"
-                     }                     
+                     }
                   }
                ]
             },
@@ -2278,7 +2284,7 @@
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
                         "timelineTic": "yyyy"
-                     }                     
+                     }
                   }
                ]
             },
@@ -2542,7 +2548,7 @@
                "ignoreUnknownTileErrors": true,
                "opacity": 1
             }
-         ]   
+         ]
       },
       {
          "name": "DEA Shapes",
@@ -2576,7 +2582,7 @@
                "featureInfoTemplate": {
                   "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                }
-            },	 
+            },
             {
                "name": "DEA Wetlands Insight Tool v2.0",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/ramsar_wetlands_2018_exploded_WGS84.geojson",
@@ -2592,7 +2598,7 @@
                "featureInfoTemplate": {
                   "template": " {{WETLAND_NA}} in {{STATE}}, reference {{REFCODE}} in the Ramsar Wetlands of Australia catalogue as at 2020-03-19.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                }
-            },	 
+            },
             {
                "name": "DEA MDBA Wetlands Insight Tool v1.0",
                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/SEA_2018_survey_envelopes.geojson",
@@ -2607,7 +2613,7 @@
                "type": "geojson",
                "featureInfoTemplate": {
                   "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
-               }	    
+               }
             },
             {
                "name": "DEA WIT QLD Lacustrine v1.0",
@@ -2615,8 +2621,8 @@
                "type": "geojson",
                "featureInfoTemplate": {
                   "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
-               }	    
-            },		 
+               }
+            },
 	    {
               "name": "Summer Irrigation Insight Tool",
 	      "type": "group",
