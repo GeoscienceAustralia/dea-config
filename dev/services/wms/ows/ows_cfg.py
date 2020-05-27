@@ -2210,35 +2210,31 @@ style_s2_nbr = {
     "needed_bands": ["nbart_nir_1", "nbart_swir_3"],
     "color_ramp": [
         {
-            "value": -1.0,
+            "value": -0.8,
             "color": "#67001F",
             "alpha": 0.0
         },
         {
-            "value": -1.0,
-            "color": "#67001F",
+            "value": -0.5,
+            "color": "#B2182B",
             "legend": {
-                "label": "<-1"
+                "label": "1>"
             }
         },
         {
-            "value": -0.8,
-            "color": "#B2182B"
-        },
-        {
-            "value": -0.6,
+            "value": -0.4,
             "color": "#D6604D"
         },
         {
-            "value": -0.4,
+            "value": -0.2,
             "color": "#F4A582"
         },
         {
-            "value": -0.2,
+            "value": -0.1,
             "color": "#FDDBC7"
         },
         {
-            "value": 0.0,
+            "value": 0,
             "color": "#F7F7F7",
             "legend": {
                 "label": "0"
@@ -2257,7 +2253,7 @@ style_s2_nbr = {
             "color": "#4393C3"
         },
         {
-            "value": 0.8,
+            "value": 0.9,
             "color": "#2166AC"
         },
         {
