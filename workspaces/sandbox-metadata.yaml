@@ -1,0 +1,1167 @@
+dataset:
+    creation_dt:
+    - creation_dt
+    format:
+    - format
+    - name
+    grid_spatial:
+    - grid_spatial
+    - projection
+    id:
+    - id
+    label:
+    - ga_label
+    measurements:
+    - image
+    - bands
+    search_fields:
+        instrument:
+            description: Instrument name
+            offset:
+            - instrument
+            - name
+        lat:
+            description: Latitude range
+            max_offset:
+            -   - extent
+                - coord
+                - ur
+                - lat
+            -   - extent
+                - coord
+                - lr
+                - lat
+            -   - extent
+                - coord
+                - ul
+                - lat
+            -   - extent
+                - coord
+                - ll
+                - lat
+            min_offset:
+            -   - extent
+                - coord
+                - ur
+                - lat
+            -   - extent
+                - coord
+                - lr
+                - lat
+            -   - extent
+                - coord
+                - ul
+                - lat
+            -   - extent
+                - coord
+                - ll
+                - lat
+            type: double-range
+        lon:
+            description: Longitude range
+            max_offset:
+            -   - extent
+                - coord
+                - ul
+                - lon
+            -   - extent
+                - coord
+                - ur
+                - lon
+            -   - extent
+                - coord
+                - ll
+                - lon
+            -   - extent
+                - coord
+                - lr
+                - lon
+            min_offset:
+            -   - extent
+                - coord
+                - ul
+                - lon
+            -   - extent
+                - coord
+                - ur
+                - lon
+            -   - extent
+                - coord
+                - ll
+                - lon
+            -   - extent
+                - coord
+                - lr
+                - lon
+            type: double-range
+        platform:
+            description: Platform code
+            offset:
+            - platform
+            - code
+        product_type:
+            description: Product code
+            offset:
+            - product_type
+        time:
+            description: Acquisition time
+            max_offset:
+            -   - extent
+                - to_dt
+            -   - extent
+                - center_dt
+            min_offset:
+            -   - extent
+                - from_dt
+            -   - extent
+                - center_dt
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: 'Earth Observation datasets.
+
+
+    Expected metadata structure produced by the eodatasets library, as used internally
+    at GA.
+
+
+    https://github.com/GeoscienceAustralia/eo-datasets
+
+    '
+name: eo
+---
+dataset:
+    creation_dt:
+    - properties
+    - odc:processing_datetime
+    format:
+    - properties
+    - odc:file_format
+    grid_spatial:
+    - grid_spatial
+    - projection
+    id:
+    - id
+    label:
+    - label
+    measurements:
+    - measurements
+    search_fields:
+        dataset_maturity:
+            description: One of - final|interim|nrt  (near real time)
+            indexed: false
+            offset:
+            - properties
+            - dea:dataset_maturity
+        instrument:
+            description: Instrument name
+            indexed: false
+            offset:
+            - properties
+            - eo:instrument
+        lat:
+            description: Latitude range
+            max_offset:
+            -   - extent
+                - lat
+                - end
+            min_offset:
+            -   - extent
+                - lat
+                - begin
+            type: double-range
+        lon:
+            description: Longitude range
+            max_offset:
+            -   - extent
+                - lon
+                - end
+            min_offset:
+            -   - extent
+                - lon
+                - begin
+            type: double-range
+        platform:
+            description: Platform code
+            indexed: false
+            offset:
+            - properties
+            - eo:platform
+        product_family:
+            description: Product family code
+            indexed: false
+            offset:
+            - properties
+            - odc:product_family
+        region_code:
+            description: "Spatial reference code from the provider. For Landsat region_code\
+                \ is a scene path row:\n        '{:03d}{:03d}.format(path,row)'.\n\
+                For Sentinel it is MGRS code. In general it is a unique string identifier\
+                \ that datasets covering roughly the same spatial region share.\n"
+            offset:
+            - properties
+            - odc:region_code
+        time:
+            description: Acquisition time range
+            max_offset:
+            -   - properties
+                - dtr:end_datetime
+            -   - properties
+                - datetime
+            min_offset:
+            -   - properties
+                - dtr:start_datetime
+            -   - properties
+                - datetime
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: Default EO3 with no custom fields
+name: eo3
+---
+dataset:
+    creation_dt:
+    - properties
+    - odc:processing_datetime
+    format:
+    - properties
+    - odc:file_format
+    grid_spatial:
+    - grid_spatial
+    - projection
+    id:
+    - id
+    label:
+    - label
+    measurements:
+    - measurements
+    search_fields:
+        cloud_cover:
+            description: Cloud cover percentage [0, 100]
+            offset:
+            - properties
+            - eo:cloud_cover
+            type: double
+        dataset_maturity:
+            description: One of - final|interim|nrt  (near real time)
+            offset:
+            - properties
+            - dea:dataset_maturity
+        eo_gsd:
+            description: Ground sample distance, meters
+            indexed: false
+            offset:
+            - properties
+            - eo:gsd
+            type: double
+        eo_sun_azimuth:
+            description: 'TODO: <eo:sun_azimuth>'
+            indexed: false
+            offset:
+            - properties
+            - eo:sun_azimuth
+            type: double
+        eo_sun_elevation:
+            description: 'TODO: <eo:sun_elevation>'
+            indexed: false
+            offset:
+            - properties
+            - eo:sun_elevation
+            type: double
+        fmask_clear:
+            description: 'TODO: <fmask:clear>'
+            indexed: false
+            offset:
+            - properties
+            - fmask:clear
+            type: double
+        fmask_cloud_shadow:
+            description: 'TODO: <fmask:cloud_shadow>'
+            indexed: false
+            offset:
+            - properties
+            - fmask:cloud_shadow
+            type: double
+        fmask_snow:
+            description: 'TODO: <fmask:snow>'
+            indexed: false
+            offset:
+            - properties
+            - fmask:snow
+            type: double
+        fmask_water:
+            description: 'TODO: <fmask:water>'
+            indexed: false
+            offset:
+            - properties
+            - fmask:water
+            type: double
+        gqa:
+            description: GQA Circular error probable (90%)
+            offset:
+            - properties
+            - gqa:cep90
+            type: double
+        gqa_abs_iterative_mean_x:
+            description: 'TODO: <gqa:abs_iterative_mean_x>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:abs_iterative_mean_x
+            type: double
+        gqa_abs_iterative_mean_xy:
+            description: 'TODO: <gqa:abs_iterative_mean_xy>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:abs_iterative_mean_xy
+            type: double
+        gqa_abs_iterative_mean_y:
+            description: 'TODO: <gqa:abs_iterative_mean_y>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:abs_iterative_mean_y
+            type: double
+        gqa_abs_x:
+            description: 'TODO: <gqa:abs_x>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:abs_x
+            type: double
+        gqa_abs_xy:
+            description: 'TODO: <gqa:abs_xy>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:abs_xy
+            type: double
+        gqa_abs_y:
+            description: 'TODO: <gqa:abs_y>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:abs_y
+            type: double
+        gqa_cep90:
+            description: 'TODO: <gqa:cep90>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:cep90
+            type: double
+        gqa_iterative_mean_x:
+            description: 'TODO: <gqa:iterative_mean_x>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:iterative_mean_x
+            type: double
+        gqa_iterative_mean_xy:
+            description: 'TODO: <gqa:iterative_mean_xy>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:iterative_mean_xy
+            type: double
+        gqa_iterative_mean_y:
+            description: 'TODO: <gqa:iterative_mean_y>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:iterative_mean_y
+            type: double
+        gqa_iterative_stddev_x:
+            description: 'TODO: <gqa:iterative_stddev_x>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:iterative_stddev_x
+            type: double
+        gqa_iterative_stddev_xy:
+            description: 'TODO: <gqa:iterative_stddev_xy>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:iterative_stddev_xy
+            type: double
+        gqa_iterative_stddev_y:
+            description: 'TODO: <gqa:iterative_stddev_y>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:iterative_stddev_y
+            type: double
+        gqa_mean_x:
+            description: 'TODO: <gqa:mean_x>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:mean_x
+            type: double
+        gqa_mean_xy:
+            description: 'TODO: <gqa:mean_xy>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:mean_xy
+            type: double
+        gqa_mean_y:
+            description: 'TODO: <gqa:mean_y>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:mean_y
+            type: double
+        gqa_stddev_x:
+            description: 'TODO: <gqa:stddev_x>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:stddev_x
+            type: double
+        gqa_stddev_xy:
+            description: 'TODO: <gqa:stddev_xy>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:stddev_xy
+            type: double
+        gqa_stddev_y:
+            description: 'TODO: <gqa:stddev_y>'
+            indexed: false
+            offset:
+            - properties
+            - gqa:stddev_y
+            type: double
+        instrument:
+            description: Instrument name
+            indexed: false
+            offset:
+            - properties
+            - eo:instrument
+        lat:
+            description: Latitude range
+            max_offset:
+            -   - extent
+                - lat
+                - end
+            min_offset:
+            -   - extent
+                - lat
+                - begin
+            type: double-range
+        lon:
+            description: Longitude range
+            max_offset:
+            -   - extent
+                - lon
+                - end
+            min_offset:
+            -   - extent
+                - lon
+                - begin
+            type: double-range
+        platform:
+            description: Platform code
+            indexed: false
+            offset:
+            - properties
+            - eo:platform
+        product_family:
+            description: Product family code
+            indexed: false
+            offset:
+            - properties
+            - odc:product_family
+        region_code:
+            description: "Spatial reference code from the provider. For Landsat region_code\
+                \ is a scene path row:\n        '{:03d}{:03d}.format(path,row)'\n\
+                For Sentinel it is MGRS code. In general it is a unique string identifier\
+                \ that datasets covering roughly the same spatial region share.\n"
+            offset:
+            - properties
+            - odc:region_code
+        time:
+            description: Acquisition time range
+            max_offset:
+            -   - properties
+                - dtr:end_datetime
+            -   - properties
+                - datetime
+            min_offset:
+            -   - properties
+                - dtr:start_datetime
+            -   - properties
+                - datetime
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: EO3 for ARD Landsat Collection 3
+name: eo3_landsat_ard
+---
+dataset:
+    creation_dt:
+    - properties
+    - odc:processing_datetime
+    format:
+    - properties
+    - odc:file_format
+    grid_spatial:
+    - grid_spatial
+    - projection
+    id:
+    - id
+    label:
+    - label
+    measurements:
+    - measurements
+    search_fields:
+        cloud_cover:
+            description: Cloud cover percentage [0, 100]
+            offset:
+            - properties
+            - eo:cloud_cover
+            type: double
+        dataset_maturity:
+            description: One of - final|interim|nrt  (near real time)
+            indexed: false
+            offset:
+            - properties
+            - dea:dataset_maturity
+        eo_gsd:
+            description: Ground Sample distance, meters
+            indexed: false
+            offset:
+            - properties
+            - eo:gsd
+            type: double
+        eo_sun_azimuth:
+            description: Sun azimuth angle
+            indexed: false
+            offset:
+            - properties
+            - eo:sun_azimuth
+            type: double
+        eo_sun_elevation:
+            description: Sun elevation angle
+            indexed: false
+            offset:
+            - properties
+            - eo:sun_elevation
+            type: double
+        instrument:
+            description: Instrument name
+            indexed: false
+            offset:
+            - properties
+            - eo:instrument
+        landsat_product_id:
+            description: Landsat Product ID
+            indexed: false
+            offset:
+            - properties
+            - landsat:landsat_product_id
+        landsat_scene_id:
+            description: Landsat Scene ID
+            indexed: false
+            offset:
+            - properties
+            - landsat:landsat_scene_id
+        lat:
+            description: Latitude range
+            max_offset:
+            -   - extent
+                - lat
+                - end
+            min_offset:
+            -   - extent
+                - lat
+                - begin
+            type: double-range
+        lon:
+            description: Longitude range
+            max_offset:
+            -   - extent
+                - lon
+                - end
+            min_offset:
+            -   - extent
+                - lon
+                - begin
+            type: double-range
+        platform:
+            description: Platform code
+            indexed: false
+            offset:
+            - properties
+            - eo:platform
+        product_family:
+            description: Product family code
+            indexed: false
+            offset:
+            - properties
+            - odc:product_family
+        region_code:
+            description: "Spatial reference code from the provider. For Landsat region_code\
+                \ is a scene path row:\n        '{:03d}{:03d}.format(path,row)'.\n\
+                For Sentinel it is MGRS code. In general it is a unique string identifier\
+                \ that datasets covering roughly the same spatial region share.\n"
+            offset:
+            - properties
+            - odc:region_code
+        time:
+            description: Acquisition time range
+            max_offset:
+            -   - properties
+                - dtr:end_datetime
+            -   - properties
+                - datetime
+            min_offset:
+            -   - properties
+                - dtr:start_datetime
+            -   - properties
+                - datetime
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: EO3 for Level 1 Landsat, GA Collection 3
+name: eo3_landsat_l1
+---
+dataset:
+    creation_dt:
+    - system_information
+    - time_processed
+    format:
+    - format
+    - name
+    grid_spatial:
+    - grid_spatial
+    - projection
+    id:
+    - id
+    label:
+    - ga_label
+    measurements:
+    - image
+    - bands
+    search_fields:
+        format:
+            description: File format (GeoTIFF, NetCDF)
+            indexed: false
+            offset:
+            - format
+            - name
+        gqa:
+            description: GQA circular error probable (90%)
+            indexed: false
+            offset:
+            - gqa
+            - cep90
+            type: double
+        gqa_abs_iterative_mean_xy:
+            description: Mean of the absolute values of the GCP residuals after removal
+                of outliers
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - abs_iterative_mean
+            - xy
+            type: double
+        gqa_abs_xy:
+            description: Absolute value of the total GCP residual
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - abs
+            - xy
+            type: double
+        gqa_cep90:
+            description: Circular error probable (90%) of the values of the GCP residuals
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - cep90
+            type: double
+        gqa_error_message:
+            description: GQA error message
+            indexed: false
+            offset:
+            - gqa
+            - error_message
+        gqa_final_qa_count:
+            description: GQA QA point count
+            indexed: false
+            offset:
+            - gqa
+            - final_qa_count
+            type: integer
+        gqa_iterative_mean_xy:
+            description: Mean of the values of the GCP residuals after removal of
+                outliers
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - iterative_mean
+            - xy
+            type: double
+        gqa_iterative_stddev_xy:
+            description: Standard Deviation of the values of the GCP residuals after
+                removal of outliers
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - iterative_stddev
+            - xy
+            type: double
+        gqa_mean_xy:
+            description: Mean of the values of the GCP residuals
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - mean
+            - xy
+            type: double
+        gqa_ref_source:
+            description: GQA reference imagery collection name
+            indexed: false
+            offset:
+            - gqa
+            - ref_source
+        gqa_stddev_xy:
+            description: Standard Deviation of the values of the GCP residuals
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - stddev
+            - xy
+            type: double
+        instrument:
+            description: Instrument name
+            offset:
+            - instrument
+            - name
+        lat:
+            description: Latitude range
+            max_offset:
+            -   - extent
+                - coord
+                - ur
+                - lat
+            -   - extent
+                - coord
+                - lr
+                - lat
+            -   - extent
+                - coord
+                - ul
+                - lat
+            -   - extent
+                - coord
+                - ll
+                - lat
+            min_offset:
+            -   - extent
+                - coord
+                - ur
+                - lat
+            -   - extent
+                - coord
+                - lr
+                - lat
+            -   - extent
+                - coord
+                - ul
+                - lat
+            -   - extent
+                - coord
+                - ll
+                - lat
+            type: double-range
+        lon:
+            description: Longitude range
+            max_offset:
+            -   - extent
+                - coord
+                - ul
+                - lon
+            -   - extent
+                - coord
+                - ur
+                - lon
+            -   - extent
+                - coord
+                - ll
+                - lon
+            -   - extent
+                - coord
+                - lr
+                - lon
+            min_offset:
+            -   - extent
+                - coord
+                - ul
+                - lon
+            -   - extent
+                - coord
+                - ur
+                - lon
+            -   - extent
+                - coord
+                - ll
+                - lon
+            -   - extent
+                - coord
+                - lr
+                - lon
+            type: double-range
+        platform:
+            description: Platform code
+            offset:
+            - platform
+            - code
+        product_type:
+            description: Product code
+            offset:
+            - product_type
+        region_code:
+            description: Spatial reference code from the provider
+            offset:
+            - provider
+            - reference_code
+        time:
+            description: Acquisition time
+            max_offset:
+            -   - extent
+                - to_dt
+            min_offset:
+            -   - extent
+                - from_dt
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: EO metadata for DEA products with GQA.
+name: eo_plus
+---
+dataset:
+    creation_dt:
+    - system_information
+    - time_processed
+    format:
+    - format
+    - name
+    grid_spatial:
+    - grid_spatial
+    - projection
+    id:
+    - id
+    label:
+    - ga_label
+    measurements:
+    - image
+    - bands
+    search_fields:
+        format:
+            description: File format (GeoTIFF, NetCDF)
+            indexed: false
+            offset:
+            - format
+            - name
+        gqa:
+            description: GQA Circular error probable (90%)
+            indexed: false
+            offset:
+            - gqa
+            - cep90
+            type: double
+        gqa_abs_iterative_mean_xy:
+            description: Mean of the absolute values of the GCP residuals after removal
+                of outliers
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - abs_iterative_mean
+            - xy
+            type: double
+        gqa_abs_xy:
+            description: Absolute value of the total GCP residual
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - abs
+            - xy
+            type: double
+        gqa_cep90:
+            description: Circular error probable (90%) of the values of the GCP residuals
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - cep90
+            type: double
+        gqa_error_message:
+            description: GQA Error Message
+            indexed: false
+            offset:
+            - gqa
+            - error_message
+        gqa_final_gcp_count:
+            description: GQA GCP Count
+            indexed: false
+            offset:
+            - gqa
+            - final_gcp_count
+            type: integer
+        gqa_iterative_mean_xy:
+            description: Mean of the values of the GCP residuals after removal of
+                outliers
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - iterative_mean
+            - xy
+            type: double
+        gqa_iterative_stddev_xy:
+            description: Standard Deviation of the values of the GCP residuals after
+                removal of outliers
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - iterative_stddev
+            - xy
+            type: double
+        gqa_mean_xy:
+            description: Mean of the values of the GCP residuals
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - mean
+            - xy
+            type: double
+        gqa_ref_source:
+            description: GQA reference imagery collection name
+            indexed: false
+            offset:
+            - gqa
+            - ref_source
+        gqa_stddev_xy:
+            description: Standard Deviation of the values of the GCP residuals
+            indexed: false
+            offset:
+            - gqa
+            - residual
+            - stddev
+            - xy
+            type: double
+        instrument:
+            description: Instrument name
+            offset:
+            - instrument
+            - name
+        lat:
+            description: Latitude range
+            max_offset:
+            -   - extent
+                - coord
+                - ur
+                - lat
+            -   - extent
+                - coord
+                - lr
+                - lat
+            -   - extent
+                - coord
+                - ul
+                - lat
+            -   - extent
+                - coord
+                - ll
+                - lat
+            min_offset:
+            -   - extent
+                - coord
+                - ur
+                - lat
+            -   - extent
+                - coord
+                - lr
+                - lat
+            -   - extent
+                - coord
+                - ul
+                - lat
+            -   - extent
+                - coord
+                - ll
+                - lat
+            type: double-range
+        lon:
+            description: Longitude range
+            max_offset:
+            -   - extent
+                - coord
+                - ul
+                - lon
+            -   - extent
+                - coord
+                - ur
+                - lon
+            -   - extent
+                - coord
+                - ll
+                - lon
+            -   - extent
+                - coord
+                - lr
+                - lon
+            min_offset:
+            -   - extent
+                - coord
+                - ul
+                - lon
+            -   - extent
+                - coord
+                - ur
+                - lon
+            -   - extent
+                - coord
+                - ll
+                - lon
+            -   - extent
+                - coord
+                - lr
+                - lon
+            type: double-range
+        platform:
+            description: Platform code
+            offset:
+            - platform
+            - code
+        product_type:
+            description: Product code
+            offset:
+            - product_type
+        region_code:
+            description: Spatial reference code from the provider
+            offset:
+            - provider
+            - reference_code
+        time:
+            description: Acquisition time
+            max_offset:
+            -   - extent
+                - to_dt
+            min_offset:
+            -   - extent
+                - from_dt
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: Minimal eo metadata for products with GQA.
+name: gqa_eo
+---
+dataset:
+    creation_dt:
+    - creation_dt
+    id:
+    - id
+    label:
+    - ga_label
+    search_fields:
+        gsi:
+            description: Ground Station Identifier (eg. ASA)
+            indexed: false
+            offset:
+            - acquisition
+            - groundstation
+            - code
+        instrument:
+            description: Instrument name
+            offset:
+            - instrument
+            - name
+        orbit:
+            description: Orbit number
+            offset:
+            - acquisition
+            - platform_orbit
+            type: integer
+        platform:
+            description: Platform code
+            offset:
+            - platform
+            - code
+        product_type:
+            description: Product code
+            offset:
+            - product_type
+        sat_path:
+            description: Landsat path
+            max_offset:
+            -   - image
+                - satellite_ref_point_end
+                - x
+            -   - image
+                - satellite_ref_point_start
+                - x
+            min_offset:
+            -   - image
+                - satellite_ref_point_start
+                - x
+            type: integer-range
+        sat_row:
+            description: Landsat row
+            max_offset:
+            -   - image
+                - satellite_ref_point_end
+                - y
+            -   - image
+                - satellite_ref_point_start
+                - y
+            min_offset:
+            -   - image
+                - satellite_ref_point_start
+                - y
+            type: integer-range
+        time:
+            description: Acquisition time
+            max_offset:
+            -   - acquisition
+                - los
+            min_offset:
+            -   - acquisition
+                - aos
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: 'Satellite telemetry datasets.
+
+
+    Expected metadata structure produced by telemetry datasets from the eodatasets
+    library, as used internally at GA.
+
+
+    https://github.com/GeoscienceAustralia/eo-datasets
+
+    '
+name: telemetry

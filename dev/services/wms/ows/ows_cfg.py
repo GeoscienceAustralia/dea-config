@@ -2210,35 +2210,31 @@ style_s2_nbr = {
     "needed_bands": ["nbart_nir_1", "nbart_swir_3"],
     "color_ramp": [
         {
-            "value": -1.0,
+            "value": -0.8,
             "color": "#67001F",
             "alpha": 0.0
         },
         {
-            "value": -1.0,
-            "color": "#67001F",
+            "value": -0.5,
+            "color": "#B2182B",
             "legend": {
-                "label": "<-1"
+                "label": "1>"
             }
         },
         {
-            "value": -0.8,
-            "color": "#B2182B"
-        },
-        {
-            "value": -0.6,
+            "value": -0.4,
             "color": "#D6604D"
         },
         {
-            "value": -0.4,
+            "value": -0.2,
             "color": "#F4A582"
         },
         {
-            "value": -0.2,
+            "value": -0.1,
             "color": "#FDDBC7"
         },
         {
-            "value": 0.0,
+            "value": 0,
             "color": "#F7F7F7",
             "legend": {
                 "label": "0"
@@ -2257,7 +2253,7 @@ style_s2_nbr = {
             "color": "#4393C3"
         },
         {
-            "value": 0.8,
+            "value": 0.9,
             "color": "#2166AC"
         },
         {
@@ -5947,6 +5943,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "wofs_albers",
                     "bands": bands_wofs_obs,
                     "resource_limits": reslim_wofs_obs,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
                         "always_fetch_bands": [ ],
@@ -8204,6 +8201,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "ls7_fc_albers",
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -8244,6 +8242,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "ls8_fc_albers",
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -8278,6 +8277,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     "product_names": [ "ls5_fc_albers", "ls7_fc_albers", "ls8_fc_albers" ],
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
