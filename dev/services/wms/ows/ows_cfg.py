@@ -2285,12 +2285,101 @@ style_s2_nbr = {
             "aggregator_function": {
                 "function": "datacube_ows.band_utils.multi_date_delta"
             },
+
+           "color_ramp": [
+                {
+                    "value": -0.5,
+                    "color": "#768642",
+                    "alpha": 0.0
+                },
+                {
+                    "value": -0.5,
+                    "color": "#768642",
+                    "legend": {
+                        "label": "<-0.50"
+                    }
+                },
+                {
+                    "value": -0.25,
+                    "color": "#768642",
+                    "alpha": 1.0,
+                    "legend": {
+                        "label": "-0.25"
+                    }
+                },
+                {
+                    "value": -0.25,
+                    "color": "#a4bd5f"
+                },
+                {
+                    "value": -0.1,
+                    "color": "#a4bd5f",
+                    "legend": {
+                        "label": "-0.1"
+                    }
+                },
+                {
+                    "value": -0.1,
+                    "color": "#00e05d"
+                },
+                {
+                    "value": 0.1,
+                    "color": "#00e05d"
+                },
+                {
+                    "value": 0.1,
+                    "color": "#fdf950",
+                    "legend": {
+                        "label": "0.1"
+                    }
+                },
+                {
+                    "value": 0.27,
+                    "color": "#fdf950",
+                    "legend": {
+                        "label": "0.27"
+                    }
+                },
+                {
+                    "value": 0.27,
+                    "color": "#ffae52"
+                },
+                {
+                    "value": 0.44,
+                    "color": "#ffae52",
+                    "legend": {
+                        "label": "0.44"
+                    }
+                },
+                {
+                    "value": 0.44,
+                    "color": "#ff662e"
+                },
+                {
+                    "value": 0.66,
+                    "color": "#ff662e",
+                    "legend": {
+                        "label": "0.66"
+                    }
+                },
+                {
+                    "value": 0.66,
+                    "color": "#ad28cc"
+                },
+                {
+                    "value": 0.88,
+                    "color": "#ad28cc",
+                    "legend": {
+                        "label": ">1.30"
+                    }
+                },
+            ],
             # The multi-date color ramp.  May be defined as an explicit colour ramp, as shown above for the single
             # date case; or may be defined with a range and unscaled color ramp as shown here.
             #
             # The range specifies the min and max values for the color ramp.  Required if an explicit color
             # ramp is not defined.
-            "range": [-1.0, 1.0],
+            # "range": [-1.0, 1.0],
             # The name of a named matplotlib color ramp.
             # Reference here: https://matplotlib.org/examples/color/colormaps_reference.html
             # Only used if an explicit colour ramp is not defined.  Optional - defaults to a simple (but
@@ -2299,109 +2388,6 @@ style_s2_nbr = {
             # The feature info label for the multi-date index value.
             "feature_info_label": "nbr_delta"
         }
-    ]
-}
-
-style_s2_nbr_delta = {
-    "name": "nbr_delta",
-    "title": "Normalised Burn Ratio Delta",
-    "abstract": "Normalised Burn Ratio - a derived index that that uses the differences in the way health green vegetation and burned vegetation reflect light to find burned area",
-    "index_function": {
-        "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "nbart_nir_1",
-            "band2": "nbart_swir_3"
-        }
-    },
-    "needed_bands": ["nbart_nir_1", "nbart_swir_3"],
-    "color_ramp": [
-        {
-            "value": -0.5,
-            "color": "#768642",
-            "alpha": 0.0
-        },
-        {
-            "value": -0.5,
-            "color": "#768642",
-            "legend": {
-                "label": "<-0.50"
-            }
-        },
-        {
-            "value": -0.25,
-            "color": "#768642",
-            "alpha": 1.0,
-            "legend": {
-                "label": "-0.25"
-            }
-        },
-        {
-            "value": -0.25,
-            "color": "#a4bd5f"
-        },
-        {
-            "value": -0.1,
-            "color": "#a4bd5f",
-            "legend": {
-                "label": "-0.1"
-            }
-        },
-        {
-            "value": -0.1,
-            "color": "#00e05d"
-        },
-        {
-            "value": 0.1,
-            "color": "#00e05d"
-        },
-        {
-            "value": 0.1,
-            "color": "#fdf950",
-            "legend": {
-                "label": "0.1"
-            }
-        },
-        {
-            "value": 0.27,
-            "color": "#fdf950",
-            "legend": {
-                "label": "0.27"
-            }
-        },
-        {
-            "value": 0.27,
-            "color": "#ffae52"
-        },
-        {
-            "value": 0.44,
-            "color": "#ffae52",
-            "legend": {
-                "label": "0.44"
-            }
-        },
-        {
-            "value": 0.44,
-            "color": "#ff662e"
-        },
-        {
-            "value": 0.66,
-            "color": "#ff662e",
-            "legend": {
-                "label": "0.66"
-            }
-        },
-        {
-            "value": 0.66,
-            "color": "#ad28cc"
-        },
-        {
-            "value": 0.88,
-            "color": "#ad28cc",
-            "legend": {
-                "label": ">1.30"
-            }
-        },
     ]
 }
 
