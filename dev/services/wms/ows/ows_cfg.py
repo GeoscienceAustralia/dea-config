@@ -5239,13 +5239,19 @@ ows_cfg = {
         "default_geographic_CRS": "EPSG:4326",
         "formats": {
             "GeoTIFF": {
-                "renderer": "datacube_ows.wcs_utils.get_tiff",
+                "renderers": {
+                    "1": "datacube_ows.wcs1_utils.get_tiff",
+                    "2": "datacube_ows.wcs2_utils.get_tiff",
+                },
                 "mime": "image/geotiff",
                 "extension": "tif",
                 "multi-time": False
             },
             "netCDF": {
-                "renderer": "datacube_ows.wcs_utils.get_netcdf",
+                "renderers": {
+                    "1": "datacube_ows.wcs1_utils.get_netcdf",
+                    "2": "datacube_ows.wcs2_utils.get_netcdf",
+                },
                 "mime": "application/x-netcdf",
                 "extension": "nc",
                 "multi-time": True,
@@ -6294,8 +6300,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 90.0, 90.0 ],
+                        "native_crs": "EPSG:4326",
+                        "native_resolution": [ 30.0, 30.0 ],
                         "default_bands": [ "regional", "intermediate", "local" ]
                     },
                     "legend": {
@@ -6355,8 +6361,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 60.0, 60.0 ],
+                        "native_crs": "EPSG:4326",
+                        "native_resolution": [ 30.0, 30.0 ],
                         "default_bands": [ "intensity" ]
                     },
                     "styling": {
