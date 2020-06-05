@@ -5293,7 +5293,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_resolution": [25.0, 25.0],
@@ -5331,7 +5331,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_resolution": [25.0, 25.0],
@@ -5369,7 +5369,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_resolution": [25.0, 25.0],
@@ -5421,7 +5421,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_resolution": [25.0, 25.0],
@@ -5462,7 +5462,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_resolution": [25.0, 25.0],
@@ -6814,7 +6814,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "default_bands": ["red", "green", "blue"],
@@ -6937,7 +6937,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "default_bands": ["relative"],
@@ -7003,7 +7003,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                         "always_fetch_bands": [ ],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "default_bands": ["stddev"],
