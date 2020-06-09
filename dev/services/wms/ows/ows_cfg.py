@@ -275,14 +275,6 @@ style_fc_simple_rgb  = {
             }
         },
         "scale_range": [0.0, 100.0],
-        "pq_masks": [
-            {
-                "flags": {
-                    'sea': True,
-                },
-                "invert": True,
-            },
-        ],
 }
 style_ls_irg = {
     "name": "infrared_green",
@@ -2843,14 +2835,6 @@ style_fc_bs_10 = {
             "legend": {}
         }
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
     "legend": {
         "units": "% / pixel",
         "title": "Percentage of Pixel that is Bare Soil",
@@ -2895,14 +2879,6 @@ style_fc_bs_50 = {
             "color": "#7a0177"
         }
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
 }
 
 style_fc_bs_90 = {
@@ -2940,45 +2916,8 @@ style_fc_bs_90 = {
             "color": "#7a0177"
         }
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
 }
 
-style_fc_rgb =  {
-    "name": "fc_rgb",
-    "title": "Three-band fractional cover",
-    "abstract": "Frachtional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
-    "components": {
-        "red": {
-            "BS_PC_50": 1.0
-        },
-        "green": {
-            "PV_PC_50": 1.0
-        },
-        "blue": {
-            "NPV_PC_50": 1.0
-        }
-    },
-    "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-    }
-}
 
 style_nidem = {
     "name": "NIDEM",
@@ -4707,22 +4646,6 @@ style_fc_simple = {
         }
     },
     "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "flags": {
-                'dry': True
-            },
-        },
-        {
-            "flags": {
-                "terrain_or_low_angle": False,
-                "high_slope": False,
-                "cloud_shadow": False,
-                "cloud": False,
-                "sea": False
-            }
-        },
-    ]
 }
 
 ##############################################################################################
@@ -5133,6 +5056,7 @@ ows_cfg = {
             },
         },
         "allowed_urls": [
+                "https://pin.devbox.dea.ga.gov.au",
                 "https://ows.services.dea.ga.gov.au",
                 "https://ows.services.dev.dea.ga.gov.au",
                 "https://ows.dev.dea.ga.gov.au",
@@ -6615,12 +6539,6 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "fc_percentile_albers_seasonal",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "dataset": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6695,12 +6613,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "bands": bands_nidem,
                     "time_resolution": "year",
                     "resource_limits": reslim_nidem,
-                    "flags": {
-                        "band": "land",
-                        "dataset": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -8174,13 +8086,6 @@ For service status information, see https://status.dea.ga.gov.au
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
-                    "flags": {
-                        "band": "water",
-                        "dataset": "wofs_albers",
-                        "ignore_time": False,
-                        "ignore_info_flags": [],
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                    },
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
@@ -8215,13 +8120,6 @@ For service status information, see https://status.dea.ga.gov.au
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
                     },
-                    "flags": {
-                        "band": "water",
-                        "dataset": "wofs_albers",
-                        "ignore_time": False,
-                        "ignore_info_flags": [],
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                    },
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
@@ -8249,13 +8147,6 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
                         "manual_merge": False,
-                    },
-                    "flags": {
-                        "band": "water",
-                        "datasets": ['wofs_albers', 'wofs_albers', 'wofs_albers'],
-                        "ignore_time": False,
-                        "ignore_info_flags": [],
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
