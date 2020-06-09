@@ -2597,14 +2597,6 @@ style_fc_gv_10 = {
             "legend": {}
         }
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
     "legend": {
         "units": "% / pixel",
         "title": "Percentage of Pixel that is Green Vegetation",
@@ -2649,14 +2641,6 @@ style_fc_gv_50 = {
             "color": "#006837"
         }
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
 }
 
 style_fc_gv_90 = {
@@ -2693,14 +2677,6 @@ style_fc_gv_90 = {
             "value": 100,
             "color": "#006837"
         }
-    ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
     ],
 }
 
@@ -2743,14 +2719,6 @@ style_fc_ngv_10 = {
             "color": "#993404",
             "legend": {}
         }
-    ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
     ],
     "legend": {
         "units": "% / pixel",
@@ -2796,14 +2764,6 @@ style_fc_ngv_50 = {
             "color": "#993404"
         }
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
 }
 
 style_fc_ngv_90 = {
@@ -2840,14 +2800,6 @@ style_fc_ngv_90 = {
             "value": 100,
             "color": "#993404"
         }
-    ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
     ],
 }
 
@@ -6413,12 +6365,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "fc_percentile_albers_annual",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "dataset": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6457,12 +6403,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "fc_percentile_albers_annual",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "dataset": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6494,12 +6434,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "fc_percentile_albers_annual",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "dataset": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -6539,12 +6473,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "fc_percentile_albers_annual",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "dataset": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
