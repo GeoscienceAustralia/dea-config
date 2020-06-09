@@ -5056,7 +5056,6 @@ ows_cfg = {
             },
         },
         "allowed_urls": [
-                "https://pin.devbox.dea.ga.gov.au",
                 "https://ows.services.dea.ga.gov.au",
                 "https://ows.services.dev.dea.ga.gov.au",
                 "https://ows.dev.dea.ga.gov.au",
