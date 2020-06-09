@@ -5915,7 +5915,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "wcs": {
                         "native_crs": "EPSG:4326",
-                        "native_resolution": [ 30.0, 30.0 ],
+                        "native_resolution": [ 0.000833333333347, 0.000833333333347 ],
                         "default_bands": [ "regional", "intermediate", "local" ]
                     },
                     "legend": {
@@ -5976,7 +5976,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "wcs": {
                         "native_crs": "EPSG:4326",
-                        "native_resolution": [ 30.0, 30.0 ],
+                        "native_resolution": [ 0.000833333333347, 0.000833333333347 ],
                         "default_bands": [ "intensity" ]
                     },
                     "styling": {
