@@ -99,6 +99,11 @@
          ]
       },
       {
+         "name": "GSKY ARD Pixel and Polygon Drills BETA",
+         "type": "wps-getCapabilities",
+         "url": "http://gsky.nci.org.au/ows/beta-dea"
+      },
+      {
          "name": "GSKY Blended Service",
          "type": "group",
          "preserveOrder": true,
