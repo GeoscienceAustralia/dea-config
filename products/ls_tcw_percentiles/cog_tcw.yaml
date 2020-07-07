@@ -1,6 +1,0 @@
-products: 
-    tcw_percentiles:
-        name_template: LS_TCW_PC_{x}_{y}_{start_time:%Y%m%d}_{end_time:%Y%m%d}
-        predictor: 2
-        default_rsp: average
-
