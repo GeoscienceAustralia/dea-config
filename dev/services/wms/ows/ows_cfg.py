@@ -366,8 +366,14 @@ style_ls_ndvi = {
             "value": 1.0,
             "color": "#114D04"
         }
-    ]
+    ],
+    "legend": {
+            "begin": "0.0",
+            "end": "1.0",
+            "ticks_every": "0.2"
+    }
 }
+
 
 style_ls_ndwi = {
     "name": "ndwi",
@@ -420,7 +426,19 @@ style_ls_ndwi = {
                 "prefix": ">"
             }
         }
-    ]
+    ],
+    "legend": {
+        "begin": "0.0",
+        "end": "0.5",
+        "tick_labels": {
+            "0.0": {
+                "prefix": "<"
+            },
+            "0.5": {
+                "prefix": ">"
+            },
+        }
+    }
 }
 
 style_ls_mndwi = {
@@ -466,7 +484,12 @@ style_ls_mndwi = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": {
+        "begin": "0.0",
+        "end": "1.0",
+        "ticks_every": "0.2"
+    }
 }
 
 style_ls_pure_blue = {
