@@ -239,7 +239,69 @@ insar_vel_bands = {
 }
 
 
-# Reusable Chunks 3. Styles
+# Reusable Chunks 3. Legends
+legend_idx_0_1_5ticks = {
+        "begin": "0.0",
+        "end": "1.0",
+        "ticks_every": "0.2"
+}
+
+legend_idx_percentage_by_10 = {
+    "begin": "0.0",
+    "end": "1.0",
+    "ticks_every": 0.1
+    "units": "%",
+    "tick_labels": {
+        "0.0": {"label": "0"},
+        "0.1": {"label": "10"},
+        "0.2": {"label": "20"},
+        "0.3": {"label": "30"},
+        "0.4": {"label": "40"},
+        "0.5": {"label": "50"},
+        "0.6": {"label": "60"},
+        "0.7": {"label": "70"},
+        "0.8": {"label": "80"},
+        "0.9": {"label": "90"},
+        "1.0": {"label": "100"},
+    },
+}
+legend_idx_percentage_by_25 = {
+        "units": "%",
+        "decimal_places": 2,
+        "begin": "0.00",
+        "end": "1.00",
+        "ticks_every": 0.25,
+        "tick_labels": {
+            "0.00": {"label": "0"},
+            "0.25": {"label": "25"},
+            "0.50": {"label": "50"},
+            "0.75": {"label": "75"},
+            "1.00": {"label": "100"},
+        }
+    }
+
+legend_idx_twentyplus_3ticks = {
+    "begin": 0,
+    "end": 20,
+    "decimal_places": 0,
+    "ticks_every": 10
+    "tick_labels": {
+        "20": {"prefix": ">"}
+    }
+}
+
+legend_idx_thirtyplus_4ticks = {
+    "begin": 0,
+    "end": 20,
+    "decimal_places": 0,
+    "ticks_every": 10
+    "tick_labels": {
+        "30": {"prefix": ">"}
+    }
+    "legend_strip_location": [0.05, 0.5, 0.89, 0.15]
+}
+
+# Reusable Chunks 4. Styles
 
 style_ls_simple_rgb = {
         "name": "simple_rgb",
@@ -367,11 +429,7 @@ style_ls_ndvi = {
             "color": "#114D04"
         }
     ],
-    "legend": {
-            "begin": "0.0",
-            "end": "1.0",
-            "ticks_every": "0.2"
-    }
+    "legend": legend_idx_0_1_5ticks,
 }
 
 
@@ -397,9 +455,6 @@ style_ls_ndwi = {
         {
             "value": 0.0,
             "color": "#d8e7f5",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": 0.1,
@@ -408,7 +463,6 @@ style_ls_ndwi = {
         {
             "value": 0.2,
             "color": "#73b3d8",
-            "legend": { }
         },
         {
             "value": 0.3,
@@ -417,14 +471,10 @@ style_ls_ndwi = {
         {
             "value": 0.4,
             "color": "#1563aa",
-            "legend": { }
         },
         {
             "value": 0.5,
             "color": "#08306b",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -485,11 +535,7 @@ style_ls_mndwi = {
             "color": "#08306b"
         }
     ],
-    "legend": {
-        "begin": "0.0",
-        "end": "1.0",
-        "ticks_every": "0.2"
-    }
+    "legend": legend_0_1_5ticks,
 }
 
 style_ls_pure_blue = {
@@ -735,8 +781,9 @@ style_nd_ferric_iron = {
         {
             "value": 1.0,
             "color": "#E81515"
-        }
-    ]
+        },
+    ],
+    "legend": legend_0_1_5ticks,
 }
 
 style_nd_soil = {
@@ -782,7 +829,8 @@ style_nd_soil = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": legend_0_1_5ticks,
 }
 
 style_nd_clay_mica = {
@@ -849,7 +897,8 @@ style_nd_clay_mica = {
             "value": 1.0,
             "color": "#bd0026"
         }
-    ]
+    ],
+    "legend": legend_0_1_5ticks,
 }
 
 style_mangrove_cover_v2 = {
@@ -1032,12 +1081,7 @@ style_wofs_filt_freq_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_wofs_count_wet = {
@@ -1106,15 +1150,15 @@ style_wofs_count_wet = {
         {
             "value": 400,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 100
+        "decimal_places": 0,
+        "major_ticks": 100,
+        "tick_labels": {
+            "400": {"prefix": ">"},
+            }
+        }
     }
 }
 
@@ -1184,16 +1228,17 @@ style_wofs_count_clear = {
         {
             "value": 1000,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 100,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
+        "begin": "0",
+        "end": "1000",
+        "decimal_places": 0,
+        "ticks_every": 100,
+        "legend_strip_location": [0.05, 0.5, 0.89, 0.15],
+        "tick_labels": {
+            "1000": {"prefix": ">"},
+        }
     }
 }
 
@@ -1335,13 +1380,7 @@ style_wofs_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
-
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_wofs_confidence = {
@@ -1395,12 +1434,7 @@ style_wofs_confidence = {
             "color": "#00E32D"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.25
-    }
+    "legend": legend_idx_percentage_by_25,
 }
 
 style_wofs_seasonal_wet = {
@@ -1468,16 +1502,9 @@ style_wofs_seasonal_wet = {
         {
             "value": 20,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10
-    }
+    "legend": legend_idx_twentyplus_3ticks,
 }
 
 style_wofs_summary_wet = {
@@ -1546,16 +1573,9 @@ style_wofs_summary_wet = {
         {
             "value": 20,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10
-    }
+    "legend": legend_idx_twentyplus_3ticks,
 }
 
 style_wofs_summary_clear = {
@@ -1624,17 +1644,9 @@ style_wofs_summary_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
-    }
+    "legend": legend_idx_thirtyplus_4ticks,
 }
 
 style_wofs_seasonal_clear = {
@@ -1702,17 +1714,9 @@ style_wofs_seasonal_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
-    }
+    "legend": legend_idx_thirtyplus_4ticks,
 }
 
 style_annual_wofs_summary_frequency = {
@@ -1786,12 +1790,7 @@ style_annual_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_seasonal_wofs_summary_frequency = {
@@ -1864,12 +1863,7 @@ style_seasonal_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_annual_wofs_summary_frequency_blue = {
@@ -1921,12 +1915,7 @@ style_annual_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_seasonal_wofs_summary_frequency_blue = {
@@ -1977,12 +1966,7 @@ style_seasonal_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_wofs_obs = {
@@ -2162,7 +2146,9 @@ style_s2_mndwi = {
             "color": "#08306b"
         }
     ]
+    "legend": legend_idx_0_1_5ticks,
 }
+
 style_s2_ndci = {
     "name": "ndci",
     "title": "NDCI - Red Edge, Red",
@@ -2215,7 +2201,16 @@ style_s2_ndci = {
                 "prefix": ">"
             }
         }
-    ]
+    ],
+    "legend": {
+        "begin": "-0.1",
+        "end": "0.5",
+        "ticks_every": "0.1",
+        "units": "unitless",
+        "tick_labels": {
+            "0.5": {"prefix": ">"}
+        }
+    }
 }
 
 style_s2_nbr = {
@@ -2293,6 +2288,14 @@ style_s2_nbr = {
     ],
     "legend": {
         "show_legend": True,
+        "begin": "-1.0",
+        "end": "1.0",
+        "ticks_every": "1.0",
+        "decimal_places": 0,
+        "tick_labels": {
+            "-1.0": {"prefix": "<"}
+            "1.0": {"suffix": ">"}
+        }
     },
     # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
     "multi_date": [
@@ -2397,6 +2400,21 @@ style_s2_nbr = {
                     }
                 },
             ],
+            "legend": {
+                "begin": "-0.5",
+                "end": "0.88",
+                "ticks": ["-0.5", "-0.25", "-0.1", "0.1", "0.27", "0.44", "0.66", "0.88"]
+                "tick_labels": {
+                    "-0.5": {"label": "<-0.5"}, 
+                    "-0.25": {"label": "-0.25"}, 
+                    "-0.1": {"label": "-0.1"}, 
+                    "0.1": {"label": "0.1"},
+                    "0.27": {"label": "0.27"}, 
+                    "0.44": {"label": "0.44"}, 
+                    "0.66": {"label": "0.66"}, 
+                    "0.88": {"label": ">1.30"},
+                }
+            },
             # The multi-date color ramp.  May be defined as an explicit colour ramp, as shown above for the single
             # date case; or may be defined with a range and unscaled color ramp as shown here.
             #
@@ -2700,7 +2718,13 @@ style_wii = {
         }
     ],
     "legend": {
-        "axes_position": [0.1, 0.5, 0.8, 0.15]
+        "begin": 1,
+        "end": 6,
+        "tick_labels": {
+            "1": {"label": "Low\nClass 1"},
+            "6": {"label": "High\nClass 6"},
+        }
+        "legend_strip_location": [0.1, 0.5, 0.8, 0.15]
     }
 }
 
@@ -2753,7 +2777,10 @@ style_fc_gv_10 = {
         },
     ],
     "legend": {
+        "begin": 0,
+        "end": 100,
         "units": "% / pixel",
+        "ticks_every": 25,
         "title": "Percentage of Pixel that is Green Vegetation",
         "rcParams": {
             "font.size": 9
