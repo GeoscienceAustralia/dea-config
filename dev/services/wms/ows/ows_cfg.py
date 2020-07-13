@@ -2403,13 +2403,13 @@ style_s2_nbr = {
                 "end": "0.88",
                 "ticks": ["-0.5", "-0.25", "-0.1", "0.1", "0.27", "0.44", "0.66", "0.88"],
                 "tick_labels": {
-                    "-0.5": {"label": "<-0.5"}, 
-                    "-0.25": {"label": "-0.25"}, 
-                    "-0.1": {"label": "-0.1"}, 
+                    "-0.5": {"label": "<-0.5"},
+                    "-0.25": {"label": "-0.25"},
+                    "-0.1": {"label": "-0.1"},
                     "0.1": {"label": "0.1"},
-                    "0.27": {"label": "0.27"}, 
-                    "0.44": {"label": "0.44"}, 
-                    "0.66": {"label": "0.66"}, 
+                    "0.27": {"label": "0.27"},
+                    "0.44": {"label": "0.44"},
+                    "0.66": {"label": "0.66"},
                     "0.88": {"label": ">1.30"},
                 }
             },
@@ -5097,7 +5097,7 @@ style_insar_velocity = {
     "legend": {
         "begin": -30,
         "end": 30,
-        "ticks_every": 5,
+        "ticks_every": 30,
         "units": "mm/year",
         "decimal_places": 0,
     }
@@ -5137,7 +5137,7 @@ style_insar_displacement = {
         "end": 100,
         "units": "mm",
         "decimal_places": 0,
-        "ticks_every": 10,
+        "ticks_every": 100,
     }
 }
 
@@ -5173,7 +5173,7 @@ style_insar_stddev_l = {
     "legend": {
         "begin": 0,
         "end": 80,
-        "ticks_every": 5,
+        "ticks_every": 40,
         "units": "mm",
         "decimal_places": 0,
     }
@@ -5193,12 +5193,12 @@ style_insar_stddev_l_ew["needed_bands"] = ["ewstd"]
 style_insar_stddev_l_ew["index_function"]["kwargs"]["band"] = "ewstd"
 
 # Create C-band style using a copy constructor
-style_insar_stddev_c_ud = copy.copy(style_insar_stddev_l_ud)
+style_insar_stddev_c_ud = copy.deepcopy(style_insar_stddev_l_ud)
 style_insar_stddev_c_ud["range"] = [0.0, 20.0]
 style_insar_stddev_c_ud["legend"]["begin"] = 0
 style_insar_stddev_c_ud["legend"]["end"] = 20
 
-style_insar_stddev_c_ew = copy.copy(style_insar_stddev_l_ew)
+style_insar_stddev_c_ew = copy.deepcopy(style_insar_stddev_l_ew)
 style_insar_stddev_c_ew["range"] = [0.0, 20.0]
 style_insar_stddev_c_ew["legend"]["begin"] = 0
 style_insar_stddev_c_ew["legend"]["end"] = 20
@@ -5223,7 +5223,7 @@ style_insar_stddev_lv = {
     "legend": {
         "begin": 0,
         "end": 24,
-        "ticks_every": 2,
+        "ticks_every": 12,
         "units": "mm/year",
         "decimal_places": 0,
     }
@@ -5243,12 +5243,12 @@ style_insar_stddev_lv_ew["needed_bands"] = ["ewstd"]
 style_insar_stddev_lv_ew["index_function"]["kwargs"]["band"] = "ewstd"
 
 # Create C-band style using a copy constructor
-style_insar_stddev_cv_ud = copy.copy(style_insar_stddev_lv_ud)
+style_insar_stddev_cv_ud = copy.deepcopy(style_insar_stddev_lv_ud)
 style_insar_stddev_cv_ud["range"] = [0.0, 6.0]
 style_insar_stddev_cv_ud["legend"]["begin"] = 0
 style_insar_stddev_cv_ud["legend"]["end"] = 6
 
-style_insar_stddev_cv_ew = copy.copy(style_insar_stddev_lv_ew)
+style_insar_stddev_cv_ew = copy.deepcopy(style_insar_stddev_lv_ew)
 style_insar_stddev_cv_ew["range"] = [0.0, 6.0]
 style_insar_stddev_cv_ew["legend"]["begin"] = 0
 style_insar_stddev_cv_ew["legend"]["end"] = 6
