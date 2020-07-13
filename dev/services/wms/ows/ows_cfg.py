@@ -3463,7 +3463,7 @@ style_item_relative = {
     ],
     "legend": {
         "begin": "0.0",
-        "begin": "9.0",
+        "end": "9.0",
         "ticks_every": "1.0",
         "units": "%",
         "decimal_places": 0,
