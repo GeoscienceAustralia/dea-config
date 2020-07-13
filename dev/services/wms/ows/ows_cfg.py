@@ -249,7 +249,7 @@ legend_idx_0_1_5ticks = {
 legend_idx_percentage_by_10 = {
     "begin": "0.0",
     "end": "1.0",
-    "ticks_every": 0.1
+    "ticks_every": 0.1,
     "units": "%",
     "tick_labels": {
         "0.0": {"label": "0"},
@@ -284,7 +284,7 @@ legend_idx_twentyplus_3ticks = {
     "begin": 0,
     "end": 20,
     "decimal_places": 0,
-    "ticks_every": 10
+    "ticks_every": 10,
     "tick_labels": {
         "20": {"prefix": ">"}
     }
@@ -294,11 +294,26 @@ legend_idx_thirtyplus_4ticks = {
     "begin": 0,
     "end": 20,
     "decimal_places": 0,
-    "ticks_every": 10
+    "ticks_every": 10,
     "tick_labels": {
         "30": {"prefix": ">"}
-    }
+    },
     "legend_strip_location": [0.05, 0.5, 0.89, 0.15]
+}
+
+legend_idx_0_100_as_0_1_5ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "unitless",
+    "ticks_every": 20,
+    "tick_labels": {
+        "0": {"label": "0.0"},
+        "20": {"label": "0.2"},
+        "40": {"label": "0.4"},
+        "60": {"label": "0.6"},
+        "80": {"label": "0.8"},
+        "100": {"label": "1.0"},
+    }
 }
 
 # Reusable Chunks 4. Styles
@@ -535,7 +550,7 @@ style_ls_mndwi = {
             "color": "#08306b"
         }
     ],
-    "legend": legend_0_1_5ticks,
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_ls_pure_blue = {
@@ -783,7 +798,7 @@ style_nd_ferric_iron = {
             "color": "#E81515"
         },
     ],
-    "legend": legend_0_1_5ticks,
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_nd_soil = {
@@ -830,7 +845,7 @@ style_nd_soil = {
             "color": "#08306b"
         }
     ],
-    "legend": legend_0_1_5ticks,
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_nd_clay_mica = {
@@ -898,7 +913,7 @@ style_nd_clay_mica = {
             "color": "#bd0026"
         }
     ],
-    "legend": legend_0_1_5ticks,
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_mangrove_cover_v2 = {
@@ -1157,7 +1172,6 @@ style_wofs_count_wet = {
         "major_ticks": 100,
         "tick_labels": {
             "400": {"prefix": ">"},
-            }
         }
     }
 }
@@ -2145,7 +2159,7 @@ style_s2_mndwi = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
     "legend": legend_idx_0_1_5ticks,
 }
 
@@ -2168,9 +2182,6 @@ style_s2_ndci = {
         {
             "value": -0.1,
             "color": "#1696FF",
-            "legend": {
-                "prefix" : "<"
-            }
         },
         {
             "value": -0.1,
@@ -2179,7 +2190,6 @@ style_s2_ndci = {
         {
             "value": 0.0,
             "color": "#00FFDF",
-            "legend": { }
         },
         {
             "value": 0.1,
@@ -2188,7 +2198,6 @@ style_s2_ndci = {
         {
             "value": 0.2,
             "color": "#FFB50A",
-            "legend": { }
         },
         {
             "value": 0.4,
@@ -2197,9 +2206,6 @@ style_s2_ndci = {
         {
             "value": 0.5,
             "color": "#FF0000",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -2208,6 +2214,7 @@ style_s2_ndci = {
         "ticks_every": "0.1",
         "units": "unitless",
         "tick_labels": {
+            "-0.1": {"prefix": "<"},
             "0.5": {"prefix": ">"}
         }
     }
@@ -2235,9 +2242,6 @@ style_s2_nbr = {
         {
             "value": -1.0,
             "color": "#67001F",
-            "legend": {
-                "label": "<-1.0"
-            }
         },
         {
             "value": -0.8,
@@ -2258,9 +2262,6 @@ style_s2_nbr = {
         {
             "value": 0,
             "color": "#F7F7F7",
-            "legend": {
-                "label": "0"
-            }
         },
         {
             "value": 0.2,
@@ -2281,9 +2282,6 @@ style_s2_nbr = {
         {
             "value": 1.0,
             "color": "#053061",
-            "legend": {
-                "label": "1>"
-            }
         }
     ],
     "legend": {
@@ -2293,7 +2291,7 @@ style_s2_nbr = {
         "ticks_every": "1.0",
         "decimal_places": 0,
         "tick_labels": {
-            "-1.0": {"prefix": "<"}
+            "-1.0": {"prefix": "<"},
             "1.0": {"suffix": ">"}
         }
     },
@@ -2403,7 +2401,7 @@ style_s2_nbr = {
             "legend": {
                 "begin": "-0.5",
                 "end": "0.88",
-                "ticks": ["-0.5", "-0.25", "-0.1", "0.1", "0.27", "0.44", "0.66", "0.88"]
+                "ticks": ["-0.5", "-0.25", "-0.1", "0.1", "0.27", "0.44", "0.66", "0.88"],
                 "tick_labels": {
                     "-0.5": {"label": "<-0.5"}, 
                     "-0.25": {"label": "-0.25"}, 
@@ -2723,7 +2721,7 @@ style_wii = {
         "tick_labels": {
             "1": {"label": "Low\nClass 1"},
             "6": {"label": "High\nClass 6"},
-        }
+        },
         "legend_strip_location": [0.1, 0.5, 0.8, 0.15]
     }
 }
@@ -2745,27 +2743,22 @@ style_fc_gv_10 = {
         {
             "value": 0,
             "color": "#ffffcc",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#c2e699",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#78c679",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#31a354",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#006837",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2823,6 +2816,17 @@ style_fc_gv_50 = {
             "color": "#006837"
         }
     ],
+    # old behaviour was wrong.  This is what Leo and Emma requested
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2868,6 +2872,17 @@ style_fc_gv_90 = {
             "color": "#006837"
         }
     ],
+    # old behaviour was wrong.  This is what Leo and Emma requested
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2895,7 +2910,6 @@ style_fc_ngv_10 = {
         {
             "value": 0,
             "color": "#ffffd4",
-            "legend": {}
         },
         {
             "value": 25,
@@ -2905,19 +2919,27 @@ style_fc_ngv_10 = {
         {
             "value": 50,
             "color": "#fe9929",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#d95f0e",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#993404",
-            "legend": {}
         }
     ],
+    # Emulates what we had previously
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Non-Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2926,13 +2948,6 @@ style_fc_ngv_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
 }
 
 style_fc_ngv_50 = {
@@ -2970,6 +2985,17 @@ style_fc_ngv_50 = {
             "color": "#993404"
         }
     ],
+    # old behaviour was wrong.  This is what Leo and Emma requested
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Non-Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -3015,6 +3041,17 @@ style_fc_ngv_90 = {
             "color": "#993404"
         }
     ],
+    # old behaviour was wrong.  This is what Leo and Emma requested
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Non-Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -3042,27 +3079,22 @@ style_fc_bs_10 = {
         {
             "value": 0,
             "color": "#feebe2",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#fbb4b9",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#f768a1",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#c51b8a",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#7a0177",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -3073,7 +3105,11 @@ style_fc_bs_10 = {
             "invert": True,
         },
     ],
+    # Emulates what we had previously
     "legend": {
+        "begin": 0,
+        "end": 100,
+        "ticks_every": 25,
         "units": "% / pixel",
         "title": "Percentage of Pixel that is Bare Soil",
         "rcParams": {
@@ -3117,6 +3153,17 @@ style_fc_bs_50 = {
             "color": "#7a0177"
         }
     ],
+    # Old behaviour was wrong - this is what Leo and Emma have requested.
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "ticks_every": 25,
+        "units": "% / pixel",
+        "title": "Percentage of Pixel that is Bare Soil",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -3162,6 +3209,17 @@ style_fc_bs_90 = {
             "color": "#7a0177"
         }
     ],
+    # Old behaviour was wrong - this is what Leo and Emma have requested.
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "ticks_every": 25,
+        "units": "% / pixel",
+        "title": "Percentage of Pixel that is Bare Soil",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -3175,7 +3233,7 @@ style_fc_bs_90 = {
 style_fc_rgb =  {
     "name": "fc_rgb",
     "title": "Three-band fractional cover",
-    "abstract": "Frachtional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
+    "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
         "red": {
             "BS_PC_50": 1.0
@@ -3223,9 +3281,6 @@ style_nidem = {
         {
             "value": -2.5,
             "color": "#440154",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": -2.34,
@@ -3262,7 +3317,6 @@ style_nidem = {
         {
             "value": -1.1,
             "color": "#2e6b8d",
-            "legend": {}
         },
         {
             "value": -0.94,
@@ -3291,7 +3345,6 @@ style_nidem = {
         {
             "value": 0.0,
             "color": "#26ac7f",
-            "legend": { }
         },
         {
             "value": 0.14,
@@ -3332,13 +3385,17 @@ style_nidem = {
         {
             "value": 1.5,
             "color": "#fde724",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
-        "units": "metres"
+        "begin": "-2.5",
+        "end": "1.5",
+        "ticks": ["-2.5", "-1.1", "0.0", "1.5"],
+        "units": "metres",
+        "tick_labels": {
+            "1.5": {"prefix": ">"},
+            "-2.5": {"prefix": "<"},
+        }
     }
 }
 
@@ -3405,10 +3462,23 @@ style_item_relative = {
         },
     ],
     "legend": {
+        "begin": "0.0",
+        "begin": "9.0",
+        "ticks_every": "1.0",
         "units": "%",
-        "radix_point": 0,
-        "scale_by": 10.0,
-        "major_ticks": 1
+        "decimal_places": 0,
+        "tick_labels": {
+            "0.0": {"label": "0"},
+            "0.1": {"label": "10"},
+            "0.2": {"label": "20"},
+            "0.3": {"label": "30"},
+            "0.4": {"label": "40"},
+            "0.5": {"label": "50"},
+            "0.6": {"label": "60"},
+            "0.7": {"label": "70"},
+            "0.8": {"label": "80"},
+            "0.9": {"label": "90"},
+        }
     }
 }
 
@@ -3492,6 +3562,15 @@ style_item_confidence = {
         },
     ],
     "legend": {
+        "begin": "0.01",
+        "end": "0.55",
+        "ticks": ["0.01", "0.55"],
+        "tick_labels": {
+            "0.01": {"prefix": "<"},
+            "0.55": {"prefix": ">"},
+        },
+        "decimal_places": 2,
+        # Why "NDWI"???
         "units": "NDWI standard deviation"
     }
 
@@ -3523,6 +3602,8 @@ style_wamm_dam_id = {
         },
     ],
     "legend": {
+        # The old legend served no purpose
+        "show_legend": False,
     }
 }
 
@@ -3616,9 +3697,6 @@ style_aster_aloh_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.9"
-            }
         },
         {
             "value": 1,
@@ -3667,15 +3745,18 @@ style_aster_aloh_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.3"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.9"},
+            "255.0": {"label": "1.3"},
+        },
         "units": "Blue is well ordered kaolinite,\nRed is Al-poor (Si-rich) muscovite (phengite)",
     }
-
 }
 
 style_aster_aloh_cont_ramp = {
@@ -3696,9 +3777,6 @@ style_aster_aloh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.0"
-            }
         },
         {
             "value": 1,
@@ -3747,12 +3825,16 @@ style_aster_aloh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "2.0"},
+            "255.0": {"label": "2.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -3775,9 +3857,6 @@ style_aster_feoh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.03"
-            }
         },
         {
             "value": 1,
@@ -3826,12 +3905,16 @@ style_aster_feoh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "2.03"},
+            "255.0": {"label": "2.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -3854,9 +3937,6 @@ style_aster_ferrox_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.5"
-            }
         },
         {
             "value": 1,
@@ -3905,12 +3985,16 @@ style_aster_ferrox_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "3.3"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.5"},
+            "255.0": {"label": "3.3"},
+        },
         "units": "Blue-cyan is non-hematitie,\nRed-yellow is hematite-rich",
     }
 }
@@ -3933,9 +4017,6 @@ style_aster_ferrox_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.1"
-            }
         },
         {
             "value": 1,
@@ -3984,12 +4065,16 @@ style_aster_ferrox_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.1"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.1"},
+            "255.0": {"label": "2.1"},
+        },
         "units": "Blue is low abundance,\nRed is high abundance",
     }
 }
@@ -4012,9 +4097,6 @@ style_aster_ferrous_mgoh_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.1"
-            }
         },
         {
             "value": 1,
@@ -4063,12 +4145,16 @@ style_aster_ferrous_mgoh_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.0"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.1"},
+            "255.0": {"label": "2.0"},
+        },
         "units": "Blue is low ferrous iron content,\nRed is high ferrous iron content",
     }
 }
@@ -4091,9 +4177,6 @@ style_aster_ferrous_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.75"
-            }
         },
         {
             "value": 1,
@@ -4142,12 +4225,16 @@ style_aster_ferrous_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.025"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.75"},
+            "255.0": {"label": "1.025"},
+        },
         "units": "Blue is low abundance,\nRed is high abundance",
     }
 }
@@ -4170,9 +4257,6 @@ style_aster_green_veg_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.4"
-            }
         },
         {
             "value": 1,
@@ -4221,12 +4305,16 @@ style_aster_green_veg_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "4"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.4"},
+            "255.0": {"label": "4"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -4249,9 +4337,6 @@ style_aster_gypsum_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.47"
-            }
         },
         {
             "value": 1,
@@ -4300,12 +4385,16 @@ style_aster_gypsum_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "0.5"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.47"},
+            "255.0": {"label": "0.5"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -4328,9 +4417,6 @@ style_aster_kaolin_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.0"
-            }
         },
         {
             "value": 1,
@@ -4379,12 +4465,16 @@ style_aster_kaolin_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.125"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.0"},
+            "255.0": {"label": "1.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -4407,9 +4497,6 @@ style_aster_mgoh_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.6"
-            }
         },
         {
             "value": 1,
@@ -4458,12 +4545,16 @@ style_aster_mgoh_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.4"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.6"},
+            "255.0": {"label": "1.4"},
+        },
         "units": "Blue-cyan is magnesite-dolomite, amphibole, \nRed is calcite, epidote, amphibole",
     }
 }
@@ -4486,9 +4577,6 @@ style_aster_mgoh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.05"
-            }
         },
         {
             "value": 1,
@@ -4537,12 +4625,16 @@ style_aster_mgoh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.2"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.05"},
+            "255.0": {"label": "1.2"},
+        },
         "units": "Blue low content,\nRed is high content",
     }
 }
@@ -4565,9 +4657,6 @@ style_aster_opaque_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.4"
-            }
         },
         {
             "value": 1,
@@ -4616,12 +4705,16 @@ style_aster_opaque_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "0.9"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.4"},
+            "255.0": {"label": "0.9"},
+        },
         "units": "Blue low content,\nRed is high content",
     }
 }
@@ -4644,9 +4737,6 @@ style_aster_silica_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.0"
-            }
         },
         {
             "value": 1,
@@ -4695,12 +4785,16 @@ style_aster_silica_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.35"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.0"},
+            "255.0": {"label": "1.35"},
+        },
         "units": "Blue low silica content,\nRed is high silica content",
     }
 }
@@ -4723,9 +4817,6 @@ style_aster_quartz_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.50"
-            }
         },
         {
             "value": 1,
@@ -4774,12 +4865,16 @@ style_aster_quartz_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "0.52"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.5"},
+            "255.0": {"label": "0.52"},
+        },
         "units": "Blue low quartz content,\nRed is high quartz content",
     }
 }
@@ -4807,9 +4902,6 @@ style_tmad_sdev = {
         {
             'value': 0.1,
             'color': '#A02406',
-            'legend': {
-                'label': 'High\ntmad'
-            }
         },
         {
             'value': 0.5,
@@ -4818,12 +4910,15 @@ style_tmad_sdev = {
         {
             'value': 0.9,
             'color': '#0CCD1D',
-            'legend': {
-                'label': 'Low\ntmad'
-            }
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4850,9 +4945,6 @@ style_tmad_edev = {
         {
             'value': 0.1,
             'color': '#A02406',
-            'legend': {
-                'label': 'High\ntmad'
-            }
         },
         {
             'value': 0.5,
@@ -4861,12 +4953,15 @@ style_tmad_edev = {
         {
             'value': 0.9,
             'color': '#0CCD1D',
-            'legend': {
-                'label': 'Low\ntmad'
-            }
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4893,9 +4988,6 @@ style_tmad_bcdev = {
         {
             'value': 0.1,
             'color': '#A02406',
-            'legend': {
-                'label': 'High\ntmad'
-            }
         },
         {
             'value': 0.5,
@@ -4904,12 +4996,15 @@ style_tmad_bcdev = {
         {
             'value': 0.9,
             'color': '#0CCD1D',
-            'legend': {
-                'label': 'Low\ntmad'
-            }
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4961,7 +5056,7 @@ ls_style_list = [
 ]
 
 # HACK: Move this to a utils to allow style reusability
-def swap_scale(new_scale : list, style : dict):
+def swap_scale(new_scale: list, style: dict):
     if "scale_range" in style:
         new_style = copy.copy(style)
         new_style["scale_range"] = new_scale
@@ -5000,11 +5095,11 @@ style_insar_velocity = {
     "range": [-30.0, 30.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
+        "begin": -30,
+        "end": 30,
+        "ticks_every": 5,
         "units": "mm/year",
-        "radix_point": 0,
-        "scale_by": 1.0,
-        "major_ticks": 5,
-        "offset": 0.0
+        "decimal_places": 0,
     }
 }
 
@@ -5038,11 +5133,11 @@ style_insar_displacement = {
     "range": [-100.0, 100.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
+        "begin": -100,
+        "end": 100,
         "units": "mm",
-        "radix_point": 0,
-        "scale_by": 1.0,
-        "major_ticks": 10,
-        "offset": 0.0
+        "decimal_places": 0,
+        "ticks_every": 10,
     }
 }
 
@@ -5076,11 +5171,11 @@ style_insar_stddev_l = {
     "range": [0.0, 80.0],
     "mpl_ramp": "Reds",
     "legend": {
+        "begin": 0,
+        "end": 80,
+        "ticks_every": 5,
         "units": "mm",
-        "radix_point": 0,
-        "scale_by": 1.0,
-        "major_ticks": 5,
-        "offset": 0.0
+        "decimal_places": 0,
     }
 }
 
@@ -5100,9 +5195,13 @@ style_insar_stddev_l_ew["index_function"]["kwargs"]["band"] = "ewstd"
 # Create C-band style using a copy constructor
 style_insar_stddev_c_ud = copy.copy(style_insar_stddev_l_ud)
 style_insar_stddev_c_ud["range"] = [0.0, 20.0]
+style_insar_stddev_c_ud["legend"]["begin"] = 0
+style_insar_stddev_c_ud["legend"]["end"] = 20
 
 style_insar_stddev_c_ew = copy.copy(style_insar_stddev_l_ew)
 style_insar_stddev_c_ew["range"] = [0.0, 20.0]
+style_insar_stddev_c_ew["legend"]["begin"] = 0
+style_insar_stddev_c_ew["legend"]["end"] = 20
 
 style_insar_stddev_lv = {
     "name": "insar_stddev_lv",
@@ -5122,11 +5221,11 @@ style_insar_stddev_lv = {
     "range": [0.0, 24.0],
     "mpl_ramp": "Reds",
     "legend": {
+        "begin": 0,
+        "end": 24,
+        "ticks_every": 2,
         "units": "mm/year",
-        "radix_point": 0,
-        "scale_by": 1.0,
-        "major_ticks": 2,
-        "offset": 0.0
+        "decimal_places": 0,
     }
 }
 
@@ -5146,9 +5245,13 @@ style_insar_stddev_lv_ew["index_function"]["kwargs"]["band"] = "ewstd"
 # Create C-band style using a copy constructor
 style_insar_stddev_cv_ud = copy.copy(style_insar_stddev_lv_ud)
 style_insar_stddev_cv_ud["range"] = [0.0, 6.0]
+style_insar_stddev_cv_ud["legend"]["begin"] = 0
+style_insar_stddev_cv_ud["legend"]["end"] = 6
 
 style_insar_stddev_cv_ew = copy.copy(style_insar_stddev_lv_ew)
 style_insar_stddev_cv_ew["range"] = [0.0, 6.0]
+style_insar_stddev_cv_ew["legend"]["begin"] = 0
+style_insar_stddev_cv_ew["legend"]["end"] = 6
 
 # Layer segments for various INSAR Datasets
 alos_layers = [
