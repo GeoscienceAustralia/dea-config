@@ -298,7 +298,7 @@ legend_idx_thirtyplus_4ticks = {
     "tick_labels": {
         "30": {"prefix": ">"}
     },
-    "legend_strip_location": [0.05, 0.5, 0.89, 0.15]
+    "strip_location": [0.05, 0.5, 0.89, 0.15]
 }
 
 legend_idx_0_100_as_0_1_5ticks = {
@@ -1168,8 +1168,10 @@ style_wofs_count_wet = {
         }
     ],
     "legend": {
+        "begin": "0",
+        "end": "400",
         "decimal_places": 0,
-        "major_ticks": 100,
+        "ticks_every": 100,
         "tick_labels": {
             "400": {"prefix": ">"},
         }
@@ -1249,7 +1251,7 @@ style_wofs_count_clear = {
         "end": "1000",
         "decimal_places": 0,
         "ticks_every": 100,
-        "legend_strip_location": [0.05, 0.5, 0.89, 0.15],
+        "strip_location": [0.05, 0.5, 0.89, 0.15],
         "tick_labels": {
             "1000": {"prefix": ">"},
         }
@@ -2718,11 +2720,12 @@ style_wii = {
     "legend": {
         "begin": 1,
         "end": 6,
+        "decimal_places": 0,
         "tick_labels": {
             "1": {"label": "Low\nClass 1"},
             "6": {"label": "High\nClass 6"},
         },
-        "legend_strip_location": [0.1, 0.5, 0.8, 0.15]
+        "strip_location": [0.1, 0.5, 0.8, 0.15]
     }
 }
 
@@ -4915,6 +4918,7 @@ style_tmad_sdev = {
     "legend": {
         "begin": "0.1",
         "end": "0.9",
+        "decimal_places": 1,
         "tick_labels": {
             "0.1": {"label": "High\ntmad"},
             "0.9": {"label": "Low\ntmad"},
