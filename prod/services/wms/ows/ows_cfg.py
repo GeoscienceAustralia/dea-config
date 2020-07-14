@@ -227,6 +227,83 @@ insar_ud_bands = {
     "ud": ["displacement", ]
 }
 
+# Reusable Chunks 3. Legends
+legend_idx_0_1_5ticks = {
+        "begin": "0.0",
+        "end": "1.0",
+        "ticks_every": "0.2"
+}
+
+legend_idx_percentage_by_10 = {
+    "begin": "0.0",
+    "end": "1.0",
+    "ticks_every": 0.1,
+    "units": "%",
+    "tick_labels": {
+        "0.0": {"label": "0"},
+        "0.1": {"label": "10"},
+        "0.2": {"label": "20"},
+        "0.3": {"label": "30"},
+        "0.4": {"label": "40"},
+        "0.5": {"label": "50"},
+        "0.6": {"label": "60"},
+        "0.7": {"label": "70"},
+        "0.8": {"label": "80"},
+        "0.9": {"label": "90"},
+        "1.0": {"label": "100"},
+    },
+}
+legend_idx_percentage_by_25 = {
+        "units": "%",
+        "decimal_places": 2,
+        "begin": "0.00",
+        "end": "1.00",
+        "ticks_every": 0.25,
+        "tick_labels": {
+            "0.00": {"label": "0"},
+            "0.25": {"label": "25"},
+            "0.50": {"label": "50"},
+            "0.75": {"label": "75"},
+            "1.00": {"label": "100"},
+        }
+    }
+
+legend_idx_twentyplus_3ticks = {
+    "begin": 0,
+    "end": 20,
+    "decimal_places": 0,
+    "ticks_every": 10,
+    "tick_labels": {
+        "20": {"prefix": ">"}
+    }
+}
+
+legend_idx_thirtyplus_4ticks = {
+    "begin": 0,
+    "end": 20,
+    "decimal_places": 0,
+    "ticks_every": 10,
+    "tick_labels": {
+        "30": {"prefix": ">"}
+    },
+    "strip_location": [0.05, 0.5, 0.89, 0.15]
+}
+
+legend_idx_0_100_as_0_1_5ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "unitless",
+    "ticks_every": 20,
+    "tick_labels": {
+        "0": {"label": "0.0"},
+        "20": {"label": "0.2"},
+        "40": {"label": "0.4"},
+        "60": {"label": "0.6"},
+        "80": {"label": "0.8"},
+        "100": {"label": "1.0"},
+    }
+}
+
 # Reusable Chunks 3. Styles
 
 style_ls_simple_rgb = {
@@ -354,7 +431,8 @@ style_ls_ndvi = {
             "value": 1.0,
             "color": "#114D04"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_ls_ndwi = {
@@ -408,7 +486,19 @@ style_ls_ndwi = {
                 "prefix": ">"
             }
         }
-    ]
+    ],
+    "legend": {
+        "begin": "0.0",
+        "end": "0.5",
+        "tick_labels": {
+            "0.0": {
+                "prefix": "<"
+            },
+            "0.5": {
+                "prefix": ">"
+            },
+        }
+    }
 }
 
 style_ls_mndwi = {
@@ -454,7 +544,8 @@ style_ls_mndwi = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_ls_pure_blue = {
@@ -701,7 +792,8 @@ style_nd_ferric_iron = {
             "value": 1.0,
             "color": "#E81515"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_nd_soil = {
@@ -747,7 +839,8 @@ style_nd_soil = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_nd_clay_mica = {
@@ -814,7 +907,8 @@ style_nd_clay_mica = {
             "value": 1.0,
             "color": "#bd0026"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_mangrove_cover_v2 = {
@@ -1077,9 +1171,13 @@ style_wofs_count_wet = {
         }
     ],
     "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 100
+        "begin": "0",
+        "end": "400",
+        "decimal_places": 0,
+        "ticks_every": 100,
+        "tick_labels": {
+            "400": {"prefix": ">"},
+        }
     }
 }
 
@@ -1155,10 +1253,14 @@ style_wofs_count_clear = {
         }
     ],
     "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 100,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
+        "begin": "0",
+        "end": "1000",
+        "decimal_places": 0,
+        "ticks_every": 100,
+        "strip_location": [0.05, 0.5, 0.89, 0.15],
+        "tick_labels": {
+            "1000": {"prefix": ">"},
+        }
     }
 }
 
@@ -1300,13 +1402,7 @@ style_wofs_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
-
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_wofs_confidence = {
@@ -1360,12 +1456,7 @@ style_wofs_confidence = {
             "color": "#00E32D"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.25
-    }
+    "legend": legend_idx_percentage_by_25,
 }
 
 style_wofs_seasonal_wet = {
@@ -1433,16 +1524,9 @@ style_wofs_seasonal_wet = {
         {
             "value": 20,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10
-    }
+    "legend": legend_idx_twentyplus_3ticks,
 }
 
 style_wofs_summary_wet = {
@@ -1510,17 +1594,10 @@ style_wofs_summary_wet = {
         },
         {
             "value": 20,
-            "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
+            "color": "#5700E3"
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10
-    }
+    "legend": legend_idx_twentyplus_3ticks,
 }
 
 style_wofs_summary_clear = {
@@ -1594,12 +1671,7 @@ style_wofs_summary_clear = {
             }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
-    }
+    "legend": legend_idx_thirtyplus_4ticks,
 }
 
 style_wofs_seasonal_clear = {
@@ -1672,12 +1744,7 @@ style_wofs_seasonal_clear = {
             }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
-    }
+    "legend": legend_idx_thirtyplus_4ticks,
 }
 
 style_annual_wofs_summary_frequency = {
@@ -1751,12 +1818,7 @@ style_annual_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_seasonal_wofs_summary_frequency = {
@@ -1829,12 +1891,7 @@ style_seasonal_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_annual_wofs_summary_frequency_blue = {
@@ -1886,12 +1943,7 @@ style_annual_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_seasonal_wofs_summary_frequency_blue = {
@@ -1942,12 +1994,7 @@ style_seasonal_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_10,
 }
 
 style_wofs_obs = {
@@ -2126,7 +2173,8 @@ style_s2_mndwi = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 style_s2_ndci = {
     "name": "ndci",
@@ -2180,7 +2228,17 @@ style_s2_ndci = {
                 "prefix": ">"
             }
         }
-    ]
+    ],
+    "legend": {
+        "begin": "-0.1",
+        "end": "0.5",
+        "ticks_every": "0.1",
+        "units": "unitless",
+        "tick_labels": {
+            "-0.1": {"prefix": "<"},
+            "0.5": {"prefix": ">"}
+        }
+    }
 }
 
 style_s2_pure_aerosol = {
@@ -2469,7 +2527,14 @@ style_wii = {
         }
     ],
     "legend": {
-        "axes_position": [0.1, 0.5, 0.8, 0.15]
+        "begin": 1,
+        "end": 6,
+        "decimal_places": 0,
+        "tick_labels": {
+            "1": {"label": "Low\nClass 1"},
+            "6": {"label": "High\nClass 6"},
+        },
+        "strip_location": [0.1, 0.5, 0.8, 0.15],
     }
 }
 
@@ -2522,7 +2587,10 @@ style_fc_gv_10 = {
         },
     ],
     "legend": {
+        "begin": 0,
+        "end": 100,
         "units": "% / pixel",
+        "ticks_every": 25,
         "title": "Percentage of Pixel that is Green Vegetation",
         "rcParams": {
             "font.size": 9
@@ -2565,6 +2633,16 @@ style_fc_gv_50 = {
             "color": "#006837"
         }
     ],
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2610,6 +2688,17 @@ style_fc_gv_90 = {
             "color": "#006837"
         }
     ],
+    # old behaviour was wrong.  This is what Leo and Emma requested
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2668,13 +2757,17 @@ style_fc_ngv_10 = {
             "invert": True,
         },
     ],
+    # Emulates what we had previously
     "legend": {
+        "begin": 0,
+        "end": 100,
         "units": "% / pixel",
+        "ticks_every": 25,
         "title": "Percentage of Pixel that is Non-Green Vegetation",
         "rcParams": {
             "font.size": 9
         }
-    }
+    },
 }
 
 style_fc_ngv_50 = {
@@ -2712,6 +2805,16 @@ style_fc_ngv_50 = {
             "color": "#993404"
         }
     ],
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Non-Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2757,6 +2860,16 @@ style_fc_ngv_90 = {
             "color": "#993404"
         }
     ],
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "units": "% / pixel",
+        "ticks_every": 25,
+        "title": "Percentage of Pixel that is Non-Green Vegetation",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2816,6 +2929,9 @@ style_fc_bs_10 = {
         },
     ],
     "legend": {
+        "begin": 0,
+        "end": 100,
+        "ticks_every": 25,
         "units": "% / pixel",
         "title": "Percentage of Pixel that is Bare Soil",
         "rcParams": {
@@ -2859,6 +2975,17 @@ style_fc_bs_50 = {
             "color": "#7a0177"
         }
     ],
+    # Old behaviour was wrong - this is what Leo and Emma have requested.
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "ticks_every": 25,
+        "units": "% / pixel",
+        "title": "Percentage of Pixel that is Bare Soil",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -2904,6 +3031,17 @@ style_fc_bs_90 = {
             "color": "#7a0177"
         }
     ],
+    # Old behaviour was wrong - this is what Leo and Emma have requested.
+    "legend": {
+        "begin": 0,
+        "end": 100,
+        "ticks_every": 25,
+        "units": "% / pixel",
+        "title": "Percentage of Pixel that is Bare Soil",
+        "rcParams": {
+            "font.size": 9
+        }
+    },
     "pq_masks": [
         {
             "flags": {
@@ -3080,7 +3218,14 @@ style_nidem = {
         }
     ],
     "legend": {
-        "units": "metres"
+        "begin": "-2.5",
+        "end": "1.5",
+        "ticks": ["-2.5", "-1.1", "0.0", "1.5"],
+        "units": "metres",
+        "tick_labels": {
+            "1.5": {"prefix": ">"},
+            "-2.5": {"prefix": "<"},
+        }
     }
 }
 
@@ -3147,10 +3292,23 @@ style_item_relative = {
         },
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "9.0",
+        "ticks_every": "1.0",
         "units": "%",
-        "radix_point": 0,
-        "scale_by": 10.0,
-        "major_ticks": 1
+        "decimal_places": 0,
+        "tick_labels": {
+            "0.0": {"label": "0"},
+            "0.1": {"label": "10"},
+            "0.2": {"label": "20"},
+            "0.3": {"label": "30"},
+            "0.4": {"label": "40"},
+            "0.5": {"label": "50"},
+            "0.6": {"label": "60"},
+            "0.7": {"label": "70"},
+            "0.8": {"label": "80"},
+            "0.9": {"label": "90"},
+        }
     }
 }
 
@@ -3234,6 +3392,15 @@ style_item_confidence = {
         },
     ],
     "legend": {
+        "begin": "0.01",
+        "end": "0.55",
+        "ticks": ["0.01", "0.55"],
+        "tick_labels": {
+            "0.01": {"prefix": "<"},
+            "0.55": {"prefix": ">"},
+        },
+        "decimal_places": 2,
+        # Why "NDWI"???
         "units": "NDWI standard deviation"
     }
 
@@ -3415,9 +3582,15 @@ style_aster_aloh_comp_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.9"},
+            "255.0": {"label": "1.3"},
+        },
         "units": "Blue is well ordered kaolinite,\nRed is Al-poor (Si-rich) muscovite (phengite)",
     }
-
 }
 
 style_aster_aloh_cont_ramp = {
@@ -3495,6 +3668,13 @@ style_aster_aloh_cont_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "2.0"},
+            "255.0": {"label": "2.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -3574,6 +3754,13 @@ style_aster_feoh_cont_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "2.0"},
+            "255.0": {"label": "2.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -3653,6 +3840,13 @@ style_aster_ferrox_comp_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.5"},
+            "255.0": {"label": "3.3"},
+        },
         "units": "Blue-cyan is non-hematitie,\nRed-yellow is hematite-rich",
     }
 }
@@ -3732,6 +3926,13 @@ style_aster_ferrox_cont_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.1"},
+            "255.0": {"label": "2.1"},
+        },
         "units": "Blue is low abundance,\nRed is high abundance",
     }
 }
@@ -3811,6 +4012,13 @@ style_aster_ferrous_mgoh_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.1"},
+            "255.0": {"label": "2.0"},
+        },
         "units": "Blue is low ferrous iron content,\nRed is high ferrous iron content",
     }
 }
@@ -3890,6 +4098,13 @@ style_aster_ferrous_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.75"},
+            "255.0": {"label": "1.025"},
+        },
         "units": "Blue is low abundance,\nRed is high abundance",
     }
 }
@@ -3969,6 +4184,13 @@ style_aster_green_veg_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.4"},
+            "255.0": {"label": "4"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -4048,6 +4270,13 @@ style_aster_gypsum_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.47"},
+            "255.0": {"label": "0.5"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -4127,6 +4356,13 @@ style_aster_kaolin_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.0"},
+            "255.0": {"label": "1.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -4206,6 +4442,13 @@ style_aster_mgoh_comp_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.6"},
+            "255.0": {"label": "1.4"},
+        },
         "units": "Blue-cyan is magnesite-dolomite, amphibole, \nRed is calcite, epidote, amphibole",
     }
 }
@@ -4285,6 +4528,13 @@ style_aster_mgoh_cont_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.05"},
+            "255.0": {"label": "1.2"},
+        },
         "units": "Blue low content,\nRed is high content",
     }
 }
@@ -4364,6 +4614,13 @@ style_aster_opaque_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.4"},
+            "255.0": {"label": "0.9"},
+        },
         "units": "Blue low content,\nRed is high content",
     }
 }
@@ -4443,6 +4700,13 @@ style_aster_silica_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.0"},
+            "255.0": {"label": "1.35"},
+        },
         "units": "Blue low silica content,\nRed is high silica content",
     }
 }
@@ -4522,6 +4786,13 @@ style_aster_quartz_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.5"},
+            "255.0": {"label": "0.52"},
+        },
         "units": "Blue low quartz content,\nRed is high quartz content",
     }
 }
@@ -4566,6 +4837,13 @@ style_tmad_sdev = {
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "decimal_places": 1,
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4609,6 +4887,12 @@ style_tmad_edev = {
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4652,6 +4936,12 @@ style_tmad_bcdev = {
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4732,7 +5022,11 @@ style_insar_velocity = {
     "range": [-35.0, 35.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
+        "begin": -35,
+        "end": 35,
+        "ticks_every": 35,
         "units": "mm/year",
+        "decimal_places": 0,
     }
 }
 
@@ -4754,7 +5048,11 @@ style_insar_displacement = {
     "range": [-110.0, 110.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
+        "begin": -110,
+        "end": 110,
         "units": "mm",
+        "decimal_places": 0,
+        "ticks_every": 110,
     }
 }
 
