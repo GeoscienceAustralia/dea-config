@@ -96,22 +96,22 @@ reslim_hap = {
 # Reusable Chunks 2. Band lists.
 
 bands_ls8 = {
-    "red": [],
-    "green": [],
-    "blue": [ ],
-    "nir": [ "near_infrared" ],
-    "swir1": [ "shortwave_infrared_1", "near_shortwave_infrared" ],
-    "swir2": [ "shortwave_infrared_2", "far_shortwave_infrared" ],
-    "coastal_aerosol": [ ],
+    "red": [ "red" ],
+    "green": [ "green" ],
+    "blue": [ "blue" ],
+    "nir": [ "nir", "near_infrared" ],
+    "swir1": [ "swir1", "shortwave_infrared_1", "near_shortwave_infrared" ],
+    "swir2": [ "swir2", "shortwave_infrared_2", "far_shortwave_infrared" ],
+    "coastal_aerosol": [ "coastal_aerosol" ],
 }
 
 bands_ls = {
-    "red": [],
-    "green": [],
-    "blue": [ ],
-    "nir": [ "near_infrared" ],
-    "swir1": [ "shortwave_infrared_1", "near_shortwave_infrared" ],
-    "swir2": [ "shortwave_infrared_2", "far_shortwave_infrared" ],
+    "red": [ "red" ],
+    "green": [ "green" ],
+    "blue": [ "blue" ],
+    "nir": [ "nir", "near_infrared" ],
+    "swir1": [ "swir1", "shortwave_infrared_1", "near_shortwave_infrared" ],
+    "swir2": [ "swir2", "shortwave_infrared_2", "far_shortwave_infrared" ],
 }
 
 bands_mangrove = {
@@ -135,28 +135,28 @@ bands_wofs_obs = {
 }
 
 bands_sentinel2 = {
-    "nbar_coastal_aerosol": [ "nbar_narrow_blue" ],
-    "nbar_blue": [],
-    "nbar_green": [],
-    "nbar_red": [],
-    "nbar_red_edge_1": [],
-    "nbar_red_edge_2": [],
-    "nbar_red_edge_3": [],
-    "nbar_nir_1":  [ "nbar_near_infrared_1" ],
-    "nbar_nir_2":  [ "nbar_near_infrared_2" ],
-    "nbar_swir_2": [ "nbar_shortwave_infrared_2" ],
-    "nbar_swir_3": [ "nbar_shortwave_infrared_3" ],
-    "nbart_coastal_aerosol": [ "coastal_aerosol", "nbart_narrow_blue", "narrow_blue"],
-    "nbart_blue": [ "blue" ],
-    "nbart_green": [ "green" ],
-    "nbart_red": [ "red" ],
-    "nbart_red_edge_1": [ "red_edge_1" ],
-    "nbart_red_edge_2": [ "red_edge_2" ],
-    "nbart_red_edge_3": [ "red_edge_3" ],
-    "nbart_nir_1":  [ "nir", "nir_1", "nbart_near_infrared_1" ],
-    "nbart_nir_2":  [ "nir_2", "nbart_near_infrared_2" ],
-    "nbart_swir_2": [ "swir_2", "nbart_shortwave_infrared_2" ],
-    "nbart_swir_3": [ "swir_3", "nbart_shortwave_infrared_3" ],
+    "nbar_coastal_aerosol": [ "nbar_coastal_aerosol", "nbar_narrow_blue" ],
+    "nbar_blue": [ "nbar_blue" ],
+    "nbar_green": [ "nbar_green" ],
+    "nbar_red": [ "nbar_red" ],
+    "nbar_red_edge_1": [ "nbar_red_edge_1" ],
+    "nbar_red_edge_2": [ "nbar_red_edge_2" ],
+    "nbar_red_edge_3": [ "nbar_red_edge_3" ],
+    "nbar_nir_1":  [ "nbar_nir_1", "nbar_near_infrared_1" ],
+    "nbar_nir_2":  [ "nbar_nir_2", "nbar_near_infrared_2" ],
+    "nbar_swir_2": [ "nbar_swir_2", "nbar_shortwave_infrared_2" ],
+    "nbar_swir_3": [ "nbar_swir_3", "nbar_shortwave_infrared_3" ],
+    "nbart_coastal_aerosol": [ "nbart_coastal_aerosol", "coastal_aerosol", "nbart_narrow_blue", "narrow_blue"],
+    "nbart_blue": [ "nbart_blue", "blue" ],
+    "nbart_green": [ "nbart_green", "green" ],
+    "nbart_red": [ "nbart_red", "red" ],
+    "nbart_red_edge_1": [ "nbart_red_edge_1", "red_edge_1" ],
+    "nbart_red_edge_2": [ "nbart_red_edge_2", "red_edge_2" ],
+    "nbart_red_edge_3": [ "nbart_red_edge_3", "red_edge_3" ],
+    "nbart_nir_1":  [ "nbart_nir_1", "nir", "nir_1", "nbart_near_infrared_1" ],
+    "nbart_nir_2":  [ "nbart_nir_2", "nir_2", "nbart_near_infrared_2" ],
+    "nbart_swir_2": [ "nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2" ],
+    "nbart_swir_3": [ "nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3" ],
 }
 
 bands_multi_topog = {
