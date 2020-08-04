@@ -5201,11 +5201,13 @@ style_insar_stddev_c_ud = copy.deepcopy(style_insar_stddev_l_ud)
 style_insar_stddev_c_ud["range"] = [0.0, 20.0]
 style_insar_stddev_c_ud["legend"]["begin"] = 0
 style_insar_stddev_c_ud["legend"]["end"] = 20
+style_insar_stddev_c_ud["legend"]["ticks_every"] = 10
 
 style_insar_stddev_c_ew = copy.deepcopy(style_insar_stddev_l_ew)
 style_insar_stddev_c_ew["range"] = [0.0, 20.0]
 style_insar_stddev_c_ew["legend"]["begin"] = 0
 style_insar_stddev_c_ew["legend"]["end"] = 20
+style_insar_stddev_c_ew["legend"]["ticks_every"] = 10
 
 style_insar_stddev_lv = {
     "name": "insar_stddev_lv",
@@ -5251,11 +5253,13 @@ style_insar_stddev_cv_ud = copy.deepcopy(style_insar_stddev_lv_ud)
 style_insar_stddev_cv_ud["range"] = [0.0, 6.0]
 style_insar_stddev_cv_ud["legend"]["begin"] = 0
 style_insar_stddev_cv_ud["legend"]["end"] = 6
+style_insar_stddev_cv_ud["legend"]["ticks_every"] = 3
 
 style_insar_stddev_cv_ew = copy.deepcopy(style_insar_stddev_lv_ew)
 style_insar_stddev_cv_ew["range"] = [0.0, 6.0]
 style_insar_stddev_cv_ew["legend"]["begin"] = 0
 style_insar_stddev_cv_ew["legend"]["end"] = 6
+style_insar_stddev_cv_ew["legend"]["ticks_every"] = 3
 
 # Layer segments for various INSAR Datasets
 alos_layers = [
