@@ -333,6 +333,39 @@ legend_idx_0_100_as_0_1_5ticks = {
     }
 }
 
+legend_idx_0_100_pixel_fc_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_ngv_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_bs_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "ticks_every": 25,
+    "units": "% / pixel",
+    "title": "Percentage of Pixel that is Bare Soil",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
 # Reusable Chunks 4. Styles
 
 style_ls_simple_rgb = {
@@ -2879,16 +2912,7 @@ style_fc_gv_90 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2936,16 +2960,7 @@ style_fc_ngv_10 = {
         }
     ],
     # Emulates what we had previously
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2992,16 +3007,7 @@ style_fc_ngv_50 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3048,16 +3054,7 @@ style_fc_ngv_90 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3112,16 +3109,7 @@ style_fc_bs_10 = {
         },
     ],
     # Emulates what we had previously
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
 
 style_fc_bs_50 = {
@@ -3160,16 +3148,7 @@ style_fc_bs_50 = {
         }
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3216,16 +3195,7 @@ style_fc_bs_90 = {
         }
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
