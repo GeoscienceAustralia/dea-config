@@ -265,6 +265,23 @@ legend_idx_percentage_by_10 = {
         "1.0": {"label": "100"},
     },
 }
+
+legend_idx_percentage_by_20 = {
+    "begin": "0.0",
+    "end": "1.0",
+    "decimal_places": 1,
+    "ticks_every": "0.2",
+    "units": "%",
+    "tick_labels": {
+        "0.0": {"label": "0"},
+        "0.2": {"label": "20"},
+        "0.4": {"label": "40"},
+        "0.6": {"label": "60"},
+        "0.8": {"label": "80"},
+        "1.0": {"label": "100"},
+    },
+}
+
 legend_idx_percentage_by_25 = {
         "units": "%",
         "decimal_places": 2,
@@ -292,7 +309,7 @@ legend_idx_twentyplus_3ticks = {
 
 legend_idx_thirtyplus_4ticks = {
     "begin": 0,
-    "end": 20,
+    "end": 30,
     "decimal_places": 0,
     "ticks_every": 10,
     "tick_labels": {
@@ -495,10 +512,14 @@ style_ls_ndwi = {
     "legend": {
         "begin": "0.0",
         "end": "0.5",
+        "decimal_places": 1,
+        "ticks": [ "0.0", "0.2", "0.4", "0.5"],
         "tick_labels": {
             "0.0": {
                 "prefix": "<"
             },
+            "0.2": {"label": "0.2"},
+            "0.4": {"label": "0.4"},
             "0.5": {
                 "prefix": ">"
             },
@@ -1096,7 +1117,7 @@ style_wofs_filt_freq_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_count_wet = {
@@ -1806,7 +1827,7 @@ style_annual_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency = {
@@ -1931,7 +1952,7 @@ style_annual_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency_blue = {
@@ -1982,7 +2003,7 @@ style_seasonal_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_obs = {
