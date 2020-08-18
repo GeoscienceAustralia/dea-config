@@ -2793,16 +2793,7 @@ style_fc_gv_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
 style_fc_gv_50 = {
@@ -2841,16 +2832,7 @@ style_fc_gv_50 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
