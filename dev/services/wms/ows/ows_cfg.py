@@ -1450,7 +1450,7 @@ style_wofs_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_confidence = {
@@ -1933,7 +1933,7 @@ style_seasonal_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_annual_wofs_summary_frequency_blue = {
