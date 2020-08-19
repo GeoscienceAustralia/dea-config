@@ -506,9 +506,6 @@ style_ls_ndwi = {
         {
             "value": 0.0,
             "color": "#d8e7f5",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": 0.1,
@@ -517,7 +514,6 @@ style_ls_ndwi = {
         {
             "value": 0.2,
             "color": "#73b3d8",
-            "legend": { }
         },
         {
             "value": 0.3,
@@ -526,14 +522,10 @@ style_ls_ndwi = {
         {
             "value": 0.4,
             "color": "#1563aa",
-            "legend": { }
         },
         {
             "value": 0.5,
             "color": "#08306b",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -1213,9 +1205,6 @@ style_wofs_count_wet = {
         {
             "value": 400,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -1295,9 +1284,6 @@ style_wofs_count_clear = {
         {
             "value": 1000,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -1714,9 +1700,6 @@ style_wofs_summary_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": legend_idx_thirtyplus_4ticks,
@@ -1787,9 +1770,6 @@ style_wofs_seasonal_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": legend_idx_thirtyplus_4ticks,
@@ -2243,9 +2223,6 @@ style_s2_ndci = {
         {
             "value": -0.1,
             "color": "#1696FF",
-            "legend": {
-                "prefix" : "<"
-            }
         },
         {
             "value": -0.1,
@@ -2254,7 +2231,6 @@ style_s2_ndci = {
         {
             "value": 0.0,
             "color": "#00FFDF",
-            "legend": { }
         },
         {
             "value": 0.1,
@@ -2263,7 +2239,6 @@ style_s2_ndci = {
         {
             "value": 0.2,
             "color": "#FFB50A",
-            "legend": { }
         },
         {
             "value": 0.4,
@@ -2272,9 +2247,6 @@ style_s2_ndci = {
         {
             "value": 0.5,
             "color": "#FF0000",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -2603,27 +2575,22 @@ style_fc_gv_10 = {
         {
             "value": 0,
             "color": "#ffffcc",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#c2e699",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#78c679",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#31a354",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#006837",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2747,27 +2714,22 @@ style_fc_ngv_10 = {
         {
             "value": 0,
             "color": "#ffffd4",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#fed98e",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#fe9929",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#d95f0e",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#993404",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2891,27 +2853,22 @@ style_fc_bs_10 = {
         {
             "value": 0,
             "color": "#feebe2",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#fbb4b9",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#f768a1",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#c51b8a",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#7a0177",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -3022,7 +2979,7 @@ style_fc_bs_90 = {
 style_fc_rgb =  {
     "name": "fc_rgb",
     "title": "Three-band fractional cover",
-    "abstract": "Frachtional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
+    "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
         "red": {
             "BS_PC_50": 1.0
@@ -3070,9 +3027,6 @@ style_nidem = {
         {
             "value": -2.5,
             "color": "#440154",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": -2.34,
@@ -3109,7 +3063,6 @@ style_nidem = {
         {
             "value": -1.1,
             "color": "#2e6b8d",
-            "legend": {}
         },
         {
             "value": -0.94,
@@ -3138,7 +3091,6 @@ style_nidem = {
         {
             "value": 0.0,
             "color": "#26ac7f",
-            "legend": { }
         },
         {
             "value": 0.14,
@@ -3179,9 +3131,6 @@ style_nidem = {
         {
             "value": 1.5,
             "color": "#fde724",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -3492,9 +3441,6 @@ style_aster_aloh_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.9"
-            }
         },
         {
             "value": 1,
@@ -3543,9 +3489,6 @@ style_aster_aloh_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.3"
-            }
         }
     ],
     "legend": {
@@ -3578,9 +3521,6 @@ style_aster_aloh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.0"
-            }
         },
         {
             "value": 1,
@@ -3629,9 +3569,6 @@ style_aster_aloh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
@@ -3664,9 +3601,6 @@ style_aster_feoh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.03"
-            }
         },
         {
             "value": 1,
@@ -3715,9 +3649,6 @@ style_aster_feoh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
@@ -3725,7 +3656,7 @@ style_aster_feoh_cont_ramp = {
         "end": "255.0",
         # note that legend value does not match the derived band value returned by GetFeatureInfo
         "tick_labels": {
-            "0.0": {"label": "2.0"},
+            "0.0": {"label": "2.03"},
             "255.0": {"label": "2.25"},
         },
         "units": "Blue is low content,\nRed is high content",
@@ -3750,9 +3681,6 @@ style_aster_ferrox_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.5"
-            }
         },
         {
             "value": 1,
@@ -3801,9 +3729,6 @@ style_aster_ferrox_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "3.3"
-            }
         }
     ],
     "legend": {
@@ -3836,9 +3761,6 @@ style_aster_ferrox_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.1"
-            }
         },
         {
             "value": 1,
@@ -3887,9 +3809,6 @@ style_aster_ferrox_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.1"
-            }
         }
     ],
     "legend": {
@@ -3922,9 +3841,6 @@ style_aster_ferrous_mgoh_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.1"
-            }
         },
         {
             "value": 1,
@@ -3973,9 +3889,6 @@ style_aster_ferrous_mgoh_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.0"
-            }
         }
     ],
     "legend": {
@@ -4008,9 +3921,6 @@ style_aster_ferrous_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.75"
-            }
         },
         {
             "value": 1,
@@ -4059,9 +3969,6 @@ style_aster_ferrous_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.025"
-            }
         }
     ],
     "legend": {
@@ -4094,9 +4001,6 @@ style_aster_green_veg_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.4"
-            }
         },
         {
             "value": 1,
@@ -5176,7 +5080,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5215,7 +5119,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5254,7 +5158,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5307,7 +5211,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5349,7 +5253,7 @@ Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Minera
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5394,7 +5298,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["canopy_cover_class", "extent"]
                     },
                     "styling": {
@@ -5426,7 +5330,7 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["wofs_filtered_summary"]
                     },
                     "styling": {
@@ -5461,7 +5365,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5495,7 +5399,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5529,7 +5433,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5556,7 +5460,7 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["confidence"]
                     },
                     "styling": {
@@ -5590,7 +5494,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5616,7 +5520,7 @@ Water Observations from Space - Annual Statistics is a set of annual statistical
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5650,7 +5554,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5684,7 +5588,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5710,7 +5614,7 @@ Water Observations from Space - April to October Statistics is a set of seasonal
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5736,7 +5640,7 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5770,7 +5674,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5796,7 +5700,7 @@ Water Observations from Space - November to March Statistics is a set of seasona
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5822,7 +5726,7 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5857,7 +5761,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["water"]
                     },
                     "styling": {
@@ -6200,7 +6104,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "wcs": {
                         "native_crs": "EPSG:4326",
-                        "native_resolution": [ 0.000833333333347, 0.000833333333347 ],
+                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
                         "default_bands": [ "regional", "intermediate", "local" ]
                     },
                     "legend": {
@@ -6261,7 +6165,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "wcs": {
                         "native_crs": "EPSG:4326",
-                        "native_resolution": [ 0.000833333333347, 0.000833333333347 ],
+                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
                         "default_bands": [ "intensity" ]
                     },
                     "styling": {
@@ -6306,7 +6210,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "green_veg_10",
@@ -6350,7 +6254,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "non_green_veg_10",
@@ -6387,7 +6291,7 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "bare_ground_10",
@@ -6432,7 +6336,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6477,7 +6381,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "green_veg_10",
@@ -6516,7 +6420,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "non_green_veg_10",
@@ -6548,7 +6452,7 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "bare_ground_10",
@@ -6580,7 +6484,7 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6660,7 +6564,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["nidem"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "NIDEM",
@@ -6727,7 +6631,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6774,7 +6678,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6852,7 +6756,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["relative"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "relative_layer",
@@ -6919,7 +6823,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["stddev"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "confidence_layer",
@@ -7967,7 +7871,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -8004,7 +7908,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -8041,7 +7945,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -8094,7 +7998,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -8135,7 +8039,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -8176,7 +8080,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -8211,7 +8115,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
