@@ -265,6 +265,23 @@ legend_idx_percentage_by_10 = {
         "1.0": {"label": "100"},
     },
 }
+
+legend_idx_percentage_by_20 = {
+    "begin": "0.0",
+    "end": "1.0",
+    "decimal_places": 1,
+    "ticks_every": "0.2",
+    "units": "%",
+    "tick_labels": {
+        "0.0": {"label": "0"},
+        "0.2": {"label": "20"},
+        "0.4": {"label": "40"},
+        "0.6": {"label": "60"},
+        "0.8": {"label": "80"},
+        "1.0": {"label": "100"},
+    },
+}
+
 legend_idx_percentage_by_25 = {
         "units": "%",
         "decimal_places": 2,
@@ -292,7 +309,7 @@ legend_idx_twentyplus_3ticks = {
 
 legend_idx_thirtyplus_4ticks = {
     "begin": 0,
-    "end": 20,
+    "end": 30,
     "decimal_places": 0,
     "ticks_every": 10,
     "tick_labels": {
@@ -313,6 +330,39 @@ legend_idx_0_100_as_0_1_5ticks = {
         "60": {"label": "0.6"},
         "80": {"label": "0.8"},
         "100": {"label": "1.0"},
+    }
+}
+
+legend_idx_0_100_pixel_fc_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_ngv_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_bs_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "ticks_every": 25,
+    "units": "% / pixel",
+    "title": "Percentage of Pixel that is Bare Soil",
+    "rcParams": {
+        "font.size": 9
     }
 }
 
@@ -495,10 +545,14 @@ style_ls_ndwi = {
     "legend": {
         "begin": "0.0",
         "end": "0.5",
+        "decimal_places": 1,
+        "ticks": [ "0.0", "0.2", "0.4", "0.5"],
         "tick_labels": {
             "0.0": {
                 "prefix": "<"
             },
+            "0.2": {"label": "0.2"},
+            "0.4": {"label": "0.4"},
             "0.5": {
                 "prefix": ">"
             },
@@ -1096,7 +1150,7 @@ style_wofs_filt_freq_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_count_wet = {
@@ -1806,7 +1860,7 @@ style_annual_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency = {
@@ -1931,7 +1985,7 @@ style_annual_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency_blue = {
@@ -1982,7 +2036,7 @@ style_seasonal_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_obs = {
@@ -2772,16 +2826,7 @@ style_fc_gv_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
 style_fc_gv_50 = {
@@ -2820,16 +2865,7 @@ style_fc_gv_50 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2876,16 +2912,7 @@ style_fc_gv_90 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2933,16 +2960,7 @@ style_fc_ngv_10 = {
         }
     ],
     # Emulates what we had previously
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2989,16 +3007,7 @@ style_fc_ngv_50 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3045,16 +3054,7 @@ style_fc_ngv_90 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3109,16 +3109,7 @@ style_fc_bs_10 = {
         },
     ],
     # Emulates what we had previously
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
 
 style_fc_bs_50 = {
@@ -3157,16 +3148,7 @@ style_fc_bs_50 = {
         }
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3213,16 +3195,7 @@ style_fc_bs_90 = {
         }
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
