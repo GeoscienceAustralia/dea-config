@@ -17,7 +17,7 @@ measurements:
      units: '1'
      flags_definition:
         dry:
-          bits: [7, 6, 5, 4, 3, 1, 0] # Ignore sea mask
+          bits: [7, 6, 5, 4, 3, 2, 1, 0]
           description: No water detected
           values: {0: true}
         nodata:
@@ -26,11 +26,15 @@ measurements:
           values: {0: false, 1: true}
         noncontiguous:
           bits: 1
-          description: At least one EO band is missing over over/undersaturated
+          description: At least one EO band is missing or saturated
           values: {0: false, 1: true}
-        terrain_or_low_angle:
+        low_solar_angle:
+          bits: 2
+          description: Low solar incidence angle
+          values: {0: false, 1: true}
+        terrain_shadow:
           bits: 3
-          description: terrain shadow or low solar angle
+          description: Terrain shadow
           values: {0: false, 1: true}
         high_slope:
           bits: 4
@@ -45,6 +49,6 @@ measurements:
           description: Cloudy
           values: {0: false, 1: true}
         wet:
-          bits: [7, 6, 5, 4, 3, 1, 0] # Ignore sea mask
+          bits: [7, 6, 5, 4, 3, 2, 1, 0]
           description: Clear and Wet
           values: {128: true}
