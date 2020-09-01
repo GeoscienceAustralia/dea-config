@@ -7,9 +7,6 @@ metadata:
     odc:file_format: GeoTIFF
   product:
     name: ga_ls_wofs_3
-  format:
-    name: GeoTIFF
-
 measurements:
    - name: water
      dtype: uint8
