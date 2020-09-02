@@ -5,7 +5,7 @@
 
 name: s2a_msiard_nrt_granule
 description: Sentinel-2A MSI ARD NRT - NBAR NBART and Pixel Quality
-metadata_type: eo
+metadata_type: eo_s2_nrt
 
 metadata:
     format:
@@ -797,7 +797,7 @@ measurements:
 
 name: s2b_msiard_nrt_granule
 description: Sentinel-2B MSI ARD NRT - NBAR NBART and Pixel Quality
-metadata_type: eo
+metadata_type: eo_s2_nrt
 
 metadata:
     format:
