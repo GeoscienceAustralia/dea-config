@@ -1,0 +1,129 @@
+---
+# Metadata Type
+name: eo_s2_nrt
+description: Legacy S2 NRT document structure
+dataset:
+  id:
+  - id
+  label:
+  - tile_id
+  format:
+  - format
+  - name
+  sources:
+  - lineage
+  - source_datasets
+  creation_dt:
+  - system_information
+  - time_processed
+  grid_spatial:
+  - grid_spatial
+  - projection
+  measurements:
+  - image
+  - bands
+  search_fields:
+    lat:
+      type: double-range
+      max_offset:
+      - - extent
+        - coord
+        - ur
+        - lat
+      - - extent
+        - coord
+        - lr
+        - lat
+      - - extent
+        - coord
+        - ul
+        - lat
+      - - extent
+        - coord
+        - ll
+        - lat
+      min_offset:
+      - - extent
+        - coord
+        - ur
+        - lat
+      - - extent
+        - coord
+        - lr
+        - lat
+      - - extent
+        - coord
+        - ul
+        - lat
+      - - extent
+        - coord
+        - ll
+        - lat
+      description: Latitude range
+    lon:
+      type: double-range
+      max_offset:
+      - - extent
+        - coord
+        - ul
+        - lon
+      - - extent
+        - coord
+        - ur
+        - lon
+      - - extent
+        - coord
+        - ll
+        - lon
+      - - extent
+        - coord
+        - lr
+        - lon
+      min_offset:
+      - - extent
+        - coord
+        - ul
+        - lon
+      - - extent
+        - coord
+        - ur
+        - lon
+      - - extent
+        - coord
+        - ll
+        - lon
+      - - extent
+        - coord
+        - lr
+        - lon
+      description: Longitude range
+    time:
+      type: datetime-range
+      max_offset:
+      - - extent
+        - center_dt
+      min_offset:
+      - - extent
+        - center_dt
+      description: Acquisition time
+    format:
+      offset:
+      - format
+      - name
+      indexed: false
+      description: File format (GeoTIFF, NetCDF)
+    platform:
+      offset:
+      - platform
+      - code
+      description: Platform code
+    instrument:
+      offset:
+      - instrument
+      - name
+      description: Instrument name
+    product_type:
+      offset:
+      - product_type
+      description: Product code
+...
