@@ -5404,6 +5404,122 @@ insar_layers.extend(alos_layers)
 insar_layers.extend(envisat_layers)
 insar_layers.extend(rs2_layers)
 
+style_tmad_sdev_new = {
+    "name": "arcsec_sdev_new",
+    "title": "sdev new",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_arcsec",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "sdev",
+            "scale_from": [ 0.017, 0.15 ],
+            "scale_to": [0.0, 4.0]
+        }
+    },
+    "needed_bands": ["sdev"],
+    "mpl_ramp": "coolwarm",
+    "range": [ 0.0, 4.0 ],
+    "legend": {
+        "start": "0.0",
+        "end": "4.0",
+        "ticks": ["0.0", "4.0"],
+        "tick_labels": {
+            "0.0": {"label": "Low\ntmad"},
+            "4.0": {"label": "High\ntmad"},
+        }
+    }
+}
+
+style_tmad_edev_new = {
+    "name": "log_edev_new",
+    "title": "edev new",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_offset_log",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "edev",
+            "scale_from": [0.025, 0.1],
+            "scale_to": [0.0, 4.0]
+        }
+    },
+    "needed_bands": ["edev"],
+    "mpl_ramp": "coolwarm",
+    "range": [ 0.0, 4.0 ],
+    "legend": {
+        "start": "0.0",
+        "end": "4.0",
+        "ticks": ["0.0", "4.0"],
+        "tick_labels": {
+            "0.0": {"label": "Low\ntmad"},
+            "4.0": {"label": "High\ntmad"},
+        }
+    }
+}
+
+
+style_tmad_bcdev_new = {
+    "name": "log_bcdev_new",
+    "title": "bcdev new",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_offset_log",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "bcdev",
+            "scale_from": [0.025, 0.13],
+            "scale_to": [0.0, 4.0]
+        }
+    },
+    "needed_bands": ["bcdev"],
+    "mpl_ramp": "coolwarm",
+    "range": [ 0.0, 4.0 ],
+    "legend": {
+        "start": "0.0",
+        "end": "4.0",
+        "ticks": ["0.0", "4.0"],
+        "tick_labels": {
+            "0.0": {"label": "Low\ntmad"},
+            "4.0": {"label": "High\ntmad"},
+        }
+    }
+}
+
+style_tmad_rgb = {
+        "name": "tmad_rgb",
+        "title": "TMAD multi-band false-colour",
+        "abstract": "",
+        "components": {
+            "red": {
+                "function": "datacube_ows.band_utils.single_band_arcsec",
+                "pass_product_cfg": True,
+                "kwargs": {
+                    "band": "sdev",
+                    "scale_from": [0.017, 0.15],
+                }
+            },
+            "green": {
+                "function": "datacube_ows.band_utils.single_band_offset_log",
+                "pass_product_cfg": True,
+                "kwargs": {
+                    "band": "edev",
+                    "scale_from": [0.025, 0.1],
+                }
+            },
+            "blue": {
+                "function": "datacube_ows.band_utils.single_band_offset_log",
+                "pass_product_cfg": True,
+                "kwargs": {
+                    "band": "bcdev",
+                    "scale_from": [0.025, 0.13],
+                }
+            },
+        },
+        "additional_bands": ["sdev", "bcdev", "edev"]
+}
+# End of Reuseable
+
 # Actual Configuration
 
 ows_cfg = {
@@ -8351,7 +8467,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "log_sdev",
                         "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_sdev_new, style_tmad_edev_new, style_tmad_bcdev_new,
+                            style_tmad_rgb,
                         ]
                     }
                 },
@@ -8388,7 +8506,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "log_sdev",
                         "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_sdev_new, style_tmad_edev_new, style_tmad_bcdev_new,
+                            style_tmad_rgb,
                         ]
                     }
                 },
@@ -8425,7 +8545,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "log_sdev",
                         "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_sdev_new, style_tmad_edev_new, style_tmad_bcdev_new,
+                            style_tmad_rgb,
                         ]
                     }
                 },
