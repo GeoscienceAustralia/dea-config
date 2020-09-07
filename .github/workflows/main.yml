@@ -23,5 +23,5 @@ jobs:
     - name: Run Json Linter
       run: |
         npm install jsonlint -g
-        sudo chown -R $(whoami) ~/.npm
+        sudo chown -R $(whoami) /usr/local/lib/node_modules
         jsonlint dev/terria/dea-maps.json
