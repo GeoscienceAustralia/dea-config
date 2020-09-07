@@ -6,46 +6,46 @@ from functools import partial
 
 reslim_landsat = {
     "wms": {
-        "zoomed_out_fill_colour": [150,180,200,160],
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 35.0,
         # "max_datasets": 16, # Defaults to no dataset limit
     },
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
-    }
+    },
 }
 
 reslim_mangrove = {
     "wms": {
-        "zoomed_out_fill_colour": [150,180,200,160],
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 15.0,
         # "max_datasets": 16, # Defaults to no dataset limit
     },
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
-    }
+    },
 }
 
 reslim_aster = {
     "wms": {
-        "zoomed_out_fill_colour": [150,180,200,160],
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 10.0,
         # "max_datasets": 16, # Defaults to no dataset limit
     },
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
-    }
+    },
 }
 
 reslim_tmad = {
     "wms": {
-        "zoomed_out_fill_colour": [150,180,200,160],
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 15.0,
         # "max_datasets": 16, # Defaults to no dataset limit
     },
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
-    }
+    },
 }
 
 reslim_waterbody = {
@@ -53,9 +53,7 @@ reslim_waterbody = {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 0,
     },
-    "wcs": {
-    }
-
+    "wcs": {},
 }
 
 reslim_wofs = reslim_mangrove
@@ -84,34 +82,34 @@ reslim_insar = reslim_nidem
 
 reslim_hap = {
     "wms": {
-        "zoomed_out_fill_colour": [150,180,200,160],
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 500.0,
         "max_datasets": 6,
     },
     "wcs": {
         "max_datasets": 16,
-    }
+    },
 }
 
 # Reusable Chunks 2. Band lists.
 
 bands_ls8 = {
-    "red": [ "red" ],
-    "green": [ "green" ],
-    "blue": [ "blue" ],
-    "nir": [ "nir", "near_infrared" ],
-    "swir1": [ "swir1", "shortwave_infrared_1", "near_shortwave_infrared" ],
-    "swir2": [ "swir2", "shortwave_infrared_2", "far_shortwave_infrared" ],
-    "coastal_aerosol": [ "coastal_aerosol" ],
+    "red": ["red"],
+    "green": ["green"],
+    "blue": ["blue"],
+    "nir": ["nir", "near_infrared"],
+    "swir1": ["swir1", "shortwave_infrared_1", "near_shortwave_infrared"],
+    "swir2": ["swir2", "shortwave_infrared_2", "far_shortwave_infrared"],
+    "coastal_aerosol": ["coastal_aerosol"],
 }
 
 bands_ls = {
-    "red": [ "red" ],
-    "green": [ "green" ],
-    "blue": [ "blue" ],
-    "nir": [ "nir", "near_infrared" ],
-    "swir1": [ "swir1", "shortwave_infrared_1", "near_shortwave_infrared" ],
-    "swir2": [ "swir2", "shortwave_infrared_2", "far_shortwave_infrared" ],
+    "red": ["red"],
+    "green": ["green"],
+    "blue": ["blue"],
+    "nir": ["nir", "near_infrared"],
+    "swir1": ["swir1", "shortwave_infrared_1", "near_shortwave_infrared"],
+    "swir2": ["swir2", "shortwave_infrared_2", "far_shortwave_infrared"],
 }
 
 bands_mangrove = {
@@ -119,10 +117,7 @@ bands_mangrove = {
     "extent": [],
 }
 
-bands_wofs_filt_sum = {
-    "confidence": [],
-    "wofs_filtered_summary": []
-}
+bands_wofs_filt_sum = {"confidence": [], "wofs_filtered_summary": []}
 
 bands_wofs_sum = {
     "count_wet": [],
@@ -135,28 +130,33 @@ bands_wofs_obs = {
 }
 
 bands_sentinel2 = {
-    "nbar_coastal_aerosol": [ "nbar_coastal_aerosol", "nbar_narrow_blue" ],
-    "nbar_blue": [ "nbar_blue" ],
-    "nbar_green": [ "nbar_green" ],
-    "nbar_red": [ "nbar_red" ],
-    "nbar_red_edge_1": [ "nbar_red_edge_1" ],
-    "nbar_red_edge_2": [ "nbar_red_edge_2" ],
-    "nbar_red_edge_3": [ "nbar_red_edge_3" ],
-    "nbar_nir_1":  [ "nbar_nir_1", "nbar_near_infrared_1" ],
-    "nbar_nir_2":  [ "nbar_nir_2", "nbar_near_infrared_2" ],
-    "nbar_swir_2": [ "nbar_swir_2", "nbar_shortwave_infrared_2" ],
-    "nbar_swir_3": [ "nbar_swir_3", "nbar_shortwave_infrared_3" ],
-    "nbart_coastal_aerosol": [ "nbart_coastal_aerosol", "coastal_aerosol", "nbart_narrow_blue", "narrow_blue"],
-    "nbart_blue": [ "nbart_blue", "blue" ],
-    "nbart_green": [ "nbart_green", "green" ],
-    "nbart_red": [ "nbart_red", "red" ],
-    "nbart_red_edge_1": [ "nbart_red_edge_1", "red_edge_1" ],
-    "nbart_red_edge_2": [ "nbart_red_edge_2", "red_edge_2" ],
-    "nbart_red_edge_3": [ "nbart_red_edge_3", "red_edge_3" ],
-    "nbart_nir_1":  [ "nbart_nir_1", "nir", "nir_1", "nbart_near_infrared_1" ],
-    "nbart_nir_2":  [ "nbart_nir_2", "nir_2", "nbart_near_infrared_2" ],
-    "nbart_swir_2": [ "nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2" ],
-    "nbart_swir_3": [ "nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3" ],
+    "nbar_coastal_aerosol": ["nbar_coastal_aerosol", "nbar_narrow_blue"],
+    "nbar_blue": ["nbar_blue"],
+    "nbar_green": ["nbar_green"],
+    "nbar_red": ["nbar_red"],
+    "nbar_red_edge_1": ["nbar_red_edge_1"],
+    "nbar_red_edge_2": ["nbar_red_edge_2"],
+    "nbar_red_edge_3": ["nbar_red_edge_3"],
+    "nbar_nir_1": ["nbar_nir_1", "nbar_near_infrared_1"],
+    "nbar_nir_2": ["nbar_nir_2", "nbar_near_infrared_2"],
+    "nbar_swir_2": ["nbar_swir_2", "nbar_shortwave_infrared_2"],
+    "nbar_swir_3": ["nbar_swir_3", "nbar_shortwave_infrared_3"],
+    "nbart_coastal_aerosol": [
+        "nbart_coastal_aerosol",
+        "coastal_aerosol",
+        "nbart_narrow_blue",
+        "narrow_blue",
+    ],
+    "nbart_blue": ["nbart_blue", "blue"],
+    "nbart_green": ["nbart_green", "green"],
+    "nbart_red": ["nbart_red", "red"],
+    "nbart_red_edge_1": ["nbart_red_edge_1", "red_edge_1"],
+    "nbart_red_edge_2": ["nbart_red_edge_2", "red_edge_2"],
+    "nbart_red_edge_3": ["nbart_red_edge_3", "red_edge_3"],
+    "nbart_nir_1": ["nbart_nir_1", "nir", "nir_1", "nbart_near_infrared_1"],
+    "nbart_nir_2": ["nbart_nir_2", "nir_2", "nbart_near_infrared_2"],
+    "nbart_swir_2": ["nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2"],
+    "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
 }
 
 bands_multi_topog = {
@@ -182,20 +182,18 @@ bands_fc_percentile = {
 }
 
 bands_fc = {
-    "BS": [ "bare_soil" ],
-    "PV": [ "photosynthetic_vegetation", "green_vegetation" ],
-    "NPV": [ "non_photosynthetic_vegetation", "brown_vegetation" ],
+    "BS": ["bare_soil"],
+    "PV": ["photosynthetic_vegetation", "green_vegetation"],
+    "NPV": ["non_photosynthetic_vegetation", "brown_vegetation"],
 }
 
 bands_tmad = {
-    "sdev" : [],
+    "sdev": [],
     "edev": [],
     "bcdev": [],
 }
 
-bands_nidem = {
-    "nidem": []
-}
+bands_nidem = {"nidem": []}
 
 bands_item = {
     "relative": [],
@@ -224,27 +222,13 @@ bands_aster_single_band = {
 }
 
 # InSAR Displacements / Velocity
-insar_disp_bands = {
-    "ew": [],
-    "ud": [],
-    "ewstd": [],
-    "upstd": []
-}
+insar_disp_bands = {"ew": [], "ud": [], "ewstd": [], "upstd": []}
 
-insar_vel_bands = {
-    "ew": [],
-    "ud": [],
-    "ewstd": [],
-    "upstd": []
-}
+insar_vel_bands = {"ew": [], "ud": [], "ewstd": [], "upstd": []}
 
 
 # Reusable Chunks 3. Legends
-legend_idx_0_1_5ticks = {
-        "begin": "0.0",
-        "end": "1.0",
-        "ticks_every": "0.2"
-}
+legend_idx_0_1_5ticks = {"begin": "0.0", "end": "1.0", "ticks_every": "0.2"}
 
 legend_idx_percentage_by_10 = {
     "begin": "0.0",
@@ -283,28 +267,26 @@ legend_idx_percentage_by_20 = {
 }
 
 legend_idx_percentage_by_25 = {
-        "units": "%",
-        "decimal_places": 2,
-        "begin": "0.00",
-        "end": "1.00",
-        "ticks_every": 0.25,
-        "tick_labels": {
-            "0.00": {"label": "0"},
-            "0.25": {"label": "25"},
-            "0.50": {"label": "50"},
-            "0.75": {"label": "75"},
-            "1.00": {"label": "100"},
-        }
-    }
+    "units": "%",
+    "decimal_places": 2,
+    "begin": "0.00",
+    "end": "1.00",
+    "ticks_every": 0.25,
+    "tick_labels": {
+        "0.00": {"label": "0"},
+        "0.25": {"label": "25"},
+        "0.50": {"label": "50"},
+        "0.75": {"label": "75"},
+        "1.00": {"label": "100"},
+    },
+}
 
 legend_idx_twentyplus_3ticks = {
     "begin": 0,
     "end": 20,
     "decimal_places": 0,
     "ticks_every": 10,
-    "tick_labels": {
-        "20": {"prefix": ">"}
-    }
+    "tick_labels": {"20": {"prefix": ">"}},
 }
 
 legend_idx_thirtyplus_4ticks = {
@@ -312,10 +294,8 @@ legend_idx_thirtyplus_4ticks = {
     "end": 30,
     "decimal_places": 0,
     "ticks_every": 10,
-    "tick_labels": {
-        "30": {"prefix": ">"}
-    },
-    "strip_location": [0.05, 0.5, 0.89, 0.15]
+    "tick_labels": {"30": {"prefix": ">"}},
+    "strip_location": [0.05, 0.5, 0.89, 0.15],
 }
 
 legend_idx_0_100_as_0_1_5ticks = {
@@ -330,7 +310,7 @@ legend_idx_0_100_as_0_1_5ticks = {
         "60": {"label": "0.6"},
         "80": {"label": "0.8"},
         "100": {"label": "1.0"},
-    }
+    },
 }
 
 legend_idx_0_100_pixel_fc_25ticks = {
@@ -339,9 +319,7 @@ legend_idx_0_100_pixel_fc_25ticks = {
     "units": "% / pixel",
     "ticks_every": 25,
     "title": "Percentage of Pixel that is Green Vegetation",
-    "rcParams": {
-        "font.size": 9
-    }
+    "rcParams": {"font.size": 9},
 }
 
 legend_idx_0_100_pixel_fc_ngv_25ticks = {
@@ -350,9 +328,7 @@ legend_idx_0_100_pixel_fc_ngv_25ticks = {
     "units": "% / pixel",
     "ticks_every": 25,
     "title": "Percentage of Pixel that is Green Vegetation",
-    "rcParams": {
-        "font.size": 9
-    }
+    "rcParams": {"font.size": 9},
 }
 
 legend_idx_0_100_pixel_fc_bs_25ticks = {
@@ -361,72 +337,48 @@ legend_idx_0_100_pixel_fc_bs_25ticks = {
     "ticks_every": 25,
     "units": "% / pixel",
     "title": "Percentage of Pixel that is Bare Soil",
-    "rcParams": {
-        "font.size": 9
-    }
+    "rcParams": {"font.size": 9},
 }
 
 # Reusable Chunks 4. Styles
 
 style_ls_simple_rgb = {
-        "name": "simple_rgb",
-        "title": "Simple RGB",
-        "abstract": "Simple true-colour image, using the red, green and blue bands",
-        "components": {
-            "red": {
-                "red": 1.0
-            },
-            "green": {
-                "green": 1.0
-            },
-            "blue": {
-                "blue": 1.0
-            }
-        },
-        "scale_range": [0.0, 3000.0]
+    "name": "simple_rgb",
+    "title": "Simple RGB",
+    "abstract": "Simple true-colour image, using the red, green and blue bands",
+    "components": {"red": {"red": 1.0}, "green": {"green": 1.0}, "blue": {"blue": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
-style_fc_simple_rgb  = {
-        "name": "simple_rgb",
-        "title": "Simple RGB",
-        "abstract": "Simple true-colour image, using the red, green and blue bands",
-        "components": {
-            "red": {
-                "BS_PC_50": 1.0
+style_fc_simple_rgb = {
+    "name": "simple_rgb",
+    "title": "Simple RGB",
+    "abstract": "Simple true-colour image, using the red, green and blue bands",
+    "components": {
+        "red": {"BS_PC_50": 1.0},
+        "green": {"PV_PC_50": 1.0},
+        "blue": {"NPV_PC_50": 1.0},
+    },
+    "scale_range": [0.0, 100.0],
+    "pq_masks": [
+        {
+            "flags": {
+                "sea": True,
             },
-            "green": {
-                "PV_PC_50": 1.0
-            },
-            "blue": {
-                "NPV_PC_50": 1.0
-            }
+            "invert": True,
         },
-        "scale_range": [0.0, 100.0],
-        "pq_masks": [
-            {
-                "flags": {
-                    'sea': True,
-                },
-                "invert": True,
-            },
-        ],
+    ],
 }
 style_ls_irg = {
     "name": "infrared_green",
     "title": "False colour - Green, SWIR, NIR",
     "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
     "components": {
-        "red": {
-            "swir1": 1.0
-        },
-        "green": {
-            "nir": 1.0
-        },
-        "blue": {
-            "green": 1.0
-        }
+        "red": {"swir1": 1.0},
+        "green": {"nir": 1.0},
+        "blue": {"green": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_ls_ndvi = {
@@ -436,63 +388,22 @@ style_ls_ndvi = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "nir",
-            "band2": "red"
-        }
+        "kwargs": {"band1": "nir", "band2": "red"},
     },
     "needed_bands": ["red", "nir"],
     "color_ramp": [
-        {
-            "value": -0.0,
-            "color": "#8F3F20",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.0,
-            "color": "#8F3F20",
-            "alpha": 1.0
-        },
-        {
-            "value": 0.1,
-            "color": "#A35F18"
-        },
-        {
-            "value": 0.2,
-            "color": "#B88512"
-        },
-        {
-            "value": 0.3,
-            "color": "#CEAC0E"
-        },
-        {
-            "value": 0.4,
-            "color": "#E5D609"
-        },
-        {
-            "value": 0.5,
-            "color": "#FFFF0C"
-        },
-        {
-            "value": 0.6,
-            "color": "#C3DE09"
-        },
-        {
-            "value": 0.7,
-            "color": "#88B808"
-        },
-        {
-            "value": 0.8,
-            "color": "#529400"
-        },
-        {
-            "value": 0.9,
-            "color": "#237100"
-        },
-        {
-            "value": 1.0,
-            "color": "#114D04"
-        }
+        {"value": -0.0, "color": "#8F3F20", "alpha": 0.0},
+        {"value": 0.0, "color": "#8F3F20", "alpha": 1.0},
+        {"value": 0.1, "color": "#A35F18"},
+        {"value": 0.2, "color": "#B88512"},
+        {"value": 0.3, "color": "#CEAC0E"},
+        {"value": 0.4, "color": "#E5D609"},
+        {"value": 0.5, "color": "#FFFF0C"},
+        {"value": 0.6, "color": "#C3DE09"},
+        {"value": 0.7, "color": "#88B808"},
+        {"value": 0.8, "color": "#529400"},
+        {"value": 0.9, "color": "#237100"},
+        {"value": 1.0, "color": "#114D04"},
     ],
     "legend": legend_idx_0_1_5ticks,
 }
@@ -505,34 +416,21 @@ style_ls_ndwi = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "green",
-            "band2": "nir"
-        }
+        "kwargs": {"band1": "green", "band2": "nir"},
     },
     "needed_bands": ["green", "nir"],
     "color_ramp": [
-        {
-            "value": -0.1,
-            "color": "#f7fbff",
-            "alpha": 0.0
-        },
+        {"value": -0.1, "color": "#f7fbff", "alpha": 0.0},
         {
             "value": 0.0,
             "color": "#d8e7f5",
         },
-        {
-            "value": 0.1,
-            "color": "#b0d2e8"
-        },
+        {"value": 0.1, "color": "#b0d2e8"},
         {
             "value": 0.2,
             "color": "#73b3d8",
         },
-        {
-            "value": 0.3,
-            "color": "#3e8ec4"
-        },
+        {"value": 0.3, "color": "#3e8ec4"},
         {
             "value": 0.4,
             "color": "#1563aa",
@@ -540,24 +438,20 @@ style_ls_ndwi = {
         {
             "value": 0.5,
             "color": "#08306b",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
         "end": "0.5",
         "decimal_places": 1,
-        "ticks": [ "0.0", "0.2", "0.4", "0.5"],
+        "ticks": ["0.0", "0.2", "0.4", "0.5"],
         "tick_labels": {
-            "0.0": {
-                "prefix": "<"
-            },
+            "0.0": {"prefix": "<"},
             "0.2": {"label": "0.2"},
             "0.4": {"label": "0.4"},
-            "0.5": {
-                "prefix": ">"
-            },
-        }
-    }
+            "0.5": {"prefix": ">"},
+        },
+    },
 }
 
 style_ls_mndwi = {
@@ -567,42 +461,17 @@ style_ls_mndwi = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "green",
-            "band2": "swir1"
-        }
+        "kwargs": {"band1": "green", "band2": "swir1"},
     },
     "needed_bands": ["green", "swir1"],
     "color_ramp": [
-        {
-            "value": -0.1,
-            "color": "#f7fbff",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.0,
-            "color": "#d8e7f5"
-        },
-        {
-            "value": 0.2,
-            "color": "#b0d2e8"
-        },
-        {
-            "value": 0.4,
-            "color": "#73b3d8"
-        },
-        {
-            "value": 0.6,
-            "color": "#3e8ec4"
-        },
-        {
-            "value": 0.8,
-            "color": "#1563aa"
-        },
-        {
-            "value": 1.0,
-            "color": "#08306b"
-        }
+        {"value": -0.1, "color": "#f7fbff", "alpha": 0.0},
+        {"value": 0.0, "color": "#d8e7f5"},
+        {"value": 0.2, "color": "#b0d2e8"},
+        {"value": 0.4, "color": "#73b3d8"},
+        {"value": 0.6, "color": "#3e8ec4"},
+        {"value": 0.8, "color": "#1563aa"},
+        {"value": 1.0, "color": "#08306b"},
     ],
     "legend": legend_idx_0_1_5ticks,
 }
@@ -611,36 +480,16 @@ style_ls_pure_blue = {
     "name": "blue",
     "title": "Blue - 480",
     "abstract": "Blue band, centered on 480nm",
-    "components": {
-        "red": {
-            "blue": 1.0
-        },
-        "green": {
-            "blue": 1.0
-        },
-        "blue": {
-            "blue": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"blue": 1.0}, "green": {"blue": 1.0}, "blue": {"blue": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 style_sentinel_pure_blue = {
     "name": "blue",
     "title": "Blue - 490",
     "abstract": "Blue band, centered on 490nm",
-    "components": {
-        "red": {
-            "blue": 1.0
-        },
-        "green": {
-            "blue": 1.0
-        },
-        "blue": {
-            "blue": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"blue": 1.0}, "green": {"blue": 1.0}, "blue": {"blue": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 style_ls_pure_green = {
@@ -648,71 +497,35 @@ style_ls_pure_green = {
     "title": "Green - 560",
     "abstract": "Green band, centered on 560nm",
     "components": {
-        "red": {
-            "green": 1.0
-        },
-        "green": {
-            "green": 1.0
-        },
-        "blue": {
-            "green": 1.0
-        }
+        "red": {"green": 1.0},
+        "green": {"green": 1.0},
+        "blue": {"green": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_ls_pure_red = {
     "name": "red",
     "title": "Red - 660",
     "abstract": "Red band, centered on 660nm",
-    "components": {
-        "red": {
-            "red": 1.0
-        },
-        "green": {
-            "red": 1.0
-        },
-        "blue": {
-            "red": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"red": 1.0}, "green": {"red": 1.0}, "blue": {"red": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 style_ls_pure_nir = {
     "name": "nir",
     "title": "Near Infrared (NIR) - 840",
     "abstract": "Near infra-red band, centered on 840nm",
-    "components": {
-        "red": {
-            "nir": 1.0
-        },
-        "green": {
-            "nir": 1.0
-        },
-        "blue": {
-            "nir": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 style_sentinel_pure_nir = {
     "name": "nir",
     "title": "Near Infrared (NIR) - 870",
     "abstract": "Near infra-red band, centered on 870nm",
-    "components": {
-        "red": {
-            "nir": 1.0
-        },
-        "green": {
-            "nir": 1.0
-        },
-        "blue": {
-            "nir": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 style_ls_pure_swir1 = {
@@ -720,17 +533,11 @@ style_ls_pure_swir1 = {
     "title": "Shortwave Infrared (SWIR) - 1650",
     "abstract": "Short wave infra-red band 1, centered on 1650nm",
     "components": {
-        "red": {
-            "swir1": 1.0
-        },
-        "green": {
-            "swir1": 1.0
-        },
-        "blue": {
-            "swir1": 1.0
-        }
+        "red": {"swir1": 1.0},
+        "green": {"swir1": 1.0},
+        "blue": {"swir1": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_sentinel_pure_swir1 = {
@@ -738,17 +545,11 @@ style_sentinel_pure_swir1 = {
     "title": "Shortwave Infrared (SWIR) - 1610",
     "abstract": "Short wave infra-red band 1, centered on 1610nm",
     "components": {
-        "red": {
-            "swir1": 1.0
-        },
-        "green": {
-            "swir1": 1.0
-        },
-        "blue": {
-            "swir1": 1.0
-        }
+        "red": {"swir1": 1.0},
+        "green": {"swir1": 1.0},
+        "blue": {"swir1": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_ls_pure_swir2 = {
@@ -756,17 +557,11 @@ style_ls_pure_swir2 = {
     "title": "Shortwave Infrared (SWIR) - 2220",
     "abstract": "Short wave infra-red band 2, centered on 2220nm",
     "components": {
-        "red": {
-            "swir2": 1.0
-        },
-        "green": {
-            "swir2": 1.0
-        },
-        "blue": {
-            "swir2": 1.0
-        }
+        "red": {"swir2": 1.0},
+        "green": {"swir2": 1.0},
+        "blue": {"swir2": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_sentinel_pure_swir2 = {
@@ -774,17 +569,11 @@ style_sentinel_pure_swir2 = {
     "title": "Shortwave Infrared (SWIR) - 2200",
     "abstract": "Short wave infra-red band 2, centered on 2200nm",
     "components": {
-        "red": {
-            "swir2": 1.0
-        },
-        "green": {
-            "swir2": 1.0
-        },
-        "blue": {
-            "swir2": 1.0
-        }
+        "red": {"swir2": 1.0},
+        "green": {"swir2": 1.0},
+        "blue": {"swir2": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_nd_ferric_iron = {
@@ -794,63 +583,22 @@ style_nd_ferric_iron = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "red",
-            "band2": "blue"
-        }
+        "kwargs": {"band1": "red", "band2": "blue"},
     },
-    "needed_bands": [ 'red', 'blue' ],
+    "needed_bands": ["red", "blue"],
     "color_ramp": [
-        {
-            "value": -0.1,
-            "color": "#3B97C3",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.0,
-            "color": "#6EA9B0",
-            "alpha": 1.0
-        },
-        {
-            "value": 0.1,
-            "color": "#83B3A9"
-        },
-        {
-            "value": 0.2,
-            "color": "#9FC29D"
-        },
-        {
-            "value": 0.3,
-            "color": "#F3F56C"
-        },
-        {
-            "value": 0.4,
-            "color": "#FCDE56"
-        },
-        {
-            "value": 0.5,
-            "color": "#FCC54C"
-        },
-        {
-            "value": 0.6,
-            "color": "#F77F2F"
-        },
-        {
-            "value": 0.7,
-            "color": "#F55F25"
-        },
-        {
-            "value": 0.8,
-            "color": "#F25622"
-        },
-        {
-            "value": 0.9,
-            "color": "#EB1E15"
-        },
-        {
-            "value": 1.0,
-            "color": "#E81515"
-        },
+        {"value": -0.1, "color": "#3B97C3", "alpha": 0.0},
+        {"value": 0.0, "color": "#6EA9B0", "alpha": 1.0},
+        {"value": 0.1, "color": "#83B3A9"},
+        {"value": 0.2, "color": "#9FC29D"},
+        {"value": 0.3, "color": "#F3F56C"},
+        {"value": 0.4, "color": "#FCDE56"},
+        {"value": 0.5, "color": "#FCC54C"},
+        {"value": 0.6, "color": "#F77F2F"},
+        {"value": 0.7, "color": "#F55F25"},
+        {"value": 0.8, "color": "#F25622"},
+        {"value": 0.9, "color": "#EB1E15"},
+        {"value": 1.0, "color": "#E81515"},
     ],
     "legend": legend_idx_0_1_5ticks,
 }
@@ -862,42 +610,17 @@ style_nd_soil = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "swir1",
-            "band2": "nir"
-        }
+        "kwargs": {"band1": "swir1", "band2": "nir"},
     },
     "needed_bands": ["nir", "swir1"],
     "color_ramp": [
-        {
-            "value": -0.1,
-            "color": "#f7fbff",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.0,
-            "color": "#d8e7f5"
-        },
-        {
-            "value": 0.2,
-            "color": "#b0d2e8"
-        },
-        {
-            "value": 0.4,
-            "color": "#73b3d8"
-        },
-        {
-            "value": 0.6,
-            "color": "#3e8ec4"
-        },
-        {
-            "value": 0.8,
-            "color": "#1563aa"
-        },
-        {
-            "value": 1.0,
-            "color": "#08306b"
-        }
+        {"value": -0.1, "color": "#f7fbff", "alpha": 0.0},
+        {"value": 0.0, "color": "#d8e7f5"},
+        {"value": 0.2, "color": "#b0d2e8"},
+        {"value": 0.4, "color": "#73b3d8"},
+        {"value": 0.6, "color": "#3e8ec4"},
+        {"value": 0.8, "color": "#1563aa"},
+        {"value": 1.0, "color": "#08306b"},
     ],
     "legend": legend_idx_0_1_5ticks,
 }
@@ -909,63 +632,22 @@ style_nd_clay_mica = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "swir1",
-            "band2": "swir2"
-        }
+        "kwargs": {"band1": "swir1", "band2": "swir2"},
     },
     "needed_bands": ["swir1", "swir2"],
     "color_ramp": [
-        {
-            "value": -0.1,
-            "color": "#ffffb2",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.0,
-            "color": "#ffef97",
-            "alpha": 1.0
-        },
-        {
-            "value": 0.1,
-            "color": "#ffe07d"
-        },
-        {
-            "value": 0.2,
-            "color": "#fecc5c"
-        },
-        {
-            "value": 0.3,
-            "color": "#feb450"
-        },
-        {
-            "value": 0.4,
-            "color": "#fd8d3c"
-        },
-        {
-            "value": 0.5,
-            "color": "#f86b30"
-        },
-        {
-            "value": 0.6,
-            "color": "#f44f26"
-        },
-        {
-            "value": 0.7,
-            "color": "#f03b20"
-        },
-        {
-            "value": 0.8,
-            "color": "#de2522"
-        },
-        {
-            "value": 0.9,
-            "color": "#cc1024"
-        },
-        {
-            "value": 1.0,
-            "color": "#bd0026"
-        }
+        {"value": -0.1, "color": "#ffffb2", "alpha": 0.0},
+        {"value": 0.0, "color": "#ffef97", "alpha": 1.0},
+        {"value": 0.1, "color": "#ffe07d"},
+        {"value": 0.2, "color": "#fecc5c"},
+        {"value": 0.3, "color": "#feb450"},
+        {"value": 0.4, "color": "#fd8d3c"},
+        {"value": 0.5, "color": "#f86b30"},
+        {"value": 0.6, "color": "#f44f26"},
+        {"value": 0.7, "color": "#f03b20"},
+        {"value": 0.8, "color": "#de2522"},
+        {"value": 0.9, "color": "#cc1024"},
+        {"value": 1.0, "color": "#bd0026"},
     ],
     "legend": legend_idx_0_1_5ticks,
 }
@@ -979,38 +661,30 @@ style_mangrove_cover_v2 = {
             {
                 "title": "Not Observed",
                 "abstract": "(Clear Obs < 3)",
-                "flags": {
-                    "notobserved": True
-                },
-                "color": "#BDBDBD"
+                "flags": {"notobserved": True},
+                "color": "#BDBDBD",
             },
             {
                 "title": "Woodland",
                 "abstract": "(20% - 50% cover)",
-                "flags": {
-                    "woodland": True
-                },
-                "color": "#9FFF4C"
+                "flags": {"woodland": True},
+                "color": "#9FFF4C",
             },
             {
                 "title": "Open Forest",
                 "abstract": "(50% - 80% cover)",
-                "flags": {
-                    "open_forest": True
-                },
-                "color": "#5ECC00"
+                "flags": {"open_forest": True},
+                "color": "#5ECC00",
             },
             {
                 "title": "Closed Forest",
                 "abstract": "(>80% cover)",
-                "flags": {
-                    "closed_forest": True
-                },
-                "color": "#3B7F00"
+                "flags": {"closed_forest": True},
+                "color": "#3B7F00",
             },
         ]
     },
-    "legend": {}
+    "legend": {},
 }
 
 style_wofs_filt_freq = {
@@ -1022,83 +696,31 @@ style_wofs_filt_freq = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "wofs_filtered_summary",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["wofs_filtered_summary"],
     "color_ramp": [
-        {
-            "value": 0.0,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.002,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.005,
-            "color": "#8e0101",
-            "alpha": 0.25
-        },
-        {
-            "value": 0.01,
-            "color": "#cf2200",
-            "alpha": 0.75
-        },
-        {
-            "value": 0.02,
-            "color": "#e38400"
-        },
-        {
-            "value": 0.05,
-            "color": "#e3df00"
-        },
-        {
-            "value": 0.1,
-            "color": "#a6e300"
-        },
-        {
-            "value": 0.2,
-            "color": "#62e300"
-        },
-        {
-            "value": 0.3,
-            "color": "#00e32d"
-        },
-        {
-            "value": 0.4,
-            "color": "#00e384"
-        },
-        {
-            "value": 0.5,
-            "color": "#00e3c8"
-        },
-        {
-            "value": 0.6,
-            "color": "#00c5e3"
-        },
-        {
-            "value": 0.7,
-            "color": "#0097e3"
-        },
-        {
-            "value": 0.8,
-            "color": "#005fe3"
-        },
-        {
-            "value": 0.9,
-            "color": "#000fe3"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.0, "color": "#000000", "alpha": 0.0},
+        {"value": 0.002, "color": "#000000", "alpha": 0.0},
+        {"value": 0.005, "color": "#8e0101", "alpha": 0.25},
+        {"value": 0.01, "color": "#cf2200", "alpha": 0.75},
+        {"value": 0.02, "color": "#e38400"},
+        {"value": 0.05, "color": "#e3df00"},
+        {"value": 0.1, "color": "#a6e300"},
+        {"value": 0.2, "color": "#62e300"},
+        {"value": 0.3, "color": "#00e32d"},
+        {"value": 0.4, "color": "#00e384"},
+        {"value": 0.5, "color": "#00e3c8"},
+        {"value": 0.6, "color": "#00c5e3"},
+        {"value": 0.7, "color": "#0097e3"},
+        {"value": 0.8, "color": "#005fe3"},
+        {"value": 0.9, "color": "#000fe3"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": {
         "url": "https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/wofs_full_summary_legend.png",
-    }
+    },
 }
 
 style_wofs_filt_freq_blue = {
@@ -1110,7 +732,7 @@ style_wofs_filt_freq_blue = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "wofs_filtered_summary",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["wofs_filtered_summary"],
@@ -1129,26 +751,11 @@ style_wofs_filt_freq_blue = {
             "value": 0.02,
             "color": "#d5fef9",
         },
-        {
-            "value": 0.2,
-            "color": "#71e3ff"
-        },
-        {
-            "value": 0.4,
-            "color": "#01ccff"
-        },
-        {
-            "value": 0.6,
-            "color": "#0178ff"
-        },
-        {
-            "value": 0.8,
-            "color": "#2701ff"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.2, "color": "#71e3ff"},
+        {"value": 0.4, "color": "#01ccff"},
+        {"value": 0.6, "color": "#0178ff"},
+        {"value": 0.8, "color": "#2701ff"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": legend_idx_percentage_by_20,
 }
@@ -1162,64 +769,27 @@ style_wofs_count_wet = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "count_wet",
-        }
+        },
     },
     "needed_bands": ["count_wet"],
     "include_in_feature_info": False,
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#666666",
-            "alpha": 0
-        },
-        {
-            "value": 2,
-            "color": "#890000"
-        },
-        {
-            "value": 5,
-            "color": "#990000"
-        },
-        {
-            "value": 10,
-            "color": "#E38400"
-        },
-        {
-            "value": 25,
-            "color": "#E3DF00"
-        },
-        {
-            "value": 50,
-            "color": "#A6E300"
-        },
-        {
-            "value": 100,
-            "color": "#00E32D"
-        },
-        {
-            "value": 150,
-            "color": "#00E3C8"
-        },
-        {
-            "value": 200,
-            "color": "#0097E3"
-        },
-        {
-            "value": 250,
-            "color": "#005FE3"
-        },
-        {
-            "value": 300,
-            "color": "#000FE3"
-        },
-        {
-            "value": 350,
-            "color": "#000EA9"
-        },
+        {"value": 0, "color": "#666666", "alpha": 0},
+        {"value": 2, "color": "#890000"},
+        {"value": 5, "color": "#990000"},
+        {"value": 10, "color": "#E38400"},
+        {"value": 25, "color": "#E3DF00"},
+        {"value": 50, "color": "#A6E300"},
+        {"value": 100, "color": "#00E32D"},
+        {"value": 150, "color": "#00E3C8"},
+        {"value": 200, "color": "#0097E3"},
+        {"value": 250, "color": "#005FE3"},
+        {"value": 300, "color": "#000FE3"},
+        {"value": 350, "color": "#000EA9"},
         {
             "value": 400,
             "color": "#5700E3",
-        }
+        },
     ],
     "legend": {
         "begin": "0",
@@ -1228,8 +798,8 @@ style_wofs_count_wet = {
         "ticks_every": 100,
         "tick_labels": {
             "400": {"prefix": ">"},
-        }
-    }
+        },
+    },
 }
 
 style_wofs_count_clear = {
@@ -1241,64 +811,33 @@ style_wofs_count_clear = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "count_clear",
-        }
+        },
     },
     "needed_bands": ["count_clear"],
     "include_in_feature_info": False,
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#FFFFFF",
-            "alpha": 0
-        },
+        {"value": 0, "color": "#FFFFFF", "alpha": 0},
         {
             # purely for legend display
             # we should not get fractional
             # values in this styles
             "value": 10,
             "color": "#b21800",
-            "alpha": 1
+            "alpha": 1,
         },
-        {
-            "value": 100,
-            "color": "#ef8500"
-        },
-        {
-            "value": 200,
-            "color": "#ffb800"
-        },
-        {
-            "value": 300,
-            "color": "#ffd300"
-        },
-        {
-            "value": 400,
-            "color": "#ffe300"
-        },
-        {
-            "value": 500,
-            "color": "#fff300"
-        },
-        {
-            "value": 600,
-            "color": "#d0f800"
-        },
-        {
-            "value": 700,
-            "color": "#a0fd00"
-        },
-        {
-            "value": 800,
-            "color": "#6ee100"
-        },
-        {
-            "value": 901,
-            "color": "#39a500"
-        },
+        {"value": 100, "color": "#ef8500"},
+        {"value": 200, "color": "#ffb800"},
+        {"value": 300, "color": "#ffd300"},
+        {"value": 400, "color": "#ffe300"},
+        {"value": 500, "color": "#fff300"},
+        {"value": 600, "color": "#d0f800"},
+        {"value": 700, "color": "#a0fd00"},
+        {"value": 800, "color": "#6ee100"},
+        {"value": 901, "color": "#39a500"},
         {
             "value": 1000,
             "color": "#026900",
-        }
+        },
     ],
     "legend": {
         "begin": "0",
@@ -1308,8 +847,8 @@ style_wofs_count_clear = {
         "strip_location": [0.05, 0.5, 0.89, 0.15],
         "tick_labels": {
             "1000": {"prefix": ">"},
-        }
-    }
+        },
+    },
 }
 
 
@@ -1322,83 +861,31 @@ style_wofs_frequency = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "frequency",
-        }
+        },
     },
     "needed_bands": ["frequency"],
     "include_in_feature_info": False,
     "color_ramp": [
-        {
-            "value": 0.0,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.002,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.005,
-            "color": "#8e0101",
-            "alpha": 0.25
-        },
-        {
-            "value": 0.01,
-            "color": "#cf2200",
-            "alpha": 0.75
-        },
-        {
-            "value": 0.02,
-            "color": "#e38400"
-        },
-        {
-            "value": 0.05,
-            "color": "#e3df00"
-        },
-        {
-            "value": 0.1,
-            "color": "#a6e300"
-        },
-        {
-            "value": 0.2,
-            "color": "#62e300"
-        },
-        {
-            "value": 0.3,
-            "color": "#00e32d"
-        },
-        {
-            "value": 0.4,
-            "color": "#00e384"
-        },
-        {
-            "value": 0.5,
-            "color": "#00e3c8"
-        },
-        {
-            "value": 0.6,
-            "color": "#00c5e3"
-        },
-        {
-            "value": 0.7,
-            "color": "#0097e3"
-        },
-        {
-            "value": 0.8,
-            "color": "#005fe3"
-        },
-        {
-            "value": 0.9,
-            "color": "#000fe3"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.0, "color": "#000000", "alpha": 0.0},
+        {"value": 0.002, "color": "#000000", "alpha": 0.0},
+        {"value": 0.005, "color": "#8e0101", "alpha": 0.25},
+        {"value": 0.01, "color": "#cf2200", "alpha": 0.75},
+        {"value": 0.02, "color": "#e38400"},
+        {"value": 0.05, "color": "#e3df00"},
+        {"value": 0.1, "color": "#a6e300"},
+        {"value": 0.2, "color": "#62e300"},
+        {"value": 0.3, "color": "#00e32d"},
+        {"value": 0.4, "color": "#00e384"},
+        {"value": 0.5, "color": "#00e3c8"},
+        {"value": 0.6, "color": "#00c5e3"},
+        {"value": 0.7, "color": "#0097e3"},
+        {"value": 0.8, "color": "#005fe3"},
+        {"value": 0.9, "color": "#000fe3"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": {
         "url": "https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/wofs_full_summary_legend.png",
-    }
+    },
 }
 
 style_wofs_frequency_blue = {
@@ -1410,7 +897,7 @@ style_wofs_frequency_blue = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "frequency",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["frequency"],
@@ -1429,26 +916,11 @@ style_wofs_frequency_blue = {
             "value": 0.02,
             "color": "#d5fef9",
         },
-        {
-            "value": 0.2,
-            "color": "#71e3ff"
-        },
-        {
-            "value": 0.4,
-            "color": "#01ccff"
-        },
-        {
-            "value": 0.6,
-            "color": "#0178ff"
-        },
-        {
-            "value": 0.8,
-            "color": "#2701ff"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.2, "color": "#71e3ff"},
+        {"value": 0.4, "color": "#01ccff"},
+        {"value": 0.6, "color": "#0178ff"},
+        {"value": 0.8, "color": "#2701ff"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": legend_idx_percentage_by_20,
 }
@@ -1462,7 +934,7 @@ style_wofs_confidence = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "confidence",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["confidence"],
@@ -1471,38 +943,14 @@ style_wofs_confidence = {
             "value": 0,
             "color": "#000000",
         },
-        {
-            "value": 0.01,
-            "color": "#000000"
-        },
-        {
-            "value": 0.02,
-            "color": "#990000"
-        },
-        {
-            "value": 0.05,
-            "color": "#CF2200"
-        },
-        {
-            "value": 0.1,
-            "color": "#E38400"
-        },
-        {
-            "value": 0.25,
-            "color": "#E3DF00"
-        },
-        {
-            "value": 0.5,
-            "color": "#A6E300"
-        },
-        {
-            "value": 0.75,
-            "color": "#62E300"
-        },
-        {
-            "value": 1.0,
-            "color": "#00E32D"
-        }
+        {"value": 0.01, "color": "#000000"},
+        {"value": 0.02, "color": "#990000"},
+        {"value": 0.05, "color": "#CF2200"},
+        {"value": 0.1, "color": "#E38400"},
+        {"value": 0.25, "color": "#E3DF00"},
+        {"value": 0.5, "color": "#A6E300"},
+        {"value": 0.75, "color": "#62E300"},
+        {"value": 1.0, "color": "#00E32D"},
     ],
     "legend": legend_idx_percentage_by_25,
 }
@@ -1517,62 +965,31 @@ style_wofs_seasonal_wet = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "count_wet",
-        }
+        },
     },
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#666666",
-            "alpha": 0
-        },
+        {"value": 0, "color": "#666666", "alpha": 0},
         {
             # purely for legend display
             # we should not get fractional
             # values in this styles
             "value": 0.2,
             "color": "#990000",
-            "alpha": 1
+            "alpha": 1,
         },
-        {
-            "value": 2,
-            "color": "#990000"
-        },
-        {
-            "value": 4,
-            "color": "#E38400"
-        },
-        {
-            "value": 6,
-            "color": "#E3DF00"
-        },
-        {
-            "value": 8,
-            "color": "#00E32D"
-        },
-        {
-            "value": 10,
-            "color": "#00E3C8"
-        },
-        {
-            "value": 12,
-            "color": "#0097E3"
-        },
-        {
-            "value": 14,
-            "color": "#005FE3"
-        },
-        {
-            "value": 16,
-            "color": "#000FE3"
-        },
-        {
-            "value": 18,
-            "color": "#000EA9"
-        },
+        {"value": 2, "color": "#990000"},
+        {"value": 4, "color": "#E38400"},
+        {"value": 6, "color": "#E3DF00"},
+        {"value": 8, "color": "#00E32D"},
+        {"value": 10, "color": "#00E3C8"},
+        {"value": 12, "color": "#0097E3"},
+        {"value": 14, "color": "#005FE3"},
+        {"value": 16, "color": "#000FE3"},
+        {"value": 18, "color": "#000EA9"},
         {
             "value": 20,
             "color": "#5700E3",
-        }
+        },
     ],
     "legend": legend_idx_twentyplus_3ticks,
 }
@@ -1586,64 +1003,33 @@ style_wofs_summary_wet = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "count_wet",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["count_wet"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#666666",
-            "alpha": 0
-        },
+        {"value": 0, "color": "#666666", "alpha": 0},
         {
             # purely for legend display
             # we should not get fractional
             # values in this styles
             "value": 0.2,
             "color": "#990000",
-            "alpha": 1
+            "alpha": 1,
         },
-        {
-            "value": 2,
-            "color": "#990000"
-        },
-        {
-            "value": 4,
-            "color": "#E38400"
-        },
-        {
-            "value": 6,
-            "color": "#E3DF00"
-        },
-        {
-            "value": 8,
-            "color": "#00E32D"
-        },
-        {
-            "value": 10,
-            "color": "#00E3C8"
-        },
-        {
-            "value": 12,
-            "color": "#0097E3"
-        },
-        {
-            "value": 14,
-            "color": "#005FE3"
-        },
-        {
-            "value": 16,
-            "color": "#000FE3"
-        },
-        {
-            "value": 18,
-            "color": "#000EA9"
-        },
+        {"value": 2, "color": "#990000"},
+        {"value": 4, "color": "#E38400"},
+        {"value": 6, "color": "#E3DF00"},
+        {"value": 8, "color": "#00E32D"},
+        {"value": 10, "color": "#00E3C8"},
+        {"value": 12, "color": "#0097E3"},
+        {"value": 14, "color": "#005FE3"},
+        {"value": 16, "color": "#000FE3"},
+        {"value": 18, "color": "#000EA9"},
         {
             "value": 20,
             "color": "#5700E3",
-        }
+        },
     ],
     "legend": legend_idx_twentyplus_3ticks,
 }
@@ -1657,64 +1043,33 @@ style_wofs_summary_clear = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "count_clear",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["count_clear"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#FFFFFF",
-            "alpha": 0
-        },
+        {"value": 0, "color": "#FFFFFF", "alpha": 0},
         {
             # purely for legend display
             # we should not get fractional
             # values in this styles
             "value": 0.2,
             "color": "#B21800",
-            "alpha": 1
+            "alpha": 1,
         },
-        {
-            "value": 1,
-            "color": "#B21800"
-        },
-        {
-            "value": 4,
-            "color": "#ef8500"
-        },
-        {
-            "value": 8,
-            "color": "#ffb800"
-        },
-        {
-            "value": 10,
-            "color": "#ffd000"
-        },
-        {
-            "value": 13,
-            "color": "#fff300"
-        },
-        {
-            "value": 16,
-            "color": "#fff300"
-        },
-        {
-            "value": 20,
-            "color": "#c1ec00"
-        },
-        {
-            "value": 24,
-            "color": "#6ee100"
-        },
-        {
-            "value": 28,
-            "color": "#39a500"
-        },
+        {"value": 1, "color": "#B21800"},
+        {"value": 4, "color": "#ef8500"},
+        {"value": 8, "color": "#ffb800"},
+        {"value": 10, "color": "#ffd000"},
+        {"value": 13, "color": "#fff300"},
+        {"value": 16, "color": "#fff300"},
+        {"value": 20, "color": "#c1ec00"},
+        {"value": 24, "color": "#6ee100"},
+        {"value": 28, "color": "#39a500"},
         {
             "value": 30,
             "color": "#026900",
-        }
+        },
     ],
     "legend": legend_idx_thirtyplus_4ticks,
 }
@@ -1729,62 +1084,31 @@ style_wofs_seasonal_clear = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "count_clear",
-        }
+        },
     },
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#FFFFFF",
-            "alpha": 0
-        },
+        {"value": 0, "color": "#FFFFFF", "alpha": 0},
         {
             # purely for legend display
             # we should not get fractional
             # values in this styles
             "value": 0.2,
             "color": "#B21800",
-            "alpha": 1
+            "alpha": 1,
         },
-        {
-            "value": 1,
-            "color": "#B21800"
-        },
-        {
-            "value": 4,
-            "color": "#ef8500"
-        },
-        {
-            "value": 8,
-            "color": "#ffb800"
-        },
-        {
-            "value": 10,
-            "color": "#ffd000"
-        },
-        {
-            "value": 13,
-            "color": "#fff300"
-        },
-        {
-            "value": 16,
-            "color": "#fff300"
-        },
-        {
-            "value": 20,
-            "color": "#c1ec00"
-        },
-        {
-            "value": 24,
-            "color": "#6ee100"
-        },
-        {
-            "value": 28,
-            "color": "#39a500"
-        },
+        {"value": 1, "color": "#B21800"},
+        {"value": 4, "color": "#ef8500"},
+        {"value": 8, "color": "#ffb800"},
+        {"value": 10, "color": "#ffd000"},
+        {"value": 13, "color": "#fff300"},
+        {"value": 16, "color": "#fff300"},
+        {"value": 20, "color": "#c1ec00"},
+        {"value": 24, "color": "#6ee100"},
+        {"value": 28, "color": "#39a500"},
         {
             "value": 30,
             "color": "#026900",
-        }
+        },
     ],
     "legend": legend_idx_thirtyplus_4ticks,
 }
@@ -1798,67 +1122,24 @@ style_annual_wofs_summary_frequency = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "frequency",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["frequency"],
     "color_ramp": [
-        {
-            "value": 0.0,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.02,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.05,
-            "color": "#8e0101",
-            "alpha": 0.25
-        },
-        {
-            "value": 0.1,
-            "color": "#cf2200",
-            "alpha": 0.75
-        },
-        {
-            "value": 0.2,
-            "color": "#e38400"
-        },
-        {
-            "value": 0.3,
-            "color": "#e3df00"
-        },
-        {
-            "value": 0.4,
-            "color": "#62e300"
-        },
-        {
-            "value": 0.5,
-            "color": "#00e32d"
-        },
-        {
-            "value": 0.6,
-            "color": "#00e3c8"
-        },
-        {
-            "value": 0.7,
-            "color": "#0097e3"
-        },
-        {
-            "value": 0.8,
-            "color": "#005fe3"
-        },
-        {
-            "value": 0.9,
-            "color": "#000fe3"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.0, "color": "#000000", "alpha": 0.0},
+        {"value": 0.02, "color": "#000000", "alpha": 0.0},
+        {"value": 0.05, "color": "#8e0101", "alpha": 0.25},
+        {"value": 0.1, "color": "#cf2200", "alpha": 0.75},
+        {"value": 0.2, "color": "#e38400"},
+        {"value": 0.3, "color": "#e3df00"},
+        {"value": 0.4, "color": "#62e300"},
+        {"value": 0.5, "color": "#00e32d"},
+        {"value": 0.6, "color": "#00e3c8"},
+        {"value": 0.7, "color": "#0097e3"},
+        {"value": 0.8, "color": "#005fe3"},
+        {"value": 0.9, "color": "#000fe3"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": legend_idx_percentage_by_20,
 }
@@ -1873,65 +1154,22 @@ style_seasonal_wofs_summary_frequency = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "frequency",
-        }
+        },
     },
     "color_ramp": [
-        {
-            "value": 0.0,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.02,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.05,
-            "color": "#8e0101",
-            "alpha": 0.25
-        },
-        {
-            "value": 0.1,
-            "color": "#cf2200",
-            "alpha": 0.75
-        },
-        {
-            "value": 0.2,
-            "color": "#e38400"
-        },
-        {
-            "value": 0.3,
-            "color": "#e3df00"
-        },
-        {
-            "value": 0.4,
-            "color": "#62e300"
-        },
-        {
-            "value": 0.5,
-            "color": "#00e32d"
-        },
-        {
-            "value": 0.6,
-            "color": "#00e3c8"
-        },
-        {
-            "value": 0.7,
-            "color": "#0097e3"
-        },
-        {
-            "value": 0.8,
-            "color": "#005fe3"
-        },
-        {
-            "value": 0.9,
-            "color": "#000fe3"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.0, "color": "#000000", "alpha": 0.0},
+        {"value": 0.02, "color": "#000000", "alpha": 0.0},
+        {"value": 0.05, "color": "#8e0101", "alpha": 0.25},
+        {"value": 0.1, "color": "#cf2200", "alpha": 0.75},
+        {"value": 0.2, "color": "#e38400"},
+        {"value": 0.3, "color": "#e3df00"},
+        {"value": 0.4, "color": "#62e300"},
+        {"value": 0.5, "color": "#00e32d"},
+        {"value": 0.6, "color": "#00e3c8"},
+        {"value": 0.7, "color": "#0097e3"},
+        {"value": 0.8, "color": "#005fe3"},
+        {"value": 0.9, "color": "#000fe3"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": legend_idx_percentage_by_20,
 }
@@ -1945,7 +1183,7 @@ style_annual_wofs_summary_frequency_blue = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "frequency",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["frequency"],
@@ -1964,26 +1202,11 @@ style_annual_wofs_summary_frequency_blue = {
             "value": 0.02,
             "color": "#d5fef9",
         },
-        {
-            "value": 0.2,
-            "color": "#71e3ff"
-        },
-        {
-            "value": 0.4,
-            "color": "#01ccff"
-        },
-        {
-            "value": 0.6,
-            "color": "#0178ff"
-        },
-        {
-            "value": 0.8,
-            "color": "#2701ff"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.2, "color": "#71e3ff"},
+        {"value": 0.4, "color": "#01ccff"},
+        {"value": 0.6, "color": "#0178ff"},
+        {"value": 0.8, "color": "#2701ff"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": legend_idx_percentage_by_20,
 }
@@ -1997,7 +1220,7 @@ style_seasonal_wofs_summary_frequency_blue = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "frequency",
-        }
+        },
     },
     "needed_bands": ["frequency"],
     "color_ramp": [
@@ -2015,26 +1238,11 @@ style_seasonal_wofs_summary_frequency_blue = {
             "value": 0.02,
             "color": "#d5fef9",
         },
-        {
-            "value": 0.2,
-            "color": "#71e3ff"
-        },
-        {
-            "value": 0.4,
-            "color": "#01ccff"
-        },
-        {
-            "value": 0.6,
-            "color": "#0178ff"
-        },
-        {
-            "value": 0.8,
-            "color": "#2701ff"
-        },
-        {
-            "value": 1.0,
-            "color": "#5700e3"
-        }
+        {"value": 0.2, "color": "#71e3ff"},
+        {"value": 0.4, "color": "#01ccff"},
+        {"value": 0.6, "color": "#0178ff"},
+        {"value": 0.8, "color": "#2701ff"},
+        {"value": 1.0, "color": "#5700e3"},
     ],
     "legend": legend_idx_percentage_by_20,
 }
@@ -2050,24 +1258,21 @@ style_wofs_obs = {
                 "abstract": "Slope or Cloud",
                 "flags": {
                     "or": {
-                      "terrain_or_low_angle": True,
-                      "cloud_shadow": True,
-                      "cloud": True,
-                      "high_slope": True,
-                      "noncontiguous": True
+                        "terrain_or_low_angle": True,
+                        "cloud_shadow": True,
+                        "cloud": True,
+                        "high_slope": True,
+                        "noncontiguous": True,
                     }
                 },
-                "color": "#707070"
+                "color": "#707070",
             },
             {
                 # Possible Sea Glint, also mark as invalid
                 "title": "",
                 "abstract": "",
-                "flags": {
-                    "dry": True,
-                    "sea": True
-                },
-                "color": "#707070"
+                "flags": {"dry": True, "sea": True},
+                "color": "#707070",
             },
             {
                 "title": "Dry",
@@ -2076,21 +1281,16 @@ style_wofs_obs = {
                     "dry": True,
                     "sea": False,
                 },
-                "color": "#D99694"
+                "color": "#D99694",
             },
             {
                 "title": "Wet",
                 "abstract": "Wet or Sea",
-                "flags": {
-                  "or": {
-                    "wet": True,
-                    "sea": True
-                  }
-                },
-                "color": "#4F81BD"
-            }
+                "flags": {"or": {"wet": True, "sea": True}},
+                "color": "#4F81BD",
+            },
         ]
-    }
+    },
 }
 
 style_wofs_obs_wet_only = {
@@ -2104,26 +1304,23 @@ style_wofs_obs_wet_only = {
                 "abstract": "Slope or Cloud",
                 "flags": {
                     "or": {
-                      "terrain_or_low_angle": True,
-                      "cloud_shadow": True,
-                      "cloud": True,
-                      "high_slope": True,
-                      "noncontiguous": True
+                        "terrain_or_low_angle": True,
+                        "cloud_shadow": True,
+                        "cloud": True,
+                        "high_slope": True,
+                        "noncontiguous": True,
                     }
                 },
                 "color": "#707070",
-                "mask": True
+                "mask": True,
             },
             {
                 # Possible Sea Glint, also mark as invalid
                 "title": "",
                 "abstract": "",
-                "flags": {
-                    "dry": True,
-                    "sea": True
-                },
+                "flags": {"dry": True, "sea": True},
                 "color": "#707070",
-                "mask": True
+                "mask": True,
             },
             {
                 "title": "Dry",
@@ -2133,21 +1330,16 @@ style_wofs_obs_wet_only = {
                     "sea": False,
                 },
                 "color": "#D99694",
-                "mask": True
+                "mask": True,
             },
             {
                 "title": "Wet",
                 "abstract": "Wet or Sea",
-                "flags": {
-                  "or": {
-                    "wet": True,
-                    "sea": True
-                  }
-                },
-                "color": "#4F81BD"
-            }
+                "flags": {"or": {"wet": True, "sea": True}},
+                "color": "#4F81BD",
+            },
         ]
-    }
+    },
 }
 
 style_s2_simple_rgb = style_ls_simple_rgb
@@ -2156,17 +1348,11 @@ style_s2_irg = {
     "title": "False colour - Green, SWIR, NIR",
     "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
     "components": {
-        "red": {
-            "nbart_swir_2": 1.0
-        },
-        "green": {
-            "nbart_nir_1": 1.0
-        },
-        "blue": {
-            "nbart_green": 1.0
-        }
+        "red": {"nbart_swir_2": 1.0},
+        "green": {"nbart_nir_1": 1.0},
+        "blue": {"nbart_green": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_s2_ndvi = style_ls_ndvi
@@ -2179,42 +1365,17 @@ style_s2_mndwi = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "nbart_green",
-            "band2": "nbart_swir_2"
-        }
+        "kwargs": {"band1": "nbart_green", "band2": "nbart_swir_2"},
     },
     "needed_bands": ["nbart_green", "nbart_swir_2"],
     "color_ramp": [
-        {
-            "value": -0.1,
-            "color": "#f7fbff",
-            "alpha": 0.0
-        },
-        {
-            "value": 0.0,
-            "color": "#d8e7f5"
-        },
-        {
-            "value": 0.2,
-            "color": "#b0d2e8"
-        },
-        {
-            "value": 0.4,
-            "color": "#73b3d8"
-        },
-        {
-            "value": 0.6,
-            "color": "#3e8ec4"
-        },
-        {
-            "value": 0.8,
-            "color": "#1563aa"
-        },
-        {
-            "value": 1.0,
-            "color": "#08306b"
-        }
+        {"value": -0.1, "color": "#f7fbff", "alpha": 0.0},
+        {"value": 0.0, "color": "#d8e7f5"},
+        {"value": 0.2, "color": "#b0d2e8"},
+        {"value": 0.4, "color": "#73b3d8"},
+        {"value": 0.6, "color": "#3e8ec4"},
+        {"value": 0.8, "color": "#1563aa"},
+        {"value": 1.0, "color": "#08306b"},
     ],
     "legend": legend_idx_0_1_5ticks,
 }
@@ -2231,7 +1392,7 @@ style_s2_ndci = {
             "b_red": "nbart_red",
             "b_green": "nbart_green",
             "b_swir": "nbart_swir_2",
-        }
+        },
     },
     "needed_bands": ["nbart_red_edge_1", "nbart_red", "nbart_green", "nbart_swir_2"],
     "color_ramp": [
@@ -2239,10 +1400,7 @@ style_s2_ndci = {
             "value": -0.1,
             "color": "#1696FF",
         },
-        {
-            "value": -0.1,
-            "color": "#1696FF"
-        },
+        {"value": -0.1, "color": "#1696FF"},
         {
             "value": 0.0,
             "color": "#00FFDF",
@@ -2262,18 +1420,15 @@ style_s2_ndci = {
         {
             "value": 0.5,
             "color": "#FF0000",
-        }
+        },
     ],
     "legend": {
         "begin": "-0.1",
         "end": "0.5",
         "ticks_every": "0.1",
         "units": "unitless",
-        "tick_labels": {
-            "-0.1": {"prefix": "<"},
-            "0.5": {"prefix": ">"}
-        }
-    }
+        "tick_labels": {"-0.1": {"prefix": "<"}, "0.5": {"prefix": ">"}},
+    },
 }
 
 style_s2_nbr = {
@@ -2283,10 +1438,7 @@ style_s2_nbr = {
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band1": "nbart_nir_1",
-            "band2": "nbart_swir_3"
-        }
+        "kwargs": {"band1": "nbart_nir_1", "band2": "nbart_swir_3"},
     },
     "needed_bands": ["nbart_nir_1", "nbart_swir_3"],
     "color_ramp": [
@@ -2303,42 +1455,21 @@ style_s2_nbr = {
             "value": -0.8,
             "color": "#B2182B",
         },
-        {
-            "value": -0.4,
-            "color": "#D6604D"
-        },
-        {
-            "value": -0.2,
-            "color": "#F4A582"
-        },
-        {
-            "value": -0.1,
-            "color": "#FDDBC7"
-        },
+        {"value": -0.4, "color": "#D6604D"},
+        {"value": -0.2, "color": "#F4A582"},
+        {"value": -0.1, "color": "#FDDBC7"},
         {
             "value": 0,
             "color": "#F7F7F7",
         },
-        {
-            "value": 0.2,
-            "color": "#D1E5F0"
-        },
-        {
-            "value": 0.4,
-            "color": "#92C5DE"
-        },
-        {
-            "value": 0.6,
-            "color": "#4393C3"
-        },
-        {
-            "value": 0.9,
-            "color": "#2166AC"
-        },
+        {"value": 0.2, "color": "#D1E5F0"},
+        {"value": 0.4, "color": "#92C5DE"},
+        {"value": 0.6, "color": "#4393C3"},
+        {"value": 0.9, "color": "#2166AC"},
         {
             "value": 1.0,
             "color": "#053061",
-        }
+        },
     ],
     "legend": {
         "show_legend": True,
@@ -2346,10 +1477,7 @@ style_s2_nbr = {
         "end": "1.0",
         "ticks_every": "1.0",
         "decimal_places": 0,
-        "tick_labels": {
-            "-1.0": {"prefix": "<"},
-            "1.0": {"suffix": ">"}
-        }
+        "tick_labels": {"-1.0": {"prefix": "<"}, "1.0": {"suffix": ">"}},
     },
     # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
     "multi_date": [
@@ -2365,99 +1493,41 @@ style_s2_nbr = {
             "aggregator_function": {
                 "function": "datacube_ows.band_utils.multi_date_delta"
             },
-
-           "color_ramp": [
-                {
-                    "value": -0.5,
-                    "color": "#768642",
-                    "alpha": 0.0
-                },
-                {
-                    "value": -0.5,
-                    "color": "#768642",
-                    "legend": {
-                        "label": "<-0.50"
-                    }
-                },
+            "color_ramp": [
+                {"value": -0.5, "color": "#768642", "alpha": 0.0},
+                {"value": -0.5, "color": "#768642", "legend": {"label": "<-0.50"}},
                 {
                     "value": -0.25,
                     "color": "#768642",
                     "alpha": 1.0,
-                    "legend": {
-                        "label": "-0.25"
-                    }
+                    "legend": {"label": "-0.25"},
                 },
-                {
-                    "value": -0.25,
-                    "color": "#a4bd5f"
-                },
-                {
-                    "value": -0.1,
-                    "color": "#a4bd5f",
-                    "legend": {
-                        "label": "-0.1"
-                    }
-                },
-                {
-                    "value": -0.1,
-                    "color": "#00e05d"
-                },
-                {
-                    "value": 0.1,
-                    "color": "#00e05d"
-                },
-                {
-                    "value": 0.1,
-                    "color": "#fdf950",
-                    "legend": {
-                        "label": "0.1"
-                    }
-                },
-                {
-                    "value": 0.27,
-                    "color": "#fdf950",
-                    "legend": {
-                        "label": "0.27"
-                    }
-                },
-                {
-                    "value": 0.27,
-                    "color": "#ffae52"
-                },
-                {
-                    "value": 0.44,
-                    "color": "#ffae52",
-                    "legend": {
-                        "label": "0.44"
-                    }
-                },
-                {
-                    "value": 0.44,
-                    "color": "#ff662e"
-                },
-                {
-                    "value": 0.66,
-                    "color": "#ff662e",
-                    "legend": {
-                        "label": "0.66"
-                    }
-                },
-                {
-                    "value": 0.66,
-                    "color": "#ad28cc"
-                },
-                {
-                    "value": 0.88,
-                    "color": "#ad28cc",
-                    "legend": {
-                        "label": ">1.30"
-                    }
-                },
+                {"value": -0.25, "color": "#a4bd5f"},
+                {"value": -0.1, "color": "#a4bd5f", "legend": {"label": "-0.1"}},
+                {"value": -0.1, "color": "#00e05d"},
+                {"value": 0.1, "color": "#00e05d"},
+                {"value": 0.1, "color": "#fdf950", "legend": {"label": "0.1"}},
+                {"value": 0.27, "color": "#fdf950", "legend": {"label": "0.27"}},
+                {"value": 0.27, "color": "#ffae52"},
+                {"value": 0.44, "color": "#ffae52", "legend": {"label": "0.44"}},
+                {"value": 0.44, "color": "#ff662e"},
+                {"value": 0.66, "color": "#ff662e", "legend": {"label": "0.66"}},
+                {"value": 0.66, "color": "#ad28cc"},
+                {"value": 0.88, "color": "#ad28cc", "legend": {"label": ">1.30"}},
             ],
             "legend": {
                 "begin": "-0.5",
                 "end": "0.88",
-                "ticks": ["-0.5", "-0.25", "-0.1", "0.1", "0.27", "0.44", "0.66", "0.88"],
+                "ticks": [
+                    "-0.5",
+                    "-0.25",
+                    "-0.1",
+                    "0.1",
+                    "0.27",
+                    "0.44",
+                    "0.66",
+                    "0.88",
+                ],
                 "tick_labels": {
                     "-0.5": {"label": "<-0.5"},
                     "-0.25": {"label": "-0.25"},
@@ -2467,7 +1537,7 @@ style_s2_nbr = {
                     "0.44": {"label": "0.44"},
                     "0.66": {"label": "0.66"},
                     "0.88": {"label": ">1.30"},
-                }
+                },
             },
             # The multi-date color ramp.  May be defined as an explicit colour ramp, as shown above for the single
             # date case; or may be defined with a range and unscaled color ramp as shown here.
@@ -2481,9 +1551,9 @@ style_s2_nbr = {
             # kind of ugly) blue-to-red rainbow ramp.
             # "mpl_ramp": "RdBu",
             # The feature info label for the multi-date index value.
-            "feature_info_label": "nbr_delta"
+            "feature_info_label": "nbr_delta",
         }
-    ]
+    ],
 }
 
 style_s2_pure_aerosol = {
@@ -2491,17 +1561,11 @@ style_s2_pure_aerosol = {
     "title": "Narrow Blue - 440",
     "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
     "components": {
-        "red": {
-            "coastal_aerosol": 1.0
-        },
-        "green": {
-            "coastal_aerosol": 1.0
-        },
-        "blue": {
-            "coastal_aerosol": 1.0
-        }
+        "red": {"coastal_aerosol": 1.0},
+        "green": {"coastal_aerosol": 1.0},
+        "blue": {"coastal_aerosol": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2509,18 +1573,8 @@ style_s2_pure_blue = {
     "name": "blue",
     "title": "Blue - 490",
     "abstract": "Blue band, approximately 453nm to 511nm",
-    "components": {
-        "red": {
-            "blue": 1.0
-        },
-        "green": {
-            "blue": 1.0
-        },
-        "blue": {
-            "blue": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"blue": 1.0}, "green": {"blue": 1.0}, "blue": {"blue": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2529,17 +1583,11 @@ style_s2_pure_green = {
     "title": "Green - 560",
     "abstract": "Green band, approximately 534nm to 588nm",
     "components": {
-        "red": {
-            "green": 1.0
-        },
-        "green": {
-            "green": 1.0
-        },
-        "blue": {
-            "green": 1.0
-        }
+        "red": {"green": 1.0},
+        "green": {"green": 1.0},
+        "blue": {"green": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2547,18 +1595,8 @@ style_s2_pure_red = {
     "name": "red",
     "title": "Red - 670",
     "abstract": "Red band, roughly 637nm to 672nm",
-    "components": {
-        "red": {
-            "red": 1.0
-        },
-        "green": {
-            "red": 1.0
-        },
-        "blue": {
-            "red": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"red": 1.0}, "green": {"red": 1.0}, "blue": {"red": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2566,19 +1604,12 @@ style_s2_pure_redge_1 = {
     "name": "red_edge_1",
     "title": "Vegetation Red Edge - 710",
     "abstract": "Near infra-red band, centred on 710nm",
-
     "components": {
-        "red": {
-            "red_edge_1": 1.0
-        },
-        "green": {
-            "red_edge_1": 1.0
-        },
-        "blue": {
-            "red_edge_1": 1.0
-        }
+        "red": {"red_edge_1": 1.0},
+        "green": {"red_edge_1": 1.0},
+        "blue": {"red_edge_1": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2586,19 +1617,12 @@ style_s2_pure_redge_2 = {
     "name": "red_edge_2",
     "title": "Vegetation Red Edge - 740",
     "abstract": "Near infra-red band, centred on 740nm",
-
     "components": {
-        "red": {
-            "red_edge_2": 1.0
-        },
-        "green": {
-            "red_edge_2": 1.0
-        },
-        "blue": {
-            "red_edge_2": 1.0
-        }
+        "red": {"red_edge_2": 1.0},
+        "green": {"red_edge_2": 1.0},
+        "blue": {"red_edge_2": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2606,19 +1630,12 @@ style_s2_pure_redge_3 = {
     "name": "red_edge_3",
     "title": "Vegetation Red Edge - 780",
     "abstract": "Near infra-red band, centred on 780nm",
-
     "components": {
-        "red": {
-            "red_edge_3": 1.0
-        },
-        "green": {
-            "red_edge_3": 1.0
-        },
-        "blue": {
-            "red_edge_3": 1.0
-        }
+        "red": {"red_edge_3": 1.0},
+        "green": {"red_edge_3": 1.0},
+        "blue": {"red_edge_3": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2626,36 +1643,16 @@ style_s2_pure_nir = {
     "name": "nir",
     "title": "Near Infrared (NIR) - 840",
     "abstract": "Near infra-red band, roughly 853nm to 876nm",
-    "components": {
-        "red": {
-            "nir": 1.0
-        },
-        "green": {
-            "nir": 1.0
-        },
-        "blue": {
-            "nir": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 style_s2_pure_narrow_nir = {
     "name": "narrow_nir",
     "title": "Narrow Near Infrared - 870",
     "abstract": "Near infra-red band, centred on 865nm",
-    "components": {
-        "red": {
-            "nir": 1.0
-        },
-        "green": {
-            "nir": 1.0
-        },
-        "blue": {
-            "nir": 1.0
-        }
-    },
-    "scale_range": [0.0, 3000.0]
+    "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2664,17 +1661,11 @@ style_s2_pure_swir1 = {
     "title": "Shortwave Infrared (SWIR) - 1610",
     "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
     "components": {
-        "red": {
-            "swir_2": 1.0
-        },
-        "green": {
-            "swir_2": 1.0
-        },
-        "blue": {
-            "swir_2": 1.0
-        }
+        "red": {"swir_2": 1.0},
+        "green": {"swir_2": 1.0},
+        "blue": {"swir_2": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 
@@ -2683,17 +1674,11 @@ style_s2_pure_swir2 = {
     "title": "Shortwave Infrared (SWIR) - 2190",
     "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
     "components": {
-        "red": {
-            "swir_3": 1.0
-        },
-        "green": {
-            "swir_3": 1.0
-        },
-        "blue": {
-            "swir_3": 1.0
-        }
+        "red": {"swir_3": 1.0},
+        "green": {"swir_3": 1.0},
+        "blue": {"swir_3": 1.0},
     },
-    "scale_range": [0.0, 3000.0]
+    "scale_range": [0.0, 3000.0],
 }
 
 style_s2_water_classifier = {
@@ -2703,14 +1688,9 @@ style_s2_water_classifier = {
     "needed_bands": ["water"],
     "value_map": {
         "water": [
-            {
-                "title": "Wet",
-                "abstract": "(100%)",
-                "color": "#5700E3"
-            },
-
+            {"title": "Wet", "abstract": "(100%)", "color": "#5700E3"},
         ]
-    }
+    },
 }
 
 style_mstp_rgb = {
@@ -2718,20 +1698,14 @@ style_mstp_rgb = {
     "title": "Multi-scale Topographic Position",
     "abstract": "red regional, green intermediate and blue local",
     "components": {
-        "red": {
-            "regional": 1.0
-        },
-        "green": {
-            "intermediate": 1.0
-        },
-        "blue": {
-            "local": 1.0
-        }
+        "red": {"regional": 1.0},
+        "green": {"intermediate": 1.0},
+        "blue": {"local": 1.0},
     },
     "scale_range": [0.0, 255.0],
     "legend": {
         "url": "https://data.dea.ga.gov.au/multi-scale-topographic-position/mstp_legend.png"
-    }
+    },
 }
 
 style_wii = {
@@ -2744,32 +1718,13 @@ style_wii = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "intensity",
-        }
+        },
     },
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#ffffff",
-            "alpha": 0
-        },
-        {
-            "value": 1,
-            "color": "#2972a8",
-            "legend": {
-                "label": "Low\nClass 1"
-            }
-        },
-        {
-            "value": 3.5,
-            "color": "#fcf24b"
-        },
-        {
-            "value": 6,
-            "color": "#a02406",
-            "legend": {
-                "label": "High\nClass 6"
-            }
-        }
+        {"value": 0, "color": "#ffffff", "alpha": 0},
+        {"value": 1, "color": "#2972a8", "legend": {"label": "Low\nClass 1"}},
+        {"value": 3.5, "color": "#fcf24b"},
+        {"value": 6, "color": "#a02406", "legend": {"label": "High\nClass 6"}},
     ],
     "legend": {
         "begin": 1,
@@ -2779,8 +1734,8 @@ style_wii = {
             "1": {"label": "Low\nClass 1"},
             "6": {"label": "High\nClass 6"},
         },
-        "strip_location": [0.1, 0.5, 0.8, 0.15]
-    }
+        "strip_location": [0.1, 0.5, 0.8, 0.15],
+    },
 }
 
 style_fc_gv_10 = {
@@ -2792,7 +1747,7 @@ style_fc_gv_10 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "PV_PC_10",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["PV_PC_10"],
@@ -2816,7 +1771,7 @@ style_fc_gv_10 = {
         {
             "value": 100,
             "color": "#006837",
-        }
+        },
     ],
     "pq_masks": [
         {
@@ -2838,31 +1793,16 @@ style_fc_gv_50 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "PV_PC_50",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["PV_PC_50"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#ffffcc"
-        },
-        {
-            "value": 25,
-            "color": "#c2e699"
-        },
-        {
-            "value": 50,
-            "color": "#78c679"
-        },
-        {
-            "value": 75,
-            "color": "#31a354"
-        },
-        {
-            "value": 100,
-            "color": "#006837"
-        }
+        {"value": 0, "color": "#ffffcc"},
+        {"value": 25, "color": "#c2e699"},
+        {"value": 50, "color": "#78c679"},
+        {"value": 75, "color": "#31a354"},
+        {"value": 100, "color": "#006837"},
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_25ticks,
@@ -2885,31 +1825,16 @@ style_fc_gv_90 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "PV_PC_90",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["PV_PC_90"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#ffffcc"
-        },
-        {
-            "value": 25,
-            "color": "#c2e699"
-        },
-        {
-            "value": 50,
-            "color": "#78c679"
-        },
-        {
-            "value": 75,
-            "color": "#31a354"
-        },
-        {
-            "value": 100,
-            "color": "#006837"
-        }
+        {"value": 0, "color": "#ffffcc"},
+        {"value": 25, "color": "#c2e699"},
+        {"value": 50, "color": "#78c679"},
+        {"value": 75, "color": "#31a354"},
+        {"value": 100, "color": "#006837"},
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_25ticks,
@@ -2932,7 +1857,7 @@ style_fc_ngv_10 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "NPV_PC_10",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["NPV_PC_10"],
@@ -2941,11 +1866,7 @@ style_fc_ngv_10 = {
             "value": 0,
             "color": "#ffffd4",
         },
-        {
-            "value": 25,
-            "color": "#fed98e",
-            "legend": {}
-        },
+        {"value": 25, "color": "#fed98e", "legend": {}},
         {
             "value": 50,
             "color": "#fe9929",
@@ -2957,7 +1878,7 @@ style_fc_ngv_10 = {
         {
             "value": 100,
             "color": "#993404",
-        }
+        },
     ],
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
@@ -2980,31 +1901,16 @@ style_fc_ngv_50 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "NPV_PC_50",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["NPV_PC_50"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#ffffd4"
-        },
-        {
-            "value": 25,
-            "color": "#fed98e"
-        },
-        {
-            "value": 50,
-            "color": "#fe9929"
-        },
-        {
-            "value": 75,
-            "color": "#d95f0e"
-        },
-        {
-            "value": 100,
-            "color": "#993404"
-        }
+        {"value": 0, "color": "#ffffd4"},
+        {"value": 25, "color": "#fed98e"},
+        {"value": 50, "color": "#fe9929"},
+        {"value": 75, "color": "#d95f0e"},
+        {"value": 100, "color": "#993404"},
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
@@ -3027,31 +1933,16 @@ style_fc_ngv_90 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "NPV_PC_90",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["NPV_PC_90"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#ffffd4"
-        },
-        {
-            "value": 25,
-            "color": "#fed98e"
-        },
-        {
-            "value": 50,
-            "color": "#fe9929"
-        },
-        {
-            "value": 75,
-            "color": "#d95f0e"
-        },
-        {
-            "value": 100,
-            "color": "#993404"
-        }
+        {"value": 0, "color": "#ffffd4"},
+        {"value": 25, "color": "#fed98e"},
+        {"value": 50, "color": "#fe9929"},
+        {"value": 75, "color": "#d95f0e"},
+        {"value": 100, "color": "#993404"},
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
@@ -3074,7 +1965,7 @@ style_fc_bs_10 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "BS_PC_10",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["BS_PC_10"],
@@ -3098,7 +1989,7 @@ style_fc_bs_10 = {
         {
             "value": 100,
             "color": "#7a0177",
-        }
+        },
     ],
     "pq_masks": [
         {
@@ -3121,31 +2012,16 @@ style_fc_bs_50 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "BS_PC_50",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["BS_PC_50"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#feebe2"
-        },
-        {
-            "value": 25,
-            "color": "#fbb4b9"
-        },
-        {
-            "value": 50,
-            "color": "#f768a1"
-        },
-        {
-            "value": 75,
-            "color": "#c51b8a"
-        },
-        {
-            "value": 100,
-            "color": "#7a0177"
-        }
+        {"value": 0, "color": "#feebe2"},
+        {"value": 25, "color": "#fbb4b9"},
+        {"value": 50, "color": "#f768a1"},
+        {"value": 75, "color": "#c51b8a"},
+        {"value": 100, "color": "#7a0177"},
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
@@ -3168,31 +2044,16 @@ style_fc_bs_90 = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "BS_PC_90",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["BS_PC_90"],
     "color_ramp": [
-        {
-            "value": 0,
-            "color": "#feebe2"
-        },
-        {
-            "value": 25,
-            "color": "#fbb4b9"
-        },
-        {
-            "value": 50,
-            "color": "#f768a1"
-        },
-        {
-            "value": 75,
-            "color": "#c51b8a"
-        },
-        {
-            "value": 100,
-            "color": "#7a0177"
-        }
+        {"value": 0, "color": "#feebe2"},
+        {"value": 25, "color": "#fbb4b9"},
+        {"value": 50, "color": "#f768a1"},
+        {"value": 75, "color": "#c51b8a"},
+        {"value": 100, "color": "#7a0177"},
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
@@ -3206,20 +2067,14 @@ style_fc_bs_90 = {
     ],
 }
 
-style_fc_rgb =  {
+style_fc_rgb = {
     "name": "fc_rgb",
     "title": "Three-band fractional cover",
     "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
-        "red": {
-            "BS_PC_50": 1.0
-        },
-        "green": {
-            "PV_PC_50": 1.0
-        },
-        "blue": {
-            "NPV_PC_50": 1.0
-        }
+        "red": {"BS_PC_50": 1.0},
+        "green": {"PV_PC_50": 1.0},
+        "blue": {"NPV_PC_50": 1.0},
     },
     "scale_range": [0.0, 100.0],
     "pq_masks": [
@@ -3233,7 +2088,7 @@ style_fc_rgb =  {
     "legend": {
         "show_legend": True,
         "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-    }
+    },
 }
 
 style_nidem = {
@@ -3245,15 +2100,12 @@ style_nidem = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "nidem",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["nidem"],
     "color_ramp": [
-        {
-            "value": -2.51,
-            "color": "#440154"
-        },
+        {"value": -2.51, "color": "#440154"},
         {
             "value": -2.5,
             "color": "#440154",
@@ -3266,102 +2118,42 @@ style_nidem = {
             "value": -2.18,
             "color": "#471b6e",
         },
-        {
-            "value": -2.02,
-            "color": "#472877"
-        },
-        {
-            "value": -1.86,
-            "color": "#45347f"
-        },
-        {
-            "value": -1.7,
-            "color": "#413f85"
-        },
-        {
-            "value": -1.58,
-            "color": "#3b4d8a"
-        },
-        {
-            "value": -1.42,
-            "color": "#37578b"
-        },
-        {
-            "value": -1.26,
-            "color": "#32618c"
-        },
+        {"value": -2.02, "color": "#472877"},
+        {"value": -1.86, "color": "#45347f"},
+        {"value": -1.7, "color": "#413f85"},
+        {"value": -1.58, "color": "#3b4d8a"},
+        {"value": -1.42, "color": "#37578b"},
+        {"value": -1.26, "color": "#32618c"},
         {
             "value": -1.1,
             "color": "#2e6b8d",
         },
-        {
-            "value": -0.94,
-            "color": "#2a748e"
-        },
-        {
-            "value": -0.78,
-            "color": "#267d8e"
-        },
-        {
-            "value": -0.62,
-            "color": "#23868d"
-        },
-        {
-            "value": -0.46,
-            "color": "#208f8c"
-        },
-        {
-            "value": -0.3,
-            "color": "#1e9889"
-        },
-        {
-            "value": -0.14,
-            "color": "#1fa186"
-        },
+        {"value": -0.94, "color": "#2a748e"},
+        {"value": -0.78, "color": "#267d8e"},
+        {"value": -0.62, "color": "#23868d"},
+        {"value": -0.46, "color": "#208f8c"},
+        {"value": -0.3, "color": "#1e9889"},
+        {"value": -0.14, "color": "#1fa186"},
         {
             "value": 0.0,
             "color": "#26ac7f",
         },
-        {
-            "value": 0.14,
-            "color": "#32b579"
-        },
-        {
-            "value": 0.3,
-            "color": "#41bd70"
-        },
-        {
-            "value": 0.46,
-            "color": "#54c566"
-        },
-        {
-            "value": 0.62,
-            "color": "#69cc59"
-        },
-        {
-            "value": 0.78,
-            "color": "#80d24b"
-        },
-        {
-            "value": 0.94,
-            "color": "#99d83c"
-        },
+        {"value": 0.14, "color": "#32b579"},
+        {"value": 0.3, "color": "#41bd70"},
+        {"value": 0.46, "color": "#54c566"},
+        {"value": 0.62, "color": "#69cc59"},
+        {"value": 0.78, "color": "#80d24b"},
+        {"value": 0.94, "color": "#99d83c"},
         {
             "value": 1.1,
             "color": "#b2dc2c",
         },
-        {
-            "value": 1.26,
-            "color": "#cce01e"
-        },
-        {
-            "value": 1.42,
-            "color": "#e5e31a"
-        },
+        {"value": 1.26, "color": "#cce01e"},
+        {"value": 1.42, "color": "#e5e31a"},
         {
             "value": 1.5,
             "color": "#fde724",
-        }
+        },
     ],
     "legend": {
         "begin": "-2.5",
@@ -3371,8 +2163,8 @@ style_nidem = {
         "tick_labels": {
             "1.5": {"prefix": ">"},
             "-2.5": {"prefix": "<"},
-        }
-    }
+        },
+    },
 }
 
 style_item_relative = {
@@ -3384,23 +2176,14 @@ style_item_relative = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "relative",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["relative"],
     "color_ramp": [
+        {"value": 0.0, "color": "#000000", "alpha": 0.0},
+        {"value": 1.0, "color": "#d7191c", "alpha": 1.0},
         {
-            "value": 0.0,
-            "color": "#000000",
-            "alpha": 0.0
-        },
-        {
-            "value": 1.0,
-            "color": "#d7191c",
-            "alpha": 1.0
-        },
-        {
-
             "value": 2.0,
             "color": "#ec6e43",
         },
@@ -3409,7 +2192,6 @@ style_item_relative = {
             "color": "#fdb96e",
         },
         {
-
             "value": 4.0,
             "color": "#fee7a4",
         },
@@ -3418,7 +2200,6 @@ style_item_relative = {
             "color": "#e7f5b7",
         },
         {
-
             "value": 6.0,
             "color": "#b7e1a7",
         },
@@ -3426,16 +2207,8 @@ style_item_relative = {
             "value": 7.0,
             "color": "#74b6ad",
         },
-        {
-
-            "value": 8.0,
-            "color": "#2b83ba"
-        },
-        {
-            "value": 9.0,
-            "color": "#000000",
-            "alpha": 0.0
-        },
+        {"value": 8.0, "color": "#2b83ba"},
+        {"value": 9.0, "color": "#000000", "alpha": 0.0},
     ],
     "legend": {
         "begin": "0.0",
@@ -3454,8 +2227,8 @@ style_item_relative = {
             "0.7": {"label": "70"},
             "0.8": {"label": "80"},
             "0.9": {"label": "90"},
-        }
-    }
+        },
+    },
 }
 
 style_item_confidence = {
@@ -3466,25 +2239,14 @@ style_item_confidence = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "stddev",
-        }
+        },
     },
     "include_in_feature_info": False,
     "abstract": "The Confidence layer (item_v2_conf) 25m v2.0.0",
     "needed_bands": ["stddev"],
     "color_ramp": [
-        {
-            "value": 0.0,
-            "color": "#2b83ba",
-            "alpha": 0.0
-        },
-        {
-
-            "value": 0.01,
-            "color": "#2b83ba",
-            "legend": {
-                "prefix": "<"
-            }
-        },
+        {"value": 0.0, "color": "#2b83ba", "alpha": 0.0},
+        {"value": 0.01, "color": "#2b83ba", "legend": {"prefix": "<"}},
         {
             "value": 0.055,
             "color": "#55a1b2",
@@ -3529,13 +2291,7 @@ style_item_confidence = {
             "value": 0.505,
             "color": "#e31a1c",
         },
-        {
-            "value": 0.55,
-            "color": "#e31a1c",
-            "legend": {
-                "prefix": ">"
-            }
-        },
+        {"value": 0.55, "color": "#e31a1c", "legend": {"prefix": ">"}},
     ],
     "legend": {
         "begin": "0.01",
@@ -3547,9 +2303,8 @@ style_item_confidence = {
         },
         "decimal_places": 2,
         # Why "NDWI"???
-        "units": "NDWI standard deviation"
-    }
-
+        "units": "NDWI standard deviation",
+    },
 }
 
 style_wamm_dam_id = {
@@ -3561,26 +2316,18 @@ style_wamm_dam_id = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "dam_id",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["dam_id"],
     "color_ramp": [
-        {
-            'value': 0,
-            'color': '#11ccff',
-            'alpha': 1.0
-        },
-        {
-            'value': 8388607,
-            'color': '#11ccff',
-            'alpha': 1.0
-        },
+        {"value": 0, "color": "#11ccff", "alpha": 1.0},
+        {"value": 8388607, "color": "#11ccff", "alpha": 1.0},
     ],
     "legend": {
         # The old legend served no purpose
         "show_legend": False,
-    }
+    },
 }
 
 style_hap_simple_gray = {
@@ -3588,35 +2335,23 @@ style_hap_simple_gray = {
     "title": "Simple gray",
     "abstract": "Simple grayscale image",
     "components": {
-        "red": {
-            "Band_1": 1.0
-        },
-        "green": {
-            "Band_1": 1.0
-        },
-        "blue": {
-            "Band_1": 1.0
-        }
+        "red": {"Band_1": 1.0},
+        "green": {"Band_1": 1.0},
+        "blue": {"Band_1": 1.0},
     },
-    "scale_range": [0.0, 255]
+    "scale_range": [0.0, 255],
 }
 
 style_aster_false_colour = {
-  "name": "false_colour",
+    "name": "false_colour",
     "title": "False Colour",
     "abstract": "Simple false-colour image using ASTER Bands 3 as red, 2 as green and 1 as blue",
     "components": {
-        "red": {
-            "Band_1": 1.0
-        },
-        "green": {
-            "Band_2": 1.0
-        },
-        "blue": {
-            "Band_3": 1.0
-        }
+        "red": {"Band_1": 1.0},
+        "green": {"Band_2": 1.0},
+        "blue": {"Band_3": 1.0},
     },
-    "scale_range": [0.0, 255.0]
+    "scale_range": [0.0, 255.0],
 }
 
 style_aster_b2_gray = {
@@ -3624,17 +2359,11 @@ style_aster_b2_gray = {
     "title": "B2 Grayscale",
     "abstract": "Simple grayscale image using ASTER Band 2",
     "components": {
-        "red": {
-            "Band_2": 1.0
-        },
-        "green": {
-            "Band_2": 1.0
-        },
-        "blue": {
-            "Band_2": 1.0
-        }
+        "red": {"Band_2": 1.0},
+        "green": {"Band_2": 1.0},
+        "blue": {"Band_2": 1.0},
     },
-    "scale_range": [0.0, 255.0]
+    "scale_range": [0.0, 255.0],
 }
 
 style_aster_simple_rgb = {
@@ -3642,17 +2371,11 @@ style_aster_simple_rgb = {
     "title": "Simple RGB",
     "abstract": "Simple  true-colour image, using the red, green and blue bands",
     "components": {
-        "red": {
-            "Band_1": 1.0
-        },
-        "green": {
-            "Band_2": 1.0
-        },
-        "blue": {
-            "Band_3": 1.0
-        }
+        "red": {"Band_1": 1.0},
+        "green": {"Band_2": 1.0},
+        "blue": {"Band_3": 1.0},
     },
-    "scale_range": [0.0, 255.0]
+    "scale_range": [0.0, 255.0],
 }
 
 style_aster_aloh_comp_ramp = {
@@ -3664,7 +2387,7 @@ style_aster_aloh_comp_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -3674,54 +2397,21 @@ style_aster_aloh_comp_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -3732,7 +2422,7 @@ style_aster_aloh_comp_ramp = {
             "255.0": {"label": "1.3"},
         },
         "units": "Blue is well ordered kaolinite,\nRed is Al-poor (Si-rich) muscovite (phengite)",
-    }
+    },
 }
 
 style_aster_aloh_cont_ramp = {
@@ -3744,7 +2434,7 @@ style_aster_aloh_cont_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -3754,54 +2444,21 @@ style_aster_aloh_cont_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -3812,7 +2469,7 @@ style_aster_aloh_cont_ramp = {
             "255.0": {"label": "2.25"},
         },
         "units": "Blue is low content,\nRed is high content",
-    }
+    },
 }
 
 style_aster_feoh_cont_ramp = {
@@ -3824,7 +2481,7 @@ style_aster_feoh_cont_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -3834,54 +2491,21 @@ style_aster_feoh_cont_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -3892,7 +2516,7 @@ style_aster_feoh_cont_ramp = {
             "255.0": {"label": "2.25"},
         },
         "units": "Blue is low content,\nRed is high content",
-    }
+    },
 }
 
 style_aster_ferrox_comp_ramp = {
@@ -3904,7 +2528,7 @@ style_aster_ferrox_comp_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -3914,54 +2538,21 @@ style_aster_ferrox_comp_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -3972,7 +2563,7 @@ style_aster_ferrox_comp_ramp = {
             "255.0": {"label": "3.3"},
         },
         "units": "Blue-cyan is non-hematitie,\nRed-yellow is hematite-rich",
-    }
+    },
 }
 
 style_aster_ferrox_cont_ramp = {
@@ -3984,7 +2575,7 @@ style_aster_ferrox_cont_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -3994,54 +2585,21 @@ style_aster_ferrox_cont_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4052,7 +2610,7 @@ style_aster_ferrox_cont_ramp = {
             "255.0": {"label": "2.1"},
         },
         "units": "Blue is low abundance,\nRed is high abundance",
-    }
+    },
 }
 
 style_aster_ferrous_mgoh_ramp = {
@@ -4064,7 +2622,7 @@ style_aster_ferrous_mgoh_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4074,54 +2632,21 @@ style_aster_ferrous_mgoh_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4132,7 +2657,7 @@ style_aster_ferrous_mgoh_ramp = {
             "255.0": {"label": "2.0"},
         },
         "units": "Blue is low ferrous iron content,\nRed is high ferrous iron content",
-    }
+    },
 }
 
 style_aster_ferrous_idx_ramp = {
@@ -4144,7 +2669,7 @@ style_aster_ferrous_idx_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4154,54 +2679,21 @@ style_aster_ferrous_idx_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4212,7 +2704,7 @@ style_aster_ferrous_idx_ramp = {
             "255.0": {"label": "1.025"},
         },
         "units": "Blue is low abundance,\nRed is high abundance",
-    }
+    },
 }
 
 style_aster_green_veg_ramp = {
@@ -4224,7 +2716,7 @@ style_aster_green_veg_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4234,54 +2726,21 @@ style_aster_green_veg_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4292,7 +2751,7 @@ style_aster_green_veg_ramp = {
             "255.0": {"label": "4"},
         },
         "units": "Blue is low content,\nRed is high content",
-    }
+    },
 }
 
 style_aster_gypsum_idx_ramp = {
@@ -4304,7 +2763,7 @@ style_aster_gypsum_idx_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4314,54 +2773,21 @@ style_aster_gypsum_idx_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4372,7 +2798,7 @@ style_aster_gypsum_idx_ramp = {
             "255.0": {"label": "0.5"},
         },
         "units": "Blue is low content,\nRed is high content",
-    }
+    },
 }
 
 style_aster_kaolin_idx_ramp = {
@@ -4384,7 +2810,7 @@ style_aster_kaolin_idx_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4394,54 +2820,21 @@ style_aster_kaolin_idx_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4452,7 +2845,7 @@ style_aster_kaolin_idx_ramp = {
             "255.0": {"label": "1.25"},
         },
         "units": "Blue is low content,\nRed is high content",
-    }
+    },
 }
 
 style_aster_mgoh_comp_ramp = {
@@ -4464,7 +2857,7 @@ style_aster_mgoh_comp_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4474,54 +2867,21 @@ style_aster_mgoh_comp_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4532,7 +2892,7 @@ style_aster_mgoh_comp_ramp = {
             "255.0": {"label": "1.4"},
         },
         "units": "Blue-cyan is magnesite-dolomite, amphibole, \nRed is calcite, epidote, amphibole",
-    }
+    },
 }
 
 style_aster_mgoh_cont_ramp = {
@@ -4544,7 +2904,7 @@ style_aster_mgoh_cont_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4554,54 +2914,21 @@ style_aster_mgoh_cont_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4612,7 +2939,7 @@ style_aster_mgoh_cont_ramp = {
             "255.0": {"label": "1.2"},
         },
         "units": "Blue low content,\nRed is high content",
-    }
+    },
 }
 
 style_aster_opaque_idx_ramp = {
@@ -4624,7 +2951,7 @@ style_aster_opaque_idx_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4634,54 +2961,21 @@ style_aster_opaque_idx_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4692,7 +2986,7 @@ style_aster_opaque_idx_ramp = {
             "255.0": {"label": "0.9"},
         },
         "units": "Blue low content,\nRed is high content",
-    }
+    },
 }
 
 style_aster_silica_idx_ramp = {
@@ -4704,7 +2998,7 @@ style_aster_silica_idx_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4714,54 +3008,21 @@ style_aster_silica_idx_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4772,7 +3033,7 @@ style_aster_silica_idx_ramp = {
             "255.0": {"label": "1.35"},
         },
         "units": "Blue low silica content,\nRed is high silica content",
-    }
+    },
 }
 
 style_aster_quartz_idx_ramp = {
@@ -4784,7 +3045,7 @@ style_aster_quartz_idx_ramp = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "Band_1",
-        }
+        },
     },
     "include_in_feature_info": False,
     "needed_bands": ["Band_1"],
@@ -4794,54 +3055,21 @@ style_aster_quartz_idx_ramp = {
             "color": "#8F3F20",
             "alpha": 0.0,
         },
-        {
-            "value": 1,
-            "color": "#000000"
-        },
-        {
-            "value": 10,
-            "color": "#2d002b"
-        },
-        {
-            "value": 25,
-            "color": "#550071"
-        },
-        {
-            "value": 60,
-            "color": "#0400ff"
-        },
-        {
-            "value": 90,
-            "color": "#0098ff"
-        },
-        {
-            "value": 110,
-            "color": "#00ffff"
-        },
-        {
-            "value": 130,
-            "color": "#00ff94"
-        },
-        {
-            "value": 150,
-            "color": "#00ff2a"
-        },
-        {
-            "value": 170,
-            "color": "#3fff00"
-        },
-        {
-            "value": 210,
-            "color": "#ffee00"
-        },
-        {
-            "value": 230,
-            "color": "#ff8300"
-        },
+        {"value": 1, "color": "#000000"},
+        {"value": 10, "color": "#2d002b"},
+        {"value": 25, "color": "#550071"},
+        {"value": 60, "color": "#0400ff"},
+        {"value": 90, "color": "#0098ff"},
+        {"value": 110, "color": "#00ffff"},
+        {"value": 130, "color": "#00ff94"},
+        {"value": 150, "color": "#00ff2a"},
+        {"value": 170, "color": "#3fff00"},
+        {"value": 210, "color": "#ffee00"},
+        {"value": 230, "color": "#ff8300"},
         {
             "value": 255.0,
             "color": "#ff0000",
-        }
+        },
     ],
     "legend": {
         "begin": "0.0",
@@ -4852,7 +3080,7 @@ style_aster_quartz_idx_ramp = {
             "255.0": {"label": "0.52"},
         },
         "units": "Blue low quartz content,\nRed is high quartz content",
-    }
+    },
 }
 
 style_tmad_sdev = {
@@ -4862,31 +3090,20 @@ style_tmad_sdev = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band": "sdev",
-            "scale_factor": -100.0,
-            "exponent": 1/1000.0
-        }
+        "kwargs": {"band": "sdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["sdev"],
     "color_ramp": [
+        {"value": 0.0, "color": "#ffffff", "alpha": 0},
         {
-            'value': 0.0,
-            'color': '#ffffff',
-            'alpha': 0
+            "value": 0.1,
+            "color": "#A02406",
         },
+        {"value": 0.5, "color": "#FCF24B"},
         {
-            'value': 0.1,
-            'color': '#A02406',
+            "value": 0.9,
+            "color": "#0CCD1D",
         },
-        {
-            'value': 0.5,
-            'color': '#FCF24B'
-        },
-        {
-            'value': 0.9,
-            'color': '#0CCD1D',
-        }
     ],
     "legend": {
         "begin": "0.1",
@@ -4895,8 +3112,8 @@ style_tmad_sdev = {
         "tick_labels": {
             "0.1": {"label": "High\ntmad"},
             "0.9": {"label": "Low\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 style_tmad_edev = {
@@ -4906,31 +3123,20 @@ style_tmad_edev = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band": "edev",
-            "scale_factor": -100.0,
-            "exponent": 1/1000.0
-        }
+        "kwargs": {"band": "edev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["edev"],
     "color_ramp": [
+        {"value": 0.0, "color": "#ffffff", "alpha": 0},
         {
-            'value': 0.0,
-            'color': '#ffffff',
-            'alpha': 0
+            "value": 0.1,
+            "color": "#A02406",
         },
+        {"value": 0.5, "color": "#FCF24B"},
         {
-            'value': 0.1,
-            'color': '#A02406',
+            "value": 0.9,
+            "color": "#0CCD1D",
         },
-        {
-            'value': 0.5,
-            'color': '#FCF24B'
-        },
-        {
-            'value': 0.9,
-            'color': '#0CCD1D',
-        }
     ],
     "legend": {
         "begin": "0.1",
@@ -4938,8 +3144,8 @@ style_tmad_edev = {
         "tick_labels": {
             "0.1": {"label": "High\ntmad"},
             "0.9": {"label": "Low\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 style_tmad_bcdev = {
@@ -4949,31 +3155,20 @@ style_tmad_bcdev = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band": "bcdev",
-            "scale_factor": -100.0,
-            "exponent": 1/1000.0
-        }
+        "kwargs": {"band": "bcdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["bcdev"],
     "color_ramp": [
+        {"value": 0.0, "color": "#ffffff", "alpha": 0},
         {
-            'value': 0.0,
-            'color': '#ffffff',
-            'alpha': 0
+            "value": 0.1,
+            "color": "#A02406",
         },
+        {"value": 0.5, "color": "#FCF24B"},
         {
-            'value': 0.1,
-            'color': '#A02406',
+            "value": 0.9,
+            "color": "#0CCD1D",
         },
-        {
-            'value': 0.5,
-            'color': '#FCF24B'
-        },
-        {
-            'value': 0.9,
-            'color': '#0CCD1D',
-        }
     ],
     "legend": {
         "begin": "0.1",
@@ -4981,31 +3176,19 @@ style_tmad_bcdev = {
         "tick_labels": {
             "0.1": {"label": "High\ntmad"},
             "0.9": {"label": "Low\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 style_fc_simple = {
     "name": "simple_fc",
     "title": "Fractional Cover",
     "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-    "components": {
-        "red": {
-            "BS": 1.0
-        },
-        "green": {
-            "PV": 1.0
-        },
-        "blue": {
-            "NPV": 1.0
-        }
-    },
+    "components": {"red": {"BS": 1.0}, "green": {"PV": 1.0}, "blue": {"NPV": 1.0}},
     "scale_range": [0.0, 100.0],
     "pq_masks": [
         {
-            "flags": {
-                'dry': True
-            },
+            "flags": {"dry": True},
         },
         {
             "flags": {
@@ -5013,10 +3196,10 @@ style_fc_simple = {
                 "high_slope": False,
                 "cloud_shadow": False,
                 "cloud": False,
-                "sea": False
+                "sea": False,
             }
         },
-    ]
+    ],
 }
 
 ##############################################################################################
@@ -5027,9 +3210,16 @@ style_fc_simple = {
 
 ls_style_list = [
     style_ls_simple_rgb,
-    style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-    style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
-    style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
+    style_ls_irg,
+    style_ls_ndvi,
+    style_ls_ndwi,
+    style_ls_mndwi,
+    style_sentinel_pure_blue,
+    style_ls_pure_green,
+    style_ls_pure_red,
+    style_ls_pure_nir,
+    style_ls_pure_swir1,
+    style_ls_pure_swir2,
 ]
 
 # HACK: Move this to a utils to allow style reusability
@@ -5040,7 +3230,8 @@ def swap_scale(new_scale: list, style: dict):
         return new_style
     return style
 
-swap_scale_p = partial(swap_scale, [0.0,0.3])
+
+swap_scale_p = partial(swap_scale, [0.0, 0.3])
 
 tide_style_list = list([swap_scale_p(s) for s in ls_style_list])
 
@@ -5064,7 +3255,7 @@ style_insar_velocity = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "velocity",
-        }
+        },
     },
     # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
     # Defaults to true for style types with an index function.
@@ -5077,7 +3268,7 @@ style_insar_velocity = {
         "ticks_every": 30,
         "units": "mm/year",
         "decimal_places": 0,
-    }
+    },
 }
 
 style_insar_velocity_ud = copy.deepcopy(style_insar_velocity)
@@ -5102,7 +3293,7 @@ style_insar_displacement = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "displacement",
-        }
+        },
     },
     # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
     # Defaults to true for style types with an index function.
@@ -5115,7 +3306,7 @@ style_insar_displacement = {
         "units": "mm",
         "decimal_places": 0,
         "ticks_every": 100,
-    }
+    },
 }
 
 style_insar_disp_ud = copy.deepcopy(style_insar_displacement)
@@ -5140,7 +3331,7 @@ style_insar_stddev_l = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "disp_std",
-        }
+        },
     },
     # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
     # Defaults to true for style types with an index function.
@@ -5153,7 +3344,7 @@ style_insar_stddev_l = {
         "ticks_every": 40,
         "units": "mm",
         "decimal_places": 0,
-    }
+    },
 }
 
 # Create up-down/east-west varieties using deepcopy
@@ -5192,7 +3383,7 @@ style_insar_stddev_lv = {
         "pass_product_cfg": True,
         "kwargs": {
             "band": "vel_std",
-        }
+        },
     },
     # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
     # Defaults to true for style types with an index function.
@@ -5205,7 +3396,7 @@ style_insar_stddev_lv = {
         "ticks_every": 12,
         "units": "mm/year",
         "decimal_places": 0,
-    }
+    },
 }
 
 # Create up-down/east-west varieties using deepcopy
@@ -5248,7 +3439,6 @@ alos_layers = [
         "name": "alos_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_displacement",
-
         "bands": insar_disp_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
@@ -5256,11 +3446,13 @@ alos_layers = [
         },
         "styling": {
             "default_style": "insar_disp_ud",
-            "styles": [style_insar_disp_ud,
-                       style_insar_disp_ew,
-                       style_insar_stddev_l_ud,
-                       style_insar_stddev_l_ew]
-        }
+            "styles": [
+                style_insar_disp_ud,
+                style_insar_disp_ew,
+                style_insar_stddev_l_ud,
+                style_insar_stddev_l_ew,
+            ],
+        },
     },
     {
         "title": "ALOS Velocity",
@@ -5273,7 +3465,6 @@ alos_layers = [
         "name": "alos_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_velocity",
-
         "bands": insar_vel_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
@@ -5281,11 +3472,13 @@ alos_layers = [
         },
         "styling": {
             "default_style": "insar_velocity_ud",
-            "styles": [style_insar_velocity_ud,
-                       style_insar_velocity_ew,
-                       style_insar_stddev_lv_ud,
-                       style_insar_stddev_lv_ew]
-        }
+            "styles": [
+                style_insar_velocity_ud,
+                style_insar_velocity_ew,
+                style_insar_stddev_lv_ud,
+                style_insar_stddev_lv_ew,
+            ],
+        },
     },
 ]
 
@@ -5302,7 +3495,6 @@ envisat_layers = [
         "name": "envisat_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_displacement",
-
         "bands": insar_disp_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
@@ -5310,11 +3502,13 @@ envisat_layers = [
         },
         "styling": {
             "default_style": "insar_disp_ud",
-            "styles": [style_insar_disp_ud,
-                       style_insar_disp_ew,
-                       style_insar_stddev_c_ud,
-                       style_insar_stddev_c_ew]
-        }
+            "styles": [
+                style_insar_disp_ud,
+                style_insar_disp_ew,
+                style_insar_stddev_c_ud,
+                style_insar_stddev_c_ew,
+            ],
+        },
     },
     {
         "title": "ENVISAT Velocity",
@@ -5327,7 +3521,6 @@ envisat_layers = [
         "name": "envisat_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_velocity",
-
         "bands": insar_vel_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
@@ -5335,18 +3528,20 @@ envisat_layers = [
         },
         "styling": {
             "default_style": "insar_velocity_ud",
-            "styles": [style_insar_velocity_ud,
-                       style_insar_velocity_ew,
-                       style_insar_stddev_cv_ud,
-                       style_insar_stddev_cv_ew]
-        }
+            "styles": [
+                style_insar_velocity_ud,
+                style_insar_velocity_ew,
+                style_insar_stddev_cv_ud,
+                style_insar_stddev_cv_ew,
+            ],
+        },
     },
 ]
 
 rs2_layers = [
     {
         "title": "RADARSAT2 Displacement",
-        "abstract":"""
+        "abstract": """
             Cumulative displacement time series derived from combination of ascending
              and descending line-of-sight InSAR data from two Radarsat-2 data stacks
              in the Sydney Basin area. Original data points were interpolated to 50
@@ -5357,7 +3552,6 @@ rs2_layers = [
         "name": "radarsat2_displacement",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_displacement",
-
         "bands": insar_disp_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
@@ -5365,11 +3559,13 @@ rs2_layers = [
         },
         "styling": {
             "default_style": "insar_disp_ud",
-            "styles": [style_insar_disp_ud,
-                       style_insar_disp_ew,
-                       style_insar_stddev_c_ud,
-                       style_insar_stddev_c_ew]
-        }
+            "styles": [
+                style_insar_disp_ud,
+                style_insar_disp_ew,
+                style_insar_stddev_c_ud,
+                style_insar_stddev_c_ew,
+            ],
+        },
     },
     {
         "title": "RADARSAT2 Velocity",
@@ -5383,7 +3579,6 @@ rs2_layers = [
         "name": "radarsat2_velocity",
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_velocity",
-
         "bands": insar_vel_bands,
         "resource_limits": reslim_insar,
         "image_processing": {
@@ -5391,11 +3586,13 @@ rs2_layers = [
         },
         "styling": {
             "default_style": "insar_velocity_ud",
-            "styles": [style_insar_velocity_ud,
-                       style_insar_velocity_ew,
-                       style_insar_stddev_cv_ud,
-                       style_insar_stddev_cv_ew]
-        }
+            "styles": [
+                style_insar_velocity_ud,
+                style_insar_velocity_ew,
+                style_insar_stddev_cv_ud,
+                style_insar_stddev_cv_ew,
+            ],
+        },
     },
 ]
 
@@ -5411,15 +3608,11 @@ style_tmad_sdev_new = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_arcsec",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band": "sdev",
-            "scale_from": [ 0.017, 0.15 ],
-            "scale_to": [0.0, 4.0]
-        }
+        "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["sdev"],
     "mpl_ramp": "coolwarm",
-    "range": [ 0.0, 4.0 ],
+    "range": [0.0, 4.0],
     "legend": {
         "start": "0.0",
         "end": "4.0",
@@ -5427,8 +3620,8 @@ style_tmad_sdev_new = {
         "tick_labels": {
             "0.0": {"label": "Low\ntmad"},
             "4.0": {"label": "High\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 style_tmad_edev_new = {
@@ -5438,15 +3631,11 @@ style_tmad_edev_new = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
         "pass_product_cfg": True,
-        "kwargs": {
-            "band": "edev",
-            "scale_from": [0.025, 0.1],
-            "scale_to": [0.0, 4.0]
-        }
+        "kwargs": {"band": "edev", "scale_from": [0.025, 0.1], "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["edev"],
     "mpl_ramp": "coolwarm",
-    "range": [ 0.0, 4.0 ],
+    "range": [0.0, 4.0],
     "legend": {
         "start": "0.0",
         "end": "4.0",
@@ -5454,8 +3643,8 @@ style_tmad_edev_new = {
         "tick_labels": {
             "0.0": {"label": "Low\ntmad"},
             "4.0": {"label": "High\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 
@@ -5469,12 +3658,12 @@ style_tmad_bcdev_new = {
         "kwargs": {
             "band": "bcdev",
             "scale_from": [0.025, 0.13],
-            "scale_to": [0.0, 4.0]
-        }
+            "scale_to": [0.0, 4.0],
+        },
     },
     "needed_bands": ["bcdev"],
     "mpl_ramp": "coolwarm",
-    "range": [ 0.0, 4.0 ],
+    "range": [0.0, 4.0],
     "legend": {
         "start": "0.0",
         "end": "4.0",
@@ -5482,41 +3671,41 @@ style_tmad_bcdev_new = {
         "tick_labels": {
             "0.0": {"label": "Low\ntmad"},
             "4.0": {"label": "High\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 style_tmad_rgb = {
-        "name": "tmad_rgb",
-        "title": "TMAD multi-band false-colour",
-        "abstract": "",
-        "components": {
-            "red": {
-                "function": "datacube_ows.band_utils.single_band_arcsec",
-                "pass_product_cfg": True,
-                "kwargs": {
-                    "band": "sdev",
-                    "scale_from": [0.017, 0.15],
-                }
-            },
-            "green": {
-                "function": "datacube_ows.band_utils.single_band_offset_log",
-                "pass_product_cfg": True,
-                "kwargs": {
-                    "band": "edev",
-                    "scale_from": [0.025, 0.1],
-                }
-            },
-            "blue": {
-                "function": "datacube_ows.band_utils.single_band_offset_log",
-                "pass_product_cfg": True,
-                "kwargs": {
-                    "band": "bcdev",
-                    "scale_from": [0.025, 0.13],
-                }
+    "name": "tmad_rgb",
+    "title": "TMAD multi-band false-colour",
+    "abstract": "",
+    "components": {
+        "red": {
+            "function": "datacube_ows.band_utils.single_band_arcsec",
+            "pass_product_cfg": True,
+            "kwargs": {
+                "band": "sdev",
+                "scale_from": [0.017, 0.15],
             },
         },
-        "additional_bands": ["sdev", "bcdev", "edev"]
+        "green": {
+            "function": "datacube_ows.band_utils.single_band_offset_log",
+            "pass_product_cfg": True,
+            "kwargs": {
+                "band": "edev",
+                "scale_from": [0.025, 0.1],
+            },
+        },
+        "blue": {
+            "function": "datacube_ows.band_utils.single_band_offset_log",
+            "pass_product_cfg": True,
+            "kwargs": {
+                "band": "bcdev",
+                "scale_from": [0.025, 0.13],
+            },
+        },
+    },
+    "additional_bands": ["sdev", "bcdev", "edev"],
 }
 # End of Reuseable
 
@@ -5539,10 +3728,7 @@ ows_cfg = {
                 "horizontal_coord": "x",
                 "vertical_coord": "y",
             },
-            "EPSG:4326": {  # WGS-84
-                "geographic": True,
-                "vertical_coord_first": True
-            },
+            "EPSG:4326": {"geographic": True, "vertical_coord_first": True},  # WGS-84
             "EPSG:3577": {  # GDA-94, internal representation
                 "geographic": False,
                 "horizontal_coord": "x",
@@ -5555,13 +3741,12 @@ ows_cfg = {
             },
         },
         "allowed_urls": [
-                "https://ows.services.dea.ga.gov.au",
-                "https://ows.services.dev.dea.ga.gov.au",
-                "https://ows.dev.dea.ga.gov.au",
-                "https://ows.dea.ga.gov.au",
-                "https://nc-ows.dev.dea.ga.gov.au"
+            "https://ows.services.dea.ga.gov.au",
+            "https://ows.services.dev.dea.ga.gov.au",
+            "https://ows.dev.dea.ga.gov.au",
+            "https://ows.dea.ga.gov.au",
+            "https://nc-ows.dev.dea.ga.gov.au",
         ],
-
         # Metadata to go straight into GetCapabilities documents
         "title": "Digital Earth Australia - OGC Web Services",
         "abstract": "Digital Earth Australia OGC Web Services",
@@ -5576,7 +3761,7 @@ ows_cfg = {
             "landsat",
             "australia",
             "time-series",
-            "fractional-cover"
+            "fractional-cover",
         ],
         "contact_info": {
             "person": "Digital Earth Australia",
@@ -5596,18 +3781,17 @@ ows_cfg = {
         },
         "fees": "",
         "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. "
-                              "This product is released under the Creative Commons Attribution 4.0 International Licence. "
-                              "http://creativecommons.org/licenses/by/4.0/legalcode",
-    }, # END OF global SECTION
+        "This product is released under the Creative Commons Attribution 4.0 International Licence. "
+        "http://creativecommons.org/licenses/by/4.0/legalcode",
+    },  # END OF global SECTION
     "wms": {
         # Config for WMS service, for all products/layers
         "s3_url": "https://data.dea.ga.gov.au",
         "s3_bucket": "dea-public-data",
         "s3_aws_zone": "ap-southeast-2",
-
         "max_width": 512,
         "max_height": 512,
-    }, # END OF wms SECTION
+    },  # END OF wms SECTION
     "wcs": {
         # Config for WCS service, for all products/coverages
         "default_geographic_CRS": "EPSG:4326",
@@ -5619,7 +3803,7 @@ ows_cfg = {
                 },
                 "mime": "image/geotiff",
                 "extension": "tif",
-                "multi-time": False
+                "multi-time": False,
             },
             "netCDF": {
                 "renderers": {
@@ -5632,22 +3816,21 @@ ows_cfg = {
             },
         },
         "native_format": "GeoTIFF",
-    }, # END OF wcs SECTION
+    },  # END OF wcs SECTION
     "layers": [
-                        {
-                    "title": "Digital Earth Australia - OGC Web Services",
-                    "abstract": "Digital Earth Australia OGC Web Services",
-                    "layers": [
-        # Hierarchical list of layers.  May be a combination of unnamed/unmappable folder-layers or named mappable layers.
         {
-            "title": "Surface Reflectance",
-            "abstract": "",
+            "title": "Digital Earth Australia - OGC Web Services",
+            "abstract": "Digital Earth Australia OGC Web Services",
             "layers": [
-
+                # Hierarchical list of layers.  May be a combination of unnamed/unmappable folder-layers or named mappable layers.
                 {
-                    "title": "Surface Reflectance 25m Annual Geomedian (Landsat 8)",
-                    "name": "ls8_nbart_geomedian_annual",
-                    "abstract": """
+                    "title": "Surface Reflectance",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Surface Reflectance 25m Annual Geomedian (Landsat 8)",
+                            "name": "ls8_nbart_geomedian_annual",
+                            "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
 as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
 mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
@@ -5660,34 +3843,41 @@ For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
 
 For service status information, see https://status.dea.ga.gov.au
                     """,
-                    "product_name": "ls8_nbart_geomedian_annual",
-                    "bands": bands_ls,
-                    # "time_resolution": 'year',
-                    "resource_limits": reslim_landsat,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["red", "green", "blue"]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-                            style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_sentinel_pure_nir, style_sentinel_pure_swir1, style_sentinel_pure_swir2,
-                        ]
-                    }
-                },
-                {
-                    "title": "Surface Reflectance 25m Annual Geomedian (Landsat 7)",
-                    "name": "ls7_nbart_geomedian_annual",
-                    "abstract": """
+                            "product_name": "ls8_nbart_geomedian_annual",
+                            "bands": bands_ls,
+                            # "time_resolution": 'year',
+                            "resource_limits": reslim_landsat,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["red", "green", "blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_ls_simple_rgb,
+                                    style_ls_irg,
+                                    style_ls_ndvi,
+                                    style_ls_ndwi,
+                                    style_ls_mndwi,
+                                    style_ls_pure_blue,
+                                    style_ls_pure_green,
+                                    style_ls_pure_red,
+                                    style_sentinel_pure_nir,
+                                    style_sentinel_pure_swir1,
+                                    style_sentinel_pure_swir2,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Surface Reflectance 25m Annual Geomedian (Landsat 7)",
+                            "name": "ls7_nbart_geomedian_annual",
+                            "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
 as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
 mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
@@ -5700,33 +3890,40 @@ For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
 
 For service status information, see https://status.dea.ga.gov.au
                     """,
-                    "product_name": "ls7_nbart_geomedian_annual",
-                    "bands": bands_ls,
-                    "resource_limits": reslim_landsat,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["red", "green", "blue"]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
-                        ]
-                    }
-                },
-                {
-                    "title": "Surface Reflectance 25m Annual Geomedian (Landsat 5)",
-                    "name": "ls5_nbart_geomedian_annual",
-                    "abstract": """
+                            "product_name": "ls7_nbart_geomedian_annual",
+                            "bands": bands_ls,
+                            "resource_limits": reslim_landsat,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["red", "green", "blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_ls_simple_rgb,
+                                    style_ls_irg,
+                                    style_ls_ndvi,
+                                    style_ls_ndwi,
+                                    style_ls_mndwi,
+                                    style_sentinel_pure_blue,
+                                    style_ls_pure_green,
+                                    style_ls_pure_red,
+                                    style_ls_pure_nir,
+                                    style_ls_pure_swir1,
+                                    style_ls_pure_swir2,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Surface Reflectance 25m Annual Geomedian (Landsat 5)",
+                            "name": "ls5_nbart_geomedian_annual",
+                            "abstract": """
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
 as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
 mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
@@ -5739,34 +3936,41 @@ For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
 
 For service status information, see https://status.dea.ga.gov.au
                     """,
-                    "product_name": "ls5_nbart_geomedian_annual",
-                    "bands": bands_ls,
-                    "resource_limits": reslim_landsat,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["red", "green", "blue"]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi, style_ls_ndwi, style_ls_mndwi,
-                            style_sentinel_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_ls_pure_nir, style_ls_pure_swir1, style_ls_pure_swir2,
-                        ]
-                    }
+                            "product_name": "ls5_nbart_geomedian_annual",
+                            "bands": bands_ls,
+                            "resource_limits": reslim_landsat,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["red", "green", "blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_ls_simple_rgb,
+                                    style_ls_irg,
+                                    style_ls_ndvi,
+                                    style_ls_ndwi,
+                                    style_ls_mndwi,
+                                    style_sentinel_pure_blue,
+                                    style_ls_pure_green,
+                                    style_ls_pure_red,
+                                    style_ls_pure_nir,
+                                    style_ls_pure_swir1,
+                                    style_ls_pure_swir2,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Landsat-8 Barest Earth",
-            "abstract": """
+                {
+                    "title": "Landsat-8 Barest Earth",
+                    "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
 
 The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
@@ -5776,11 +3980,11 @@ Reference: Dale Roberts, John Wilford, and Omar Ghattas (2018). Revealing the Au
 Mosaics are available for the following years:
     Landsat 8: 2013 to 2017;
             """,
-            "layers": [
-                {
-                    "title": "Landsat-8 Barest Earth 25m albers (Landsat-8)",
-                    "name": "ls8_barest_earth_mosaic",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "title": "Landsat-8 Barest Earth 25m albers (Landsat-8)",
+                            "name": "ls8_barest_earth_mosaic",
+                            "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
 
 The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
@@ -5792,83 +3996,93 @@ Mosaics are available for the following years:
 
 For service status information, see https://status.dea.ga.gov.au
                     """,
-                    "product_name": "ls8_barest_earth_albers",
-                    "bands": bands_ls,
-                    "resource_limits": reslim_landsat,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["red", "green", "blue"]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi,
-                            style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_sentinel_pure_nir, style_sentinel_pure_swir1, style_sentinel_pure_swir2,
-                        ]
-                    }
-
-                }
-            ]
-        },
-        {
-            "title": "Landsat 30+ Barest Earth",
-            "abstract": """
+                            "product_name": "ls8_barest_earth_albers",
+                            "bands": bands_ls,
+                            "resource_limits": reslim_landsat,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["red", "green", "blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_ls_simple_rgb,
+                                    style_ls_irg,
+                                    style_ls_ndvi,
+                                    style_ls_pure_blue,
+                                    style_ls_pure_green,
+                                    style_ls_pure_red,
+                                    style_sentinel_pure_nir,
+                                    style_sentinel_pure_swir1,
+                                    style_sentinel_pure_swir2,
+                                ],
+                            },
+                        }
+                    ],
+                },
+                {
+                    "title": "Landsat 30+ Barest Earth",
+                    "abstract": """
 	An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth. Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018;
 
             """,
-            "layers": [
-                {
-                    "title": "Landsat 30+ Barest Earth 25m albers (Combined Landsat)",
-                    "name": "landsat_barest_earth",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "title": "Landsat 30+ Barest Earth 25m albers (Combined Landsat)",
+                            "name": "landsat_barest_earth",
+                            "abstract": """
 	An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018).
     The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
     This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth.
     Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018; For service status information, see https://status.dea.ga.gov.au
                     """,
-                    "product_name": "landsat_barest_earth",
-                    "bands": bands_ls,
-                    "resource_limits": reslim_landsat,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["red", "green", "blue"]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_ls_simple_rgb,
-                            style_ls_irg, style_ls_ndvi,
-                            style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
-                            style_sentinel_pure_nir, style_sentinel_pure_swir1, style_sentinel_pure_swir2,
-                            style_nd_ferric_iron, style_nd_soil, style_nd_clay_mica,
-                        ]
-                    }
-
-                }
-            ]
-        },
-        {
-            "title": "Mangrove Canopy Cover",
-            "abstract": "",
-            "layers": [
+                            "product_name": "landsat_barest_earth",
+                            "bands": bands_ls,
+                            "resource_limits": reslim_landsat,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["red", "green", "blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_ls_simple_rgb,
+                                    style_ls_irg,
+                                    style_ls_ndvi,
+                                    style_ls_pure_blue,
+                                    style_ls_pure_green,
+                                    style_ls_pure_red,
+                                    style_sentinel_pure_nir,
+                                    style_sentinel_pure_swir1,
+                                    style_sentinel_pure_swir2,
+                                    style_nd_ferric_iron,
+                                    style_nd_soil,
+                                    style_nd_clay_mica,
+                                ],
+                            },
+                        }
+                    ],
+                },
                 {
-                    "name": "mangrove_cover_v2_0_2",
-                    "title": "Mangrove Canopy Cover 25m 100km tile (Mangrove Canopy Cover V2.0.2)",
-                    "abstract": """
+                    "title": "Mangrove Canopy Cover",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "name": "mangrove_cover_v2_0_2",
+                            "title": "Mangrove Canopy Cover 25m 100km tile (Mangrove Canopy Cover V2.0.2)",
+                            "abstract": """
 Mangrove canopy cover version 2.0.2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 
 The mangrove canopy cover product provides valuable information about the extent and canopy density of mangroves for each year between 1987 and 2016 for the entire Australian coastline.
@@ -5879,63 +4093,63 @@ The product consists of  a sequence (one per year) of 25 meter resolution maps t
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "mangrove_cover",
-                    "bands": bands_mangrove,
-                    "resource_limits": reslim_mangrove,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_extent_val",
-                        "always_fetch_bands": [ "extent" ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["canopy_cover_class", "extent"]
-                    },
-                    "styling": {
-                        "default_style": "mangrove",
-                        "styles": [
-                            style_mangrove_cover_v2,
-                        ]
-                    }
+                            "product_name": "mangrove_cover",
+                            "bands": bands_mangrove,
+                            "resource_limits": reslim_mangrove,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_extent_val",
+                                "always_fetch_bands": ["extent"],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["canopy_cover_class", "extent"],
+                            },
+                            "styling": {
+                                "default_style": "mangrove",
+                                "styles": [
+                                    style_mangrove_cover_v2,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Water Observations from Space",
-            "abstract": "WOfS",
-            "layers": [
                 {
-                    "title": "Water Observations from Space 25m Filtered Water Summary (WOfS Filtered Statistics)",
-                    "name": "wofs_filtered_summary",
-                    "abstract": """
+                    "title": "Water Observations from Space",
+                    "abstract": "WOfS",
+                    "layers": [
+                        {
+                            "title": "Water Observations from Space 25m Filtered Water Summary (WOfS Filtered Statistics)",
+                            "name": "wofs_filtered_summary",
+                            "abstract": """
 Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level. No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_filtered_summary",
-                    "bands": bands_wofs_filt_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["wofs_filtered_summary"]
-                    },
-                    "styling": {
-                        "default_style": "WOfS_filtered_frequency",
-                        "styles": [
-                            style_wofs_filt_freq,
-                            style_wofs_filt_freq_blue
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
-                    "name": "wofs_summary_wet",
-                    "abstract": """
+                            "product_name": "wofs_filtered_summary",
+                            "bands": bands_wofs_filt_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["wofs_filtered_summary"],
+                            },
+                            "styling": {
+                                "default_style": "WOfS_filtered_frequency",
+                                "styles": [
+                                    style_wofs_filt_freq,
+                                    style_wofs_filt_freq_blue,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
+                            "name": "wofs_summary_wet",
+                            "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains Wet Count: how many times water was detected in observations that were clear. No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
@@ -5946,30 +4160,30 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_wet"]
-                    },
-                    "styling": {
-                        "default_style": "water_observations",
-                        "styles": [
-                            style_wofs_count_wet,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
-                    "name": "wofs_summary_clear",
-                    "abstract": """
+                            "product_name": "wofs_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_wet"],
+                            },
+                            "styling": {
+                                "default_style": "water_observations",
+                                "styles": [
+                                    style_wofs_count_wet,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
+                            "name": "wofs_summary_clear",
+                            "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains Clear Count: how many times an area could be clearly seen (ie. not affected by clouds, shadows or other satellite observation problems). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
@@ -5980,30 +4194,30 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_clear"]
-                    },
-                    "styling": {
-                        "default_style": "clear_observations",
-                        "styles": [
-                            style_wofs_count_clear,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Water Summary (WOfS Statistics)	",
-                    "name": "Water Observations from Space Statistics",
-                    "abstract": """
+                            "product_name": "wofs_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_clear"],
+                            },
+                            "styling": {
+                                "default_style": "clear_observations",
+                                "styles": [
+                                    style_wofs_count_clear,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Water Summary (WOfS Statistics)	",
+                            "name": "Water Observations from Space Statistics",
+                            "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary).
 
 This layer contains the Water Summary: the percentage of clear observations which were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
@@ -6014,57 +4228,57 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["frequency"]
-                    },
-                    "styling": {
-                        "default_style": "WOfS_frequency",
-                        "styles": [
-                            style_wofs_frequency,
-                            style_wofs_frequency_blue
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Confidence (WOfS Filtered Statistics)",
-                    "name": "wofs_filtered_summary_confidence",
-                    "abstract": """
+                            "product_name": "wofs_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["frequency"],
+                            },
+                            "styling": {
+                                "default_style": "WOfS_frequency",
+                                "styles": [
+                                    style_wofs_frequency,
+                                    style_wofs_frequency_blue,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Confidence (WOfS Filtered Statistics)",
+                            "name": "wofs_filtered_summary_confidence",
+                            "abstract": """
 Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green. The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. For more information please see: https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_filtered_summary",
-                    "bands": bands_wofs_filt_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["confidence"]
-                    },
-                    "styling": {
-                        "default_style": "wofs_confidence",
-                        "styles": [
-                            style_wofs_confidence,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
-                    "name": "wofs_annual_summary_wet",
-                    "abstract": """
+                            "product_name": "wofs_filtered_summary",
+                            "bands": bands_wofs_filt_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["confidence"],
+                            },
+                            "styling": {
+                                "default_style": "wofs_confidence",
+                                "styles": [
+                                    style_wofs_confidence,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
+                            "name": "wofs_annual_summary_wet",
+                            "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
@@ -6075,56 +4289,56 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_annual_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_wet"]
-                    },
-                    "styling": {
-                        "default_style": "annual_water_observations",
-                        "styles": [
-                            style_wofs_summary_wet,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
-                    "name": "wofs_annual_summary_clear",
-                    "abstract": """
+                            "product_name": "wofs_annual_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_wet"],
+                            },
+                            "styling": {
+                                "default_style": "annual_water_observations",
+                                "styles": [
+                                    style_wofs_summary_wet,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
+                            "name": "wofs_annual_summary_clear",
+                            "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/v2.1.5/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_annual_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_clear"]
-                    },
-                    "styling": {
-                        "default_style": "annual_clear_observations",
-                        "styles": [
-                            style_wofs_summary_clear,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Water Summary (WOfS Annual Statistics)",
-                    "name": "wofs_annual_summary_statistics",
-                    "abstract": """
+                            "product_name": "wofs_annual_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_clear"],
+                            },
+                            "styling": {
+                                "default_style": "annual_clear_observations",
+                                "styles": [
+                                    style_wofs_summary_clear,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Water Summary (WOfS Annual Statistics)",
+                            "name": "wofs_annual_summary_statistics",
+                            "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
@@ -6135,31 +4349,31 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_annual_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["frequency"]
-                    },
-                    "styling": {
-                        "default_style": "annual_WOfS_frequency",
-                        "styles": [
-                            style_annual_wofs_summary_frequency,
-                            style_annual_wofs_summary_frequency_blue,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Wet Count (WOfS April - October Statistics)",
-                    "name": "wofs_apr_oct_summary_wet",
-                    "abstract": """
+                            "product_name": "wofs_annual_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["frequency"],
+                            },
+                            "styling": {
+                                "default_style": "annual_WOfS_frequency",
+                                "styles": [
+                                    style_annual_wofs_summary_frequency,
+                                    style_annual_wofs_summary_frequency_blue,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Wet Count (WOfS April - October Statistics)",
+                            "name": "wofs_apr_oct_summary_wet",
+                            "abstract": """
 Water Observations from Space - April to October Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
@@ -6169,83 +4383,83 @@ This layer contains Water Summary: what percentage of clear observations were de
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_apr_oct_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_wet"]
-                    },
-                    "styling": {
-                        "default_style": "seasonal_water_observations",
-                        "styles": [
-                            style_wofs_seasonal_wet,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Clear Count (WOfS April - October Summary Statistics)",
-                    "name": "wofs_apr_oct_summary_clear",
-                    "abstract": """
+                            "product_name": "wofs_apr_oct_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_wet"],
+                            },
+                            "styling": {
+                                "default_style": "seasonal_water_observations",
+                                "styles": [
+                                    style_wofs_seasonal_wet,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Clear Count (WOfS April - October Summary Statistics)",
+                            "name": "wofs_apr_oct_summary_clear",
+                            "abstract": """
 Water Observations from Space - April to October Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_apr_oct_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_clear"]
-                    },
-                    "styling": {
-                        "default_style": "seasonal_clear_observations",
-                        "styles": [
-                            style_wofs_seasonal_clear,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Water Summary (WOfS April - October Statistics)",
-                    "name": "wofs_apr_oct_summary_statistics",
-                    "abstract": """
+                            "product_name": "wofs_apr_oct_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_clear"],
+                            },
+                            "styling": {
+                                "default_style": "seasonal_clear_observations",
+                                "styles": [
+                                    style_wofs_seasonal_clear,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Water Summary (WOfS April - October Statistics)",
+                            "name": "wofs_apr_oct_summary_statistics",
+                            "abstract": """
 	Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_apr_oct_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["frequency"]
-                    },
-                    "styling": {
-                        "default_style": "seasonal_WOfS_frequency",
-                        "styles": [
-                            style_seasonal_wofs_summary_frequency,
-                            style_seasonal_wofs_summary_frequency_blue,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Wet Count (WOfS November - March Statistics)	",
-                    "name": "wofs_nov_mar_summary_wet",
-                    "abstract": """
+                            "product_name": "wofs_apr_oct_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["frequency"],
+                            },
+                            "styling": {
+                                "default_style": "seasonal_WOfS_frequency",
+                                "styles": [
+                                    style_seasonal_wofs_summary_frequency,
+                                    style_seasonal_wofs_summary_frequency_blue,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Wet Count (WOfS November - March Statistics)	",
+                            "name": "wofs_nov_mar_summary_wet",
+                            "abstract": """
 Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
@@ -6255,83 +4469,83 @@ This layer contains Water Summary: what percentage of clear observations were de
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_nov_mar_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_wet"]
-                    },
-                    "styling": {
-                        "default_style": "seasonal_water_observations",
-                        "styles": [
-                            style_wofs_seasonal_wet,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Clear Count (WOfS November - March Summary Statistics)",
-                    "name": "wofs_nov_mar_summary_clear",
-                    "abstract": """
+                            "product_name": "wofs_nov_mar_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_wet"],
+                            },
+                            "styling": {
+                                "default_style": "seasonal_water_observations",
+                                "styles": [
+                                    style_wofs_seasonal_wet,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Clear Count (WOfS November - March Summary Statistics)",
+                            "name": "wofs_nov_mar_summary_clear",
+                            "abstract": """
 	Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_nov_mar_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["count_clear"]
-                    },
-                    "styling": {
-                        "default_style": "seasonal_clear_observations",
-                        "styles": [
-                            style_wofs_seasonal_clear,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m Water Summary (WOfS November - March Statistics)",
-                    "name": "wofs_nov_mar_summary_statistics",
-                    "abstract": """
+                            "product_name": "wofs_nov_mar_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["count_clear"],
+                            },
+                            "styling": {
+                                "default_style": "seasonal_clear_observations",
+                                "styles": [
+                                    style_wofs_seasonal_clear,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m Water Summary (WOfS November - March Statistics)",
+                            "name": "wofs_nov_mar_summary_statistics",
+                            "abstract": """
 Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_nov_mar_summary",
-                    "bands": bands_wofs_sum,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["frequency"]
-                    },
-                    "styling": {
-                        "default_style": "seasonal_WOfS_frequency",
-                        "styles": [
-                            style_seasonal_wofs_summary_frequency,
-                            style_seasonal_wofs_summary_frequency_blue,
-                        ]
-                    }
-                },
-                {
-                    "title": "Water Observations from Space 25m albers (WOfS Daily Observations)",
-                    "name": "wofs_albers",
-                    "abstract": """
+                            "product_name": "wofs_nov_mar_summary",
+                            "bands": bands_wofs_sum,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["frequency"],
+                            },
+                            "styling": {
+                                "default_style": "seasonal_WOfS_frequency",
+                                "styles": [
+                                    style_seasonal_wofs_summary_frequency,
+                                    style_seasonal_wofs_summary_frequency_blue,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Water Observations from Space 25m albers (WOfS Daily Observations)",
+                            "name": "wofs_albers",
+                            "abstract": """
 Water Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.
 
 The WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.
@@ -6340,34 +4554,31 @@ Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relati
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "wofs_albers",
-                    "bands": bands_wofs_obs,
-                    "resource_limits": reslim_wofs_obs,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [25, -25],
-                        "default_bands": ["water"]
-                    },
-                    "styling": {
-                        "default_style": "observations",
-                        "styles": [
-                            style_wofs_obs,
-                            style_wofs_obs_wet_only
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Near Real-Time",
-            "abstract": """
+                            "product_name": "wofs_albers",
+                            "bands": bands_wofs_obs,
+                            "resource_limits": reslim_wofs_obs,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["water"],
+                            },
+                            "styling": {
+                                "default_style": "observations",
+                                "styles": [style_wofs_obs, style_wofs_obs_wet_only],
+                            },
+                        },
+                    ],
+                },
+                {
+                    "title": "Near Real-Time",
+                    "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data.
 
 The Near Real-Time capability provides analysis-ready data that is processed on receipt using
@@ -6375,11 +4586,11 @@ the best-available ancillary information at the time to provide atmospheric corr
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
 """,
-            "layers": [
-                {
-                    "name": "s2_nrt_granule_nbar_t",
-                    "title": "Near Real-Time Surface Reflectance (Sentinel 2 (A and B combined))",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "name": "s2_nrt_granule_nbar_t",
+                            "title": "Near Real-Time Surface Reflectance (Sentinel 2 (A and B combined))",
+                            "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
@@ -6393,39 +4604,53 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "multi_product": True,
-                    "product_names": [ "s2a_nrt_granule", "s2b_nrt_granule" ],
-                    "bands": bands_sentinel2,
-                    "resource_limits": reslim_s2,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2, style_s2_nbr
-                        ]
-                    }
-                },
-                {
-                    "name": "s2b_nrt_granule_nbar_t",
-                    "title": "Near Real-Time Surface Reflectance (Sentinel 2B)",
-                    "abstract": """
+                            "multi_product": True,
+                            "product_names": ["s2a_nrt_granule", "s2b_nrt_granule"],
+                            "bands": bands_sentinel2,
+                            "resource_limits": reslim_s2,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                    style_s2_nbr,
+                                ],
+                            },
+                        },
+                        {
+                            "name": "s2b_nrt_granule_nbar_t",
+                            "title": "Near Real-Time Surface Reflectance (Sentinel 2B)",
+                            "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
@@ -6439,38 +4664,51 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2b_nrt_granule",
-                    "bands": bands_sentinel2,
-                    "resource_limits": reslim_s2,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2,
-                        ]
-                    }
-                },
-                {
-                    "name": "s2a_nrt_granule_nbar_t",
-                    "title": "Near Real-Time Surface Reflectance (Sentinel 2A)",
-                    "abstract": """
+                            "product_name": "s2b_nrt_granule",
+                            "bands": bands_sentinel2,
+                            "resource_limits": reslim_s2,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                ],
+                            },
+                        },
+                        {
+                            "name": "s2a_nrt_granule_nbar_t",
+                            "title": "Near Real-Time Surface Reflectance (Sentinel 2A)",
+                            "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
@@ -6484,69 +4722,83 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2a_nrt_granule",
-                    "bands": bands_sentinel2,
-                    "resource_limits": reslim_s2,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2, style_s2_nbr
-                        ]
-                    }
+                            "product_name": "s2a_nrt_granule",
+                            "bands": bands_sentinel2,
+                            "resource_limits": reslim_s2,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                    style_s2_nbr,
+                                ],
+                            },
+                        },
+                        {
+                            "name": "s2_nrt_wofs",
+                            "title": "	Near Real-Time Water Classifier (Sentinel 2 WOfS NRT)",
+                            "abstract": """	Sentinel 2 NRT Water Classifier. For service status information, see https://status.dea.ga.gov.au
+""",
+                            "product_name": "sentinel2_wofs_nrt",
+                            "bands": bands_wofs_obs,
+                            "resource_limits": reslim_wofs,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": ["water"],
+                            },
+                            "styling": {
+                                "default_style": "water_classifier",
+                                "styles": [style_s2_water_classifier],
+                            },
+                        },
+                    ],
                 },
                 {
-                    "name": "s2_nrt_wofs",
-                    "title": "	Near Real-Time Water Classifier (Sentinel 2 WOfS NRT)",
-                    "abstract": """	Sentinel 2 NRT Water Classifier. For service status information, see https://status.dea.ga.gov.au
-""",
-                    "product_name": "sentinel2_wofs_nrt",
-                    "bands": bands_wofs_obs,
-                    "resource_limits": reslim_wofs,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "water" ]
-                    },
-                    "styling": {
-                        "default_style": "water_classifier",
-                        "styles": [ style_s2_water_classifier ],
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Sentinel Definitive",
-            "abstract": """
+                    "title": "Sentinel Definitive",
+                    "abstract": """
 	This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variationscaused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
 """,
-            "layers": [
-                {
-                    "name": "s2_ard_granule_nbar_t",
-                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2 (A and B combined))",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "name": "s2_ard_granule_nbar_t",
+                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2 (A and B combined))",
+                            "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
 The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
 
@@ -6561,113 +4813,155 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/129684
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "multi_product": True,
-                    "product_names": [ "s2a_ard_granule", "s2b_ard_granule" ],
-                    "bands": bands_sentinel2,
-                    "resource_limits": reslim_s2_ard,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2, style_s2_nbr
-                        ]
-                    }
-                },
-                {
-                    "name": "s2b_ard_granule_nbar_t",
-                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
-                    "abstract": """
+                            "multi_product": True,
+                            "product_names": ["s2a_ard_granule", "s2b_ard_granule"],
+                            "bands": bands_sentinel2,
+                            "resource_limits": reslim_s2_ard,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                    style_s2_nbr,
+                                ],
+                            },
+                        },
+                        {
+                            "name": "s2b_ard_granule_nbar_t",
+                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
+                            "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2b_ard_granule",
-                    "bands": bands_sentinel2,
-                    "resource_limits": reslim_s2_ard,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2, style_s2_nbr
-                        ]
-                    }
-                },
-                {
-                    "name": "s2a_ard_granule_nbar_t",
-                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
-                    "abstract": """
+                            "product_name": "s2b_ard_granule",
+                            "bands": bands_sentinel2,
+                            "resource_limits": reslim_s2_ard,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                    style_s2_nbr,
+                                ],
+                            },
+                        },
+                        {
+                            "name": "s2a_ard_granule_nbar_t",
+                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
+                            "abstract": """
 	This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "s2a_ard_granule",
-                    "bands": bands_sentinel2,
-                    "resource_limits": reslim_s2_ard,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbart_red", "nbart_green", "nbart_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2, style_s2_nbr
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Multi-Scale Topographic Position",
-            "abstract": "",
-            "layers": [
+                            "product_name": "s2a_ard_granule",
+                            "bands": bands_sentinel2,
+                            "resource_limits": reslim_s2_ard,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                    style_s2_nbr,
+                                ],
+                            },
+                        },
+                    ],
+                },
                 {
-                    "title": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
-                    "name": "multi_scale_topographic_position",
-                    "abstract": """
+                    "title": "Multi-Scale Topographic Position",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
+                            "name": "multi_scale_topographic_position",
+                            "abstract": """
 A Multi-scale topographic position image of Australia has been generated by combining
 a topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures
 the topographic slope position of landforms. Ruggedness informs on the roughness of the surface and
@@ -6685,39 +4979,42 @@ H.A.J. 2015. An integral image approach to performing multi-scale topographic po
 Geomorphology 245, 51–61.
 
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "multi_scale_topographic_position",
-                    "bands": bands_multi_topog,
-                    "resource_limits": reslim_weathering,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:4326",
-                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
-                        "default_bands": [ "regional", "intermediate", "local" ]
-                    },
-                    "legend": {
-                        "url": "https://data.dea.ga.gov.au/multi-scale-topographic-position/mstp_legend.png",
-                    },
-                    "styling": {
-                        "default_style": "mstp_rgb",
-                        "styles": [
-                            style_mstp_rgb,
-                        ]
-                    }
+                            "product_name": "multi_scale_topographic_position",
+                            "bands": bands_multi_topog,
+                            "resource_limits": reslim_weathering,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:4326",
+                                "native_resolution": [
+                                    0.000833333333347,
+                                    -0.000833333333347,
+                                ],
+                                "default_bands": ["regional", "intermediate", "local"],
+                            },
+                            "legend": {
+                                "url": "https://data.dea.ga.gov.au/multi-scale-topographic-position/mstp_legend.png",
+                            },
+                            "styling": {
+                                "default_style": "mstp_rgb",
+                                "styles": [
+                                    style_mstp_rgb,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Weathering Intensity",
-            "abstract": "",
-            "layers": [
                 {
-                    "title": "Weathering Intensity 1 degree tile (Weathering Intensity)",
-                    "name": "weathering_intensity",
-                    "abstract": """
+                    "title": "Weathering Intensity",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Weathering Intensity 1 degree tile (Weathering Intensity)",
+                            "name": "weathering_intensity",
+                            "abstract": """
     Weathering intensity or the degree of weathering is an important characteristic of the
     earth’s surface that has a significant influence on the chemical and physical properties
     of surface materials. Weathering intensity largely controls the degree to which primary
@@ -6746,36 +5043,39 @@ For service status information, see https://status.dea.ga.gov.au""",
     attributes of soils in agricultural landscapes and in understanding the nature and
     distribution of weathering processes occurring within the upper regolith.
     For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "weathering_intensity",
-                    "bands": bands_weathering,
-                    "resource_limits": reslim_multi_topog,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:4326",
-                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
-                        "default_bands": [ "intensity" ]
-                    },
-                    "styling": {
-                        "default_style": "wii",
-                        "styles": [
-                            style_wii,
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Fractional Cover Percentiles - Green Vegetation",
-            "abstract": "",
-            "layers": [
+                            "product_name": "weathering_intensity",
+                            "bands": bands_weathering,
+                            "resource_limits": reslim_multi_topog,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:4326",
+                                "native_resolution": [
+                                    0.000833333333347,
+                                    -0.000833333333347,
+                                ],
+                                "default_bands": ["intensity"],
+                            },
+                            "styling": {
+                                "default_style": "wii",
+                                "styles": [
+                                    style_wii,
+                                ],
+                            },
+                        }
+                    ],
+                },
                 {
-                    "title": "Fractional Cover Percentiles - Green Vegetation 25m 100km tile (Fractional Cover Percentiles - Green Vegetation)",
-                    "name": "fcp_green_veg",
-                    "abstract": """
+                    "title": "Fractional Cover Percentiles - Green Vegetation",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Fractional Cover Percentiles - Green Vegetation 25m 100km tile (Fractional Cover Percentiles - Green Vegetation)",
+                            "name": "fcp_green_veg",
+                            "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -6784,42 +5084,44 @@ This contains the percentage of green vegetation per pixel at the 10th, 50th (me
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
 
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "fc_percentile_albers_annual",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "green_veg_10",
-                        "styles": [
-                            style_fc_gv_10, style_fc_gv_50, style_fc_gv_90,
-                        ]
-                    }
+                            "product_name": "fc_percentile_albers_annual",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "green_veg_10",
+                                "styles": [
+                                    style_fc_gv_10,
+                                    style_fc_gv_50,
+                                    style_fc_gv_90,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Fractional Cover Percentiles - Non Green Vegetation",
-            "abstract": "",
-            "layers": [
                 {
-                    "title": "Fractional Cover Percentiles - Non Green Vegetation 25m 100km tile (Fractional Cover Percentiles - Non Green Vegetation)",
-                    "name": "fcp_non_green_veg",
-                    "abstract": """
+                    "title": "Fractional Cover Percentiles - Non Green Vegetation",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Fractional Cover Percentiles - Non Green Vegetation 25m 100km tile (Fractional Cover Percentiles - Non Green Vegetation)",
+                            "name": "fcp_non_green_veg",
+                            "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -6828,79 +5130,83 @@ This contains the percentage of non-green vegetation per pixel at the 10th, 50th
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
 
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "fc_percentile_albers_annual",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "non_green_veg_10",
-                        "styles": [
-                            style_fc_ngv_10, style_fc_ngv_50, style_fc_ngv_90,
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Fractional Cover Percentiles - Bare Soil",
-            "abstract": "",
-            "layers": [
+                            "product_name": "fc_percentile_albers_annual",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "non_green_veg_10",
+                                "styles": [
+                                    style_fc_ngv_10,
+                                    style_fc_ngv_50,
+                                    style_fc_ngv_90,
+                                ],
+                            },
+                        }
+                    ],
+                },
                 {
-                    "title": "Fractional Cover Percentiles - Bare Soil 25m 100km tile (Fractional Cover Percentiles - Bare Soil)",
-                    "name": "fcp_bare_ground",
-                    "abstract": """
+                    "title": "Fractional Cover Percentiles - Bare Soil",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Fractional Cover Percentiles - Bare Soil 25m 100km tile (Fractional Cover Percentiles - Bare Soil)",
+                            "name": "fcp_bare_ground",
+                            "abstract": """
 	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover This contains the percentage of bare soil per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year. Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "fc_percentile_albers_annual",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "bare_ground_10",
-                        "styles": [
-                            style_fc_bs_10, style_fc_bs_50, style_fc_bs_90,
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Fractional Cover Percentiles - Median",
-            "abstract": "",
-            "layers": [
+                            "product_name": "fc_percentile_albers_annual",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "bare_ground_10",
+                                "styles": [
+                                    style_fc_bs_10,
+                                    style_fc_bs_50,
+                                    style_fc_bs_90,
+                                ],
+                            },
+                        }
+                    ],
+                },
                 {
-                    "title": "Fractional Cover Percentiles - Median 25m 100km tile (Fractional Cover Percentiles - Median)",
-                    "name": "fcp_rgb",
-                    "abstract": """
+                    "title": "Fractional Cover Percentiles - Median",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Fractional Cover Percentiles - Median 25m 100km tile (Fractional Cover Percentiles - Median)",
+                            "name": "fcp_rgb",
+                            "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program.
@@ -6910,42 +5216,40 @@ This contains a three band combination of the 50th Percentile for green vegetati
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
 
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "fc_percentile_albers_annual",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_fc_simple_rgb
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Fractional Cover Percentiles Seasonal",
-            "abstract": "",
-            "layers": [
+                            "product_name": "fc_percentile_albers_annual",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [style_fc_simple_rgb],
+                            },
+                        }
+                    ],
+                },
                 {
-                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Green Vegetation)",
-                    "name": "fcp_seasonal_green_veg",
-                    "abstract": """
+                    "title": "Fractional Cover Percentiles Seasonal",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Green Vegetation)",
+                            "name": "fcp_seasonal_green_veg",
+                            "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -6955,36 +5259,42 @@ Fractional Cover products use Water Observations from Space (WOfS) to mask out a
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "fc_percentile_albers_seasonal",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "green_veg_10",
-                        "styles": [
-                            style_fc_gv_10, style_fc_gv_50, style_fc_gv_90,
-                        ]
-                    }
-                },
-                {
-                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Non Green Vegetation)",
-                    "name": "fcp_seasonal_non_green_veg",
-                    "abstract": """
+                            "product_name": "fc_percentile_albers_seasonal",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": [
+                                    "NPV_PC_10",
+                                    "NPV_PC_50",
+                                    "NPV_PC_90",
+                                ],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "green_veg_10",
+                                "styles": [
+                                    style_fc_gv_10,
+                                    style_fc_gv_50,
+                                    style_fc_gv_90,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Non Green Vegetation)",
+                            "name": "fcp_seasonal_non_green_veg",
+                            "abstract": """
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -6994,106 +5304,112 @@ Fractional Cover products use Water Observations from Space (WOfS) to mask out a
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "fc_percentile_albers_seasonal",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "non_green_veg_10",
-                        "styles": [
-                            style_fc_ngv_10, style_fc_ngv_50, style_fc_ngv_90,
-                        ]
-                    }
-                },
-                {
-                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Bare Soil)",
-                    "name": "fcp_seasonal_bare_ground",
-                    "abstract": """
+                            "product_name": "fc_percentile_albers_seasonal",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": [
+                                    "NPV_PC_10",
+                                    "NPV_PC_50",
+                                    "NPV_PC_90",
+                                ],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "non_green_veg_10",
+                                "styles": [
+                                    style_fc_ngv_10,
+                                    style_fc_ngv_50,
+                                    style_fc_ngv_90,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Bare Soil)",
+                            "name": "fcp_seasonal_bare_ground",
+                            "abstract": """
 	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "fc_percentile_albers_seasonal",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "bare_ground_10",
-                        "styles": [
-                            style_fc_bs_10, style_fc_bs_50, style_fc_bs_90,
-                        ]
-                    }
-                },
-                {
-                    "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Median)",
-                    "name": "fcp_seasonal_rgb",
-                    "abstract": """
+                            "product_name": "fc_percentile_albers_seasonal",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "bare_ground_10",
+                                "styles": [
+                                    style_fc_bs_10,
+                                    style_fc_bs_50,
+                                    style_fc_bs_90,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Median)",
+                            "name": "fcp_seasonal_rgb",
+                            "abstract": """
 	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program. FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "fc_percentile_albers_seasonal",
-                    "bands": bands_fc_percentile,
-                    "resource_limits": reslim_frac_cover,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_fc_simple_rgb
-                        ]
-                    }
+                            "product_name": "fc_percentile_albers_seasonal",
+                            "bands": bands_fc_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_90"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [style_fc_simple_rgb],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "National Intertidal Digital Elevation Model",
-            "abstract": "",
-            "layers": [
                 {
-                    "name": "NIDEM",
-                    "title": "National Intertidal Digital Elevation Model nidem_v1.0.0 grid (NIDEM 25m)",
-                    "abstract": """
+                    "title": "National Intertidal Digital Elevation Model",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "name": "NIDEM",
+                            "title": "National Intertidal Digital Elevation Model nidem_v1.0.0 grid (NIDEM 25m)",
+                            "abstract": """
 The National Intertidal Digital Elevation Model (NIDEM; Bishop-Taylor et al. 2019) is a continental-scale elevation dataset for Australia's exposed intertidal zone. NIDEM provides the first three-dimensional representation of Australia's intertidal sandy beaches and shores, tidal flats and rocky shores and reefs at 25 m spatial resolution, addressing a key gap between the availability of sub-tidal bathymetry and terrestrial elevation data. NIDEM was generated by combining global tidal modelling with a 30-year time series archive of spatially and spectrally calibrated Landsat satellite data managed within the Digital Earth Australia (DEA) platform. NIDEM complements existing intertidal extent products, and provides data to support a new suite of use cases that require a more detailed understanding of the three-dimensional topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management and ecological habitat mapping.
 
 *Overview*
@@ -7137,38 +5453,38 @@ While image compositing and masking methods have been applied to remove the majo
  - CMI listing for extended metadata: https://cmi.ga.gov.au/pd/NIDEM_25_1.0.0
 
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "nidem",
-                    "bands": bands_nidem,
-                    "time_resolution": "year",
-                    "resource_limits": reslim_nidem,
-                    "flags": {
-                        "band": "land",
-                        "product": "geodata_coast_100k",
-                        "ignore_time": True,
-                        "ignore_info_flags": [],
-                    },
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["nidem"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "NIDEM",
-                        "styles": [
-                            style_nidem,
-                        ]
-                    }
+                            "product_name": "nidem",
+                            "bands": bands_nidem,
+                            "time_resolution": "year",
+                            "resource_limits": reslim_nidem,
+                            "flags": {
+                                "band": "land",
+                                "product": "geodata_coast_100k",
+                                "ignore_time": True,
+                                "ignore_info_flags": [],
+                            },
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["nidem"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "NIDEM",
+                                "styles": [
+                                    style_nidem,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "High Tide Low Tide Composite",
-            "abstract": """
+                {
+                    "title": "High Tide Low Tide Composite",
+                    "abstract": """
 The High and Low Tide Composites product is composed of two surface reflectance composite mosaics
 of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8)
 surface reflectance data (Li et al., 2012). These products have been produced using
@@ -7182,11 +5498,11 @@ free composite to be generated. The concepts of the Observed Tidal Range (OTR),
 and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al.
 (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016).
             """,
-            "layers": [
-                {
-                    "name": "high_tide_composite",
-                    "title": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
-                    "abstract":"""
+                    "layers": [
+                        {
+                            "name": "high_tide_composite",
+                            "title": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
+                            "abstract": """
 High Tide and Low Tide Composites 2.0.0
 
 The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA).
@@ -7210,30 +5526,29 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "high_tide_comp_20p",
-                    "bands": bands_ls,
-                    "time_resolution": "year",
-                    "resource_limits": reslim_landsat,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": tide_style_list
-                    }
-
-                },
-                {
-                    "name": "low_tide_composite",
-                    "title": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
-                    "abstract":"""
+                            "product_name": "high_tide_comp_20p",
+                            "bands": bands_ls,
+                            "time_resolution": "year",
+                            "resource_limits": reslim_landsat,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["red", "green", "blue"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": tide_style_list,
+                            },
+                        },
+                        {
+                            "name": "low_tide_composite",
+                            "title": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
+                            "abstract": """
 High Tide and Low Tide Composites 2.0.0
 
 The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA).
@@ -7257,30 +5572,30 @@ The tide stages were calculated bycomparison to the modeled tide data for 15 min
 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "low_tide_comp_20p",
-                    "time_resolution": "year",
-                    "bands": bands_ls,
-                    "resource_limits": reslim_landsat,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": tide_style_list
-                    }
+                            "product_name": "low_tide_comp_20p",
+                            "time_resolution": "year",
+                            "bands": bands_ls,
+                            "resource_limits": reslim_landsat,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["red", "green", "blue"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": tide_style_list,
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Intertidal Extents Model",
-            "abstract": """
+                {
+                    "title": "Intertidal Extents Model",
+                    "abstract": """
 The Intertidal Extents Model (ITEM) product is a national dataset of the exposed intertidal zone;
 the land between the observed highest and lowest tide. ITEM provides the extent and topography of
 the intertidal zone of Australia's coastline (excluding off-shore Territories).
@@ -7288,11 +5603,11 @@ This information was collated using observations in the Landsat archive since 19
 ITEM can be a valuable complimentary dataset to both onshore LiDAR survey data and coarser offshore
 bathymetry data, enabling a more realistic representation of the land and ocean interface.
 """,
-            "layers": [
-                {
-                    "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
-                    "name": "ITEM_V2.0.0",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
+                            "name": "ITEM_V2.0.0",
+                            "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
 delineating exposed areas at differing tidal heights and stages.
 
@@ -7335,31 +5650,31 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "item_v2",
-                    "time_resolution": "year",
-                    "bands": bands_item,
-                    "resource_limits": reslim_item,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["relative"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "relative_layer",
-                        "styles": [
-                            style_item_relative,
-                        ]
-                    }
-                },
-                {
-                    "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
-                    "name": "ITEM_V2.0.0_Conf",
-                    "abstract": """
+                            "product_name": "item_v2",
+                            "time_resolution": "year",
+                            "bands": bands_item,
+                            "resource_limits": reslim_item,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["relative"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "relative_layer",
+                                "styles": [
+                                    style_item_relative,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
+                            "name": "ITEM_V2.0.0_Conf",
+                            "abstract": """
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
 delineating exposed areas at differing tidal heights and stages.
 
@@ -7402,111 +5717,109 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "item_v2_conf",
-                    "bands": bands_item_conf,
-                    "resource_limits": reslim_item,
-                    "time_resolution": "year",
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": True,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["stddev"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "confidence_layer",
-                        "styles": [
-                            style_item_confidence,
-                        ]
-                    }
+                            "product_name": "item_v2_conf",
+                            "bands": bands_item_conf,
+                            "resource_limits": reslim_item,
+                            "time_resolution": "year",
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
+                                "always_fetch_bands": [],
+                                "manual_merge": True,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["stddev"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "confidence_layer",
+                                "styles": [
+                                    style_item_confidence,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Projects",
-            "abstract": "",
-            "layers": [
                 {
-                    "title": "Projects munged historical airborne photography (HAP)",
-                    "name": "historical_airborne_photography",
-                    "abstract": "Historical Airborne Photography",
-                    "product_name": "historical_airborne_photography",
-                    "bands": bands_hap,
-                    "resource_limits": reslim_hap,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 1.0, 1.0 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_gray",
-                        "styles": [
-                            style_hap_simple_gray,
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Digital Earth Australia Waterbodies",
-            "abstract": """Digital Earth Australia Waterbodies""",
-            "layers": [
+                    "title": "Projects",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "Projects munged historical airborne photography (HAP)",
+                            "name": "historical_airborne_photography",
+                            "abstract": "Historical Airborne Photography",
+                            "product_name": "historical_airborne_photography",
+                            "bands": bands_hap,
+                            "resource_limits": reslim_hap,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [1.0, 1.0],
+                            },
+                            "styling": {
+                                "default_style": "simple_gray",
+                                "styles": [
+                                    style_hap_simple_gray,
+                                ],
+                            },
+                        }
+                    ],
+                },
                 {
-                    "title": "Digital Earth Australia Waterbodies 25m (Digital Earth Australia Waterbodies)",
-                    "name": "waterbody_area",
-                    "abstract": """Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
+                    "title": "Digital Earth Australia Waterbodies",
+                    "abstract": """Digital Earth Australia Waterbodies""",
+                    "layers": [
+                        {
+                            "title": "Digital Earth Australia Waterbodies 25m (Digital Earth Australia Waterbodies)",
+                            "name": "waterbody_area",
+                            "abstract": """Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
 The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
 The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying).
 The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
 For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
 For service status information, see https://status.dea.ga.gov.au""",
-                    "product_name": "water_bodies",
-                    "bands": bands_wamm,
-                    "resource_limits": reslim_waterbody,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": ["dam_id"],
-                        "manual_merge": False,
-                        "kwargs": {
-                             "val": 8388607
-                        }
-                    },
-                    "feature_info": {
-                        "include_custom": {
-                            "timeseries": {
-                                "function" : "datacube_ows.ogc_utils.feature_info_url_template",
-                                "pass_product_cfg": False,
-                                "kwargs" : {
-                                    "template": "https://data.dea.ga.gov.au/projects/WaterBodies/feature_info/{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
+                            "product_name": "water_bodies",
+                            "bands": bands_wamm,
+                            "resource_limits": reslim_waterbody,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": ["dam_id"],
+                                "manual_merge": False,
+                                "kwargs": {"val": 8388607},
+                            },
+                            "feature_info": {
+                                "include_custom": {
+                                    "timeseries": {
+                                        "function": "datacube_ows.ogc_utils.feature_info_url_template",
+                                        "pass_product_cfg": False,
+                                        "kwargs": {
+                                            "template": "https://data.dea.ga.gov.au/projects/WaterBodies/feature_info/{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
+                                        },
+                                    }
                                 }
-                            }
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["dam_id"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "dam_id",
+                                "styles": [
+                                    style_wamm_dam_id,
+                                ],
+                            },
                         }
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["dam_id"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "dam_id",
-                        "styles": [
-                            style_wamm_dam_id,
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "ASTER Geoscience Map of Australia",
-            "abstract": """
+                    ],
+                },
+                {
+                    "title": "ASTER Geoscience Map of Australia",
+                    "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 The individual geoscience products are a combination of bands and band ratios to highlight different mineral groups and parameters including:
@@ -7532,11 +5845,11 @@ The individual geoscience products are a combination of bands and band ratios to
 
 For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
 """,
-            "layers": [
-                {
-                    "title": "ASTER Geoscience Map of Australia (False Colour Mosaic)",
-                    "name": "aster_false_colour",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "title": "ASTER Geoscience Map of Australia (False Colour Mosaic)",
+                            "name": "aster_false_colour",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7561,31 +5874,31 @@ For 'False Colour Mosaic' dataset information, see the dataset record: http://pi
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_false_colour",
-                    "bands": bands_aster,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1", "Band_2", "Band_3"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "false_colour",
-                        "styles": [
-                            style_aster_false_colour,
-                            style_aster_b2_gray,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Regolith Ratios)",
-                    "name": "aster_regolith_ratios",
-                    "abstract": """
+                            "product_name": "aster_false_colour",
+                            "bands": bands_aster,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1", "Band_2", "Band_3"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "false_colour",
+                                "styles": [
+                                    style_aster_false_colour,
+                                    style_aster_b2_gray,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Regolith Ratios)",
+                            "name": "aster_regolith_ratios",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7614,30 +5927,30 @@ For 'Regolith Ratios' dataset information, see the dataset record: http://pid.ge
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_regolith_ratios",
-                    "bands": bands_aster,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1", "Band_2", "Band_3"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_aster_simple_rgb,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (AlOH Group Composition)",
-                    "name": "aster_aloh_group_composition",
-                    "abstract": """
+                            "product_name": "aster_regolith_ratios",
+                            "bands": bands_aster,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1", "Band_2", "Band_3"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_aster_simple_rgb,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (AlOH Group Composition)",
+                            "name": "aster_aloh_group_composition",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7668,30 +5981,30 @@ For 'AlOH Group Composition' dataset information, see the dataset record: http:/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_aloh_group_composition",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_aloh_comp_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (AlOH Group Content)",
-                    "name": "aster_aloh_group_content",
-                    "abstract": """
+                            "product_name": "aster_aloh_group_composition",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_aloh_comp_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (AlOH Group Content)",
+                            "name": "aster_aloh_group_content",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7730,30 +6043,30 @@ For 'AlOH Group Content' dataset information, see the dataset record: http://pid
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_aloh_group_content",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_aloh_cont_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (FeOH Group Content)",
-                    "name": "aster_feoh_group_content",
-                    "abstract": """
+                            "product_name": "aster_aloh_group_content",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_aloh_cont_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (FeOH Group Content)",
+                            "name": "aster_feoh_group_content",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7786,30 +6099,30 @@ For 'FeOH Group Content' dataset information, see the dataset record: http://pid
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_feoh_group_content",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_feoh_cont_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Ferric Oxide Composition)",
-                    "name": "aster_ferric_oxide_composition",
-                    "abstract": """
+                            "product_name": "aster_feoh_group_content",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_feoh_cont_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Ferric Oxide Composition)",
+                            "name": "aster_ferric_oxide_composition",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7835,30 +6148,30 @@ For 'Ferric Oxide Composition' dataset information, see the dataset record: http
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_ferric_oxide_composition",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_ferrox_comp_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Ferric Oxide Content)",
-                    "name": "aster_ferric_oxide_content",
-                    "abstract": """
+                            "product_name": "aster_ferric_oxide_composition",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_ferrox_comp_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Ferric Oxide Content)",
+                            "name": "aster_ferric_oxide_content",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7891,30 +6204,30 @@ For 'Ferric Oxide Content' dataset information, see the dataset record: http://p
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_ferric_oxide_content",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_ferrox_cont_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Ferrous Iron Content in MgOH/Carbonate)",
-                    "name": "aster_ferrous_iron_content_in_mgoh",
-                    "abstract": """
+                            "product_name": "aster_ferric_oxide_content",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_ferrox_cont_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Ferrous Iron Content in MgOH/Carbonate)",
+                            "name": "aster_ferrous_iron_content_in_mgoh",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7945,30 +6258,30 @@ For 'Ferrous Iron Content in MgOH/Carbonate' dataset information, see the datase
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_ferrous_iron_content_in_mgoh",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_ferrous_mgoh_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Ferrous Iron Index)",
-                    "name": "aster_ferrous_iron_index",
-                    "abstract": """
+                            "product_name": "aster_ferrous_iron_content_in_mgoh",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_ferrous_mgoh_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Ferrous Iron Index)",
+                            "name": "aster_ferrous_iron_index",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -7993,30 +6306,30 @@ For 'Ferrous Iron Index' dataset information, see the dataset record: http://pid
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_ferrous_iron_index",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_ferrous_idx_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Green Vegetation Content)",
-                    "name": "aster_green_vegetation",
-                    "abstract": """
+                            "product_name": "aster_ferrous_iron_index",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_ferrous_idx_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Green Vegetation Content)",
+                            "name": "aster_green_vegetation",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8037,30 +6350,30 @@ For 'Green Vegetation Content' dataset information, see the dataset record: http
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_green_vegetation",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_green_veg_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Gypsum Index)",
-                    "name": "aster_gypsum_index",
-                    "abstract": """
+                            "product_name": "aster_green_vegetation",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_green_veg_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Gypsum Index)",
+                            "name": "aster_gypsum_index",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8085,30 +6398,30 @@ Useful for mapping:
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_gypsum_index",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_gypsum_idx_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Kaolin Group Index)",
-                    "name": "aster_kaolin_group_index",
-                    "abstract": """
+                            "product_name": "aster_gypsum_index",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_gypsum_idx_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Kaolin Group Index)",
+                            "name": "aster_kaolin_group_index",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8137,30 +6450,30 @@ For 'Kaolin Group Index' dataset information, see the dataset record: http://pid
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_kaolin_group_index",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_kaolin_idx_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (MgOH Group Composition)",
-                    "name": "aster_mgoh_group_composition",
-                    "abstract": """
+                            "product_name": "aster_kaolin_group_index",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_kaolin_idx_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (MgOH Group Composition)",
+                            "name": "aster_mgoh_group_composition",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8190,30 +6503,30 @@ For 'MgOH Group Composition' dataset information, see the dataset record: http:/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_mgoh_group_composition",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_mgoh_comp_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (MgOH Group Content)",
-                    "name": "aster_mgoh_group_content",
-                    "abstract": """
+                            "product_name": "aster_mgoh_group_composition",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_mgoh_comp_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (MgOH Group Content)",
+                            "name": "aster_mgoh_group_content",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8244,30 +6557,30 @@ For 'MgOH Group Content' dataset information, see the dataset record: http://pid
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_mgoh_group_content",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_mgoh_cont_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (Opaque Index)",
-                    "name": "aster_opaque_index",
-                    "abstract": """
+                            "product_name": "aster_mgoh_group_content",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_mgoh_cont_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (Opaque Index)",
+                            "name": "aster_opaque_index",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8302,30 +6615,30 @@ For 'Opaque Index' dataset information, see the dataset record: http://pid.geosc
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_opaque_index",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_opaque_idx_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (TIR Silica index)",
-                    "name": "aster_silica_index",
-                    "abstract": """
+                            "product_name": "aster_opaque_index",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_opaque_idx_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (TIR Silica index)",
+                            "name": "aster_silica_index",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8362,30 +6675,30 @@ For 'TIR Silica index' dataset information, see the dataset record: http://pid.g
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_silica_index",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_silica_idx_ramp,
-                        ]
-                    }
-                },
-                {
-                    "title": "ASTER Geoscience Map of Australia (TIR Quartz Index)",
-                    "name": "aster_quartz_index",
-                    "abstract": """
+                            "product_name": "aster_silica_index",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_silica_idx_ramp,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "ASTER Geoscience Map of Australia (TIR Quartz Index)",
+                            "name": "aster_quartz_index",
+                            "abstract": """
 The National ASTER Map of Australia is the parent datafile of a dataset that comprises a set of 14+ geoscience products made up of mosaiced ASTER (Advanced Spaceborne Thermal Emission and Reflection Radiometer) scenes across Australia.
 
 ASTER calibration, processing and standardisation approaches have been produced as part of a large multi-agency project to facilitate uptake of these techniques and make them easily integrated with other datasets in a GIS.
@@ -8408,35 +6721,35 @@ For 'TIR Quartz Index' dataset information, see the dataset record: http://pid.g
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "aster_quartz_index",
-                    "bands": bands_aster_single_band,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["Band_1"],
-                        "native_resolution": [ 15.0, 15.0 ],
-                    },
-                    "styling": {
-                        "default_style": "ramp",
-                        "styles": [
-                            style_aster_quartz_idx_ramp,
-                        ]
-                    }
+                            "product_name": "aster_quartz_index",
+                            "bands": bands_aster_single_band,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["Band_1"],
+                                "native_resolution": [15.0, 15.0],
+                            },
+                            "styling": {
+                                "default_style": "ramp",
+                                "styles": [
+                                    style_aster_quartz_idx_ramp,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Surface Reflectance Triple Median Absolute Deviation",
-            "abstract": "Surface Reflectance Triple Median Absolute Deviation 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)",
-            "layers": [
                 {
-                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
-                    "abstract": """
+                    "title": "Surface Reflectance Triple Median Absolute Deviation",
+                    "abstract": "Surface Reflectance Triple Median Absolute Deviation 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)",
+                    "layers": [
+                        {
+                            "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
+                            "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
 multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
@@ -8448,34 +6761,38 @@ terrain-illumination-corrected surface reflectance data (Analysis Ready Data), c
 median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
 For service status information, see https://status.dea.ga.gov.au""",
-                    # The WMS name for the layer
-                    "name": "ls8_nbart_tmad_annual",
-                    # The Datacube name for the associated data product
-                    "product_name": "ls8_nbart_tmad_annual",
-                    "bands": bands_tmad,
-                    "resource_limits": reslim_tmad,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["sdev", "edev", "bcdev"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "log_sdev",
-                        "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
-                            style_tmad_sdev_new, style_tmad_edev_new, style_tmad_bcdev_new,
-                            style_tmad_rgb,
-                        ]
-                    }
-                },
-                {
-                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 7 Annual Surface Reflectance TMAD)",
-                    "abstract": """
+                            # The WMS name for the layer
+                            "name": "ls8_nbart_tmad_annual",
+                            # The Datacube name for the associated data product
+                            "product_name": "ls8_nbart_tmad_annual",
+                            "bands": bands_tmad,
+                            "resource_limits": reslim_tmad,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["sdev", "edev", "bcdev"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "log_sdev",
+                                "styles": [
+                                    style_tmad_sdev,
+                                    style_tmad_edev,
+                                    style_tmad_bcdev,
+                                    style_tmad_sdev_new,
+                                    style_tmad_edev_new,
+                                    style_tmad_bcdev_new,
+                                    style_tmad_rgb,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 7 Annual Surface Reflectance TMAD)",
+                            "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
 multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
@@ -8487,34 +6804,38 @@ terrain-illumination-corrected surface reflectance data (Analysis Ready Data), c
 median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
 For service status information, see https://status.dea.ga.gov.au""",
-                    # The WMS name for the layer
-                    "name": "ls7_nbart_tmad_annual",
-                    # The Datacube name for the associated data product
-                    "product_name": "ls7_nbart_tmad_annual",
-                    "bands": bands_tmad,
-                    "resource_limits": reslim_tmad,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["sdev", "edev", "bcdev"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "log_sdev",
-                        "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
-                            style_tmad_sdev_new, style_tmad_edev_new, style_tmad_bcdev_new,
-                            style_tmad_rgb,
-                        ]
-                    }
-                },
-                {
-                    "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 5 Annual Surface Reflectance TMAD)",
-                    "abstract": """
+                            # The WMS name for the layer
+                            "name": "ls7_nbart_tmad_annual",
+                            # The Datacube name for the associated data product
+                            "product_name": "ls7_nbart_tmad_annual",
+                            "bands": bands_tmad,
+                            "resource_limits": reslim_tmad,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["sdev", "edev", "bcdev"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "log_sdev",
+                                "styles": [
+                                    style_tmad_sdev,
+                                    style_tmad_edev,
+                                    style_tmad_bcdev,
+                                    style_tmad_sdev_new,
+                                    style_tmad_edev_new,
+                                    style_tmad_bcdev_new,
+                                    style_tmad_rgb,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 5 Annual Surface Reflectance TMAD)",
+                            "abstract": """
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
 multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
@@ -8526,36 +6847,40 @@ terrain-illumination-corrected surface reflectance data (Analysis Ready Data), c
 median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
 For service status information, see https://status.dea.ga.gov.au""",
-                    # The WMS name for the layer
-                    "name": "ls5_nbart_tmad_annual",
-                    # The Datacube name for the associated data product
-                    "product_name": "ls5_nbart_tmad_annual",
-                    "bands": bands_tmad,
-                    "resource_limits": reslim_tmad,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["sdev", "edev", "bcdev"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "log_sdev",
-                        "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
-                            style_tmad_sdev_new, style_tmad_edev_new, style_tmad_bcdev_new,
-                            style_tmad_rgb,
-                        ]
-                    }
+                            # The WMS name for the layer
+                            "name": "ls5_nbart_tmad_annual",
+                            # The Datacube name for the associated data product
+                            "product_name": "ls5_nbart_tmad_annual",
+                            "bands": bands_tmad,
+                            "resource_limits": reslim_tmad,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["sdev", "edev", "bcdev"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "log_sdev",
+                                "styles": [
+                                    style_tmad_sdev,
+                                    style_tmad_edev,
+                                    style_tmad_bcdev,
+                                    style_tmad_sdev_new,
+                                    style_tmad_edev_new,
+                                    style_tmad_bcdev_new,
+                                    style_tmad_rgb,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            "title": "Fractional Cover",
-            "abstract": """
+                {
+                    "title": "Fractional Cover",
+                    "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -8563,11 +6888,11 @@ Fractional Cover products use Water Observations from Space (WOfS) to mask out a
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-            "layers": [
-                {
-                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 5)",
-                    "name": "ls5_fc_albers",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 5)",
+                            "name": "ls5_fc_albers",
+                            "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -8577,37 +6902,37 @@ This product contains Fractional Cover dervied from the Landsat 5 satellite
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "ls5_fc_albers",
-                    "bands": bands_fc,
-                    "resource_limits": reslim_aster,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "flags": {
-                        "band": "water",
-                        "product": "wofs_albers",
-                        "ignore_time": False,
-                        "ignore_info_flags": [],
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_fc",
-                        "styles": [
-                            style_fc_simple,
-                        ]
-                    }
-                },
-                {
-                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 7)",
-                    "name": "ls7_fc_albers",
-                    "abstract": """
+                            "product_name": "ls5_fc_albers",
+                            "bands": bands_fc,
+                            "resource_limits": reslim_aster,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "flags": {
+                                "band": "water",
+                                "product": "wofs_albers",
+                                "ignore_time": False,
+                                "ignore_info_flags": [],
+                                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS", "PV", "NPV"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_fc",
+                                "styles": [
+                                    style_fc_simple,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 7)",
+                            "name": "ls7_fc_albers",
+                            "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -8617,38 +6942,38 @@ This product contains Fractional Cover dervied from the Landsat 7 satellite
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "ls7_fc_albers",
-                    "bands": bands_fc,
-                    "resource_limits": reslim_aster,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "flags": {
-                        "band": "water",
-                        "product": "wofs_albers",
-                        "ignore_time": False,
-                        "ignore_info_flags": [],
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_fc",
-                        "styles": [
-                            style_fc_simple,
-                        ]
-                    }
-                },
-                {
-                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 8)",
-                    "name": "ls8_fc_albers",
-                    "abstract": """
+                            "product_name": "ls7_fc_albers",
+                            "bands": bands_fc,
+                            "resource_limits": reslim_aster,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "flags": {
+                                "band": "water",
+                                "product": "wofs_albers",
+                                "ignore_time": False,
+                                "ignore_info_flags": [],
+                                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS", "PV", "NPV"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_fc",
+                                "styles": [
+                                    style_fc_simple,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 8)",
+                            "name": "ls8_fc_albers",
+                            "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
@@ -8658,78 +6983,86 @@ This product contains Fractional Cover dervied from the Landsat 8 satellite
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "ls8_fc_albers",
-                    "bands": bands_fc,
-                    "resource_limits": reslim_aster,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "flags": {
-                        "band": "water",
-                        "product": "wofs_albers",
-                        "ignore_time": False,
-                        "ignore_info_flags": [],
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_fc",
-                        "styles": [
-                            style_fc_simple,
-                        ]
-                    }
-                },
-                {
-                    "title": "Fractional Cover 25m 100km tile (Fractional Cover Combined)",
-                    "name": "fc_albers_combined",
-                    "abstract": """
+                            "product_name": "ls8_fc_albers",
+                            "bands": bands_fc,
+                            "resource_limits": reslim_aster,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "flags": {
+                                "band": "water",
+                                "product": "wofs_albers",
+                                "ignore_time": False,
+                                "ignore_info_flags": [],
+                                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS", "PV", "NPV"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_fc",
+                                "styles": [
+                                    style_fc_simple,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "Fractional Cover 25m 100km tile (Fractional Cover Combined)",
+                            "name": "fc_albers_combined",
+                            "abstract": """
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites For service status information, see https://status.dea.ga.gov.au
 """,
-                    "multi_product": True,
-                    "product_names": [ "ls5_fc_albers", "ls7_fc_albers", "ls8_fc_albers" ],
-                    "bands": bands_fc,
-                    "resource_limits": reslim_aster,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "flags": {
-                        "band": "water",
-                        "products": ['wofs_albers', 'wofs_albers', 'wofs_albers'],
-                        "ignore_time": False,
-                        "ignore_info_flags": [],
-                        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25, -25 ],
-                    },
-                    "styling": {
-                        "default_style": "simple_fc",
-                        "styles": [
-                            style_fc_simple,
-                        ]
-                    }
+                            "multi_product": True,
+                            "product_names": [
+                                "ls5_fc_albers",
+                                "ls7_fc_albers",
+                                "ls8_fc_albers",
+                            ],
+                            "bands": bands_fc,
+                            "resource_limits": reslim_aster,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "flags": {
+                                "band": "water",
+                                "products": [
+                                    "wofs_albers",
+                                    "wofs_albers",
+                                    "wofs_albers",
+                                ],
+                                "ignore_time": False,
+                                "ignore_info_flags": [],
+                                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["BS", "PV", "NPV"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "simple_fc",
+                                "styles": [
+                                    style_fc_simple,
+                                ],
+                            },
+                        },
+                    ],
                 },
-            ]
-        },
-        {
-            # NOTE: This layer is a folder - it is NOT "named layer" that can be selected in GetMap requests
-            # Every layer must have a human-readable title
-            "title": "Camden Environmental Monitoring Project InSAR",
-            # Top level layers must have a human-readable abstract. The abstract is optional for child-layers - defaulting
-            # to that of the parent layer.
-            "abstract": """
+                {
+                    # NOTE: This layer is a folder - it is NOT "named layer" that can be selected in GetMap requests
+                    # Every layer must have a human-readable title
+                    "title": "Camden Environmental Monitoring Project InSAR",
+                    # Top level layers must have a human-readable abstract. The abstract is optional for child-layers - defaulting
+                    # to that of the parent layer.
+                    "abstract": """
             These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.
             Products are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.
             Products are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.
@@ -8739,45 +7072,44 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
             ALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.
             A full description of the project and methods used to derive these InSAR products is given in the associated GA Record.
             """,
-            # NOTE: Folder-layers do not have a layer "name".
-
-            # Keywords are optional, but can be added at any folder level and are cumulative.
-            # A layer combines its own keywords, the keywords of it's parent (and grandparent, etc) layers,
-            # and any keywords defined in the global section above.
-            #
-            "keywords": [
-                "alos-palsar",
-                "radarsat-2",
-                "sentinel-1",
-                "envisat",
-                "insar"
+                    # NOTE: Folder-layers do not have a layer "name".
+                    # Keywords are optional, but can be added at any folder level and are cumulative.
+                    # A layer combines its own keywords, the keywords of it's parent (and grandparent, etc) layers,
+                    # and any keywords defined in the global section above.
+                    #
+                    "keywords": [
+                        "alos-palsar",
+                        "radarsat-2",
+                        "sentinel-1",
+                        "envisat",
+                        "insar",
+                    ],
+                    # Attribution.  This entire section is optional.  If provided, it overrides any
+                    #               attribution defined in the wms section above or any higher layers, and
+                    #               applies to this layer and all child layers under this layer unless itself
+                    #               overridden.
+                    "attribution": {
+                        # Attribution must contain at least one of ("title", "url" and "logo")
+                        # A human readable title for the attribution - e.g. the name of the attributed organisation
+                        "title": "Digital Earth Australia",
+                        # The associated - e.g. URL for the attributed organisation
+                        "url": "http://www.ga.gov.au/dea",
+                        # Logo image - e.g. for the attributed organisation
+                        "logo": {
+                            # Image width in pixels (optional)
+                            "width": 370,
+                            # Image height in pixels (optional)
+                            "height": 73,
+                            # URL for the logo image. (required if logo specified)
+                            "url": "https://www.ga.gov.au/__data/assets/image/0011/61589/GA-DEA-Logo-Inline-370x73.png",
+                            # Image MIME type for the logo - should match type referenced in the logo url (required if logo specified.)
+                            "format": "image/png",
+                        },
+                    },
+                    # Folder-type layers include a list of sub-layers
+                    "layers": insar_layers,
+                },
             ],
-            # Attribution.  This entire section is optional.  If provided, it overrides any
-            #               attribution defined in the wms section above or any higher layers, and
-            #               applies to this layer and all child layers under this layer unless itself
-            #               overridden.
-            "attribution": {
-                # Attribution must contain at least one of ("title", "url" and "logo")
-                # A human readable title for the attribution - e.g. the name of the attributed organisation
-                "title": "Digital Earth Australia",
-                # The associated - e.g. URL for the attributed organisation
-                "url": "http://www.ga.gov.au/dea",
-                # Logo image - e.g. for the attributed organisation
-                "logo": {
-                    # Image width in pixels (optional)
-                    "width": 370,
-                    # Image height in pixels (optional)
-                    "height": 73,
-                    # URL for the logo image. (required if logo specified)
-                    "url": "https://www.ga.gov.au/__data/assets/image/0011/61589/GA-DEA-Logo-Inline-370x73.png",
-                    # Image MIME type for the logo - should match type referenced in the logo url (required if logo specified.)
-                    "format": "image/png",
-                }
-            },
-            # Folder-type layers include a list of sub-layers
-            "layers": insar_layers
-        }
-            ]
         },
-    ] # End of Layers List
-} # End of ows_cfg object
+    ],  # End of Layers List
+}  # End of ows_cfg object
