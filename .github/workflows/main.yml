@@ -22,7 +22,5 @@ jobs:
 
     - name: Run Json Linter
       run: |
-        mkdir ~/.npm-global
-        NPM_CONFIG_PREFIX=~/.npm-global
         sudo npm install jsonlint -g
-        jsonlint dev/terria/dea-maps.json
+        jsonlint dev/terria/dea-maps.json -q
