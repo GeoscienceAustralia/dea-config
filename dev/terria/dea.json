@@ -2664,7 +2664,7 @@
 	             "featureInfoTemplate": {
 		        "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
 		     }
-                 },
+                 }
 	      ]
 	    },
             {
@@ -2727,7 +2727,7 @@
                   "dataVariable": "product",
                   "scaleByValue": false,
                   "colorPalette": "Spectral"
-                 },
+                 }
             },
             {
                "name": " Hits",
@@ -2739,8 +2739,8 @@
                   "dataVariable": "hits",
                   "scaleByValue": true,
                   "colorPalette": "Spectral"
-                 },
-            },
+                 }
+            }
          ]
       },
       {
@@ -2785,7 +2785,7 @@
                      "ignoreUnknownTileErrors": true,
                      "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates"
-                  },
+                  }
                ]
             },
             {
