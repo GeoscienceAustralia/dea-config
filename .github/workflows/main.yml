@@ -1,0 +1,25 @@
+name : Terria Config
+
+on:
+  push:
+    paths:
+      - 'dev/terria/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'dev/terria/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+
+    - name: Run Json Linter
+      run: |
+        npm install jsonlint -g
+        jsonlint dev/terria/dea-maps.json
