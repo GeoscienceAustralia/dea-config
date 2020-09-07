@@ -44,7 +44,7 @@ reslim_tmad = {
     },
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
-    }    
+    }
 }
 
 reslim_waterbody = {
@@ -83,7 +83,7 @@ reslim_hap = {
     "wms": {
         "zoomed_out_fill_colour": [150,180,200,160],
         "min_zoom_factor": 500.0,
-        "max_datasets": 6, 
+        "max_datasets": 6,
     },
     "wcs": {
         "max_datasets": 16,
@@ -93,22 +93,22 @@ reslim_hap = {
 # Reusable Chunks 2. Band lists.
 
 bands_ls8 = {
-    "red": [],
-    "green": [],
-    "blue": [ ],
-    "nir": [ "near_infrared" ],
-    "swir1": [ "shortwave_infrared_1", "near_shortwave_infrared" ],
-    "swir2": [ "shortwave_infrared_2", "far_shortwave_infrared" ],
-    "coastal_aerosol": [ ],
+    "red": [ "red" ],
+    "green": [ "green" ],
+    "blue": [ "blue" ],
+    "nir": [ "nir", "near_infrared" ],
+    "swir1": [ "swir1", "shortwave_infrared_1", "near_shortwave_infrared" ],
+    "swir2": [ "swir2", "shortwave_infrared_2", "far_shortwave_infrared" ],
+    "coastal_aerosol": [ "coastal_aerosol" ],
 }
 
 bands_ls = {
-    "red": [],
-    "green": [],
-    "blue": [ ],
-    "nir": [ "near_infrared" ],
-    "swir1": [ "shortwave_infrared_1", "near_shortwave_infrared" ],
-    "swir2": [ "shortwave_infrared_2", "far_shortwave_infrared" ],
+    "red": [ "red" ],
+    "green": [ "green" ],
+    "blue": [ "blue" ],
+    "nir": [ "nir", "near_infrared" ],
+    "swir1": [ "swir1", "shortwave_infrared_1", "near_shortwave_infrared" ],
+    "swir2": [ "swir2", "shortwave_infrared_2", "far_shortwave_infrared" ],
 }
 
 bands_mangrove = {
@@ -132,50 +132,50 @@ bands_wofs_obs = {
 }
 
 bands_sentinel2 = {
-    "nbar_coastal_aerosol": [ "nbar_narrow_blue" ],
-    "nbar_blue": [],
-    "nbar_green": [],
-    "nbar_red": [],
-    "nbar_red_edge_1": [],
-    "nbar_red_edge_2": [],
-    "nbar_red_edge_3": [],
-    "nbar_nir_1":  [ "nbar_near_infrared_1" ],
-    "nbar_nir_2":  [ "nbar_near_infrared_2" ],
-    "nbar_swir_2": [ "nbar_shortwave_infrared_2" ],
-    "nbar_swir_3": [ "nbar_shortwave_infrared_3" ],
-    "nbart_coastal_aerosol": [ "coastal_aerosol", "nbart_narrow_blue", "narrow_blue"],
-    "nbart_blue": [ "blue" ],
-    "nbart_green": [ "green" ],
-    "nbart_red": [ "red" ],
-    "nbart_red_edge_1": [ "red_edge_1" ],
-    "nbart_red_edge_2": [ "red_edge_2" ],
-    "nbart_red_edge_3": [ "red_edge_3" ],
-    "nbart_nir_1":  [ "nir", "nir_1", "nbart_near_infrared_1" ],
-    "nbart_nir_2":  [ "nir_2", "nbart_near_infrared_2" ],
-    "nbart_swir_2": [ "swir_2", "nbart_shortwave_infrared_2" ],
-    "nbart_swir_3": [ "swir_3", "nbart_shortwave_infrared_3" ],
+    "nbar_coastal_aerosol": [ "nbar_coastal_aerosol", "nbar_narrow_blue" ],
+    "nbar_blue": [ "nbar_blue" ],
+    "nbar_green": [ "nbar_green" ],
+    "nbar_red": [ "nbar_red" ],
+    "nbar_red_edge_1": [ "nbar_red_edge_1" ],
+    "nbar_red_edge_2": [ "nbar_red_edge_2" ],
+    "nbar_red_edge_3": [ "nbar_red_edge_3" ],
+    "nbar_nir_1":  [ "nbar_nir_1", "nbar_near_infrared_1" ],
+    "nbar_nir_2":  [ "nbar_nir_2", "nbar_near_infrared_2" ],
+    "nbar_swir_2": [ "nbar_swir_2", "nbar_shortwave_infrared_2" ],
+    "nbar_swir_3": [ "nbar_swir_3", "nbar_shortwave_infrared_3" ],
+    "nbart_coastal_aerosol": [ "nbart_coastal_aerosol", "coastal_aerosol", "nbart_narrow_blue", "narrow_blue"],
+    "nbart_blue": [ "nbart_blue", "blue" ],
+    "nbart_green": [ "nbart_green", "green" ],
+    "nbart_red": [ "nbart_red", "red" ],
+    "nbart_red_edge_1": [ "nbart_red_edge_1", "red_edge_1" ],
+    "nbart_red_edge_2": [ "nbart_red_edge_2", "red_edge_2" ],
+    "nbart_red_edge_3": [ "nbart_red_edge_3", "red_edge_3" ],
+    "nbart_nir_1":  [ "nbart_nir_1", "nir", "nir_1", "nbart_near_infrared_1" ],
+    "nbart_nir_2":  [ "nbart_nir_2", "nir_2", "nbart_near_infrared_2" ],
+    "nbart_swir_2": [ "nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2" ],
+    "nbart_swir_3": [ "nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3" ],
 }
 
 bands_multi_topog = {
-    "regional": [], 
-    "intermediate": [], 
-    "local": [], 
+    "regional": [],
+    "intermediate": [],
+    "local": [],
 }
 
 bands_weathering = {
-    "intensity": [], 
+    "intensity": [],
 }
 
 bands_fc_percentile = {
-    "PV_PC_10": [], 
-    "PV_PC_50": [], 
-    "PV_PC_90": [], 
-    "NPV_PC_10": [], 
-    "NPV_PC_50": [], 
-    "NPV_PC_90": [], 
-    "BS_PC_10": [], 
-    "BS_PC_50": [], 
-    "BS_PC_90": [], 
+    "PV_PC_10": [],
+    "PV_PC_50": [],
+    "PV_PC_90": [],
+    "NPV_PC_10": [],
+    "NPV_PC_50": [],
+    "NPV_PC_90": [],
+    "BS_PC_10": [],
+    "BS_PC_50": [],
+    "BS_PC_90": [],
 }
 
 bands_fc = {
@@ -190,8 +190,8 @@ bands_tmad = {
     "bcdev": [],
 }
 
-bands_nidem = { 
-    "nidem": [] 
+bands_nidem = {
+    "nidem": []
 }
 
 bands_item = {
@@ -227,6 +227,132 @@ insar_ud_bands = {
     "ud": ["displacement", ]
 }
 
+# Reusable Chunks 3. Legends
+legend_idx_0_1_5ticks = {
+        "begin": "0.0",
+        "end": "1.0",
+        "ticks_every": "0.2"
+}
+
+legend_idx_percentage_by_10 = {
+    "begin": "0.0",
+    "end": "1.0",
+    "ticks_every": 0.1,
+    "units": "%",
+    "tick_labels": {
+        "0.0": {"label": "0"},
+        "0.1": {"label": "10"},
+        "0.2": {"label": "20"},
+        "0.3": {"label": "30"},
+        "0.4": {"label": "40"},
+        "0.5": {"label": "50"},
+        "0.6": {"label": "60"},
+        "0.7": {"label": "70"},
+        "0.8": {"label": "80"},
+        "0.9": {"label": "90"},
+        "1.0": {"label": "100"},
+    },
+}
+
+legend_idx_percentage_by_20 = {
+    "begin": "0.0",
+    "end": "1.0",
+    "decimal_places": 1,
+    "ticks_every": "0.2",
+    "units": "%",
+    "tick_labels": {
+        "0.0": {"label": "0"},
+        "0.2": {"label": "20"},
+        "0.4": {"label": "40"},
+        "0.6": {"label": "60"},
+        "0.8": {"label": "80"},
+        "1.0": {"label": "100"},
+    },
+}
+
+legend_idx_percentage_by_25 = {
+        "units": "%",
+        "decimal_places": 2,
+        "begin": "0.00",
+        "end": "1.00",
+        "ticks_every": 0.25,
+        "tick_labels": {
+            "0.00": {"label": "0"},
+            "0.25": {"label": "25"},
+            "0.50": {"label": "50"},
+            "0.75": {"label": "75"},
+            "1.00": {"label": "100"},
+        }
+    }
+
+legend_idx_twentyplus_3ticks = {
+    "begin": 0,
+    "end": 20,
+    "decimal_places": 0,
+    "ticks_every": 10,
+    "tick_labels": {
+        "20": {"prefix": ">"}
+    }
+}
+
+legend_idx_thirtyplus_4ticks = {
+    "begin": 0,
+    "end": 30,
+    "decimal_places": 0,
+    "ticks_every": 10,
+    "tick_labels": {
+        "30": {"prefix": ">"}
+    },
+    "strip_location": [0.05, 0.5, 0.89, 0.15]
+}
+
+legend_idx_0_100_as_0_1_5ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "unitless",
+    "ticks_every": 20,
+    "tick_labels": {
+        "0": {"label": "0.0"},
+        "20": {"label": "0.2"},
+        "40": {"label": "0.4"},
+        "60": {"label": "0.6"},
+        "80": {"label": "0.8"},
+        "100": {"label": "1.0"},
+    }
+}
+
+legend_idx_0_100_pixel_fc_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_ngv_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_bs_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "ticks_every": 25,
+    "units": "% / pixel",
+    "title": "Percentage of Pixel that is Bare Soil",
+    "rcParams": {
+        "font.size": 9
+    }
+}
 # Reusable Chunks 3. Styles
 
 style_ls_simple_rgb = {
@@ -270,7 +396,7 @@ style_fc_simple_rgb  = {
                 },
                 "invert": True,
             },
-        ],    
+        ],
 }
 style_ls_irg = {
     "name": "infrared_green",
@@ -354,7 +480,8 @@ style_ls_ndvi = {
             "value": 1.0,
             "color": "#114D04"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_ls_ndwi = {
@@ -379,9 +506,6 @@ style_ls_ndwi = {
         {
             "value": 0.0,
             "color": "#d8e7f5",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": 0.1,
@@ -390,7 +514,6 @@ style_ls_ndwi = {
         {
             "value": 0.2,
             "color": "#73b3d8",
-            "legend": { }
         },
         {
             "value": 0.3,
@@ -399,16 +522,28 @@ style_ls_ndwi = {
         {
             "value": 0.4,
             "color": "#1563aa",
-            "legend": { }
         },
         {
             "value": 0.5,
             "color": "#08306b",
-            "legend": {
-                "prefix": ">"
-            }
         }
-    ]
+    ],
+    "legend": {
+        "begin": "0.0",
+        "end": "0.5",
+        "decimal_places": 1,
+        "ticks": [ "0.0", "0.2", "0.4", "0.5"],
+        "tick_labels": {
+            "0.0": {
+                "prefix": "<"
+            },
+            "0.2": {"label": "0.2"},
+            "0.4": {"label": "0.4"},
+            "0.5": {
+                "prefix": ">"
+            },
+        }
+    }
 }
 
 style_ls_mndwi = {
@@ -454,7 +589,8 @@ style_ls_mndwi = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_ls_pure_blue = {
@@ -701,7 +837,8 @@ style_nd_ferric_iron = {
             "value": 1.0,
             "color": "#E81515"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_nd_soil = {
@@ -747,7 +884,8 @@ style_nd_soil = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_nd_clay_mica = {
@@ -814,7 +952,8 @@ style_nd_clay_mica = {
             "value": 1.0,
             "color": "#bd0026"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 
 style_mangrove_cover_v2 = {
@@ -997,12 +1136,7 @@ style_wofs_filt_freq_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_count_wet = {
@@ -1071,15 +1205,16 @@ style_wofs_count_wet = {
         {
             "value": 400,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 100
+        "begin": "0",
+        "end": "400",
+        "decimal_places": 0,
+        "ticks_every": 100,
+        "tick_labels": {
+            "400": {"prefix": ">"},
+        }
     }
 }
 
@@ -1149,16 +1284,17 @@ style_wofs_count_clear = {
         {
             "value": 1000,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 100,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
+        "begin": "0",
+        "end": "1000",
+        "decimal_places": 0,
+        "ticks_every": 100,
+        "strip_location": [0.05, 0.5, 0.89, 0.15],
+        "tick_labels": {
+            "1000": {"prefix": ">"},
+        }
     }
 }
 
@@ -1300,13 +1436,7 @@ style_wofs_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
-
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_confidence = {
@@ -1360,12 +1490,7 @@ style_wofs_confidence = {
             "color": "#00E32D"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.25
-    }
+    "legend": legend_idx_percentage_by_25,
 }
 
 style_wofs_seasonal_wet = {
@@ -1433,16 +1558,9 @@ style_wofs_seasonal_wet = {
         {
             "value": 20,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10
-    }
+    "legend": legend_idx_twentyplus_3ticks,
 }
 
 style_wofs_summary_wet = {
@@ -1510,17 +1628,10 @@ style_wofs_summary_wet = {
         },
         {
             "value": 20,
-            "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
+            "color": "#5700E3"
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10
-    }
+    "legend": legend_idx_twentyplus_3ticks,
 }
 
 style_wofs_summary_clear = {
@@ -1589,17 +1700,9 @@ style_wofs_summary_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
-    }
+    "legend": legend_idx_thirtyplus_4ticks,
 }
 
 style_wofs_seasonal_clear = {
@@ -1667,17 +1770,9 @@ style_wofs_seasonal_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
-    "legend": {
-        "radix_point": 0,
-        "scale_by": 1,
-        "major_ticks": 10,
-        "axes_position": [0.05, 0.5, 0.89, 0.15]
-    }
+    "legend": legend_idx_thirtyplus_4ticks,
 }
 
 style_annual_wofs_summary_frequency = {
@@ -1751,12 +1846,7 @@ style_annual_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency = {
@@ -1829,12 +1919,7 @@ style_seasonal_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    } 
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_annual_wofs_summary_frequency_blue = {
@@ -1886,12 +1971,7 @@ style_annual_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency_blue = {
@@ -1942,12 +2022,7 @@ style_seasonal_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }    
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_obs = {
@@ -2126,7 +2201,8 @@ style_s2_mndwi = {
             "value": 1.0,
             "color": "#08306b"
         }
-    ]
+    ],
+    "legend": legend_idx_0_1_5ticks,
 }
 style_s2_ndci = {
     "name": "ndci",
@@ -2147,9 +2223,6 @@ style_s2_ndci = {
         {
             "value": -0.1,
             "color": "#1696FF",
-            "legend": {
-                "prefix" : "<"
-            }
         },
         {
             "value": -0.1,
@@ -2158,7 +2231,6 @@ style_s2_ndci = {
         {
             "value": 0.0,
             "color": "#00FFDF",
-            "legend": { }
         },
         {
             "value": 0.1,
@@ -2167,7 +2239,6 @@ style_s2_ndci = {
         {
             "value": 0.2,
             "color": "#FFB50A",
-            "legend": { }
         },
         {
             "value": 0.4,
@@ -2176,11 +2247,18 @@ style_s2_ndci = {
         {
             "value": 0.5,
             "color": "#FF0000",
-            "legend": {
-                "prefix": ">"
-            }
         }
-    ]
+    ],
+    "legend": {
+        "begin": "-0.1",
+        "end": "0.5",
+        "ticks_every": "0.1",
+        "units": "unitless",
+        "tick_labels": {
+            "-0.1": {"prefix": "<"},
+            "0.5": {"prefix": ">"}
+        }
+    }
 }
 
 style_s2_pure_aerosol = {
@@ -2469,7 +2547,14 @@ style_wii = {
         }
     ],
     "legend": {
-        "axes_position": [0.1, 0.5, 0.8, 0.15]
+        "begin": 1,
+        "end": 6,
+        "decimal_places": 0,
+        "tick_labels": {
+            "1": {"label": "Low\nClass 1"},
+            "6": {"label": "High\nClass 6"},
+        },
+        "strip_location": [0.1, 0.5, 0.8, 0.15],
     }
 }
 
@@ -2490,27 +2575,22 @@ style_fc_gv_10 = {
         {
             "value": 0,
             "color": "#ffffcc",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#c2e699",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#78c679",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#31a354",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#006837",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2521,13 +2601,7 @@ style_fc_gv_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
 style_fc_gv_50 = {
@@ -2565,6 +2639,7 @@ style_fc_gv_50 = {
             "color": "#006837"
         }
     ],
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2610,6 +2685,8 @@ style_fc_gv_90 = {
             "color": "#006837"
         }
     ],
+    # old behaviour was wrong.  This is what Leo and Emma requested
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2637,27 +2714,22 @@ style_fc_ngv_10 = {
         {
             "value": 0,
             "color": "#ffffd4",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#fed98e",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#fe9929",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#d95f0e",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#993404",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2668,13 +2740,8 @@ style_fc_ngv_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    # Emulates what we had previously
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
 }
 
 style_fc_ngv_50 = {
@@ -2712,6 +2779,7 @@ style_fc_ngv_50 = {
             "color": "#993404"
         }
     ],
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2757,6 +2825,7 @@ style_fc_ngv_90 = {
             "color": "#993404"
         }
     ],
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2784,27 +2853,22 @@ style_fc_bs_10 = {
         {
             "value": 0,
             "color": "#feebe2",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#fbb4b9",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#f768a1",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#c51b8a",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#7a0177",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2815,13 +2879,7 @@ style_fc_bs_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
 
 style_fc_bs_50 = {
@@ -2859,6 +2917,8 @@ style_fc_bs_50 = {
             "color": "#7a0177"
         }
     ],
+    # Old behaviour was wrong - this is what Leo and Emma have requested.
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2904,6 +2964,8 @@ style_fc_bs_90 = {
             "color": "#7a0177"
         }
     ],
+    # Old behaviour was wrong - this is what Leo and Emma have requested.
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2917,7 +2979,7 @@ style_fc_bs_90 = {
 style_fc_rgb =  {
     "name": "fc_rgb",
     "title": "Three-band fractional cover",
-    "abstract": "Frachtional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
+    "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
         "red": {
             "BS_PC_50": 1.0
@@ -2965,9 +3027,6 @@ style_nidem = {
         {
             "value": -2.5,
             "color": "#440154",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": -2.34,
@@ -3004,7 +3063,6 @@ style_nidem = {
         {
             "value": -1.1,
             "color": "#2e6b8d",
-            "legend": {}
         },
         {
             "value": -0.94,
@@ -3033,7 +3091,6 @@ style_nidem = {
         {
             "value": 0.0,
             "color": "#26ac7f",
-            "legend": { }
         },
         {
             "value": 0.14,
@@ -3074,13 +3131,17 @@ style_nidem = {
         {
             "value": 1.5,
             "color": "#fde724",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
-        "units": "metres"
+        "begin": "-2.5",
+        "end": "1.5",
+        "ticks": ["-2.5", "-1.1", "0.0", "1.5"],
+        "units": "metres",
+        "tick_labels": {
+            "1.5": {"prefix": ">"},
+            "-2.5": {"prefix": "<"},
+        }
     }
 }
 
@@ -3147,10 +3208,23 @@ style_item_relative = {
         },
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "9.0",
+        "ticks_every": "1.0",
         "units": "%",
-        "radix_point": 0,
-        "scale_by": 10.0,
-        "major_ticks": 1
+        "decimal_places": 0,
+        "tick_labels": {
+            "0.0": {"label": "0"},
+            "0.1": {"label": "10"},
+            "0.2": {"label": "20"},
+            "0.3": {"label": "30"},
+            "0.4": {"label": "40"},
+            "0.5": {"label": "50"},
+            "0.6": {"label": "60"},
+            "0.7": {"label": "70"},
+            "0.8": {"label": "80"},
+            "0.9": {"label": "90"},
+        }
     }
 }
 
@@ -3234,6 +3308,15 @@ style_item_confidence = {
         },
     ],
     "legend": {
+        "begin": "0.01",
+        "end": "0.55",
+        "ticks": ["0.01", "0.55"],
+        "tick_labels": {
+            "0.01": {"prefix": "<"},
+            "0.55": {"prefix": ">"},
+        },
+        "decimal_places": 2,
+        # Why "NDWI"???
         "units": "NDWI standard deviation"
     }
 
@@ -3358,9 +3441,6 @@ style_aster_aloh_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.9"
-            }
         },
         {
             "value": 1,
@@ -3409,15 +3489,18 @@ style_aster_aloh_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.3"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.9"},
+            "255.0": {"label": "1.3"},
+        },
         "units": "Blue is well ordered kaolinite,\nRed is Al-poor (Si-rich) muscovite (phengite)",
     }
-
 }
 
 style_aster_aloh_cont_ramp = {
@@ -3438,9 +3521,6 @@ style_aster_aloh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.0"
-            }
         },
         {
             "value": 1,
@@ -3489,12 +3569,16 @@ style_aster_aloh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "2.0"},
+            "255.0": {"label": "2.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -3517,9 +3601,6 @@ style_aster_feoh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.03"
-            }
         },
         {
             "value": 1,
@@ -3568,12 +3649,16 @@ style_aster_feoh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "2.03"},
+            "255.0": {"label": "2.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -3596,9 +3681,6 @@ style_aster_ferrox_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.5"
-            }
         },
         {
             "value": 1,
@@ -3647,12 +3729,16 @@ style_aster_ferrox_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "3.3"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.5"},
+            "255.0": {"label": "3.3"},
+        },
         "units": "Blue-cyan is non-hematitie,\nRed-yellow is hematite-rich",
     }
 }
@@ -3675,9 +3761,6 @@ style_aster_ferrox_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.1"
-            }
         },
         {
             "value": 1,
@@ -3726,12 +3809,16 @@ style_aster_ferrox_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.1"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.1"},
+            "255.0": {"label": "2.1"},
+        },
         "units": "Blue is low abundance,\nRed is high abundance",
     }
 }
@@ -3754,9 +3841,6 @@ style_aster_ferrous_mgoh_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.1"
-            }
         },
         {
             "value": 1,
@@ -3805,12 +3889,16 @@ style_aster_ferrous_mgoh_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.0"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.1"},
+            "255.0": {"label": "2.0"},
+        },
         "units": "Blue is low ferrous iron content,\nRed is high ferrous iron content",
     }
 }
@@ -3833,9 +3921,6 @@ style_aster_ferrous_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.75"
-            }
         },
         {
             "value": 1,
@@ -3884,12 +3969,16 @@ style_aster_ferrous_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.025"
-            }
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.75"},
+            "255.0": {"label": "1.025"},
+        },
         "units": "Blue is low abundance,\nRed is high abundance",
     }
 }
@@ -3912,9 +4001,6 @@ style_aster_green_veg_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.4"
-            }
         },
         {
             "value": 1,
@@ -3969,10 +4055,17 @@ style_aster_green_veg_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.4"},
+            "255.0": {"label": "4"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
-                            
+
 style_aster_gypsum_idx_ramp = {
     "name": "ramp",
     "title": "(B10+B12)/B11 ",
@@ -4048,10 +4141,17 @@ style_aster_gypsum_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.47"},
+            "255.0": {"label": "0.5"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
-                            
+
 style_aster_kaolin_idx_ramp = {
     "name": "ramp",
     "title": "B6/B5 ",
@@ -4127,6 +4227,13 @@ style_aster_kaolin_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.0"},
+            "255.0": {"label": "1.25"},
+        },
         "units": "Blue is low content,\nRed is high content",
     }
 }
@@ -4206,6 +4313,13 @@ style_aster_mgoh_comp_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.6"},
+            "255.0": {"label": "1.4"},
+        },
         "units": "Blue-cyan is magnesite-dolomite, amphibole, \nRed is calcite, epidote, amphibole",
     }
 }
@@ -4285,10 +4399,17 @@ style_aster_mgoh_cont_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.05"},
+            "255.0": {"label": "1.2"},
+        },
         "units": "Blue low content,\nRed is high content",
     }
 }
-                            
+
 style_aster_opaque_idx_ramp = {
     "name": "ramp",
     "title": "B1/B4 ",
@@ -4364,10 +4485,17 @@ style_aster_opaque_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.4"},
+            "255.0": {"label": "0.9"},
+        },
         "units": "Blue low content,\nRed is high content",
     }
 }
-                            
+
 style_aster_silica_idx_ramp = {
     "name": "ramp",
     "title": "B13/B10 ",
@@ -4443,10 +4571,17 @@ style_aster_silica_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "1.0"},
+            "255.0": {"label": "1.35"},
+        },
         "units": "Blue low silica content,\nRed is high silica content",
     }
 }
-                            
+
 style_aster_quartz_idx_ramp = {
     "name": "ramp",
     "title": "B11/(B10+B12) ",
@@ -4522,6 +4657,13 @@ style_aster_quartz_idx_ramp = {
         }
     ],
     "legend": {
+        "begin": "0.0",
+        "end": "255.0",
+        # note that legend value does not match the derived band value returned by GetFeatureInfo
+        "tick_labels": {
+            "0.0": {"label": "0.5"},
+            "255.0": {"label": "0.52"},
+        },
         "units": "Blue low quartz content,\nRed is high quartz content",
     }
 }
@@ -4566,6 +4708,13 @@ style_tmad_sdev = {
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "decimal_places": 1,
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4609,6 +4758,12 @@ style_tmad_edev = {
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4652,6 +4807,12 @@ style_tmad_bcdev = {
         }
     ],
     "legend": {
+        "begin": "0.1",
+        "end": "0.9",
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
     }
 }
 
@@ -4732,7 +4893,11 @@ style_insar_velocity = {
     "range": [-35.0, 35.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
+        "begin": -35,
+        "end": 35,
+        "ticks_every": 35,
         "units": "mm/year",
+        "decimal_places": 0,
     }
 }
 
@@ -4754,7 +4919,11 @@ style_insar_displacement = {
     "range": [-110.0, 110.0],
     "mpl_ramp": "RdBu_r",
     "legend": {
+        "begin": -110,
+        "end": 110,
         "units": "mm",
+        "decimal_places": 0,
+        "ticks_every": 110,
     }
 }
 
@@ -4836,7 +5005,7 @@ ows_cfg = {
             "email": "earth.observation@ga.gov.au",
         },
         "fees": "",
-        "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. " 
+        "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. "
                               "This product is released under the Creative Commons Attribution 4.0 International Licence. "
                               "http://creativecommons.org/licenses/by/4.0/legalcode",
     }, # END OF global SECTION
@@ -4854,13 +5023,19 @@ ows_cfg = {
         "default_geographic_CRS": "EPSG:4326",
         "formats": {
             "GeoTIFF": {
-                "renderer": "datacube_ows.wcs_utils.get_tiff",
+                "renderers": {
+                    "1": "datacube_ows.wcs1_utils.get_tiff",
+                    "2": "datacube_ows.wcs2_utils.get_tiff",
+                },
                 "mime": "image/geotiff",
                 "extension": "tif",
                 "multi-time": False
             },
             "netCDF": {
-                "renderer": "datacube_ows.wcs_utils.get_netcdf",
+                "renderers": {
+                    "1": "datacube_ows.wcs1_utils.get_netcdf",
+                    "2": "datacube_ows.wcs2_utils.get_netcdf",
+                },
                 "mime": "application/x-netcdf",
                 "extension": "nc",
                 "multi-time": True,
@@ -4904,7 +5079,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -4942,7 +5118,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -4980,7 +5157,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5032,7 +5210,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5051,7 +5230,7 @@ For service status information, see https://status.dea.ga.gov.au
         {
             "title": "Landsat 30+ Barest Earth",
             "abstract": """
-	An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth. Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018;
+An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth. Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018;
 
             """,
             "layers": [
@@ -5059,10 +5238,10 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Landsat 30+ Barest Earth 25m albers (Combined Landsat)",
                     "name": "landsat_barest_earth",
                     "abstract": """
-	An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018). 
-    The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy. 
-    This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth. 
-    Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018; For service status information, see https://status.dea.ga.gov.au
+An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018).
+The bands include BLUE (0.452 - 0.512), GREEN (0.533 - 0.590), RED, (0.636 - 0.673) NIR (0.851 - 0.879), SWIR1 (1.566 - 1.651) and SWIR2 (2.107 - 2.294) wavelength regions. The approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time. The product reduces the influence of vegetation and allows for more direct mapping of soil and rock mineralogy.
+This product complements the Landsat-8 Barest Earth which is based on the same algorithm but just uses Landsat8 satellite imagery from 2013-2108. Landsat-8's OLI sensor provides improved signal-to-noise radiometric (SNR) performance quantised over a 12-bit dynamic range compared to the 8-bit dynamic range of Landsat-5 and Landsat-7 data. However the Landsat 30+ Barest Earth has a greater capacity to find the barest ground due to the greater temporal depth.
+Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Mineral Map of the Australian Continent Revealing the Land at its Barest. Nature Communications. Mosaics are available for the following years: Landsat 5 / Landsat 7 / Landsat 8 - 1983 to 2018; For service status information, see https://status.dea.ga.gov.au
                     """,
                     "product_name": "landsat_barest_earth",
                     "bands": bands_ls,
@@ -5073,13 +5252,14 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
                         "default_style": "simple_rgb",
                         "styles": [
-                            style_ls_simple_rgb, 
+                            style_ls_simple_rgb,
                             style_ls_irg, style_ls_ndvi,
                             style_ls_pure_blue, style_ls_pure_green, style_ls_pure_red,
                             style_sentinel_pure_nir, style_sentinel_pure_swir1, style_sentinel_pure_swir2,
@@ -5117,7 +5297,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["canopy_cover_class", "extent"]
                     },
                     "styling": {
@@ -5148,7 +5329,8 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["wofs_filtered_summary"]
                     },
                     "styling": {
@@ -5163,11 +5345,11 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                     "title": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
                     "name": "wofs_summary_wet",
                     "abstract": """
-Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. 
+Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains Wet Count: how many times water was detected in observations that were clear. No clear observations of water causes an area to appear transparent, 1-50 total clear observations of water correlate with red and yellow colours, 100 clear observations of water correlate with green, 200 clear observations of water correlates with light blue, 300 clear observations of water correlates to deep blue and 400 and over observations of clear water correlate to purple.
 
-As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/Product%20Description.pdf
 
@@ -5182,7 +5364,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5196,11 +5379,11 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
                     "name": "wofs_summary_clear",
                     "abstract": """
-Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. 
+Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains Clear Count: how many times an area could be clearly seen (ie. not affected by clouds, shadows or other satellite observation problems). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
 
-As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/Product%20Description.pdf
 
@@ -5215,7 +5398,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5229,11 +5413,11 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Water Observations from Space 25m Water Summary (WOfS Statistics)	",
                     "name": "Water Observations from Space Statistics",
                     "abstract": """
-Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary). 
+Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary).
 
 This layer contains the Water Summary: the percentage of clear observations which were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
 
-As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary. 
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics Filtered Summary product, which provide a noise-reduced view of the water summary.
 
 For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/Product%20Description.pdf
 
@@ -5248,7 +5432,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5274,7 +5459,8 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["confidence"]
                     },
                     "styling": {
@@ -5307,7 +5493,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5332,7 +5519,8 @@ Water Observations from Space - Annual Statistics is a set of annual statistical
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5365,11 +5553,12 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
-                        "default_style": "annual_WOfS_frequency", 
+                        "default_style": "annual_WOfS_frequency",
                         "styles": [
                             style_annual_wofs_summary_frequency,
                             style_annual_wofs_summary_frequency_blue,
@@ -5398,7 +5587,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5423,7 +5613,8 @@ Water Observations from Space - April to October Statistics is a set of seasonal
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5437,7 +5628,7 @@ Water Observations from Space - April to October Statistics is a set of seasonal
                     "title": "Water Observations from Space 25m Water Summary (WOfS April - October Statistics)",
                     "name": "wofs_apr_oct_summary_statistics",
                     "abstract": """
-	Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
+Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_apr_oct_summary",
                     "bands": bands_wofs_sum,
@@ -5448,7 +5639,8 @@ Water Observations from Space - April to October Statistics is a set of seasonal
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5481,7 +5673,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5495,7 +5688,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Water Observations from Space 25m Clear Count (WOfS November - March Summary Statistics)",
                     "name": "wofs_nov_mar_summary_clear",
                     "abstract": """
-	Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
+Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_nov_mar_summary",
                     "bands": bands_wofs_sum,
@@ -5506,7 +5699,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5520,7 +5714,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Water Observations from Space 25m Water Summary (WOfS November - March Statistics)",
                     "name": "wofs_nov_mar_summary_statistics",
                     "abstract": """
-Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au	
+Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "wofs_nov_mar_summary",
                     "bands": bands_wofs_sum,
@@ -5531,7 +5725,8 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5557,6 +5752,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "wofs_albers",
                     "bands": bands_wofs_obs,
                     "resource_limits": reslim_wofs_obs,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
                         "always_fetch_bands": [ ],
@@ -5565,7 +5761,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["water"]
                     },
                     "styling": {
@@ -5580,11 +5776,11 @@ For service status information, see https://status.dea.ga.gov.au
         },
         {
             "title": "Near Real-Time",
-            "abstract": """ 
+            "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data.
 
-The Near Real-Time capability provides analysis-ready data that is processed on receipt using 
-the best-available ancillary information at the time to provide atmospheric corrections. 
+The Near Real-Time capability provides analysis-ready data that is processed on receipt using
+the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
 """,
@@ -5634,7 +5830,7 @@ For service status information, see https://status.dea.ga.gov.au
                             style_s2_pure_swir1, style_s2_pure_swir2,
                         ]
                     }
-                }, 
+                },
                 {
                     "name": "s2b_nrt_granule_nbar_t",
                     "title": "Near Real-Time Surface Reflectance (Sentinel 2B)",
@@ -5679,7 +5875,7 @@ For service status information, see https://status.dea.ga.gov.au
                             style_s2_pure_swir1, style_s2_pure_swir2,
                         ]
                     }
-                }, 
+                },
                 {
                     "name": "s2a_nrt_granule_nbar_t",
                     "title": "Near Real-Time Surface Reflectance (Sentinel 2A)",
@@ -5724,7 +5920,7 @@ For service status information, see https://status.dea.ga.gov.au
                             style_s2_pure_swir1, style_s2_pure_swir2,
                         ]
                     }
-                }, 
+                },
 #                 {
 #                     "name": "s2_nrt_wofs",
 #                     "title": "	Near Real-Time Water Classifier (Sentinel 2 WOfS NRT)",
@@ -5747,12 +5943,12 @@ For service status information, see https://status.dea.ga.gov.au
 #                         "default_style": "water_classifier",
 #                         "styles": [ style_s2_water_classifier ],
 #                     }
-#                 } 
+#                 }
             ]
         },
         {
             "title": "Sentinel Definitive",
-            "abstract": """ 
+            "abstract": """
 	This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variationscaused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
 """,
             "layers": [
@@ -5802,7 +5998,7 @@ For service status information, see https://status.dea.ga.gov.au
                             style_s2_pure_swir1, style_s2_pure_swir2,
                         ]
                     }
-                }, 
+                },
                 {
                     "name": "s2b_ard_granule_nbar_t",
                     "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
@@ -5836,12 +6032,12 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                             style_s2_pure_swir1, style_s2_pure_swir2,
                         ]
                     }
-                }, 
+                },
                 {
                     "name": "s2a_ard_granule_nbar_t",
                     "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
                     "abstract": """
-	This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
+This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "s2a_ard_granule",
                     "bands": bands_sentinel2,
@@ -5870,7 +6066,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                             style_s2_pure_swir1, style_s2_pure_swir2,
                         ]
                     }
-                } 
+                }
             ]
         },
         {
@@ -5881,20 +6077,20 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                     "title": "Multi-Scale Topographic Position 1 degree tile (Multi-Scale Topographic Position)",
                     "name": "multi_scale_topographic_position",
                     "abstract": """
-A Multi-scale topographic position image of Australia has been generated by combining 
-a topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures 
-the topographic slope position of landforms. Ruggedness informs on the roughness of the surface and 
-is calculated as the standard deviation of elevations. Both these terrain attributes are therefore 
-scale dependent and will vary according to the size of the analysis window. Based on an algorithm 
-developed by Lindsay et al. (2015) we have generated multi-scale topographic position model over the 
-Australian continent using 3 second resolution (~90m) DEM derived from the Shuttle Radar Topography 
-Mission (SRTM). The algorithm calculates topographic position scaled by the corresponding ruggedness 
-across three spatial scales (window sizes) of 0.2-8.1 Km; 8.2-65.2 Km and 65.6-147.6 Km. The derived 
-ternary image captures variations in topographic position across these spatial scales (blue local, 
-green intermediate and red regional) and gives a rich representation of nested landform features that 
-have broad application in understanding geomorphological and hydrological processes and in mapping 
-regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell, 
-H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis, 
+A Multi-scale topographic position image of Australia has been generated by combining
+a topographic position index and topographic ruggedness. Topographic Position Index (TPI) measures
+the topographic slope position of landforms. Ruggedness informs on the roughness of the surface and
+is calculated as the standard deviation of elevations. Both these terrain attributes are therefore
+scale dependent and will vary according to the size of the analysis window. Based on an algorithm
+developed by Lindsay et al. (2015) we have generated multi-scale topographic position model over the
+Australian continent using 3 second resolution (~90m) DEM derived from the Shuttle Radar Topography
+Mission (SRTM). The algorithm calculates topographic position scaled by the corresponding ruggedness
+across three spatial scales (window sizes) of 0.2-8.1 Km; 8.2-65.2 Km and 65.6-147.6 Km. The derived
+ternary image captures variations in topographic position across these spatial scales (blue local,
+green intermediate and red regional) and gives a rich representation of nested landform features that
+have broad application in understanding geomorphological and hydrological processes and in mapping
+regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell,
+H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis,
 Geomorphology 245, 51–61.
 
 For service status information, see https://status.dea.ga.gov.au""",
@@ -5907,8 +6103,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 90.0, 90.0 ],
+                        "native_crs": "EPSG:4326",
+                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
                         "default_bands": [ "regional", "intermediate", "local" ]
                     },
                     "legend": {
@@ -5931,34 +6127,34 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "title": "Weathering Intensity 1 degree tile (Weathering Intensity)",
                     "name": "weathering_intensity",
                     "abstract": """
-    Weathering intensity or the degree of weathering is an important characteristic of the 
-    earth’s surface that has a significant influence on the chemical and physical properties 
-    of surface materials. Weathering intensity largely controls the degree to which primary 
-    minerals are altered to secondary components including clay minerals and oxides. The 
-    degree of surface weathering is particularly important in Australia where variations in 
-    weathering intensity correspond to the nature and distribution of regolith (weathered 
-    bedrock and sediments) which mantles approximately 90% of the Australian continent. The 
-    weathering intensity prediction has been generated using the Random Forest decision tree 
-    machine learning algorithm. The algorithm is used to establish predictive relationships 
-    between field estimates of the degree of weathering and a comprehensive suite of 
-    covariate or predictive datasets. The covariates used to generate the model include 
-    satellite imagery, terrain attributes, airborne radiometric imagery and mapped geology. 
-    Correlations between the training dataset and the covariates were explored through the 
-    generation of 300 random tree models. An r-squared correlation of 0.85 is reported using 
-    5 K-fold cross-validation. The mean of the 300 models is used for predicting the 
-    weathering intensity and the uncertainty in the weathering intensity is estimated at 
-    each location via the standard deviation in the 300 model values. The predictive 
-    weathering intensity model is an estimate of the degree of surface weathering only. The 
-    interpretation of the weathering intensity is different for in-situ or residual 
-    landscapes compared with transported materials within depositional landscapes. In 
-    residual landscapes, weathering process are operating locally whereas in depositional 
-    landscapes the model is reflecting the degree of weathering either prior to erosion and 
-    subsequent deposition, or weathering of sediments after being deposited. The weathering 
-    intensity model has broad utility in assisting mineral exploration in variably weathered 
-    geochemical landscapes across the Australian continent, mapping chemical and physical 
-    attributes of soils in agricultural landscapes and in understanding the nature and 
-    distribution of weathering processes occurring within the upper regolith.
-    For service status information, see https://status.dea.ga.gov.au""",
+Weathering intensity or the degree of weathering is an important characteristic of the
+earth’s surface that has a significant influence on the chemical and physical properties
+of surface materials. Weathering intensity largely controls the degree to which primary
+minerals are altered to secondary components including clay minerals and oxides. The
+degree of surface weathering is particularly important in Australia where variations in
+weathering intensity correspond to the nature and distribution of regolith (weathered
+bedrock and sediments) which mantles approximately 90% of the Australian continent. The
+weathering intensity prediction has been generated using the Random Forest decision tree
+machine learning algorithm. The algorithm is used to establish predictive relationships
+between field estimates of the degree of weathering and a comprehensive suite of
+covariate or predictive datasets. The covariates used to generate the model include
+satellite imagery, terrain attributes, airborne radiometric imagery and mapped geology.
+Correlations between the training dataset and the covariates were explored through the
+generation of 300 random tree models. An r-squared correlation of 0.85 is reported using
+5 K-fold cross-validation. The mean of the 300 models is used for predicting the
+weathering intensity and the uncertainty in the weathering intensity is estimated at
+each location via the standard deviation in the 300 model values. The predictive
+weathering intensity model is an estimate of the degree of surface weathering only. The
+interpretation of the weathering intensity is different for in-situ or residual
+landscapes compared with transported materials within depositional landscapes. In
+residual landscapes, weathering process are operating locally whereas in depositional
+landscapes the model is reflecting the degree of weathering either prior to erosion and
+subsequent deposition, or weathering of sediments after being deposited. The weathering
+intensity model has broad utility in assisting mineral exploration in variably weathered
+geochemical landscapes across the Australian continent, mapping chemical and physical
+attributes of soils in agricultural landscapes and in understanding the nature and
+distribution of weathering processes occurring within the upper regolith.
+For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "weathering_intensity",
                     "bands": bands_weathering,
                     "resource_limits": reslim_multi_topog,
@@ -5968,8 +6164,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 60.0, 60.0 ],
+                        "native_crs": "EPSG:4326",
+                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
                         "default_bands": [ "intensity" ]
                     },
                     "styling": {
@@ -6002,7 +6198,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6012,8 +6208,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "green_veg_10",
@@ -6045,7 +6242,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6055,8 +6252,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "non_green_veg_10",
@@ -6075,13 +6273,13 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "title": "Fractional Cover Percentiles - Bare Soil 25m 100km tile (Fractional Cover Percentiles - Bare Soil)",
                     "name": "fcp_bare_ground",
                     "abstract": """
-	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover This contains the percentage of bare soil per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year. Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au""",
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover This contains the percentage of bare soil per pixel at the 10th, 50th (median) and 90th percentiles for observations acquired in each full calendar year (1st of January - 31st December) from 1987 to the most recent full calendar year. Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "fc_percentile_albers_annual",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6091,8 +6289,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "bare_ground_10",
@@ -6125,7 +6324,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6135,8 +6334,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6169,7 +6369,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6179,8 +6379,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "green_veg_10",
@@ -6207,7 +6408,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6217,8 +6418,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "non_green_veg_10",
@@ -6231,14 +6433,14 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Bare Soil)",
                     "name": "fcp_seasonal_bare_ground",
                     "abstract": """
-	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "fc_percentile_albers_seasonal",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6248,8 +6450,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "bare_ground_10",
@@ -6262,14 +6465,14 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Median)",
                     "name": "fcp_seasonal_rgb",
                     "abstract": """
-	Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program. FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
+Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program. FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year. For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "fc_percentile_albers_seasonal",
                     "bands": bands_fc_percentile,
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6279,8 +6482,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6298,11 +6502,11 @@ For service status information, see https://status.dea.ga.gov.au
                 {
                     "name": "NIDEM",
                     "title": "National Intertidal Digital Elevation Model nidem_v1.0.0 grid (NIDEM 25m)",
-                    "abstract": """            
+                    "abstract": """
 The National Intertidal Digital Elevation Model (NIDEM; Bishop-Taylor et al. 2019) is a continental-scale elevation dataset for Australia's exposed intertidal zone. NIDEM provides the first three-dimensional representation of Australia's intertidal sandy beaches and shores, tidal flats and rocky shores and reefs at 25 m spatial resolution, addressing a key gap between the availability of sub-tidal bathymetry and terrestrial elevation data. NIDEM was generated by combining global tidal modelling with a 30-year time series archive of spatially and spectrally calibrated Landsat satellite data managed within the Digital Earth Australia (DEA) platform. NIDEM complements existing intertidal extent products, and provides data to support a new suite of use cases that require a more detailed understanding of the three-dimensional topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management and ecological habitat mapping.
-                            
+
 *Overview*
-                
+
 Intertidal environments support important ecological habitats (e.g. sandy beaches and shores, tidal flats and rocky shores and reefs), and provide many valuable benefits such as storm surge protection, carbon storage and natural resources for recreational and commercial use. However, intertidal zones are faced with increasing threats from coastal erosion, land reclamation (e.g. port construction), and sea level rise. Accurate elevation data describing the height and shape of the coastline is needed to help predict when and where these threats will have the greatest impact. However, this data is expensive and challenging to map across the entire intertidal zone of a continent the size of Australia.
 
 The rise and fall of the ocean can be used to describe the three-dimensional shape of the coastline by mapping the land-sea boundary (or 'waterline') across a range of known tides (e.g. low tide, high tide). Assuming that these waterlines represent lines of constant height relative to mean sea level (MSL), elevations can be modelled for the area of coastline located between the lowest and highest observed tide. To model the elevation of Australia's entire intertidal zone, 30 years of satellite images of the coastline (between 1986 and 2016 inclusive) were obtained from the archive of spatially and spectrally calibrated Landsat observations managed within the Digital Earth Australia (DEA) platform. Using the improved tidal modelling framework of the Intertidal Extents Model v2.0 (ITEM 2.0; Sagar et al. 2017, 2018), each satellite observation in the 30 year time series could be accurately associated with a modelled tide height using the global TPX08 ocean tidal model. These satellite observations were converted into a water index (NDWI), composited into discrete ten percent intervals of the observed tide range (e.g. the lowest 10% of observed tides etc), and used to extract waterlines using a spatially consistent and automated waterline extraction procedure. Triangulated irregular network (TIN) interpolation was then used to derive elevations relative to modelled mean sea level for each 25 x 25 m Landsat pixel across approximately 15,387 sq. km of intertidal terrain along Australia's entire coastline.
@@ -6327,19 +6531,19 @@ Poor validation results for rocky shore and reef sites within the southern Kimbe
 
 The complex temporal behaviour of tides mean that a sun synchronous sensor like Landsat does not observe the full range of the tidal cycle at all locations. This causes spatial bias in the proportion of the tidal range observed in different regions, which can prevent NIDEM from providing elevation data for areas of the intertidal zone exposed or inundated at the extremes of the tidal range. Accordingly, NIDEM provides elevation data for the portion of the tidal range observed by Landsat, rather than the full tidal range.
 
-While image compositing and masking methods have been applied to remove the majority of noise and non-tidal artefacts from NIDEM, issues remain in several locations. It is recommended that the data be used with caution in the following areas: 
+While image compositing and masking methods have been applied to remove the majority of noise and non-tidal artefacts from NIDEM, issues remain in several locations. It is recommended that the data be used with caution in the following areas:
 
  - The Recherche Archipelago in southern Western Australia
  - Port Phillip Bay in Victoria
  - The eastern coast of Tasmania and King Island
  - Saunders Reef and surrounds in the northern Coral Sea
- 
+
 *Data access and additional information*
 
- - Journal article: Bishop-Taylor et al. 2019 (https://doi.org/10.1016/j.ecss.2019.03.006) 
+ - Journal article: Bishop-Taylor et al. 2019 (https://doi.org/10.1016/j.ecss.2019.03.006)
  - Data available on THREDDS: http://dapds00.nci.org.au/thredds/catalogs/fk4/nidem_1_0.html
  - eCat catalogue listing including data access: http://pid.geoscience.gov.au/dataset/ga/123678
- - CMI listing for extended metadata: https://cmi.ga.gov.au/pd/NIDEM_25_1.0.0 
+ - CMI listing for extended metadata: https://cmi.ga.gov.au/pd/NIDEM_25_1.0.0
 
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "nidem",
@@ -6348,7 +6552,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_nidem,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6358,8 +6562,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["nidem"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "NIDEM",
@@ -6372,18 +6577,18 @@ For service status information, see https://status.dea.ga.gov.au""",
         },
         {
             "title": "High Tide Low Tide Composite",
-            "abstract": """ 
-The High and Low Tide Composites product is composed of two surface reflectance composite mosaics 
-of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) 
-surface reflectance data (Li et al., 2012). These products have been produced using 
-Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation 
-of the shallow water and inter-tidal coastal regions of Australia, as observed at 
-high and low tide respectively.The composites are generated utilising the geomedian approach of 
-Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as 
-habitat mapping. The time range used for composite generation in each polygon of the mosaic is 
-tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud 
-free composite to be generated. The concepts of the Observed Tidal Range (OTR), 
-and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. 
+            "abstract": """
+The High and Low Tide Composites product is composed of two surface reflectance composite mosaics
+of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8)
+surface reflectance data (Li et al., 2012). These products have been produced using
+Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation
+of the shallow water and inter-tidal coastal regions of Australia, as observed at
+high and low tide respectively.The composites are generated utilising the geomedian approach of
+Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as
+habitat mapping. The time range used for composite generation in each polygon of the mosaic is
+tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud
+free composite to be generated. The concepts of the Observed Tidal Range (OTR),
+and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al.
 (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016).
             """,
             "layers": [
@@ -6392,26 +6597,26 @@ and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described full
                     "title": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
                     "abstract":"""
 High Tide and Low Tide Composites 2.0.0
-               
-The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA). 
+
+The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA).
 The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018).
-                
-The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping. 
+
+The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping.
 The time range used for composite generation in each polygon of the mosaic is tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The concepts of the Observed Tidal Range (OTR), and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016).
-                            
+
 *Overview*
-                
-Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass. 
+
+Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass.
 By harnessing the long archive of satellite imagery over Australia's coastal zones in the DEA and pairing the images with regional tidal modelling, the archive can be sorted by tide height rather than date, enabling the inter-tidal zone to be viewed at any stage of the tide regime.
-                
-The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions. 
-These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively. 
+
+The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions.
+These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively.
 A geomedian composite for each Landsat band is calculated from the tiles in each ensemble subset to produce the respective HOT and LOT composites. Note that Landsat 7 ETM+ observations are excluded after May 2003 due to a large number of data artifacts.
-                
-The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. 
-The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide. 
+
+The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated.
+The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide.
 The tide stages were calculated bycomparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide.
-                
+
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "high_tide_comp_20p",
@@ -6424,8 +6629,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": True,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6438,26 +6644,26 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "title": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
                     "abstract":"""
 High Tide and Low Tide Composites 2.0.0
-               
-The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA). 
+
+The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA).
 The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018).
-                
-The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping. 
+
+The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping.
 The time range used for composite generation in each polygon of the mosaic is tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The concepts of the Observed Tidal Range (OTR), and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016).
-                            
+
 *Overview*
-                
-Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass. 
+
+Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass.
 By harnessing the long archive of satellite imagery over Australia's coastal zones in the DEA and pairing the images with regional tidal modelling, the archive can be sorted by tide height rather than date, enabling the inter-tidal zone to be viewed at any stage of the tide regime.
-                
-The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions. 
-These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively. 
+
+The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions.
+These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively.
 A geomedian composite for each Landsat band is calculated from the tiles in each ensemble subset to produce the respective HOT and LOT composites. Note that Landsat 7 ETM+ observations are excluded after May 2003 due to a large number of data artifacts.
-                
-The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. 
-The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide. 
+
+The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated.
+The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide.
 The tide stages were calculated bycomparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide.
-                
+
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "low_tide_comp_20p",
@@ -6470,8 +6676,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": True,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6484,10 +6691,10 @@ For service status information, see https://status.dea.ga.gov.au""",
             "title": "Intertidal Extents Model",
             "abstract": """
 The Intertidal Extents Model (ITEM) product is a national dataset of the exposed intertidal zone;
-the land between the observed highest and lowest tide. ITEM provides the extent and topography of 
-the intertidal zone of Australia's coastline (excluding off-shore Territories). 
-This information was collated using observations in the Landsat archive since 1986. 
-ITEM can be a valuable complimentary dataset to both onshore LiDAR survey data and coarser offshore 
+the land between the observed highest and lowest tide. ITEM provides the extent and topography of
+the intertidal zone of Australia's coastline (excluding off-shore Territories).
+This information was collated using observations in the Landsat archive since 1986.
+ITEM can be a valuable complimentary dataset to both onshore LiDAR survey data and coarser offshore
 bathymetry data, enabling a more realistic representation of the land and ocean interface.
 """,
             "layers": [
@@ -6495,27 +6702,27 @@ bathymetry data, enabling a more realistic representation of the land and ocean 
                     "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Relative Layer)",
                     "name": "ITEM_V2.0.0",
                     "abstract": """
-The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
+The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
 delineating exposed areas at differing tidal heights and stages.
 
-The product differs from previous methods used to map the intertidal zone which have been predominately focused on analysing a small number of individual satellite images per location (e.g Ryu et al., 2002; Murray et al., 2012). 
+The product differs from previous methods used to map the intertidal zone which have been predominately focused on analysing a small number of individual satellite images per location (e.g Ryu et al., 2002; Murray et al., 2012).
 By utilising a full 30 year time series of observations and a global tidal model (Egbert and Erofeeva, 2002), the methodology enables us to overcome the requirement for clear, high quality observations acquired concurrent to the time of high and low tide.
 
 *Accuracy and limitations*
-                  
+
 Due the sun-synchronous nature of the various Landsat sensor observations; it is unlikely that the full physical extents of the tidal range in any cell will be observed. Hence, terminology has been adopted for the product to reflect the highest modelled tide observed in a given cell (HOT) and the lowest modelled tide observed (LOT) (see Sagar et al. 2017). These measures are relative to Mean Sea Level, and have no consistent relationship to Lowest (LAT) and Highest Astronomical Tide (HAT).
 
 The inclusion of the lowest (LMT) and highest (HMT) modelled tide values for each tidal polygon indicates the highest and lowest tides modelled for that location across the full time series by the OTPS model. The relative difference between the LOT and LMT (and HOT and HMT) heights gives an indication of the extent of the tidal range represented in the Relative Extents Model.
 
 As in ITEM v1.0, v2.0 contains some false positive land detection in open ocean regions. These are a function of the lack of data at the extremes of the observed tidal range, and features like glint and undetected cloud in these data poor regions/intervals. Methods to isolate and remove these features are in development for future versions. Issues in the DEA archive and data noise in the Esperance, WA region off Cape Le Grande and Cape Arid (Polygons 236,201,301) has resulted in significant artefacts in the model, and use of the model in this area is not recommended.
-                
+
 The Confidence layer is designed to assess the reliability of the Relative Extent Model. Within each tidal range percentile interval, the pixel-based standard deviation of the NDWI values for all observations in the interval subset is calculated. The average standard deviation across all tidal range intervals is then calculated and retained as a quality indicator in this product layer.
 
 The Confidence Layer reflects the pixel based consistency of the NDWI values within each subset of observations, based on the tidal range. Higher standard deviation values indicate water classification changes not based on the tidal cycle, and hence lower confidence in the extent model.
 
 Possible drivers of these changes include:
 
-Inadequacies of the tidal model, due perhaps to complex coastal bathymetry or estuarine structures not captured in the model. These effects have been reduced in ITEM v2.0 compared to previous versions, through the use of an improved tidal modelling frameworkChange in the structure and exposure of water/non-water features NOT driven by tidal variation. 
+Inadequacies of the tidal model, due perhaps to complex coastal bathymetry or estuarine structures not captured in the model. These effects have been reduced in ITEM v2.0 compared to previous versions, through the use of an improved tidal modelling frameworkChange in the structure and exposure of water/non-water features NOT driven by tidal variation.
 For example, movement of sand banks in estuaries, construction of man-made features (ports etc.).Terrestrial/Inland water features not influenced by the tidal cycle.
 File naming:
 THE RELATIVE EXTENTS MODEL v2.0
@@ -6534,7 +6741,7 @@ LATITUDE is the latitude of the centroid of the tidal polygon
 
 The Intertidal Extents Model product is a national scale gridded dataset characterising the spatial extents of the exposed intertidal zone, at intervals of the observed tidal range (Sagar et al. 2017).The current version (2.0) utilises all Landsat observations (5, 7, and 8) for Australian coastal regions (excluding off-shore Territories) between 1986 and 2016 (inclusive).
 
-ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands. 
+ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "item_v2",
@@ -6547,8 +6754,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["relative"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "relative_layer",
@@ -6561,27 +6769,27 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "title": "Intertidal Extents Model 25m ITEM v2.0.0 (Confidence Layer)",
                     "name": "ITEM_V2.0.0_Conf",
                     "abstract": """
-The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, 
+The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
 delineating exposed areas at differing tidal heights and stages.
 
-The product differs from previous methods used to map the intertidal zone which have been predominately focused on analysing a small number of individual satellite images per location (e.g Ryu et al., 2002; Murray et al., 2012). 
+The product differs from previous methods used to map the intertidal zone which have been predominately focused on analysing a small number of individual satellite images per location (e.g Ryu et al., 2002; Murray et al., 2012).
 By utilising a full 30 year time series of observations and a global tidal model (Egbert and Erofeeva, 2002), the methodology enables us to overcome the requirement for clear, high quality observations acquired concurrent to the time of high and low tide.
 
 *Accuracy and limitations*
-                  
+
 Due the sun-synchronous nature of the various Landsat sensor observations; it is unlikely that the full physical extents of the tidal range in any cell will be observed. Hence, terminology has been adopted for the product to reflect the highest modelled tide observed in a given cell (HOT) and the lowest modelled tide observed (LOT) (see Sagar et al. 2017). These measures are relative to Mean Sea Level, and have no consistent relationship to Lowest (LAT) and Highest Astronomical Tide (HAT).
 
 The inclusion of the lowest (LMT) and highest (HMT) modelled tide values for each tidal polygon indicates the highest and lowest tides modelled for that location across the full time series by the OTPS model. The relative difference between the LOT and LMT (and HOT and HMT) heights gives an indication of the extent of the tidal range represented in the Relative Extents Model.
 
 As in ITEM v1.0, v2.0 contains some false positive land detection in open ocean regions. These are a function of the lack of data at the extremes of the observed tidal range, and features like glint and undetected cloud in these data poor regions/intervals. Methods to isolate and remove these features are in development for future versions. Issues in the DEA archive and data noise in the Esperance, WA region off Cape Le Grande and Cape Arid (Polygons 236,201,301) has resulted in significant artefacts in the model, and use of the model in this area is not recommended.
-                
+
 The Confidence layer is designed to assess the reliability of the Relative Extent Model. Within each tidal range percentile interval, the pixel-based standard deviation of the NDWI values for all observations in the interval subset is calculated. The average standard deviation across all tidal range intervals is then calculated and retained as a quality indicator in this product layer.
 
 The Confidence Layer reflects the pixel based consistency of the NDWI values within each subset of observations, based on the tidal range. Higher standard deviation values indicate water classification changes not based on the tidal cycle, and hence lower confidence in the extent model.
 
 Possible drivers of these changes include:
 
-Inadequacies of the tidal model, due perhaps to complex coastal bathymetry or estuarine structures not captured in the model. These effects have been reduced in ITEM v2.0 compared to previous versions, through the use of an improved tidal modelling frameworkChange in the structure and exposure of water/non-water features NOT driven by tidal variation. 
+Inadequacies of the tidal model, due perhaps to complex coastal bathymetry or estuarine structures not captured in the model. These effects have been reduced in ITEM v2.0 compared to previous versions, through the use of an improved tidal modelling frameworkChange in the structure and exposure of water/non-water features NOT driven by tidal variation.
 For example, movement of sand banks in estuaries, construction of man-made features (ports etc.).Terrestrial/Inland water features not influenced by the tidal cycle.
 File naming:
 THE RELATIVE EXTENTS MODEL v2.0
@@ -6600,7 +6808,7 @@ LATITUDE is the latitude of the centroid of the tidal polygon
 
 The Intertidal Extents Model product is a national scale gridded dataset characterising the spatial extents of the exposed intertidal zone, at intervals of the observed tidal range (Sagar et al. 2017).The current version (2.0) utilises all Landsat observations (5, 7, and 8) for Australian coastal regions (excluding off-shore Territories) between 1986 and 2016 (inclusive).
 
-ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands. 
+ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 For service status information, see https://status.dea.ga.gov.au""",
                     "product_name": "item_v2_conf",
@@ -6613,8 +6821,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": True,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["stddev"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "confidence_layer",
@@ -6759,7 +6968,7 @@ Use band 2 only for a gray-scale background to the content, composition and inde
 
 For 'False Colour Mosaic' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74348
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_false_colour",
                     "bands": bands_aster,
@@ -6812,7 +7021,7 @@ Use this image to help interpret:
 
 For 'Regolith Ratios' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74349
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_regolith_ratios",
                     "bands": bands_aster,
@@ -6866,7 +7075,7 @@ Combine with Ferrous iron in MgOH and FeOH content products to look for evidence
 
 For 'AlOH Group Composition' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74356
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_aloh_group_composition",
                     "bands": bands_aster_single_band,
@@ -6928,7 +7137,7 @@ Also combine with AlOH composition to help map:
 
 For 'AlOH Group Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74355
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_aloh_group_content",
                     "bands": bands_aster_single_band,
@@ -6984,7 +7193,7 @@ Useful for mapping:
 
 For 'FeOH Group Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74358
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_feoh_group_content",
                     "bands": bands_aster_single_band,
@@ -7033,7 +7242,7 @@ Useful For:
 
 For 'Ferric Oxide Composition' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74352
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_ferric_oxide_composition",
                     "bands": bands_aster_single_band,
@@ -7089,7 +7298,7 @@ However, some information on visible colour relating in part to differences in h
 
 For 'Ferric Oxide Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74351
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_ferric_oxide_content",
                     "bands": bands_aster_single_band,
@@ -7143,7 +7352,7 @@ Useful for mapping:
 
 For 'Ferrous Iron Content in MgOH/Carbonate' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74361
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_ferrous_iron_content_in_mgoh",
                     "bands": bands_aster_single_band,
@@ -7191,7 +7400,7 @@ Also combine with the FeOH Group content product to find evidence for ferrous-be
 
 For 'Ferrous Iron Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74353
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_ferrous_iron_index",
                     "bands": bands_aster_single_band,
@@ -7235,7 +7444,7 @@ Use this image to help interpret the amount of “obscuring/complicating” gree
 
 For 'Green Vegetation Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74350
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_green_vegetation",
                     "bands": bands_aster_single_band,
@@ -7283,7 +7492,7 @@ Useful for mapping:
 
 (3) hydrothermal (e.g. volcanic) systems.
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_gypsum_index",
                     "bands": bands_aster_single_band,
@@ -7335,7 +7544,7 @@ Useful for mapping:
 
 For 'Kaolin Group Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74357
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_kaolin_group_index",
                     "bands": bands_aster_single_band,
@@ -7388,7 +7597,7 @@ Useful for mapping:
 
 For 'MgOH Group Composition' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74360
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_mgoh_group_composition",
                     "bands": bands_aster_single_band,
@@ -7442,7 +7651,7 @@ The nature (composition) of the silicate or carbonate mineral can be further ass
 
 For 'MgOH Group Content' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74359
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_mgoh_group_content",
                     "bands": bands_aster_single_band,
@@ -7500,7 +7709,7 @@ Combine with AlOH group Content (high values) and Composition (high values) prod
 
 For 'Opaque Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74354
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_opaque_index",
                     "bands": bands_aster_single_band,
@@ -7560,7 +7769,7 @@ Use in combination with quartz index, which is often correlated with the Silica 
 
 For 'TIR Silica index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74362
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_silica_index",
                     "bands": bands_aster_single_band,
@@ -7606,7 +7815,7 @@ Use in combination with Silica index to more accurately map “crystalline” qu
 
 For 'TIR Quartz Index' dataset information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74363
 
-For service status information, see https://status.dea.ga.gov.au 
+For service status information, see https://status.dea.ga.gov.au
 """,
                     "product_name": "aster_quartz_index",
                     "bands": bands_aster_single_band,
@@ -7662,7 +7871,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -7699,7 +7908,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -7736,7 +7945,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -7781,7 +7990,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "flags": {
                         "band": "water",
-                        "dataset": "wofs_albers",
+                        "product": "wofs_albers",
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -7789,7 +7998,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -7814,6 +8023,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "ls7_fc_albers",
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -7821,7 +8031,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "flags": {
                         "band": "water",
-                        "dataset": "wofs_albers",
+                        "product": "wofs_albers",
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -7829,7 +8039,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -7854,6 +8064,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product_name": "ls8_fc_albers",
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -7861,7 +8072,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "flags": {
                         "band": "water",
-                        "dataset": "wofs_albers",
+                        "product": "wofs_albers",
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -7869,7 +8080,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -7882,12 +8093,13 @@ For service status information, see https://status.dea.ga.gov.au
                     "title": "Fractional Cover 25m 100km tile (Fractional Cover Combined)",
                     "name": "fc_albers_combined",
                     "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites For service status information, see https://status.dea.ga.gov.au	
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites For service status information, see https://status.dea.ga.gov.au
 """,
                     "multi_product": True,
                     "product_names": [ "ls5_fc_albers", "ls7_fc_albers", "ls8_fc_albers" ],
                     "bands": bands_fc,
                     "resource_limits": reslim_aster,
+                    "dynamic": True,
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
@@ -7895,7 +8107,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     },
                     "flags": {
                         "band": "water",
-                        "datasets": ['wofs_albers', 'wofs_albers', 'wofs_albers'],
+                        "products": ['wofs_albers', 'wofs_albers', 'wofs_albers'],
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -7903,7 +8115,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
