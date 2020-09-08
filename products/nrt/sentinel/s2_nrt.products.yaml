@@ -9,13 +9,13 @@ metadata_type: eo_s2_nrt
 
 metadata:
     format:
-        name: GeoTIFF
+        name: GeoTiff
     instrument:
         name: MSI
     platform:
         code: SENTINEL_2A
     processing_level: Level-2
-    product_type: S2MSIARD
+    product_type: ard
 
 
 measurements:
@@ -801,13 +801,13 @@ metadata_type: eo_s2_nrt
 
 metadata:
     format:
-        name: GeoTIFF
+        name: GeoTiff
     instrument:
         name: MSI
     platform:
         code: SENTINEL_2B
     processing_level: Level-2
-    product_type: S2MSIARD
+    product_type: ard
 
 measurements:
     - name: 'azimuthal_exiting'
