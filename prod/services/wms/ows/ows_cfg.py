@@ -79,6 +79,8 @@ reslim_wamm = reslim_mangrove
 
 reslim_ls_fc = reslim_aster
 
+reslim_insar = reslim_nidem
+
 reslim_hap = {
     "wms": {
         "zoomed_out_fill_colour": [150,180,200,160],
@@ -220,11 +222,19 @@ bands_aster_single_band = {
     "Band_1": [],
 }
 
-insar_ew_bands = {
-    "ew": ["displacement", ]
+# InSAR Displacements / Velocity
+insar_disp_bands = {
+    "ew": [],
+    "ud": [],
+    "ewstd": [],
+    "upstd": []
 }
-insar_ud_bands = {
-    "ud": ["displacement", ]
+
+insar_vel_bands = {
+    "ew": [],
+    "ud": [],
+    "ewstd": [],
+    "upstd": []
 }
 
 # Reusable Chunks 3. Legends
@@ -253,6 +263,23 @@ legend_idx_percentage_by_10 = {
         "1.0": {"label": "100"},
     },
 }
+
+legend_idx_percentage_by_20 = {
+    "begin": "0.0",
+    "end": "1.0",
+    "decimal_places": 1,
+    "ticks_every": "0.2",
+    "units": "%",
+    "tick_labels": {
+        "0.0": {"label": "0"},
+        "0.2": {"label": "20"},
+        "0.4": {"label": "40"},
+        "0.6": {"label": "60"},
+        "0.8": {"label": "80"},
+        "1.0": {"label": "100"},
+    },
+}
+
 legend_idx_percentage_by_25 = {
         "units": "%",
         "decimal_places": 2,
@@ -280,7 +307,7 @@ legend_idx_twentyplus_3ticks = {
 
 legend_idx_thirtyplus_4ticks = {
     "begin": 0,
-    "end": 20,
+    "end": 30,
     "decimal_places": 0,
     "ticks_every": 10,
     "tick_labels": {
@@ -304,6 +331,38 @@ legend_idx_0_100_as_0_1_5ticks = {
     }
 }
 
+legend_idx_0_100_pixel_fc_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_ngv_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "units": "% / pixel",
+    "ticks_every": 25,
+    "title": "Percentage of Pixel that is Green Vegetation",
+    "rcParams": {
+        "font.size": 9
+    }
+}
+
+legend_idx_0_100_pixel_fc_bs_25ticks = {
+    "begin": 0,
+    "end": 100,
+    "ticks_every": 25,
+    "units": "% / pixel",
+    "title": "Percentage of Pixel that is Bare Soil",
+    "rcParams": {
+        "font.size": 9
+    }
+}
 # Reusable Chunks 3. Styles
 
 style_ls_simple_rgb = {
@@ -457,9 +516,6 @@ style_ls_ndwi = {
         {
             "value": 0.0,
             "color": "#d8e7f5",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": 0.1,
@@ -468,7 +524,6 @@ style_ls_ndwi = {
         {
             "value": 0.2,
             "color": "#73b3d8",
-            "legend": { }
         },
         {
             "value": 0.3,
@@ -477,23 +532,23 @@ style_ls_ndwi = {
         {
             "value": 0.4,
             "color": "#1563aa",
-            "legend": { }
         },
         {
             "value": 0.5,
             "color": "#08306b",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
         "begin": "0.0",
         "end": "0.5",
+        "decimal_places": 1,
+        "ticks": [ "0.0", "0.2", "0.4", "0.5"],
         "tick_labels": {
             "0.0": {
                 "prefix": "<"
             },
+            "0.2": {"label": "0.2"},
+            "0.4": {"label": "0.4"},
             "0.5": {
                 "prefix": ">"
             },
@@ -1091,12 +1146,7 @@ style_wofs_filt_freq_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": {
-        "units": "%",
-        "radix_point": 0,
-        "scale_by": 100.0,
-        "major_ticks": 0.1
-    }
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_count_wet = {
@@ -1165,9 +1215,6 @@ style_wofs_count_wet = {
         {
             "value": 400,
             "color": "#5700E3",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -1247,9 +1294,6 @@ style_wofs_count_clear = {
         {
             "value": 1000,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -1402,7 +1446,7 @@ style_wofs_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_confidence = {
@@ -1666,9 +1710,6 @@ style_wofs_summary_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": legend_idx_thirtyplus_4ticks,
@@ -1739,9 +1780,6 @@ style_wofs_seasonal_clear = {
         {
             "value": 30,
             "color": "#026900",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": legend_idx_thirtyplus_4ticks,
@@ -1818,7 +1856,7 @@ style_annual_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency = {
@@ -1891,7 +1929,7 @@ style_seasonal_wofs_summary_frequency = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_annual_wofs_summary_frequency_blue = {
@@ -1943,7 +1981,7 @@ style_annual_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_seasonal_wofs_summary_frequency_blue = {
@@ -1994,7 +2032,7 @@ style_seasonal_wofs_summary_frequency_blue = {
             "color": "#5700e3"
         }
     ],
-    "legend": legend_idx_percentage_by_10,
+    "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_obs = {
@@ -2195,9 +2233,6 @@ style_s2_ndci = {
         {
             "value": -0.1,
             "color": "#1696FF",
-            "legend": {
-                "prefix" : "<"
-            }
         },
         {
             "value": -0.1,
@@ -2206,7 +2241,6 @@ style_s2_ndci = {
         {
             "value": 0.0,
             "color": "#00FFDF",
-            "legend": { }
         },
         {
             "value": 0.1,
@@ -2215,7 +2249,6 @@ style_s2_ndci = {
         {
             "value": 0.2,
             "color": "#FFB50A",
-            "legend": { }
         },
         {
             "value": 0.4,
@@ -2224,9 +2257,6 @@ style_s2_ndci = {
         {
             "value": 0.5,
             "color": "#FF0000",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -2555,27 +2585,22 @@ style_fc_gv_10 = {
         {
             "value": 0,
             "color": "#ffffcc",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#c2e699",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#78c679",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#31a354",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#006837",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2586,16 +2611,7 @@ style_fc_gv_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
 style_fc_gv_50 = {
@@ -2633,16 +2649,7 @@ style_fc_gv_50 = {
             "color": "#006837"
         }
     ],
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2689,16 +2696,7 @@ style_fc_gv_90 = {
         }
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2726,27 +2724,22 @@ style_fc_ngv_10 = {
         {
             "value": 0,
             "color": "#ffffd4",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#fed98e",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#fe9929",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#d95f0e",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#993404",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2758,16 +2751,7 @@ style_fc_ngv_10 = {
         },
     ],
     # Emulates what we had previously
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
 }
 
 style_fc_ngv_50 = {
@@ -2805,16 +2789,7 @@ style_fc_ngv_50 = {
             "color": "#993404"
         }
     ],
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2860,16 +2835,7 @@ style_fc_ngv_90 = {
             "color": "#993404"
         }
     ],
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "units": "% / pixel",
-        "ticks_every": 25,
-        "title": "Percentage of Pixel that is Non-Green Vegetation",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -2897,27 +2863,22 @@ style_fc_bs_10 = {
         {
             "value": 0,
             "color": "#feebe2",
-            "legend": {}
         },
         {
             "value": 25,
             "color": "#fbb4b9",
-            "legend": {}
         },
         {
             "value": 50,
             "color": "#f768a1",
-            "legend": {}
         },
         {
             "value": 75,
             "color": "#c51b8a",
-            "legend": {}
         },
         {
             "value": 100,
             "color": "#7a0177",
-            "legend": {}
         }
     ],
     "pq_masks": [
@@ -2928,16 +2889,7 @@ style_fc_bs_10 = {
             "invert": True,
         },
     ],
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    }
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
 
 style_fc_bs_50 = {
@@ -2976,16 +2928,7 @@ style_fc_bs_50 = {
         }
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3032,16 +2975,7 @@ style_fc_bs_90 = {
         }
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": {
-        "begin": 0,
-        "end": 100,
-        "ticks_every": 25,
-        "units": "% / pixel",
-        "title": "Percentage of Pixel that is Bare Soil",
-        "rcParams": {
-            "font.size": 9
-        }
-    },
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
     "pq_masks": [
         {
             "flags": {
@@ -3055,7 +2989,7 @@ style_fc_bs_90 = {
 style_fc_rgb =  {
     "name": "fc_rgb",
     "title": "Three-band fractional cover",
-    "abstract": "Frachtional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
+    "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
         "red": {
             "BS_PC_50": 1.0
@@ -3103,9 +3037,6 @@ style_nidem = {
         {
             "value": -2.5,
             "color": "#440154",
-            "legend": {
-                "prefix": "<"
-            }
         },
         {
             "value": -2.34,
@@ -3142,7 +3073,6 @@ style_nidem = {
         {
             "value": -1.1,
             "color": "#2e6b8d",
-            "legend": {}
         },
         {
             "value": -0.94,
@@ -3171,7 +3101,6 @@ style_nidem = {
         {
             "value": 0.0,
             "color": "#26ac7f",
-            "legend": { }
         },
         {
             "value": 0.14,
@@ -3212,9 +3141,6 @@ style_nidem = {
         {
             "value": 1.5,
             "color": "#fde724",
-            "legend": {
-                "prefix": ">"
-            }
         }
     ],
     "legend": {
@@ -3525,9 +3451,6 @@ style_aster_aloh_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.9"
-            }
         },
         {
             "value": 1,
@@ -3576,9 +3499,6 @@ style_aster_aloh_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.3"
-            }
         }
     ],
     "legend": {
@@ -3611,9 +3531,6 @@ style_aster_aloh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.0"
-            }
         },
         {
             "value": 1,
@@ -3662,9 +3579,6 @@ style_aster_aloh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
@@ -3697,9 +3611,6 @@ style_aster_feoh_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "2.03"
-            }
         },
         {
             "value": 1,
@@ -3748,9 +3659,6 @@ style_aster_feoh_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.25"
-            }
         }
     ],
     "legend": {
@@ -3758,7 +3666,7 @@ style_aster_feoh_cont_ramp = {
         "end": "255.0",
         # note that legend value does not match the derived band value returned by GetFeatureInfo
         "tick_labels": {
-            "0.0": {"label": "2.0"},
+            "0.0": {"label": "2.03"},
             "255.0": {"label": "2.25"},
         },
         "units": "Blue is low content,\nRed is high content",
@@ -3783,9 +3691,6 @@ style_aster_ferrox_comp_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.5"
-            }
         },
         {
             "value": 1,
@@ -3834,9 +3739,6 @@ style_aster_ferrox_comp_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "3.3"
-            }
         }
     ],
     "legend": {
@@ -3869,9 +3771,6 @@ style_aster_ferrox_cont_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.1"
-            }
         },
         {
             "value": 1,
@@ -3920,9 +3819,6 @@ style_aster_ferrox_cont_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.1"
-            }
         }
     ],
     "legend": {
@@ -3955,9 +3851,6 @@ style_aster_ferrous_mgoh_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.1"
-            }
         },
         {
             "value": 1,
@@ -4006,9 +3899,6 @@ style_aster_ferrous_mgoh_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "2.0"
-            }
         }
     ],
     "legend": {
@@ -4041,9 +3931,6 @@ style_aster_ferrous_idx_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "0.75"
-            }
         },
         {
             "value": 1,
@@ -4092,9 +3979,6 @@ style_aster_ferrous_idx_ramp = {
         {
             "value": 255.0,
             "color": "#ff0000",
-            "legend": {
-                "label": "1.025"
-            }
         }
     ],
     "legend": {
@@ -4127,9 +4011,6 @@ style_aster_green_veg_ramp = {
             "value": 0.0,
             "color": "#8F3F20",
             "alpha": 0.0,
-            "legend": {
-                "label": "1.4"
-            }
         },
         {
             "value": 1,
@@ -5056,6 +4937,366 @@ style_insar_displacement = {
     }
 }
 
+###############################################################################################
+# Styling Summary of InSAR:
+# Velocities in mm/yr (for all satellites): -30 (blue) … 0 (white) … + 30 (red)
+# Uncertainty (std-dev) of velocities in mm/yr (for Envisat and Radarsat-2): 0 (white) … +6 (red)
+# Uncertainty (std-dev) of velocities in mm/yr (for ALOS): 0 (white) … +24 (red)
+# Displacements in mm (for all satellites): -100 (blue) … 0 (white) … + 100 (red)
+# Uncertainty (std-dev) of displacements in mm (for Envisat and Radarsat-2): 0 (white) … +20 (red)
+# Uncertainty (std-dev) of displacements in mm (for ALOS): 0 (white) … +80 (red)
+###############################################################################################
+
+style_insar_velocity = {
+    "name": "insar_velocity",
+    "title": "InSAR Velocity",
+    "abstract": "Average InSAR Velocity in mm/year",
+    "needed_bands": ["velocity"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "velocity",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [-30.0, 30.0],
+    "mpl_ramp": "RdBu_r",
+    "legend": {
+        "begin": -30,
+        "end": 30,
+        "ticks_every": 30,
+        "units": "mm/year",
+        "decimal_places": 0,
+    }
+}
+
+style_insar_velocity_ud = copy.deepcopy(style_insar_velocity)
+style_insar_velocity_ud["name"] = "insar_velocity_ud"
+style_insar_velocity_ud["title"] = "InSAR Velocity Up-Down "
+style_insar_velocity_ud["needed_bands"] = ["ud"]
+style_insar_velocity_ud["index_function"]["kwargs"]["band"] = "ud"
+
+style_insar_velocity_ew = copy.deepcopy(style_insar_velocity)
+style_insar_velocity_ew["name"] = "insar_velocity_ew"
+style_insar_velocity_ew["title"] = "InSAR Velocity East-West "
+style_insar_velocity_ew["needed_bands"] = ["ew"]
+style_insar_velocity_ew["index_function"]["kwargs"]["band"] = "ew"
+
+style_insar_displacement = {
+    "name": "insar_displacement",
+    "title": "InSAR Cumulative Displacement",
+    "abstract": "Cumulative InSAR Displacment mm",
+    "needed_bands": ["displacement"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "displacement",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [-100.0, 100.0],
+    "mpl_ramp": "RdBu_r",
+    "legend": {
+        "begin": -100,
+        "end": 100,
+        "units": "mm",
+        "decimal_places": 0,
+        "ticks_every": 100,
+    }
+}
+
+style_insar_disp_ud = copy.deepcopy(style_insar_displacement)
+style_insar_disp_ud["name"] = "insar_disp_ud"
+style_insar_disp_ud["title"] = "InSAR Displacement Up-Down "
+style_insar_disp_ud["needed_bands"] = ["ud"]
+style_insar_disp_ud["index_function"]["kwargs"]["band"] = "ud"
+
+style_insar_disp_ew = copy.deepcopy(style_insar_displacement)
+style_insar_disp_ew["name"] = "insar_disp_ew"
+style_insar_disp_ew["title"] = "InSAR Displacement East-West "
+style_insar_disp_ew["needed_bands"] = ["ew"]
+style_insar_disp_ew["index_function"]["kwargs"]["band"] = "ew"
+
+style_insar_stddev_l = {
+    "name": "insar_stddev_l",
+    "title": "InSAR Cumulative Displacement Uncertainty",
+    "abstract": "Uncertainty in mm",
+    "needed_bands": ["disp_std"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "disp_std",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [0.0, 80.0],
+    "mpl_ramp": "Reds",
+    "legend": {
+        "begin": 0,
+        "end": 80,
+        "ticks_every": 40,
+        "units": "mm",
+        "decimal_places": 0,
+    }
+}
+
+# Create up-down/east-west varieties using deepcopy
+style_insar_stddev_l_ud = copy.deepcopy(style_insar_stddev_l)
+style_insar_stddev_l_ud["name"] = "insar_disp_ud_std"
+style_insar_stddev_l_ud["title"] = "InSAR Displacement Uncertainty Up-Down "
+style_insar_stddev_l_ud["needed_bands"] = ["upstd"]
+style_insar_stddev_l_ud["index_function"]["kwargs"]["band"] = "upstd"
+
+style_insar_stddev_l_ew = copy.deepcopy(style_insar_stddev_l)
+style_insar_stddev_l_ew["name"] = "insar_disp_ew_std"
+style_insar_stddev_l_ew["title"] = "InSAR Displacement Uncertainty East-West "
+style_insar_stddev_l_ew["needed_bands"] = ["ewstd"]
+style_insar_stddev_l_ew["index_function"]["kwargs"]["band"] = "ewstd"
+
+# Create C-band style using a copy constructor
+style_insar_stddev_c_ud = copy.deepcopy(style_insar_stddev_l_ud)
+style_insar_stddev_c_ud["range"] = [0.0, 20.0]
+style_insar_stddev_c_ud["legend"]["begin"] = 0
+style_insar_stddev_c_ud["legend"]["end"] = 20
+style_insar_stddev_c_ud["legend"]["ticks_every"] = 10
+
+style_insar_stddev_c_ew = copy.deepcopy(style_insar_stddev_l_ew)
+style_insar_stddev_c_ew["range"] = [0.0, 20.0]
+style_insar_stddev_c_ew["legend"]["begin"] = 0
+style_insar_stddev_c_ew["legend"]["end"] = 20
+style_insar_stddev_c_ew["legend"]["ticks_every"] = 10
+
+style_insar_stddev_lv = {
+    "name": "insar_stddev_lv",
+    "title": "InSAR Velocity Uncertainty",
+    "abstract": "Uncertainty in mm",
+    "needed_bands": ["vel_std"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "pass_product_cfg": True,
+        "kwargs": {
+            "band": "vel_std",
+        }
+    },
+    # Should the index_function value be shown as a derived band in GetFeatureInfo responses.
+    # Defaults to true for style types with an index function.
+    "include_in_feature_info": False,
+    "range": [0.0, 24.0],
+    "mpl_ramp": "Reds",
+    "legend": {
+        "begin": 0,
+        "end": 24,
+        "ticks_every": 12,
+        "units": "mm/year",
+        "decimal_places": 0,
+    }
+}
+
+# Create up-down/east-west varieties using deepcopy
+style_insar_stddev_lv_ud = copy.deepcopy(style_insar_stddev_lv)
+style_insar_stddev_lv_ud["name"] = "insar_vel_ud_std"
+style_insar_stddev_lv_ud["title"] = "InSAR Velocity Uncertainty Up-Down "
+style_insar_stddev_lv_ud["needed_bands"] = ["upstd"]
+style_insar_stddev_lv_ud["index_function"]["kwargs"]["band"] = "upstd"
+
+style_insar_stddev_lv_ew = copy.deepcopy(style_insar_stddev_lv)
+style_insar_stddev_lv_ew["name"] = "insar_vel_ew_std"
+style_insar_stddev_lv_ew["title"] = "InSAR Velocity Uncertainty East-West "
+style_insar_stddev_lv_ew["needed_bands"] = ["ewstd"]
+style_insar_stddev_lv_ew["index_function"]["kwargs"]["band"] = "ewstd"
+
+# Create C-band style using a copy constructor
+style_insar_stddev_cv_ud = copy.deepcopy(style_insar_stddev_lv_ud)
+style_insar_stddev_cv_ud["range"] = [0.0, 6.0]
+style_insar_stddev_cv_ud["legend"]["begin"] = 0
+style_insar_stddev_cv_ud["legend"]["end"] = 6
+style_insar_stddev_cv_ud["legend"]["ticks_every"] = 3
+
+style_insar_stddev_cv_ew = copy.deepcopy(style_insar_stddev_lv_ew)
+style_insar_stddev_cv_ew["range"] = [0.0, 6.0]
+style_insar_stddev_cv_ew["legend"]["begin"] = 0
+style_insar_stddev_cv_ew["legend"]["end"] = 6
+style_insar_stddev_cv_ew["legend"]["ticks_every"] = 3
+
+# Layer segments for various INSAR Datasets
+alos_layers = [
+    {
+        "title": "ALOS Displacement",
+        "abstract": """
+            Cumulative displacement time series derived from combination of
+             ascending and descending line-of-sight InSAR data from six ALOS data stacks in
+             the Sydney Basin area. Original data points were interpolated to 50 m pixel spacing.
+             The time series spans the period 2008-02-11 to 2010-10-22, interpolated to 12-day sampling.
+             The reference (i.e. zero displacement) for the time series is 2008-04-23.
+            """,
+        "name": "alos_displacement",
+        # The ODC product name for the associated data product
+        "product_name": "cemp_insar_alos_displacement",
+
+        "bands": insar_disp_bands,
+        "resource_limits": reslim_insar,
+        "image_processing": {
+            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        },
+        "styling": {
+            "default_style": "insar_disp_ud",
+            "styles": [style_insar_disp_ud,
+                       style_insar_disp_ew,
+                       style_insar_stddev_l_ud,
+                       style_insar_stddev_l_ew]
+        }
+    },
+    {
+        "title": "ALOS Velocity",
+        "abstract": """
+            Velocity (linear displacement rate) of ground movement derived from combination
+             of ascending and descending line-of-sight InSAR data from six ALOS data
+             stacks in the Sydney Basin area. Original data points were interpolated to 50 m
+             pixel spacing. The velocity is calculated for the period 2006-05-16 to 2011-01-07.
+            """,
+        "name": "alos_velocity",
+        # The ODC product name for the associated data product
+        "product_name": "cemp_insar_alos_velocity",
+
+        "bands": insar_vel_bands,
+        "resource_limits": reslim_insar,
+        "image_processing": {
+            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        },
+        "styling": {
+            "default_style": "insar_velocity_ud",
+            "styles": [style_insar_velocity_ud,
+                       style_insar_velocity_ew,
+                       style_insar_stddev_lv_ud,
+                       style_insar_stddev_lv_ew]
+        }
+    },
+]
+
+envisat_layers = [
+    {
+        "title": "ENVISAT Displacement",
+        "abstract": """
+            Cumulative displacement time series derived from combination of ascending and descending
+            line-of-sight InSAR data from seven Envisat data stacks in the Sydney Basin area. Original
+            data points were interpolated to 50 m pixel spacing. The time series spans the period 2006-06-26
+            to 2010-08-28, interpolated to 12-day sampling. The reference (i.e. zero displacement) for
+            the time series is 2007-04-10.
+            """,
+        "name": "envisat_displacement",
+        # The ODC product name for the associated data product
+        "product_name": "cemp_insar_envisat_displacement",
+
+        "bands": insar_disp_bands,
+        "resource_limits": reslim_insar,
+        "image_processing": {
+            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        },
+        "styling": {
+            "default_style": "insar_disp_ud",
+            "styles": [style_insar_disp_ud,
+                       style_insar_disp_ew,
+                       style_insar_stddev_c_ud,
+                       style_insar_stddev_c_ew]
+        }
+    },
+    {
+        "title": "ENVISAT Velocity",
+        "abstract": """
+            Velocity (linear displacement rate) of ground movement derived from combination of ascending
+            and descending line-of-sight InSAR data from seven Envisat data stacks in the Sydney Basin area.
+            Original data points were interpolated to 50 m pixel spacing. The velocity is calculated for the
+            period 2006-06-02 to 2010-09-25.
+            """,
+        "name": "envisat_velocity",
+        # The ODC product name for the associated data product
+        "product_name": "cemp_insar_envisat_velocity",
+
+        "bands": insar_vel_bands,
+        "resource_limits": reslim_insar,
+        "image_processing": {
+            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        },
+        "styling": {
+            "default_style": "insar_velocity_ud",
+            "styles": [style_insar_velocity_ud,
+                       style_insar_velocity_ew,
+                       style_insar_stddev_cv_ud,
+                       style_insar_stddev_cv_ew]
+        }
+    },
+]
+
+rs2_layers = [
+    {
+        "title": "RADARSAT2 Displacement",
+        "abstract":"""
+            Cumulative displacement time series derived from combination of ascending
+             and descending line-of-sight InSAR data from two Radarsat-2 data stacks
+             in the Sydney Basin area. Original data points were interpolated to 50
+             m pixel spacing. The time series spans the period 2015-07-15 to 2019-05-31,
+             interpolated to 12-day sampling. The reference (i.e. zero displacement) for
+             the time series is 2015-07-15.
+            """,
+        "name": "radarsat2_displacement",
+        # The ODC product name for the associated data product
+        "product_name": "cemp_insar_radarsat2_displacement",
+
+        "bands": insar_disp_bands,
+        "resource_limits": reslim_insar,
+        "image_processing": {
+            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        },
+        "styling": {
+            "default_style": "insar_disp_ud",
+            "styles": [style_insar_disp_ud,
+                       style_insar_disp_ew,
+                       style_insar_stddev_c_ud,
+                       style_insar_stddev_c_ew]
+        }
+    },
+    {
+        "title": "RADARSAT2 Velocity",
+        "abstract": """
+        Velocity (linear displacement rate) of ground movement derived from combination
+         of ascending and descending line-of-sight InSAR data from two Radarsat-2 data
+         stacks in the Sydney Basin area. Original data points were interpolated to 50
+         m pixel spacing. The velocity is calculated for the period 2015-07-15 to
+         2019-05-31.
+        """,
+        "name": "radarsat2_velocity",
+        # The ODC product name for the associated data product
+        "product_name": "cemp_insar_radarsat2_velocity",
+
+        "bands": insar_vel_bands,
+        "resource_limits": reslim_insar,
+        "image_processing": {
+            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        },
+        "styling": {
+            "default_style": "insar_velocity_ud",
+            "styles": [style_insar_velocity_ud,
+                       style_insar_velocity_ew,
+                       style_insar_stddev_cv_ud,
+                       style_insar_stddev_cv_ew]
+        }
+    },
+]
+
+insar_layers = []
+insar_layers.extend(alos_layers)
+insar_layers.extend(envisat_layers)
+insar_layers.extend(rs2_layers)
+
 # Actual Configuration
 
 ows_cfg = {
@@ -5208,7 +5449,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5246,7 +5488,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5284,7 +5527,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5336,7 +5580,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5377,7 +5622,8 @@ Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Minera
                         "manual_merge": True,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["red", "green", "blue"]
                     },
                     "styling": {
@@ -5421,7 +5667,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["canopy_cover_class", "extent"]
                     },
                     "styling": {
@@ -5452,7 +5699,8 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["wofs_filtered_summary"]
                     },
                     "styling": {
@@ -5486,7 +5734,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5519,7 +5768,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5552,7 +5802,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5578,7 +5829,8 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["confidence"]
                     },
                     "styling": {
@@ -5611,7 +5863,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5636,7 +5889,8 @@ Water Observations from Space - Annual Statistics is a set of annual statistical
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5669,7 +5923,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5702,7 +5957,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5727,7 +5983,8 @@ Water Observations from Space - April to October Statistics is a set of seasonal
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5752,7 +6009,8 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5785,7 +6043,8 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_wet"]
                     },
                     "styling": {
@@ -5810,7 +6069,8 @@ Water Observations from Space - November to March Statistics is a set of seasona
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["count_clear"]
                     },
                     "styling": {
@@ -5835,7 +6095,8 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
                         "manual_merge": False,
                     },
                     "wcs": {
-                        "native_resolution": [25.0, 25.0],
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [25, -25],
                         "default_bands": ["frequency"]
                     },
                     "styling": {
@@ -5870,7 +6131,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
-                        "native_resolution": [25.0, 25.0],
+                        "native_resolution": [25, -25],
                         "default_bands": ["water"]
                     },
                     "styling": {
@@ -6213,7 +6474,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "wcs": {
                         "native_crs": "EPSG:4326",
-                        "native_resolution": [ 0.000833333333347, 0.000833333333347 ],
+                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
                         "default_bands": [ "regional", "intermediate", "local" ]
                     },
                     "legend": {
@@ -6274,7 +6535,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     },
                     "wcs": {
                         "native_crs": "EPSG:4326",
-                        "native_resolution": [ 0.000833333333347, 0.000833333333347 ],
+                        "native_resolution": [ 0.000833333333347, -0.000833333333347 ],
                         "default_bands": [ "intensity" ]
                     },
                     "styling": {
@@ -6307,7 +6568,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6317,8 +6578,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "green_veg_10",
@@ -6350,7 +6612,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6360,8 +6622,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "non_green_veg_10",
@@ -6386,7 +6649,7 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6396,8 +6659,9 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "bare_ground_10",
@@ -6430,7 +6694,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6440,8 +6704,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_50"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6474,7 +6739,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6484,8 +6749,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "green_veg_10",
@@ -6512,7 +6778,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6522,8 +6788,9 @@ For service status information, see https://status.dea.ga.gov.au
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["NPV_PC_10", "NPV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "non_green_veg_10",
@@ -6543,7 +6810,7 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6553,8 +6820,9 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "bare_ground_10",
@@ -6574,7 +6842,7 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                     "resource_limits": reslim_frac_cover,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6584,8 +6852,9 @@ Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Alb
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_90"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6653,7 +6922,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "resource_limits": reslim_nidem,
                     "flags": {
                         "band": "land",
-                        "dataset": "geodata_coast_100k",
+                        "product": "geodata_coast_100k",
                         "ignore_time": True,
                         "ignore_info_flags": [],
                     },
@@ -6663,8 +6932,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["nidem"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "NIDEM",
@@ -6729,8 +6999,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": True,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6775,8 +7046,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": True,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["red", "green", "blue"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_rgb",
@@ -6852,8 +7124,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": False,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["relative"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "relative_layer",
@@ -6918,8 +7191,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "manual_merge": True,
                     },
                     "wcs": {
+                        "native_crs": "EPSG:3577",
                         "default_bands": ["stddev"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "confidence_layer",
@@ -7967,7 +8241,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -8004,7 +8278,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -8041,7 +8315,7 @@ For service status information, see https://status.dea.ga.gov.au
 #                     "wcs": {
 #                         "native_crs": "EPSG:3577",
 #                         "default_bands": ["sdev", "edev", "bcdev"],
-#                         "native_resolution": [ 25.0, 25.0 ],
+#                         "native_resolution": [ 25, -25 ],
 #                     },
 #                     "styling": {
 #                         "default_style": "log_sdev",
@@ -8086,7 +8360,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "flags": {
                         "band": "water",
-                        "dataset": "wofs_albers",
+                        "product": "wofs_albers",
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -8094,7 +8368,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -8127,7 +8401,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "flags": {
                         "band": "water",
-                        "dataset": "wofs_albers",
+                        "product": "wofs_albers",
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -8135,7 +8409,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -8168,7 +8442,7 @@ For service status information, see https://status.dea.ga.gov.au
                     },
                     "flags": {
                         "band": "water",
-                        "dataset": "wofs_albers",
+                        "product": "wofs_albers",
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -8176,7 +8450,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -8203,7 +8477,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     },
                     "flags": {
                         "band": "water",
-                        "datasets": ['wofs_albers', 'wofs_albers', 'wofs_albers'],
+                        "products": ['wofs_albers', 'wofs_albers', 'wofs_albers'],
                         "ignore_time": False,
                         "ignore_info_flags": [],
                         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -8211,7 +8485,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     "wcs": {
                         "native_crs": "EPSG:3577",
                         "default_bands": ["BS", "PV", "NPV"],
-                        "native_resolution": [ 25.0, 25.0 ],
+                        "native_resolution": [ 25, -25 ],
                     },
                     "styling": {
                         "default_style": "simple_fc",
@@ -8222,60 +8496,60 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                 },
             ]
         },
-        # {
-        #     "title": "New South Wales InSAR",
-        #     "abstract": "InSAR Derived Displacement and Velocity over a test area in NSW",
-        #     "keywords": [
-        #         "alos-palsar",
-        #         "radarsat-2",
-        #         "sentinel-1",
-        #         "envisat",
-        #         "insar"
-        #     ],
-        #     "attribution": {
-        #         "title": "Digital Earth Australia",
-        #         "url": "http://www.ga.gov.au/dea",
-        #         "logo": {
-        #             "width": 370,
-        #             "height": 73,
-        #             "url": "https://www.ga.gov.au/__data/assets/image/0011/61589/GA-DEA-Logo-Inline-370x73.png",
-        #             "format": "image/png",
-        #         }
-        #     },
-        #     "layers": [
-        #         {
-        #             "title": "ALOS-PALSAR Displacement up-down",
-        #             "abstract": "InSAR Derived Displacement over NSW in vertical axis",
-        #             "name": "alos_displacement_ud",
-        #             "product_name": "camden_insar_alos_displacement",
-        #             "bands": insar_ud_bands,
-        #             "resource_limits": reslim_nidem,
-        #             "image_processing": {
-        #                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        #             },
-        #             "styling": {
-        #                 "default_style": "insar_displacement",
-        #                 "styles": [style_insar_displacement]
-        #             }
-        #         },
-        #         {
-        #             "title": "ALOS-PALSAR Displacement east-west",
-        #             "abstract": "InSAR Derived Displacement over NSW in lateral axis",
-        #             "name": "alos_displacement_ew",
-        #             "product_name": "camden_insar_alos_displacement",
+        {
+            # NOTE: This layer is a folder - it is NOT "named layer" that can be selected in GetMap requests
+            # Every layer must have a human-readable title
+            "title": "Camden Environmental Monitoring Project InSAR",
+            # Top level layers must have a human-readable abstract. The abstract is optional for child-layers - defaulting
+            # to that of the parent layer.
+            "abstract": """
+            These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.
+            Products are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.
+            Products are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.
+            Negative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.
+            Uncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.
+            The InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.
+            ALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.
+            A full description of the project and methods used to derive these InSAR products is given in the associated GA Record.
+            """,
+            # NOTE: Folder-layers do not have a layer "name".
 
-        #             "bands": insar_ew_bands,
-        #             "resource_limits": reslim_nidem,
-        #             "image_processing": {
-        #                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-        #             },
-        #             "styling": {
-        #                 "default_style": "insar_displacement",
-        #                 "styles": [style_insar_displacement]
-        #             }
-        #         }
-        #     ]
-        # }
+            # Keywords are optional, but can be added at any folder level and are cumulative.
+            # A layer combines its own keywords, the keywords of it's parent (and grandparent, etc) layers,
+            # and any keywords defined in the global section above.
+            #
+            "keywords": [
+                "alos-palsar",
+                "radarsat-2",
+                "sentinel-1",
+                "envisat",
+                "insar"
+            ],
+            # Attribution.  This entire section is optional.  If provided, it overrides any
+            #               attribution defined in the wms section above or any higher layers, and
+            #               applies to this layer and all child layers under this layer unless itself
+            #               overridden.
+            "attribution": {
+                # Attribution must contain at least one of ("title", "url" and "logo")
+                # A human readable title for the attribution - e.g. the name of the attributed organisation
+                "title": "Digital Earth Australia",
+                # The associated - e.g. URL for the attributed organisation
+                "url": "http://www.ga.gov.au/dea",
+                # Logo image - e.g. for the attributed organisation
+                "logo": {
+                    # Image width in pixels (optional)
+                    "width": 370,
+                    # Image height in pixels (optional)
+                    "height": 73,
+                    # URL for the logo image. (required if logo specified)
+                    "url": "https://www.ga.gov.au/__data/assets/image/0011/61589/GA-DEA-Logo-Inline-370x73.png",
+                    # Image MIME type for the logo - should match type referenced in the logo url (required if logo specified.)
+                    "format": "image/png",
+                }
+            },
+            # Folder-type layers include a list of sub-layers
+            "layers": insar_layers
+        }
             ]
         },
     ] # End of Layers List
