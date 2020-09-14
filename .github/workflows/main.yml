@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - 'dev/terria/**'
+      - .github/workflows/main.yml
   pull_request:
     branches: [ master ]
     paths:
       - 'dev/terria/**'
+      - .github/workflows/main.yml
 
 jobs:
   build:
