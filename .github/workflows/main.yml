@@ -23,3 +23,8 @@ jobs:
       run: |
         npm install jsonlint -g
         jsonlint dev/terria/dea-maps.json
+
+    - name: Run Python Linter
+      run: |
+        python -m pip install pylint boto3
+        ./check-code.sh
