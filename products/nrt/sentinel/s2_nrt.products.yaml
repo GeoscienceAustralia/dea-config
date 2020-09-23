@@ -3,19 +3,19 @@
 # New product def for NRT S2MSIARD
 ---
 
-name: s2a_msiard_nrt_granule
+name: s2a_nrt_granule
 description: Sentinel-2A MSI ARD NRT - NBAR NBART and Pixel Quality
-metadata_type: eo
+metadata_type: eo_s2_nrt
 
 metadata:
     format:
-        name: GeoTIFF
+        name: GeoTiff
     instrument:
         name: MSI
     platform:
         code: SENTINEL_2A
     processing_level: Level-2
-    product_type: S2MSIARD
+    product_type: ard
 
 
 measurements:
@@ -795,19 +795,19 @@ measurements:
 
 ---
 
-name: s2b_msiard_nrt_granule
+name: s2b_nrt_granule
 description: Sentinel-2B MSI ARD NRT - NBAR NBART and Pixel Quality
-metadata_type: eo
+metadata_type: eo_s2_nrt
 
 metadata:
     format:
-        name: GeoTIFF
+        name: GeoTiff
     instrument:
         name: MSI
     platform:
         code: SENTINEL_2B
     processing_level: Level-2
-    product_type: S2MSIARD
+    product_type: ard
 
 measurements:
     - name: 'azimuthal_exiting'
