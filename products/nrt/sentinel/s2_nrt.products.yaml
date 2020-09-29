@@ -3,6 +3,38 @@
 # New product def for NRT S2MSIARD
 ---
 
+name: s2a_l1c_aws_pds
+description: Sentinel-2A MSI L1C - AWS PDS
+metadata_type: eo
+
+metadata:
+    format:
+        name: JPEG2000
+    instrument:
+        name: MSI
+    platform:
+        code: SENTINEL_2A
+    processing_level: Level-1C
+    product_type: level1
+
+---
+
+name: s2b_l1c_aws_pds
+description: Sentinel-2B MSI L1C - AWS PDS
+metadata_type: eo
+
+metadata:
+    format:
+        name: JPEG2000
+    instrument:
+        name: MSI
+    platform:
+        code: SENTINEL_2B
+    processing_level: Level-1C
+    product_type: level1
+
+---
+
 name: s2a_nrt_granule
 description: Sentinel-2A MSI ARD NRT - NBAR NBART and Pixel Quality
 metadata_type: eo_s2_nrt
