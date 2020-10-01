@@ -3739,6 +3739,9 @@ ows_cfg = {
                 "horizontal_coord": "x",
                 "vertical_coord": "y",
             },
+            "WIKID:102171": {  # VicGrid94 alias for delwp.vic.gov.au
+                "alias": "EPSG:3111"
+            },
         },
         "allowed_urls": [
             "https://ows.services.dea.ga.gov.au",
