@@ -3603,8 +3603,8 @@ insar_layers.extend(rs2_layers)
 
 
 style_tmad_sdev_std = {
-    "name": "arcsec_sdev_std",
-    "title": "SMAD (standard)",
+    "name": "arcsec_sdev",
+    "title": "SMAD",
     "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_arcsec",
@@ -3626,8 +3626,8 @@ style_tmad_sdev_std = {
 }
 
 style_tmad_edev_std = {
-    "name": "log_edev_std",
-    "title": "EMAD (standard)",
+    "name": "log_edev",
+    "title": "EMAD",
     "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
@@ -3650,8 +3650,8 @@ style_tmad_edev_std = {
 
 
 style_tmad_bcdev_std = {
-    "name": "log_bcdev_std",
-    "title": "BCMAD (standard)",
+    "name": "log_bcdev",
+    "title": "BCMAD",
     "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
@@ -3707,42 +3707,6 @@ style_tmad_rgb_std = {
         },
     },
     "additional_bands": ["sdev", "bcdev", "edev"],
-}
-
-style_tmad_sdev_sens = {
-    "inherits": style_tmad_sdev_std,
-    "name": "arcsec_sdev_sens",
-    "title": "SMAD (sensitive)",
-    "abstract": "Good for arid land and desert",
-    "index_function": {
-        "kwargs": {
-            "scale_from": [0.001, 0.15],
-        }
-    }
-}
-
-style_tmad_edev_sens = {
-    "inherits": style_tmad_edev_std,
-    "name": "log_edev_sens",
-    "title": "EMAD (sensitive)",
-    "abstract": "Good for arid land and desert",
-    "index_function": {
-        "kwargs": {
-            "scale_from": [0.019, 0.1],
-        }
-    }
-}
-
-style_tmad_bcdev_sens = {
-    "inherits": style_tmad_bcdev_std,
-    "name": "log_bcdev_sens",
-    "title": "BCMAD (sensitive)",
-    "abstract": "Good for arid land and desert",
-    "index_function": {
-        "kwargs": {
-            "scale_from": [0.010, 0.13],
-        }
-    }
 }
 
 style_tmad_rgb_sens = {
@@ -6986,9 +6950,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_edev_std,
                                     style_tmad_bcdev_std,
                                     style_tmad_rgb_std,
-                                    style_tmad_sdev_sens,
-                                    style_tmad_edev_sens,
-                                    style_tmad_bcdev_sens,
                                     style_tmad_rgb_sens,
                                 ],
                             },
@@ -7033,9 +6994,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_edev_std,
                                     style_tmad_bcdev_std,
                                     style_tmad_rgb_std,
-                                    style_tmad_sdev_sens,
-                                    style_tmad_edev_sens,
-                                    style_tmad_bcdev_sens,
                                     style_tmad_rgb_sens,
                                 ],
                             },
@@ -7080,9 +7038,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_edev_std,
                                     style_tmad_bcdev_std,
                                     style_tmad_rgb_std,
-                                    style_tmad_sdev_sens,
-                                    style_tmad_edev_sens,
-                                    style_tmad_bcdev_sens,
                                     style_tmad_rgb_sens,
                                 ],
                             },
