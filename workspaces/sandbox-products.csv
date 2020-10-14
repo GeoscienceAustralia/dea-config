@@ -40,8 +40,14 @@ mangrove_cover,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/
 multi_scale_topographic_position,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/mstp/multi_scale_topographic_position.yaml,
 nidem,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/nidem/nidem.yaml,s3://dea-public-data/nidem/v1.0.0
 s1_gamma0_geotif_scene,,s3://dea-public-data/odc-conf/sentinel_examples/Sentinel-1/C-SAR/GRD/2017
-s2a_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/b8d30d22e39b66b791b3ac8d629868fa33586313/products/nrt/sentinel/s2_nrt.products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
-s2b_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/b8d30d22e39b66b791b3ac8d629868fa33586313/products/nrt/sentinel/s2_nrt.products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
+s2a_ard_granule,https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/28f8c1fe922f435722beebdade467c6f9ba52deb/digitalearthau/config/products/ga_s2_ard.yaml,//
+s2a_l1c_aws_pds,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/nrt/sentinel/products.yaml,
+s2a_level1c_granule,https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/e23930dcf8ddb1db1958d22de3299622bba67966/digitalearthau/config/products/s2_granules.odc-product.yaml,
+s2a_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/nrt/sentinel/products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
+s2b_ard_granule,https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/28f8c1fe922f435722beebdade467c6f9ba52deb/digitalearthau/config/products/ga_s2_ard.yaml,//
+s2b_l1c_aws_pds,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/nrt/sentinel/products.yaml,
+s2b_level1c_granule,https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/e23930dcf8ddb1db1958d22de3299622bba67966/digitalearthau/config/products/s2_granules.odc-product.yaml,
+s2b_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/nrt/sentinel/products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
 s2_gm_seasonal,,s3://dea-public-data-dev/temp/s2_gm/seasonal/v0/combined
 s2_tsmask,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/s2_tsmask/s2a_s2b_tsmask.odc-product.yaml,s3://dea-public-data-dev/L2/sentinel-2-tsmask/S2_MSI_TSmask
 sentinel2_wofs_def,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/wofs/sentinel2_wofs_def.yaml,s3://dea-public-data-dev/wofs/ga_s2am_wofs_2
