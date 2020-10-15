@@ -3601,13 +3601,14 @@ insar_layers.extend(alos_layers)
 insar_layers.extend(envisat_layers)
 insar_layers.extend(rs2_layers)
 
-style_tmad_sdev_new = {
-    "name": "arcsec_sdev_new",
-    "title": "sdev new",
-    "abstract": "",
+
+style_tmad_sdev_std = {
+    "name": "arcsec_sdev",
+    "title": "SMAD",
+    "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_arcsec",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["sdev"],
@@ -3624,13 +3625,13 @@ style_tmad_sdev_new = {
     },
 }
 
-style_tmad_edev_new = {
-    "name": "log_edev_new",
-    "title": "edev new",
-    "abstract": "",
+style_tmad_edev_std = {
+    "name": "log_edev",
+    "title": "EMAD",
+    "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band": "edev", "scale_from": [0.025, 0.1], "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["edev"],
@@ -3648,13 +3649,13 @@ style_tmad_edev_new = {
 }
 
 
-style_tmad_bcdev_new = {
-    "name": "log_bcdev_new",
-    "title": "bcdev new",
-    "abstract": "",
+style_tmad_bcdev_std = {
+    "name": "log_bcdev",
+    "title": "BCMAD",
+    "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "bcdev",
             "scale_from": [0.025, 0.13],
@@ -3675,14 +3676,14 @@ style_tmad_bcdev_new = {
     },
 }
 
-style_tmad_rgb = {
-    "name": "tmad_rgb",
-    "title": "TMAD multi-band false-colour",
-    "abstract": "",
+style_tmad_rgb_std = {
+    "name": "tmad_rgb_std",
+    "title": "TMAD multi-band false-colour (standard)",
+    "abstract": "Good for cropland and forest",
     "components": {
         "red": {
             "function": "datacube_ows.band_utils.single_band_arcsec",
-            "pass_product_cfg": True,
+            "mapped_bands": True,
             "kwargs": {
                 "band": "sdev",
                 "scale_from": [0.017, 0.15],
@@ -3690,7 +3691,7 @@ style_tmad_rgb = {
         },
         "green": {
             "function": "datacube_ows.band_utils.single_band_offset_log",
-            "pass_product_cfg": True,
+            "mapped_bands": True,
             "kwargs": {
                 "band": "edev",
                 "scale_from": [0.025, 0.1],
@@ -3707,6 +3708,165 @@ style_tmad_rgb = {
     },
     "additional_bands": ["sdev", "bcdev", "edev"],
 }
+
+style_tmad_rgb_sens = {
+    "inherits": style_tmad_rgb_std,
+    "name": "tmad_rgb_sens",
+    "title": "BCMAD (sensitive)",
+    "abstract": "Good for arid land and desert",
+    "components": {
+        "red": {
+            "kwargs": {
+                "scale_from": [0.001, 0.15],
+            }
+        },
+        "green": {
+            "kwargs": {
+                "scale_from": [0.019, 0.1],
+            }
+        },
+        "blue": {
+            "kwargs": {
+                "scale_from": [0.010, 0.13],
+            }
+        },
+    }
+}
+
+
+
+style_tmad_sdev = {
+    "name": "log_sdev",
+    "title": "sdev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "sdev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["sdev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+        }
+    ],
+    "legend": {
+        "start": "0.1",
+        "end": "0.9",
+        "ticks": ["0.1", "0.9"],
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
+    }
+}
+
+style_tmad_edev = {
+    "name": "log_edev",
+    "title": "edev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "edev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["edev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+        }
+    ],
+    "legend": {
+        "start": "0.1",
+        "end": "0.9",
+        "ticks": ["0.1", "0.9"],
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
+    }
+}
+
+style_tmad_bcdev = {
+    "name": "log_bcdev",
+    "title": "bcdev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "bcdev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["bcdev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+        }
+    ],
+    "legend": {
+        "start": "0.1",
+        "end": "0.9",
+        "ticks": ["0.1", "0.9"],
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
+    }
+}
+
 # End of Reuseable
 
 # Actual Configuration
@@ -6621,10 +6781,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_sdev,
                                     style_tmad_edev,
                                     style_tmad_bcdev,
-                                    style_tmad_sdev_new,
-                                    style_tmad_edev_new,
-                                    style_tmad_bcdev_new,
-                                    style_tmad_rgb,
+                                    style_tmad_sdev_std,
+                                    style_tmad_edev_std,
+                                    style_tmad_bcdev_std,
+                                    style_tmad_rgb_std,
+                                    style_tmad_rgb_sens,
                                 ],
                             },
                         },
@@ -6664,10 +6825,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_sdev,
                                     style_tmad_edev,
                                     style_tmad_bcdev,
-                                    style_tmad_sdev_new,
-                                    style_tmad_edev_new,
-                                    style_tmad_bcdev_new,
-                                    style_tmad_rgb,
+                                    style_tmad_sdev_std,
+                                    style_tmad_edev_std,
+                                    style_tmad_bcdev_std,
+                                    style_tmad_rgb_std,
+                                    style_tmad_rgb_sens,
                                 ],
                             },
                         },
@@ -6707,10 +6869,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_sdev,
                                     style_tmad_edev,
                                     style_tmad_bcdev,
-                                    style_tmad_sdev_new,
-                                    style_tmad_edev_new,
-                                    style_tmad_bcdev_new,
-                                    style_tmad_rgb,
+                                    style_tmad_sdev_std,
+                                    style_tmad_edev_std,
+                                    style_tmad_bcdev_std,
+                                    style_tmad_rgb_std,
+                                    style_tmad_rgb_sens,
                                 ],
                             },
                         },
