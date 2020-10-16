@@ -56,6 +56,7 @@ multi_scale_topographic_position,https://raw.githubusercontent.com/GeoscienceAus
 nidem,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/nidem/nidem.yaml,s3://dea-public-data/nidem/v1.0.0
 s2a_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/b8d30d22e39b66b791b3ac8d629868fa33586313/products/nrt/sentinel/s2_nrt.products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
 s2b_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/b8d30d22e39b66b791b3ac8d629868fa33586313/products/nrt/sentinel/s2_nrt.products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
+s2_tsmask,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/s2_tsmask/s2a_s2b_tsmask.odc-product.yaml,s3://dea-public-data-dev/L2/sentinel-2-tsmask/S2_MSI_TSmask
 sentinel2_wofs_nrt,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/nrt/wofs/sentinel2_wofs.yaml,s3://dea-public-data/WOfS/nrt/v2.1.6/s2/combined
 water_bodies,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/water_bodies/water_bodies.yaml,s3://dea-public-data/projects/WaterBodies
 weathering_intensity,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/weathering_intensity/weathering_intensity.yaml,s3://dea-public-data/weathering-intensity/v1.0.1
