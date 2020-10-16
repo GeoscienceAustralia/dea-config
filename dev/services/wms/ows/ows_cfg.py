@@ -3712,7 +3712,7 @@ style_tmad_rgb_std = {
 style_tmad_rgb_sens = {
     "inherits": style_tmad_rgb_std,
     "name": "tmad_rgb_sens",
-    "title": "BCMAD (sensitive)",
+    "title": "TMAD multi-band false-colour (sensitive)",
     "abstract": "Good for arid land and desert",
     "components": {
         "red": {
