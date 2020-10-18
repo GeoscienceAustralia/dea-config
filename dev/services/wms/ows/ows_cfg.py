@@ -3601,13 +3601,14 @@ insar_layers.extend(alos_layers)
 insar_layers.extend(envisat_layers)
 insar_layers.extend(rs2_layers)
 
-style_tmad_sdev_new = {
-    "name": "arcsec_sdev_new",
-    "title": "sdev new",
-    "abstract": "",
+
+style_tmad_sdev_std = {
+    "name": "arcsec_sdev",
+    "title": "SMAD",
+    "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_arcsec",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["sdev"],
@@ -3624,13 +3625,13 @@ style_tmad_sdev_new = {
     },
 }
 
-style_tmad_edev_new = {
-    "name": "log_edev_new",
-    "title": "edev new",
-    "abstract": "",
+style_tmad_edev_std = {
+    "name": "log_edev",
+    "title": "EMAD",
+    "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band": "edev", "scale_from": [0.025, 0.1], "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["edev"],
@@ -3648,13 +3649,13 @@ style_tmad_edev_new = {
 }
 
 
-style_tmad_bcdev_new = {
-    "name": "log_bcdev_new",
-    "title": "bcdev new",
-    "abstract": "",
+style_tmad_bcdev_std = {
+    "name": "log_bcdev",
+    "title": "BCMAD",
+    "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "bcdev",
             "scale_from": [0.025, 0.13],
@@ -3675,14 +3676,14 @@ style_tmad_bcdev_new = {
     },
 }
 
-style_tmad_rgb = {
-    "name": "tmad_rgb",
-    "title": "TMAD multi-band false-colour",
-    "abstract": "",
+style_tmad_rgb_std = {
+    "name": "tmad_rgb_std",
+    "title": "TMAD multi-band false-colour (standard)",
+    "abstract": "Good for cropland and forest",
     "components": {
         "red": {
             "function": "datacube_ows.band_utils.single_band_arcsec",
-            "pass_product_cfg": True,
+            "mapped_bands": True,
             "kwargs": {
                 "band": "sdev",
                 "scale_from": [0.017, 0.15],
@@ -3690,7 +3691,7 @@ style_tmad_rgb = {
         },
         "green": {
             "function": "datacube_ows.band_utils.single_band_offset_log",
-            "pass_product_cfg": True,
+            "mapped_bands": True,
             "kwargs": {
                 "band": "edev",
                 "scale_from": [0.025, 0.1],
@@ -3707,6 +3708,165 @@ style_tmad_rgb = {
     },
     "additional_bands": ["sdev", "bcdev", "edev"],
 }
+
+style_tmad_rgb_sens = {
+    "inherits": style_tmad_rgb_std,
+    "name": "tmad_rgb_sens",
+    "title": "TMAD multi-band false-colour (sensitive)",
+    "abstract": "Good for arid land and desert",
+    "components": {
+        "red": {
+            "kwargs": {
+                "scale_from": [0.001, 0.15],
+            }
+        },
+        "green": {
+            "kwargs": {
+                "scale_from": [0.019, 0.1],
+            }
+        },
+        "blue": {
+            "kwargs": {
+                "scale_from": [0.010, 0.13],
+            }
+        },
+    }
+}
+
+
+
+style_tmad_sdev = {
+    "name": "log_sdev",
+    "title": "sdev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "sdev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["sdev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+        }
+    ],
+    "legend": {
+        "start": "0.1",
+        "end": "0.9",
+        "ticks": ["0.1", "0.9"],
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
+    }
+}
+
+style_tmad_edev = {
+    "name": "log_edev",
+    "title": "edev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "edev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["edev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+        }
+    ],
+    "legend": {
+        "start": "0.1",
+        "end": "0.9",
+        "ticks": ["0.1", "0.9"],
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
+    }
+}
+
+style_tmad_bcdev = {
+    "name": "log_bcdev",
+    "title": "bcdev",
+    "abstract": "",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_log",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "bcdev",
+            "scale_factor": -100.0,
+            "exponent": 1/1000.0
+        }
+    },
+    "needed_bands": ["bcdev"],
+    "color_ramp": [
+        {
+            'value': 0.0,
+            'color': '#ffffff',
+            'alpha': 0
+        },
+        {
+            'value': 0.1,
+            'color': '#A02406',
+        },
+        {
+            'value': 0.5,
+            'color': '#FCF24B'
+        },
+        {
+            'value': 0.9,
+            'color': '#0CCD1D',
+        }
+    ],
+    "legend": {
+        "start": "0.1",
+        "end": "0.9",
+        "ticks": ["0.1", "0.9"],
+        "tick_labels": {
+            "0.1": {"label": "High\ntmad"},
+            "0.9": {"label": "Low\ntmad"},
+        }
+    }
+}
+
 # End of Reuseable
 
 # Actual Configuration
@@ -3738,6 +3898,9 @@ ows_cfg = {
                 "geographic": False,
                 "horizontal_coord": "x",
                 "vertical_coord": "y",
+            },
+            "WIKID:102171": {  # VicGrid94 alias for delwp.vic.gov.au
+                "alias": "EPSG:3111"
             },
         },
         "allowed_urls": [
@@ -4785,171 +4948,6 @@ For service status information, see https://status.dea.ga.gov.au
                             "styling": {
                                 "default_style": "water_classifier",
                                 "styles": [style_s2_water_classifier],
-                            },
-                        },
-                    ],
-                },
-                {
-                    "title": "Sentinel Definitive",
-                    "abstract": """
-	This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variationscaused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
-""",
-                    "layers": [
-                        {
-                            "name": "s2_ard_granule_nbar_t",
-                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2 (A and B combined))",
-                            "abstract": """
-This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
-The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
-
-The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
-The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
-- Influence on the remote sensing signal from nearby land and/or atmospheric effects
-- Optically shallow water
-- Cloud cover
-Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
-
-For more information see http://pid.geoscience.gov.au/dataset/ga/129684
-
-For service status information, see https://status.dea.ga.gov.au
-""",
-                            "multi_product": True,
-                            "product_names": ["s2a_ard_granule", "s2b_ard_granule"],
-                            "bands": bands_sentinel2,
-                            "resource_limits": reslim_s2_ard,
-                            "dynamic": True,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [10.0, 10.0],
-                                "default_bands": [
-                                    "nbart_red",
-                                    "nbart_green",
-                                    "nbart_blue",
-                                ],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [
-                                    style_s2_simple_rgb,
-                                    style_s2_irg,
-                                    style_s2_ndvi,
-                                    style_s2_ndwi,
-                                    style_s2_mndwi,
-                                    style_s2_ndci,
-                                    style_s2_pure_aerosol,
-                                    style_s2_pure_blue,
-                                    style_s2_pure_green,
-                                    style_s2_pure_red,
-                                    style_s2_pure_redge_1,
-                                    style_s2_pure_redge_2,
-                                    style_s2_pure_redge_3,
-                                    style_s2_pure_nir,
-                                    style_s2_pure_narrow_nir,
-                                    style_s2_pure_swir1,
-                                    style_s2_pure_swir2,
-                                    style_s2_nbr,
-                                ],
-                            },
-                        },
-                        {
-                            "name": "s2b_ard_granule_nbar_t",
-                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
-                            "abstract": """
-This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
-""",
-                            "product_name": "s2b_ard_granule",
-                            "bands": bands_sentinel2,
-                            "resource_limits": reslim_s2_ard,
-                            "dynamic": True,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [10.0, 10.0],
-                                "default_bands": [
-                                    "nbart_red",
-                                    "nbart_green",
-                                    "nbart_blue",
-                                ],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [
-                                    style_s2_simple_rgb,
-                                    style_s2_irg,
-                                    style_s2_ndvi,
-                                    style_s2_ndwi,
-                                    style_s2_mndwi,
-                                    style_s2_ndci,
-                                    style_s2_pure_aerosol,
-                                    style_s2_pure_blue,
-                                    style_s2_pure_green,
-                                    style_s2_pure_red,
-                                    style_s2_pure_redge_1,
-                                    style_s2_pure_redge_2,
-                                    style_s2_pure_redge_3,
-                                    style_s2_pure_nir,
-                                    style_s2_pure_narrow_nir,
-                                    style_s2_pure_swir1,
-                                    style_s2_pure_swir2,
-                                    style_s2_nbr,
-                                ],
-                            },
-                        },
-                        {
-                            "name": "s2a_ard_granule_nbar_t",
-                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
-                            "abstract": """
-	This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
-""",
-                            "product_name": "s2a_ard_granule",
-                            "bands": bands_sentinel2,
-                            "resource_limits": reslim_s2_ard,
-                            "dynamic": True,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [10.0, 10.0],
-                                "default_bands": [
-                                    "nbart_red",
-                                    "nbart_green",
-                                    "nbart_blue",
-                                ],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [
-                                    style_s2_simple_rgb,
-                                    style_s2_irg,
-                                    style_s2_ndvi,
-                                    style_s2_ndwi,
-                                    style_s2_mndwi,
-                                    style_s2_ndci,
-                                    style_s2_pure_aerosol,
-                                    style_s2_pure_blue,
-                                    style_s2_pure_green,
-                                    style_s2_pure_red,
-                                    style_s2_pure_redge_1,
-                                    style_s2_pure_redge_2,
-                                    style_s2_pure_redge_3,
-                                    style_s2_pure_nir,
-                                    style_s2_pure_narrow_nir,
-                                    style_s2_pure_swir1,
-                                    style_s2_pure_swir2,
-                                    style_s2_nbr,
-                                ],
                             },
                         },
                     ],
@@ -6783,10 +6781,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_sdev,
                                     style_tmad_edev,
                                     style_tmad_bcdev,
-                                    style_tmad_sdev_new,
-                                    style_tmad_edev_new,
-                                    style_tmad_bcdev_new,
-                                    style_tmad_rgb,
+                                    style_tmad_sdev_std,
+                                    style_tmad_edev_std,
+                                    style_tmad_bcdev_std,
+                                    style_tmad_rgb_std,
+                                    style_tmad_rgb_sens,
                                 ],
                             },
                         },
@@ -6826,10 +6825,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_sdev,
                                     style_tmad_edev,
                                     style_tmad_bcdev,
-                                    style_tmad_sdev_new,
-                                    style_tmad_edev_new,
-                                    style_tmad_bcdev_new,
-                                    style_tmad_rgb,
+                                    style_tmad_sdev_std,
+                                    style_tmad_edev_std,
+                                    style_tmad_bcdev_std,
+                                    style_tmad_rgb_std,
+                                    style_tmad_rgb_sens,
                                 ],
                             },
                         },
@@ -6869,10 +6869,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                                     style_tmad_sdev,
                                     style_tmad_edev,
                                     style_tmad_bcdev,
-                                    style_tmad_sdev_new,
-                                    style_tmad_edev_new,
-                                    style_tmad_bcdev_new,
-                                    style_tmad_rgb,
+                                    style_tmad_sdev_std,
+                                    style_tmad_edev_std,
+                                    style_tmad_bcdev_std,
+                                    style_tmad_rgb_std,
+                                    style_tmad_rgb_sens,
                                 ],
                             },
                         },
