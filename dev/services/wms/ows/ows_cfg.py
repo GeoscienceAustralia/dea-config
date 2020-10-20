@@ -5370,8 +5370,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "native_resolution": [25, -25],
                             },
                             "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [style_fc_simple_rgb],
+                                "default_style": "fc_rgb",
+                                "styles": [style_fc_rgb],
                             },
                         }
                     ],
