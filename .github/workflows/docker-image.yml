@@ -4,6 +4,9 @@ on:
   push:
     branches: [ master ]
 
+  release:
+    types: [created, edited, published]
+
 jobs:
 
   build:
@@ -16,24 +19,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+
     - name: Install dependencies
       run: python -m pip install pylint boto3
 
     - name: Run linting and tests
       run: ./check-code.sh
-
-    - name: Setup Docker image tags and metadata
-      id: prep
-      run: |
-        # omg, I'm sure this can be made more readable with the extra context available in GitHub Actions
-        CONFIG_TAG=$(git describe --tags | awk -F'[-.]' '{if ($4!="" && $5!="") print $1"."$2"."$3+1"-unstable."$4"."$5; else print $1"."$2"."$3;}')
-        DOCKER_IMAGE=geoscienceaustralia/dea-datakube-config
-        
-        TAGS="${DOCKER_IMAGE}:${CONFIG_TAG},${DOCKER_IMAGE}:latest"
-
-        echo ::set-output name=tags::${TAGS}
-        echo ::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-
 
     - name: Login to DockerHub
       uses: docker/login-action@v1
@@ -41,13 +32,17 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push
-      uses: docker/build-push-action@v2
-      with:
-        push: true
-        tags: ${{ steps.prep.outputs.tags }}
-        labels: |
-          org.opencontainers.image.source=${{ github.event.repository.clone_url }}
-          org.opencontainers.image.created=${{ steps.prep.outputs.created }}
-          org.opencontainers.image.revision=${{ github.sha }}
+    - name: Push to DockerHub (master branch or tagged release only)
+      if: github.ref == 'refs/heads/master' || github.event_name == 'release'
+      run: |
+        # figure out extra tag
+        git fetch --prune --unshallow 2> /dev/null || true
+        tag=$(git describe --tags)
+        DOCKER_IMAGE=geoscienceaustralia/dea-datakube-config
+        # build local docker image
+        docker build -t ${DOCKER_IMAGE}:latest .
+        # tag and push images
+        docker tag ${DOCKER_IMAGE}:latest ${DOCKER_IMAGE}:${tag}
+        docker push ${DOCKER_IMAGE}:latest
+        docker push ${DOCKER_IMAGE}:${tag}
 
