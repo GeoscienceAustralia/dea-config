@@ -38,14 +38,16 @@ specification:
           - 1.02551
 
 output:
-  location: s3://dea-public-data-dev/alchemist/test-2020-10/
+  location: s3://dea-public-data-dev/derivative/
   nodata: 255
   dtype: uint8
   preview_image: [bs, pv, npv]
   explorer_url: https://explorer.dev.dea.ga.gov.au
   write_data_settings:
     overview_resampling: average
+  reference_source_dataset: True
   write_stac: True
+  inherit_geometry: True
 
   metadata:
     product_family: fc
