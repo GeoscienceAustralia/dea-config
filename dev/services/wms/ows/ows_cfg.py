@@ -3971,6 +3971,33 @@ ows_cfg = {
         "max_width": 512,
         "max_height": 512,
     },  # END OF wms SECTION
+    "wmts": {
+        # Config for WMTS service, for all products/layers
+        "tile_matrix_sets": {
+            "EPSG:3111": {
+                "crs": "EPSG:3111",
+                "matrix_origin": (1786000.0, 3081000.0),
+                "tile_size": (512, 512),
+                "scale_set": [
+                    7559538.928601667,
+                    3779769.4643008336,
+                    1889884.7321504168,
+                    944942.3660752084,
+                    472471.1830376042,
+                    236235.5915188021,
+                    94494.23660752083,
+                    47247.11830376041,
+                    23623.559151880207,
+                    9449.423660752083,
+                    4724.711830376042,
+                    2362.355915188021,
+                    1181.1779575940104,
+                    755.9538928601667,
+                ],
+                "matrix_exponent_initial_offsets": (1, 0),
+            },
+        }
+    }, # END OF wmts SECTION
     "wcs": {
         # Config for WCS service, for all products/coverages
         "default_geographic_CRS": "EPSG:4326",
