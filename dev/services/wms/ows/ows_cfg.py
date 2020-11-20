@@ -3808,17 +3808,17 @@ style_tmad_rgb_sens = {
     "components": {
         "red": {
             "kwargs": {
-                "scale_from": [0.001, 0.15],
+                "scale_from": [0.0005, 0.11],
             }
         },
         "green": {
             "kwargs": {
-                "scale_from": [0.019, 0.1],
+                "scale_from": [0.010, 0.09],
             }
         },
         "blue": {
             "kwargs": {
-                "scale_from": [0.010, 0.13],
+                "scale_from": [0.011, 0.07],
             }
         },
     }
