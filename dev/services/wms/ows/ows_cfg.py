@@ -335,6 +335,15 @@ legend_idx_0_100_as_0_1_5ticks = {
     },
 }
 
+legend_tcw_400ticks = {
+    "begin": -1200,
+    "end": 0,
+    "units": "Tasseled Cap Wetness Index",
+    "decimal_places": 0,
+    "ticks_every": 400,
+    "rcParams": {"font.size": 9},
+}
+
 legend_idx_0_100_pixel_fc_25ticks = {
     "begin": 0,
     "end": 100,
@@ -1762,7 +1771,7 @@ style_wii = {
 
 style_tcw_10 = {
     "name": "tcw_10_percentile",
-    "title": "Tasseled Cap Wetness 10th Percentile",
+    "title": "",
     "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_10"],
         "index_function": {
@@ -1774,19 +1783,13 @@ style_tcw_10 = {
     },
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",
-    "legend": {
-        "begin": -1200,
-        "end": 0,
-        "units": "Tasseled Cap Wetness Index",
-        "decimal_places": 0,
-        "ticks_every": 1000,
-    },
+    "legend": legend_tcw_400ticks,
 }
 
 style_tcw_50 = {
     "name": "tcw_50_percentile",
-    "title": "Tasseled Cap Wetness 50th Percentile",
-    "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "title": "",
+    "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_50"],
         "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -1797,19 +1800,13 @@ style_tcw_50 = {
     },
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",
-    "legend": {
-        "begin": -1200,
-        "end": 0,
-        "units": "Tasseled Cap Wetness Index",
-        "decimal_places": 0,
-        "ticks_every": 1000,
-    },
+    "legend": legend_tcw_400ticks,
 }
 
 style_tcw_90 = {
     "name": "tcw_90_percentile",
-    "title": "Tasseled Cap Wetness 90th Percentile",
-    "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "title": "",
+    "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_90"],
         "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -1820,13 +1817,7 @@ style_tcw_90 = {
     },
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",
-    "legend": {
-        "begin": -1200,
-        "end": 0,
-        "units": "Tasseled Cap Wetness Index",
-        "decimal_places": 0,
-        "ticks_every": 1000,
-    },
+    "legend": legend_tcw_400ticks,
 }
 
 style_fc_gv_10 = {
@@ -3808,17 +3799,17 @@ style_tmad_rgb_sens = {
     "components": {
         "red": {
             "kwargs": {
-                "scale_from": [0.001, 0.15],
+                "scale_from": [0.0005, 0.11],
             }
         },
         "green": {
             "kwargs": {
-                "scale_from": [0.019, 0.1],
+                "scale_from": [0.010, 0.09],
             }
         },
         "blue": {
             "kwargs": {
-                "scale_from": [0.010, 0.13],
+                "scale_from": [0.011, 0.07],
             }
         },
     }
