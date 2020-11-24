@@ -185,6 +185,12 @@ bands_weathering = {
     "intensity": [],
 }
 
+bands_tcw_percentile = {
+    "TCW_PC_10": [],
+    "TCW_PC_50": [],
+    "TCW_PC_90": [],
+}
+
 bands_fc_percentile = {
     "PV_PC_10": [],
     "PV_PC_50": [],
@@ -327,6 +333,15 @@ legend_idx_0_100_as_0_1_5ticks = {
         "80": {"label": "0.8"},
         "100": {"label": "1.0"},
     },
+}
+
+legend_tcw_400ticks = {
+    "begin": -1200,
+    "end": 0,
+    "units": "Tasseled Cap Wetness Index",
+    "decimal_places": 0,
+    "ticks_every": 400,
+    "rcParams": {"font.size": 9},
 }
 
 legend_idx_0_100_pixel_fc_25ticks = {
@@ -1752,6 +1767,57 @@ style_wii = {
         },
         "strip_location": [0.1, 0.5, 0.8, 0.15],
     },
+}
+
+style_tcw_10 = {
+    "name": "tcw_10_percentile",
+    "title": "",
+    "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "needed_bands": ["TCW_PC_10"],
+        "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "TCW_PC_10",
+        },
+    },
+    "range": [-1200.0, 0.0],
+    "mpl_ramp": "gist_earth_r",
+    "legend": legend_tcw_400ticks,
+}
+
+style_tcw_50 = {
+    "name": "tcw_50_percentile",
+    "title": "",
+    "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "needed_bands": ["TCW_PC_50"],
+        "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "TCW_PC_50",
+        },
+    },
+    "range": [-1200.0, 0.0],
+    "mpl_ramp": "gist_earth_r",
+    "legend": legend_tcw_400ticks,
+}
+
+style_tcw_90 = {
+    "name": "tcw_90_percentile",
+    "title": "",
+    "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "needed_bands": ["TCW_PC_90"],
+        "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "TCW_PC_90",
+        },
+    },
+    "range": [-1200.0, 0.0],
+    "mpl_ramp": "gist_earth_r",
+    "legend": legend_tcw_400ticks,
 }
 
 style_fc_gv_10 = {
@@ -3733,17 +3799,17 @@ style_tmad_rgb_sens = {
     "components": {
         "red": {
             "kwargs": {
-                "scale_from": [0.001, 0.15],
+                "scale_from": [0.0005, 0.11],
             }
         },
         "green": {
             "kwargs": {
-                "scale_from": [0.019, 0.1],
+                "scale_from": [0.010, 0.09],
             }
         },
         "blue": {
             "kwargs": {
-                "scale_from": [0.010, 0.13],
+                "scale_from": [0.011, 0.07],
             }
         },
     }
@@ -3971,6 +4037,33 @@ ows_cfg = {
         "max_width": 512,
         "max_height": 512,
     },  # END OF wms SECTION
+    "wmts": {
+        # Config for WMTS service, for all products/layers
+        "tile_matrix_sets": {
+            "EPSG:3111": {
+                "crs": "EPSG:3111",
+                "matrix_origin": (1786000.0, 3081000.0),
+                "tile_size": (512, 512),
+                "scale_set": [
+                    7559538.928601667,
+                    3779769.4643008336,
+                    1889884.7321504168,
+                    944942.3660752084,
+                    472471.1830376042,
+                    236235.5915188021,
+                    94494.23660752083,
+                    47247.11830376041,
+                    23623.559151880207,
+                    9449.423660752083,
+                    4724.711830376042,
+                    2362.355915188021,
+                    1181.1779575940104,
+                    755.9538928601667,
+                ],
+                "matrix_exponent_initial_offsets": (1, 0),
+            },
+        }
+    }, # END OF wmts SECTION
     "wcs": {
         # Config for WCS service, for all products/coverages
         "default_geographic_CRS": "EPSG:4326",
@@ -5200,6 +5293,69 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 ],
                             },
                         }
+                    ],
+                },
+                {
+                    "title": "DEA Wetness Percentiles (Landsat)",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "DEA Wetness Percentiles (Landsat)",
+                            "name": "ga_ls_tcw_percentiles_2",
+                            "abstract": """
+Geoscience Australia Landsat Collection 2 Tasselled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Areas that are partially covered in water, or where water is mixed with vegetation when viewed from above provide habitat for a wide range of aquatic organisms.
+
+The ability to map partial inundation is also crucial to understand patterns of human water use. We need to be able to identify potential wetlands and groundwater dependent ecosystems on the Australian continent so that they can be monitored and managed.
+
+The tasseled cap wetness percentiles provide a multi-decadal summary of landscape wetness that can be used to identify wetlands and groundwater ecosystems.
+
+They provide statistical summaries (10th, 50th and 90th percentiles) of the tasseled cap wetness index from 1987 to 2017.
+
+They are intended for use as inputs into classification algorithms to identify potential wetlands and groundwater dependent ecosystems, and characterise salt flats, clay pans, salt lakes and coastal land forms.
+
+This product provides valuable discrimination for characterising:
+
+vegetated wetlands
+salt flats
+salt lakes
+coastal land cover classes
+
+The tasseled cap wetness transform translates the six spectral bands of Landsat into a single wetness index. The wetness index can be used to identify areas in the landscape that are potentially wetlands or groundwater dependent ecosystems. The tasseled cap wetness percentiles captures how the wetness index behaves over time. The percentiles are well suited to characterising wetlands, salt flats/salt lakes and coastal ecosystems. However, care should be applied when analysing the wetness index, as soil colour and fire scars can cause misleading results.
+
+The 10th, 50th and 90th percentiles of the tasseled cap wetness index are intended to capture the extreme (10th and 90th percentile) values and long term average (50th percentile) values of the wetness index. Percentiles are used in preference to minimum, maximum and mean, as the min/max/mean statistical measures are more sensitive to undetected cloud/cloud shadow, and can be misleading for non-normally distributed data.
+
+The tasseled cap wetness percentiles are intended to complement the Water Observations from Space (WOfS) algorithm. WOfS is designed to discriminate open water, but the tasseled cap wetness identifies areas of water and areas where water and vegetation are mixed together; i.e. mangroves and palustrine wetlands.
+
+If you are interested in terrestrial vegetation (where water in the pixel is not a factor), use the Fractional Cover product, which provides a better biophysical characterisation of green vegetation fraction, dry vegetation fraction and bare soil vegetation fraction.
+
+We used the tasseled cap transforms described in Crist et al. (1985).
+
+Crist, E. P. (1985). A TM Tasseled Cap equivalent transformation for reflectance factor data. Remote Sensing of Environment, 17(3), 301–306. https://doi.org/10.1016/0034-4257(85)90102-6
+
+For service status information, see https://status.dea.ga.gov.au""",
+                            "product_name": "ga_ls_tcw_percentiles_2",
+                            "bands": bands_tcw_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["TCW_PC_10", "TCW_PC_50", "TCW_PC_90"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "tcw_10_percentile",
+                                "styles": [
+                                    style_tcw_10,
+                                    style_tcw_50,
+                                    style_tcw_90
+                                ],
+                            },
+                        },
                     ],
                 },
                 {
