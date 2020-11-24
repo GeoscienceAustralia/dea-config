@@ -448,7 +448,7 @@ style_ls_ndvi = {
     "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band1": "nir",
             "band2": "red"
@@ -516,7 +516,7 @@ style_ls_ndwi = {
     "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band1": "green",
             "band2": "nir"
@@ -578,7 +578,7 @@ style_ls_mndwi = {
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band1": "green",
             "band2": "swir1"
@@ -805,7 +805,7 @@ style_nd_ferric_iron = {
     "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band1": "red",
             "band2": "blue"
@@ -873,7 +873,7 @@ style_nd_soil = {
     "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band1": "swir1",
             "band2": "nir"
@@ -920,7 +920,7 @@ style_nd_clay_mica = {
     "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band1": "swir1",
             "band2": "swir2"
@@ -1031,7 +1031,7 @@ style_wofs_filt_freq = {
     "abstract": "WOfS filtered summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "wofs_filtered_summary",
         }
@@ -1119,7 +1119,7 @@ style_wofs_filt_freq_blue = {
     "abstract": "WOfS filtered summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "wofs_filtered_summary",
         }
@@ -1171,7 +1171,7 @@ style_wofs_count_wet = {
     "abstract": "WOfS summary showing the count of water observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_wet",
         }
@@ -1250,7 +1250,7 @@ style_wofs_count_clear = {
     "abstract": "WOfS summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_clear",
         }
@@ -1331,7 +1331,7 @@ style_wofs_frequency = {
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         }
@@ -1419,7 +1419,7 @@ style_wofs_frequency_blue = {
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         }
@@ -1471,7 +1471,7 @@ style_wofs_confidence = {
     "abstract": "WOfS Confidence",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "confidence",
         }
@@ -1526,7 +1526,7 @@ style_wofs_seasonal_wet = {
     "needed_bands": ["count_wet"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_wet",
         }
@@ -1595,7 +1595,7 @@ style_wofs_summary_wet = {
     "abstract": "WOfS annual summary showing the count of water observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_wet",
         }
@@ -1666,7 +1666,7 @@ style_wofs_summary_clear = {
     "abstract": "WOfS annual summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_clear",
         }
@@ -1738,7 +1738,7 @@ style_wofs_seasonal_clear = {
     "needed_bands": ["count_clear"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_clear",
         }
@@ -1807,7 +1807,7 @@ style_annual_wofs_summary_frequency = {
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         }
@@ -1882,7 +1882,7 @@ style_seasonal_wofs_summary_frequency = {
     "needed_bands": ["frequency"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         }
@@ -1954,7 +1954,7 @@ style_annual_wofs_summary_frequency_blue = {
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         }
@@ -2006,7 +2006,7 @@ style_seasonal_wofs_summary_frequency_blue = {
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         }
@@ -2190,7 +2190,7 @@ style_s2_mndwi = {
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band1": "nbart_green",
             "band2": "nbart_swir_2"
@@ -2236,7 +2236,7 @@ style_s2_ndci = {
     "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
     "index_function": {
         "function": "datacube_ows.band_utils.sentinel2_ndci",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "b_red_edge": "nbart_red_edge_1",
             "b_red": "nbart_red",
@@ -2542,7 +2542,7 @@ style_wii = {
     "needed_bands": ["intensity"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "intensity",
         }
@@ -2590,7 +2590,7 @@ style_fc_gv_10 = {
     "abstract": "10th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "PV_PC_10",
         }
@@ -2636,7 +2636,7 @@ style_fc_gv_50 = {
     "abstract": "50th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "PV_PC_50",
         }
@@ -2682,7 +2682,7 @@ style_fc_gv_90 = {
     "abstract": "90th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "PV_PC_90",
         }
@@ -2729,7 +2729,7 @@ style_fc_ngv_10 = {
     "abstract": "10th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "NPV_PC_10",
         }
@@ -2776,7 +2776,7 @@ style_fc_ngv_50 = {
     "abstract": "50th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "NPV_PC_50",
         }
@@ -2822,7 +2822,7 @@ style_fc_ngv_90 = {
     "abstract": "90th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "NPV_PC_90",
         }
@@ -2868,7 +2868,7 @@ style_fc_bs_10 = {
     "abstract": "10th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "BS_PC_10",
         }
@@ -2914,7 +2914,7 @@ style_fc_bs_50 = {
     "abstract": "50th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "BS_PC_50",
         }
@@ -2961,7 +2961,7 @@ style_fc_bs_90 = {
     "abstract": "90th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "BS_PC_90",
         }
@@ -3038,7 +3038,7 @@ style_nidem = {
     "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "nidem",
         }
@@ -3177,7 +3177,7 @@ style_item_relative = {
     "abstract": "The Relative Extents Model (item_v2) 25m v2.0.0",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "relative",
         }
@@ -3259,7 +3259,7 @@ style_item_confidence = {
     "title": "confidence layer",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "stddev",
         }
@@ -3354,7 +3354,7 @@ style_wamm_dam_id = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "dam_id",
         }
@@ -3455,7 +3455,7 @@ style_aster_aloh_comp_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -3535,7 +3535,7 @@ style_aster_aloh_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -3615,7 +3615,7 @@ style_aster_feoh_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -3695,7 +3695,7 @@ style_aster_ferrox_comp_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -3775,7 +3775,7 @@ style_aster_ferrox_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -3855,7 +3855,7 @@ style_aster_ferrous_mgoh_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -3935,7 +3935,7 @@ style_aster_ferrous_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4015,7 +4015,7 @@ style_aster_green_veg_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4098,7 +4098,7 @@ style_aster_gypsum_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4184,7 +4184,7 @@ style_aster_kaolin_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4270,7 +4270,7 @@ style_aster_mgoh_comp_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4356,7 +4356,7 @@ style_aster_mgoh_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4442,7 +4442,7 @@ style_aster_opaque_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4528,7 +4528,7 @@ style_aster_silica_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4614,7 +4614,7 @@ style_aster_quartz_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         }
@@ -4700,7 +4700,7 @@ style_tmad_sdev = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "sdev",
             "scale_factor": -100.0,
@@ -4750,7 +4750,7 @@ style_tmad_edev = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "edev",
             "scale_factor": -100.0,
@@ -4799,7 +4799,7 @@ style_tmad_bcdev = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "bcdev",
             "scale_factor": -100.0,
@@ -4908,7 +4908,7 @@ style_insar_velocity = {
     "needed_bands": ["velocity"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "velocity",
         }
@@ -4934,7 +4934,7 @@ style_insar_displacement = {
     "needed_bands": ["displacement"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "displacement",
         }
@@ -4970,7 +4970,7 @@ style_insar_velocity = {
     "needed_bands": ["velocity"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "velocity",
         }
@@ -5008,7 +5008,7 @@ style_insar_displacement = {
     "needed_bands": ["displacement"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "displacement",
         }
@@ -5046,7 +5046,7 @@ style_insar_stddev_l = {
     "needed_bands": ["disp_std"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "disp_std",
         }
@@ -5098,7 +5098,7 @@ style_insar_stddev_lv = {
     "needed_bands": ["vel_std"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "vel_std",
         }
@@ -5462,7 +5462,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -5501,7 +5501,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -5540,7 +5540,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -5593,7 +5593,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -5635,7 +5635,7 @@ Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Minera
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -7012,7 +7012,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -7059,7 +7059,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                         "always_fetch_bands": [ ],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -7204,7 +7204,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "image_processing": {
                         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                         "always_fetch_bands": [ ],
-                        "manual_merge": True,
+                        "manual_merge": False,
                     },
                     "wcs": {
                         "native_crs": "EPSG:3577",
@@ -7278,7 +7278,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 #                         "include_custom": {
 #                             "timeseries": {
 #                                 "function" : "datacube_ows.ogc_utils.feature_info_url_template",
-#                                 "pass_product_cfg": False,
+#                                 "mapped_bands": False,
 #                                 "kwargs" : {
 #                                     "template": "https://data.dea.ga.gov.au/projects/WaterBodies/feature_info/{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
 #                                 }
