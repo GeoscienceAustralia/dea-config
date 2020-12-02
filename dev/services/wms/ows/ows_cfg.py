@@ -5284,7 +5284,10 @@ They are intended for use as inputs into classification algorithms to identify p
 
 This product provides valuable discrimination for characterising:
 
-vegetated wetlands, salt flats, salt lakes, coastal land cover classes
+ - vegetated wetlands,
+ - salt flats,
+ - salt lakes,
+ - coastal land cover classes
 
 The Tasseled Cap wetness transform translates the six spectral bands of Landsat into a single wetness index.  The wetness index can be used to identify areas in the landscape that are potentially wetlands or groundwater dependent ecosystems. The Tasseled Cap Wetness Percentiles capture how the wetness index behaves over time.  The percentiles are well suited to characterising wetlands, salt flats/salt lakes and coastal ecosystems. However, care should be applied when analysing the wetness index, as soil colour and fire scars can cause misleading results. In areas of high relief caused by cliffs or steep terrain, terrain shadows can cause false positives (a falsely high wetness index).
 
