@@ -327,7 +327,7 @@ legend_idx_0_100_as_0_1_5ticks = {
 legend_tcw_400ticks = {
     "begin": -1200,
     "end": 0,
-    "units": "",
+    "units": "Tasseled Cap Wetness Index",
     "decimal_places": 0,
     "ticks_every": 400,
     "rcParams": {"font.size": 9},
