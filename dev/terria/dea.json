@@ -741,7 +741,7 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Tasselled Cap Wetness Percentiles",
+                     "name": "Tasseled Cap Wetness Percentiles",
                      "type": "wms",
                      "layers": "ga_ls_tcw_percentiles_2",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -750,11 +750,7 @@
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
-                     "opacity": 1,
-                     "dateFormat": {
-                        "currentTime": "'Year: 'yyyy",
-                        "timelineTic": "yyyy"
-                     }
+                     "opacity": 1
                   }
                ]
             },
