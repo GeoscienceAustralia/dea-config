@@ -327,7 +327,7 @@ legend_idx_0_100_as_0_1_5ticks = {
 legend_tcw_400ticks = {
     "begin": -1200,
     "end": 0,
-    "units": "Tasseled Cap Wetness Index",
+    "units": "",
     "decimal_places": 0,
     "ticks_every": 400,
     "rcParams": {"font.size": 9},
@@ -1760,7 +1760,7 @@ style_wii = {
 
 style_tcw_10 = {
     "name": "tcw_10_percentile",
-    "title": "",
+    "title": "Tasseled Cap Wetness Index",
     "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_10"],
         "index_function": {
@@ -1777,7 +1777,7 @@ style_tcw_10 = {
 
 style_tcw_50 = {
     "name": "tcw_50_percentile",
-    "title": "",
+    "title": "Tasseled Cap Wetness Index",
     "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_50"],
         "index_function": {
@@ -1794,7 +1794,7 @@ style_tcw_50 = {
 
 style_tcw_90 = {
     "name": "tcw_90_percentile",
-    "title": "",
+    "title": "Tasseled Cap Wetness Index",
     "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_90"],
         "index_function": {
