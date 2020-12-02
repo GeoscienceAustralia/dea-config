@@ -324,15 +324,6 @@ legend_idx_0_100_as_0_1_5ticks = {
     },
 }
 
-legend_tcw_400ticks = {
-    "begin": -1200,
-    "end": 0,
-    "units": "",
-    "decimal_places": 0,
-    "ticks_every": 400,
-    "rcParams": {"font.size": 9},
-}
-
 legend_idx_0_100_pixel_fc_25ticks = {
     "begin": 0,
     "end": 100,
@@ -1760,7 +1751,7 @@ style_wii = {
 
 style_tcw_10 = {
     "name": "tcw_10_percentile",
-    "title": "Tasseled Cap Wetness Index",
+    "title": "Tasseled Cap Wetness 10th Percentile",
     "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_10"],
         "index_function": {
@@ -1772,12 +1763,14 @@ style_tcw_10 = {
     },
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",
-    "legend": legend_tcw_400ticks,
+    "legend": {
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+    },
 }
 
 style_tcw_50 = {
     "name": "tcw_50_percentile",
-    "title": "Tasseled Cap Wetness Index",
+    "title": "Tasseled Cap Wetness 50th Percentile",
     "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_50"],
         "index_function": {
@@ -1788,13 +1781,15 @@ style_tcw_50 = {
         },
     },
     "range": [-1200.0, 0.0],
-    "mpl_ramp": "gist_earth_r",
-    "legend": legend_tcw_400ticks,
+    "mpl_ramp": "gist_earth_r",    
+    "legend": {
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+    },
 }
 
 style_tcw_90 = {
     "name": "tcw_90_percentile",
-    "title": "Tasseled Cap Wetness Index",
+    "title": "Tasseled Cap Wetness 90th Percentile",
     "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_90"],
         "index_function": {
@@ -1806,7 +1801,9 @@ style_tcw_90 = {
     },
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",
-    "legend": legend_tcw_400ticks,
+    "legend": {
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+    },
 }
 
 style_fc_gv_10 = {
