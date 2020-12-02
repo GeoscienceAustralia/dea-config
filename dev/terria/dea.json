@@ -750,8 +750,7 @@
                      "ignoreUnknownTileErrors": true,
                      "chartType": "momentPoints",
                      "chartColor": "white",
-                     "opacity": 1,
-                     "featureTimesProperty": "data_available_for_dates"
+                     "opacity": 1
                   }
                ]
             },
