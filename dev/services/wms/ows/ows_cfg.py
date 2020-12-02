@@ -1760,7 +1760,7 @@ style_wii = {
 
 style_tcw_10 = {
     "name": "tcw_10_percentile",
-    "title": "Tasseled Cap Wetness Index",
+    "title": "Tasseled Cap Wetness 10th Percentile",
     "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_10"],
         "index_function": {
@@ -1777,7 +1777,7 @@ style_tcw_10 = {
 
 style_tcw_50 = {
     "name": "tcw_50_percentile",
-    "title": "Tasseled Cap Wetness Index",
+    "title": "Tasseled Cap Wetness 50th Percentile",
     "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_50"],
         "index_function": {
@@ -1794,7 +1794,7 @@ style_tcw_50 = {
 
 style_tcw_90 = {
     "name": "tcw_90_percentile",
-    "title": "Tasseled Cap Wetness Index",
+    "title": "Tasseled Cap Wetness 90th Percentile",
     "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_90"],
         "index_function": {
