@@ -1773,7 +1773,7 @@ style_tcw_10 = {
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",
     "legend": {
-        "url": "https://data.dea.ga.gov.au/?prefix=derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
     },
 }
 
@@ -1792,7 +1792,7 @@ style_tcw_50 = {
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",    
     "legend": {
-        "url": "https://data.dea.ga.gov.au/?prefix=derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
     },
 }
 
@@ -1811,7 +1811,7 @@ style_tcw_90 = {
     "range": [-1200.0, 0.0],
     "mpl_ramp": "gist_earth_r",
     "legend": {
-        "url": "https://data.dea.ga.gov.au/?prefix=derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
     },
 }
 
