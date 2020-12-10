@@ -755,25 +755,6 @@
                            "leafletUpdateInterval": 750
                         }
                      ]
-                  },
-                  {
-                     "name": "DEA Wetness Percentiles (Landsat)",
-                     "type": "group",
-                     "preserveOrder": true,
-                     "items": [
-                        {
-                           "name": "Tasseled Cap Wetness Percentiles",
-                           "type": "wms",
-                           "layers": "ga_ls_tcw_percentiles_2",
-                           "url": "https://ows.dea.ga.gov.au/",
-                           "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                           "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
-                           "ignoreUnknownTileErrors": true,
-                           "chartType": "momentPoints",
-                           "chartColor": "white",
-                           "opacity": 1
-                        }
-                     ]
                   }
                ]
             },
@@ -796,8 +777,27 @@
                     }
                   }
                 ]
-              }
-           ]
+              },
+              {
+               "name": "DEA Wetness Percentiles (Landsat)",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Tasseled Cap Wetness Percentiles",
+                     "type": "wms",
+                     "layers": "ga_ls_tcw_percentiles_2",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1
+                  }
+               ]
+            }
+         ]
       },
       {
          "name": "Vegetation",
