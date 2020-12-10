@@ -755,7 +755,7 @@
                            "leafletUpdateInterval": 750
                         }
                      ]
-                  },
+                  }
                ]
             },
             {
@@ -797,7 +797,7 @@
                   }
                ]
             }
-           ]
+         ]
       },
       {
          "name": "Vegetation",
