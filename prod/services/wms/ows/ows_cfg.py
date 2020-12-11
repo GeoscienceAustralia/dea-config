@@ -4862,6 +4862,64 @@ style_tmad_bcdev = {
     }
 }
 
+style_tmad_rgb_std = {
+    "name": "tmad_rgb_std",
+    "title": "TMAD multi-band false-colour (standard)",
+    "abstract": "Good for cropland and forest",
+    "components": {
+        "red": {
+            "function": "datacube_ows.band_utils.single_band_arcsec",
+            "mapped_bands": True,
+            "kwargs": {
+                "band": "sdev",
+                "scale_from": [0.017, 0.15],
+            },
+        },
+        "green": {
+            "function": "datacube_ows.band_utils.single_band_offset_log",
+            "mapped_bands": True,
+            "kwargs": {
+                "band": "edev",
+                "scale_from": [0.025, 0.1],
+            },
+        },
+        "blue": {
+            "function": "datacube_ows.band_utils.single_band_offset_log",
+            "mapped_bands": True,
+            "kwargs": {
+                "band": "bcdev",
+                "scale_from": [0.025, 0.13],
+            },
+        },
+    },
+    "additional_bands": ["sdev", "bcdev", "edev"],
+}
+
+style_tmad_rgb_sens = {
+    "inherits": style_tmad_rgb_std,
+    "name": "tmad_rgb_sens",
+    "title": "TMAD multi-band false-colour (sensitive)",
+    "abstract": "Good for arid land and desert",
+    "components": {
+        "red": {
+            "kwargs": {
+                "scale_from": [0.0005, 0.11],
+            }
+        },
+        "green": {
+            "kwargs": {
+                "scale_from": [0.010, 0.09],
+            }
+        },
+        "blue": {
+            "kwargs": {
+                "scale_from": [0.011, 0.07],
+            }
+        },
+    }
+}
+
+
 style_fc_simple = {
     "name": "simple_fc",
     "title": "Fractional Cover",
@@ -8301,7 +8359,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "log_sdev",
                         "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_rgb_std, style_tmad_rgb_sens
                         ]
                     }
                 },
@@ -8338,7 +8397,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "log_sdev",
                         "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_rgb_std, style_tmad_rgb_sens
                         ]
                     }
                 },
@@ -8375,7 +8435,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "styling": {
                         "default_style": "log_sdev",
                         "styles": [
-                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev
+                            style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_rgb_std, style_tmad_rgb_sens
                         ]
                     }
                 },
