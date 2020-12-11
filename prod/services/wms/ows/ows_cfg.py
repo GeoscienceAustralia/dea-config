@@ -4862,6 +4862,80 @@ style_tmad_bcdev = {
     }
 }
 
+style_tmad_sdev_std = {
+    "name": "arcsec_sdev",
+    "title": "SMAD",
+    "abstract": "Good for cropland and forest",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_arcsec",
+        "mapped_bands": True,
+        "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
+    },
+    "needed_bands": ["sdev"],
+    "mpl_ramp": "coolwarm",
+    "range": [0.0, 4.0],
+    "legend": {
+        "start": "0.0",
+        "end": "4.0",
+        "ticks": ["0.0", "4.0"],
+        "tick_labels": {
+            "0.0": {"label": "Low\ntmad"},
+            "4.0": {"label": "High\ntmad"},
+        },
+    },
+}
+
+style_tmad_edev_std = {
+    "name": "log_edev",
+    "title": "EMAD",
+    "abstract": "Good for cropland and forest",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_offset_log",
+        "mapped_bands": True,
+        "kwargs": {"band": "edev", "scale_from": [0.025, 0.1], "scale_to": [0.0, 4.0]},
+    },
+    "needed_bands": ["edev"],
+    "mpl_ramp": "coolwarm",
+    "range": [0.0, 4.0],
+    "legend": {
+        "start": "0.0",
+        "end": "4.0",
+        "ticks": ["0.0", "4.0"],
+        "tick_labels": {
+            "0.0": {"label": "Low\ntmad"},
+            "4.0": {"label": "High\ntmad"},
+        },
+    },
+}
+
+
+style_tmad_bcdev_std = {
+    "name": "log_bcdev",
+    "title": "BCMAD",
+    "abstract": "Good for cropland and forest",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band_offset_log",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "bcdev",
+            "scale_from": [0.025, 0.13],
+            "scale_to": [0.0, 4.0],
+        },
+    },
+    "needed_bands": ["bcdev"],
+    "mpl_ramp": "coolwarm",
+    "range": [0.0, 4.0],
+    "legend": {
+        "start": "0.0",
+        "end": "4.0",
+        "ticks": ["0.0", "4.0"],
+        "tick_labels": {
+            "0.0": {"label": "Low\ntmad"},
+            "4.0": {"label": "High\ntmad"},
+        },
+    },
+}
+
 style_tmad_rgb_std = {
     "name": "tmad_rgb_std",
     "title": "TMAD multi-band false-colour (standard)",
@@ -8360,6 +8434,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "default_style": "log_sdev",
                         "styles": [
                             style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_sdev_std, style_tmad_edev_std, style_tmad_bcdev_std,
                             style_tmad_rgb_std, style_tmad_rgb_sens
                         ]
                     }
@@ -8398,6 +8473,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "default_style": "log_sdev",
                         "styles": [
                             style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_sdev_std, style_tmad_edev_std, style_tmad_bcdev_std,
                             style_tmad_rgb_std, style_tmad_rgb_sens
                         ]
                     }
@@ -8436,6 +8512,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "default_style": "log_sdev",
                         "styles": [
                             style_tmad_sdev, style_tmad_edev, style_tmad_bcdev,
+                            style_tmad_sdev_std, style_tmad_edev_std, style_tmad_bcdev_std,
                             style_tmad_rgb_std, style_tmad_rgb_sens
                         ]
                     }
