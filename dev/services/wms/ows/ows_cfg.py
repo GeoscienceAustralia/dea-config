@@ -20,6 +20,16 @@ reslim_mangrove = {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 15.0,
         # "max_datasets": 16, # Defaults to no dataset limit
+        "dataset_cache_rules": [
+            {
+                "min_datasets": 5,
+                "max_age": 60*60*24,
+            },
+            {
+                "min_datasets": 9,
+                "max_age": 60*60*24*14,
+            }
+        ],
     },
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
@@ -1781,7 +1791,7 @@ style_tcw_50 = {
         },
     },
     "range": [-1200.0, 0.0],
-    "mpl_ramp": "gist_earth_r",    
+    "mpl_ramp": "gist_earth_r",
     "legend": {
         "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
     },
@@ -5266,10 +5276,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "title": "DEA Wetness Percentiles (Landsat)",
                             "name": "ga_ls_tcw_percentiles_2",
                             "abstract": """
-Geoscience Australia Landsat Collection 2 Tasseled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). 
+Geoscience Australia Landsat Collection 2 Tasseled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577).
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 
-Areas that are partially covered in water, or where water is mixed with vegetation when viewed from above, provide habitat for a wide range of aquatic organisms. 
+Areas that are partially covered in water, or where water is mixed with vegetation when viewed from above, provide habitat for a wide range of aquatic organisms.
 
 The ability to map partial inundation is also crucial to understand patterns of human water use. We need to be able to identify potential wetlands and groundwater dependent ecosystems on the Australian continent so that they can be monitored and managed.
 
