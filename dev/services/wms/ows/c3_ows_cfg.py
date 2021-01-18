@@ -398,16 +398,12 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
                         {
                             "title": "DEA Surface Reflectance (Landsat 7 ETM+)",
                             "abstract": """
-This product takes Landsat 7 Enhanced Thematic Mapper Plus (ETM+) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
+In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
 
-This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
+We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
 
-It contains three sub-products that provide corrections or attribution information:
-
-Surface Reflectance NBAR 3 (Landsat 7 ETM+)
-Surface Reflectance NBART 3 (Landsat 7 ETM+)
-Surface Reflectance OA 3 (Landsat 7 ETM+)
-The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.""",
+For service status information, see https://status.dea.ga.gov.au""",
                             # The WMS name for the layer
                             "name": "ga_ls7e_ard_3",
                             # The Datacube name for the associated data product
@@ -434,16 +430,14 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
                         {
                             "title": "DEA Surface Reflectance (Landsat 5 TM)",
                             "abstract": """
-This product takes Landsat 5 Thematic Mapper (TM) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
 
-This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
+In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
 
-It contains three sub-products that provide corrections or attribution information:
+We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
 
-Surface Reflectance NBAR 3 (Landsat 5 TM)
-Surface Reflectance NBART 3 (Landsat 5 TM)
-Surface Reflectance OA 3 (Landsat 5 TM)
-The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.""",
+
+For service status information, see https://status.dea.ga.gov.au""",
                             # The WMS name for the layer
                             "name": "ga_ls5t_ard_3",
                             # The Datacube name for the associated data product
