@@ -88,6 +88,14 @@ style_c3_wofs_obs = {
     },
 }
 
+style_c3_simple_rgb = {
+    "name": "simple_rgb",
+    "title": "Simple RGB",
+    "abstract": "Simple true-colour image, using the red, green and blue bands",
+    "components": {"red": {"nbart_red": 1.0}, "green": {"nbart_green": 1.0}, "blue": {"nbart_blue": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
 style_c3_wofs_obs_wet_only = {
     "name": "wet",
     "title": "Wet Only",
@@ -389,9 +397,9 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
                                 "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                             },
                             "styling": {
-                                "default_style": "mndwi",
+                                "default_style": "simple_rgb",
                                 "styles": [
-                                    style_s2_mndwi,
+                                    style_c3_simple_rgb,
                                 ],
                             },
                         },
@@ -421,9 +429,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                             },
                             "styling": {
-                                "default_style": "mndwi",
+                                "default_style": "simple_rgb",
                                 "styles": [
-                                      style_s2_mndwi,
+                                      style_c3_simple_rgb,
                                 ],
                             },
                         },
@@ -455,9 +463,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
                             },
                             "styling": {
-                                "default_style": "mndwi",
+                                "default_style": "simple_rgb",
                                 "styles": [
-                                    style_s2_mndwi,
+                                    style_c3_simple_rgb,
                                 ],
                             },
                         },
