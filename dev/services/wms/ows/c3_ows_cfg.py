@@ -8,6 +8,21 @@ bands_collection3_landsat = {
 }
 
 
+reslim_landsat = {
+    "wms": {
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
+        "min_zoom_factor": 35.0,
+        # "max_datasets": 16, # Defaults to no dataset limit
+    },
+    "wcs": {
+        # "max_datasets": 16, # Defaults to no dataset limit
+    },
+}
+
+reslim_wofs_obs = reslim_landsat
+reslim_aster = reslim_landsat
+reslim_tmad = reslim_landsat
+
 bands_fc_3 = {
     "bs": ["bare_soil"],
     "pv": ["photosynthetic_vegetation", "green_vegetation"],
