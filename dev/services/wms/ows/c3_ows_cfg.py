@@ -1,14 +1,5 @@
-bands_collection3_landsat = {
-    "nbart_blue": ["nbart_blue"],
-    "nbart_green": ["nbart_green"],
-    "nbart_red": ["nbart_red"],
-    "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
-    "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
-    "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
-}
 
-
-reslim_landsat = {
+reslim_wofs_obs = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 35.0,
@@ -18,10 +9,6 @@ reslim_landsat = {
         # "max_datasets": 16, # Defaults to no dataset limit
     },
 }
-
-reslim_wofs_obs = reslim_landsat
-reslim_aster = reslim_landsat
-reslim_tmad = reslim_landsat
 
 bands_fc_3 = {
     "bs": ["bare_soil"],
@@ -101,14 +88,6 @@ style_c3_wofs_obs = {
             # },
         ]
     },
-}
-
-style_c3_simple_rgb = {
-    "name": "simple_rgb",
-    "title": "Simple RGB",
-    "abstract": "Simple true-colour image, using the red, green and blue bands",
-    "components": {"red": {"nbart_red": 1.0}, "green": {"nbart_green": 1.0}, "blue": {"nbart_blue": 1.0}},
-    "scale_range": [0.0, 3000.0],
 }
 
 style_c3_wofs_obs_wet_only = {
@@ -350,7 +329,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
 """,
                             "product_name": "ga_ls_fc_3",
                             "bands": bands_fc_3,
-                            "resource_limits": reslim_aster,
+                            "resource_limits": reslim_wofs_obs,
                             "dynamic": True,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -377,110 +356,6 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                                 "default_style": "simple_fc",
                                 "styles": [
                                     style_fc_3_simple,
-                                ],
-                            },
-                        },
-                        {
-                            "title": "DEA Surface Reflectance (Landsat 8 OLI-TIRS)",
-                            "abstract": """
-This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
-
-The imagery is captured using the Operational Land Imager (OLI) and Thermal Infra-Red Scanner (TIRS) sensors aboard Landsat 8.
-
-This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
-
-It contains three sub-products that provide corrections or attribution information:
-
-Surface Reflectance NBAR 3 (Landsat 8 OLI-TIRS)
-Surface Reflectance NBART 3 (Landsat 8 OLI-TIRS)
-Surface Reflectance OA 3 (Landsat 8 OLI-TIRS)
-The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.""",
-                            # The WMS name for the layer
-                            "name": "ga_ls8c_ard_3",
-                            # The Datacube name for the associated data product
-                            "product_name": "ga_ls8c_ard_3",
-                            "bands": bands_collection3_landsat,
-                            "resource_limits": reslim_tmad,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [25, -25],
-                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [
-                                    style_c3_simple_rgb,
-                                ],
-                            },
-                        },
-                        {
-                            "title": "DEA Surface Reflectance (Landsat 7 ETM+)",
-                            "abstract": """
-The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
-In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
-
-We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
-
-For service status information, see https://status.dea.ga.gov.au""",
-                            # The WMS name for the layer
-                            "name": "ga_ls7e_ard_3",
-                            # The Datacube name for the associated data product
-                            "product_name": "ga_ls7e_ard_3",
-                            "bands": bands_collection3_landsat,
-                            "resource_limits": reslim_tmad,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [25, -25],
-                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [
-                                      style_c3_simple_rgb,
-                                ],
-                            },
-                        },
-                        {
-                            "title": "DEA Surface Reflectance (Landsat 5 TM)",
-                            "abstract": """
-The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
-
-In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
-
-We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
-
-
-For service status information, see https://status.dea.ga.gov.au""",
-                            # The WMS name for the layer
-                            "name": "ga_ls5t_ard_3",
-                            # The Datacube name for the associated data product
-                            "product_name": "ga_ls5t_ard_3",
-                            "bands": bands_collection3_landsat,
-                            "resource_limits": reslim_tmad,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [25, -25],
-                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [
-                                    style_c3_simple_rgb,
                                 ],
                             },
                         },
