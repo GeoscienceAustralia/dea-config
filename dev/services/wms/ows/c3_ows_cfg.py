@@ -23,20 +23,20 @@ style_fc_3_simple = {
     "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
     "components": {"red": {"bs": 1.0}, "green": {"pv": 1.0}, "blue": {"npv": 1.0}},
     "scale_range": [0.0, 100.0],
-    # "pq_masks": [
-    #     {
-    #         "flags": {"dry": True},
-    #     },
-    #     {
-    #         "flags": {
-    #             "terrain_or_low_angle": False,
-    #             "high_slope": False,
-    #             "cloud_shadow": False,
-    #             "cloud": False,
-    #             "sea": False,
-    #         }
-    #     },
-    # ],
+    "pq_masks": [
+        {
+            "flags": {"dry": True},
+        },
+        {
+            "flags": {
+                # "terrain_or_low_angle": False,
+                "high_slope": False,
+                "cloud_shadow": False,
+                "cloud": False,
+                # "sea": False,
+            }
+        },
+    ],
 }
 
 bands_wofs_obs = {
@@ -64,7 +64,7 @@ style_c3_wofs_obs = {
                 },
                 "color": "#707070",
             },
-            #     {
+            # {
             #     # Possible Sea Glint, also mark as invalid
             #     "title": "",
             #     "abstract": "",
