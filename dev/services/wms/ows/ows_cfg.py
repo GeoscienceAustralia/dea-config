@@ -95,7 +95,7 @@ reslim_hap = {
 
 # Reusable Chunks 2. Band lists.
 
-bands_collection3_landsat_5 = {
+bands_c3_ls_common = {
     "nbart_blue": ["nbart_blue"],
     "nbart_green": ["nbart_green"],
     "nbart_red": ["nbart_red"],
@@ -105,38 +105,17 @@ bands_collection3_landsat_5 = {
 }
 
 
-bands_collection3_landsat_7 = {
-    "nbart_blue": ["nbart_blue"],
-    "nbart_green": ["nbart_green"],
-    "nbart_red": ["nbart_red"],
-    "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
-    "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
-    "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
+bands_c3_ls_7 = bands_c3_ls_common.copy()
+bands_c3_ls_7.update({
     "nbart_panchromatic": [],
-}
+})
 
 
-bands_collection3_landsat_8 = {
-    "nbart_blue": ["nbart_blue"],
-    "nbart_green": ["nbart_green"],
-    "nbart_red": ["nbart_red"],
-    "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
-    "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
-    "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
-    "nbart_panchromatic": [],
+bands_c3_ls_8 = bands_c3_ls_7.copy()
+bands_c3_ls_8.update({
     "nbart_coastal_aerosol": ["coastal_aerosol",  "nbart_coastal_aerosol"],
-}
+})
 
-
-bands_ls8 = {
-    "red": ["red"],
-    "green": ["green"],
-    "blue": ["blue"],
-    "nir": ["nir", "near_infrared"],
-    "swir1": ["swir1", "shortwave_infrared_1", "near_shortwave_infrared"],
-    "swir2": ["swir2", "shortwave_infrared_2", "far_shortwave_infrared"],
-    "coastal_aerosol": ["coastal_aerosol"],
-}
 
 bands_ls = {
     "red": ["red"],
@@ -146,6 +125,12 @@ bands_ls = {
     "swir1": ["swir1", "shortwave_infrared_1", "near_shortwave_infrared"],
     "swir2": ["swir2", "shortwave_infrared_2", "far_shortwave_infrared"],
 }
+
+bands_ls8 = bands_ls.copy()
+bands_ls8.update({
+    "coastal_aerosol": ["coastal_aerosol"],
+})
+
 
 bands_mangrove = {
     "canopy_cover_class": [],
@@ -596,6 +581,22 @@ style_c3_pure_swir2 = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_c3_ls_common = [
+    style_c3_simple_rgb,
+    style_c3_false_colour,
+    style_c3_ndvi,
+    style_c3_ndwi,
+    style_c3_mndwi,
+    style_c3_pure_blue,
+    style_c3_pure_green,
+    style_c3_pure_red,
+    style_c3_pure_nir,
+    style_c3_pure_swir1,
+    style_c3_pure_swir2,
+]
+
+style_c3_ls_7 = style_c3_ls_common.append(style_c3_pure_panchromatic)
+style_c3_ls_8 = style_c3_ls_7.append(style_c3_pure_aerosol)
 
 style_ls_simple_rgb = {
     "name": "simple_rgb",
@@ -7592,7 +7593,7 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
                             "name": "ga_ls8c_ard_3",
                             # The Datacube name for the associated data product
                             "product_name": "ga_ls8c_ard_3",
-                            "bands": bands_collection3_landsat_8,
+                            "bands": bands_c3_ls_8,
                             "resource_limits": reslim_tmad,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -7606,21 +7607,7 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
                             },
                             "styling": {
                                 "default_style": "simple_rgb",
-                                "styles": [
-                                    style_c3_simple_rgb,
-                                    style_c3_false_colour,
-                                    style_c3_ndvi,
-                                    style_c3_ndwi,
-                                    style_c3_mndwi,
-                                    style_c3_pure_blue,
-                                    style_c3_pure_green,
-                                    style_c3_pure_red,
-                                    style_c3_pure_nir,
-                                    style_c3_pure_swir1,
-                                    style_c3_pure_swir2,
-                                    style_c3_pure_panchromatic,
-                                    style_c3_pure_aerosol,
-                                ],
+                                "styles": style_c3_ls_8
                             },
                         },
                         {
@@ -7636,7 +7623,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "name": "ga_ls7e_ard_3",
                             # The Datacube name for the associated data product
                             "product_name": "ga_ls7e_ard_3",
-                            "bands": bands_collection3_landsat_7,
+                            "bands": bands_c3_ls_7,
                             "resource_limits": reslim_tmad,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -7650,20 +7637,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             "styling": {
                                 "default_style": "simple_rgb",
-                                "styles": [
-                                        style_c3_simple_rgb,
-                                        style_c3_false_colour,
-                                        style_c3_ndvi,
-                                        style_c3_ndwi,
-                                        style_c3_mndwi,
-                                        style_c3_pure_blue,
-                                        style_c3_pure_green,
-                                        style_c3_pure_red,
-                                        style_c3_pure_nir,
-                                        style_c3_pure_swir1,
-                                        style_c3_pure_swir2,
-                                        style_c3_pure_panchromatic,
-                                ],
+                                "styles": style_c3_ls_7
                             },
                         },
                         {
@@ -7681,7 +7655,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "name": "ga_ls5t_ard_3",
                             # The Datacube name for the associated data product
                             "product_name": "ga_ls5t_ard_3",
-                            "bands": bands_collection3_landsat_5,
+                            "bands": bands_c3_ls_common,
                             "resource_limits": reslim_tmad,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -7695,19 +7669,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             "styling": {
                                 "default_style": "simple_rgb",
-                                "styles": [
-                                    style_c3_simple_rgb,
-                                    style_c3_false_colour,
-                                    style_c3_ndvi,
-                                    style_c3_ndwi,
-                                    style_c3_mndwi,
-                                    style_c3_pure_blue,
-                                    style_c3_pure_green,
-                                    style_c3_pure_red,
-                                    style_c3_pure_nir,
-                                    style_c3_pure_swir1,
-                                    style_c3_pure_swir2,
-                                ],
+                                "styles": style_c3_ls_common
                             },
                         },
                     ]
