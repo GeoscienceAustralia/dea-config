@@ -16,7 +16,7 @@
    "catalog": [
       {
          "name": "GSKY DEA Collection 3 Beta",
-	 "type": "group",
+         "type": "group",
          "preserveOrder": true,
          "items": [
             {
@@ -30,7 +30,7 @@
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             },
-	    {
+            {
                "name": "Landsat 8 Daily",
                "type": "wms",
                "url": "http://gsky.nci.org.au/ows/beta-dea",
@@ -41,7 +41,7 @@
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             },
-	    {
+            {
                "name": "Landsat 7 Daily",
                "type": "wms",
                "url": "http://gsky.nci.org.au/ows/beta-dea",
@@ -52,7 +52,7 @@
                "opacity": 1,
                "featureTimesProperty": "data_available_for_dates"
             },
-	    {
+            {
                "name": "Landsat 5 Daily",
                "type": "wms",
                "url": "http://gsky.nci.org.au/ows/beta-dea",
@@ -1903,7 +1903,7 @@
                "type": "group",
                "preserveOrder": true,
                "items": [
-		  {
+                  {
                      "name": "Near Real-Time Surface Reflectance (Sentinel 2A and 2B combined)",
                      "type": "wms",
                      "layers": "s2_nrt_granule_nbar_t",
@@ -2564,7 +2564,7 @@
                "ignoreUnknownTileErrors": true,
                "opacity": 1
             },
-             {
+            {
                "name": "Himawari 8 Mosaic ",
                "type": "wms",
                "layers": "himawari8_mosaic",
@@ -2599,115 +2599,115 @@
                "type": "geojson",
                "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20.geojson"
             },
-	    {
+            {
                "name": "DEA Wetlands Insight Tool",
-	       "type": "group",
-	       "preserveOrder": true,
-	       "items": [
-	    {
-               "name": "DEA Ramsar Wetlands Insight Tool v3.0",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/ramsar_wetlands_3577_20190403.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " {{WETLAND_NA}} in {{STATE}}, reference {{REFCODE}} in the Ramsar Wetlands of Australia catalogue as at 2020-03-19.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "DEA Ramsar Wetlands Insight Tool v3.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/ramsar_wetlands_3577_20190403.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{WETLAND_NA}} in {{STATE}}, reference {{REFCODE}} in the Ramsar Wetlands of Australia catalogue as at 2020-03-19.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
-             },
-             {
-               "name": "DEA Ramsar Wetlands Insight Tool v2.0",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/ramsar_wetlands_2018_exploded_WGS84.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                  },
+                  {
+                     "name": "DEA Ramsar Wetlands Insight Tool v2.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/ramsar_wetlands_2018_exploded_WGS84.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v2/{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
-	    },
-            {
-               "name": "DEA Ramsar Wetlands Insight Tool v1.0",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_exploded6.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                  },
+                  {
+                     "name": "DEA Ramsar Wetlands Insight Tool v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_exploded6.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{WETLAND_NA}} in {{STATE}}, feature {{FeatureID}} in the Ramsar wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/{{RAMSAR_NAM}}-{{WETLAND_NA}}-{{STATE}}-{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
-            },
-            {
-               "name": "DEA MDBA Wetlands Insight Tool v1.0",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/SEA_2018_survey_envelopes.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " {{Subwetland}} in {{WetlandNam}}, feature {{FID}} in the MDBA wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/plot_feature_{{FID}}_0.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WetlandNam}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/plot_feature_{{FID}}_0.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/area_percent_{{FID}}_0.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                  },
+                  {
+                     "name": "DEA MDBA Wetlands Insight Tool v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/SEA_2018_survey_envelopes.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{Subwetland}} in {{WetlandNam}}, feature {{FID}} in the MDBA wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/plot_feature_{{FID}}_0.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WetlandNam}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/plot_feature_{{FID}}_0.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/area_percent_{{FID}}_0.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
-            },
-            {
-               "name": "DEA WIT QLD Palustrine v1.0",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/Wet_WGS84_P_run_v1.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                  },
+                  {
+                     "name": "DEA WIT QLD Palustrine v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/Wet_WGS84_P_run_v1.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
-            },
-            {
-               "name": "DEA WIT QLD Lacustrine v1.0",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/Wet_WGS84_L_run_v1.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                  },
+                  {
+                     "name": "DEA WIT QLD Lacustrine v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/Wet_WGS84_L_run_v1.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Lacustrine/{{OBJECTID}}_{{CATCHMENT}}_{{HAB}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
-            },
-            {
-               "name": "DEA WIT - LRA",
-               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/DCDB_NW_LGA_aoi.geojson",
-               "type": "geojson",
-               "featureInfoTemplate": {
-                  "template": " OBJECTID {{OBJECTID}} in locality {{LOCALITY}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                  },
+                  {
+                     "name": "DEA WIT - LRA",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/DCDB_NW_LGA_aoi.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " OBJECTID {{OBJECTID}} in locality {{LOCALITY}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/LRA/{{LOTPLAN}}_{{SEGPAR}}-{{LOCALITY}}-{{OBJECTID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
-            }
+                  }
                ]
             },
-	    {
-              "name": "Summer Irrigation Insight Tool",
-	      "type": "group",
-	      "preserveOrder": true,
-	      "items": [
-	         {
-	            "name": "Condamine-Culgoa 2013-14",
-	            "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/CONDAMINE-CULGOA_2013_WIT.geojson",
-	            "type": "geojson",
-	            "featureInfoTemplate": {
-		     "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
-	            }
-	         },
-	         {
-	            "name": "GWYDIR 2016-17",
-	            "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2016_WIT.geojson",
-	            "type": "geojson",
-	            "featureInfoTemplate": {
-		           "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
-	            }
-	         },
-	         {
-	            "name": "GWYDIR 2017-18",
-	            "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2017_WIT.geojson",
-	            "type": "geojson",
-	            "featureInfoTemplate": {
-		           "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
-	            }
-	         },
-	         {
-	             "name": "GWYDIR 2018-19",
-	             "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2018_WIT.geojson",
-	             "type": "geojson",
-	             "featureInfoTemplate": {
-		            "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
-		     }
-                 }
-	      ]
-	    },
             {
-                  "name": "MODIS Marine Heat Waves Tool",
-                  "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/CMR_2013_dissolved_wgs84.geojson",
-                  "type": "geojson",
-                  "featureInfoTemplate": {
-                    "template": " {{MPA_NAME}} Marine Park in {{network}} marine network.  <p/> <figure> <img style='width: 100%' src='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'/> <figcaption>Seasonal variation of the MHW characteristics for {{MPA_NAME}} Marine Park. The MHW area is calculated as the percentage of the Marine Park observed by MODIS satellite. The mean MHW intensity is represented as degrees above the 90 percentile climatology calculated from the daily IMOS MODIS SST data between July 2002 and Oct 2018. The MHW days indicate the number of the days for which the Marine Park has been affected by MHWs. Note that the 2002 winter and the 2018 spring seasons have only 51 and 42 total numbers of days, respectively, due to the limitation of the time series.</figcaption> </figure> <p/> Download: <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'>chart image</a> | <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.csv'>timeseries CSV</a><p/>"
+               "name": "Summer Irrigation Insight Tool",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Condamine-Culgoa 2013-14",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/CONDAMINE-CULGOA_2013_WIT.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "GWYDIR 2016-17",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2016_WIT.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "GWYDIR 2017-18",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2017_WIT.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "GWYDIR 2018-19",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/GWYDIR_2018_WIT.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " {{BNAME}}, feature: {{UniqueID}}.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{UniqueID}}.{{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/irrigatedWIT/{{UniqueID}}.png{{/terria.urlEncode}}'>timeseries</a><p/>"
+                     }
                   }
+               ]
+            },
+            {
+               "name": "MODIS Marine Heat Waves Tool",
+               "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/CMR_2013_dissolved_wgs84.geojson",
+               "type": "geojson",
+               "featureInfoTemplate": {
+                  "template": " {{MPA_NAME}} Marine Park in {{network}} marine network.  <p/> <figure> <img style='width: 100%' src='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'/> <figcaption>Seasonal variation of the MHW characteristics for {{MPA_NAME}} Marine Park. The MHW area is calculated as the percentage of the Marine Park observed by MODIS satellite. The mean MHW intensity is represented as degrees above the 90 percentile climatology calculated from the daily IMOS MODIS SST data between July 2002 and Oct 2018. The MHW days indicate the number of the days for which the Marine Park has been affected by MHWs. Note that the 2002 winter and the 2018 spring seasons have only 51 and 42 total numbers of days, respectively, due to the limitation of the time series.</figcaption> </figure> <p/> Download: <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.png'>chart image</a> | <a href='http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/marine_heat_waves/season_{{code}}.csv'>timeseries CSV</a><p/>"
+               }
             },
             {
                "name": "Historical Airborne Photography - Cloncurry frames",
@@ -2728,11 +2728,11 @@
          ]
       },
       {
-        "name": "DEA S3 Accessed data",
-        "type": "group",
-	"preserveOrder": true,
-        "isOpen": false,
-        "items": [
+         "name": "DEA S3 Accessed data",
+         "type": "group",
+         "preserveOrder": true,
+         "isOpen": false,
+         "items": [
             {
                "name": "S3 DEA data accessed-Month",
                "type": "csv",
@@ -2741,7 +2741,7 @@
                   "scale": 3,
                   "scaleByValue": true,
                   "colorPalette": "Spectral"
-                 }
+               }
             },
             {
                "name": " Products Accessed",
@@ -2753,7 +2753,7 @@
                   "dataVariable": "product",
                   "scaleByValue": false,
                   "colorPalette": "Spectral"
-                 }
+               }
             },
             {
                "name": " Hits",
@@ -2765,7 +2765,7 @@
                   "dataVariable": "hits",
                   "scaleByValue": true,
                   "colorPalette": "Spectral"
-                 }
+               }
             }
          ]
       },
@@ -2889,89 +2889,89 @@
          "info": [
             {
                "name": "Details",
-               "content" : "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
+               "content": "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
             }
          ],
          "items": [
-           {
-             "name": "ALOS Displacement",
-             "type": "wms",
-             "layers": "alos_displacement",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_displacement",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1,
-             "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-           },
-           {
-             "name": "ALOS Velocity",
-             "type": "wms",
-             "layers": "alos_velocity",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "alos_velocity",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1,
-             "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-           },
-           {
-             "name": "ENVISAT Displacement",
-             "type": "wms",
-             "layers": "envisat_displacement",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_displacement",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1,
-             "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-           },
-           {
-             "name": "ENVISAT Velocity",
-             "type": "wms",
-             "layers": "envisat_velocity",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "envisat_velocity",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1,
-             "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-           },
-           {
-             "name": "RADARSAT2 Displacement",
-             "type": "wms",
-             "layers": "radarsat2_displacement",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_displacement",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1,
-             "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-           },
-           {
-             "name": "RADARSAT2 Velocity",
-             "type": "wms",
-             "layers": "radarsat2_velocity",
-             "url": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-             "linkedWcsCoverage": "radarsat2_velocity",
-             "ignoreUnknownTileErrors": true,
-             "chartType": "momentPoints",
-             "chartColor": "white",
-             "opacity": 1,
-             "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-           }
+            {
+               "name": "ALOS Displacement",
+               "type": "wms",
+               "layers": "alos_displacement",
+               "url": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsCoverage": "alos_displacement",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            {
+               "name": "ALOS Velocity",
+               "type": "wms",
+               "layers": "alos_velocity",
+               "url": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsCoverage": "alos_velocity",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            {
+               "name": "ENVISAT Displacement",
+               "type": "wms",
+               "layers": "envisat_displacement",
+               "url": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsCoverage": "envisat_displacement",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            {
+               "name": "ENVISAT Velocity",
+               "type": "wms",
+               "layers": "envisat_velocity",
+               "url": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsCoverage": "envisat_velocity",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            {
+               "name": "RADARSAT2 Displacement",
+               "type": "wms",
+               "layers": "radarsat2_displacement",
+               "url": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsCoverage": "radarsat2_displacement",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            {
+               "name": "RADARSAT2 Velocity",
+               "type": "wms",
+               "layers": "radarsat2_velocity",
+               "url": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+               "linkedWcsCoverage": "radarsat2_velocity",
+               "ignoreUnknownTileErrors": true,
+               "chartType": "momentPoints",
+               "chartColor": "white",
+               "opacity": 1,
+               "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            }
          ]
-       }
+      }
    ]
 }
