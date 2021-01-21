@@ -37,3 +37,10 @@ jobs:
       run: |
         python -m pip install pylint boto3
         ./check-code.sh
+
+    - name: Run ows_refactored_cfg test (dev)
+      run: |
+        docker-compose -f docker-compose.ows.yaml up -d
+        docker-compose -f docker-compose.ows.yaml down
+      env:
+        OWS_CFG_MOUNT: dev/services/wms/ows_refactored
