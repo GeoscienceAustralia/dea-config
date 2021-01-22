@@ -357,4 +357,4 @@ For service status information, see https://status.dea.ga.gov.au""",
         "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
     },
     "styling": {"default_style": "simple_rgb", "styles": styles_c3_ls_common},
-},,,,
+}
