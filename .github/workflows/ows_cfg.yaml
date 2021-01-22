@@ -34,4 +34,4 @@ jobs:
         docker-compose -f docker-compose.ows.yaml up -d
         docker-compose -f docker-compose.ows.yaml down
       env:
-        OWS_CFG_MOUNT: dev/services/wms/ows_refactored
+        OWS_CFG_MOUNT: /code/dev/services/wms/ows_refactored
