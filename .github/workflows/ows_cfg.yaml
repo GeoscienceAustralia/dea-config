@@ -32,8 +32,7 @@ jobs:
     - name: Run ows_refactored_cfg test (dev)
       run: |
         docker-compose -f docker-compose.ows.yaml up -d
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "ls /env/config"
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube-ows-cfg-parse"
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube-ows-cfg-parse -p"
         docker-compose -f docker-compose.ows.yaml down
       env:
-        OWS_CFG_MOUNT: /code/dev/services/wms/ows_refactored
+        OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored
