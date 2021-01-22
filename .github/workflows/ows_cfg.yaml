@@ -3,12 +3,12 @@ name: OWS CFG Test
 on:
   push:
     path:
-      - 'dev/services/**'
+      - 'dev/services/wms/**'
       - .github/workflows/ows_cfg.yaml
     pull_request:
       branches: [ master ]
       paths:
-        - 'dev/services/**'
+        - 'dev/services/wms/**'
         - .github/workflows/ows_cfg.yaml
 
 jobs:
