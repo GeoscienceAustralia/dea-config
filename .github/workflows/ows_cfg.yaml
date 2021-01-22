@@ -8,7 +8,7 @@ on:
     pull_request:
       branches: [ master ]
       paths:
-        - 'dev/terria/**'
+        - 'dev/services/**'
         - .github/workflows/ows_cfg.yaml
 
 jobs:
