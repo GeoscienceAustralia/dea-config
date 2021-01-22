@@ -24,7 +24,8 @@ services:
       FLASK_APP: /code/datacube_ows/ogc.py
       FLASK_ENV: development
       PYTHONPATH: /env/config
-    depends_on: postgres
+    depends_on:
+      - postgres
     environment:
       DB_PORT: 5432
     volumes:
