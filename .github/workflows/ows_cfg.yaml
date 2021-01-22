@@ -1,0 +1,39 @@
+name: OWS CFG Test
+
+on:
+  push:
+    path:
+      - 'dev/services/wms/**'
+      - .github/workflows/ows_cfg.yaml
+    pull_request:
+      branches: [ master ]
+      paths:
+        - 'dev/services/wms/**'
+        - .github/workflows/ows_cfg.yaml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+
+    - name: Run Python Linter
+      run: |
+        python -m pip install pylint boto3
+        ./check-code.sh
+
+    - name: Run ows_refactored_cfg test (dev)
+      run: |
+        docker-compose -f docker-compose.ows.yaml up -d
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube-ows-cfg-parse"
+        docker-compose -f docker-compose.ows.yaml down
+      env:
+        OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored
