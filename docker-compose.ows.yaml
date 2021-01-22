@@ -14,5 +14,5 @@ services:
       PYTHONPATH: /env/config
     volumes:
       - ${OWS_CFG_MOUNT}:/env/config/ows_refactored
-    # command:
-    #   /bin/sh -c "datacube-ows-cfg-parse -p"
+    command:
+      /bin/sh -c "datacube-ows-cfg-parse -p"
