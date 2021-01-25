@@ -94,7 +94,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             "styling": {
                 "default_style": "simple_rgb",
-                "styles": tide_style_list,
+                "styles": styles_tide_list,
             },
         },
         {
@@ -140,7 +140,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             "styling": {
                 "default_style": "simple_rgb",
-                "styles": tide_style_list,
+                "styles": styles_tide_list,
             },
         },
     ],
