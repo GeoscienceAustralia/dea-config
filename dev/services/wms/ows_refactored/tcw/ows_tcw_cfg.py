@@ -1,6 +1,7 @@
 from ows_refactored.ows_reslim_cfg import (
-     reslim_wms_min_zoom_15_cache_rules,
+    reslim_wms_min_zoom_15_cache_rules,
 )
+
 bands_tcw_percentile = {
     "TCW_PC_10": [],
     "TCW_PC_50": [],
@@ -65,15 +66,14 @@ style_tcw_90 = {
 }
 
 
-layers =
-{
-                    "title": "DEA Wetness Percentiles (Landsat)",
-                    "abstract": "",
-                    "layers": [
-                        {
-                            "title": "DEA Wetness Percentiles (Landsat)",
-                            "name": "ga_ls_tcw_percentiles_2",
-                            "abstract": """
+layers = {
+    "title": "DEA Wetness Percentiles (Landsat)",
+    "abstract": "",
+    "layers": [
+        {
+            "title": "DEA Wetness Percentiles (Landsat)",
+            "name": "ga_ls_tcw_percentiles_2",
+            "abstract": """
 Geoscience Australia Landsat Collection 2 Tasseled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577).
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Areas that are partially covered in water, or where water is mixed with vegetation when viewed from above, provide habitat for a wide range of aquatic organisms.
@@ -95,27 +95,27 @@ One of the limitations of using the Tasseled Cap wetness index is that it will i
 We used the Tasseled Cap transforms described in Crist et al. (1985).
 Crist, E. P. (1985). A TM Tasseled Cap equivalent transformation for reflectance factor data. Remote Sensing of Environment, 17(3), 301–306. https://doi.org/10.1016/0034-4257(85)90102-6
 For service status information, see https://status.dea.ga.gov.au""",
-                            "product_name": "ga_ls_tcw_percentiles_2",
-                            "bands": bands_tcw_percentile,
-                            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "default_bands": [
-                                    "TCW_PC_10",
-                                    "TCW_PC_50",
-                                    "TCW_PC_90",
-                                ],
-                                "native_resolution": [25, -25],
-                            },
-                            "styling": {
-                                "default_style": "tcw_10_percentile",
-                                "styles": [style_tcw_10, style_tcw_50, style_tcw_90],
-                            },
-                        },
-                    ],
-                }
+            "product_name": "ga_ls_tcw_percentiles_2",
+            "bands": bands_tcw_percentile,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "native_crs": "EPSG:3577",
+                "default_bands": [
+                    "TCW_PC_10",
+                    "TCW_PC_50",
+                    "TCW_PC_90",
+                ],
+                "native_resolution": [25, -25],
+            },
+            "styling": {
+                "default_style": "tcw_10_percentile",
+                "styles": [style_tcw_10, style_tcw_50, style_tcw_90],
+            },
+        },
+    ],
+}
