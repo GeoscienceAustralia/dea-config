@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules, reslim_wms_min_zoom_35
 from ows_refactored.ows_legend_cfg import (
     legend_idx_percentage_by_20,
     legend_idx_percentage_by_25,
@@ -6,6 +6,7 @@ from ows_refactored.ows_legend_cfg import (
     legend_idx_thirtyplus_4ticks,
 )
 from bands_wo_cfg import bands_wofs_filt_sum, bands_wofs_sum, bands_wofs_obs
+
 
 
 style_wofs_filt_freq = {
@@ -675,7 +676,7 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
 """,
             "product_name": "wofs_filtered_summary",
             "bands": bands_wofs_filt_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -710,7 +711,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -744,7 +745,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -778,7 +779,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -805,7 +806,7 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
 """,
             "product_name": "wofs_filtered_summary",
             "bands": bands_wofs_filt_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -839,7 +840,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -865,7 +866,7 @@ Water Observations from Space - Annual Statistics is a set of annual statistical
 """,
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -899,7 +900,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -933,7 +934,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_apr_oct_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -959,7 +960,7 @@ Water Observations from Space - April to October Statistics is a set of seasonal
 """,
             "product_name": "wofs_apr_oct_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -985,7 +986,7 @@ Water Observations from Space - April to October Statistics is a set of seasonal
 """,
             "product_name": "wofs_apr_oct_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1019,7 +1020,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_nov_mar_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1045,7 +1046,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_nov_mar_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1071,7 +1072,7 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
 """,
             "product_name": "wofs_nov_mar_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],

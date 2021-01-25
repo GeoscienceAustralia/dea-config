@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 from ows_refactored.sentinel2.style_s2_cfg import styles_s2_list, style_s2_nbr_list
 
 bands_sentinel2 = {
@@ -51,7 +51,7 @@ For service status information, see https://status.dea.ga.gov.au
     "multi_product": True,
     "product_names": ["s2a_nrt_granule", "s2b_nrt_granule"],
     "bands": bands_sentinel2,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "dynamic": True,
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -89,7 +89,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
     "product_name": "s2b_nrt_granule",
     "bands": bands_sentinel2,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "dynamic": True,
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -127,7 +127,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
     "product_name": "s2a_nrt_granule",
     "bands": bands_sentinel2,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "dynamic": True,
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",

@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_10
 
 bands_aster = {
     "Band_1": [],
@@ -811,7 +811,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_false_colour",
             "bands": bands_aster,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -864,7 +864,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_regolith_ratios",
             "bands": bands_aster,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -918,7 +918,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_aloh_group_composition",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -980,7 +980,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_aloh_group_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1036,7 +1036,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_feoh_group_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1085,7 +1085,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_ferric_oxide_composition",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1141,7 +1141,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_ferric_oxide_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1195,7 +1195,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_ferrous_iron_content_in_mgoh",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1243,7 +1243,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_ferrous_iron_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1287,7 +1287,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_green_vegetation",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1335,7 +1335,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_gypsum_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1387,7 +1387,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_kaolin_group_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1440,7 +1440,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_mgoh_group_composition",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1494,7 +1494,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_mgoh_group_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1552,7 +1552,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_opaque_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1612,7 +1612,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_silica_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -1658,7 +1658,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "aster_quartz_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_10,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
