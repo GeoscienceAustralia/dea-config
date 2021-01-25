@@ -58,10 +58,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "native_resolution": [10.0, 10.0],
                 "default_bands": ["nbar_red", "nbar_green", "nbar_blue"],
             },
-            "styling": {
-                "default_style": "simple_rgb",
-                "styles": styles_s2_list
-            },
+            "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
         },
         {
             "name": "s2b_ard_granule_nbar_t",
@@ -83,10 +80,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                 "native_resolution": [10.0, 10.0],
                 "default_bands": ["nbar_red", "nbar_green", "nbar_blue"],
             },
-            "styling": {
-                "default_style": "simple_rgb",
-                "styles": styles_s2_list
-            },
+            "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
         },
         {
             "name": "s2a_ard_granule_nbar_t",
@@ -108,10 +102,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                 "native_resolution": [10.0, 10.0],
                 "default_bands": ["nbar_red", "nbar_green", "nbar_blue"],
             },
-            "styling": {
-                "default_style": "simple_rgb",
-                "styles": styles_s2_list
-            },
+            "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
         },
     ],
 }

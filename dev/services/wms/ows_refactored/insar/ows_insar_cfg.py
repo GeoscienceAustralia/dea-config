@@ -41,6 +41,7 @@ style_insar_velocity = {
     },
 }
 import copy
+
 style_insar_velocity_ud = copy.deepcopy(style_insar_velocity)
 style_insar_velocity_ud["name"] = "insar_velocity_ud"
 style_insar_velocity_ud["title"] = "InSAR Velocity Up-Down "

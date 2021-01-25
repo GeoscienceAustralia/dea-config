@@ -5,18 +5,8 @@ from ows_refactored.ows_legend_cfg import (
     legend_idx_twentyplus_3ticks,
     legend_idx_thirtyplus_4ticks,
 )
+from bands_wo_cfg import bands_wofs_filt_sum, bands_wofs_sum, bands_wofs_obs
 
-bands_wofs_filt_sum = {"confidence": [], "wofs_filtered_summary": []}
-
-bands_wofs_sum = {
-    "count_wet": [],
-    "count_clear": [],
-    "frequency": [],
-}
-
-bands_wofs_obs = {
-    "water": [],
-}
 
 style_wofs_filt_freq = {
     "name": "WOfS_filtered_frequency",

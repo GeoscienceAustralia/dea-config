@@ -1,4 +1,3 @@
-
 bands_ls = {
     "red": ["red"],
     "green": ["green"],

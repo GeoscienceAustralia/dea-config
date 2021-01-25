@@ -11,7 +11,13 @@ from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_ngv_25ticks,
 )
 
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35, reslim_wms_min_zoom_15_cache_rules, reslim_wms_min_zoom_10, reslim_wms_min_zoom_15
+from ows_refactored.ows_reslim_cfg import (
+    reslim_wms_min_zoom_500_max_datasets,
+    reslim_wms_min_zoom_35,
+    reslim_wms_min_zoom_15_cache_rules,
+    reslim_wms_min_zoom_10,
+    reslim_wms_min_zoom_15,
+)
 
 # Reusable Chunks 2. Band lists.
 
@@ -47,11 +53,7 @@ bands_hap = {
 }
 
 
-
-
-
 # Reusable Chunks 4. Styles
-
 
 
 style_mangrove_cover_v2 = {
@@ -88,9 +90,6 @@ style_mangrove_cover_v2 = {
     },
     "legend": {},
 }
-
-
-
 
 
 style_mstp_rgb = {
@@ -509,7 +508,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                         {
                             "include": "ows_refactored.wofs.ows_nrt_wo_cfg.layers",
                             "type": "python",
-                        }
+                        },
                     ],
                 },
                 {
@@ -668,16 +667,16 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
-                                "default_bands": ["TCW_PC_10", "TCW_PC_50", "TCW_PC_90"],
+                                "default_bands": [
+                                    "TCW_PC_10",
+                                    "TCW_PC_50",
+                                    "TCW_PC_90",
+                                ],
                                 "native_resolution": [25, -25],
                             },
                             "styling": {
                                 "default_style": "tcw_10_percentile",
-                                "styles": [
-                                    style_tcw_10,
-                                    style_tcw_50,
-                                    style_tcw_90
-                                ],
+                                "styles": [style_tcw_10, style_tcw_50, style_tcw_90],
                             },
                         },
                     ],
@@ -783,7 +782,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "abstract": "Historical Airborne Photography",
                             "product_name": "historical_airborne_photography",
                             "bands": bands_hap,
-                            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+                            "resource_limits": reslim_wms_min_zoom_500_max_datasets,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
