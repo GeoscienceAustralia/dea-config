@@ -321,7 +321,7 @@ styles_barest_earth_mosaic_list = [
     style_sentinel_pure_swir2,
 ]
 
-styles_barest_earth_list = styles_barest_earth_mosaic_list +  [
+styles_barest_earth_list = styles_barest_earth_mosaic_list + [
     style_nd_ferric_iron,
     style_nd_soil,
     style_nd_clay_mica,
