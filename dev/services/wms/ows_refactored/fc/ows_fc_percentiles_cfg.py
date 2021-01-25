@@ -1,5 +1,11 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
-from ows_refactored.fc.style_fc_cfg import style_fc_simple, style_fc_simple_rgb
+from ows_refactored.fc.style_fc_cfg import (
+    style_fc_simple,
+    style_fc_simple_rgb,
+    styles_fc_bare_list,
+    styles_fc_gv_list,
+    styles_fc_ngv_list,
+)
 
 from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_25ticks,
@@ -18,360 +24,6 @@ bands_fc_percentile = {
     "BS_PC_50": [],
     "BS_PC_90": [],
 }
-
-style_fc_gv_10 = {
-    "name": "green_veg_10",
-    "title": "10th Percentile",
-    "abstract": "10th Percentile of Green Vegetation",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "PV_PC_10",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["PV_PC_10"],
-    "color_ramp": [
-        {
-            "value": 0,
-            "color": "#ffffcc",
-        },
-        {
-            "value": 25,
-            "color": "#c2e699",
-        },
-        {
-            "value": 50,
-            "color": "#78c679",
-        },
-        {
-            "value": 75,
-            "color": "#31a354",
-        },
-        {
-            "value": 100,
-            "color": "#006837",
-        },
-    ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-    "legend": legend_idx_0_100_pixel_fc_25ticks,
-}
-
-style_fc_gv_50 = {
-    "name": "green_veg_50",
-    "title": "50th Percentile",
-    "abstract": "50th Percentile of Green Vegetation",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "PV_PC_50",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["PV_PC_50"],
-    "color_ramp": [
-        {"value": 0, "color": "#ffffcc"},
-        {"value": 25, "color": "#c2e699"},
-        {"value": 50, "color": "#78c679"},
-        {"value": 75, "color": "#31a354"},
-        {"value": 100, "color": "#006837"},
-    ],
-    # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": legend_idx_0_100_pixel_fc_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
-
-style_fc_gv_90 = {
-    "name": "green_veg_90",
-    "title": "90th Percentile",
-    "abstract": "90th Percentile of Green Vegetation",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "PV_PC_90",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["PV_PC_90"],
-    "color_ramp": [
-        {"value": 0, "color": "#ffffcc"},
-        {"value": 25, "color": "#c2e699"},
-        {"value": 50, "color": "#78c679"},
-        {"value": 75, "color": "#31a354"},
-        {"value": 100, "color": "#006837"},
-    ],
-    # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": legend_idx_0_100_pixel_fc_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
-
-style_fc_ngv_10 = {
-    "name": "non_green_veg_10",
-    "title": "10th Percentile",
-    "abstract": "10th Percentile of Non Green Vegetation",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "NPV_PC_10",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["NPV_PC_10"],
-    "color_ramp": [
-        {
-            "value": 0,
-            "color": "#ffffd4",
-        },
-        {"value": 25, "color": "#fed98e", "legend": {}},
-        {
-            "value": 50,
-            "color": "#fe9929",
-        },
-        {
-            "value": 75,
-            "color": "#d95f0e",
-        },
-        {
-            "value": 100,
-            "color": "#993404",
-        },
-    ],
-    # Emulates what we had previously
-    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
-
-style_fc_ngv_50 = {
-    "name": "non_green_veg_50",
-    "title": "50th Percentile",
-    "abstract": "50th Percentile of Non Green Vegetation",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "NPV_PC_50",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["NPV_PC_50"],
-    "color_ramp": [
-        {"value": 0, "color": "#ffffd4"},
-        {"value": 25, "color": "#fed98e"},
-        {"value": 50, "color": "#fe9929"},
-        {"value": 75, "color": "#d95f0e"},
-        {"value": 100, "color": "#993404"},
-    ],
-    # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
-
-style_fc_ngv_90 = {
-    "name": "non_green_veg_90",
-    "title": "90th Percentile",
-    "abstract": "90th Percentile of Non Green Vegetation",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "NPV_PC_90",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["NPV_PC_90"],
-    "color_ramp": [
-        {"value": 0, "color": "#ffffd4"},
-        {"value": 25, "color": "#fed98e"},
-        {"value": 50, "color": "#fe9929"},
-        {"value": 75, "color": "#d95f0e"},
-        {"value": 100, "color": "#993404"},
-    ],
-    # old behaviour was wrong.  This is what Leo and Emma requested
-    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
-
-style_fc_bs_10 = {
-    "name": "bare_ground_10",
-    "title": "10th Percentile",
-    "abstract": "10th Percentile of Bare Soil",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "BS_PC_10",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["BS_PC_10"],
-    "color_ramp": [
-        {
-            "value": 0,
-            "color": "#feebe2",
-        },
-        {
-            "value": 25,
-            "color": "#fbb4b9",
-        },
-        {
-            "value": 50,
-            "color": "#f768a1",
-        },
-        {
-            "value": 75,
-            "color": "#c51b8a",
-        },
-        {
-            "value": 100,
-            "color": "#7a0177",
-        },
-    ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-    # Emulates what we had previously
-    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
-}
-
-style_fc_bs_50 = {
-    "name": "bare_ground_50",
-    "title": "50th Percentile",
-    "abstract": "50th Percentile of Bare Soil",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "BS_PC_50",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["BS_PC_50"],
-    "color_ramp": [
-        {"value": 0, "color": "#feebe2"},
-        {"value": 25, "color": "#fbb4b9"},
-        {"value": 50, "color": "#f768a1"},
-        {"value": 75, "color": "#c51b8a"},
-        {"value": 100, "color": "#7a0177"},
-    ],
-    # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
-
-style_fc_bs_90 = {
-    "name": "bare_ground_90",
-    "title": "90th Percentile",
-    "abstract": "90th Percentile of Bare Soil",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "BS_PC_90",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["BS_PC_90"],
-    "color_ramp": [
-        {"value": 0, "color": "#feebe2"},
-        {"value": 25, "color": "#fbb4b9"},
-        {"value": 50, "color": "#f768a1"},
-        {"value": 75, "color": "#c51b8a"},
-        {"value": 100, "color": "#7a0177"},
-    ],
-    # Old behaviour was wrong - this is what Leo and Emma have requested.
-    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
-
-style_fc_rgb = {
-    "name": "fc_rgb",
-    "title": "Three-band fractional cover",
-    "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
-    "components": {
-        "red": {"BS_PC_50": 1.0},
-        "green": {"PV_PC_50": 1.0},
-        "blue": {"NPV_PC_50": 1.0},
-    },
-    "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-    },
-}
-
 
 fcp_g_layers = {
     "title": "Fractional Cover Percentiles - Green Vegetation",
@@ -408,14 +60,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_bands": ["PV_PC_10", "PV_PC_50", "PV_PC_90"],
                 "native_resolution": [25, -25],
             },
-            "styling": {
-                "default_style": "green_veg_10",
-                "styles": [
-                    style_fc_gv_10,
-                    style_fc_gv_50,
-                    style_fc_gv_90,
-                ],
-            },
+            "styling": {"default_style": "green_veg_10", "styles": styles_fc_gv_list},
         },
     ],
 }
@@ -457,11 +102,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             "styling": {
                 "default_style": "non_green_veg_10",
-                "styles": [
-                    style_fc_ngv_10,
-                    style_fc_ngv_50,
-                    style_fc_ngv_90,
-                ],
+                "styles": styles_fc_ngv_list,
             },
         }
     ],
@@ -497,11 +138,7 @@ fcp_bs_layers = {
             },
             "styling": {
                 "default_style": "bare_ground_10",
-                "styles": [
-                    style_fc_bs_10,
-                    style_fc_bs_50,
-                    style_fc_bs_90,
-                ],
+                "styles": styles_fc_bare_list,
             },
         }
     ],
@@ -589,14 +226,7 @@ For service status information, see https://status.dea.ga.gov.au
                 ],
                 "native_resolution": [25, -25],
             },
-            "styling": {
-                "default_style": "green_veg_10",
-                "styles": [
-                    style_fc_gv_10,
-                    style_fc_gv_50,
-                    style_fc_gv_90,
-                ],
-            },
+            "styling": {"default_style": "green_veg_10", "styles": styles_fc_gv_list},
         },
         {
             "title": "Fractional Cover Percentiles Seasonal 25m 100km tile (Non Green Vegetation)",
@@ -636,11 +266,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
             "styling": {
                 "default_style": "non_green_veg_10",
-                "styles": [
-                    style_fc_ngv_10,
-                    style_fc_ngv_50,
-                    style_fc_ngv_90,
-                ],
+                "styles": styles_fc_ngv_list,
             },
         },
         {
@@ -670,11 +296,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
             "styling": {
                 "default_style": "bare_ground_10",
-                "styles": [
-                    style_fc_bs_10,
-                    style_fc_bs_50,
-                    style_fc_bs_90,
-                ],
+                "styles": styles_fc_bare_list,
             },
         },
         {
