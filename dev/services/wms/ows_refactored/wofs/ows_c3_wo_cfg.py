@@ -1,4 +1,5 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.wofs.bands_wo_cfg import bands_wofs_obs
 
 style_c3_wofs_obs = {
     "name": "observations",

@@ -1,5 +1,5 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
-from bands_wo_cfg import bands_wofs_obs
+from ows_refactored.wofs.bands_wo_cfg import bands_wofs_obs
 
 style_s2_water_classifier = {
     "name": "water_classifier",
