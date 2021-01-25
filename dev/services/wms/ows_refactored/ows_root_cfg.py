@@ -486,7 +486,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     ],
                 },
                 {
-                    "include": "ows_refactored.tcw.ows_tcw_percentiles_cfg.layers",
+                    "include": "ows_refactored.tcw.ows_tcw_cfg.layers",
                     "type": "python",
                 },
                 {
