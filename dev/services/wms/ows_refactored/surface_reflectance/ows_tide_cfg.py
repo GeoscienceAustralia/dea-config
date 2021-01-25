@@ -1,38 +1,6 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 from ows_refactored.surface_reflectance.style_ls_cfg import styles_tide_list
-
-
-bands_ls = {
-    "red": ["red"],
-    "green": ["green"],
-    "blue": ["blue"],
-    "nir": ["nir", "near_infrared"],
-    "swir1": ["swir1", "shortwave_infrared_1", "near_shortwave_infrared"],
-    "swir2": ["swir2", "shortwave_infrared_2", "far_shortwave_infrared"],
-}
-
-bands_ls8 = bands_ls.copy()
-bands_ls8.update(
-    {
-        "coastal_aerosol": ["coastal_aerosol"],
-    }
-)
-
-bands_item = {
-    "relative": [],
-}
-
-bands_item_conf = {
-    "stddev": [],
-}
-
-
-##############################################################################################
-#
-#  Rescale styles for tide layers
-#
-##############################################################################################
-
+from ows_refactored.surface_reflectance.band_ls_cfg import bands_ls
 
 layers = {
     "title": "High Tide Low Tide Composite",
