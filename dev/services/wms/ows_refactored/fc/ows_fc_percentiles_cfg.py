@@ -4,13 +4,8 @@ from ows_refactored.fc.style_fc_cfg import (
     style_fc_simple_rgb,
     styles_fc_bare_list,
     styles_fc_gv_list,
+    style_fc_rgb,
     styles_fc_ngv_list,
-)
-
-from ows_refactored.ows_legend_cfg import (
-    legend_idx_0_100_pixel_fc_25ticks,
-    legend_idx_0_100_pixel_fc_bs_25ticks,
-    legend_idx_0_100_pixel_fc_ngv_25ticks,
 )
 
 bands_fc_percentile = {
