@@ -168,10 +168,11 @@ style_wofs_summary_clear = {
 layers = {
     "title": "Water Observations from Space",
     "abstract": "WOfS",
-    "layers": [{
-        "title": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
-        "name": "wofs_annual_summary_wet",
-        "abstract": """
+    "layers": [
+        {
+            "title": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
+            "name": "wofs_annual_summary_wet",
+            "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
@@ -182,56 +183,56 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-        "product_name": "wofs_annual_summary",
-        "bands": bands_wofs_sum,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-            "always_fetch_bands": [],
-            "manual_merge": False,
+            "product_name": "wofs_annual_summary",
+            "bands": bands_wofs_sum,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "native_crs": "EPSG:3577",
+                "native_resolution": [25, -25],
+                "default_bands": ["count_wet"],
+            },
+            "styling": {
+                "default_style": "annual_water_observations",
+                "styles": [
+                    style_wofs_summary_wet,
+                ],
+            },
         },
-        "wcs": {
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "default_bands": ["count_wet"],
-        },
-        "styling": {
-            "default_style": "annual_water_observations",
-            "styles": [
-                style_wofs_summary_wet,
-            ],
-        },
-    },
-    {
-        "title": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
-        "name": "wofs_annual_summary_clear",
-        "abstract": """
+        {
+            "title": "Water Observations from Space 25m Clear Count (WOfS Annual Statistics)",
+            "name": "wofs_annual_summary_clear",
+            "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/v2.1.5/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
 """,
-        "product_name": "wofs_annual_summary",
-        "bands": bands_wofs_sum,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-            "always_fetch_bands": [],
-            "manual_merge": False,
+            "product_name": "wofs_annual_summary",
+            "bands": bands_wofs_sum,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "native_crs": "EPSG:3577",
+                "native_resolution": [25, -25],
+                "default_bands": ["count_clear"],
+            },
+            "styling": {
+                "default_style": "annual_clear_observations",
+                "styles": [
+                    style_wofs_summary_clear,
+                ],
+            },
         },
-        "wcs": {
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "default_bands": ["count_clear"],
-        },
-        "styling": {
-            "default_style": "annual_clear_observations",
-            "styles": [
-                style_wofs_summary_clear,
-            ],
-        },
-    },
-    {
-        "title": "Water Observations from Space 25m Water Summary (WOfS Annual Statistics)",
-        "name": "wofs_annual_summary_statistics",
-        "abstract": """
+        {
+            "title": "Water Observations from Space 25m Water Summary (WOfS Annual Statistics)",
+            "name": "wofs_annual_summary_statistics",
+            "abstract": """
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own.
@@ -242,25 +243,26 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-        "product_name": "wofs_annual_summary",
-        "bands": bands_wofs_sum,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-        "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-            "always_fetch_bands": [],
-            "manual_merge": False,
+            "product_name": "wofs_annual_summary",
+            "bands": bands_wofs_sum,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "native_crs": "EPSG:3577",
+                "native_resolution": [25, -25],
+                "default_bands": ["frequency"],
+            },
+            "styling": {
+                "default_style": "annual_WOfS_frequency",
+                "styles": [
+                    style_annual_wofs_summary_frequency,
+                    style_annual_wofs_summary_frequency_blue,
+                ],
+            },
         },
-        "wcs": {
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "default_bands": ["frequency"],
-        },
-        "styling": {
-            "default_style": "annual_WOfS_frequency",
-            "styles": [
-                style_annual_wofs_summary_frequency,
-                style_annual_wofs_summary_frequency_blue,
-            ],
-        },
-    }]
+    ],
 }
