@@ -309,7 +309,7 @@ styles_ls_list = [
     style_ls_pure_swir2,
 ]
 
-styles_barest_earth_list = [
+styles_barest_earth_mosaic_list = [
     style_ls_simple_rgb,
     style_ls_irg,
     style_ls_ndvi,
@@ -319,6 +319,9 @@ styles_barest_earth_list = [
     style_sentinel_pure_nir,
     style_sentinel_pure_swir1,
     style_sentinel_pure_swir2,
+]
+
+styles_barest_earth_list = styles_barest_earth_mosaic_list +  [
     style_nd_ferric_iron,
     style_nd_soil,
     style_nd_clay_mica,
