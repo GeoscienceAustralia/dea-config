@@ -625,7 +625,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
-                    "include": "ows_refactored.surface_reflecctance.ows_tide_cfg.layers",
+                    "include": "ows_refactored.surface_reflectance.ows_tide_cfg.layers",
                     "type": "python",
                 },
                 {
