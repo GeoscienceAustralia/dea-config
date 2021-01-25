@@ -166,7 +166,9 @@ style_wofs_summary_clear = {
 
 
 layers = {
-    {
+    "title": "Water Observations from Space",
+    "abstract": "WOfS",
+    "layers": [{
         "title": "Water Observations from Space 25m Wet Count (WOfS Annual Statistics)",
         "name": "wofs_annual_summary_wet",
         "abstract": """
@@ -260,5 +262,5 @@ For service status information, see https://status.dea.ga.gov.au
                 style_annual_wofs_summary_frequency_blue,
             ],
         },
-    },
+    }]
 }

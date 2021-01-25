@@ -160,6 +160,9 @@ style_seasonal_wofs_summary_frequency_blue = {
 
 
 layers = {
+    "title": "Water Observations from Space",
+    "abstract": "WOfS",
+    "layers": [
     {
         "title": "Water Observations from Space 25m Wet Count (WOfS April - October Statistics)",
         "name": "wofs_apr_oct_summary_wet",
@@ -331,5 +334,5 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
                 style_seasonal_wofs_summary_frequency_blue,
             ],
         },
-    },
+    }]
 }
