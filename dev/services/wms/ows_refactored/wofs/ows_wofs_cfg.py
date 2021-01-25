@@ -246,14 +246,6 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
             },
         },
         {
-            "include": "ows_refactored.wofs.ows_wofs_summary_cfg.layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.wofs.ows_wofs_annual_cfg.layers",
-            "type": "python",
-        },
-        {
             "title": "Water Observations from Space 25m Confidence (WOfS Filtered Statistics)",
             "name": "wofs_filtered_summary_confidence",
             "abstract": """
@@ -278,6 +270,14 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
                     style_wofs_confidence,
                 ],
             },
+        },
+        {
+            "include": "ows_refactored.wofs.ows_wofs_summary_cfg.layers",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.wofs.ows_wofs_annual_cfg.layers",
+            "type": "python",
         },
         {
             "include": "ows_refactored.wofs.ows_wofs_seasonal_cfg.layers",
