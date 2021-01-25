@@ -3,7 +3,9 @@ name: Docker Image CI
 on:
   push:
     branches: [ master ]
-
+    path:
+      - 'dev/services/wms/**'
+      - 'prod/services/wms/**'
   release:
     types: [created, edited, published]
 
@@ -45,4 +47,3 @@ jobs:
         docker tag ${DOCKER_IMAGE}:latest ${DOCKER_IMAGE}:${tag}
         docker push ${DOCKER_IMAGE}:latest
         docker push ${DOCKER_IMAGE}:${tag}
-
