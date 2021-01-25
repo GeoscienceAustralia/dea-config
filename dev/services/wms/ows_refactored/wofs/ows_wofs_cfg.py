@@ -1,4 +1,7 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules, reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import (
+    reslim_wms_min_zoom_15_cache_rules,
+    reslim_wms_min_zoom_35,
+)
 from ows_refactored.ows_legend_cfg import (
     legend_idx_percentage_by_20,
     legend_idx_percentage_by_25,
@@ -6,7 +9,6 @@ from ows_refactored.ows_legend_cfg import (
     legend_idx_thirtyplus_4ticks,
 )
 from bands_wo_cfg import bands_wofs_filt_sum, bands_wofs_sum, bands_wofs_obs
-
 
 
 style_wofs_filt_freq = {
