@@ -1,4 +1,6 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.surface_reflectance.style_ls_cfg import styles_tide_list
+
 
 bands_ls = {
     "red": ["red"],
@@ -30,24 +32,6 @@ bands_item_conf = {
 #  Rescale styles for tide layers
 #
 ##############################################################################################
-
-
-from functools import partial
-import copy
-from ows_refactored.surface_reflectance.ows_geomedian_cfg import styles_ls_list
-
-# HACK: Move this to a utils to allow style reusability
-def swap_scale(new_scale: list, style: dict):
-    if "scale_range" in style:
-        new_style = copy.copy(style)
-        new_style["scale_range"] = new_scale
-        return new_style
-    return style
-
-
-swap_scale_p = partial(swap_scale, [0.0, 0.3])
-
-tide_style_list = list([swap_scale_p(s) for s in styles_ls_list])
 
 
 layers = {

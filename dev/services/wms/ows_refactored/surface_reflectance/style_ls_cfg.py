@@ -1,5 +1,6 @@
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
-
+from functools import partial
+from ows_refactored.ows_util_tools import swap_scale
 
 style_ls_simple_rgb = {
     "name": "simple_rgb",
@@ -326,3 +327,7 @@ styles_barest_earth_list = styles_barest_earth_mosaic_list + [
     style_nd_soil,
     style_nd_clay_mica,
 ]
+
+swap_scale_p = partial(swap_scale, [0.0, 0.3])
+
+styles_tide_list = list([swap_scale_p(s) for s in styles_ls_list])
