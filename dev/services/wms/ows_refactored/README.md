@@ -24,6 +24,9 @@ Some layers share common style definitions and in the configuration file they sh
 #### bands
 each product's bands definition is to be declared following naming convention `bands_*`
 
+#### abstract
+if several layers have long abstract move them to `abstract_*_cfg.py` and declared following naming convention `abstract_*`
+
 ### Resource Limit
 any unique resource limiting configuration should be declared in `ows_reslim_cfg.py` and be declared following naming convention `reslim_*`
 
