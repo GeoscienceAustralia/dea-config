@@ -24,6 +24,21 @@ from ows_refactored.aster.style_aster_cfg import (
 from ows_refactored.aster.abstract_aster_cfg import (
     abstract_aster_false_colour,
     abstract_aster_regolith_ratios,
+    abstract_aster_ferrous_iron_index,
+    abstract_aster_green_vegetation,
+    abstract_aster_quartz_index,
+    abstract_aster_silica_index,
+    abstract_aster_opaque_index,
+    abstract_aster_mgoh_group_content,
+    abstract_aster_mgoh_group_composition,
+    abstract_aster_gypsum_index,
+    abstract_aster_aloh_group_content,
+    abstract_aster_feoh_group_content,
+    abstract_aster_ferric_oxide_composition,
+    abstract_aster_aloh_group_composition,
+    abstract_aster_ferric_oxide_content,
+    abstract_aster_ferrous_iron_content_in_mgoh,
+    abstract_aster_kaolin_group_index,
 )
 
 layers = {
