@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 bands_item = {
     "relative": [],
@@ -208,7 +208,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "item_v2",
             "time_resolution": "year",
             "bands": bands_item,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -274,7 +274,7 @@ The DEA archive and new tidal modelling framework has improved the coverage and 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "item_v2_conf",
             "bands": bands_item_conf,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "time_resolution": "year",
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",

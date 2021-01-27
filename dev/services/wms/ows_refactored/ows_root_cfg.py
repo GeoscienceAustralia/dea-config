@@ -11,7 +11,13 @@ from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_ngv_25ticks,
 )
 
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35, reslim_wms_min_zoom_15_cache_rules, reslim_wms_min_zoom_10, reslim_wms_min_zoom_15
+from ows_refactored.ows_reslim_cfg import (
+    reslim_wms_min_zoom_500_max_datasets,
+    reslim_wms_min_zoom_35,
+    reslim_wms_min_zoom_15_cache_rules,
+    reslim_wms_min_zoom_10,
+    reslim_wms_min_zoom_15,
+)
 
 # Reusable Chunks 2. Band lists.
 
@@ -32,26 +38,13 @@ bands_weathering = {
     "intensity": [],
 }
 
-bands_tcw_percentile = {
-    "TCW_PC_10": [],
-    "TCW_PC_50": [],
-    "TCW_PC_90": [],
-}
-
-
-bands_nidem = {"nidem": []}
-
 
 bands_hap = {
     "Band_1": [],
 }
 
 
-
-
-
 # Reusable Chunks 4. Styles
-
 
 
 style_mangrove_cover_v2 = {
@@ -88,9 +81,6 @@ style_mangrove_cover_v2 = {
     },
     "legend": {},
 }
-
-
-
 
 
 style_mstp_rgb = {
@@ -135,140 +125,6 @@ style_wii = {
             "6": {"label": "High\nClass 6"},
         },
         "strip_location": [0.1, 0.5, 0.8, 0.15],
-    },
-}
-
-style_tcw_10 = {
-    "name": "tcw_10_percentile",
-    "title": "Tasseled Cap Wetness 10th Percentile",
-    "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
-    "needed_bands": ["TCW_PC_10"],
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "TCW_PC_10",
-        },
-    },
-    "range": [-1200.0, 0.0],
-    "mpl_ramp": "gist_earth_r",
-    "legend": {
-        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
-    },
-}
-
-style_tcw_50 = {
-    "name": "tcw_50_percentile",
-    "title": "Tasseled Cap Wetness 50th Percentile",
-    "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
-    "needed_bands": ["TCW_PC_50"],
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "TCW_PC_50",
-        },
-    },
-    "range": [-1200.0, 0.0],
-    "mpl_ramp": "gist_earth_r",
-    "legend": {
-        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
-    },
-}
-
-style_tcw_90 = {
-    "name": "tcw_90_percentile",
-    "title": "Tasseled Cap Wetness 90th Percentile",
-    "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
-    "needed_bands": ["TCW_PC_90"],
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "TCW_PC_90",
-        },
-    },
-    "range": [-1200.0, 0.0],
-    "mpl_ramp": "gist_earth_r",
-    "legend": {
-        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
-    },
-}
-
-
-style_nidem = {
-    "name": "NIDEM",
-    "title": "National Intertidal Digital Elevation Model",
-    "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "nidem",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["nidem"],
-    "color_ramp": [
-        {"value": -2.51, "color": "#440154"},
-        {
-            "value": -2.5,
-            "color": "#440154",
-        },
-        {
-            "value": -2.34,
-            "color": "#460e61",
-        },
-        {
-            "value": -2.18,
-            "color": "#471b6e",
-        },
-        {"value": -2.02, "color": "#472877"},
-        {"value": -1.86, "color": "#45347f"},
-        {"value": -1.7, "color": "#413f85"},
-        {"value": -1.58, "color": "#3b4d8a"},
-        {"value": -1.42, "color": "#37578b"},
-        {"value": -1.26, "color": "#32618c"},
-        {
-            "value": -1.1,
-            "color": "#2e6b8d",
-        },
-        {"value": -0.94, "color": "#2a748e"},
-        {"value": -0.78, "color": "#267d8e"},
-        {"value": -0.62, "color": "#23868d"},
-        {"value": -0.46, "color": "#208f8c"},
-        {"value": -0.3, "color": "#1e9889"},
-        {"value": -0.14, "color": "#1fa186"},
-        {
-            "value": 0.0,
-            "color": "#26ac7f",
-        },
-        {"value": 0.14, "color": "#32b579"},
-        {"value": 0.3, "color": "#41bd70"},
-        {"value": 0.46, "color": "#54c566"},
-        {"value": 0.62, "color": "#69cc59"},
-        {"value": 0.78, "color": "#80d24b"},
-        {"value": 0.94, "color": "#99d83c"},
-        {
-            "value": 1.1,
-            "color": "#b2dc2c",
-        },
-        {"value": 1.26, "color": "#cce01e"},
-        {"value": 1.42, "color": "#e5e31a"},
-        {
-            "value": 1.5,
-            "color": "#fde724",
-        },
-    ],
-    "legend": {
-        "begin": "-2.5",
-        "end": "1.5",
-        "ticks": ["-2.5", "-1.1", "0.0", "1.5"],
-        "units": "metres",
-        "tick_labels": {
-            "1.5": {"prefix": ">"},
-            "-2.5": {"prefix": "<"},
-        },
     },
 }
 
@@ -509,7 +365,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                         {
                             "include": "ows_refactored.wofs.ows_nrt_wo_cfg.layers",
                             "type": "python",
-                        }
+                        },
                     ],
                 },
                 {
@@ -542,7 +398,7 @@ Geomorphology 245, 51–61.
 For service status information, see https://status.dea.ga.gov.au""",
                             "product_name": "multi_scale_topographic_position",
                             "bands": bands_multi_topog,
-                            "resource_limits": reslim_wms_min_zoom_15,
+                            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
@@ -606,7 +462,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     For service status information, see https://status.dea.ga.gov.au""",
                             "product_name": "weathering_intensity",
                             "bands": bands_weathering,
-                            "resource_limits": reslim_wms_min_zoom_15,
+                            "resource_limits": reslim_wms_min_zoom_35,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
@@ -630,57 +486,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                     ],
                 },
                 {
-                    "title": "DEA Wetness Percentiles (Landsat)",
-                    "abstract": "",
-                    "layers": [
-                        {
-                            "title": "DEA Wetness Percentiles (Landsat)",
-                            "name": "ga_ls_tcw_percentiles_2",
-                            "abstract": """
-Geoscience Australia Landsat Collection 2 Tasseled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577).
-Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
-Areas that are partially covered in water, or where water is mixed with vegetation when viewed from above, provide habitat for a wide range of aquatic organisms.
-The ability to map partial inundation is also crucial to understand patterns of human water use. We need to be able to identify potential wetlands and groundwater dependent ecosystems on the Australian continent so that they can be monitored and managed.
-The Tasseled Cap Wetness Percentiles provide a multi-decadal summary of landscape wetness that can be used to identify wetlands and groundwater ecosystems.
-They provide statistical summaries (10th, 50th and 90th percentiles) of the Tasseled Cap wetness index from 1987 to 2017.
-They are intended for use as inputs into classification algorithms to identify potential wetlands and groundwater dependent ecosystems, and characterise salt flats, clay pans, salt lakes and coastal land forms.
-This product provides valuable discrimination for characterising:
-    - vegetated wetlands,
-    - salt flats,
-    - salt lakes,
-    - coastal land cover classes
-The Tasseled Cap wetness transform translates the six spectral bands of Landsat into a single wetness index.  The wetness index can be used to identify areas in the landscape that are potentially wetlands or groundwater dependent ecosystems. The Tasseled Cap Wetness Percentiles capture how the wetness index behaves over time.  The percentiles are well suited to characterising wetlands, salt flats/salt lakes and coastal ecosystems. However, care should be applied when analysing the wetness index, as soil colour and fire scars can cause misleading results. In areas of high relief caused by cliffs or steep terrain, terrain shadows can cause false positives (a falsely high wetness index).
-The 10th, 50th and 90th percentiles of the Tasseled Cap wetness index are intended to capture the extreme (10th and 90th percentile) values and long-term average (50th percentile) values of the wetness index.  Percentiles are used in preference to minimum, maximum and mean, as the min/max/mean statistical measures are more sensitive to undetected cloud/cloud shadow, and can be misleading for non-normally distributed data.
-The Tasseled Cap Wetness Percentiles are intended to complement the Water Observations from Space (WOfS) algorithm. WOfS is designed to discriminate open water, but the Tasseled Cap wetness index identifies areas of water and areas where water and vegetation are mixed together; i.e. mangroves and palustrine wetlands.
-If you are interested in terrestrial vegetation (where water in the pixel is not a factor), use the Fractional Cover product, which provides a better biophysical characterisation of green vegetation fraction, dry vegetation fraction and bare soil vegetation fraction.
-In terms of limitations, caution should be used, especially with the Tasseled Cap wetness index results in areas where residual terrain shadow, or dark soils can cause high 'wetness' index values.
-One of the limitations of using the Tasseled Cap wetness index is that it will identify all 'wet' things, including potential wetlands, groundwater dependent ecosystems, irrigated crops/pasture, man-made water storages and sewerage treatment, and does not discriminate between these. As such it should be used in conjunction with other contextual data to ensure that features identified using the Tasseled Cap Wetness Percentiles are features of interest rather than false positives.
-We used the Tasseled Cap transforms described in Crist et al. (1985).
-Crist, E. P. (1985). A TM Tasseled Cap equivalent transformation for reflectance factor data. Remote Sensing of Environment, 17(3), 301–306. https://doi.org/10.1016/0034-4257(85)90102-6
-For service status information, see https://status.dea.ga.gov.au""",
-                            "product_name": "ga_ls_tcw_percentiles_2",
-                            "bands": bands_tcw_percentile,
-                            "resource_limits": reslim_wms_min_zoom_15,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "default_bands": ["TCW_PC_10", "TCW_PC_50", "TCW_PC_90"],
-                                "native_resolution": [25, -25],
-                            },
-                            "styling": {
-                                "default_style": "tcw_10_percentile",
-                                "styles": [
-                                    style_tcw_10,
-                                    style_tcw_50,
-                                    style_tcw_90
-                                ],
-                            },
-                        },
-                    ],
+                    "include": "ows_refactored.tcw.ows_tcw_cfg.layers",
+                    "type": "python",
                 },
                 {
                     "include": "ows_refactored.fc.ows_fc_percentiles_cfg.fcp_g_layers",
@@ -703,74 +510,15 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
-                    "title": "National Intertidal Digital Elevation Model",
-                    "abstract": "",
-                    "layers": [
-                        {
-                            "name": "NIDEM",
-                            "title": "National Intertidal Digital Elevation Model nidem_v1.0.0 grid (NIDEM 25m)",
-                            "abstract": """
-The National Intertidal Digital Elevation Model (NIDEM; Bishop-Taylor et al. 2019) is a continental-scale elevation dataset for Australia's exposed intertidal zone. NIDEM provides the first three-dimensional representation of Australia's intertidal sandy beaches and shores, tidal flats and rocky shores and reefs at 25 m spatial resolution, addressing a key gap between the availability of sub-tidal bathymetry and terrestrial elevation data. NIDEM was generated by combining global tidal modelling with a 30-year time series archive of spatially and spectrally calibrated Landsat satellite data managed within the Digital Earth Australia (DEA) platform. NIDEM complements existing intertidal extent products, and provides data to support a new suite of use cases that require a more detailed understanding of the three-dimensional topography of the intertidal zone, such as hydrodynamic modelling, coastal risk management and ecological habitat mapping.
-*Overview*
-Intertidal environments support important ecological habitats (e.g. sandy beaches and shores, tidal flats and rocky shores and reefs), and provide many valuable benefits such as storm surge protection, carbon storage and natural resources for recreational and commercial use. However, intertidal zones are faced with increasing threats from coastal erosion, land reclamation (e.g. port construction), and sea level rise. Accurate elevation data describing the height and shape of the coastline is needed to help predict when and where these threats will have the greatest impact. However, this data is expensive and challenging to map across the entire intertidal zone of a continent the size of Australia.
-The rise and fall of the ocean can be used to describe the three-dimensional shape of the coastline by mapping the land-sea boundary (or 'waterline') across a range of known tides (e.g. low tide, high tide). Assuming that these waterlines represent lines of constant height relative to mean sea level (MSL), elevations can be modelled for the area of coastline located between the lowest and highest observed tide. To model the elevation of Australia's entire intertidal zone, 30 years of satellite images of the coastline (between 1986 and 2016 inclusive) were obtained from the archive of spatially and spectrally calibrated Landsat observations managed within the Digital Earth Australia (DEA) platform. Using the improved tidal modelling framework of the Intertidal Extents Model v2.0 (ITEM 2.0; Sagar et al. 2017, 2018), each satellite observation in the 30 year time series could be accurately associated with a modelled tide height using the global TPX08 ocean tidal model. These satellite observations were converted into a water index (NDWI), composited into discrete ten percent intervals of the observed tide range (e.g. the lowest 10% of observed tides etc), and used to extract waterlines using a spatially consistent and automated waterline extraction procedure. Triangulated irregular network (TIN) interpolation was then used to derive elevations relative to modelled mean sea level for each 25 x 25 m Landsat pixel across approximately 15,387 sq. km of intertidal terrain along Australia's entire coastline.
-NIDEM differs from previous methods used to model the elevation of the intertidal zone which have predominately focused on extracting waterlines from a limited selection of satellite images using manual digitisation and visual interpretation (e.g. Chen and Rau 1998; Zhao et al. 2008; Liu et al. 2013; Chen et al. 2016). This manual process introduces subjectivity, is impractical to apply at a continental-scale, and has inherent restrictions based on the availability of high quality image data at appropriate tidal stages. By developing an automated approach to generating satellite-derived elevation data based on a 30 year time series of observations managed within the Digital Earth Australia (DEA) platform, it was possible to produce the first continental-scale three-dimensional model of the intertidal zone.
-*Accuracy*
-To assess the accuracy of NIDEM, we compared modelled elevations against three independent elevation and bathymetry validation datasets: the DEM of Australia derived from LiDAR 5 Metre Grid (Geoscience Australia, 2015), elevation data collected from Real Time Kinematic (RTK) GPS surveys (Danaher & Collett, 2006; HydroSurvey Australia, 2009), and 1.0 m resolution multibeam bathymetry surveys (Solihuddin et al., 2016). We assessed overall accuracy across three distinct intertidal environments: sandy beaches and shores, tidal flats, and rocky shores and reefs:
-    - Sandy beaches and shores, 5 sites: Pearson's correlation = 0.92, Spearman's correlation = 0.93, RMSE +/- 0.41 m
-    - Tidal flats, 9 sites: Pearson's correlation = 0.78, Spearman's correlation = 0.81, RMSE +/- 0.39 m
-    - Rocky shores and reefs, 7 sites: Pearson's correlation = 0.46, Spearman's correlation = 0.79, RMSE +/- 2.98 m
-*Limitations*
-NIDEM covers the exposed intertidal zone which includes sandy beaches and shores, tidal flats and rocky shores and reefs. The model excludes intertidal vegetation communities such as mangroves.
-Areas with comparatively steep coastlines and small tidal ranges are poorly captured in the 25 m spatial resolution input Landsat data and resulting NIDEM model. This includes much of the south eastern and southern Australian coast (e.g. New South Wales, Victoria, Tasmania).
-Poor validation results for rocky shore and reef sites within the southern Kimberly region highlighted limitations in the NIDEM model that occur when the global OTPS TPX08 Atlas Tidal Model was unable to predict complex and asynchronous local tidal patterns. This is likely to also reduce model accuracy in complex estuaries and coastal wetlands where river flow or vegetative resistance causes hydrodynamic attenuation in tidal flow.
-The complex temporal behaviour of tides mean that a sun synchronous sensor like Landsat does not observe the full range of the tidal cycle at all locations. This causes spatial bias in the proportion of the tidal range observed in different regions, which can prevent NIDEM from providing elevation data for areas of the intertidal zone exposed or inundated at the extremes of the tidal range. Accordingly, NIDEM provides elevation data for the portion of the tidal range observed by Landsat, rather than the full tidal range.
-While image compositing and masking methods have been applied to remove the majority of noise and non-tidal artefacts from NIDEM, issues remain in several locations. It is recommended that the data be used with caution in the following areas:
-    - The Recherche Archipelago in southern Western Australia
-    - Port Phillip Bay in Victoria
-    - The eastern coast of Tasmania and King Island
-    - Saunders Reef and surrounds in the northern Coral Sea
-*Data access and additional information*
-    - Journal article: Bishop-Taylor et al. 2019 (https://doi.org/10.1016/j.ecss.2019.03.006)
-    - Data available on THREDDS: http://dapds00.nci.org.au/thredds/catalogs/fk4/nidem_1_0.html
-    - eCat catalogue listing including data access: http://pid.geoscience.gov.au/dataset/ga/123678
-    - CMI listing for extended metadata: https://cmi.ga.gov.au/pd/NIDEM_25_1.0.0
-For service status information, see https://status.dea.ga.gov.au""",
-                            "product_name": "nidem",
-                            "bands": bands_nidem,
-                            "time_resolution": "year",
-                            "resource_limits": reslim_wms_min_zoom_15,
-                            "flags": {
-                                "band": "land",
-                                "product": "geodata_coast_100k",
-                                "ignore_time": True,
-                                "ignore_info_flags": [],
-                            },
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "default_bands": ["nidem"],
-                                "native_resolution": [25, -25],
-                            },
-                            "styling": {
-                                "default_style": "NIDEM",
-                                "styles": [
-                                    style_nidem,
-                                ],
-                            },
-                        },
-                    ],
-                },
-                {
-                    "include": "ows_refactored.tide.ows_tide_cfg.layers",
+                    "include": "ows_refactored.intertidal.ows_national_cfg.layers",
                     "type": "python",
                 },
                 {
-                    "include": "ows_refactored.tide.ows_intertidal_cfg.layers",
+                    "include": "ows_refactored.surface_reflectance.ows_tide_cfg.layers",
+                    "type": "python",
+                },
+                {
+                    "include": "ows_refactored.intertidal.ows_extents_cfg.layers",
                     "type": "python",
                 },
                 {
@@ -783,7 +531,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "abstract": "Historical Airborne Photography",
                             "product_name": "historical_airborne_photography",
                             "bands": bands_hap,
-                            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+                            "resource_limits": reslim_wms_min_zoom_500_max_datasets,
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
@@ -835,6 +583,14 @@ For service status information, see https://status.dea.ga.gov.au""",
                         },
                         {
                             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.fc.ows_c3_fc_cfg.layers",
                             "type": "python",
                         },
                     ],
