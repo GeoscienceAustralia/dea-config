@@ -1,6 +1,7 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 from ows_refactored.surface_reflectance.style_ls_cfg import styles_ls_list
-from ows_refactored.surface_reflectance.band_ls_cfg import bands_ls, bands_ls8
+from ows_refactored.surface_reflectance.band_ls_cfg import bands_ls
+
 layers = {
     "title": "Surface Reflectance",
     "abstract": "",
@@ -35,7 +36,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "native_resolution": [25, -25],
                 "default_bands": ["red", "green", "blue"],
             },
-            "styling": {"default_style": "simple_rgb", "styles":styles_ls_list},
+            "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
         },
         {
             "title": "Surface Reflectance 25m Annual Geomedian (Landsat 7)",

@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 from ows_refactored.sentinel2.style_s2_cfg import styles_s2_list, style_s2_nbr_list
 
 bands_sentinel2 = {
@@ -31,10 +31,10 @@ bands_sentinel2 = {
     "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
 }
 
-multi_layers =                {
-                            "name": "s2_nrt_granule_nbar_t",
-                            "title": "Near Real-Time Surface Reflectance (Sentinel 2 (A and B combined))",
-                            "abstract": """
+multi_layers = {
+    "name": "s2_nrt_granule_nbar_t",
+    "title": "Near Real-Time Surface Reflectance (Sentinel 2 (A and B combined))",
+    "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
@@ -48,35 +48,32 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                            "multi_product": True,
-                            "product_names": ["s2a_nrt_granule", "s2b_nrt_granule"],
-                            "bands": bands_sentinel2,
-                            "resource_limits": reslim_wms_min_zoom_35,
-                            "dynamic": True,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [10.0, 10.0],
-                                "default_bands": [
-                                    "nbart_red",
-                                    "nbart_green",
-                                    "nbart_blue",
-                                ],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": style_s2_nbr_list
-                            },
-                        }
+    "multi_product": True,
+    "product_names": ["s2a_nrt_granule", "s2b_nrt_granule"],
+    "bands": bands_sentinel2,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "dynamic": True,
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "wcs": {
+        "native_crs": "EPSG:3577",
+        "native_resolution": [10.0, 10.0],
+        "default_bands": [
+            "nbart_red",
+            "nbart_green",
+            "nbart_blue",
+        ],
+    },
+    "styling": {"default_style": "simple_rgb", "styles": style_s2_nbr_list},
+}
 
-s2b_layer =             {
-                            "name": "s2b_nrt_granule_nbar_t",
-                            "title": "Near Real-Time Surface Reflectance (Sentinel 2B)",
-                            "abstract": """
+s2b_layer = {
+    "name": "s2b_nrt_granule_nbar_t",
+    "title": "Near Real-Time Surface Reflectance (Sentinel 2B)",
+    "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
@@ -90,33 +87,31 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                            "product_name": "s2b_nrt_granule",
-                            "bands": bands_sentinel2,
-                            "resource_limits": reslim_wms_min_zoom_35,
-                            "dynamic": True,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [10.0, 10.0],
-                                "default_bands": [
-                                    "nbart_red",
-                                    "nbart_green",
-                                    "nbart_blue",
-                                ],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": styles_s2_list
-                            },
-                        }
+    "product_name": "s2b_nrt_granule",
+    "bands": bands_sentinel2,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "dynamic": True,
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "wcs": {
+        "native_crs": "EPSG:3577",
+        "native_resolution": [10.0, 10.0],
+        "default_bands": [
+            "nbart_red",
+            "nbart_green",
+            "nbart_blue",
+        ],
+    },
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
+}
 
-s2a_layer=      {          "name": "s2a_nrt_granule_nbar_t",
-                            "title": "Near Real-Time Surface Reflectance (Sentinel 2A)",
-                            "abstract": """
+s2a_layer = {
+    "name": "s2a_nrt_granule_nbar_t",
+    "title": "Near Real-Time Surface Reflectance (Sentinel 2A)",
+    "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
@@ -130,26 +125,23 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 
 For service status information, see https://status.dea.ga.gov.au
 """,
-                            "product_name": "s2a_nrt_granule",
-                            "bands": bands_sentinel2,
-                            "resource_limits": reslim_wms_min_zoom_35,
-                            "dynamic": True,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [10.0, 10.0],
-                                "default_bands": [
-                                    "nbart_red",
-                                    "nbart_green",
-                                    "nbart_blue",
-                                ],
-                            },
-                            "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": style_s2_nbr_list
-                            },
-                        }
+    "product_name": "s2a_nrt_granule",
+    "bands": bands_sentinel2,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "dynamic": True,
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "wcs": {
+        "native_crs": "EPSG:3577",
+        "native_resolution": [10.0, 10.0],
+        "default_bands": [
+            "nbart_red",
+            "nbart_green",
+            "nbart_blue",
+        ],
+    },
+    "styling": {"default_style": "simple_rgb", "styles": style_s2_nbr_list},
+}
