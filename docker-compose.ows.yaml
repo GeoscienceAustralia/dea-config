@@ -21,6 +21,7 @@ services:
       - postgres
     volumes:
       - ${OWS_CFG_MOUNT}:/env/config/ows_refactored
+      - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
 
   postgres:
     # db with some data from ls8_usgs_level1_scene pre-indexed
