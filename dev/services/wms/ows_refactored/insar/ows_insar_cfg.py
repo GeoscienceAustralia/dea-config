@@ -7,6 +7,7 @@
 # Uncertainty (std-dev) of displacements in mm (for Envisat and Radarsat-2): 0 (white) … +20 (red)
 # Uncertainty (std-dev) of displacements in mm (for ALOS): 0 (white) … +80 (red)
 ###############################################################################################
+import copy
 
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
@@ -40,7 +41,7 @@ style_insar_velocity = {
         "decimal_places": 0,
     },
 }
-import copy
+
 style_insar_velocity_ud = copy.deepcopy(style_insar_velocity)
 style_insar_velocity_ud["name"] = "insar_velocity_ud"
 style_insar_velocity_ud["title"] = "InSAR Velocity Up-Down "

@@ -1,4 +1,5 @@
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
+
 style_s2_simple_rgb = {
     "name": "simple_rgb",
     "title": "Simple RGB",
