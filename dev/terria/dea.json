@@ -15,6 +15,78 @@
    },
    "catalog": [
       {
+         "name": "GSKY Band Math Beta",
+         "type": "group",
+         "preserveOrder": true,
+         "items": [
+            {
+               "name": "Landsat-8 NDVI",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "(nbart_nir - nbart_red) / (nbart_nir + nbart_red)",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "rainbow"
+               }
+            },
+            {
+               "name": "Landsat-8 NDWI",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "(nbart_green - nbart_nir)/(nbart_nir + nbart_green)",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "rainbow"
+               }
+            },
+            {
+               "name": "Landsat-8 MNDWI",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "(nbart_green - nbart_swir_1) /(nbart_green + nbart_swir_1)",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "rainbow"
+               }
+            },
+            {
+               "name": "Landsat-8 NBR",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "(nbart_nir - nbart_swir_1) / (nbart_nir + nbart_swir_1)",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "rainbow"
+               }
+            },
+            {
+               "name": "Landsat-8 RED",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "nbart_red",
+                  "colorscalerange": "0,3000",
+                  "colorscheme": "rainbow"
+               }
+            }
+         ]
+      },
+      {
          "name": "GSKY DEA Collection 3 Beta",
          "type": "group",
          "preserveOrder": true,
