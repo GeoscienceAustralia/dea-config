@@ -2637,6 +2637,30 @@
                      }
                   },
                   {
+                     "name": "DEA WIT TAS PLCP v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/shapes/TAS_PLCPwetlands_27112020.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/plcp/{{NAME}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/plcp/{{NAME}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/plcp/{{NAME}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "DEA WIT TAS TV4S v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/shapes/TAS_TV4SWwetlands_27112020.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4s/{{FID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4s/{{FID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4s/{{FID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "DEA WIT TAS TV4F v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/shapes/TAS_TV4FWwetlands_27112020.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4f/{{FID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4f/{{FID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4f/{{FID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                     }
+                  },
+                  {
                      "name": "DEA WIT QLD Palustrine v1.0",
                      "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/QLD/Palustrine/Wet_WGS84_P_run_v1.geojson",
                      "type": "geojson",
