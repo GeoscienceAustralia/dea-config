@@ -52,5 +52,5 @@ jobs:
         OWS_CFG_MOUNT: ./prod/services/wms/ows
         OWS_INVENTORY_JSON: ./dev/services/wms/inventory.json
         DATACUBE_OWS_CFG: ows_config.ows_cfg.ows_cfg
-        WMS_CONFIG_PATH: ows_cfg.py
+        WMS_CONFIG_FILE: ows_cfg.py
         CFG_PATH_PREFIX: /env/config/ows_config
