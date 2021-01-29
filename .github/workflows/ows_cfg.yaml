@@ -38,9 +38,9 @@ jobs:
       env:
         OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored
         OWS_INVENTORY_JSON: ./dev/services/wms/inventory.json
-        DATACUBE_OWS_CFG: ows_root_config.ows_root_cfg.ows_cfg
-        WMS_CONFIG_PATH: ows_root_cfg.py
-        CFG_MOUNT_PREFIX: /env/config/ows_refactored
+        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+        WMS_CONFIG_FILE: ows_root_cfg.py
+        CFG_PATH_PREFIX: /env/config/ows_refactored
 
     - name: Run ows_refactored_cfg test (Prod)
       run: |
@@ -52,5 +52,5 @@ jobs:
         OWS_CFG_MOUNT: ./prod/services/wms/ows
         OWS_INVENTORY_JSON: ./dev/services/wms/inventory.json
         DATACUBE_OWS_CFG: ows_config.ows_cfg.ows_cfg
-        WMS_CONFIG_PATH: ows_config/ows_cfg.py
-        CFG_MOUNT_PREFIX: /env/config/ows_config
+        WMS_CONFIG_PATH: ows_cfg.py
+        CFG_PATH_PREFIX: /env/config/ows_config
