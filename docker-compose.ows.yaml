@@ -22,7 +22,7 @@ services:
     volumes:
       - ${OWS_CFG_MOUNT}:${CFG_PATH_PREFIX}
       - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
-    command: ["wait-for-db", "flask", "run", "--host=0.0.0.0", "--port=8000"]
+    command: ["flask", "run", "--host=0.0.0.0", "--port=8000"]
 
   postgres:
     # db with some data from ls8_usgs_level1_scene pre-indexed
