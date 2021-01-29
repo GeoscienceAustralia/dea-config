@@ -12,9 +12,9 @@ services:
       DB_PASSWORD: opendatacubepassword
       DB_DATABASE: opendatacube
       DB_PORT: 5432
-      WMS_CONFIG_PATH: /env/config/ows_refactored/ows_root_cfg.py
+      WMS_CONFIG_PATH: /env/config/${WMS_CONFIG_PATH}
       # # Path from the PYTHONPATH to the config object (default PYTHONPATH is /env)
-      DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+      DATACUBE_OWS_CFG: ${DATACUBE_OWS_CFG}
       AWS_DEFAULT_REGION: ap-southeast-2
       PYTHONPATH: /env/config
     depends_on:
