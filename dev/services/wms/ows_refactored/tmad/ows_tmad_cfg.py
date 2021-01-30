@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15
 
 bands_tmad = {
     "sdev": [],
@@ -356,7 +356,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ls8_nbart_tmad_annual",
             "bands": bands_tmad,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -400,7 +400,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ls7_nbart_tmad_annual",
             "bands": bands_tmad,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -444,7 +444,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ls5_nbart_tmad_annual",
             "bands": bands_tmad,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
