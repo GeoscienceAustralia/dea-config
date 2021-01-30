@@ -42,7 +42,33 @@
                "parameters": {
                   "code": "(nbart_green - nbart_nir)/(nbart_nir + nbart_green)",
                   "colorscalerange": "-1,1",
-                  "colorscheme": "rainbow"
+                  "colorscheme": "Greens"
+               }
+            },
+            {
+               "name": "Landsat-8 NDBI",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "(nbart_swir_1 - nbart_nir) / (nbart_swir_1 + nbart_nir)",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "Oranges"
+               }
+            },
+            {
+               "name": "Landsat-8 BU",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "((nbart_swir_1 - nbart_nir) / (nbart_swir_1 + nbart_nir))-((nbart_nir - nbart_red) / (nbart_nir + nbart_red))",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "seismic"
                }
             },
             {
