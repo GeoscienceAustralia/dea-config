@@ -33,7 +33,7 @@ jobs:
       run: |
         docker-compose -f docker-compose.ows.yaml up -d
         docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube-ows-cfg-parse -i /env/config/inventory.json"
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "./compare-cfg.sh"
         docker-compose -f docker-compose.ows.yaml down
       env:
         OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored
@@ -46,7 +46,7 @@ jobs:
       run: |
         docker-compose -f docker-compose.ows.yaml up -d
         docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube-ows-cfg-parse -i /env/config/inventory.json"
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "./compare-cfg.sh"
         docker-compose -f docker-compose.ows.yaml down
       env:
         OWS_CFG_MOUNT: ./prod/services/wms/ows
