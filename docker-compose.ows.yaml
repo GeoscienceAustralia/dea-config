@@ -24,7 +24,7 @@ services:
       - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
 
   postgres:
-    build: docker/database/
+    image: kartoza/postgis:11.0-2.5
     environment:
       - POSTGRES_DB=opendatacube
       - POSTGRES_PASSWORD=opendatacubepassword
