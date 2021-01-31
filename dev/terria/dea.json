@@ -15,7 +15,7 @@
    },
    "catalog": [
       {
-         "name": "GSKY Band Math Beta",
+         "name": "GSKY Band Math Alpha",
          "type": "group",
          "preserveOrder": true,
          "items": [
@@ -42,7 +42,33 @@
                "parameters": {
                   "code": "(nbart_green - nbart_nir)/(nbart_nir + nbart_green)",
                   "colorscalerange": "-1,1",
-                  "colorscheme": "rainbow"
+                  "colorscheme": "Greens"
+               }
+            },
+            {
+               "name": "Landsat-8 NDBI",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "(nbart_swir_1 - nbart_nir) / (nbart_swir_1 + nbart_nir)",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "Oranges"
+               }
+            },
+            {
+               "name": "Landsat-8 BU",
+               "type": "wms",
+               "url": "http://130.56.246.135/ows/test_band_math",
+               "layers": "landsat8_nbart_daily",
+               "ignoreUnknownTileErrors": true,
+               "opacity": 1,
+               "parameters": {
+                  "code": "((nbart_swir_1 - nbart_nir) / (nbart_swir_1 + nbart_nir))-((nbart_nir - nbart_red) / (nbart_nir + nbart_red))",
+                  "colorscalerange": "-1,1",
+                  "colorscheme": "seismic"
                }
             },
             {
@@ -2706,6 +2732,30 @@
                      "type": "geojson",
                      "featureInfoTemplate": {
                         "template": " {{Subwetland}} in {{WetlandNam}}, feature {{FID}} in the MDBA wetlands catalogue.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/plot_feature_{{FID}}_0.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WetlandNam}}.</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/plot_feature_{{FID}}_0.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/mdba/data/area_percent_{{FID}}_0.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "DEA WIT TAS PLCP v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/shapes/TAS_PLCPwetlands_27112020.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/plcp/{{NAME}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/plcp/{{NAME}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/plcp/{{NAME}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "DEA WIT TAS TV4S v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/shapes/TAS_TV4SWwetlands_27112020.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4s/{{FID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4s/{{FID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4s/{{FID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                     }
+                  },
+                  {
+                     "name": "DEA WIT TAS TV4F v1.0",
+                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/shapes/TAS_TV4FWwetlands_27112020.geojson",
+                     "type": "geojson",
+                     "featureInfoTemplate": {
+                        "template": " <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4f/{{FID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil. </figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4f/{{FID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/TAS/tv4f/{{FID}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
                      }
                   },
                   {
