@@ -22,6 +22,7 @@ services:
     volumes:
       - ${OWS_CFG_MOUNT}:${CFG_PATH_PREFIX}
       - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
+      - ./compare-cfg.sh:/env/config/compare-cfg.sh
 
   postgres:
     image: kartoza/postgis:11.0-2.5
