@@ -754,7 +754,7 @@
             ],
             "styles_count": 5,
             "styles_list": [
-                "log_sdev",
+                "arcsec_sdev",
                 "log_edev",
                 "log_bcdev",
                 "tmad_rgb_std",
@@ -767,7 +767,7 @@
             ],
             "styles_count": 5,
             "styles_list": [
-                "log_sdev",
+                "arcsec_sdev",
                 "log_edev",
                 "log_bcdev",
                 "tmad_rgb_std",
@@ -780,7 +780,7 @@
             ],
             "styles_count": 5,
             "styles_list": [
-                "log_sdev",
+                "arcsec_sdev",
                 "log_edev",
                 "log_bcdev",
                 "tmad_rgb_std",

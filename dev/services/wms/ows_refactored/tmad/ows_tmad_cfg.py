@@ -7,11 +7,11 @@ bands_tmad = {
 }
 
 style_tmad_sdev_std = {
-    "name": "log_sdev",
+    "name": "arcsec_sdev",
     "title": "SMAD",
     "abstract": "Good for cropland and forest",
     "index_function": {
-        "function": "datacube_ows.band_utils.single_band_offset_log",
+        "function": "datacube_ows.band_utils.single_band_arcsec",
         "mapped_bands": True,
         "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
     },
@@ -172,7 +172,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "native_resolution": [25, -25],
             },
             "styling": {
-                "default_style": "log_sdev",
+                "default_style": "arcsec_sdev",
                 "styles": [
                     style_tmad_sdev_std,
                     style_tmad_edev_std,
@@ -213,7 +213,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "native_resolution": [25, -25],
             },
             "styling": {
-                "default_style": "log_sdev",
+                "default_style": "arcsec_sdev",
                 "styles": [
                     style_tmad_sdev_std,
                     style_tmad_edev_std,
@@ -254,7 +254,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "native_resolution": [25, -25],
             },
             "styling": {
-                "default_style": "log_sdev",
+                "default_style": "arcsec_sdev",
                 "styles": [
                     style_tmad_sdev_std,
                     style_tmad_edev_std,
