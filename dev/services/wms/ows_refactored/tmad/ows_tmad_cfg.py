@@ -5,102 +5,6 @@ bands_tmad = {
     "edev": [],
     "bcdev": [],
 }
-style_tmad_sdev = {
-    "name": "log_sdev",
-    "title": "sdev",
-    "abstract": "",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_log",
-        "mapped_bands": True,
-        "kwargs": {"band": "sdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
-    },
-    "needed_bands": ["sdev"],
-    "color_ramp": [
-        {"value": 0.0, "color": "#ffffff", "alpha": 0},
-        {
-            "value": 0.1,
-            "color": "#A02406",
-        },
-        {"value": 0.5, "color": "#FCF24B"},
-        {
-            "value": 0.9,
-            "color": "#0CCD1D",
-        },
-    ],
-    "legend": {
-        "begin": "0.1",
-        "end": "0.9",
-        "decimal_places": 1,
-        "tick_labels": {
-            "0.1": {"label": "High\ntmad"},
-            "0.9": {"label": "Low\ntmad"},
-        },
-    },
-}
-
-style_tmad_edev = {
-    "name": "log_edev",
-    "title": "edev",
-    "abstract": "",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_log",
-        "mapped_bands": True,
-        "kwargs": {"band": "edev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
-    },
-    "needed_bands": ["edev"],
-    "color_ramp": [
-        {"value": 0.0, "color": "#ffffff", "alpha": 0},
-        {
-            "value": 0.1,
-            "color": "#A02406",
-        },
-        {"value": 0.5, "color": "#FCF24B"},
-        {
-            "value": 0.9,
-            "color": "#0CCD1D",
-        },
-    ],
-    "legend": {
-        "begin": "0.1",
-        "end": "0.9",
-        "tick_labels": {
-            "0.1": {"label": "High\ntmad"},
-            "0.9": {"label": "Low\ntmad"},
-        },
-    },
-}
-
-style_tmad_bcdev = {
-    "name": "log_bcdev",
-    "title": "bcdev",
-    "abstract": "",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_log",
-        "mapped_bands": True,
-        "kwargs": {"band": "bcdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
-    },
-    "needed_bands": ["bcdev"],
-    "color_ramp": [
-        {"value": 0.0, "color": "#ffffff", "alpha": 0},
-        {
-            "value": 0.1,
-            "color": "#A02406",
-        },
-        {"value": 0.5, "color": "#FCF24B"},
-        {
-            "value": 0.9,
-            "color": "#0CCD1D",
-        },
-    ],
-    "legend": {
-        "begin": "0.1",
-        "end": "0.9",
-        "tick_labels": {
-            "0.1": {"label": "High\ntmad"},
-            "0.9": {"label": "Low\ntmad"},
-        },
-    },
-}
 
 style_tmad_sdev_std = {
     "name": "arcsec_sdev",
@@ -233,106 +137,6 @@ style_tmad_rgb_sens = {
     },
 }
 
-
-style_tmad_sdev = {
-    "name": "log_sdev",
-    "title": "sdev",
-    "abstract": "",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_log",
-        "mapped_bands": True,
-        "kwargs": {"band": "sdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
-    },
-    "needed_bands": ["sdev"],
-    "color_ramp": [
-        {"value": 0.0, "color": "#ffffff", "alpha": 0},
-        {
-            "value": 0.1,
-            "color": "#A02406",
-        },
-        {"value": 0.5, "color": "#FCF24B"},
-        {
-            "value": 0.9,
-            "color": "#0CCD1D",
-        },
-    ],
-    "legend": {
-        "start": "0.1",
-        "end": "0.9",
-        "ticks": ["0.1", "0.9"],
-        "tick_labels": {
-            "0.1": {"label": "High\ntmad"},
-            "0.9": {"label": "Low\ntmad"},
-        },
-    },
-}
-
-style_tmad_edev = {
-    "name": "log_edev",
-    "title": "edev",
-    "abstract": "",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_log",
-        "mapped_bands": True,
-        "kwargs": {"band": "edev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
-    },
-    "needed_bands": ["edev"],
-    "color_ramp": [
-        {"value": 0.0, "color": "#ffffff", "alpha": 0},
-        {
-            "value": 0.1,
-            "color": "#A02406",
-        },
-        {"value": 0.5, "color": "#FCF24B"},
-        {
-            "value": 0.9,
-            "color": "#0CCD1D",
-        },
-    ],
-    "legend": {
-        "start": "0.1",
-        "end": "0.9",
-        "ticks": ["0.1", "0.9"],
-        "tick_labels": {
-            "0.1": {"label": "High\ntmad"},
-            "0.9": {"label": "Low\ntmad"},
-        },
-    },
-}
-
-style_tmad_bcdev = {
-    "name": "log_bcdev",
-    "title": "bcdev",
-    "abstract": "",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_log",
-        "mapped_bands": True,
-        "kwargs": {"band": "bcdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
-    },
-    "needed_bands": ["bcdev"],
-    "color_ramp": [
-        {"value": 0.0, "color": "#ffffff", "alpha": 0},
-        {
-            "value": 0.1,
-            "color": "#A02406",
-        },
-        {"value": 0.5, "color": "#FCF24B"},
-        {
-            "value": 0.9,
-            "color": "#0CCD1D",
-        },
-    ],
-    "legend": {
-        "start": "0.1",
-        "end": "0.9",
-        "ticks": ["0.1", "0.9"],
-        "tick_labels": {
-            "0.1": {"label": "High\ntmad"},
-            "0.9": {"label": "Low\ntmad"},
-        },
-    },
-}
-
 layers = {
     "title": "Surface Reflectance Triple Median Absolute Deviation",
     "abstract": "Surface Reflectance Triple Median Absolute Deviation 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)",
@@ -368,11 +172,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "native_resolution": [25, -25],
             },
             "styling": {
-                "default_style": "log_sdev",
+                "default_style": "arcsec_sdev",
                 "styles": [
-                    style_tmad_sdev,
-                    style_tmad_edev,
-                    style_tmad_bcdev,
                     style_tmad_sdev_std,
                     style_tmad_edev_std,
                     style_tmad_bcdev_std,
@@ -412,11 +213,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "native_resolution": [25, -25],
             },
             "styling": {
-                "default_style": "log_sdev",
+                "default_style": "arcsec_sdev",
                 "styles": [
-                    style_tmad_sdev,
-                    style_tmad_edev,
-                    style_tmad_bcdev,
                     style_tmad_sdev_std,
                     style_tmad_edev_std,
                     style_tmad_bcdev_std,
@@ -456,11 +254,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "native_resolution": [25, -25],
             },
             "styling": {
-                "default_style": "log_sdev",
+                "default_style": "arcsec_sdev",
                 "styles": [
-                    style_tmad_sdev,
-                    style_tmad_edev,
-                    style_tmad_bcdev,
                     style_tmad_sdev_std,
                     style_tmad_edev_std,
                     style_tmad_bcdev_std,
