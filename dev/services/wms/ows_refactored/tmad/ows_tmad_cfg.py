@@ -7,11 +7,11 @@ bands_tmad = {
 }
 
 style_tmad_sdev_std = {
-    "name": "arcsec_sdev",
+    "name": "log_sdev",
     "title": "SMAD",
     "abstract": "Good for cropland and forest",
     "index_function": {
-        "function": "datacube_ows.band_utils.single_band_arcsec",
+        "function": "datacube_ows.band_utils.single_band_offset_log",
         "mapped_bands": True,
         "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
     },

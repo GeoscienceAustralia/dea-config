@@ -752,12 +752,9 @@
             "product": [
                 "ls8_nbart_tmad_annual"
             ],
-            "styles_count": 8,
+            "styles_count": 5,
             "styles_list": [
                 "log_sdev",
-                "log_edev",
-                "log_bcdev",
-                "arcsec_sdev",
                 "log_edev",
                 "log_bcdev",
                 "tmad_rgb_std",
@@ -768,12 +765,9 @@
             "product": [
                 "ls7_nbart_tmad_annual"
             ],
-            "styles_count": 8,
+            "styles_count": 5,
             "styles_list": [
                 "log_sdev",
-                "log_edev",
-                "log_bcdev",
-                "arcsec_sdev",
                 "log_edev",
                 "log_bcdev",
                 "tmad_rgb_std",
@@ -784,12 +778,9 @@
             "product": [
                 "ls5_nbart_tmad_annual"
             ],
-            "styles_count": 8,
+            "styles_count": 5,
             "styles_list": [
                 "log_sdev",
-                "log_edev",
-                "log_bcdev",
-                "arcsec_sdev",
                 "log_edev",
                 "log_bcdev",
                 "tmad_rgb_std",
