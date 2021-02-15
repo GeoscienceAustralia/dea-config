@@ -126,7 +126,8 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
+               "featureTimesProperty": "data_available_for_dates",
+               "supportsDeltaComparison": true
             },
             {
                "name": "Landsat 8 Daily",
@@ -137,7 +138,8 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
+               "featureTimesProperty": "data_available_for_dates",
+               "supportsDeltaComparison": true
             },
             {
                "name": "Landsat 7 Daily",
@@ -148,7 +150,8 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
+               "featureTimesProperty": "data_available_for_dates",
+               "supportsDeltaComparison": true
             },
             {
                "name": "Landsat 5 Daily",
@@ -159,7 +162,8 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
+               "featureTimesProperty": "data_available_for_dates",
+               "supportsDeltaComparison": true
             },
             {
                "name": "Landsat 8 16-day composite",
@@ -170,7 +174,8 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
+               "featureTimesProperty": "data_available_for_dates",
+               "supportsDeltaComparison": true
             },
             {
                "name": "Landsat 7 16-day composite",
@@ -181,7 +186,8 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
+               "featureTimesProperty": "data_available_for_dates",
+               "supportsDeltaComparison": true
             },
             {
                "name": "Landsat 5 16-day composite",
@@ -192,7 +198,8 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
-               "featureTimesProperty": "data_available_for_dates"
+               "featureTimesProperty": "data_available_for_dates",
+               "supportsDeltaComparison": true
             }
          ]
       },
