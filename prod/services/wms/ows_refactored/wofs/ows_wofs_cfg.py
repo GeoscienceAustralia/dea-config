@@ -218,33 +218,33 @@ layers = {
     "title": "Water Observations from Space",
     "abstract": "WOfS",
     "layers": [
-#         {
-#             "title": "Water Observations from Space 25m Filtered Water Summary (WOfS Filtered Statistics)",
-#             "name": "wofs_filtered_summary",
-#             "abstract": """
-# Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level. No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
-# """,
-#             "product_name": "wofs_filtered_summary",
-#             "bands": bands_wofs_filt_sum,
-#             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-#             "image_processing": {
-#                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-#                 "always_fetch_bands": [],
-#                 "manual_merge": False,
-#             },
-#             "wcs": {
-#                 "native_crs": "EPSG:3577",
-#                 "native_resolution": [25, -25],
-#                 "default_bands": ["wofs_filtered_summary"],
-#             },
-#             "styling": {
-#                 "default_style": "WOfS_filtered_frequency",
-#                 "styles": [
-#                     style_wofs_filt_freq,
-#                     style_wofs_filt_freq_blue,
-#                 ],
-#             },
-#         },
+        {
+            "title": "Water Observations from Space 25m Filtered Water Summary (WOfS Filtered Statistics)",
+            "name": "wofs_filtered_summary",
+            "abstract": """
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level. No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
+""",
+            "product_name": "wofs_filtered_summary",
+            "bands": bands_wofs_filt_sum,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "native_crs": "EPSG:3577",
+                "native_resolution": [25, -25],
+                "default_bands": ["wofs_filtered_summary"],
+            },
+            "styling": {
+                "default_style": "WOfS_filtered_frequency",
+                "styles": [
+                    style_wofs_filt_freq,
+                    style_wofs_filt_freq_blue,
+                ],
+            },
+        },
         {
             "title": "Water Observations from Space 25m Confidence (WOfS Filtered Statistics)",
             "name": "wofs_filtered_summary_confidence",
