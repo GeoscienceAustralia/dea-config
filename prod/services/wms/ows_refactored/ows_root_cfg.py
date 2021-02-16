@@ -521,36 +521,36 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "include": "ows_refactored.intertidal.ows_extents_cfg.layers",
                     "type": "python",
                 },
-                {
-                    "title": "Historical Airborne Photography",
-                    "abstract": "",
-                    "layers": [
-                        {
-                            "title": "Historical Airborne Photography (HAP)",
-                            "name": "historical_airborne_photography",
-                            "abstract": "Historical Airborne Photography",
-                            "product_name": "historical_airborne_photography",
-                            "bands": bands_hap,
-                            "resource_limits": reslim_wms_min_zoom_500_max_datasets,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": [],
-                                "manual_merge": False,
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "default_bands": ["Band_1"],
-                                "native_resolution": [1.0, 1.0],
-                            },
-                            "styling": {
-                                "default_style": "simple_gray",
-                                "styles": [
-                                    style_hap_simple_gray,
-                                ],
-                            },
-                        }
-                    ],
-                },
+                # {
+                #     "title": "Historical Airborne Photography",
+                #     "abstract": "",
+                #     "layers": [
+                #         {
+                #             "title": "Historical Airborne Photography (HAP)",
+                #             "name": "historical_airborne_photography",
+                #             "abstract": "Historical Airborne Photography",
+                #             "product_name": "historical_airborne_photography",
+                #             "bands": bands_hap,
+                #             "resource_limits": reslim_wms_min_zoom_500_max_datasets,
+                #             "image_processing": {
+                #                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                #                 "always_fetch_bands": [],
+                #                 "manual_merge": False,
+                #             },
+                #             "wcs": {
+                #                 "native_crs": "EPSG:3577",
+                #                 "default_bands": ["Band_1"],
+                #                 "native_resolution": [1.0, 1.0],
+                #             },
+                #             "styling": {
+                #                 "default_style": "simple_gray",
+                #                 "styles": [
+                #                     style_hap_simple_gray,
+                #                 ],
+                #             },
+                #         }
+                #     ],
+                # },
                 {
                     "include": "ows_refactored.aster.ows_aster_cfg.layers",
                     "type": "python",
