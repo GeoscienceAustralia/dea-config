@@ -362,6 +362,10 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
+                        # {
+                        #     "include": "ows_refactored.wofs.ows_nrt_wo_cfg.layers",
+                        #     "type": "python",
+                        # },
                     ],
                 },
                 {
@@ -563,34 +567,34 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "include": "ows_refactored.insar.ows_insar_cfg.layers",
                     "type": "python",
                 },
-                {
-                    "title": "Collection 3",
-                    "abstract": """
+                # {
+                #     "title": "Collection 3",
+                #     "abstract": """
 
-                    """,
-                    "layers": [
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.fc.ows_c3_fc_cfg.layers",
-                            "type": "python",
-                        },
-                    ],
-                },
+                #     """,
+                #     "layers": [
+                #         {
+                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
+                #             "type": "python",
+                #         },
+                #         {
+                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
+                #             "type": "python",
+                #         },
+                #         {
+                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
+                #             "type": "python",
+                #         },
+                #         {
+                #             "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",
+                #             "type": "python",
+                #         },
+                #         {
+                #             "include": "ows_refactored.fc.ows_c3_fc_cfg.layers",
+                #             "type": "python",
+                #         },
+                #     ],
+                # },
             ],
         },
     ],  # End of Layers List
