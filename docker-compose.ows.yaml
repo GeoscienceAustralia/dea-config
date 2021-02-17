@@ -25,7 +25,7 @@ services:
       - ./compare-cfg.sh:/env/config/compare-cfg.sh
 
   postgres:
-    image: kartoza/postgis:11.0-2.5
+    build: docker/database/
     environment:
       - POSTGRES_DB=opendatacube
       - POSTGRES_PASSWORD=opendatacubepassword
