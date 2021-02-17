@@ -522,11 +522,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
-                    "title": "Projects",
+                    "title": "Historical Airborne Photography",
                     "abstract": "",
                     "layers": [
                         {
-                            "title": "Projects munged historical airborne photography (HAP)",
+                            "title": "Historical Airborne Photography (HAP)",
                             "name": "historical_airborne_photography",
                             "abstract": "Historical Airborne Photography",
                             "product_name": "historical_airborne_photography",
