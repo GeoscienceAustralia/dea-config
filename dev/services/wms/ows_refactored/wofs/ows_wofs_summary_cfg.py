@@ -255,7 +255,7 @@ For service status information, see https://status.dea.ga.gov.au
         },
         {
             "title": "Water Observations from Space 25m Water Summary (WOfS Statistics)	",
-            "name": "Water Observations from Space Statistics",
+            "name": "Water_Observations_from_Space_Statistics",
             "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary).
 

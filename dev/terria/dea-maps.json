@@ -735,7 +735,7 @@
                         {
                            "name": "Unfiltered summary of all water observations",
                            "type": "wms",
-                           "layers": "Water Observations from Space Statistics",
+                           "layers": "Water_Observations_from_Space_Statistics",
                            "url": "https://ows.dea.ga.gov.au/",
                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                            "linkedWcsCoverage": "Water Observations from Space Statistics",
