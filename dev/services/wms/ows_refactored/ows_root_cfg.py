@@ -503,7 +503,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
-                    "include": "ows_refactored.dev_only.ows_hap_cfg.layers",
+                    "include": "ows_refactored.dev_only.ows_hap_cfg.layer",
                     "type": "python",
                 },
                 {
