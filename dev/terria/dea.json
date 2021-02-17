@@ -482,7 +482,7 @@
                         {
                            "name": "Water Observations from Space 25m Summary (WOfS Statistics)",
                            "type": "wms",
-                           "layers": "Water Observations from Space Statistics",
+                           "layers": "Water_Observations_from_Space_Statistics",
                            "url": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "Water Observations from Space Statistics",
