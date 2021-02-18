@@ -524,7 +524,7 @@
                            "lon": {
                               "maximumFractionDigits": 5
                            }
-                        },
+                        }
                      },
                      "leafletUpdateInterval": 750
                   }
