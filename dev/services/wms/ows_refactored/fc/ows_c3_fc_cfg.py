@@ -15,9 +15,11 @@ style_fc_3_simple = {
     "scale_range": [0.0, 100.0],
     "pq_masks": [
         {
+            "band": "c3_wofs",
             "flags": {"dry": True},
         },
         {
+            "band": "c3_wofs",
             "flags": {
                 "terrain_shadow": False,
                 "low_solar_angle": False,
@@ -27,6 +29,11 @@ style_fc_3_simple = {
                 # "sea": False,
             }
         },
+        {
+            "band": "geodata_coast",
+            "invert": True,
+            "enum": 0,
+        }
     ],
 }
 
@@ -47,11 +54,19 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
         "manual_merge": False,
     },
     "flags": {
-        "band": "water",
-        "product": "ga_ls_wo_3",
-        "ignore_time": False,
-        "ignore_info_flags": [],
-        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+        "geodata_coast": {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+        },
+        "c3_wofs": {
+            "band": "water",
+            "product": "ga_ls_wo_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+            "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+        }
     },
     "wcs": {
         "native_crs": "EPSG:3577",
