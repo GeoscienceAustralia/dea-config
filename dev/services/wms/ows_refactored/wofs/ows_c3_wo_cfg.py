@@ -18,15 +18,9 @@ style_c3_wofs_obs = {
                         "cloud": True,
                         "high_slope": True,
                         "noncontiguous": True,
+                        # "dry": True,
                     }
                 },
-                "color": "#707070",
-            },
-            {
-                # Possible Sea Glint, also mark as invalid
-                "title": "",
-                "abstract": "",
-                "flags": {"dry": True},
                 "color": "#707070",
             },
             {
@@ -39,19 +33,19 @@ style_c3_wofs_obs = {
             },
             {
                 "title": "Wet",
-                "abstract": "Wet or Sea",
-                "flags": {"or": {"wet": True}},
+                "abstract": "Wet",
+                "flags": {"wet": True},
                 "color": "#4F81BD",
             },
-        ],
-        "pq_masks": [
-            {
-                "band": "geodata_coast",
-                "invert": True,
-                "enum": 0,
-            }
-        ],
+        ]
     },
+    "pq_masks": [
+        {
+            "band": "geodata_coast",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
 }
 
 style_c3_wofs_obs_wet_only = {
@@ -71,16 +65,9 @@ style_c3_wofs_obs_wet_only = {
                         "cloud": True,
                         "high_slope": True,
                         "noncontiguous": True,
+                        # "dry": True,
                     }
                 },
-                "color": "#707070",
-                "mask": True,
-            },
-            {
-                # Possible Sea Glint, also mark as invalid
-                "title": "",
-                "abstract": "",
-                "flags": {"dry": True},
                 "color": "#707070",
                 "mask": True,
             },
@@ -100,14 +87,14 @@ style_c3_wofs_obs_wet_only = {
                 "color": "#4F81BD",
             },
         ],
-        "pq_masks": [
-            {
-                "band": "geodata_coast",
-                "invert": True,
-                "enum": 0,
-            }
-        ],
     },
+    "pq_masks": [
+        {
+            "band": "geodata_coast",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
 }
 
 
