@@ -1,144 +1,83 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
-from ows_refactored.wofs.bands_wo_cfg import bands_wofs_obs
 
-style_c3_wofs_obs = {
-    "name": "observations",
-    "title": "Observations",
-    "abstract": "Observations",
-    "value_map": {
-        "water": [
-            {
-                "title": "Invalid",
-                "abstract": "Slope or Cloud",
-                "flags": {
-                    "or": {
-                        "terrain_shadow": True,
-                        "low_solar_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
-                        "noncontiguous": True,
-                        # "dry": True,
-                    }
-                },
-                "color": "#707070",
-            },
-            {
-                "title": "Dry",
-                "abstract": "Dry",
-                "flags": {
-                    "dry": True,
-                },
-                "color": "#D99694",
-            },
-            {
-                "title": "Wet",
-                "abstract": "Wet",
-                "flags": {"wet": True},
-                "color": "#4F81BD",
-            },
-        ]
-    },
-    "pq_masks": [
-        {
-            "band": "geodata_coast",
-            "invert": True,
-            "enum": 0,
-        }
-    ],
+bands_fc_3 = {
+    "bs": ["bare_soil"],
+    "pv": ["photosynthetic_vegetation", "green_vegetation"],
+    "npv": ["non_photosynthetic_vegetation", "brown_vegetation"],
+    "ue": [],
 }
 
-style_c3_wofs_obs_wet_only = {
-    "name": "wet",
-    "title": "Wet Only",
-    "abstract": "Wet Only",
-    "value_map": {
-        "water": [
-            {
-                "title": "Invalid",
-                "abstract": "Slope or Cloud",
-                "flags": {
-                    "or": {
-                        "terrain_shadow": True,
-                        "low_solar_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
-                        "noncontiguous": True,
-                        # "dry": True,
-                    }
-                },
-                "color": "#707070",
-                "mask": True,
-            },
-            {
-                "title": "Dry",
-                "abstract": "Dry",
-                "flags": {
-                    "dry": True,
-                },
-                "color": "#D99694",
-                "mask": True,
-            },
-            {
-                "title": "Wet",
-                "abstract": "Wet",
-                "flags": {"wet": True},
-                "color": "#4F81BD",
-            },
-        ],
-    },
+style_fc_3_simple = {
+    "name": "simple_fc",
+    "title": "Fractional Cover",
+    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
+    "components": {"red": {"bs": 1.0}, "green": {"pv": 1.0}, "blue": {"npv": 1.0}},
+    "scale_range": [0.0, 100.0],
     "pq_masks": [
-        {
-            "band": "geodata_coast",
-            "invert": True,
-            "enum": 0,
-        }
-    ],
+            {
+                # pq_masks:band now takes the actual ODC band name, not the identifier.
+                "band": "water",
+                "flags": {"dry": True},
+            },
+            {
+                "band": "water",
+                "flags": {
+                    "terrain_shadow": False,
+                    "low_solar_angle": False,
+                    "high_slope": False,
+                    "cloud_shadow": False,
+                    "cloud": False,
+                }
+            },
+            {
+                "band": "land",
+                "invert": True,
+                "enum": 0,
+            }
+        ],
 }
 
 
 layers = {
-    "title": "Collection 3 Water",
-    "name": "ga_ls_wo_3",
+    "title": "Collection 3 fc",
+    "name": "ga_ls_fc_3",
     "abstract": """
-Water Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.
-The WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.
-Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relationship with the input satellite data. Hence there is one WOFL for each satellite dataset processed for the occurrence of water. The details of the WOfS algorithm and derived statistics are available at http://dx.doi.org/10.1016/j.rse.2015.11.003.
-For service status information, see https://status.dea.ga.gov.au
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites For service status information, see https://status.dea.ga.gov.au
 """,
-    "product_name": "ga_ls_wo_3",
-    "bands": bands_wofs_obs,
+    "product_name": "ga_ls_fc_3",
+    "bands": bands_fc_3,
     "resource_limits": reslim_wms_min_zoom_35,
     "dynamic": True,
-    "flags": {
-        "geodata_coast": {
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "flags": [
+        # flags is now a list of flag band definitions - NOT a dictionary with identifiers
+        {
             "band": "land",
             "product": "geodata_coast_100k",
             "ignore_time": False,
             "ignore_info_flags": [],
         },
-        "c3_wofs": {
+        {
             "band": "water",
             "product": "ga_ls_wo_3",
             "ignore_time": False,
             "ignore_info_flags": [],
             "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
         }
-    },
-    "image_processing": {
-        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
-        "always_fetch_bands": [],
-        "manual_merge": False,
-        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-    },
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
+        "default_bands": ["bs", "pv", "npv"],
         "native_resolution": [25, -25],
-        "default_bands": ["water"],
     },
     "styling": {
-        "default_style": "observations",
-        "styles": [style_c3_wofs_obs, style_c3_wofs_obs_wet_only],
+        "default_style": "simple_fc",
+        "styles": [
+            style_fc_3_simple,
+        ],
     },
 }
