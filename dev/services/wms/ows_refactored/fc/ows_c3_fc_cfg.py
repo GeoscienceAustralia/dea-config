@@ -58,7 +58,7 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
         {
             "band": "land",
             "product": "geodata_coast_100k",
-            "ignore_time": False,
+            "ignore_time": True,
             "ignore_info_flags": [],
         },
         {
