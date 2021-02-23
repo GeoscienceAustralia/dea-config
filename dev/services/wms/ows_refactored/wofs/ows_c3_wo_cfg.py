@@ -22,30 +22,30 @@ style_c3_wofs_obs = {
                 },
                 "color": "#707070",
             },
-            # {
-            #     # Possible Sea Glint, also mark as invalid
-            #     "title": "",
-            #     "abstract": "",
-            #     "flags": {"dry": True, "sea": True},
-            #     "color": "#707070",
-            # },
-            # {
-            #     "title": "Dry",
-            #     "abstract": "Dry",
-            #     "flags": {
-            #         "dry": True,
-            #         "sea": False,
-            #     },
-            #     "color": "#D99694",
-            # },
-            # {
-            #     "title": "Wet",
-            #     "abstract": "Wet or Sea",
-            #     "flags": {"or": {"wet": True, "sea": True}},
-            #     "color": "#4F81BD",
-            # },
-        ]
+            {
+                # Possible Sea Glint, also mark as invalid
+                "title": "Dry",
+                "abstract": "Dry",
+                "flags": {
+                    "dry": True,
+                },
+                "color": "#D99694",
+            },
+            {
+                "title": "Wet",
+                "abstract": "Wet",
+                "flags": {"wet": True},
+                "color": "#4F81BD",
+            },
+        ],
     },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
 }
 
 style_c3_wofs_obs_wet_only = {
@@ -55,47 +55,36 @@ style_c3_wofs_obs_wet_only = {
     "value_map": {
         "water": [
             {
-                "title": "Invalid",
-                "abstract": "Slope or Cloud",
-                "flags": {
+                "title": "Wet",
+                "abstract": "Wet",
+                "flags": {"wet": True},
+                "color": "#4F81BD",
+            },
+        ],
+    },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
+        {
+            "band": "water",
+            "flags": {
                     "or": {
-                        "terrain_shadow": True,
-                        "low_solar_angle": True,
+                        "terrain_or_low_angle": True,
                         "cloud_shadow": True,
                         "cloud": True,
                         "high_slope": True,
                         "noncontiguous": True,
                     }
                 },
-                "color": "#707070",
-                "mask": True,
-            },
-            # {
-            #     # Possible Sea Glint, also mark as invalid
-            #     "title": "",
-            #     "abstract": "",
-            #     "flags": {"dry": True, "sea": True},
-            #     "color": "#707070",
-            #     "mask": True,
-            # },
-            # {
-            #     "title": "Dry",
-            #     "abstract": "Dry",
-            #     "flags": {
-            #         "dry": True,
-            #         "sea": False,
-            #     },
-            #     "color": "#D99694",
-            #     "mask": True,
-            # },
-            # {
-            #     "title": "Wet",
-            #     "abstract": "Wet or Sea",
-            #     "flags": {"or": {"wet": True, "sea": True}},
-            #     "color": "#4F81BD",
-            # },
-        ]
-    },
+        },
+        {
+            "band": "water",
+            "flags": {"dry": True},
+        },
+    ],
 }
 
 
@@ -112,6 +101,21 @@ For service status information, see https://status.dea.ga.gov.au
     "bands": bands_wofs_obs,
     "resource_limits": reslim_wms_min_zoom_35,
     "dynamic": True,
+    "flags": [
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": [],
+        },
+        {
+            "band": "water",
+            "product": "ga_ls_wo_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+            "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+        }
+    ],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
         "always_fetch_bands": [],
