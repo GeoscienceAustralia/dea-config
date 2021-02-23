@@ -54,31 +54,6 @@ style_c3_wofs_obs_wet_only = {
     "abstract": "Wet Only",
     "value_map": {
         "water": [
-            # {
-            #     "title": "Invalid",
-            #     "abstract": "Slope or Cloud",
-            #     "flags": {
-            #         "or": {
-            #             "terrain_shadow": True,
-            #             "low_solar_angle": True,
-            #             "cloud_shadow": True,
-            #             "cloud": True,
-            #             "high_slope": True,
-            #             "noncontiguous": True,
-            #         }
-            #     },
-            #     "color": "#707070",
-            #     "mask": True,
-            # },
-            # {
-            #     "title": "Dry",
-            #     "abstract": "Dry",
-            #     "flags": {
-            #         "dry": True,
-            #     },
-            #     "color": "#D99694",
-            #     "mask": True,
-            # },
             {
                 "title": "Wet",
                 "abstract": "Wet",
