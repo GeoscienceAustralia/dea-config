@@ -54,32 +54,31 @@ style_c3_wofs_obs_wet_only = {
     "abstract": "Wet Only",
     "value_map": {
         "water": [
-            {
-                "title": "Invalid",
-                "abstract": "Slope or Cloud",
-                "flags": {
-                    "or": {
-                        "terrain_shadow": True,
-                        "low_solar_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
-                        "noncontiguous": True,
-                        # "dry": True,
-                    }
-                },
-                "color": "#707070",
-                "mask": True,
-            },
-            {
-                "title": "Dry",
-                "abstract": "Dry",
-                "flags": {
-                    "dry": True,
-                },
-                "color": "#D99694",
-                "mask": True,
-            },
+            # {
+            #     "title": "Invalid",
+            #     "abstract": "Slope or Cloud",
+            #     "flags": {
+            #         "or": {
+            #             "terrain_shadow": True,
+            #             "low_solar_angle": True,
+            #             "cloud_shadow": True,
+            #             "cloud": True,
+            #             "high_slope": True,
+            #             "noncontiguous": True,
+            #         }
+            #     },
+            #     "color": "#707070",
+            #     "mask": True,
+            # },
+            # {
+            #     "title": "Dry",
+            #     "abstract": "Dry",
+            #     "flags": {
+            #         "dry": True,
+            #     },
+            #     "color": "#D99694",
+            #     "mask": True,
+            # },
             {
                 "title": "Wet",
                 "abstract": "Wet",
@@ -92,7 +91,30 @@ style_c3_wofs_obs_wet_only = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "enum": 1,
+        },
+        {
+            "band": "water",
+            "flags": {
+                    "or": {
+                        "terrain_or_low_angle": True,
+                        "cloud_shadow": True,
+                        "cloud": True,
+                        "high_slope": True,
+                        "noncontiguous": True,
+                    }
+                },
+        },
+        {
+            "band": "water",
+            "flags": {"dry": True},
+
+        },
+        {
+            "band": "water",
+            "flags": {
+                    "dry": True,
+                },
         }
     ],
 }
@@ -118,6 +140,13 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_time": True,
             "ignore_info_flags": [],
         },
+        {
+            "band": "water",
+            "product": "ga_ls_wo_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+            "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+        }
     ],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
