@@ -83,14 +83,7 @@ style_c3_wofs_obs_wet_only = {
         {
             "band": "water",
             "flags": {"dry": True},
-
         },
-        {
-            "band": "water",
-            "flags": {
-                    "dry": True,
-                },
-        }
     ],
 }
 
