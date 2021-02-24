@@ -41,9 +41,10 @@ output:
     product_family: wo
     producer: ga.gov.au
     dataset_version: 0.0.1
+    collection_number: 3
 
   properties:
-    dea:dataset_maturity: interim
+    dea:dataset_maturity: nrt
 
 processing:
   dask_chunks:
