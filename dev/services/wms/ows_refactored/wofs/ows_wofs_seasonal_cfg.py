@@ -160,7 +160,7 @@ style_seasonal_wofs_summary_frequency_blue = {
 
 
 layers = {
-    "title": "Water Observations from Space",
+    "title": "Water Observations from Space Seasonal",
     "abstract": "WOfS",
     "layers": [
         {
