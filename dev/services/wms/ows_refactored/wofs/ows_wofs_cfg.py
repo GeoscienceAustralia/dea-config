@@ -139,7 +139,11 @@ style_wofs_obs = {
             {
                 "title": "Cloudy Terrain",
                 "abstract": "Sloped terrain and cloudy",
-                "flags": {"high_slope": True, "cloud": True},
+                "flags": {
+                    "and": {
+                    "high_slope": True, "cloud": True,
+                    }
+                },
                 "color": "#f2dcb4",
             },
             {
@@ -153,13 +157,21 @@ style_wofs_obs = {
             {
                 "title": "Cloudy Water",
                 "abstract": "Wet and cloudy",
-                "flags": {"wet": True, "cloud": True},
+                "flags": {
+                    "and": {
+                        "wet": True, "cloud": True,
+                        }
+                },
                 "color": "#bad4f2",
             },
             {
                 "title": "Shaded Water",
                 "abstract": "Wet and shaded",
-                "flags": {"wet": True, "cloud_shadow": True},
+                "flags": {
+                    "and": {
+                    "wet": True, "cloud_shadow": True,
+                    }    
+                },
                 "color": "#335277",
             },
             {
@@ -182,21 +194,26 @@ style_wofs_obs = {
                 # Possible Sea Glint, also mark as invalid
                 "title": "",
                 "abstract": "",
-                "flags": {"dry": True, "sea": True},
+                "flags": {
+                    "and": {
+                        "dry": True, "sea": True,
+                    }
+                },
                 "color": "#ffffff",
             },
             {
                 "title": "Water",
                 "abstract": "Inland or sea water",
-                "flags": {"or": {"wet": True, "sea": True}},
+                "flags": {"or": {"wet": True, "sea": True,}},
                 "color": "#4f81bd",
             },
             {
                 "title": "Dry",
                 "abstract": "Dry",
                 "flags": {
-                    "dry": True,
-                    "sea": False,
+                    "and": {
+                    "dry": True, "sea": False
+                    }
                 },
                 "color": "#96966e",
             },
