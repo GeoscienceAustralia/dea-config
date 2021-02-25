@@ -42,6 +42,7 @@ output:
     producer: ga.gov.au
     dataset_version: 0.0.1
     collection_number: 3
+    naming_conventions: dea_s2_derivative
 
   properties:
     dea:dataset_maturity: nrt
