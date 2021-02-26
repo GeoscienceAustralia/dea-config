@@ -166,7 +166,7 @@ style_wofs_summary_clear = {
 
 
 layers = {
-    "title": "Water Observations from Space annual statistics",
+    "title": "Water Observations from Space Annual Statistics",
     "abstract": "WOfS",
     "layers": [
         {
