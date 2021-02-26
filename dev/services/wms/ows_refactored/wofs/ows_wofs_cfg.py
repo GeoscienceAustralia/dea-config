@@ -127,40 +127,97 @@ style_wofs_obs = {
         "water": [
             {
                 "title": "Invalid",
-                "abstract": "Slope or Cloud",
+                "abstract": "Invalid data",
                 "flags": {
                     "or": {
                         "terrain_or_low_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
                         "noncontiguous": True,
                     }
                 },
-                "color": "#707070",
+                "color": "#ffffff",
+            },
+            {
+                "title": "Cloudy Terrain",
+                "abstract": "Sloped terrain and cloudy",
+                "flags": {
+                    "and": {
+                    "high_slope": True, "cloud": True,
+                    }
+                },
+                "color": "#f2dcb4",
+            },
+            {
+                "title": "Terrain",
+                "abstract": "Sloped terrain",
+                "flags": {
+                    "high_slope": True,
+                },
+                "color": "#776857",
+            },
+            {
+                "title": "Cloudy Water",
+                "abstract": "Wet and cloudy",
+                "flags": {
+                    "and": {
+                        "wet": True, "cloud": True,
+                        }
+                },
+                "color": "#bad4f2",
+            },
+            {
+                "title": "Shaded Water",
+                "abstract": "Wet and shaded",
+                "flags": {
+                    "and": {
+                    "wet": True, "cloud_shadow": True,
+                    }    
+                },
+                "color": "#335277",
+            },
+            {
+                "title": "Cloud Shadow ",
+                "abstract": "Cloud shadow",
+                "flags": {
+                    "cloud_shadow": True,
+                },
+                "color": "#595856",
+            },
+            {
+                "title": "Cloud",
+                "abstract": "Cloud",
+                "flags": {
+                    "cloud": True,
+                },
+                "color": "#d8d7d6",
             },
             {
                 # Possible Sea Glint, also mark as invalid
                 "title": "",
                 "abstract": "",
-                "flags": {"dry": True, "sea": True},
-                "color": "#707070",
+                "flags": {
+                    "and": {
+                        "dry": True, "sea": True,
+                    }
+                },
+                "color": "#ffffff",
+            },
+            {
+                "title": "Water",
+                "abstract": "Inland or sea water",
+                "flags": {"or": {"wet": True, "sea": True,}},
+                "color": "#4f81bd",
             },
             {
                 "title": "Dry",
                 "abstract": "Dry",
                 "flags": {
-                    "dry": True,
-                    "sea": False,
+                    "and": {
+                    "dry": True, "sea": False
+                    }
                 },
-                "color": "#D99694",
+                "color": "#96966e",
             },
-            {
-                "title": "Wet",
-                "abstract": "Wet or Sea",
-                "flags": {"or": {"wet": True, "sea": True}},
-                "color": "#4F81BD",
-            },
+
         ]
     },
 }
