@@ -39,11 +39,6 @@ bands_weathering = {
 }
 
 
-bands_hap = {
-    "Band_1": [],
-}
-
-
 # Reusable Chunks 4. Styles
 
 
@@ -127,20 +122,6 @@ style_wii = {
         "strip_location": [0.1, 0.5, 0.8, 0.15],
     },
 }
-
-
-style_hap_simple_gray = {
-    "name": "simple_gray",
-    "title": "Simple gray",
-    "abstract": "Simple grayscale image",
-    "components": {
-        "red": {"Band_1": 1.0},
-        "green": {"Band_1": 1.0},
-        "blue": {"Band_1": 1.0},
-    },
-    "scale_range": [0.0, 255],
-}
-
 
 # End of Reuseable
 
@@ -362,10 +343,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
-                        # {
-                        #     "include": "ows_refactored.wofs.ows_nrt_wo_cfg.layers",
-                        #     "type": "python",
-                        # },
                     ],
                 },
                 {
@@ -521,36 +498,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "include": "ows_refactored.intertidal.ows_extents_cfg.layers",
                     "type": "python",
                 },
-                # {
-                #     "title": "Historical Airborne Photography",
-                #     "abstract": "",
-                #     "layers": [
-                #         {
-                #             "title": "Historical Airborne Photography (HAP)",
-                #             "name": "historical_airborne_photography",
-                #             "abstract": "Historical Airborne Photography",
-                #             "product_name": "historical_airborne_photography",
-                #             "bands": bands_hap,
-                #             "resource_limits": reslim_wms_min_zoom_500_max_datasets,
-                #             "image_processing": {
-                #                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                #                 "always_fetch_bands": [],
-                #                 "manual_merge": False,
-                #             },
-                #             "wcs": {
-                #                 "native_crs": "EPSG:3577",
-                #                 "default_bands": ["Band_1"],
-                #                 "native_resolution": [1.0, 1.0],
-                #             },
-                #             "styling": {
-                #                 "default_style": "simple_gray",
-                #                 "styles": [
-                #                     style_hap_simple_gray,
-                #                 ],
-                #             },
-                #         }
-                #     ],
-                # },
                 {
                     "include": "ows_refactored.aster.ows_aster_cfg.layers",
                     "type": "python",
@@ -567,34 +514,34 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "include": "ows_refactored.insar.ows_insar_cfg.layers",
                     "type": "python",
                 },
-                # {
-                #     "title": "Collection 3",
-                #     "abstract": """
+                {
+                    "title": "Collection 3",
+                    "abstract": """
 
-                #     """,
-                #     "layers": [
-                #         {
-                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.fc.ows_c3_fc_cfg.layers",
-                #             "type": "python",
-                #         },
-                #     ],
-                # },
+                    """,
+                    "layers": [
+                        {
+                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.fc.ows_c3_fc_cfg.layers",
+                            "type": "python",
+                        },
+                    ],
+                },
             ],
         },
     ],  # End of Layers List

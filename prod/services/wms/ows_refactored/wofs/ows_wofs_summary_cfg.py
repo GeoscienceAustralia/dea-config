@@ -182,7 +182,7 @@ style_wofs_frequency_blue = {
 
 
 layers = {
-    "title": "Water Observations from Space",
+    "title": "Water Observations from Space All of time Summary Statistics",
     "abstract": "WOfS",
     "layers": [
         {

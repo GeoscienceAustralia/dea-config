@@ -14,20 +14,27 @@ style_fc_3_simple = {
     "components": {"red": {"bs": 1.0}, "green": {"pv": 1.0}, "blue": {"npv": 1.0}},
     "scale_range": [0.0, 100.0],
     "pq_masks": [
-        {
-            "flags": {"dry": True},
-        },
-        {
-            "flags": {
-                "terrain_shadow": False,
-                "low_solar_angle": False,
-                "high_slope": False,
-                "cloud_shadow": False,
-                "cloud": False,
-                # "sea": False,
+            {
+                # pq_masks:band now takes the actual ODC band name, not the identifier.
+                "band": "water",
+                "flags": {"dry": True},
+            },
+            {
+                "band": "water",
+                "flags": {
+                    "terrain_shadow": False,
+                    "low_solar_angle": False,
+                    "high_slope": False,
+                    "cloud_shadow": False,
+                    "cloud": False,
+                }
+            },
+            {
+                "band": "land",
+                "invert": True,
+                "enum": 0,
             }
-        },
-    ],
+        ],
 }
 
 
@@ -46,13 +53,22 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
         "always_fetch_bands": [],
         "manual_merge": False,
     },
-    "flags": {
-        "band": "water",
-        "product": "ga_ls_wo_3",
-        "ignore_time": False,
-        "ignore_info_flags": [],
-        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-    },
+    "flags": [
+        # flags is now a list of flag band definitions - NOT a dictionary with identifiers
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": [],
+        },
+        {
+            "band": "water",
+            "product": "ga_ls_wo_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+            "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+        }
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
         "default_bands": ["bs", "pv", "npv"],
