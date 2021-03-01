@@ -43,7 +43,7 @@ style_c3_pure_aerosol = {
 
 style_c3_pure_panchromatic = {
     "name": "panchromatic",
-    "title": "Narrow Blue - 440",
+    "title": "Pure Panchromatic",
     "abstract": "panchromatic",
     "components": {
         "red": {"nbart_panchromatic": 1.0},
@@ -74,7 +74,7 @@ style_c3_false_colour = {
         "green": {"nbart_swir_1": 1.0},
         "blue": {"nbart_nir": 1.0},
     },
-    "scale_range": [0.0, 255.0],
+    "scale_range": [0.0, 3000.0],
 }
 
 style_c3_ndvi = {
