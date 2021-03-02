@@ -903,7 +903,7 @@
             ],
             "styles_count": 13,
             "styles_list": [
-                "simple_rgb",
+                "true_colour",
                 "false_colour",
                 "ndvi",
                 "ndwi",
@@ -924,7 +924,7 @@
             ],
             "styles_count": 12,
             "styles_list": [
-                "simple_rgb",
+                "true_colour",
                 "false_colour",
                 "ndvi",
                 "ndwi",
@@ -944,7 +944,7 @@
             ],
             "styles_count": 11,
             "styles_list": [
-                "simple_rgb",
+                "true_colour",
                 "false_colour",
                 "ndvi",
                 "ndwi",
