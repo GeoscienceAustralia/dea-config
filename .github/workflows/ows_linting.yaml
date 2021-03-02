@@ -1,4 +1,4 @@
-name: OWS CFG Test
+name: OWS CFG Lint Check
 
 on:
   push:
