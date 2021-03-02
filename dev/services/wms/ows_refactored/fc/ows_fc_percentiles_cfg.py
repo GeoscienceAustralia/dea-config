@@ -1,6 +1,5 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 from ows_refactored.fc.style_fc_cfg import (
-    style_fc_simple,
     style_fc_simple_rgb,
     styles_fc_bare_list,
     styles_fc_gv_list,
