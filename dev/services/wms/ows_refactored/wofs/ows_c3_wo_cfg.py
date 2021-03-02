@@ -55,6 +55,32 @@ style_c3_wofs_obs_wet_only = {
     "value_map": {
         "water": [
             {
+                "title": "Invalid",
+                "abstract": "Slope or Cloud",
+                "flags": {
+                    "or": {
+                        "terrain_shadow": True,
+                        "low_solar_angle": True,
+                        "cloud_shadow": True,
+                        "cloud": True,
+                        "high_slope": True,
+                        "noncontiguous": True,
+                    }
+                },
+                "color": "#707070",
+                "mask": True,
+            },
+            {
+                # Possible Sea Glint, also mark as invalid
+                "title": "Dry",
+                "abstract": "Dry",
+                "flags": {
+                    "dry": True,
+                },
+                "color": "#D99694",
+                "mask": True,
+            },
+            {
                 "title": "Wet",
                 "abstract": "Wet",
                 "flags": {"wet": True},
@@ -67,22 +93,6 @@ style_c3_wofs_obs_wet_only = {
             "band": "land",
             "invert": True,
             "enum": 1,
-        },
-        {
-            "band": "water",
-            "flags": {
-                    "or": {
-                        "terrain_or_low_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
-                        "noncontiguous": True,
-                    }
-                },
-        },
-        {
-            "band": "water",
-            "flags": {"dry": True},
         },
     ],
 }
