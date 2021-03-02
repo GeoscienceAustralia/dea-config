@@ -130,7 +130,7 @@ style_wofs_obs = {
                 "title": "",
                 "abstract": "",
                 "flags": {"noncontiguous": True,},
-                "mask": True,
+                "alpha": 0.0,
                 "color": "#ffffff",
             },
             {
@@ -138,7 +138,7 @@ style_wofs_obs = {
                 "title": "",
                 "abstract": "",
                 "flags": {"sea": True,},
-                "mask": True,
+                "alpha": 0.0,
                 "color": "#4f81bd",
             },
             {
