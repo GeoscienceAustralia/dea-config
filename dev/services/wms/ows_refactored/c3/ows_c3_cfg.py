@@ -67,12 +67,12 @@ style_c3_simple_rgb = {
 
 style_c3_false_colour = {
     "name": "false_colour",
-    "title": "False Colour",
-    "abstract": "Simple false-colour image using ASTER Bands 3 as red, 2 as green and 1 as blue",
+    "title": "False colour - Green, SWIR, NIR",
+    "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
     "components": {
-        "red": {"nbart_green": 1.0},
-        "green": {"nbart_swir_1": 1.0},
-        "blue": {"nbart_nir": 1.0},
+        "red": {"nbart_swir_1": 1.0},
+        "green": {"nbart_nir": 1.0},
+        "blue": {"nbart_green": 1.0},
     },
     "scale_range": [0.0, 3000.0],
 }
