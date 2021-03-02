@@ -3,6 +3,7 @@ from ows_refactored.ows_reslim_cfg import (
 )
 from ows_refactored.ows_legend_cfg import (
     legend_idx_percentage_by_20,
+    legend_idx_twentyplus_3ticks,
 )
 from ows_refactored.wofs.bands_wo_cfg import (
     bands_wofs_sum,

@@ -123,46 +123,60 @@ style_wofs_obs = {
     "value_map": {
         "water": [
             {
-                #Make noncontiguous data transparent
+                # Make noncontiguous data transparent
                 "title": "",
                 "abstract": "",
-                "flags": {"noncontiguous": True,},
+                "flags": {
+                    "noncontiguous": True,
+                },
                 "alpha": 0.0,
                 "color": "#ffffff",
             },
             {
-                #Mask sea and sea glint
+                # Mask sea and sea glint
                 "title": "",
                 "abstract": "",
-                "flags": {"sea": True,},
+                "flags": {
+                    "sea": True,
+                },
                 "alpha": 0.0,
                 "color": "#4f81bd",
             },
             {
                 "title": "Invalid Data",
                 "abstract": "Terrain shadow or low solar angle",
-                "flags": {"terrain_or_low_angle": True,},
+                "flags": {
+                    "terrain_or_low_angle": True,
+                },
                 "color": "#ffa500",
             },
             {
                 "title": "Cloudy Steep Terrain",
                 "abstract": "",
                 "flags": {
-                    "and": {"high_slope": True, "cloud": True,}
+                    "and": {
+                        "high_slope": True,
+                        "cloud": True,
+                    }
                 },
                 "color": "#f2dcb4",
             },
             {
                 "title": "Steep Terrain",
                 "abstract": "",
-                "flags": {"high_slope": True,},
+                "flags": {
+                    "high_slope": True,
+                },
                 "color": "#776857",
             },
             {
                 "title": "Cloudy Water",
                 "abstract": "",
                 "flags": {
-                    "and": {"wet": True, "cloud": True,}
+                    "and": {
+                        "wet": True,
+                        "cloud": True,
+                    }
                 },
                 "color": "#bad4f2",
             },
@@ -170,45 +184,49 @@ style_wofs_obs = {
                 "title": "Shaded Water",
                 "abstract": "",
                 "flags": {
-                    "and": {"wet": True, "cloud_shadow": True,}
+                    "and": {
+                        "wet": True,
+                        "cloud_shadow": True,
+                    }
                 },
                 "color": "#335277",
             },
             {
                 "title": "Cloud Shadow",
                 "abstract": "",
-                "flags": {"cloud_shadow": True,},
+                "flags": {
+                    "cloud_shadow": True,
+                },
                 "color": "#595856",
             },
             {
                 "title": "Cloud",
                 "abstract": "",
-                "flags": {"cloud": True,},
+                "flags": {
+                    "cloud": True,
+                },
                 "color": "#d8d7d6",
             },
             {
                 "title": "Water",
                 "abstract": "",
                 "flags": {
-                    "and": {"wet": True, "sea": False,}
-                    },
+                    "and": {
+                        "wet": True,
+                        "sea": False,
+                    }
+                },
                 "color": "#4f81bd",
             },
             {
                 "title": "Dry",
                 "abstract": "",
-                "flags": {
-                    "and": {"dry": True, "sea": False}
-                },
+                "flags": {"and": {"dry": True, "sea": False}},
                 "color": "#96966e",
             },
-
         ]
     },
-    "legend": {
-        "width": 3.0,
-        "height": 2.1
-    }
+    "legend": {"width": 3.0, "height": 2.1},
 }
 
 style_wofs_obs_wet_only = {
