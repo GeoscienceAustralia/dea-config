@@ -1,5 +1,6 @@
 import copy
 
+
 # HACK: Move this to a utils to allow style reusability
 def swap_scale(new_scale: list, style: dict):
     if "scale_range" in style:
