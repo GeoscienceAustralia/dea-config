@@ -30,4 +30,4 @@ jobs:
 
     - uses: psf/black@20.8b1
       with:
-        args: "./dev/services/wms/ows_refactored/ --check"
+        args: "./dev/services/wms/ows_refactored/ --check --quiet"
