@@ -1,0 +1,128 @@
+about:
+    title: DEA WPS configuration
+
+processes:
+
+ - process: datacube_wps.processes.wofsdrill.WOfSDrill
+
+   about:
+       identifier: WOfSDrill
+       version: '0.4'
+       title: Water Observations from Space Pixel Drill
+       abstract: |
+           Water Observations from Space Pixel Drill
+
+           Water Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.
+
+           The WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.
+
+           This Pixel Drill will output the water observations for a point through time as graph.
+
+           For service status information, see https://status.dea.ga.gov.au.
+       store_supported: True
+       status_supported: True
+       geometry_type: "point"
+
+   input:
+       product: wofs_albers
+       measurements: [water]
+       group_by: solar_day
+       fuse_func: datacube_wps.processes.wofls_fuser
+
+   style:
+       table:
+           columns:
+               Wet:
+                   units: "#"
+                   chartLineColor: "#4F81BD"
+                   active: True
+               Dry:
+                   units: "#"
+                   chartLineColor: "#D99694"
+                   active: True
+               Not Observable:
+                   units: "#"
+                   chartLineColor: "#707070"
+                   active: True
+
+
+ - process: datacube_wps.processes.fcdrill.FCDrill
+
+   about:
+       identifier: FractionalCoverDrill
+       version: '0.3'
+       title: Fractional Cover
+       abstract: Performs Fractional Cover Polygon Drill
+       store_supported: True
+       status_supported: True
+       geometry_type: polygon
+
+   input:
+       juxtapose:
+           - collate:
+                  - product: ls5_fc_albers
+                    group_by: solar_day
+                    measurements: [BS, PV, NPV]
+                  - product: ls7_fc_albers
+                    group_by: solar_day
+                    measurements: [BS, PV, NPV]
+                  - product: ls8_fc_albers
+                    group_by: solar_day
+                    measurements: [BS, PV, NPV]
+           - product: wofs_albers
+             measurements: [water]
+             group_by: solar_day
+             fuse_func: datacube_wps.processes.wofls_fuser
+
+   style:
+       table:
+           columns:
+               Bare Soil:
+                   units: "%"
+                   chartLineColor: "#8B0000"
+                   active: True
+               Photosynthetic Vegetation:
+                   units: "%"
+                   chartLineColor: "green"
+                   active: True
+               Non-Photosynthetic Vegetation:
+                   units: "%"
+                   chartLineColor: "#dac586"
+                   active: True
+               Unobservable:
+                   units: "%"
+                   # this was nice too: chartLineColor: "#6699CC"
+                   chartLineColor: "grey"
+                   active: False
+
+
+ - process: datacube_wps.processes.mangrovedrill.MangroveDrill
+
+   about:
+       identifier: Mangrove Cover Drill
+       version: '0.2'
+       title: Mangrove Cover
+       abstract: Performs Mangrove Polygon Drill
+       store_supported: True
+       status_supported: True
+       geometry_type: polygon
+
+   input:
+       product: mangrove_cover
+       measurements: [canopy_cover_class]
+
+   style:
+       table:
+           columns:
+               Woodland:
+                   units: "#"
+                   chartLineColor: "#9FFF4C"
+                   active: True
+               Open Forest:
+                   units: "#"
+                   chartLineColor: "#5ECC00"
+                   active: True
+               Closed Forest:
+                   units: "#"
+                   chartLineColor: "#3B7F00"
+                   active: True
