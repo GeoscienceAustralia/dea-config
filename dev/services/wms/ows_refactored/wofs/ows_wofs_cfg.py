@@ -193,7 +193,7 @@ style_wofs_obs = {
                 "title": "Water",
                 "abstract": "",
                 "flags": {
-                    "or": {"wet": True, "sea": False,}
+                    "and": {"wet": True, "sea": False,}
                     },
                 "color": "#4f81bd",
             },
