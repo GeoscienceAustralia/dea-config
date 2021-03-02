@@ -1,0 +1,33 @@
+name: OWS CFG Test
+
+on:
+  push:
+    path:
+      - 'dev/services/wms/**'
+      - .github/workflows/ows_linting.yaml
+    pull_request:
+      branches: [ master ]
+      paths:
+        - 'dev/services/wms/**'
+        - .github/workflows/ows_linting.yaml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v2
+
+    - name: Run Python Linter
+      run: |
+        python -m pip install pylint boto3
+        ./check-code.sh
+
+    - uses: psf/black@20.8b1
+      with:
+        args: "./dev/services/wms/ows_refactored/ --check"
