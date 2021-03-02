@@ -126,94 +126,82 @@ style_wofs_obs = {
     "value_map": {
         "water": [
             {
-                "title": "Invalid",
-                "abstract": "Invalid data",
-                "flags": {
-                    "or": {
-                        "terrain_or_low_angle": True,
-                        "noncontiguous": True,
-                    }
-                },
+                #Make noncontiguous data transparent
+                "title": "",
+                "abstract": "",
+                "flags": {"noncontiguous": True,},
+                "mask": True,    
                 "color": "#ffffff",
-            },
+            }, 
             {
-                "title": "Cloudy Terrain",
-                "abstract": "Sloped terrain and cloudy",
+                #Mask sea and sea glint
+                "title": "",
+                "abstract": "",
+                "flags": {"sea": True,},
+                "mask": True,
+                "color": "#4f81bd",
+            }, 
+            {
+                "title": "Invalid Data",
+                "abstract": "Terrain shadow or low solar angle",
+                "flags": {"terrain_or_low_angle": True,},
+                "color": "#ffa500",
+            },            
+            {
+                "title": "Cloudy Steep Terrain",
+                "abstract": "",
                 "flags": {
-                    "and": {
-                    "high_slope": True, "cloud": True,
-                    }
+                    "and": {"high_slope": True, "cloud": True,}
                 },
                 "color": "#f2dcb4",
             },
             {
-                "title": "Terrain",
-                "abstract": "Sloped terrain",
-                "flags": {
-                    "high_slope": True,
-                },
+                "title": "Steep Terrain",
+                "abstract": "",
+                "flags": {"high_slope": True,},
                 "color": "#776857",
             },
             {
                 "title": "Cloudy Water",
-                "abstract": "Wet and cloudy",
+                "abstract": "",
                 "flags": {
-                    "and": {
-                        "wet": True, "cloud": True,
-                        }
+                    "and": {"wet": True, "cloud": True,}
                 },
                 "color": "#bad4f2",
             },
             {
                 "title": "Shaded Water",
-                "abstract": "Wet and shaded",
+                "abstract": "",
                 "flags": {
-                    "and": {
-                    "wet": True, "cloud_shadow": True,
-                    }
+                    "and": {"wet": True, "cloud_shadow": True,}    
                 },
                 "color": "#335277",
             },
             {
-                "title": "Cloud Shadow ",
-                "abstract": "Cloud shadow",
-                "flags": {
-                    "cloud_shadow": True,
-                },
+                "title": "Cloud Shadow",
+                "abstract": "",
+                "flags": {"cloud_shadow": True,},
                 "color": "#595856",
             },
             {
                 "title": "Cloud",
-                "abstract": "Cloud",
-                "flags": {
-                    "cloud": True,
-                },
+                "abstract": "",
+                "flags": {"cloud": True,},
                 "color": "#d8d7d6",
             },
             {
-                # Possible Sea Glint, also mark as invalid
-                "title": "",
+                "title": "Water",
                 "abstract": "",
                 "flags": {
-                    "and": {
-                        "dry": True, "sea": True,
-                    }
-                },
-                "color": "#ffffff",
-            },
-            {
-                "title": "Water",
-                "abstract": "Inland or sea water",
-                "flags": {"or": {"wet": True, "sea": True,}},
+                    "or": {"wet": True, "sea": False,}
+                    },
                 "color": "#4f81bd",
             },
             {
                 "title": "Dry",
-                "abstract": "Dry",
+                "abstract": "",
                 "flags": {
-                    "and": {
-                    "dry": True, "sea": False
-                    }
+                    "and": {"dry": True, "sea": False}
                 },
                 "color": "#96966e",
             },
