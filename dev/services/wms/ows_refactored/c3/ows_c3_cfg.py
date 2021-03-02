@@ -41,10 +41,10 @@ style_c3_pure_aerosol = {
     "scale_range": [0.0, 3000.0],
 }
 
-style_c3_pure_panchromatic = {
+style_c3_ls7_pure_panchromatic = {
     "name": "panchromatic",
-    "title": "Pure Panchromatic",
-    "abstract": "panchromatic",
+    "title": "Panchromatic - 710",
+    "abstract": "Panchromatic, centered on 710nm",
     "components": {
         "red": {"nbart_panchromatic": 1.0},
         "green": {"nbart_panchromatic": 1.0},
@@ -53,10 +53,22 @@ style_c3_pure_panchromatic = {
     "scale_range": [0.0, 3000.0],
 }
 
-style_c3_simple_rgb = {
-    "name": "simple_rgb",
-    "title": "Simple RGB",
-    "abstract": "Simple true-colour image, using the red, green and blue bands",
+style_c3_ls8_pure_panchromatic = {
+    "name": "panchromatic",
+    "title": "Panchromatic - 590",
+    "abstract": "Panchromatic, centered on 590nm",
+    "components": {
+        "red": {"nbart_panchromatic": 1.0},
+        "green": {"nbart_panchromatic": 1.0},
+        "blue": {"nbart_panchromatic": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_true_colour = {
+    "name": "true_colour",
+    "title": "True Colour",
+    "abstract": "True-colour image, using the red, green and blue bands",
     "components": {
         "red": {"nbart_red": 1.0},
         "green": {"nbart_green": 1.0},
@@ -247,7 +259,7 @@ style_c3_pure_swir2 = {
 
 # Styles grouping
 styles_c3_ls_common = [
-    style_c3_simple_rgb,
+    style_c3_true_colour,
     style_c3_false_colour,
     style_c3_ndvi,
     style_c3_ndwi,
@@ -262,9 +274,10 @@ styles_c3_ls_common = [
 
 
 styles_c3_ls_7 = styles_c3_ls_common.copy()
-styles_c3_ls_7.append(style_c3_pure_panchromatic)
+styles_c3_ls_7.append(style_c3_ls7_pure_panchromatic)
 
-styles_c3_ls_8 = styles_c3_ls_7.copy()
+styles_c3_ls_8 = styles_c3_ls_common.copy()
+styles_c3_ls_8.append(style_c3_ls8_pure_panchromatic)
 styles_c3_ls_8.append(style_c3_pure_aerosol)
 
 
@@ -299,7 +312,7 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
         "native_resolution": [25, -25],
         "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
     },
-    "styling": {"default_style": "simple_rgb", "styles": styles_c3_ls_8},
+    "styling": {"default_style": "true_colour", "styles": styles_c3_ls_8},
 }
 
 dea_c3_ls7_ard = {
@@ -327,7 +340,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "native_resolution": [25, -25],
         "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
     },
-    "styling": {"default_style": "simple_rgb", "styles": styles_c3_ls_7},
+    "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
 }
 dea_c3_ls5_ard = {
     "title": "DEA C3 Landsat 5 ARD",
@@ -356,5 +369,5 @@ For service status information, see https://status.dea.ga.gov.au""",
         "native_resolution": [25, -25],
         "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
     },
-    "styling": {"default_style": "simple_rgb", "styles": styles_c3_ls_common},
+    "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
 }
