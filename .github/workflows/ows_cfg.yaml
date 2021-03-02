@@ -29,6 +29,10 @@ jobs:
         python -m pip install pylint boto3
         ./check-code.sh
 
+    - uses: psf/black@stable
+        with:
+          args: "./dev/services/wms/ --check"
+
     - name: Run ows_refactored_cfg test (dev)
       run: |
         docker-compose -f docker-compose.ows.yaml up -d
