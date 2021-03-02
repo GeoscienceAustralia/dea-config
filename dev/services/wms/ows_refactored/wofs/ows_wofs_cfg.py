@@ -233,7 +233,7 @@ style_wofs_obs_wet_only = {
                     }
                 },
                 "color": "#707070",
-                "mask": True,
+                "alpha": 0.0,
             },
             {
                 # Possible Sea Glint, also mark as invalid
@@ -241,7 +241,7 @@ style_wofs_obs_wet_only = {
                 "abstract": "",
                 "flags": {"dry": True, "sea": True},
                 "color": "#707070",
-                "mask": True,
+                "alpha": 0.0,
             },
             {
                 "title": "Dry",
@@ -251,7 +251,7 @@ style_wofs_obs_wet_only = {
                     "sea": False,
                 },
                 "color": "#D99694",
-                "mask": True,
+                "alpha": 0.0,
             },
             {
                 "title": "Wet",

@@ -68,7 +68,7 @@ style_c3_wofs_obs_wet_only = {
                     }
                 },
                 "color": "#707070",
-                "mask": True,
+                "alpha": 0.0,
             },
             {
                 # Possible Sea Glint, also mark as invalid
@@ -78,7 +78,7 @@ style_c3_wofs_obs_wet_only = {
                     "dry": True,
                 },
                 "color": "#D99694",
-                "mask": True,
+                "alpha": 0.0,
             },
             {
                 "title": "Wet",
