@@ -91,7 +91,7 @@ style_c3_false_colour = {
 
 style_c3_ndvi = {
     "name": "ndvi",
-    "title": "NDVI - Red, NIR",
+    "title": "Normalised Difference Vegetation Index - Red, NIR",
     "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
@@ -118,7 +118,7 @@ style_c3_ndvi = {
 
 style_c3_ndwi = {
     "name": "ndwi",
-    "title": "NDWI - Green, NIR",
+    "title": "Normalised Difference Water Index - Green, NIR",
     "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
@@ -163,7 +163,7 @@ style_c3_ndwi = {
 
 style_c3_mndwi = {
     "name": "mndwi",
-    "title": "MNDWI - Green, SWIR",
+    "title": "Modified Normalised Difference Water Index - Green, SWIR",
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
