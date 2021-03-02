@@ -41,10 +41,22 @@ style_c3_pure_aerosol = {
     "scale_range": [0.0, 3000.0],
 }
 
-style_c3_pure_panchromatic = {
+style_c3_ls7_pure_panchromatic = {
     "name": "panchromatic",
-    "title": "Pure Panchromatic",
-    "abstract": "panchromatic",
+    "title": "Panchromatic - 710",
+    "abstract": "Panchromatic, centered on 710nm",
+    "components": {
+        "red": {"nbart_panchromatic": 1.0},
+        "green": {"nbart_panchromatic": 1.0},
+        "blue": {"nbart_panchromatic": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_ls8_pure_panchromatic = {
+    "name": "panchromatic",
+    "title": "Panchromatic - 590",
+    "abstract": "Panchromatic, centered on 590nm",
     "components": {
         "red": {"nbart_panchromatic": 1.0},
         "green": {"nbart_panchromatic": 1.0},
@@ -262,9 +274,10 @@ styles_c3_ls_common = [
 
 
 styles_c3_ls_7 = styles_c3_ls_common.copy()
-styles_c3_ls_7.append(style_c3_pure_panchromatic)
+styles_c3_ls_7.append(style_c3_ls7_pure_panchromatic)
 
-styles_c3_ls_8 = styles_c3_ls_7.copy()
+styles_c3_ls_8 = styles_c3_ls_common.copy()
+styles_c3_ls_8.append(style_c3_ls8_pure_panchromatic)
 styles_c3_ls_8.append(style_c3_pure_aerosol)
 
 
