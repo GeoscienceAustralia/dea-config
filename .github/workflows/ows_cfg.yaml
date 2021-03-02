@@ -30,8 +30,8 @@ jobs:
         ./check-code.sh
 
     - uses: psf/black@stable
-        with:
-          args: "./dev/services/wms/ --check"
+      with:
+        args: "./dev/services/wms/ --check"
 
     - name: Run ows_refactored_cfg test (dev)
       run: |
