@@ -130,9 +130,9 @@ style_wofs_obs = {
                 "title": "",
                 "abstract": "",
                 "flags": {"noncontiguous": True,},
-                "mask": True,    
+                "mask": True,
                 "color": "#ffffff",
-            }, 
+            },
             {
                 #Mask sea and sea glint
                 "title": "",
@@ -140,13 +140,13 @@ style_wofs_obs = {
                 "flags": {"sea": True,},
                 "mask": True,
                 "color": "#4f81bd",
-            }, 
+            },
             {
                 "title": "Invalid Data",
                 "abstract": "Terrain shadow or low solar angle",
                 "flags": {"terrain_or_low_angle": True,},
                 "color": "#ffa500",
-            },            
+            },
             {
                 "title": "Cloudy Steep Terrain",
                 "abstract": "",
@@ -173,7 +173,7 @@ style_wofs_obs = {
                 "title": "Shaded Water",
                 "abstract": "",
                 "flags": {
-                    "and": {"wet": True, "cloud_shadow": True,}    
+                    "and": {"wet": True, "cloud_shadow": True,}
                 },
                 "color": "#335277",
             },
@@ -228,32 +228,6 @@ style_wofs_obs_wet_only = {
             },
         ]
     },
-    "pq_masks": [
-        {
-            "band": "water",
-            "flags": {
-                    "or": {
-                        "terrain_or_low_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
-                        "noncontiguous": True,
-                    }
-                },
-        },
-        {
-            "band": "water",
-            "flags": {"dry": True, "sea": True},
-
-        },
-        {
-            "band": "water",
-            "flags": {
-                    "dry": True,
-                    "sea": False,
-                },
-        }
-    ]
 }
 
 layers = {
@@ -341,15 +315,6 @@ For service status information, see https://status.dea.ga.gov.au
             "bands": bands_wofs_obs,
             "resource_limits": reslim_wms_min_zoom_35,
             "dynamic": True,
-            "flags": [
-                {
-                    "band": "water",
-                    "product": "wofs_albers",
-                    "ignore_time": False,
-                    "ignore_info_flags": [],
-                    "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                }
-            ],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
                 "always_fetch_bands": [],
