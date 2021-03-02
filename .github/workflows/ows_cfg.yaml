@@ -31,7 +31,7 @@ jobs:
 
     - uses: psf/black@stable
       with:
-        args: "./dev/services/wms/ --check"
+        args: "./dev/services/wms/ows_refactored/ --check"
 
     - name: Run ows_refactored_cfg test (dev)
       run: |
