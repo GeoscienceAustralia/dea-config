@@ -208,6 +208,10 @@ style_wofs_obs = {
 
         ]
     },
+    "legend": {
+        "width": 3.0,
+        "height": 2.1
+    }
 }
 
 style_wofs_obs_wet_only = {
