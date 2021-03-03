@@ -1,11 +1,8 @@
+from ows_refactored.fc.style_fc_cfg import (style_fc_rgb, style_fc_simple_rgb,
+                                            styles_fc_bare_list,
+                                            styles_fc_gv_list,
+                                            styles_fc_ngv_list)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
-from ows_refactored.fc.style_fc_cfg import (
-    style_fc_simple_rgb,
-    styles_fc_bare_list,
-    styles_fc_gv_list,
-    style_fc_rgb,
-    styles_fc_ngv_list,
-)
 
 bands_fc_percentile = {
     "PV_PC_10": [],
