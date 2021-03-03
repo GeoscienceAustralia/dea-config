@@ -1,7 +1,6 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 from ows_refactored.sentinel2.style_s2_cfg import styles_s2_list
 
-
 bands_sentinel2_ard_nbar = {
     "nbar_coastal_aerosol": [
         "nbar_coastal_aerosol",
@@ -25,7 +24,7 @@ bands_sentinel2_ard_nbar = {
 layers = {
     "title": "Sentinel Definitive",
     "abstract": """
-	This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variationscaused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
+    This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
 """,
     "layers": [
         {

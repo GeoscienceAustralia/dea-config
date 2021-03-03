@@ -120,7 +120,7 @@
             {
                "name": "Multi-sensor (Landsat and Sentinel 2) surface reflectance (Beta)",
                "type": "wms",
-               "url": "http://gsky.nci.org.au/ows/beta-dea",
+               "url": "https://gsky.nci.org.au/ows/beta-dea",
                "layers": "blend_sentinel2_landsat_nbart_daily",
                "ignoreUnknownTileErrors": true,
                "chartType": "momentPoints",
@@ -130,39 +130,81 @@
                "supportsDeltaComparison": true
             },
             {
-               "name": "Landsat 8 Daily",
+               "name": "Daily Landsat 8 satellite images",
                "type": "wms",
-               "url": "http://gsky.nci.org.au/ows/beta-dea",
                "layers": "landsat8_nbart_daily",
+               "url": "https://gsky.nci.org.au/ows/beta-dea",
+               "linkedWcsUrl": "https://gsky.nci.org.au/ows/beta-dea",
+               "linkedWcsCoverage": "landsat8_nbart_daily",
                "ignoreUnknownTileErrors": true,
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
+               "featureInfoTemplate": {
+                  "formats": {
+                     "lat": {
+                        "maximumFractionDigits": 5
+                     },
+                     "lon": {
+                        "maximumFractionDigits": 5
+                     }
+                  },
+                  "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Normalised Difference Vegetation Index</b></td><td>{{bands.ndvi}}</td></tr>  <tr><td><b>Normalised Difference Water Index</b></td><td>{{bands.ndwi}}</td></tr><tr><td><b>Modified Normalised Difference Water Index</b></td><td>{{bands.mndwi}}</td></tr><tr><td><b>Normalised Burn Ratio</b></td><td>{{bands.nbr}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n660,{{bands.nbart_red}}\n870,{{bands.nbart_nir}}\n1610,{{bands.nbart_swir_1}}\n2220,{{bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+               },
                "featureTimesProperty": "data_available_for_dates",
+               "leafletUpdateInterval": 750,
                "supportsDeltaComparison": true
             },
             {
-               "name": "Landsat 7 Daily",
+               "name": "Daily Landsat 7 satellite images",
                "type": "wms",
-               "url": "http://gsky.nci.org.au/ows/beta-dea",
                "layers": "landsat7_nbart_daily",
+               "url": "https://gsky.nci.org.au/ows/beta-dea",
+               "linkedWcsUrl": "https://gsky.nci.org.au/ows/beta-dea",
+               "linkedWcsCoverage": "landsat7_nbart_daily",
                "ignoreUnknownTileErrors": true,
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
+               "featureInfoTemplate": {
+                  "formats": {
+                     "lat": {
+                        "maximumFractionDigits": 5
+                     },
+                     "lon": {
+                        "maximumFractionDigits": 5
+                     }
+                  },
+                  "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Normalised Difference Vegetation Index</b></td><td>{{bands.ndvi}}</td></tr>  <tr><td><b>Normalised Difference Water Index</b></td><td>{{bands.ndwi}}</td></tr><tr><td><b>Modified Normalised Difference Water Index</b></td><td>{{bands.mndwi}}</td></tr><tr><td><b>Normalised Burn Ratio</b></td><td>{{bands.nbr}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n660,{{bands.nbart_red}}\n840,{{bands.nbart_nir}}\n1650,{{bands.nbart_swir_1}}\n2220,{{bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+               },
                "featureTimesProperty": "data_available_for_dates",
+               "leafletUpdateInterval": 750,
                "supportsDeltaComparison": true
             },
             {
-               "name": "Landsat 5 Daily",
+               "name": "Daily Landsat 5 satellite images",
                "type": "wms",
-               "url": "http://gsky.nci.org.au/ows/beta-dea",
                "layers": "landsat5_nbart_daily",
+               "url": "https://gsky.nci.org.au/ows/beta-dea",
+               "linkedWcsUrl": "https://gsky.nci.org.au/ows/beta-dea",
+               "linkedWcsCoverage": "landsat5_nbart_daily",
                "ignoreUnknownTileErrors": true,
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
+               "featureInfoTemplate": {
+                  "formats": {
+                     "lat": {
+                        "maximumFractionDigits": 5
+                     },
+                     "lon": {
+                        "maximumFractionDigits": 5
+                     }
+                  },
+                  "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Normalised Difference Vegetation Index</b></td><td>{{bands.ndvi}}</td></tr>  <tr><td><b>Normalised Difference Water Index</b></td><td>{{bands.ndwi}}</td></tr><tr><td><b>Modified Normalised Difference Water Index</b></td><td>{{bands.mndwi}}</td></tr><tr><td><b>Normalised Burn Ratio</b></td><td>{{bands.nbr}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n660,{{bands.nbart_red}}\n840,{{bands.nbart_nir}}\n1650,{{bands.nbart_swir_1}}\n2220,{{bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+               },
                "featureTimesProperty": "data_available_for_dates",
+               "leafletUpdateInterval": 750,
                "supportsDeltaComparison": true
             },
             {
@@ -174,7 +216,19 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
+               "featureInfoTemplate": {
+                  "formats": {
+                     "lat": {
+                        "maximumFractionDigits": 5
+                     },
+                     "lon": {
+                        "maximumFractionDigits": 5
+                     }
+                  },
+                  "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Normalised Difference Vegetation Index</b></td><td>{{bands.ndvi}}</td></tr>  <tr><td><b>Normalised Difference Water Index</b></td><td>{{bands.ndwi}}</td></tr><tr><td><b>Modified Normalised Difference Water Index</b></td><td>{{bands.mndwi}}</td></tr><tr><td><b>Normalised Burn Ratio</b></td><td>{{bands.nbr}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n660,{{bands.nbart_red}}\n870,{{bands.nbart_nir}}\n1610,{{bands.nbart_swir_1}}\n2220,{{bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+               },
                "featureTimesProperty": "data_available_for_dates",
+               "leafletUpdateInterval": 750,
                "supportsDeltaComparison": true
             },
             {
@@ -186,7 +240,19 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
+               "featureInfoTemplate": {
+                  "formats": {
+                     "lat": {
+                        "maximumFractionDigits": 5
+                     },
+                     "lon": {
+                        "maximumFractionDigits": 5
+                     }
+                  },
+                  "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Normalised Difference Vegetation Index</b></td><td>{{bands.ndvi}}</td></tr>  <tr><td><b>Normalised Difference Water Index</b></td><td>{{bands.ndwi}}</td></tr><tr><td><b>Modified Normalised Difference Water Index</b></td><td>{{bands.mndwi}}</td></tr><tr><td><b>Normalised Burn Ratio</b></td><td>{{bands.nbr}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n660,{{bands.nbart_red}}\n840,{{bands.nbart_nir}}\n1650,{{bands.nbart_swir_1}}\n2220,{{bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+               },
                "featureTimesProperty": "data_available_for_dates",
+               "leafletUpdateInterval": 750,
                "supportsDeltaComparison": true
             },
             {
@@ -198,7 +264,19 @@
                "chartType": "momentPoints",
                "chartColor": "white",
                "opacity": 1,
+               "featureInfoTemplate": {
+                  "formats": {
+                     "lat": {
+                        "maximumFractionDigits": 5
+                     },
+                     "lon": {
+                        "maximumFractionDigits": 5
+                     }
+                  },
+                  "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Normalised Difference Vegetation Index</b></td><td>{{bands.ndvi}}</td></tr>  <tr><td><b>Normalised Difference Water Index</b></td><td>{{bands.ndwi}}</td></tr><tr><td><b>Modified Normalised Difference Water Index</b></td><td>{{bands.mndwi}}</td></tr><tr><td><b>Normalised Burn Ratio</b></td><td>{{bands.nbr}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n660,{{bands.nbart_red}}\n840,{{bands.nbart_nir}}\n1650,{{bands.nbart_swir_1}}\n2220,{{bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+               },
                "featureTimesProperty": "data_available_for_dates",
+               "leafletUpdateInterval": 750,
                "supportsDeltaComparison": true
             }
          ]
@@ -236,6 +314,138 @@
          "type": "group",
          "preserveOrder": true,
          "items": [
+            {
+               "name": "Collection 3 Testing",
+               "type": "group",
+               "preserveOrder": true,
+               "items": [
+                  {
+                     "name": "Daily Landsat 8 satellite images",
+                     "type": "wms",
+                     "layers": "ga_ls8c_ard_3",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ga_ls8c_ard_3",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     },
+                     "featureTimesProperty": "data_available_for_dates",
+                     "leafletUpdateInterval": 750,
+                     "supportsDeltaComparison": true
+                  },
+                  {
+                     "name": "Daily Landsat 7 satellite images",
+                     "type": "wms",
+                     "layers": "ga_ls7e_ard_3",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ga_ls7e_ard_3",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     },
+                     "featureTimesProperty": "data_available_for_dates",
+                     "leafletUpdateInterval": 750,
+                     "supportsDeltaComparison": true
+                  },
+                  {
+                     "name": "Daily Landsat 5 satellite images",
+                     "type": "wms",
+                     "layers": "ga_ls5t_ard_3",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ga_ls5t_ard_3",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     },
+                     "featureTimesProperty": "data_available_for_dates",
+                     "leafletUpdateInterval": 750,
+                     "supportsDeltaComparison": true
+                  },
+                  {
+                     "name": "Daily Water Observations",
+                     "type": "wms",
+                     "layers": "ga_ls_wo_3",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ga_ls_wo_3",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     },
+                     "featureTimesProperty": "data_available_for_dates",
+                     "leafletUpdateInterval": 750,
+                     "supportsDeltaComparison": true
+                  },
+                  {
+                     "name": "Daily Fractional Cover",
+                     "type": "wms",
+                     "layers": "ga_ls_fc_3",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "ga_ls_fc_3",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     },
+                     "featureTimesProperty": "data_available_for_dates",
+                     "leafletUpdateInterval": 750,
+                     "supportsDeltaComparison": true
+                  }
+               ]
+            },
             {
                "name": "Water Observations from Space",
                "type": "group",
@@ -540,7 +750,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n840,{{data.0.bands.nir}}\n1650,{{data.0.bands.swir1}}\n2220,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -567,7 +777,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n840,{{data.0.bands.nir}}\n1650,{{data.0.bands.swir1}}\n2220,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -594,7 +804,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -628,7 +838,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -689,7 +899,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -714,7 +924,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -739,7 +949,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   }
@@ -771,7 +981,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -796,7 +1006,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -821,7 +1031,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -1506,6 +1716,97 @@
                      }
                   }
                ]
+            },
+            {
+               "name": "Camden Environmental Monitoring Project InSAR",
+               "type": "group",
+               "preserveOrder": true,
+               "info": [
+                  {
+                     "name": "Details",
+                     "content": "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
+                  }
+               ],
+               "items": [
+                  {
+                     "name": "ALOS Displacement",
+                     "type": "wms",
+                     "layers": "alos_displacement",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "alos_displacement",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "ALOS Velocity",
+                     "type": "wms",
+                     "layers": "alos_velocity",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "alos_velocity",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "ENVISAT Displacement",
+                     "type": "wms",
+                     "layers": "envisat_displacement",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "envisat_displacement",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "ENVISAT Velocity",
+                     "type": "wms",
+                     "layers": "envisat_velocity",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "envisat_velocity",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "RADARSAT2 Displacement",
+                     "type": "wms",
+                     "layers": "radarsat2_displacement",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "radarsat2_displacement",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "RADARSAT2 Velocity",
+                     "type": "wms",
+                     "layers": "radarsat2_velocity",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "radarsat2_velocity",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  }
+               ]
             }
          ]
       },
@@ -1801,7 +2102,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n840,{{data.0.bands.nir}}\n1650,{{data.0.bands.swir1}}\n2220,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -1828,7 +2129,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n840,{{bands.nir}}\n1650,{{bands.swir1}}\n2220,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n840,{{data.0.bands.nir}}\n1650,{{data.0.bands.swir1}}\n2220,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -1855,7 +2156,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -1889,7 +2190,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{bands.blue}}\n560,{{bands.green}}\n660,{{bands.red}}\n870,{{bands.nir}}\n1610,{{bands.swir1}}\n2200,{{bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "dateFormat": {
                         "currentTime": "'Year: 'yyyy",
@@ -1949,7 +2250,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -1973,7 +2274,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -1997,7 +2298,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   }
@@ -2028,7 +2329,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -2052,7 +2353,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   },
@@ -2076,7 +2377,7 @@
                               "maximumFractionDigits": 5
                            }
                         },
-                        "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{band_derived.ndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{bands.nbart_coastal_aerosol}}\n490,{{bands.nbart_blue}}\n560,{{bands.nbart_green}}\n670,{{bands.nbart_red}}\n710,{{bands.nbart_red_edge_1}}\n740,{{bands.nbart_red_edge_2}}\n780,{{bands.nbart_red_edge_3}}\n840,{{bands.nbart_nir_1}}\n870,{{bands.nbart_nir_2}}\n1610,{{bands.nbart_swir_2}}\n2190,{{bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
+                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
                      "featureTimesProperty": "data_available_for_dates"
                   }
@@ -2653,6 +2954,97 @@
                      }
                   }
                ]
+            },
+            {
+               "name": "Camden Environmental Monitoring Project InSAR",
+               "type": "group",
+               "preserveOrder": true,
+               "info": [
+                  {
+                     "name": "Details",
+                     "content": "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
+                  }
+               ],
+               "items": [
+                  {
+                     "name": "ALOS Displacement",
+                     "type": "wms",
+                     "layers": "alos_displacement",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "alos_displacement",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "ALOS Velocity",
+                     "type": "wms",
+                     "layers": "alos_velocity",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "alos_velocity",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "ENVISAT Displacement",
+                     "type": "wms",
+                     "layers": "envisat_displacement",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "envisat_displacement",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "ENVISAT Velocity",
+                     "type": "wms",
+                     "layers": "envisat_velocity",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "envisat_velocity",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "RADARSAT2 Displacement",
+                     "type": "wms",
+                     "layers": "radarsat2_displacement",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "radarsat2_displacement",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  },
+                  {
+                     "name": "RADARSAT2 Velocity",
+                     "type": "wms",
+                     "layers": "radarsat2_velocity",
+                     "url": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "radarsat2_velocity",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+                  }
+               ]
             }
          ]
       },
@@ -2895,97 +3287,6 @@
                   "scaleByValue": true,
                   "colorPalette": "Spectral"
                }
-            }
-         ]
-      },
-      {
-         "name": "Camden Environmental Monitoring Project InSAR",
-         "type": "group",
-         "preserveOrder": true,
-         "info": [
-            {
-               "name": "Details",
-               "content": "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
-            }
-         ],
-         "items": [
-            {
-               "name": "ALOS Displacement",
-               "type": "wms",
-               "layers": "alos_displacement",
-               "url": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsCoverage": "alos_displacement",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-            },
-            {
-               "name": "ALOS Velocity",
-               "type": "wms",
-               "layers": "alos_velocity",
-               "url": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsCoverage": "alos_velocity",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-            },
-            {
-               "name": "ENVISAT Displacement",
-               "type": "wms",
-               "layers": "envisat_displacement",
-               "url": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsCoverage": "envisat_displacement",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-            },
-            {
-               "name": "ENVISAT Velocity",
-               "type": "wms",
-               "layers": "envisat_velocity",
-               "url": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsCoverage": "envisat_velocity",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-            },
-            {
-               "name": "RADARSAT2 Displacement",
-               "type": "wms",
-               "layers": "radarsat2_displacement",
-               "url": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsCoverage": "radarsat2_displacement",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureInfoTemplate": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-            },
-            {
-               "name": "RADARSAT2 Velocity",
-               "type": "wms",
-               "layers": "radarsat2_velocity",
-               "url": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-               "linkedWcsCoverage": "radarsat2_velocity",
-               "ignoreUnknownTileErrors": true,
-               "chartType": "momentPoints",
-               "chartColor": "white",
-               "opacity": 1,
-               "featureInfoTemplate": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
             }
          ]
       }

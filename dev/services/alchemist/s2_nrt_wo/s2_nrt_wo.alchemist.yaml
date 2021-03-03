@@ -7,7 +7,9 @@ specification:
     nbart_nir_1: nbart_nir
     nbart_swir_2: nbart_swir_1
     nbart_swir_3: nbart_swir_2
+
   transform: wofs.virtualproduct.WOfSClassifier
+  transform_url: 'https://github.com/GeoscienceAustralia/wofs/'
   override_product_family: ard
   basis: nbart_green
 
@@ -41,9 +43,11 @@ output:
     product_family: wo
     producer: ga.gov.au
     dataset_version: 0.0.1
+    collection_number: 3
+    naming_conventions: dea_s2_derivative
 
   properties:
-    dea:dataset_maturity: interim
+    dea:dataset_maturity: nrt
 
 processing:
   dask_chunks:
