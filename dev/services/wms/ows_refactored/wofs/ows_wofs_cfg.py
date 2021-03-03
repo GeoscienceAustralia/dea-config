@@ -134,7 +134,7 @@ style_wofs_obs = {
                 "color": "#ffffff",
             }, 
             {
-                #Mask sea and sea glint
+                #Mask sea and sea glint transparent
                 "title": "",
                 "abstract": "",
                 "flags": {"sea": True,},
@@ -142,24 +142,12 @@ style_wofs_obs = {
                 "color": "#4f81bd",
             }, 
             {
-                "title": "Invalid Data",
-                "abstract": "Terrain shadow or low solar angle",
-                "flags": {"terrain_or_low_angle": True,},
-                "color": "#ffa500",
-            },            
-            {
                 "title": "Cloudy Steep Terrain",
                 "abstract": "",
                 "flags": {
                     "and": {"high_slope": True, "cloud": True,}
                 },
                 "color": "#f2dcb4",
-            },
-            {
-                "title": "Steep Terrain",
-                "abstract": "",
-                "flags": {"high_slope": True,},
-                "color": "#776857",
             },
             {
                 "title": "Cloudy Water",
@@ -178,16 +166,28 @@ style_wofs_obs = {
                 "color": "#335277",
             },
             {
-                "title": "Cloud Shadow",
-                "abstract": "",
-                "flags": {"cloud_shadow": True,},
-                "color": "#595856",
-            },
-            {
                 "title": "Cloud",
                 "abstract": "",
                 "flags": {"cloud": True,},
                 "color": "#d8d7d6",
+            },
+            {
+                "title": "Cloud Shadow",
+                "abstract": "",
+                "flags": {"cloud_shadow": True,},
+                "color": "#4b4b37",
+            },
+            {
+                "title": "Terrain Shadow or Low Sun Angle",
+                "abstract": "",
+                "flags": {"terrain_or_low_angle": True,},
+                "color": "#3b342b",
+            },            
+            {
+                "title": "Steep Terrain",
+                "abstract": "",
+                "flags": {"high_slope": True,},
+                "color": "#776857",
             },
             {
                 "title": "Water",
