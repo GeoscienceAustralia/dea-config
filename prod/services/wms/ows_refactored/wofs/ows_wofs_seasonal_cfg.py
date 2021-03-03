@@ -1,18 +1,8 @@
-from ows_refactored.ows_reslim_cfg import (
-    reslim_wms_min_zoom_15_cache_rules,
-    reslim_wms_min_zoom_35,
-)
-from ows_refactored.ows_legend_cfg import (
-    legend_idx_percentage_by_20,
-    legend_idx_percentage_by_25,
-    legend_idx_twentyplus_3ticks,
-    legend_idx_thirtyplus_4ticks,
-)
-from ows_refactored.wofs.bands_wo_cfg import (
-    bands_wofs_filt_sum,
-    bands_wofs_sum,
-    bands_wofs_obs,
-)
+from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
+                                           legend_idx_thirtyplus_4ticks,
+                                           legend_idx_twentyplus_3ticks)
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.wofs.bands_wo_cfg import bands_wofs_sum
 
 style_wofs_seasonal_wet = {
     "name": "seasonal_water_observations",
@@ -226,7 +216,7 @@ Water Observations from Space - April to October Statistics is a set of seasonal
             "title": "Water Observations from Space 25m Water Summary (WOfS April - October Statistics)",
             "name": "wofs_apr_oct_summary_statistics",
             "abstract": """
-	Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
+    Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - April to October Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_apr_oct_summary",
             "bands": bands_wofs_sum,
@@ -286,7 +276,7 @@ For service status information, see https://status.dea.ga.gov.au
             "title": "Water Observations from Space 25m Clear Count (WOfS November - March Summary Statistics)",
             "name": "wofs_nov_mar_summary_clear",
             "abstract": """
-	Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
+    Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For service status information, see https://status.dea.ga.gov.au
 """,
             "product_name": "wofs_nov_mar_summary",
             "bands": bands_wofs_sum,

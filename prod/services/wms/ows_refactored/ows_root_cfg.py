@@ -1,23 +1,6 @@
-# Migration of wms_cfg.py.  As at commit  c44c5e61c7fb9
-import copy
-from ows_refactored.ows_legend_cfg import (
-    legend_idx_0_1_5ticks,
-    legend_idx_percentage_by_20,
-    legend_idx_0_100_pixel_fc_bs_25ticks,
-    legend_idx_percentage_by_25,
-    legend_idx_twentyplus_3ticks,
-    legend_idx_thirtyplus_4ticks,
-    legend_idx_0_100_pixel_fc_25ticks,
-    legend_idx_0_100_pixel_fc_ngv_25ticks,
-)
-
-from ows_refactored.ows_reslim_cfg import (
-    reslim_wms_min_zoom_500_max_datasets,
-    reslim_wms_min_zoom_35,
-    reslim_wms_min_zoom_15_cache_rules,
-    reslim_wms_min_zoom_10,
-    reslim_wms_min_zoom_15,
-)
+# Refactor of 9k lines ows_cfg.py
+from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15_cache_rules,
+                                           reslim_wms_min_zoom_35)
 
 # Reusable Chunks 2. Band lists.
 
@@ -343,6 +326,10 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
+                        {
+                            "include": "ows_refactored.dev_only.ows_nrt_wo_cfg.layers",
+                            "type": "python",
+                        },
                     ],
                 },
                 {
@@ -499,6 +486,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
+                    "include": "ows_refactored.dev_only.ows_hap_cfg.layer",
+                    "type": "python",
+                },
+                {
                     "include": "ows_refactored.aster.ows_aster_cfg.layers",
                     "type": "python",
                 },
@@ -514,34 +505,34 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "include": "ows_refactored.insar.ows_insar_cfg.layers",
                     "type": "python",
                 },
-                # {
-                #     "title": "Collection 3",
-                #     "abstract": """
+                {
+                    "title": "Collection 3",
+                    "abstract": """
 
-                #     """,
-                #     "layers": [
-                #         {
-                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",
-                #             "type": "python",
-                #         },
-                #         {
-                #             "include": "ows_refactored.fc.ows_c3_fc_cfg.layers",
-                #             "type": "python",
-                #         },
-                #     ],
-                # },
+                    """,
+                    "layers": [
+                        {
+                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.fc.ows_c3_fc_cfg.layers",
+                            "type": "python",
+                        },
+                    ],
+                },
             ],
         },
     ],  # End of Layers List

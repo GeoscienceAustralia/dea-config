@@ -55,6 +55,32 @@ style_c3_wofs_obs_wet_only = {
     "value_map": {
         "water": [
             {
+                "title": "Invalid",
+                "abstract": "Slope or Cloud",
+                "flags": {
+                    "or": {
+                        "terrain_shadow": True,
+                        "low_solar_angle": True,
+                        "cloud_shadow": True,
+                        "cloud": True,
+                        "high_slope": True,
+                        "noncontiguous": True,
+                    }
+                },
+                "color": "#707070",
+                "alpha": 0.0,
+            },
+            {
+                # Possible Sea Glint, also mark as invalid
+                "title": "Dry",
+                "abstract": "Dry",
+                "flags": {
+                    "dry": True,
+                },
+                "color": "#D99694",
+                "alpha": 0.0,
+            },
+            {
                 "title": "Wet",
                 "abstract": "Wet",
                 "flags": {"wet": True},
@@ -67,22 +93,6 @@ style_c3_wofs_obs_wet_only = {
             "band": "land",
             "invert": True,
             "enum": 1,
-        },
-        {
-            "band": "water",
-            "flags": {
-                    "or": {
-                        "terrain_or_low_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
-                        "noncontiguous": True,
-                    }
-                },
-        },
-        {
-            "band": "water",
-            "flags": {"dry": True},
         },
     ],
 }
@@ -114,7 +124,7 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_time": False,
             "ignore_info_flags": [],
             "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-        }
+        },
     ],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",

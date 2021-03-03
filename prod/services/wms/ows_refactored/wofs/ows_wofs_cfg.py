@@ -1,19 +1,9 @@
-from ows_refactored.ows_reslim_cfg import (
-    reslim_wms_min_zoom_15_cache_rules,
-    reslim_wms_min_zoom_35,
-)
-from ows_refactored.ows_legend_cfg import (
-    legend_idx_percentage_by_20,
-    legend_idx_percentage_by_25,
-    legend_idx_twentyplus_3ticks,
-    legend_idx_thirtyplus_4ticks,
-)
-from ows_refactored.wofs.bands_wo_cfg import (
-    bands_wofs_filt_sum,
-    bands_wofs_sum,
-    bands_wofs_obs,
-)
-
+from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
+                                           legend_idx_percentage_by_25)
+from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15_cache_rules,
+                                           reslim_wms_min_zoom_35)
+from ows_refactored.wofs.bands_wo_cfg import (bands_wofs_filt_sum,
+                                              bands_wofs_obs)
 
 style_wofs_filt_freq = {
     "name": "WOfS_filtered_frequency",
@@ -126,29 +116,47 @@ style_wofs_obs = {
     "value_map": {
         "water": [
             {
-                "title": "Invalid",
-                "abstract": "Invalid data",
+                # Make noncontiguous data transparent
+                "title": "",
+                "abstract": "",
                 "flags": {
-                    "or": {
-                        "terrain_or_low_angle": True,
-                        "noncontiguous": True,
-                    }
+                    "noncontiguous": True,
                 },
+                "alpha": 0.0,
                 "color": "#ffffff",
             },
             {
-                "title": "Cloudy Terrain",
-                "abstract": "Sloped terrain and cloudy",
+                # Mask sea and sea glint
+                "title": "",
+                "abstract": "",
+                "flags": {
+                    "sea": True,
+                },
+                "alpha": 0.0,
+                "color": "#4f81bd",
+            },
+            {
+                "title": "Invalid Data",
+                "abstract": "Terrain shadow or low solar angle",
+                "flags": {
+                    "terrain_or_low_angle": True,
+                },
+                "color": "#ffa500",
+            },
+            {
+                "title": "Cloudy Steep Terrain",
+                "abstract": "",
                 "flags": {
                     "and": {
-                    "high_slope": True, "cloud": True,
+                        "high_slope": True,
+                        "cloud": True,
                     }
                 },
                 "color": "#f2dcb4",
             },
             {
-                "title": "Terrain",
-                "abstract": "Sloped terrain",
+                "title": "Steep Terrain",
+                "abstract": "",
                 "flags": {
                     "high_slope": True,
                 },
@@ -156,27 +164,29 @@ style_wofs_obs = {
             },
             {
                 "title": "Cloudy Water",
-                "abstract": "Wet and cloudy",
+                "abstract": "",
                 "flags": {
                     "and": {
-                        "wet": True, "cloud": True,
-                        }
+                        "wet": True,
+                        "cloud": True,
+                    }
                 },
                 "color": "#bad4f2",
             },
             {
                 "title": "Shaded Water",
-                "abstract": "Wet and shaded",
+                "abstract": "",
                 "flags": {
                     "and": {
-                    "wet": True, "cloud_shadow": True,
+                        "wet": True,
+                        "cloud_shadow": True,
                     }
                 },
                 "color": "#335277",
             },
             {
-                "title": "Cloud Shadow ",
-                "abstract": "Cloud shadow",
+                "title": "Cloud Shadow",
+                "abstract": "",
                 "flags": {
                     "cloud_shadow": True,
                 },
@@ -184,46 +194,32 @@ style_wofs_obs = {
             },
             {
                 "title": "Cloud",
-                "abstract": "Cloud",
+                "abstract": "",
                 "flags": {
                     "cloud": True,
                 },
                 "color": "#d8d7d6",
             },
             {
-                # Possible Sea Glint, also mark as invalid
-                "title": "",
+                "title": "Water",
                 "abstract": "",
                 "flags": {
                     "and": {
-                        "dry": True, "sea": True,
+                        "wet": True,
+                        "sea": False,
                     }
                 },
-                "color": "#ffffff",
-            },
-            {
-                "title": "Water",
-                "abstract": "Inland or sea water",
-                "flags": {"or": {"wet": True, "sea": True,}},
                 "color": "#4f81bd",
             },
             {
                 "title": "Dry",
-                "abstract": "Dry",
-                "flags": {
-                    "and": {
-                    "dry": True, "sea": False
-                    }
-                },
+                "abstract": "",
+                "flags": {"and": {"dry": True, "sea": False}},
                 "color": "#96966e",
             },
-
         ]
     },
-    "legend": {
-        "width": 3.0,
-        "height": 2.1
-    }
+    "legend": {"width": 3.0, "height": 2.1},
 }
 
 style_wofs_obs_wet_only = {
@@ -233,17 +229,9 @@ style_wofs_obs_wet_only = {
     "value_map": {
         "water": [
             {
-                "title": "Wet",
-                "abstract": "Wet or Sea",
-                "flags": {"or": {"wet": True, "sea": True}},
-                "color": "#4F81BD",
-            },
-        ]
-    },
-    "pq_masks": [
-        {
-            "band": "water",
-            "flags": {
+                "title": "Invalid",
+                "abstract": "Slope or Cloud",
+                "flags": {
                     "or": {
                         "terrain_or_low_angle": True,
                         "cloud_shadow": True,
@@ -252,20 +240,35 @@ style_wofs_obs_wet_only = {
                         "noncontiguous": True,
                     }
                 },
-        },
-        {
-            "band": "water",
-            "flags": {"dry": True, "sea": True},
-
-        },
-        {
-            "band": "water",
-            "flags": {
+                "color": "#707070",
+                "alpha": 0.0,
+            },
+            {
+                # Possible Sea Glint, also mark as invalid
+                "title": "",
+                "abstract": "",
+                "flags": {"dry": True, "sea": True},
+                "color": "#707070",
+                "alpha": 0.0,
+            },
+            {
+                "title": "Dry",
+                "abstract": "Dry",
+                "flags": {
                     "dry": True,
                     "sea": False,
                 },
-        }
-    ]
+                "color": "#D99694",
+                "alpha": 0.0,
+            },
+            {
+                "title": "Wet",
+                "abstract": "Wet or Sea",
+                "flags": {"or": {"wet": True, "sea": True}},
+                "color": "#4F81BD",
+            },
+        ]
+    },
 }
 
 layers = {
@@ -353,15 +356,6 @@ For service status information, see https://status.dea.ga.gov.au
             "bands": bands_wofs_obs,
             "resource_limits": reslim_wms_min_zoom_35,
             "dynamic": True,
-            "flags": [
-                {
-                    "band": "water",
-                    "product": "wofs_albers",
-                    "ignore_time": False,
-                    "ignore_info_flags": [],
-                    "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-                }
-            ],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
                 "always_fetch_bands": [],
