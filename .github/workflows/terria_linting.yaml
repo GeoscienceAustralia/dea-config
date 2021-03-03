@@ -4,12 +4,12 @@ on:
   push:
     paths:
       - 'dev/terria/**'
-      - .github/workflows/main.yml
+      - .github/workflows/terria_linting.yml
   pull_request:
     branches: [ master ]
     paths:
       - 'dev/terria/**'
-      - .github/workflows/main.yml
+      - .github/workflows/terria_linting.yml
 
 jobs:
   build:

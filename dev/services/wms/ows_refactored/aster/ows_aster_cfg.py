@@ -1,45 +1,27 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_10
-from ows_refactored.aster.band_aster_cfg import bands_aster, bands_aster_single_band
-from ows_refactored.aster.style_aster_cfg import (
-    style_aster_b2_gray,
-    style_aster_false_colour,
-    style_aster_aloh_comp_ramp,
-    style_aster_simple_rgb,
-    style_aster_green_veg_ramp,
-    style_aster_silica_idx_ramp,
-    style_aster_aloh_cont_ramp,
-    style_aster_feoh_cont_ramp,
-    style_aster_ferrox_comp_ramp,
-    style_aster_ferrox_cont_ramp,
-    style_aster_ferrous_mgoh_ramp,
-    style_aster_gypsum_idx_ramp,
-    style_aster_kaolin_idx_ramp,
-    style_aster_mgoh_comp_ramp,
-    style_aster_mgoh_cont_ramp,
-    style_aster_opaque_idx_ramp,
-    style_aster_quartz_idx_ramp,
-    style_aster_ferrous_idx_ramp,
-)
-
 from ows_refactored.aster.abstract_aster_cfg import (
-    abstract_aster_false_colour,
-    abstract_aster_regolith_ratios,
-    abstract_aster_ferrous_iron_index,
-    abstract_aster_green_vegetation,
-    abstract_aster_quartz_index,
-    abstract_aster_silica_index,
-    abstract_aster_opaque_index,
-    abstract_aster_mgoh_group_content,
-    abstract_aster_mgoh_group_composition,
-    abstract_aster_gypsum_index,
-    abstract_aster_aloh_group_content,
-    abstract_aster_feoh_group_content,
+    abstract_aster_aloh_group_composition, abstract_aster_aloh_group_content,
+    abstract_aster_false_colour, abstract_aster_feoh_group_content,
     abstract_aster_ferric_oxide_composition,
-    abstract_aster_aloh_group_composition,
     abstract_aster_ferric_oxide_content,
     abstract_aster_ferrous_iron_content_in_mgoh,
-    abstract_aster_kaolin_group_index,
-)
+    abstract_aster_ferrous_iron_index, abstract_aster_green_vegetation,
+    abstract_aster_gypsum_index, abstract_aster_kaolin_group_index,
+    abstract_aster_mgoh_group_composition, abstract_aster_mgoh_group_content,
+    abstract_aster_opaque_index, abstract_aster_quartz_index,
+    abstract_aster_regolith_ratios, abstract_aster_silica_index)
+from ows_refactored.aster.band_aster_cfg import (bands_aster,
+                                                 bands_aster_single_band)
+from ows_refactored.aster.style_aster_cfg import (
+    style_aster_aloh_comp_ramp, style_aster_aloh_cont_ramp,
+    style_aster_b2_gray, style_aster_false_colour, style_aster_feoh_cont_ramp,
+    style_aster_ferrous_idx_ramp, style_aster_ferrous_mgoh_ramp,
+    style_aster_ferrox_comp_ramp, style_aster_ferrox_cont_ramp,
+    style_aster_green_veg_ramp, style_aster_gypsum_idx_ramp,
+    style_aster_kaolin_idx_ramp, style_aster_mgoh_comp_ramp,
+    style_aster_mgoh_cont_ramp, style_aster_opaque_idx_ramp,
+    style_aster_quartz_idx_ramp, style_aster_silica_idx_ramp,
+    style_aster_simple_rgb)
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_10
 
 layers = {
     "title": "ASTER Geoscience Map of Australia",
