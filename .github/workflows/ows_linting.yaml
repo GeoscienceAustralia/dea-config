@@ -44,7 +44,7 @@ jobs:
         with:
           linters: flake8
           run: |
-            flake8 dev/services/wms/ows_refactored/ --ignore=E501
+            flake8 dev/services/wms/ows_refactored/ --ignore=E501;
             flake8 prod/services/wms/ows_refactored/ --ignore=E501
 
   isort:
@@ -62,5 +62,5 @@ jobs:
         with:
           linters: isort
           run: |
-            isort --check --diff dev/services/wms/ows_refactored/
+            isort --check --diff dev/services/wms/ows_refactored/;
             isort --check --diff prod/services/wms/ows_refactored/
