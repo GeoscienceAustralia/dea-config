@@ -326,10 +326,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
-                        {
-                            "include": "ows_refactored.dev_only.ows_nrt_wo_cfg.layers",
-                            "type": "python",
-                        },
                     ],
                 },
                 {

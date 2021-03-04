@@ -324,15 +324,6 @@
         },
         {
             "product": [
-                "sentinel2_wofs_nrt"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "water_classifier"
-            ]
-        },
-        {
-            "product": [
                 "ga_s2a_ard_nbar_granule",
                 "ga_s2b_ard_nbar_granule"
             ],

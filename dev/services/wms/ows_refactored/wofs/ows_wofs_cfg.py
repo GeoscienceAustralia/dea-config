@@ -137,7 +137,7 @@ style_wofs_obs = {
             },
             {
                 "title": "Invalid Data",
-                "abstract": "Terrain shadow or low solar angle",
+                "abstract": "\nTerrain shadow or low solar angle",
                 "flags": {
                     "terrain_or_low_angle": True,
                 },
