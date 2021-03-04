@@ -1,8 +1,6 @@
 from ows_refactored.ows_legend_cfg import (
-    legend_idx_0_100_pixel_fc_25ticks,
-    legend_idx_0_100_pixel_fc_bs_25ticks,
-    legend_idx_0_100_pixel_fc_ngv_25ticks,
-)
+    legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
+    legend_idx_0_100_pixel_fc_ngv_25ticks)
 
 style_fc_simple_rgb = {
     "name": "simple_rgb",
