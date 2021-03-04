@@ -485,4 +485,4 @@ styles_s2_list = [
     style_s2_pure_swir2,
 ]
 
-style_s2_nbr_list = styles_s2_list + [style_s2_nbr]
+style_s2_nbr_list = styles_s2_list
