@@ -1,4 +1,4 @@
-# Pull Request Template
+# OWS Config changes PR Template
 
 ## Description
 
