@@ -14,8 +14,9 @@ Please delete options that are not relevant.
 - [ ] Updating an existing style for layer(/s)
 - [ ] Add a new style to an existing layer
 - [ ] Delete a style from an existing layer
-- [ ] Add/Release a new layer
-- [ ] Delete/archive an existing layer
+- [ ] Add/Test a new layer (dev ONLY)
+- [ ] Add/Release a new layer (Prod ONLY)
+- [ ] Delete/Remove an existing layer
 - [ ] Refactor ows_cfg
 
 ## How Has This Been Tested?
