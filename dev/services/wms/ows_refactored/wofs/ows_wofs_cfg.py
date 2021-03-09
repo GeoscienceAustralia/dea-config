@@ -168,7 +168,7 @@ style_wofs_obs = {
                 "title": "Cloud",
                 "abstract": "",
                 "flags": {"cloud": True},
-                "color": "#d8d7d6",
+                "color": "#c2c1c0",
             },
             {
                 "title": "Cloud Shadow",
@@ -180,7 +180,7 @@ style_wofs_obs = {
                 "title": "Terrain Shadow or Low Sun Angle",
                 "abstract": "",
                 "flags": {"terrain_or_low_angle": True},
-                "color": "#3b342b",
+                "color": "#2f2922",
             },
             {
                 "title": "Steep Terrain",
