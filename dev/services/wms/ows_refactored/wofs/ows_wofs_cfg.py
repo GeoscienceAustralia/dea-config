@@ -127,7 +127,7 @@ style_wofs_obs = {
                 # Make sea and sea glint transparent
                 "title": "",
                 "abstract": "",
-                "flags": {"sea": True,},
+                "flags": {"sea": True,}, 
                 "alpha": 0.0,
                 "color": "#4f81bd",
             },
@@ -167,7 +167,7 @@ style_wofs_obs = {
             {
                 "title": "Cloud",
                 "abstract": "",
-                "flags": {"cloud": True,},
+                "flags": {"cloud": True,}, 
                 "color": "#d8d7d6",
             },
             {
