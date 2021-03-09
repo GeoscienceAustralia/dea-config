@@ -119,7 +119,7 @@ style_wofs_obs = {
                 # Make noncontiguous data transparent
                 "title": "",
                 "abstract": "",
-                "flags": {"noncontiguous": True,},
+                "flags": {"noncontiguous": True},
                 "alpha": 0.0,
                 "color": "#ffffff",
             },
@@ -127,7 +127,7 @@ style_wofs_obs = {
                 # Make sea and sea glint transparent
                 "title": "",
                 "abstract": "",
-                "flags": {"sea": True,}, 
+                "flags": {"sea": True}, 
                 "alpha": 0.0,
                 "color": "#4f81bd",
             },
@@ -137,7 +137,7 @@ style_wofs_obs = {
                 "flags": {
                     "and": {
                         "high_slope": True,
-                        "cloud": True,
+                        "cloud": True
                     }
                 },
                 "color": "#f2dcb4",
@@ -148,7 +148,7 @@ style_wofs_obs = {
                 "flags": {
                     "and": {
                         "wet": True,
-                        "cloud": True,
+                        "cloud": True
                     }
                 },
                 "color": "#bad4f2",
@@ -159,7 +159,7 @@ style_wofs_obs = {
                 "flags": {
                     "and": {
                         "wet": True,
-                        "cloud_shadow": True,
+                        "cloud_shadow": True
                     }
                 },
                 "color": "#335277",
@@ -167,25 +167,25 @@ style_wofs_obs = {
             {
                 "title": "Cloud",
                 "abstract": "",
-                "flags": {"cloud": True,}, 
+                "flags": {"cloud": True},
                 "color": "#d8d7d6",
             },
             {
                 "title": "Cloud Shadow",
                 "abstract": "",
-                "flags": {"cloud_shadow": True,},
+                "flags": {"cloud_shadow": True},
                 "color": "#4b4b37",
             },
             {
                 "title": "Terrain Shadow or Low Sun Angle",
                 "abstract": "",
-                "flags": {"terrain_or_low_angle": True,},
+                "flags": {"terrain_or_low_angle": True},
                 "color": "#3b342b",
             },
             {
                 "title": "Steep Terrain",
                 "abstract": "",
-                "flags": {"high_slope": True,},
+                "flags": {"high_slope": True},
                 "color": "#776857",
             },
             {
@@ -194,7 +194,7 @@ style_wofs_obs = {
                 "flags": {
                     "and": {
                         "wet": True,
-                        "sea": False,
+                        "sea": False
                     }
                 },
                 "color": "#4f81bd",
