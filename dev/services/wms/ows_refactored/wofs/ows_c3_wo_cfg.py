@@ -14,7 +14,8 @@ style_c3_wofs_obs = {
                     "and": {
                         "noncontiguous": True,
                         "low_solar_angle": True
-                        },
+                    }
+                },
                 "alpha": 0.0,
                 "color": "#707070",
             },
