@@ -8,34 +8,87 @@ style_c3_wofs_obs = {
     "value_map": {
         "water": [
             {
-                "title": "Invalid",
-                "abstract": "Slope or Cloud",
+                "title": "",
+                "abstract": "",
                 "flags": {
-                    "or": {
-                        "terrain_shadow": True,
-                        "low_solar_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
+                    "and": {
                         "noncontiguous": True,
+                        "low_solar_angle": True
                     }
                 },
+                "alpha": 0.0,
                 "color": "#707070",
             },
             {
-                # Possible Sea Glint, also mark as invalid
+                "title": "Cloudy Steep Terrain",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "cloud": True,
+                        "high_slope": True
+                    }
+                },
+                "color": "#f2dcb4",
+            },
+            {
+                "title": "Cloudy Water",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "cloud": True
+                    }
+                },
+                "color": "#bad4f2",
+            },
+            {
+                "title": "Shaded Water",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "cloud_shadow": True
+                    }
+                },
+                "color": "#335277",
+            },
+            {
+                "title": "Cloud",
+                "abstract": "",
+                "flags": {"cloud": True},
+                "color": "#c2c1c0",
+            },
+            {
+                "title": "Cloud Shadow",
+                "abstract": "",
+                "flags": {"cloud_shadow": True},
+                "color": "#4b4b37",
+            },
+            {
+                "title": "Terrain Shadow",
+                "abstract": "",
+                "flags": {"terrain_shadow": True},
+                "color": "#2f2922",
+            },
+            {
+                "title": "Steep Terrain",
+                "abstract": "",
+                "flags": {"high_slope": True},
+                "color": "#776857",
+            },
+            {
+                "title": "Water",
+                "abstract": "",
+                "flags": {"wet": True},
+                "color": "#4F81BD",
+            },
+            {
                 "title": "Dry",
-                "abstract": "Dry",
+                "abstract": "",
                 "flags": {
                     "dry": True,
                 },
-                "color": "#D99694",
-            },
-            {
-                "title": "Wet",
-                "abstract": "Wet",
-                "flags": {"wet": True},
-                "color": "#4F81BD",
+                "color": "#96966e",
             },
         ],
     },
