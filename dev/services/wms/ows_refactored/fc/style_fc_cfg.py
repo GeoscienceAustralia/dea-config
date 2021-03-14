@@ -2,6 +2,16 @@ from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
     legend_idx_0_100_pixel_fc_ngv_25ticks)
 
+fc_pq_mask = [
+    {
+        "band": "land",
+        "flags": {
+            "sea": True,
+        },
+        "invert": True,
+    },
+]
+
 style_fc_simple_rgb = {
     "name": "simple_rgb",
     "title": "Simple RGB",
@@ -12,14 +22,7 @@ style_fc_simple_rgb = {
         "blue": {"NPV_PC_50": 1.0},
     },
     "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_simple = {
@@ -30,9 +33,11 @@ style_fc_simple = {
     "scale_range": [0.0, 100.0],
     "pq_masks": [
         {
+            "band": "water",
             "flags": {"dry": True},
         },
         {
+            "band": "water",
             "flags": {
                 "terrain_or_low_angle": False,
                 "high_slope": False,
@@ -79,14 +84,7 @@ style_fc_gv_10 = {
             "color": "#006837",
         },
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
     "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
@@ -112,14 +110,7 @@ style_fc_gv_50 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_gv_90 = {
@@ -144,14 +135,7 @@ style_fc_gv_90 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_ngv_10 = {
@@ -188,14 +172,7 @@ style_fc_ngv_10 = {
     ],
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_ngv_50 = {
@@ -220,14 +197,7 @@ style_fc_ngv_50 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_ngv_90 = {
@@ -252,14 +222,7 @@ style_fc_ngv_90 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_bs_10 = {
@@ -297,14 +260,7 @@ style_fc_bs_10 = {
             "color": "#7a0177",
         },
     ],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
@@ -331,14 +287,7 @@ style_fc_bs_50 = {
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_bs_90 = {
@@ -363,14 +312,7 @@ style_fc_bs_90 = {
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
 }
 
 style_fc_rgb = {
@@ -383,14 +325,7 @@ style_fc_rgb = {
         "blue": {"NPV_PC_50": 1.0},
     },
     "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
+    "pq_masks": fc_pq_mask,
     "legend": {
         "show_legend": True,
         "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
