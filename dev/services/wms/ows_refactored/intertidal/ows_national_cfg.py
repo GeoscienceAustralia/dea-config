@@ -117,12 +117,14 @@ For service status information, see https://status.dea.ga.gov.au""",
             "bands": bands_nidem,
             "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": [
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": [],
+                },
+            ],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
