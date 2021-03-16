@@ -7,6 +7,9 @@ specification:
     nbart_nir_1: nbart_nir
     nbart_swir_2: nbart_swir_1
     nbart_swir_3: nbart_swir_2
+  resampling:
+    fmask: nearest
+    '*': bilinear
 
   transform: wofs.virtualproduct.WOfSClassifier
   transform_url: 'https://github.com/GeoscienceAustralia/wofs/'
