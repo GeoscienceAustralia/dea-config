@@ -129,6 +129,20 @@ style_c3_ndvi = {
         {"value": 0.9, "color": "#237100"},
         {"value": 1.0, "color": "#114D04"},
     ],
+    "pq_masks": [
+        {
+            "band": "oa_fmask",
+            "enum": 1,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 4,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 5,
+        },
+    ],
     "legend": legend_idx_0_1_5ticks,
 }
 
@@ -163,6 +177,20 @@ style_c3_ndwi = {
             "color": "#08306b",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "oa_fmask",
+            "enum": 1,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 4,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 5,
+        },
+    ],
     "legend": {
         "begin": "0.0",
         "end": "0.5",
@@ -195,6 +223,20 @@ style_c3_mndwi = {
         {"value": 0.6, "color": "#3e8ec4"},
         {"value": 0.8, "color": "#1563aa"},
         {"value": 1.0, "color": "#08306b"},
+    ],
+    "pq_masks": [
+        {
+            "band": "oa_fmask",
+            "enum": 1,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 4,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 5,
+        },
     ],
     "legend": legend_idx_0_1_5ticks,
 }
