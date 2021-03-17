@@ -9,6 +9,8 @@ bands_c3_ls_common = {
     "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
     "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
     "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
+    "oa_nbart_contiguity": ["oa_nbart_contiguity", "nbart_contiguity"],
+    "oa_fmask": ["oa_fmask", "fmask"],
 }
 
 
@@ -75,6 +77,14 @@ style_c3_true_colour = {
         "blue": {"nbart_blue": 1.0},
     },
     "scale_range": [0.0, 3000.0],
+    "pq_masks": [
+        {
+            "band": "oa_fmask",
+            "enum": 0,
+            "invert": True,
+        }
+    ],
+    "additional_bands": ["oa_fmask"]
 }
 
 style_c3_false_colour = {
@@ -87,6 +97,14 @@ style_c3_false_colour = {
         "blue": {"nbart_green": 1.0},
     },
     "scale_range": [0.0, 3000.0],
+    "pq_masks": [
+        {
+            "band": "oa_fmask",
+            "enum": 0,
+            "invert": True,
+        }
+    ],
+    "additional_bands": ["oa_fmask"]
 }
 
 style_c3_ndvi = {
@@ -307,6 +325,15 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
         "always_fetch_bands": [],
         "manual_merge": False,
     },
+    "flags": [
+        # flags is now a list of flag band definitions - NOT a dictionary with identifiers
+        {
+        "band": "oa_fmask",
+        "product": "ga_ls8c_ard_3",
+        "ignore_time": False,
+        "ignore_info_flags": [],
+        },
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
         "native_resolution": [25, -25],
@@ -335,6 +362,15 @@ For service status information, see https://status.dea.ga.gov.au""",
         "always_fetch_bands": [],
         "manual_merge": False,
     },
+    "flags": [
+        # flags is now a list of flag band definitions - NOT a dictionary with identifiers
+        {
+            "band": "oa_fmask",
+            "product": "ga_ls7e_ard_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+        },
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
         "native_resolution": [25, -25],
@@ -364,6 +400,15 @@ For service status information, see https://status.dea.ga.gov.au""",
         "always_fetch_bands": [],
         "manual_merge": False,
     },
+    "flags": [
+        # flags is now a list of flag band definitions - NOT a dictionary with identifiers
+        {
+            "band": "oa_fmask",
+            "product": "ga_ls5t_ard_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+        },
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
         "native_resolution": [25, -25],
