@@ -16,6 +16,15 @@ bands_fc_percentile = {
     "BS_PC_90": [],
 }
 
+fc_percentile_flags = [
+    {
+        "band": "land",
+        "product": "geodata_coast_100k",
+        "ignore_time": True,
+        "ignore_info_flags": [],
+    },
+]
+
 fcp_g_layers = {
     "title": "Fractional Cover Percentiles - Green Vegetation",
     "abstract": "",
@@ -35,12 +44,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_annual",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -75,12 +79,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_annual",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -111,12 +110,7 @@ fcp_bs_layers = {
             "product_name": "fc_percentile_albers_annual",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -154,12 +148,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_annual",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -197,12 +186,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -235,12 +219,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -269,12 +248,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -299,12 +273,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": fc_percentile_flags,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
