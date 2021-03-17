@@ -132,14 +132,17 @@ style_c3_ndvi = {
         {
             "band": "oa_fmask",
             "enum": 1,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 4,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 5,
+            "invert": True,
         },
     ],
     "legend": legend_idx_0_1_5ticks,
@@ -180,14 +183,17 @@ style_c3_ndwi = {
         {
             "band": "oa_fmask",
             "enum": 1,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 4,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 5,
+            "invert": True,
         },
     ],
     "legend": {
@@ -227,14 +233,17 @@ style_c3_mndwi = {
         {
             "band": "oa_fmask",
             "enum": 1,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 4,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 5,
+            "invert": True,
         },
     ],
     "legend": legend_idx_0_1_5ticks,
@@ -358,14 +367,17 @@ style_c3_nbr = {
         {
             "band": "oa_fmask",
             "enum": 1,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 4,
+            "invert": True,
         },
         {
             "band": "oa_fmask",
             "enum": 5,
+            "invert": True,
         },
     ],
     "legend": {
@@ -416,14 +428,17 @@ style_c3_nbr = {
                 {
                     "band": "oa_fmask",
                     "enum": 1,
+                    "invert": True,
                 },
                 {
                     "band": "oa_fmask",
                     "enum": 4,
+                    "invert": True,
                 },
                 {
                     "band": "oa_fmask",
                     "enum": 5,
+                    "invert": True,
                 },
             ],
             "legend": {
