@@ -84,7 +84,7 @@ style_c3_true_colour = {
             "invert": True,
         }
     ],
-    "additional_bands": ["oa_fmask"]
+    "additional_bands": ["oa_fmask"],
 }
 
 style_c3_false_colour = {
@@ -104,7 +104,7 @@ style_c3_false_colour = {
             "invert": True,
         }
     ],
-    "additional_bands": ["oa_fmask"]
+    "additional_bands": ["oa_fmask"],
 }
 
 style_c3_ndvi = {
@@ -328,10 +328,10 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
     "flags": [
         # flags is now a list of flag band definitions - NOT a dictionary with identifiers
         {
-        "band": "oa_fmask",
-        "product": "ga_ls8c_ard_3",
-        "ignore_time": False,
-        "ignore_info_flags": [],
+            "band": "oa_fmask",
+            "product": "ga_ls8c_ard_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
         },
     ],
     "wcs": {
