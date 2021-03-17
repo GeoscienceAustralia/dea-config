@@ -905,6 +905,7 @@
                 "nir",
                 "swir1",
                 "swir2",
+                "NBR",
                 "panchromatic",
                 "aerosol"
             ]
@@ -926,6 +927,7 @@
                 "nir",
                 "swir1",
                 "swir2",
+                "NBR",
                 "panchromatic"
             ]
         },
@@ -945,7 +947,8 @@
                 "red",
                 "nir",
                 "swir1",
-                "swir2"
+                "swir2",
+                "NBR"
             ]
         },
         {
