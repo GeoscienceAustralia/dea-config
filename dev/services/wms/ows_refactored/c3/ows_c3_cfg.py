@@ -9,7 +9,6 @@ bands_c3_ls_common = {
     "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
     "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
     "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
-    "oa_nbart_contiguity": ["oa_nbart_contiguity", "nbart_contiguity"],
     "oa_fmask": ["oa_fmask", "fmask"],
 }
 
@@ -315,6 +314,159 @@ style_c3_pure_swir2 = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_c3_nbr = {
+    "name": "NBR",
+    "title": "Normalised Burn Ratio",
+    "abstract": "Normalised Burn Ratio - a derived index that that uses the differences in the way health green vegetation and burned vegetation reflect light to find burned area",
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "mapped_bands": True,
+        "kwargs": {"band1": "nbart_nir", "band2": "nbart_swir_2"},
+    },
+    "needed_bands": ["nbart_nir", "nbart_swir_2"],
+    "color_ramp": [
+        {
+            "value": -1.0,
+            "color": "#67001F",
+            "alpha": 0.0,
+        },
+        {
+            "value": -1.0,
+            "color": "#67001F",
+        },
+        {
+            "value": -0.8,
+            "color": "#B2182B",
+        },
+        {"value": -0.4, "color": "#D6604D"},
+        {"value": -0.2, "color": "#F4A582"},
+        {"value": -0.1, "color": "#FDDBC7"},
+        {
+            "value": 0,
+            "color": "#F7F7F7",
+        },
+        {"value": 0.2, "color": "#D1E5F0"},
+        {"value": 0.4, "color": "#92C5DE"},
+        {"value": 0.6, "color": "#4393C3"},
+        {"value": 0.9, "color": "#2166AC"},
+        {
+            "value": 1.0,
+            "color": "#053061",
+        },
+    ],
+    "pq_masks": [
+        {
+            "band": "oa_fmask",
+            "enum": 1,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 4,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 5,
+        },
+    ],
+    "legend": {
+        "show_legend": True,
+        "begin": "-1.0",
+        "end": "1.0",
+        "ticks_every": "1.0",
+        "decimal_places": 0,
+        "tick_labels": {"-1.0": {"prefix": "<"}, "1.0": {"suffix": ">"}},
+    },
+    # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
+    "multi_date": [
+        # A multi-date handler.  Different handlers can be declared for different numbers of dates in a request.
+        {
+            # The count range for which this handler is to be used - a tuple of two ints, the smallest and
+            # largest date counts for which this handler will be used.  Required.
+            "allowed_count_range": [2, 2],
+            # A function, expressed in the standard format as described elsewhere in this example file.
+            # The function is assumed to take one arguments, an xarray Dataset.
+            # The function returns an xarray Dataset with a single band, which is the input to the
+            # colour ramp defined below.
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_delta"
+            },
+            "color_ramp": [
+                {"value": -0.5, "color": "#768642", "alpha": 0.0},
+                {"value": -0.5, "color": "#768642", "legend": {"label": "<-0.50"}},
+                {
+                    "value": -0.25,
+                    "color": "#768642",
+                    "alpha": 1.0,
+                    "legend": {"label": "-0.25"},
+                },
+                {"value": -0.25, "color": "#a4bd5f"},
+                {"value": -0.1, "color": "#a4bd5f", "legend": {"label": "-0.1"}},
+                {"value": -0.1, "color": "#00e05d"},
+                {"value": 0.1, "color": "#00e05d"},
+                {"value": 0.1, "color": "#fdf950", "legend": {"label": "0.1"}},
+                {"value": 0.27, "color": "#fdf950", "legend": {"label": "0.27"}},
+                {"value": 0.27, "color": "#ffae52"},
+                {"value": 0.44, "color": "#ffae52", "legend": {"label": "0.44"}},
+                {"value": 0.44, "color": "#ff662e"},
+                {"value": 0.66, "color": "#ff662e", "legend": {"label": "0.66"}},
+                {"value": 0.66, "color": "#ad28cc"},
+                {"value": 0.88, "color": "#ad28cc", "legend": {"label": ">1.30"}},
+            ],
+            "pq_masks": [
+                {
+                    "band": "oa_fmask",
+                    "enum": 1,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 4,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 5,
+                },
+            ],
+            "legend": {
+                "begin": "-0.5",
+                "end": "0.88",
+                "ticks": [
+                    "-0.5",
+                    "-0.25",
+                    "-0.1",
+                    "0.1",
+                    "0.27",
+                    "0.44",
+                    "0.66",
+                    "0.88",
+                ],
+                "tick_labels": {
+                    "-0.5": {"label": "<-0.5"},
+                    "-0.25": {"label": "-0.25"},
+                    "-0.1": {"label": "-0.1"},
+                    "0.1": {"label": "0.1"},
+                    "0.27": {"label": "0.27"},
+                    "0.44": {"label": "0.44"},
+                    "0.66": {"label": "0.66"},
+                    "0.88": {"label": ">1.30"},
+                },
+            },
+            # The multi-date color ramp.  May be defined as an explicit colour ramp, as shown above for the single
+            # date case; or may be defined with a range and unscaled color ramp as shown here.
+            #
+            # The range specifies the min and max values for the color ramp.  Required if an explicit color
+            # ramp is not defined.
+            # "range": [-1.0, 1.0],
+            # The name of a named matplotlib color ramp.
+            # Reference here: https://matplotlib.org/examples/color/colormaps_reference.html
+            # Only used if an explicit colour ramp is not defined.  Optional - defaults to a simple (but
+            # kind of ugly) blue-to-red rainbow ramp.
+            # "mpl_ramp": "RdBu",
+            # The feature info label for the multi-date index value.
+            "feature_info_label": "nbr_delta",
+        }
+    ],
+}
+
 # Styles grouping
 styles_c3_ls_common = [
     style_c3_true_colour,
@@ -328,6 +480,7 @@ styles_c3_ls_common = [
     style_c3_pure_nir,
     style_c3_pure_swir1,
     style_c3_pure_swir2,
+    style_c3_nbr,
 ]
 
 
