@@ -84,7 +84,6 @@ style_c3_true_colour = {
             "invert": True,
         }
     ],
-    "additional_bands": ["oa_fmask"],
 }
 
 style_c3_false_colour = {
@@ -104,7 +103,6 @@ style_c3_false_colour = {
             "invert": True,
         }
     ],
-    "additional_bands": ["oa_fmask"],
 }
 
 style_c3_ndvi = {
