@@ -489,13 +489,13 @@ styles_c3_ls_common = [
     style_c3_ndvi,
     style_c3_ndwi,
     style_c3_mndwi,
+    style_c3_nbr,    
     style_c3_pure_blue,
     style_c3_pure_green,
     style_c3_pure_red,
     style_c3_pure_nir,
     style_c3_pure_swir1,
     style_c3_pure_swir2,
-    style_c3_nbr,
 ]
 
 
