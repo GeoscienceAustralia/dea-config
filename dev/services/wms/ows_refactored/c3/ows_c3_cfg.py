@@ -131,17 +131,17 @@ style_c3_ndvi = {
     "pq_masks": [
         {
             "band": "oa_fmask",
-            "enum": 1,
+            "enum": 0,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 4,
+            "enum": 2,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 5,
+            "enum": 3,
             "invert": True,
         },
     ],
@@ -182,17 +182,17 @@ style_c3_ndwi = {
     "pq_masks": [
         {
             "band": "oa_fmask",
-            "enum": 1,
+            "enum": 0,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 4,
+            "enum": 2,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 5,
+            "enum": 3,
             "invert": True,
         },
     ],
@@ -232,17 +232,17 @@ style_c3_mndwi = {
     "pq_masks": [
         {
             "band": "oa_fmask",
-            "enum": 1,
+            "enum": 0,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 4,
+            "enum": 2,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 5,
+            "enum": 3,
             "invert": True,
         },
     ],
@@ -366,17 +366,17 @@ style_c3_nbr = {
     "pq_masks": [
         {
             "band": "oa_fmask",
-            "enum": 1,
+            "enum": 0,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 4,
+            "enum": 2,
             "invert": True,
         },
         {
             "band": "oa_fmask",
-            "enum": 5,
+            "enum": 3,
             "invert": True,
         },
     ],
@@ -427,17 +427,17 @@ style_c3_nbr = {
             "pq_masks": [
                 {
                     "band": "oa_fmask",
-                    "enum": 1,
+                    "enum": 0,
                     "invert": True,
                 },
                 {
                     "band": "oa_fmask",
-                    "enum": 4,
+                    "enum": 2,
                     "invert": True,
                 },
                 {
                     "band": "oa_fmask",
-                    "enum": 5,
+                    "enum": 3,
                     "invert": True,
                 },
             ],
