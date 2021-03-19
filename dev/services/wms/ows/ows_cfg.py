@@ -23,12 +23,12 @@ reslim_mangrove = {
         "dataset_cache_rules": [
             {
                 "min_datasets": 5,
-                "max_age": 60*60*24,
+                "max_age": 60 * 60 * 24,
             },
             {
                 "min_datasets": 9,
-                "max_age": 60*60*24*14,
-            }
+                "max_age": 60 * 60 * 24 * 14,
+            },
         ],
     },
     "wcs": {
@@ -124,7 +124,7 @@ bands_collection3_landsat_8 = {
     "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
     "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
     "nbart_panchromatic": [],
-    "nbart_coastal_aerosol": ["coastal_aerosol",  "nbart_coastal_aerosol"],
+    "nbart_coastal_aerosol": ["coastal_aerosol", "nbart_coastal_aerosol"],
 }
 
 
@@ -165,9 +165,13 @@ bands_wofs_obs = {
 }
 
 bands_sentinel2_ard_nbar = {
-    "nbar_coastal_aerosol": ["nbar_coastal_aerosol", "coastal_aerosol",  "nbart_coastal_aerosol",
-        "nbart_narrow_blue", "nbar_narrow_blue"
-        "narrow_blue"],
+    "nbar_coastal_aerosol": [
+        "nbar_coastal_aerosol",
+        "coastal_aerosol",
+        "nbart_coastal_aerosol",
+        "nbart_narrow_blue",
+        "nbar_narrow_blue" "narrow_blue",
+    ],
     "nbar_blue": ["nbar_blue", "blue", "nbart_blue"],
     "nbar_green": ["nbar_green", "green", "nbart_green"],
     "nbar_red": ["nbar_red", "red", "nbart_red"],
@@ -424,7 +428,11 @@ style_c3_simple_rgb = {
     "name": "simple_rgb",
     "title": "Simple RGB",
     "abstract": "Simple true-colour image, using the red, green and blue bands",
-    "components": {"red": {"nbart_red": 1.0}, "green": {"nbart_green": 1.0}, "blue": {"nbart_blue": 1.0}},
+    "components": {
+        "red": {"nbart_red": 1.0},
+        "green": {"nbart_green": 1.0},
+        "blue": {"nbart_blue": 1.0},
+    },
     "scale_range": [0.0, 3000.0],
 }
 
@@ -538,7 +546,11 @@ style_c3_pure_blue = {
     "name": "blue",
     "title": "Blue - 480",
     "abstract": "Blue band, centered on 480nm",
-    "components": {"red": {"nbart_blue": 1.0}, "green": {"nbart_blue": 1.0}, "blue": {"nbart_blue": 1.0}},
+    "components": {
+        "red": {"nbart_blue": 1.0},
+        "green": {"nbart_blue": 1.0},
+        "blue": {"nbart_blue": 1.0},
+    },
     "scale_range": [0.0, 3000.0],
 }
 
@@ -558,7 +570,11 @@ style_c3_pure_red = {
     "name": "red",
     "title": "Red - 660",
     "abstract": "Red band, centered on 660nm",
-    "components": {"red": {"nbart_red": 1.0}, "green": {"nbart_red": 1.0}, "blue": {"nbart_red": 1.0}},
+    "components": {
+        "red": {"nbart_red": 1.0},
+        "green": {"nbart_red": 1.0},
+        "blue": {"nbart_red": 1.0},
+    },
     "scale_range": [0.0, 3000.0],
 }
 
@@ -567,7 +583,11 @@ style_c3_pure_nir = {
     "name": "nir",
     "title": "Near Infrared (NIR) - 840",
     "abstract": "Near infra-red band, centered on 840nm",
-    "components": {"red": {"nbart_nir": 1.0}, "green": {"nbart_nir": 1.0}, "blue": {"nbart_nir": 1.0}},
+    "components": {
+        "red": {"nbart_nir": 1.0},
+        "green": {"nbart_nir": 1.0},
+        "blue": {"nbart_nir": 1.0},
+    },
     "scale_range": [0.0, 3000.0],
 }
 
@@ -1998,7 +2018,7 @@ style_tcw_10 = {
     "title": "Tasseled Cap Wetness 10th Percentile",
     "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_10"],
-        "index_function": {
+    "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
@@ -2017,7 +2037,7 @@ style_tcw_50 = {
     "title": "Tasseled Cap Wetness 50th Percentile",
     "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_50"],
-        "index_function": {
+    "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
@@ -2036,7 +2056,7 @@ style_tcw_90 = {
     "title": "Tasseled Cap Wetness 90th Percentile",
     "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
     "needed_bands": ["TCW_PC_90"],
-        "index_function": {
+    "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
@@ -4019,9 +4039,8 @@ style_tmad_rgb_sens = {
                 "scale_from": [0.011, 0.07],
             }
         },
-    }
+    },
 }
-
 
 
 style_tmad_sdev = {
@@ -4031,31 +4050,20 @@ style_tmad_sdev = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
         "mapped_bands": True,
-        "kwargs": {
-            "band": "sdev",
-            "scale_factor": -100.0,
-            "exponent": 1/1000.0
-        }
+        "kwargs": {"band": "sdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["sdev"],
     "color_ramp": [
+        {"value": 0.0, "color": "#ffffff", "alpha": 0},
         {
-            'value': 0.0,
-            'color': '#ffffff',
-            'alpha': 0
+            "value": 0.1,
+            "color": "#A02406",
         },
+        {"value": 0.5, "color": "#FCF24B"},
         {
-            'value': 0.1,
-            'color': '#A02406',
+            "value": 0.9,
+            "color": "#0CCD1D",
         },
-        {
-            'value': 0.5,
-            'color': '#FCF24B'
-        },
-        {
-            'value': 0.9,
-            'color': '#0CCD1D',
-        }
     ],
     "legend": {
         "start": "0.1",
@@ -4064,8 +4072,8 @@ style_tmad_sdev = {
         "tick_labels": {
             "0.1": {"label": "High\ntmad"},
             "0.9": {"label": "Low\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 style_tmad_edev = {
@@ -4075,31 +4083,20 @@ style_tmad_edev = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
         "mapped_bands": True,
-        "kwargs": {
-            "band": "edev",
-            "scale_factor": -100.0,
-            "exponent": 1/1000.0
-        }
+        "kwargs": {"band": "edev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["edev"],
     "color_ramp": [
+        {"value": 0.0, "color": "#ffffff", "alpha": 0},
         {
-            'value': 0.0,
-            'color': '#ffffff',
-            'alpha': 0
+            "value": 0.1,
+            "color": "#A02406",
         },
+        {"value": 0.5, "color": "#FCF24B"},
         {
-            'value': 0.1,
-            'color': '#A02406',
+            "value": 0.9,
+            "color": "#0CCD1D",
         },
-        {
-            'value': 0.5,
-            'color': '#FCF24B'
-        },
-        {
-            'value': 0.9,
-            'color': '#0CCD1D',
-        }
     ],
     "legend": {
         "start": "0.1",
@@ -4108,8 +4105,8 @@ style_tmad_edev = {
         "tick_labels": {
             "0.1": {"label": "High\ntmad"},
             "0.9": {"label": "Low\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 style_tmad_bcdev = {
@@ -4119,31 +4116,20 @@ style_tmad_bcdev = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
         "mapped_bands": True,
-        "kwargs": {
-            "band": "bcdev",
-            "scale_factor": -100.0,
-            "exponent": 1/1000.0
-        }
+        "kwargs": {"band": "bcdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["bcdev"],
     "color_ramp": [
+        {"value": 0.0, "color": "#ffffff", "alpha": 0},
         {
-            'value': 0.0,
-            'color': '#ffffff',
-            'alpha': 0
+            "value": 0.1,
+            "color": "#A02406",
         },
+        {"value": 0.5, "color": "#FCF24B"},
         {
-            'value': 0.1,
-            'color': '#A02406',
+            "value": 0.9,
+            "color": "#0CCD1D",
         },
-        {
-            'value': 0.5,
-            'color': '#FCF24B'
-        },
-        {
-            'value': 0.9,
-            'color': '#0CCD1D',
-        }
     ],
     "legend": {
         "start": "0.1",
@@ -4152,8 +4138,8 @@ style_tmad_bcdev = {
         "tick_labels": {
             "0.1": {"label": "High\ntmad"},
             "0.9": {"label": "Low\ntmad"},
-        }
-    }
+        },
+    },
 }
 
 # End of Reuseable
@@ -4270,7 +4256,7 @@ ows_cfg = {
                 "matrix_exponent_initial_offsets": (1, 0),
             },
         }
-    }, # END OF wmts SECTION
+    },  # END OF wmts SECTION
     "wcs": {
         # Config for WCS service, for all products/coverages
         "default_geographic_CRS": "EPSG:4326",
@@ -5269,15 +5255,15 @@ For service status information, see https://status.dea.ga.gov.au
                     ],
                 },
                 {
-            "title": "Sentinel Definitive",
-            "abstract": """
+                    "title": "Sentinel Definitive",
+                    "abstract": """
 	This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variationscaused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
 """,
-            "layers": [
-                {
-                    "name": "s2_ard_granule_nbar_t",
-                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2 (A and B combined))",
-                    "abstract": """
+                    "layers": [
+                        {
+                            "name": "s2_ard_granule_nbar_t",
+                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2 (A and B combined))",
+                            "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
 The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
@@ -5289,105 +5275,147 @@ Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel
 For more information see http://pid.geoscience.gov.au/dataset/ga/129684
 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "multi_product": True,
-                    "product_names": [ "ga_s2a_ard_nbar_granule", "ga_s2b_ard_nbar_granule" ],
-                    "bands": bands_sentinel2_ard_nbar,
-                    "resource_limits": reslim_s2_ard,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbar_red", "nbar_green", "nbar_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2,
-                        ]
-                    }
-                },
-                {
-                    "name": "s2b_ard_granule_nbar_t",
-                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
-                    "abstract": """
+                            "multi_product": True,
+                            "product_names": [
+                                "ga_s2a_ard_nbar_granule",
+                                "ga_s2b_ard_nbar_granule",
+                            ],
+                            "bands": bands_sentinel2_ard_nbar,
+                            "resource_limits": reslim_s2_ard,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbar_red",
+                                    "nbar_green",
+                                    "nbar_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                ],
+                            },
+                        },
+                        {
+                            "name": "s2b_ard_granule_nbar_t",
+                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
+                            "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "ga_s2b_ard_nbar_granule",
-                    "bands": bands_sentinel2_ard_nbar,
-                    "resource_limits": reslim_s2_ard,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbar_red", "nbar_green", "nbar_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2,
-                        ]
-                    }
-                },
-                {
-                    "name": "s2a_ard_granule_nbar_t",
-                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
-                    "abstract": """
+                            "product_name": "ga_s2b_ard_nbar_granule",
+                            "bands": bands_sentinel2_ard_nbar,
+                            "resource_limits": reslim_s2_ard,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbar_red",
+                                    "nbar_green",
+                                    "nbar_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                ],
+                            },
+                        },
+                        {
+                            "name": "s2a_ard_granule_nbar_t",
+                            "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
+                            "abstract": """
 This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
 """,
-                    "product_name": "ga_s2a_ard_nbar_granule",
-                    "bands": bands_sentinel2_ard_nbar,
-                    "resource_limits": reslim_s2_ard,
-                    "dynamic": True,
-                    "image_processing": {
-                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                        "always_fetch_bands": [ ],
-                        "manual_merge": False,
-                    },
-                    "wcs": {
-                        "native_crs": "EPSG:3577",
-                        "native_resolution": [ 10.0, 10.0 ],
-                        "default_bands": [ "nbar_red", "nbar_green", "nbar_blue" ]
-                    },
-                    "styling": {
-                        "default_style": "simple_rgb",
-                        "styles": [
-                            style_s2_simple_rgb,
-                            style_s2_irg,
-                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
-                            style_s2_pure_aerosol,
-                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
-                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
-                            style_s2_pure_nir, style_s2_pure_narrow_nir,
-                            style_s2_pure_swir1, style_s2_pure_swir2,
-                        ]
-                    }
-                }
-            ]
-        },
+                            "product_name": "ga_s2a_ard_nbar_granule",
+                            "bands": bands_sentinel2_ard_nbar,
+                            "resource_limits": reslim_s2_ard,
+                            "dynamic": True,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [10.0, 10.0],
+                                "default_bands": [
+                                    "nbar_red",
+                                    "nbar_green",
+                                    "nbar_blue",
+                                ],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_s2_simple_rgb,
+                                    style_s2_irg,
+                                    style_s2_ndvi,
+                                    style_s2_ndwi,
+                                    style_s2_mndwi,
+                                    style_s2_ndci,
+                                    style_s2_pure_aerosol,
+                                    style_s2_pure_blue,
+                                    style_s2_pure_green,
+                                    style_s2_pure_red,
+                                    style_s2_pure_redge_1,
+                                    style_s2_pure_redge_2,
+                                    style_s2_pure_redge_3,
+                                    style_s2_pure_nir,
+                                    style_s2_pure_narrow_nir,
+                                    style_s2_pure_swir1,
+                                    style_s2_pure_swir2,
+                                ],
+                            },
+                        },
+                    ],
+                },
                 {
                     "title": "Multi-Scale Topographic Position",
                     "abstract": "",
@@ -5556,16 +5584,16 @@ For service status information, see https://status.dea.ga.gov.au""",
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
-                                "default_bands": ["TCW_PC_10", "TCW_PC_50", "TCW_PC_90"],
+                                "default_bands": [
+                                    "TCW_PC_10",
+                                    "TCW_PC_50",
+                                    "TCW_PC_90",
+                                ],
                                 "native_resolution": [25, -25],
                             },
                             "styling": {
                                 "default_style": "tcw_10_percentile",
-                                "styles": [
-                                    style_tcw_10,
-                                    style_tcw_50,
-                                    style_tcw_90
-                                ],
+                                "styles": [style_tcw_10, style_tcw_50, style_tcw_90],
                             },
                         },
                     ],
@@ -7602,7 +7630,11 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
                             "wcs": {
                                 "native_crs": "EPSG:3577",
                                 "native_resolution": [25, -25],
-                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
                             },
                             "styling": {
                                 "default_style": "simple_rgb",
@@ -7646,23 +7678,27 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "wcs": {
                                 "native_crs": "EPSG:3577",
                                 "native_resolution": [25, -25],
-                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
                             },
                             "styling": {
                                 "default_style": "simple_rgb",
                                 "styles": [
-                                        style_c3_simple_rgb,
-                                        style_c3_false_colour,
-                                        style_c3_ndvi,
-                                        style_c3_ndwi,
-                                        style_c3_mndwi,
-                                        style_c3_pure_blue,
-                                        style_c3_pure_green,
-                                        style_c3_pure_red,
-                                        style_c3_pure_nir,
-                                        style_c3_pure_swir1,
-                                        style_c3_pure_swir2,
-                                        style_c3_pure_panchromatic,
+                                    style_c3_simple_rgb,
+                                    style_c3_false_colour,
+                                    style_c3_ndvi,
+                                    style_c3_ndwi,
+                                    style_c3_mndwi,
+                                    style_c3_pure_blue,
+                                    style_c3_pure_green,
+                                    style_c3_pure_red,
+                                    style_c3_pure_nir,
+                                    style_c3_pure_swir1,
+                                    style_c3_pure_swir2,
+                                    style_c3_pure_panchromatic,
                                 ],
                             },
                         },
@@ -7691,7 +7727,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "wcs": {
                                 "native_crs": "EPSG:3577",
                                 "native_resolution": [25, -25],
-                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                                "default_bands": [
+                                    "nbart_red",
+                                    "nbart_green",
+                                    "nbart_blue",
+                                ],
                             },
                             "styling": {
                                 "default_style": "simple_rgb",
@@ -7710,8 +7750,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 ],
                             },
                         },
-                    ]
-                }
+                    ],
+                },
             ],
         },
     ],  # End of Layers List

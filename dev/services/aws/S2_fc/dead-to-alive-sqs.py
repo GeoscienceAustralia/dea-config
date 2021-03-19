@@ -5,20 +5,20 @@ import boto3
 import logging
 
 # Set us up some logging
-logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
-logging.getLogger('boto3').setLevel(logging.CRITICAL)
-logging.getLogger('botocore').setLevel(logging.CRITICAL)
-logging.getLogger('urllib3').setLevel(logging.CRITICAL)
+logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
+logging.getLogger("boto3").setLevel(logging.CRITICAL)
+logging.getLogger("botocore").setLevel(logging.CRITICAL)
+logging.getLogger("urllib3").setLevel(logging.CRITICAL)
 
-QUEUE = os.environ.get('QUEUE', 'alex-alchemist-alive')
-DLQUEUE = os.environ.get('DLQUEUE', 'alex-alchemist-dead')
+QUEUE = os.environ.get("QUEUE", "alex-alchemist-alive")
+DLQUEUE = os.environ.get("DLQUEUE", "alex-alchemist-dead")
 
 # QUEUE = os.environ.get('QUEUE', 'belle-test')
 # DLQUEUE = os.environ.get('DLQUEUE', 'belle-test-dead')
 
 # Set up some AWS stuff
 # pylint: disable=E1101
-sqs = boto3.resource('sqs', region_name='ap-southeast-2')
+sqs = boto3.resource("sqs", region_name="ap-southeast-2")
 queue = sqs.get_queue_by_name(QueueName=QUEUE)
 dlqueue = sqs.get_queue_by_name(QueueName=DLQUEUE)
 
@@ -26,9 +26,7 @@ dlqueue = sqs.get_queue_by_name(QueueName=DLQUEUE)
 # dlqueue.send_message(MessageBody=message.body)
 def dead2living():
     messages = dlqueue.receive_messages(
-        VisibilityTimeout=10,
-        MaxNumberOfMessages=1,
-        MessageAttributeNames=['All']
+        VisibilityTimeout=10, MaxNumberOfMessages=1, MessageAttributeNames=["All"]
     )
     if not messages:
         return

@@ -1,7 +1,9 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 from ows_refactored.surface_reflectance.band_ls_cfg import bands_ls
 from ows_refactored.surface_reflectance.style_ls_cfg import (
-    styles_barest_earth_list, styles_barest_earth_mosaic_list)
+    styles_barest_earth_list,
+    styles_barest_earth_mosaic_list,
+)
 
 ls8_be_layers = {
     "title": "Landsat-8 Barest Earth",

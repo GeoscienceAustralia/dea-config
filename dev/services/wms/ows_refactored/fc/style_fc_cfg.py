@@ -1,6 +1,8 @@
 from ows_refactored.ows_legend_cfg import (
-    legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
-    legend_idx_0_100_pixel_fc_ngv_25ticks)
+    legend_idx_0_100_pixel_fc_25ticks,
+    legend_idx_0_100_pixel_fc_bs_25ticks,
+    legend_idx_0_100_pixel_fc_ngv_25ticks,
+)
 
 fc_pq_mask = [
     {
@@ -44,7 +46,7 @@ style_fc_simple = {
                 "cloud_shadow": False,
                 "cloud": False,
                 "sea": False,
-            }
+            },
         },
     ],
 }

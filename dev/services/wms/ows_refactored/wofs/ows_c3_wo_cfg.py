@@ -10,46 +10,26 @@ style_c3_wofs_obs = {
             {
                 "title": "",
                 "abstract": "",
-                "flags": {
-                    "and": {
-                        "noncontiguous": True,
-                        "low_solar_angle": True
-                    }
-                },
+                "flags": {"and": {"noncontiguous": True, "low_solar_angle": True}},
                 "alpha": 0.0,
                 "color": "#707070",
             },
             {
                 "title": "Cloudy Steep Terrain",
                 "abstract": "",
-                "flags": {
-                    "and": {
-                        "cloud": True,
-                        "high_slope": True
-                    }
-                },
+                "flags": {"and": {"cloud": True, "high_slope": True}},
                 "color": "#f2dcb4",
             },
             {
                 "title": "Cloudy Water",
                 "abstract": "",
-                "flags": {
-                    "and": {
-                        "wet": True,
-                        "cloud": True
-                    }
-                },
+                "flags": {"and": {"wet": True, "cloud": True}},
                 "color": "#bad4f2",
             },
             {
                 "title": "Shaded Water",
                 "abstract": "",
-                "flags": {
-                    "and": {
-                        "wet": True,
-                        "cloud_shadow": True
-                    }
-                },
+                "flags": {"and": {"wet": True, "cloud_shadow": True}},
                 "color": "#335277",
             },
             {
