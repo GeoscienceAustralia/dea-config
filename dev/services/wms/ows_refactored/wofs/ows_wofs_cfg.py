@@ -1,12 +1,9 @@
-from ows_refactored.ows_legend_cfg import (
-    legend_idx_percentage_by_20,
-    legend_idx_percentage_by_25,
-)
-from ows_refactored.ows_reslim_cfg import (
-    reslim_wms_min_zoom_15_cache_rules,
-    reslim_wms_min_zoom_35,
-)
-from ows_refactored.wofs.bands_wo_cfg import bands_wofs_filt_sum, bands_wofs_obs
+from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
+                                           legend_idx_percentage_by_25)
+from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15_cache_rules,
+                                           reslim_wms_min_zoom_35)
+from ows_refactored.wofs.bands_wo_cfg import (bands_wofs_filt_sum,
+                                              bands_wofs_obs)
 
 style_wofs_filt_freq = {
     "name": "WOfS_filtered_frequency",
@@ -137,19 +134,34 @@ style_wofs_obs = {
             {
                 "title": "Cloudy Steep Terrain",
                 "abstract": "",
-                "flags": {"and": {"high_slope": True, "cloud": True}},
+                "flags": {
+                    "and": {
+                        "high_slope": True,
+                        "cloud": True
+                    }
+                },
                 "color": "#f2dcb4",
             },
             {
                 "title": "Cloudy Water",
                 "abstract": "",
-                "flags": {"and": {"wet": True, "cloud": True}},
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "cloud": True
+                    }
+                },
                 "color": "#bad4f2",
             },
             {
                 "title": "Shaded Water",
                 "abstract": "",
-                "flags": {"and": {"wet": True, "cloud_shadow": True}},
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "cloud_shadow": True
+                    }
+                },
                 "color": "#335277",
             },
             {
@@ -179,7 +191,12 @@ style_wofs_obs = {
             {
                 "title": "Water",
                 "abstract": "",
-                "flags": {"and": {"wet": True, "sea": False}},
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "sea": False
+                    }
+                },
                 "color": "#4f81bd",
             },
             {
