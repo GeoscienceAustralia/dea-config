@@ -150,7 +150,7 @@ style_c3_wofs_obs_wet_only = {
         },
     ],
 }
-
+ 
 
 layers = {
     "title": "Collection 3 Water",
