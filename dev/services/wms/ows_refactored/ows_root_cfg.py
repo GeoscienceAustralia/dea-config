@@ -1,6 +1,8 @@
 # Refactor of 9k lines ows_cfg.py
-from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15_cache_rules,
-                                           reslim_wms_min_zoom_35)
+from ows_refactored.ows_reslim_cfg import (
+    reslim_wms_min_zoom_15_cache_rules,
+    reslim_wms_min_zoom_35,
+)
 
 # Reusable Chunks 2. Band lists.
 
@@ -508,15 +510,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     """,
                     "layers": [
                         {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
+                            "include": "ows_refactored.c3.ows_c3_cfg.layers",
                             "type": "python",
                         },
                         {

@@ -953,6 +953,26 @@
         },
         {
             "product": [
+                "dea_c3_ls_combined"
+            ],
+            "styles_count": 12,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "NBR"
+            ]
+        },
+        {
+            "product": [
                 "ga_ls_wo_3"
             ],
             "styles_count": 2,
