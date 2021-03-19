@@ -1,8 +1,6 @@
 # Refactor of 9k lines ows_cfg.py
-from ows_refactored.ows_reslim_cfg import (
-    reslim_wms_min_zoom_15_cache_rules,
-    reslim_wms_min_zoom_35,
-)
+from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15_cache_rules,
+                                           reslim_wms_min_zoom_35)
 
 # Reusable Chunks 2. Band lists.
 
