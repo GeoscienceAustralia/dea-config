@@ -1,5 +1,4 @@
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15
 
 # Style definition
 style_c3_pure_aerosol = {

@@ -1,10 +1,6 @@
-from ows_refactored.c3.style_c3_cfg import (
-    styles_c3_ls_common,
-    styles_c3_ls_7,
-    styles_c3_ls_8,
-)
+from ows_refactored.c3.style_c3_cfg import (styles_c3_ls_7, styles_c3_ls_8,
+                                            styles_c3_ls_common)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15
-
 
 # bands definition
 bands_c3_ls_common = {
