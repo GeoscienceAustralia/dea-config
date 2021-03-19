@@ -953,6 +953,28 @@
         },
         {
             "product": [
+                "ga_ls8c_ard_3",
+                "ga_ls7e_ard_3",
+                "ga_ls5t_ard_3"
+            ],
+            "styles_count": 12,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "NBR"
+            ]
+        },
+        {
+            "product": [
                 "ga_ls_wo_3"
             ],
             "styles_count": 2,
@@ -971,5 +993,5 @@
             ]
         }
     ],
-    "total_layers_count": 79
+    "total_layers_count": 80
 }
