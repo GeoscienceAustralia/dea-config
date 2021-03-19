@@ -1,7 +1,7 @@
 from ows_refactored.c3.style_c3_cfg import (
-    style_c3_ls_common,
-    style_c3_ls_7,
-    style_c3_ls_8,
+    styles_c3_ls_common,
+    styles_c3_ls_7,
+    styles_c3_ls_8,
 )
 
 # bands definition
