@@ -11,6 +11,7 @@ specification:
     fmask: nearest
     '*': bilinear
 
+  aws_unsigned: False
   transform: wofs.virtualproduct.WOfSClassifier
   transform_url: 'https://github.com/GeoscienceAustralia/wofs/'
   override_product_family: ard
