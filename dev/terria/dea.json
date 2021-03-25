@@ -320,6 +320,31 @@
                "preserveOrder": true,
                "items": [
                   {
+                     "name": "Daily Landsat satellite images",
+                     "type": "wms",
+                     "layers": "dea_c3_ls_combined",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "dea_c3_ls_combined",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     },
+                     "featureTimesProperty": "data_available_for_dates",
+                     "leafletUpdateInterval": 750,
+                     "supportsDeltaComparison": true
+                  },
+                  {
                      "name": "Daily Landsat 8 satellite images",
                      "type": "wms",
                      "layers": "ga_ls8c_ard_3",
