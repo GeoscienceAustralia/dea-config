@@ -169,7 +169,7 @@ layers = {
         },
         {
             "band": "water",
-            "product": "ga_ls_wo_3",
+            "product": "ga_s2_wo_3",
             "ignore_time": False,
             "ignore_info_flags": [],
             "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -188,6 +188,6 @@ layers = {
     },
     "styling": {
         "default_style": "observations",
-        "styles": [style_c3_wofs_obs, style_c3_wofs_obs_wet_only],
+        "styles": [style_c3_wofs_obs, style_s2_wofs_obs_wet_only],
     },
 }
