@@ -306,10 +306,6 @@ For service status information, see https://status.dea.ga.gov.au
                     "type": "python",
                 },
                 {
-                    "include": "ows_refactored.wofs.ows_s2_wo_cfg.layers",
-                    "type": "python",
-                },
-                {
                     "title": "Near Real-Time",
                     "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data.
