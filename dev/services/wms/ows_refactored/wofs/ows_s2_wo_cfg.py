@@ -153,7 +153,7 @@ style_s2_wofs_obs_wet_only = {
 
 
 layers = {
-    "title": "Sentinel 2 Water Observations",
+    "title": "Prototype Sentinel 2 Water Observations",
     "name": "ga_s2_wo_3",
     "abstract": """ Prototype Sentinel 2 Water Observations""",
     "product_name": "ga_s2_wo_3",
