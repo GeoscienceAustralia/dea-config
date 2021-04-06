@@ -495,6 +495,19 @@
                            "featureTimesProperty": "data_available_for_dates"
                         },
                         {
+                           "name": "Sentinel 2 Water Observations from Space Daily (WOfS Daily Observations)",
+                           "type": "wms",
+                           "layers": "ga_s2_wo_3",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ga_s2_wo_3",
+                           "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
                            "name": "Water Observations from Space Daily Pixel Drill",
                            "type": "wps",
                            "url": "https://ows.dev.dea.ga.gov.au/wps/",
