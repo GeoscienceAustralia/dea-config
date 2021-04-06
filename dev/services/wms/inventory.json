@@ -985,6 +985,16 @@
         },
         {
             "product": [
+                "ga_s2_wo_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "observations",
+                "wet"
+            ]
+        },
+        {
+            "product": [
                 "ga_ls_fc_3"
             ],
             "styles_count": 1,
@@ -993,5 +1003,5 @@
             ]
         }
     ],
-    "total_layers_count": 80
+    "total_layers_count": 81
 }
