@@ -39,7 +39,7 @@ style_fc_3_simple = {
 
 
 layers = {
-    "title": "DEA Fractional Cover (Landsat C3)",
+    "title": "Geoscience Australia Landsat Fractional Cover Collection 3",
     "name": "ga_ls_fc_3",
     "abstract": """
 Fractional cover data can be used to identify large scale patterns and trends and inform evidence based decision making and policy on topics including wind and water erosion risk, soil carbon dynamics, land management practices and rangeland condition.
