@@ -30,7 +30,7 @@ bands_c3_ls_8.update(
 )
 
 layers = {
-    "title": "C3 Landsat",
+    "title": "Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain Collection 3",
     "abstract": """
     The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
 
@@ -42,7 +42,7 @@ For service status information, see https://status.dea.ga.gov.au
     """,
     "layers": [
         {
-            "title": "DEA C3 Landsat 8 ARD",
+            "title": "Geoscience Australia Landsat 8 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
             "abstract": """
 This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
@@ -84,7 +84,7 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_8},
         },
         {
-            "title": "DEA C3 Landsat 7 ARD",
+            "title": "Geoscience Australia Landsat 7 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
             "abstract": """
 The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
 In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
@@ -120,7 +120,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
         },
         {
-            "title": "DEA C3 Landsat 5 ARD",
+            "title": "Geoscience Australia Landsat 5 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
             "abstract": """
 The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
 
@@ -159,7 +159,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
         },
         {
-            "title": "DEA C3 Landsat Combined ARD",
+            "title": "Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain Collection 3",
             "name": "dea_c3_ls_combined",
             "abstract": """
 The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
