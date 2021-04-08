@@ -320,7 +320,7 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Daily Landsat satellite images",
+                     "name": "Surface Reflectance (Landsat)",
                      "type": "wms",
                      "layers": "dea_c3_ls_combined",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -345,7 +345,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Landsat 8 satellite images",
+                     "name": "Surface Reflectance (Landsat 8 OLI/TIRS)",
                      "type": "wms",
                      "layers": "ga_ls8c_ard_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -370,7 +370,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Landsat 7 satellite images",
+                     "name": "Surface Reflectance (Landsat 7 ETM+)",
                      "type": "wms",
                      "layers": "ga_ls7e_ard_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -395,7 +395,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Landsat 5 satellite images",
+                     "name": "Surface Reflectance (Landsat 5 TM)",
                      "type": "wms",
                      "layers": "ga_ls5t_ard_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -420,7 +420,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Water Observations",
+                     "name": "Water Observations (Landsat)",
                      "type": "wms",
                      "layers": "ga_ls_wo_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -445,7 +445,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Fractional Cover",
+                     "name": "Fractional Cover (Landsat)",
                      "type": "wms",
                      "layers": "ga_ls_fc_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
