@@ -326,10 +326,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
-                        {
-                            "include": "ows_refactored.dev_only.ows_nrt_wo_cfg.layers",
-                            "type": "python",
-                        },
                     ],
                 },
                 {
@@ -512,15 +508,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                     """,
                     "layers": [
                         {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls8_ard",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls7_ard",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.dea_c3_ls5_ard",
+                            "include": "ows_refactored.c3.ows_c3_cfg.layers",
                             "type": "python",
                         },
                         {

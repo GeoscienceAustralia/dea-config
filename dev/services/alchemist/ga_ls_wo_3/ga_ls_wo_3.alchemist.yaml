@@ -6,7 +6,8 @@ specification:
   measurements: ['nbart_blue', 'nbart_green', 'nbart_red', 'nbart_nir', 'nbart_swir_1', 'nbart_swir_2', 'oa_fmask']
   measurement_renames:
     oa_fmask: fmask
-  
+
+  aws_unsigned: True
   transform: wofs.virtualproduct.WOfSClassifier
   transform_url: 'https://github.com/GeoscienceAustralia/wofs/'
   override_product_family: ard
@@ -24,7 +25,7 @@ output:
     measurement: water
     lookup_table:
       0: [150, 150, 110]   # dry
-      1: [0, 0, 0]   # nodata,
+      1: [0, 0, 0]         # nodata,
       16: [119, 104, 87]   # terrain
       32: [89, 88, 86]     # cloud_shadow
       64: [216, 215, 214]  # cloud
@@ -50,5 +51,6 @@ output:
 
 processing:
   dask_chunks:
-    x: 600
-    y: 600
+    x: -1
+    y: 4096
+

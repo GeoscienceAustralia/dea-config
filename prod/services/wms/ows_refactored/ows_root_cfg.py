@@ -1,23 +1,6 @@
-# Migration of wms_cfg.py.  As at commit  c44c5e61c7fb9
-import copy
-from ows_refactored.ows_legend_cfg import (
-    legend_idx_0_1_5ticks,
-    legend_idx_percentage_by_20,
-    legend_idx_0_100_pixel_fc_bs_25ticks,
-    legend_idx_percentage_by_25,
-    legend_idx_twentyplus_3ticks,
-    legend_idx_thirtyplus_4ticks,
-    legend_idx_0_100_pixel_fc_25ticks,
-    legend_idx_0_100_pixel_fc_ngv_25ticks,
-)
-
-from ows_refactored.ows_reslim_cfg import (
-    reslim_wms_min_zoom_500_max_datasets,
-    reslim_wms_min_zoom_35,
-    reslim_wms_min_zoom_15_cache_rules,
-    reslim_wms_min_zoom_10,
-    reslim_wms_min_zoom_15,
-)
+# Refactor of 9k lines ows_cfg.py
+from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15_cache_rules,
+                                           reslim_wms_min_zoom_35)
 
 # Reusable Chunks 2. Band lists.
 
@@ -36,11 +19,6 @@ bands_multi_topog = {
 
 bands_weathering = {
     "intensity": [],
-}
-
-
-bands_hap = {
-    "Band_1": [],
 }
 
 
@@ -127,20 +105,6 @@ style_wii = {
         "strip_location": [0.1, 0.5, 0.8, 0.15],
     },
 }
-
-
-style_hap_simple_gray = {
-    "name": "simple_gray",
-    "title": "Simple gray",
-    "abstract": "Simple grayscale image",
-    "components": {
-        "red": {"Band_1": 1.0},
-        "green": {"Band_1": 1.0},
-        "blue": {"Band_1": 1.0},
-    },
-    "scale_range": [0.0, 255],
-}
-
 
 # End of Reuseable
 
@@ -362,10 +326,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
-                        # {
-                        #     "include": "ows_refactored.wofs.ows_nrt_wo_cfg.layers",
-                        #     "type": "python",
-                        # },
                     ],
                 },
                 {
@@ -521,36 +481,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "include": "ows_refactored.intertidal.ows_extents_cfg.layers",
                     "type": "python",
                 },
-                # {
-                #     "title": "Historical Airborne Photography",
-                #     "abstract": "",
-                #     "layers": [
-                #         {
-                #             "title": "Historical Airborne Photography (HAP)",
-                #             "name": "historical_airborne_photography",
-                #             "abstract": "Historical Airborne Photography",
-                #             "product_name": "historical_airborne_photography",
-                #             "bands": bands_hap,
-                #             "resource_limits": reslim_wms_min_zoom_500_max_datasets,
-                #             "image_processing": {
-                #                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                #                 "always_fetch_bands": [],
-                #                 "manual_merge": False,
-                #             },
-                #             "wcs": {
-                #                 "native_crs": "EPSG:3577",
-                #                 "default_bands": ["Band_1"],
-                #                 "native_resolution": [1.0, 1.0],
-                #             },
-                #             "styling": {
-                #                 "default_style": "simple_gray",
-                #                 "styles": [
-                #                     style_hap_simple_gray,
-                #                 ],
-                #             },
-                #         }
-                #     ],
-                # },
                 {
                     "include": "ows_refactored.aster.ows_aster_cfg.layers",
                     "type": "python",

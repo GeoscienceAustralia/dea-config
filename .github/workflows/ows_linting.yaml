@@ -45,6 +45,12 @@ jobs:
           linters: flake8
           run: |
             flake8 dev/services/wms/ows_refactored/ --ignore=E501
+      - name: flake8 - prod ows_cfg
+        uses: liskin/gh-problem-matcher-wrap@v1
+        with:
+          linters: flake8
+          run: |
+            flake8 prod/services/wms/ows_refactored/ --ignore=E501
 
   isort:
     runs-on: ubuntu-latest
@@ -62,3 +68,9 @@ jobs:
           linters: isort
           run: |
             isort --check --diff dev/services/wms/ows_refactored/
+      - name: isort - prod ows_cfg
+        uses: liskin/gh-problem-matcher-wrap@v1
+        with:
+          linters: isort
+          run: |
+            isort --check --diff prod/services/wms/ows_refactored/

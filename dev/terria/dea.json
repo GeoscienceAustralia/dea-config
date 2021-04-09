@@ -320,7 +320,32 @@
                "preserveOrder": true,
                "items": [
                   {
-                     "name": "Daily Landsat 8 satellite images",
+                     "name": "Surface Reflectance (Landsat)",
+                     "type": "wms",
+                     "layers": "dea_c3_ls_combined",
+                     "url": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                     "linkedWcsCoverage": "dea_c3_ls_combined",
+                     "ignoreUnknownTileErrors": true,
+                     "chartType": "momentPoints",
+                     "chartColor": "white",
+                     "opacity": 1,
+                     "featureInfoTemplate": {
+                        "formats": {
+                           "lat": {
+                              "maximumFractionDigits": 5
+                           },
+                           "lon": {
+                              "maximumFractionDigits": 5
+                           }
+                        }
+                     },
+                     "featureTimesProperty": "data_available_for_dates",
+                     "leafletUpdateInterval": 750,
+                     "supportsDeltaComparison": true
+                  },
+                  {
+                     "name": "Surface Reflectance (Landsat 8 OLI/TIRS)",
                      "type": "wms",
                      "layers": "ga_ls8c_ard_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -345,7 +370,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Landsat 7 satellite images",
+                     "name": "Surface Reflectance (Landsat 7 ETM+)",
                      "type": "wms",
                      "layers": "ga_ls7e_ard_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -370,7 +395,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Landsat 5 satellite images",
+                     "name": "Surface Reflectance (Landsat 5 TM)",
                      "type": "wms",
                      "layers": "ga_ls5t_ard_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -395,7 +420,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Water Observations",
+                     "name": "Water Observations (Landsat)",
                      "type": "wms",
                      "layers": "ga_ls_wo_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -420,7 +445,7 @@
                      "supportsDeltaComparison": true
                   },
                   {
-                     "name": "Daily Fractional Cover",
+                     "name": "Fractional Cover (Landsat)",
                      "type": "wms",
                      "layers": "ga_ls_fc_3",
                      "url": "https://ows.dev.dea.ga.gov.au/",
@@ -463,6 +488,19 @@
                            "url": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                            "linkedWcsCoverage": "wofs_albers",
+                           "ignoreUnknownTileErrors": true,
+                           "chartType": "momentPoints",
+                           "chartColor": "white",
+                           "opacity": 1,
+                           "featureTimesProperty": "data_available_for_dates"
+                        },
+                        {
+                           "name": "Sentinel 2 Water Observations from Space Daily (WOfS Daily Observations)",
+                           "type": "wms",
+                           "layers": "ga_s2_wo_3",
+                           "url": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                           "linkedWcsCoverage": "ga_s2_wo_3",
                            "ignoreUnknownTileErrors": true,
                            "chartType": "momentPoints",
                            "chartColor": "white",
@@ -1033,19 +1071,6 @@
                         },
                         "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>"
                      },
-                     "featureTimesProperty": "data_available_for_dates"
-                  },
-                  {
-                     "name": "Near Real-Time Surface Reflectance (WOfS Water Classifier)",
-                     "type": "wms",
-                     "layers": "s2_nrt_wofs",
-                     "url": "https://ows.dev.dea.ga.gov.au/",
-                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                     "linkedWcsCoverage": "s2_nrt_wofs",
-                     "ignoreUnknownTileErrors": true,
-                     "chartType": "momentPoints",
-                     "chartColor": "white",
-                     "opacity": 1,
                      "featureTimesProperty": "data_available_for_dates"
                   }
                ]

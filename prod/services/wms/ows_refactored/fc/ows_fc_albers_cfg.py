@@ -1,3 +1,4 @@
+from ows_refactored.fc.style_fc_cfg import style_fc_simple
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_10
 
 bands_fc = {
@@ -6,47 +7,16 @@ bands_fc = {
     "NPV": ["non_photosynthetic_vegetation", "brown_vegetation"],
 }
 
-style_fc_simple_rgb = {
-    "name": "simple_rgb",
-    "title": "Simple RGB",
-    "abstract": "Simple true-colour image, using the red, green and blue bands",
-    "components": {
-        "red": {"BS_PC_50": 1.0},
-        "green": {"PV_PC_50": 1.0},
-        "blue": {"NPV_PC_50": 1.0},
+fc_albers_flags = [
+    {
+        "band": "water",
+        "product": "wofs_albers",
+        "ignore_time": False,
+        "ignore_info_flags": [],
+        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
     },
-    "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "flags": {
-                "sea": True,
-            },
-            "invert": True,
-        },
-    ],
-}
+]
 
-style_fc_simple = {
-    "name": "simple_fc",
-    "title": "Fractional Cover",
-    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-    "components": {"red": {"BS": 1.0}, "green": {"PV": 1.0}, "blue": {"NPV": 1.0}},
-    "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "flags": {"dry": True},
-        },
-        {
-            "flags": {
-                "terrain_or_low_angle": False,
-                "high_slope": False,
-                "cloud_shadow": False,
-                "cloud": False,
-                "sea": False,
-            }
-        },
-    ],
-}
 layers = {
     "title": "Fractional Cover",
     "abstract": """
@@ -79,13 +49,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "flags": {
-                "band": "water",
-                "product": "wofs_albers",
-                "ignore_time": False,
-                "ignore_info_flags": [],
-                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-            },
+            "flags": fc_albers_flags,
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "default_bands": ["BS", "PV", "NPV"],
@@ -120,13 +84,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "flags": {
-                "band": "water",
-                "product": "wofs_albers",
-                "ignore_time": False,
-                "ignore_info_flags": [],
-                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-            },
+            "flags": fc_albers_flags,
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "default_bands": ["BS", "PV", "NPV"],
@@ -161,13 +119,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "flags": {
-                "band": "water",
-                "product": "wofs_albers",
-                "ignore_time": False,
-                "ignore_info_flags": [],
-                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-            },
+            "flags": fc_albers_flags,
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "default_bands": ["BS", "PV", "NPV"],
@@ -200,17 +152,19 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "flags": {
-                "band": "water",
-                "products": [
-                    "wofs_albers",
-                    "wofs_albers",
-                    "wofs_albers",
-                ],
-                "ignore_time": False,
-                "ignore_info_flags": [],
-                "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
-            },
+            "flags": [
+                {
+                    "band": "water",
+                    "products": [
+                        "wofs_albers",
+                        "wofs_albers",
+                        "wofs_albers",
+                    ],
+                    "ignore_time": False,
+                    "ignore_info_flags": [],
+                    "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+                },
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "default_bands": ["BS", "PV", "NPV"],
