@@ -75,6 +75,12 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
                     "ignore_time": False,
                     "ignore_info_flags": [],
                 },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
             ],
             "wcs": {
                 "native_crs": "EPSG:3577",
@@ -110,6 +116,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product": "ga_ls7e_ard_3",
                     "ignore_time": False,
                     "ignore_info_flags": [],
+                },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
                 },
             ],
             "wcs": {
@@ -149,6 +161,12 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "product": "ga_ls5t_ard_3",
                     "ignore_time": False,
                     "ignore_info_flags": [],
+                },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
                 },
             ],
             "wcs": {
@@ -193,6 +211,16 @@ For service status information, see https://status.dea.ga.gov.au""",
                     ],
                     "ignore_time": False,
                     "ignore_info_flags": [],
+                },
+                {
+                    "band": "land",
+                    "products": [
+                        "geodata_coast_100k",
+                        "geodata_coast_100k",
+                        "geodata_coast_100k",
+                    ],
+                    "ignore_time": True,
+                    "ignore_info_flags": []
                 },
             ],
             "wcs": {

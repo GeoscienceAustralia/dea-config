@@ -115,6 +115,11 @@ style_c3_ndvi = {
             "enum": 3,
             "invert": True,
         },
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
     ],
     "legend": legend_idx_0_1_5ticks,
 }
@@ -350,6 +355,11 @@ style_c3_nbr = {
             "enum": 3,
             "invert": True,
         },
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
     ],
     "legend": {
         "show_legend": True,
@@ -410,6 +420,11 @@ style_c3_nbr = {
                     "band": "oa_fmask",
                     "enum": 3,
                     "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
                 },
             ],
             "legend": {
