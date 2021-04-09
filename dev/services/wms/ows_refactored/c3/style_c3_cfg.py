@@ -460,12 +460,12 @@ style_c3_fmask = {
     "include_in_feature_info": False,
     "needed_bands": ["oa_fmask"],
     "color_ramp": [
-        {"value": 0, "color": "#ff0000"},  # red - nodata - what could go wrong if we make it red?
-        {"value": 1, "color": "#00ff00"},  # green - valid
-        {"value": 2, "color": "#0000ff"},  # blue - cloud
-        {"value": 3, "color": "#ffff00"},  # yellow - shadow
-        {"value": 4, "color": "#00ffff"},  # cyan - snow
-        {"value": 5, "color": "#ff00ff"},  # magenta - water
+        {"value": 0, "color": "#ff0000", "alpha": 0.0},  # red - nodata - what could go wrong if we make it red?
+        {"value": 1, "color": "#A0C591"},  # clear/valid
+        {"value": 2, "color": "#C2C1C0"},  # cloud
+        {"value": 3, "color": "#4B4B37"},  # shadow
+        {"value": 4, "color": "#E0EEFF"},  # snow
+        {"value": 5, "color": "#556E8B"},  # water
     ],
 }
 
