@@ -459,14 +459,59 @@ style_c3_fmask = {
     "abstract": "Fmask (Function of mask) is used for automated clouds, cloud shadows, snow, and water masking for Landsats 4-8 and Sentinel 2 images.",
     "include_in_feature_info": False,
     "needed_bands": ["oa_fmask"],
-    "color_ramp": [
-        {"value": 0, "color": "#ff0000", "alpha": 0.0},  # red - nodata - what could go wrong if we make it red?
-        {"value": 1, "color": "#A0C591"},  # clear/valid
-        {"value": 2, "color": "#C2C1C0"},  # cloud
-        {"value": 3, "color": "#4B4B37"},  # shadow
-        {"value": 4, "color": "#E0EEFF"},  # snow
-        {"value": 5, "color": "#556E8B"},  # water
-    ],
+    "value_map": {
+        "fmask": [
+            {
+                "title": "No Data
+                "abstract": "",
+                "values": [
+                    0,    # nodata
+                ],
+                "alpha": 0.0,
+                "color": "#FFFFFF",
+            },
+            {
+                "title": "Clear"
+                "abstract": "",
+                "values": [
+                    1,    # clear/valid
+                ],
+                "color": "#A0C591",
+            },
+            {
+                "title": "Cloud"
+                "abstract": "",
+                "values": [
+                    2,    # cloud
+                ],
+                "color": "#C2C1C0",
+            },
+            {
+                "title": "Shadow"
+                "abstract": "",
+                "values": [
+                    3    # shadow
+                ],
+                "color": "#4B4B37",
+            },
+            {
+                "title": "Snow"
+                "abstract": "",
+                "values": [
+                    4    # snow
+                ],
+                "color": "#E0EEFF",
+            },
+            {
+                "title": "Water
+                "abstract": "",
+                "values": [
+                    5    # water
+                ],
+                "color": "#556E8B",
+            },
+        ]
+    }
 }
 
 # Styles grouping
