@@ -9,6 +9,7 @@ bands_c3_ls_common = {
     "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
     "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
     "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
+    "oa_fmask": ["oa_fmask"],
 }
 
 
