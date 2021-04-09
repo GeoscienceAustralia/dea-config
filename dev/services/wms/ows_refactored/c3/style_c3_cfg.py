@@ -462,7 +462,7 @@ style_c3_fmask = {
     "value_map": {
         "fmask": [
             {
-                "title": "No Data
+                "title": "No Data"
                 "abstract": "",
                 "values": [
                     0,    # nodata
