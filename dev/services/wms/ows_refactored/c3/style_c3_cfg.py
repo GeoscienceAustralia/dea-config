@@ -453,6 +453,22 @@ style_c3_nbr = {
     ],
 }
 
+style_c3_fmask = {
+    "name": "fmask",
+    "title": "FMASK - Pixel Classification",
+    "abstract": "Fmask (Function of mask) is used for automated clouds, cloud shadows, snow, and water masking for Landsats 4-8 and Sentinel 2 images.",
+    "include_in_feature_info": False,
+    "needed_bands": ["oa_fmask"],
+    "color_ramp": [
+        {"value": 0, "color": "#ff0000"},  # red - nodata - what could go wrong if we make it red?
+        {"value": 1, "color": "#00ff00"},  # green - valid
+        {"value": 2, "color": "#0000ff"},  # blue - cloud
+        {"value": 3, "color": "#ffff00"},  # yellow - shadow
+        {"value": 4, "color": "#00ffff"},  # cyan - snow
+        {"value": 5, "color": "#ff00ff"},  # magenta - water
+    ],
+}
+
 # Styles grouping
 styles_c3_ls_common = [
     style_c3_true_colour,
@@ -467,6 +483,7 @@ styles_c3_ls_common = [
     style_c3_pure_nir,
     style_c3_pure_swir1,
     style_c3_pure_swir2,
+    style_c3_fmask,
 ]
 
 
