@@ -462,7 +462,7 @@ style_c3_fmask = {
     "value_map": {
         "fmask": [
             {
-                "title": "No Data"
+                "title": "No Data",
                 "abstract": "",
                 "values": [
                     0,    # nodata
@@ -471,7 +471,7 @@ style_c3_fmask = {
                 "color": "#FFFFFF",
             },
             {
-                "title": "Clear"
+                "title": "Clear",
                 "abstract": "",
                 "values": [
                     1,    # clear/valid
@@ -479,7 +479,7 @@ style_c3_fmask = {
                 "color": "#A0C591",
             },
             {
-                "title": "Cloud"
+                "title": "Cloud",
                 "abstract": "",
                 "values": [
                     2,    # cloud
@@ -487,7 +487,7 @@ style_c3_fmask = {
                 "color": "#C2C1C0",
             },
             {
-                "title": "Shadow"
+                "title": "Shadow",
                 "abstract": "",
                 "values": [
                     3    # shadow
@@ -495,7 +495,7 @@ style_c3_fmask = {
                 "color": "#4B4B37",
             },
             {
-                "title": "Snow"
+                "title": "Snow",
                 "abstract": "",
                 "values": [
                     4    # snow
@@ -503,7 +503,7 @@ style_c3_fmask = {
                 "color": "#E0EEFF",
             },
             {
-                "title": "Water
+                "title": "Water",
                 "abstract": "",
                 "values": [
                     5    # water
