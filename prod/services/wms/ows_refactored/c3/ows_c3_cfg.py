@@ -257,7 +257,6 @@ style_c3_pure_swir2 = {
     "scale_range": [0.0, 3000.0],
 }
 
-
 # Styles grouping
 styles_c3_ls_common = [
     style_c3_true_colour,
