@@ -11,6 +11,15 @@ style_c3_wofs_obs = {
                 "title": "",
                 "abstract": "",
                 "flags": {
+                    "nodata": True,
+                },
+                "alpha": 0.0,
+                "color": "#707070",
+            },
+            {
+                "title": "",
+                "abstract": "",
+                "flags": {
                     "and": {
                         "noncontiguous": True,
                         "low_solar_angle": True
@@ -35,7 +44,7 @@ style_c3_wofs_obs = {
                 "abstract": "",
                 "flags": {
                     "and": {
-                        "wet": True,
+                        "water_observed": True,
                         "cloud": True
                     }
                 },
@@ -46,7 +55,7 @@ style_c3_wofs_obs = {
                 "abstract": "",
                 "flags": {
                     "and": {
-                        "wet": True,
+                        "water_observed": True,
                         "cloud_shadow": True
                     }
                 },
@@ -79,14 +88,14 @@ style_c3_wofs_obs = {
             {
                 "title": "Water",
                 "abstract": "",
-                "flags": {"wet": True},
+                "flags": {"water_observed": True},
                 "color": "#4F81BD",
             },
             {
                 "title": "Dry",
                 "abstract": "",
                 "flags": {
-                    "dry": True,
+                    "water_observed": False,
                 },
                 "color": "#96966e",
             },
