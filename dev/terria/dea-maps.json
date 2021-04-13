@@ -1020,7 +1020,7 @@
 				  {
 					 "type":"wms",
 					 "name":"Digital Earth Australia Coastlines",
-					 "id": "dea_coastlines2",
+					 "id": "dea_coastlines",
 					 "url":"https://geoserver.dea.ga.gov.au/geoserver/wms",
 					 "opacity":"1.0",
 					 "layers":"dea:DEACoastLines",
@@ -1039,7 +1039,7 @@
 						{
 						   "type":"wms",
 						   "name":"Annual coastlines",
-						   "id": "dea_coastlines_annual2",
+						   "id": "dea_coastlines_annual",
 						   "url":"https://geoserver.dea.ga.gov.au/geoserver/wms",
 						   "opacity":"1.0",
 						   "layers":"dea:AnnualCoastlines",
@@ -1052,7 +1052,7 @@
 						{
 						   "type":"wms",
 						   "name":"Rates of change statistics",
-						   "id": "dea_coastlines_statistics2",
+						   "id": "dea_coastlines_statistics",
 						   "url":"https://geoserver.dea.ga.gov.au/geoserver/wms",
 						   "opacity":"1.0",
 						   "layers":"dea:RateOfChangeStatistics",
