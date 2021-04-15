@@ -470,7 +470,7 @@ style_c3_nbr = {
 
 style_c3_fmask = {
     "name": "fmask",
-    "title": "FMASK - Pixel Classification",
+    "title": "Fmask Classification",
     "abstract": "Fmask (Function of mask) is used for automated clouds, cloud shadows, snow, and water masking for Landsats 4-8 and Sentinel 2 images.",
     "include_in_feature_info": False,
     "needed_bands": ["oa_fmask"],
