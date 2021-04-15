@@ -491,7 +491,7 @@ style_c3_fmask = {
                 "values": [
                     1,    # clear/valid
                 ],
-                "color": "#A0C591",
+                "color": "#84A278",
             },
             {
                 "title": "Cloud",
@@ -499,7 +499,7 @@ style_c3_fmask = {
                 "values": [
                     2,    # cloud
                 ],
-                "color": "#C2C1C0",
+                "color": "#D0CFCE",
             },
             {
                 "title": "Shadow",
@@ -507,7 +507,7 @@ style_c3_fmask = {
                 "values": [
                     3    # shadow
                 ],
-                "color": "#4B4B37",
+                "color": "#464633",
             },
             {
                 "title": "Snow",
@@ -515,7 +515,7 @@ style_c3_fmask = {
                 "values": [
                     4    # snow
                 ],
-                "color": "#E0EEFF",
+                "color": "#E0EDFF",
             },
             {
                 "title": "Water",
@@ -523,7 +523,7 @@ style_c3_fmask = {
                 "values": [
                     5    # water
                 ],
-                "color": "#556E8B",
+                "color": "#475B74",
             },
         ]
     }
