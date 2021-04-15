@@ -7,7 +7,7 @@ specification:
   measurement_renames:
     oa_fmask: fmask
   
-  aws_unsigned: True
+  aws_unsigned: False
   transform: wofs.virtualproduct.WOfSClassifier
   transform_url: 'https://github.com/GeoscienceAustralia/wofs/'
   override_product_family: ard
