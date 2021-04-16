@@ -1001,9 +1001,13 @@
             "product": [
                 "ga_ls_fc_3"
             ],
-            "styles_count": 1,
+            "styles_count": 5,
             "styles_list": [
-                "simple_fc"
+                "simple_fc",
+                "fc_rgb",
+                "bare_ground_c3",
+                "green_veg_c3",
+                "non_green_veg_c3"
             ]
         }
     ],
