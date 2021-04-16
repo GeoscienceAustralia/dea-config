@@ -905,7 +905,7 @@
                 "nir",
                 "swir1",
                 "swir2",
-                "NBR",
+                "nbr",
                 "panchromatic",
                 "aerosol",
                 "fmask"
@@ -928,7 +928,7 @@
                 "nir",
                 "swir1",
                 "swir2",
-                "NBR",
+                "nbr",
                 "panchromatic",
                 "fmask"
             ]
@@ -950,7 +950,7 @@
                 "nir",
                 "swir1",
                 "swir2",
-                "NBR",
+                "nbr",
                 "fmask"
             ]
         },
@@ -973,7 +973,7 @@
                 "nir",
                 "swir1",
                 "swir2",
-                "NBR",
+                "nbr",
                 "fmask"
             ]
         },
