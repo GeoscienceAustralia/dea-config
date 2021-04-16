@@ -1,4 +1,8 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_legend_cfg import (
+    legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
+    legend_idx_0_100_pixel_fc_ngv_25ticks)
+from ows_refactored.fc.style_fc_cfg import fc_pq_mask
 
 bands_fc_3 = {
     "bs": ["bare_soil"],
@@ -37,6 +41,138 @@ style_fc_3_simple = {
     ],
 }
 
+style_fc_c3_rgb = {
+    "name": "fc_rgb",
+    "title": "Three-band fractional cover",
+    "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
+    "components": {
+        "red": {"bs": 1.0},
+        "green": {"pv": 1.0},
+        "blue": {"npv": 1.0},
+    },
+    "scale_range": [0.0, 100.0],
+    "pq_masks": fc_pq_mask,
+    "legend": {
+        "show_legend": True,
+        "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
+    },
+}
+
+style_fc_gv_c3 = {
+    "name": "green_veg_c3",
+    "title": "Green Vegetation Percentile",
+    "abstract": "Annual Percentile of Green Vegetation",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "pv",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["pv"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#ffffcc",
+        },
+        {
+            "value": 25,
+            "color": "#c2e699",
+        },
+        {
+            "value": 50,
+            "color": "#78c679",
+        },
+        {
+            "value": 75,
+            "color": "#31a354",
+        },
+        {
+            "value": 100,
+            "color": "#006837",
+        },
+    ],
+    "pq_masks": fc_pq_mask,
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
+}
+
+style_fc_bs_c3 = {
+    "name": "bare_ground_c3",
+    "title": "Bare Ground Percentile",
+    "abstract": "Annual Percentile of Bare Soil",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "bs",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["bs"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#feebe2",
+        },
+        {
+            "value": 25,
+            "color": "#fbb4b9",
+        },
+        {
+            "value": 50,
+            "color": "#f768a1",
+        },
+        {
+            "value": 75,
+            "color": "#c51b8a",
+        },
+        {
+            "value": 100,
+            "color": "#7a0177",
+        },
+    ],
+    "pq_masks": fc_pq_mask,
+    # Emulates what we had previously
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
+}
+
+style_fc_ngv_c3 = {
+    "name": "non_green_veg_c3",
+    "title": "Non green vegetation Percentile",
+    "abstract": "Annual Percentile of Non Green Vegetation",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "npv",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["npv"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#ffffd4",
+        },
+        {"value": 25, "color": "#fed98e", "legend": {}},
+        {
+            "value": 50,
+            "color": "#fe9929",
+        },
+        {
+            "value": 75,
+            "color": "#d95f0e",
+        },
+        {
+            "value": 100,
+            "color": "#993404",
+        },
+    ],
+    # Emulates what we had previously
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
+    "pq_masks": fc_pq_mask,
+}
 
 layers = {
     "title": "Geoscience Australia Landsat Fractional Cover Collection 3",
@@ -90,6 +226,10 @@ For service status information, see https://status.dea.ga.gov.au
         "default_style": "simple_fc",
         "styles": [
             style_fc_3_simple,
+            style_fc_c3_rgb,
+            style_fc_bs_c3,
+            style_fc_gv_c3,
+            style_fc_ngv_c3,
         ],
     },
 }
