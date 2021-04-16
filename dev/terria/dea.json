@@ -322,7 +322,7 @@
                         {
                             "name": "Surface Reflectance (Landsat)",
                             "type": "wms",
-                            "layers": "dea_c3_ls_combined",
+                            "layers": "ga_ls_ard_3",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                             "linkedWcsCoverage": "dea_c3_ls_combined",
