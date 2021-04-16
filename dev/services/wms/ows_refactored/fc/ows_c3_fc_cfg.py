@@ -42,9 +42,19 @@ layers = {
     "title": "Geoscience Australia Landsat Fractional Cover Collection 3",
     "name": "ga_ls_fc_3",
     "abstract": """
-Fractional cover data can be used to identify large scale patterns and trends and inform evidence based decision making and policy on topics including wind and water erosion risk, soil carbon dynamics, land management practices and rangeland condition.
+Fractional Cover (FC), developed by the Joint Remote Sensing Research Program, is a measurement that splits the landscape into three parts, or fractions:
 
-This information is used by policy agencies, natural and agricultural land resource managers, and scientists to monitor land conditions over large areas over long time frames.
+green (leaves, grass, and growing crops)
+
+brown (branches, dry grass or hay, and dead leaf litter)
+
+bare ground (soil or rock)
+
+DEA uses Fractional Cover to characterise every 30 m square of Australia for any point in time from 1987 to today.
+
+https://cmi.ga.gov.au/data-products/dea/629/dea-fractional-cover-landsat-c3
+
+For service status information, see https://status.dea.ga.gov.au
 """,
     "product_name": "ga_ls_fc_3",
     "bands": bands_fc_3,
