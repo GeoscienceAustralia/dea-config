@@ -122,6 +122,57 @@ style_c3_ndvi = {
         },
     ],
     "legend": legend_idx_0_1_5ticks,
+    # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
+    "multi_date": [
+        # A multi-date handler.  Different handlers can be declared for different numbers of dates in a request.
+        {
+            # The count range for which this handler is to be used - a tuple of two ints, the smallest and
+            # largest date counts for which this handler will be used.  Required.
+            "allowed_count_range": [2, 2],
+            # A function, expressed in the standard format as described elsewhere in this example file.
+            # The function is assumed to take one arguments, an xarray Dataset.
+            # The function returns an xarray Dataset with a single band, which is the input to the
+            # colour ramp defined below.
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_delta"
+            },
+            "mpl_ramp": "RdYlBu",
+            "range": [-1.0, 1.0],
+            "pq_masks": [
+                {
+                    "band": "oa_fmask",
+                    "enum": 0,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 2,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 3,
+                    "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
+                },
+            ],
+            "legend": {
+                "begin": "-1.0",
+                "end": "1.0",
+                "ticks": [
+                    "-1.0",
+                    "0.0",
+                    "1.0",
+                ],
+            },
+            # The feature info label for the multi-date index value.
+            "feature_info_label": "ndvi_delta",
+        }
+    ],
 }
 
 style_c3_ndwi = {
@@ -184,6 +235,57 @@ style_c3_ndwi = {
             "0.5": {"prefix": ">"},
         },
     },
+    # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
+    "multi_date": [
+        # A multi-date handler.  Different handlers can be declared for different numbers of dates in a request.
+        {
+            # The count range for which this handler is to be used - a tuple of two ints, the smallest and
+            # largest date counts for which this handler will be used.  Required.
+            "allowed_count_range": [2, 2],
+            # A function, expressed in the standard format as described elsewhere in this example file.
+            # The function is assumed to take one arguments, an xarray Dataset.
+            # The function returns an xarray Dataset with a single band, which is the input to the
+            # colour ramp defined below.
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_delta"
+            },
+            "mpl_ramp": "RdYlBu",
+            "range": [-1.0, 1.0],
+            "pq_masks": [
+                {
+                    "band": "oa_fmask",
+                    "enum": 0,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 2,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 3,
+                    "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
+                },
+            ],
+            "legend": {
+                "begin": "-1.0",
+                "end": "1.0",
+                "ticks": [
+                    "-1.0",
+                    "-0.0",
+                    "1.0",
+                ],
+            },
+            # The feature info label for the multi-date index value.
+            "feature_info_label": "ndwi_delta",
+        }
+    ],
 }
 
 style_c3_mndwi = {
@@ -223,6 +325,57 @@ style_c3_mndwi = {
         },
     ],
     "legend": legend_idx_0_1_5ticks,
+    # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
+    "multi_date": [
+        # A multi-date handler.  Different handlers can be declared for different numbers of dates in a request.
+        {
+            # The count range for which this handler is to be used - a tuple of two ints, the smallest and
+            # largest date counts for which this handler will be used.  Required.
+            "allowed_count_range": [2, 2],
+            # A function, expressed in the standard format as described elsewhere in this example file.
+            # The function is assumed to take one arguments, an xarray Dataset.
+            # The function returns an xarray Dataset with a single band, which is the input to the
+            # colour ramp defined below.
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_delta"
+            },
+            "mpl_ramp": "RdYlBu",
+            "range": [-1.0, 1.0],
+            "pq_masks": [
+                {
+                    "band": "oa_fmask",
+                    "enum": 0,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 2,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 3,
+                    "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
+                },
+            ],
+            "legend": {
+                "begin": "-1.0",
+                "end": "1.0",
+                "ticks": [
+                    "-1.0",
+                    "0.0",
+                    "1.0",
+                ],
+            },
+            # The feature info label for the multi-date index value.
+            "feature_info_label": "mndwi_delta",
+        }
+    ],
 }
 
 style_c3_pure_blue = {
@@ -385,25 +538,20 @@ style_c3_nbr = {
             },
             "color_ramp": [
                 {"value": -0.5, "color": "#768642", "alpha": 0.0},
-                {"value": -0.5, "color": "#768642", "legend": {"label": "<-0.50"}},
-                {
-                    "value": -0.25,
-                    "color": "#768642",
-                    "alpha": 1.0,
-                    "legend": {"label": "-0.25"},
-                },
+                {"value": -0.5, "color": "#768642"},
+                {"value": -0.25, "color": "#768642", "alpha": 1.0},
                 {"value": -0.25, "color": "#a4bd5f"},
-                {"value": -0.1, "color": "#a4bd5f", "legend": {"label": "-0.1"}},
+                {"value": -0.1, "color": "#a4bd5f"},
                 {"value": -0.1, "color": "#00e05d"},
                 {"value": 0.1, "color": "#00e05d"},
-                {"value": 0.1, "color": "#fdf950", "legend": {"label": "0.1"}},
-                {"value": 0.27, "color": "#fdf950", "legend": {"label": "0.27"}},
+                {"value": 0.1, "color": "#fdf950"},
+                {"value": 0.27, "color": "#fdf950"},
                 {"value": 0.27, "color": "#ffae52"},
-                {"value": 0.44, "color": "#ffae52", "legend": {"label": "0.44"}},
+                {"value": 0.44, "color": "#ffae52"},
                 {"value": 0.44, "color": "#ff662e"},
-                {"value": 0.66, "color": "#ff662e", "legend": {"label": "0.66"}},
+                {"value": 0.66, "color": "#ff662e"},
                 {"value": 0.66, "color": "#ad28cc"},
-                {"value": 0.88, "color": "#ad28cc", "legend": {"label": ">1.30"}},
+                {"value": 0.88, "color": "#ad28cc"},
             ],
             "pq_masks": [
                 {
