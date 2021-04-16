@@ -32,11 +32,7 @@ bands_c3_ls_8.update(
 layers = {
     "title": "Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain Collection 3",
     "abstract": """
-    The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
-
-In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
-
-We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
+    This product takes Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 For service status information, see https://status.dea.ga.gov.au
     """,
@@ -44,7 +40,7 @@ For service status information, see https://status.dea.ga.gov.au
         {
             "title": "Geoscience Australia Landsat 8 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
             "abstract": """
-This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 The imagery is captured using the Operational Land Imager (OLI) and Thermal Infra-Red Scanner (TIRS) sensors aboard Landsat 8.
 
@@ -52,10 +48,14 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 It contains three sub-products that provide corrections or attribution information:
 
-Surface Reflectance NBAR 3 (Landsat 8 OLI-TIRS)
-Surface Reflectance NBART 3 (Landsat 8 OLI-TIRS)
-Surface Reflectance OA 3 (Landsat 8 OLI-TIRS)
-The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.""",
+DEA Surface Reflectance NBAR (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/402/dea-surface-reflectance-nbar-landsat-8-oli-tirs
+DEA Surface Reflectance NBART (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/400/dea-surface-reflectance-nbart-landsat-8-oli-tirs
+DEA Surface Reflectance OA (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/404/dea-surface-reflectance-oa-landsat-8-oli-tirs
+The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.
+
+https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs
+
+For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
             "name": "ga_ls8c_ard_3",
             # The Datacube name for the associated data product
@@ -92,10 +92,18 @@ The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive."""
         {
             "title": "Geoscience Australia Landsat 7 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
             "abstract": """
-The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
-In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
+This product takes Landsat 7 Enhanced Thematic Mapper Plus (ETM+) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
-We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
+This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
+
+It contains three sub-products that provide corrections or attribution information:
+
+DEA Surface Reflectance NBAR (Landsat 7 ETM+) https://cmi.ga.gov.au/data-products/dea/476/dea-surface-reflectance-nbar-landsat-7-etm
+DEA Surface Reflectance NBART (Landsat 7 ETM+) https://cmi.ga.gov.au/data-products/dea/399/dea-surface-reflectance-nbart-landsat-7-etm
+DEA Surface Reflectance OA (Landsat 7 ETM+) https://cmi.ga.gov.au/data-products/dea/478/dea-surface-reflectance-oa-landsat-7-etm
+The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.
+
+https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm
 
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
@@ -134,12 +142,18 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "Geoscience Australia Landsat 5 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
             "abstract": """
-The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
+This product takes Landsat 5 Thematic Mapper (TM) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
-In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
+This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
 
-We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
+It contains three sub-products that provide corrections or attribution information:
 
+DEA Surface Reflectance NBAR (Landsat 5 TM) https://cmi.ga.gov.au/data-products/dea/367/dea-surface-reflectance-nbar-landsat-5-tm
+DEA Surface Reflectance NBART (Landsat 5 TM) https://cmi.ga.gov.au/data-products/dea/477/dea-surface-reflectance-nbart-landsat-5-tm
+DEA Surface Reflectance OA (Landsat 5 TM) https://cmi.ga.gov.au/data-products/dea/369/dea-surface-reflectance-oa-landsat-5-tm
+The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.
+
+https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
 
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
@@ -178,13 +192,14 @@ For service status information, see https://status.dea.ga.gov.au""",
         },
         {
             "title": "Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain Collection 3",
-            "name": "dea_c3_ls_combined",
+            "name": "ga_ls_ard_3",
             "abstract": """
-The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
+This product takes Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
-In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
-
-We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
+This product combines:
+Landsat 8 imagery https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs,
+Landsat 7 imagery https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm and
+Landsat 5 Imagery https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
 
 For service status information, see https://status.dea.ga.gov.au""",
             "multi_product": True,
