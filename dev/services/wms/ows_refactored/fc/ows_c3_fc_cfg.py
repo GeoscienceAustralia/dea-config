@@ -1,8 +1,8 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.fc.style_fc_cfg import fc_pq_mask
 from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
     legend_idx_0_100_pixel_fc_ngv_25ticks)
-from ows_refactored.fc.style_fc_cfg import fc_pq_mask
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 bands_fc_3 = {
     "bs": ["bare_soil"],
