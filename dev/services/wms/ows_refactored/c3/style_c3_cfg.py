@@ -453,8 +453,8 @@ style_c3_pure_swir2 = {
 }
 
 style_c3_nbr = {
-    "name": "NBR",
-    "title": "Normalised Burn Ratio",
+    "name": "nbr",
+    "title": "Normalised Burn Ratio - NIR, SWIR",
     "abstract": "Normalised Burn Ratio - a derived index that that uses the differences in the way health green vegetation and burned vegetation reflect light to find burned area",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
