@@ -20,6 +20,16 @@ reslim_mangrove = {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 15.0,
         # "max_datasets": 16, # Defaults to no dataset limit
+        "dataset_cache_rules": [
+            {
+                "min_datasets": 5,
+                "max_age": 60*60*24,
+            },
+            {
+                "min_datasets": 9,
+                "max_age": 60*60*24*14,
+            }
+        ],
     },
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
@@ -46,14 +56,6 @@ reslim_tmad = {
     "wcs": {
         # "max_datasets": 16, # Defaults to no dataset limit
     },
-}
-
-reslim_waterbody = {
-    "wms": {
-        "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_factor": 0,
-    },
-    "wcs": {},
 }
 
 reslim_wofs = reslim_mangrove
@@ -93,6 +95,39 @@ reslim_hap = {
 
 # Reusable Chunks 2. Band lists.
 
+bands_collection3_landsat_5 = {
+    "nbart_blue": ["nbart_blue"],
+    "nbart_green": ["nbart_green"],
+    "nbart_red": ["nbart_red"],
+    "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
+    "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
+    "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
+}
+
+
+bands_collection3_landsat_7 = {
+    "nbart_blue": ["nbart_blue"],
+    "nbart_green": ["nbart_green"],
+    "nbart_red": ["nbart_red"],
+    "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
+    "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
+    "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
+    "nbart_panchromatic": [],
+}
+
+
+bands_collection3_landsat_8 = {
+    "nbart_blue": ["nbart_blue"],
+    "nbart_green": ["nbart_green"],
+    "nbart_red": ["nbart_red"],
+    "nbart_nir": ["nbart_nir", "nbart_near_infrared"],
+    "nbart_swir_1": ["nbart_swir_1", "nbart_shortwave_infrared_1"],
+    "nbart_swir_2": ["nbart_swir_2", "nbart_shortwave_infrared_2"],
+    "nbart_panchromatic": [],
+    "nbart_coastal_aerosol": ["coastal_aerosol",  "nbart_coastal_aerosol"],
+}
+
+
 bands_ls8 = {
     "red": ["red"],
     "green": ["green"],
@@ -127,6 +162,22 @@ bands_wofs_sum = {
 
 bands_wofs_obs = {
     "water": [],
+}
+
+bands_sentinel2_ard_nbar = {
+    "nbar_coastal_aerosol": ["nbar_coastal_aerosol", "coastal_aerosol",  "nbart_coastal_aerosol",
+        "nbart_narrow_blue", "nbar_narrow_blue"
+        "narrow_blue"],
+    "nbar_blue": ["nbar_blue", "blue", "nbart_blue"],
+    "nbar_green": ["nbar_green", "green", "nbart_green"],
+    "nbar_red": ["nbar_red", "red", "nbart_red"],
+    "nbar_red_edge_1": ["nbar_red_edge_1", "red_edge_1", "nbart_red_edge_1"],
+    "nbar_red_edge_2": ["nbar_red_edge_2", "red_edge_2", "nbart_red_edge_2"],
+    "nbar_red_edge_3": ["nbar_red_edge_3", "red_edge_3", "nbart_red_edge_3"],
+    "nbar_nir_1": ["nbar_nir_1", "nir", "nir_1", "nbart_nir_1"],
+    "nbar_nir_2": ["nbar_nir_2", "nir2", "nbart_nir_2"],
+    "nbar_swir_2": ["nbar_swir_2", "swir_2", "nbart_swir_2"],
+    "nbar_swir_3": ["nbar_swir_3", "swir_3", "nbart_swir_3"],
 }
 
 bands_sentinel2 = {
@@ -169,6 +220,12 @@ bands_weathering = {
     "intensity": [],
 }
 
+bands_tcw_percentile = {
+    "TCW_PC_10": [],
+    "TCW_PC_50": [],
+    "TCW_PC_90": [],
+}
+
 bands_fc_percentile = {
     "PV_PC_10": [],
     "PV_PC_50": [],
@@ -203,9 +260,6 @@ bands_item_conf = {
     "stddev": [],
 }
 
-bands_wamm = {
-    "dam_id": [],
-}
 
 bands_hap = {
     "Band_1": [],
@@ -342,6 +396,207 @@ legend_idx_0_100_pixel_fc_bs_25ticks = {
 
 # Reusable Chunks 4. Styles
 
+style_c3_pure_aerosol = {
+    "name": "aerosol",
+    "title": "Narrow Blue - 440",
+    "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
+    "components": {
+        "red": {"nbart_coastal_aerosol": 1.0},
+        "green": {"nbart_coastal_aerosol": 1.0},
+        "blue": {"nbart_coastal_aerosol": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_pure_panchromatic = {
+    "name": "panchromatic",
+    "title": "Narrow Blue - 440",
+    "abstract": "panchromatic",
+    "components": {
+        "red": {"nbart_panchromatic": 1.0},
+        "green": {"nbart_panchromatic": 1.0},
+        "blue": {"nbart_panchromatic": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_simple_rgb = {
+    "name": "simple_rgb",
+    "title": "Simple RGB",
+    "abstract": "Simple true-colour image, using the red, green and blue bands",
+    "components": {"red": {"nbart_red": 1.0}, "green": {"nbart_green": 1.0}, "blue": {"nbart_blue": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_false_colour = {
+    "name": "false_colour",
+    "title": "False Colour",
+    "abstract": "Simple false-colour image using ASTER Bands 3 as red, 2 as green and 1 as blue",
+    "components": {
+        "red": {"nbart_green": 1.0},
+        "green": {"nbart_swir_1": 1.0},
+        "blue": {"nbart_nir": 1.0},
+    },
+    "scale_range": [0.0, 255.0],
+}
+
+style_c3_ndvi = {
+    "name": "ndvi",
+    "title": "NDVI - Red, NIR",
+    "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "mapped_bands": True,
+        "kwargs": {"band1": "nbart_nir", "band2": "nbart_red"},
+    },
+    "needed_bands": ["nbart_red", "nbart_nir"],
+    "color_ramp": [
+        {"value": -0.0, "color": "#8F3F20", "alpha": 0.0},
+        {"value": 0.0, "color": "#8F3F20", "alpha": 1.0},
+        {"value": 0.1, "color": "#A35F18"},
+        {"value": 0.2, "color": "#B88512"},
+        {"value": 0.3, "color": "#CEAC0E"},
+        {"value": 0.4, "color": "#E5D609"},
+        {"value": 0.5, "color": "#FFFF0C"},
+        {"value": 0.6, "color": "#C3DE09"},
+        {"value": 0.7, "color": "#88B808"},
+        {"value": 0.8, "color": "#529400"},
+        {"value": 0.9, "color": "#237100"},
+        {"value": 1.0, "color": "#114D04"},
+    ],
+    "legend": legend_idx_0_1_5ticks,
+}
+
+style_c3_ndwi = {
+    "name": "ndwi",
+    "title": "NDWI - Green, NIR",
+    "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "mapped_bands": True,
+        "kwargs": {"band1": "nbart_green", "band2": "nbart_nir"},
+    },
+    "needed_bands": ["nbart_green", "nbart_nir"],
+    "color_ramp": [
+        {"value": -0.1, "color": "#f7fbff", "alpha": 0.0},
+        {
+            "value": 0.0,
+            "color": "#d8e7f5",
+        },
+        {"value": 0.1, "color": "#b0d2e8"},
+        {
+            "value": 0.2,
+            "color": "#73b3d8",
+        },
+        {"value": 0.3, "color": "#3e8ec4"},
+        {
+            "value": 0.4,
+            "color": "#1563aa",
+        },
+        {
+            "value": 0.5,
+            "color": "#08306b",
+        },
+    ],
+    "legend": {
+        "begin": "0.0",
+        "end": "0.5",
+        "decimal_places": 1,
+        "ticks": ["0.0", "0.2", "0.4", "0.5"],
+        "tick_labels": {
+            "0.0": {"prefix": "<"},
+            "0.2": {"label": "0.2"},
+            "0.4": {"label": "0.4"},
+            "0.5": {"prefix": ">"},
+        },
+    },
+}
+
+style_c3_mndwi = {
+    "name": "mndwi",
+    "title": "MNDWI - Green, SWIR",
+    "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "mapped_bands": True,
+        "kwargs": {"band1": "nbart_green", "band2": "nbart_swir_1"},
+    },
+    "needed_bands": ["nbart_green", "nbart_swir_1"],
+    "color_ramp": [
+        {"value": -0.1, "color": "#f7fbff", "alpha": 0.0},
+        {"value": 0.0, "color": "#d8e7f5"},
+        {"value": 0.2, "color": "#b0d2e8"},
+        {"value": 0.4, "color": "#73b3d8"},
+        {"value": 0.6, "color": "#3e8ec4"},
+        {"value": 0.8, "color": "#1563aa"},
+        {"value": 1.0, "color": "#08306b"},
+    ],
+    "legend": legend_idx_0_1_5ticks,
+}
+
+style_c3_pure_blue = {
+    "name": "blue",
+    "title": "Blue - 480",
+    "abstract": "Blue band, centered on 480nm",
+    "components": {"red": {"nbart_blue": 1.0}, "green": {"nbart_blue": 1.0}, "blue": {"nbart_blue": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_pure_green = {
+    "name": "green",
+    "title": "Green - 560",
+    "abstract": "Green band, centered on 560nm",
+    "components": {
+        "red": {"nbart_green": 1.0},
+        "green": {"nbart_green": 1.0},
+        "blue": {"nbart_green": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_pure_red = {
+    "name": "red",
+    "title": "Red - 660",
+    "abstract": "Red band, centered on 660nm",
+    "components": {"red": {"nbart_red": 1.0}, "green": {"nbart_red": 1.0}, "blue": {"nbart_red": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+
+style_c3_pure_nir = {
+    "name": "nir",
+    "title": "Near Infrared (NIR) - 840",
+    "abstract": "Near infra-red band, centered on 840nm",
+    "components": {"red": {"nbart_nir": 1.0}, "green": {"nbart_nir": 1.0}, "blue": {"nbart_nir": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+
+style_c3_pure_swir1 = {
+    "name": "swir1",
+    "title": "Shortwave Infrared (SWIR) - 1650",
+    "abstract": "Short wave infra-red band 1, centered on 1650nm",
+    "components": {
+        "red": {"nbart_swir_1": 1.0},
+        "green": {"nbart_swir_1": 1.0},
+        "blue": {"nbart_swir_1": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_c3_pure_swir2 = {
+    "name": "swir2",
+    "title": "Shortwave Infrared (SWIR) - 2220",
+    "abstract": "Short wave infra-red band 2, centered on 2220nm",
+    "components": {
+        "red": {"nbart_swir_2": 1.0},
+        "green": {"nbart_swir_2": 1.0},
+        "blue": {"nbart_swir_2": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+
 style_ls_simple_rgb = {
     "name": "simple_rgb",
     "title": "Simple RGB",
@@ -387,7 +642,7 @@ style_ls_ndvi = {
     "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "nir", "band2": "red"},
     },
     "needed_bands": ["red", "nir"],
@@ -415,7 +670,7 @@ style_ls_ndwi = {
     "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "green", "band2": "nir"},
     },
     "needed_bands": ["green", "nir"],
@@ -460,7 +715,7 @@ style_ls_mndwi = {
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "green", "band2": "swir1"},
     },
     "needed_bands": ["green", "swir1"],
@@ -582,7 +837,7 @@ style_nd_ferric_iron = {
     "abstract": "Normalised Difference Ferric Iron Index - a derived index that correlates well with the existence of Ferric Iron Content",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "red", "band2": "blue"},
     },
     "needed_bands": ["red", "blue"],
@@ -609,7 +864,7 @@ style_nd_soil = {
     "abstract": "Normalised Difference Soil Index - a derived index that correlates well with the existence of bare Soil/Rock",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "swir1", "band2": "nir"},
     },
     "needed_bands": ["nir", "swir1"],
@@ -631,7 +886,7 @@ style_nd_clay_mica = {
     "abstract": "Normalised Difference Clay and Mica Minerals Index - a derived index that correlates well with the existence of hydroxyl bearing minerals (clay and mica minerals)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "swir1", "band2": "swir2"},
     },
     "needed_bands": ["swir1", "swir2"],
@@ -693,7 +948,7 @@ style_wofs_filt_freq = {
     "abstract": "WOfS filtered summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "wofs_filtered_summary",
         },
@@ -729,7 +984,7 @@ style_wofs_filt_freq_blue = {
     "abstract": "WOfS filtered summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "wofs_filtered_summary",
         },
@@ -766,7 +1021,7 @@ style_wofs_count_wet = {
     "abstract": "WOfS summary showing the count of water observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_wet",
         },
@@ -808,7 +1063,7 @@ style_wofs_count_clear = {
     "abstract": "WOfS summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_clear",
         },
@@ -858,7 +1113,7 @@ style_wofs_frequency = {
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         },
@@ -894,7 +1149,7 @@ style_wofs_frequency_blue = {
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         },
@@ -931,7 +1186,7 @@ style_wofs_confidence = {
     "abstract": "WOfS Confidence",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "confidence",
         },
@@ -962,7 +1217,7 @@ style_wofs_seasonal_wet = {
     "needed_bands": ["count_wet"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_wet",
         },
@@ -1000,7 +1255,7 @@ style_wofs_summary_wet = {
     "abstract": "WOfS annual summary showing the count of water observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_wet",
         },
@@ -1040,7 +1295,7 @@ style_wofs_summary_clear = {
     "abstract": "WOfS annual summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_clear",
         },
@@ -1081,7 +1336,7 @@ style_wofs_seasonal_clear = {
     "needed_bands": ["count_clear"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "count_clear",
         },
@@ -1119,7 +1374,7 @@ style_annual_wofs_summary_frequency = {
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         },
@@ -1151,7 +1406,7 @@ style_seasonal_wofs_summary_frequency = {
     "needed_bands": ["frequency"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         },
@@ -1180,7 +1435,7 @@ style_annual_wofs_summary_frequency_blue = {
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         },
@@ -1217,7 +1472,7 @@ style_seasonal_wofs_summary_frequency_blue = {
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
         },
@@ -1355,6 +1610,7 @@ style_s2_irg = {
     "scale_range": [0.0, 3000.0],
 }
 
+
 style_s2_ndvi = style_ls_ndvi
 style_s2_ndwi = style_ls_ndwi
 style_s2_mndwi = {
@@ -1364,7 +1620,7 @@ style_s2_mndwi = {
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "nbart_green", "band2": "nbart_swir_2"},
     },
     "needed_bands": ["nbart_green", "nbart_swir_2"],
@@ -1386,7 +1642,7 @@ style_s2_ndci = {
     "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
     "index_function": {
         "function": "datacube_ows.band_utils.sentinel2_ndci",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "b_red_edge": "nbart_red_edge_1",
             "b_red": "nbart_red",
@@ -1437,7 +1693,7 @@ style_s2_nbr = {
     "abstract": "Normalised Burn Ratio - a derived index that that uses the differences in the way health green vegetation and burned vegetation reflect light to find burned area",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band1": "nbart_nir_1", "band2": "nbart_swir_3"},
     },
     "needed_bands": ["nbart_nir_1", "nbart_swir_3"],
@@ -1577,7 +1833,6 @@ style_s2_pure_blue = {
     "scale_range": [0.0, 3000.0],
 }
 
-
 style_s2_pure_green = {
     "name": "green",
     "title": "Green - 560",
@@ -1715,7 +1970,7 @@ style_wii = {
     "needed_bands": ["intensity"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "intensity",
         },
@@ -1738,13 +1993,70 @@ style_wii = {
     },
 }
 
+style_tcw_10 = {
+    "name": "tcw_10_percentile",
+    "title": "Tasseled Cap Wetness 10th Percentile",
+    "abstract": "The 10th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "needed_bands": ["TCW_PC_10"],
+        "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "TCW_PC_10",
+        },
+    },
+    "range": [-1200.0, 0.0],
+    "mpl_ramp": "gist_earth_r",
+    "legend": {
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+    },
+}
+
+style_tcw_50 = {
+    "name": "tcw_50_percentile",
+    "title": "Tasseled Cap Wetness 50th Percentile",
+    "abstract": "The 50th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "needed_bands": ["TCW_PC_50"],
+        "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "TCW_PC_50",
+        },
+    },
+    "range": [-1200.0, 0.0],
+    "mpl_ramp": "gist_earth_r",
+    "legend": {
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+    },
+}
+
+style_tcw_90 = {
+    "name": "tcw_90_percentile",
+    "title": "Tasseled Cap Wetness 90th Percentile",
+    "abstract": "The 90th Percentile of Tasseled Cap Wetness Index (1986-2018)",
+    "needed_bands": ["TCW_PC_90"],
+        "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "TCW_PC_90",
+        },
+    },
+    "range": [-1200.0, 0.0],
+    "mpl_ramp": "gist_earth_r",
+    "legend": {
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
+    },
+}
+
 style_fc_gv_10 = {
     "name": "green_veg_10",
     "title": "10th Percentile",
     "abstract": "10th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "PV_PC_10",
         },
@@ -1790,7 +2102,7 @@ style_fc_gv_50 = {
     "abstract": "50th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "PV_PC_50",
         },
@@ -1822,7 +2134,7 @@ style_fc_gv_90 = {
     "abstract": "90th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "PV_PC_90",
         },
@@ -1854,7 +2166,7 @@ style_fc_ngv_10 = {
     "abstract": "10th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "NPV_PC_10",
         },
@@ -1898,7 +2210,7 @@ style_fc_ngv_50 = {
     "abstract": "50th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "NPV_PC_50",
         },
@@ -1930,7 +2242,7 @@ style_fc_ngv_90 = {
     "abstract": "90th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "NPV_PC_90",
         },
@@ -1962,7 +2274,7 @@ style_fc_bs_10 = {
     "abstract": "10th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "BS_PC_10",
         },
@@ -2009,7 +2321,7 @@ style_fc_bs_50 = {
     "abstract": "50th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "BS_PC_50",
         },
@@ -2041,7 +2353,7 @@ style_fc_bs_90 = {
     "abstract": "90th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "BS_PC_90",
         },
@@ -2097,7 +2409,7 @@ style_nidem = {
     "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "nidem",
         },
@@ -2173,7 +2485,7 @@ style_item_relative = {
     "abstract": "The Relative Extents Model (item_v2) 25m v2.0.0",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "relative",
         },
@@ -2236,7 +2548,7 @@ style_item_confidence = {
     "title": "confidence layer",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "stddev",
         },
@@ -2307,29 +2619,6 @@ style_item_confidence = {
     },
 }
 
-style_wamm_dam_id = {
-    "name": "dam_id",
-    "title": "waterbody",
-    "abstract": "",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
-        "kwargs": {
-            "band": "dam_id",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["dam_id"],
-    "color_ramp": [
-        {"value": 0, "color": "#11ccff", "alpha": 1.0},
-        {"value": 8388607, "color": "#11ccff", "alpha": 1.0},
-    ],
-    "legend": {
-        # The old legend served no purpose
-        "show_legend": False,
-    },
-}
-
 style_hap_simple_gray = {
     "name": "simple_gray",
     "title": "Simple gray",
@@ -2384,7 +2673,7 @@ style_aster_aloh_comp_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2431,7 +2720,7 @@ style_aster_aloh_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2478,7 +2767,7 @@ style_aster_feoh_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2525,7 +2814,7 @@ style_aster_ferrox_comp_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2572,7 +2861,7 @@ style_aster_ferrox_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2619,7 +2908,7 @@ style_aster_ferrous_mgoh_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2666,7 +2955,7 @@ style_aster_ferrous_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2713,7 +3002,7 @@ style_aster_green_veg_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2760,7 +3049,7 @@ style_aster_gypsum_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2807,7 +3096,7 @@ style_aster_kaolin_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2854,7 +3143,7 @@ style_aster_mgoh_comp_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2901,7 +3190,7 @@ style_aster_mgoh_cont_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2948,7 +3237,7 @@ style_aster_opaque_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -2995,7 +3284,7 @@ style_aster_silica_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -3042,7 +3331,7 @@ style_aster_quartz_idx_ramp = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "Band_1",
         },
@@ -3089,7 +3378,7 @@ style_tmad_sdev = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band": "sdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["sdev"],
@@ -3122,7 +3411,7 @@ style_tmad_edev = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band": "edev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["edev"],
@@ -3154,7 +3443,7 @@ style_tmad_bcdev = {
     "abstract": "",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_log",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {"band": "bcdev", "scale_factor": -100.0, "exponent": 1 / 1000.0},
     },
     "needed_bands": ["bcdev"],
@@ -3252,7 +3541,7 @@ style_insar_velocity = {
     "needed_bands": ["velocity"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "velocity",
         },
@@ -3290,7 +3579,7 @@ style_insar_displacement = {
     "needed_bands": ["displacement"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "displacement",
         },
@@ -3328,7 +3617,7 @@ style_insar_stddev_l = {
     "needed_bands": ["disp_std"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "disp_std",
         },
@@ -3380,7 +3669,7 @@ style_insar_stddev_lv = {
     "needed_bands": ["vel_std"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "pass_product_cfg": True,
+        "mapped_bands": True,
         "kwargs": {
             "band": "vel_std",
         },
@@ -3699,7 +3988,7 @@ style_tmad_rgb_std = {
         },
         "blue": {
             "function": "datacube_ows.band_utils.single_band_offset_log",
-            "pass_product_cfg": True,
+            "mapped_bands": True,
             "kwargs": {
                 "band": "bcdev",
                 "scale_from": [0.025, 0.13],
@@ -3717,17 +4006,17 @@ style_tmad_rgb_sens = {
     "components": {
         "red": {
             "kwargs": {
-                "scale_from": [0.001, 0.15],
+                "scale_from": [0.0005, 0.11],
             }
         },
         "green": {
             "kwargs": {
-                "scale_from": [0.019, 0.1],
+                "scale_from": [0.010, 0.09],
             }
         },
         "blue": {
             "kwargs": {
-                "scale_from": [0.010, 0.13],
+                "scale_from": [0.011, 0.07],
             }
         },
     }
@@ -3955,6 +4244,33 @@ ows_cfg = {
         "max_width": 512,
         "max_height": 512,
     },  # END OF wms SECTION
+    "wmts": {
+        # Config for WMTS service, for all products/layers
+        "tile_matrix_sets": {
+            "EPSG:3111": {
+                "crs": "EPSG:3111",
+                "matrix_origin": (1786000.0, 3081000.0),
+                "tile_size": (512, 512),
+                "scale_set": [
+                    7559538.928601667,
+                    3779769.4643008336,
+                    1889884.7321504168,
+                    944942.3660752084,
+                    472471.1830376042,
+                    236235.5915188021,
+                    94494.23660752083,
+                    47247.11830376041,
+                    23623.559151880207,
+                    9449.423660752083,
+                    4724.711830376042,
+                    2362.355915188021,
+                    1181.1779575940104,
+                    755.9538928601667,
+                ],
+                "matrix_exponent_initial_offsets": (1, 0),
+            },
+        }
+    }, # END OF wmts SECTION
     "wcs": {
         # Config for WCS service, for all products/coverages
         "default_geographic_CRS": "EPSG:4326",
@@ -4013,7 +4329,7 @@ For service status information, see https://status.dea.ga.gov.au
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -4059,7 +4375,7 @@ For service status information, see https://status.dea.ga.gov.au
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -4105,7 +4421,7 @@ For service status information, see https://status.dea.ga.gov.au
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -4165,7 +4481,7 @@ For service status information, see https://status.dea.ga.gov.au
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -4211,7 +4527,7 @@ For service status information, see https://status.dea.ga.gov.au
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -4953,6 +5269,126 @@ For service status information, see https://status.dea.ga.gov.au
                     ],
                 },
                 {
+            "title": "Sentinel Definitive",
+            "abstract": """
+	This is a definitive archive of daily Sentinel-2 data.The Surface Reflectance product has been corrected to account for variationscaused by atmospheric properties, sun position and sensor view angle at time of image capture.These corrections have been applied to all satellite imagery in the Sentinel-2 archiveFor more information see http://pid.geoscience.gov.au/dataset/ga/129684
+""",
+            "layers": [
+                {
+                    "name": "s2_ard_granule_nbar_t",
+                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2 (A and B combined))",
+                    "abstract": """
+This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time.
+The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive.
+The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
+The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including:
+- Influence on the remote sensing signal from nearby land and/or atmospheric effects
+- Optically shallow water
+- Cloud cover
+Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016
+For more information see http://pid.geoscience.gov.au/dataset/ga/129684
+For service status information, see https://status.dea.ga.gov.au
+""",
+                    "multi_product": True,
+                    "product_names": [ "ga_s2a_ard_nbar_granule", "ga_s2b_ard_nbar_granule" ],
+                    "bands": bands_sentinel2_ard_nbar,
+                    "resource_limits": reslim_s2_ard,
+                    "dynamic": True,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "always_fetch_bands": [ ],
+                        "manual_merge": False,
+                    },
+                    "wcs": {
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [ 10.0, 10.0 ],
+                        "default_bands": [ "nbar_red", "nbar_green", "nbar_blue" ]
+                    },
+                    "styling": {
+                        "default_style": "simple_rgb",
+                        "styles": [
+                            style_s2_simple_rgb,
+                            style_s2_irg,
+                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
+                            style_s2_pure_aerosol,
+                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
+                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
+                            style_s2_pure_nir, style_s2_pure_narrow_nir,
+                            style_s2_pure_swir1, style_s2_pure_swir2,
+                        ]
+                    }
+                },
+                {
+                    "name": "s2b_ard_granule_nbar_t",
+                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2B)",
+                    "abstract": """
+This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
+""",
+                    "product_name": "ga_s2b_ard_nbar_granule",
+                    "bands": bands_sentinel2_ard_nbar,
+                    "resource_limits": reslim_s2_ard,
+                    "dynamic": True,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "always_fetch_bands": [ ],
+                        "manual_merge": False,
+                    },
+                    "wcs": {
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [ 10.0, 10.0 ],
+                        "default_bands": [ "nbar_red", "nbar_green", "nbar_blue" ]
+                    },
+                    "styling": {
+                        "default_style": "simple_rgb",
+                        "styles": [
+                            style_s2_simple_rgb,
+                            style_s2_irg,
+                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
+                            style_s2_pure_aerosol,
+                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
+                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
+                            style_s2_pure_nir, style_s2_pure_narrow_nir,
+                            style_s2_pure_swir1, style_s2_pure_swir2,
+                        ]
+                    }
+                },
+                {
+                    "name": "s2a_ard_granule_nbar_t",
+                    "title": "Sentinel Definitive Surface Reflectance (Sentinel 2A)",
+                    "abstract": """
+This is a definitive archive of daily Sentinel-2 data. This is processed using correct ancillary data to provide a more accurate product than the Near Real Time. The Surface Reflectance product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture. These corrections have been applied to all satellite imagery in the Sentinel-2 archive. For more information see http://pid.geoscience.gov.au/dataset/ga/129684 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors. The index indicates levels of chlorophyll-a (chl-a) concentrations in complex turbid productive waters such as those encountered in many inland water bodies. The index has not been validated in Australian waters, and there are a range of environmental conditions that may have an effect on the accuracy of the derived index values in this test implementation, including: - Influence on the remote sensing signal from nearby land and/or atmospheric effects - Optically shallow water - Cloud cover Mishra, S., Mishra, D.R., 2012. Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, Remote Sensing of Urban Environments 117, 394–406. https://doi.org/10.1016/j.rse.2011.10.016 For service status information, see https://status.dea.ga.gov.au
+""",
+                    "product_name": "ga_s2a_ard_nbar_granule",
+                    "bands": bands_sentinel2_ard_nbar,
+                    "resource_limits": reslim_s2_ard,
+                    "dynamic": True,
+                    "image_processing": {
+                        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                        "always_fetch_bands": [ ],
+                        "manual_merge": False,
+                    },
+                    "wcs": {
+                        "native_crs": "EPSG:3577",
+                        "native_resolution": [ 10.0, 10.0 ],
+                        "default_bands": [ "nbar_red", "nbar_green", "nbar_blue" ]
+                    },
+                    "styling": {
+                        "default_style": "simple_rgb",
+                        "styles": [
+                            style_s2_simple_rgb,
+                            style_s2_irg,
+                            style_s2_ndvi, style_s2_ndwi, style_s2_mndwi, style_s2_ndci,
+                            style_s2_pure_aerosol,
+                            style_s2_pure_blue, style_s2_pure_green, style_s2_pure_red,
+                            style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
+                            style_s2_pure_nir, style_s2_pure_narrow_nir,
+                            style_s2_pure_swir1, style_s2_pure_swir2,
+                        ]
+                    }
+                }
+            ]
+        },
+                {
                     "title": "Multi-Scale Topographic Position",
                     "abstract": "",
                     "layers": [
@@ -5064,6 +5500,74 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 ],
                             },
                         }
+                    ],
+                },
+                {
+                    "title": "DEA Wetness Percentiles (Landsat)",
+                    "abstract": "",
+                    "layers": [
+                        {
+                            "title": "DEA Wetness Percentiles (Landsat)",
+                            "name": "ga_ls_tcw_percentiles_2",
+                            "abstract": """
+Geoscience Australia Landsat Collection 2 Tasseled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577).
+Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+
+Areas that are partially covered in water, or where water is mixed with vegetation when viewed from above, provide habitat for a wide range of aquatic organisms.
+
+The ability to map partial inundation is also crucial to understand patterns of human water use. We need to be able to identify potential wetlands and groundwater dependent ecosystems on the Australian continent so that they can be monitored and managed.
+
+The Tasseled Cap Wetness Percentiles provide a multi-decadal summary of landscape wetness that can be used to identify wetlands and groundwater ecosystems.
+
+They provide statistical summaries (10th, 50th and 90th percentiles) of the Tasseled Cap wetness index from 1987 to 2017.
+
+They are intended for use as inputs into classification algorithms to identify potential wetlands and groundwater dependent ecosystems, and characterise salt flats, clay pans, salt lakes and coastal land forms.
+
+This product provides valuable discrimination for characterising:
+
+ - vegetated wetlands,
+ - salt flats,
+ - salt lakes,
+ - coastal land cover classes
+
+The Tasseled Cap wetness transform translates the six spectral bands of Landsat into a single wetness index.  The wetness index can be used to identify areas in the landscape that are potentially wetlands or groundwater dependent ecosystems. The Tasseled Cap Wetness Percentiles capture how the wetness index behaves over time.  The percentiles are well suited to characterising wetlands, salt flats/salt lakes and coastal ecosystems. However, care should be applied when analysing the wetness index, as soil colour and fire scars can cause misleading results. In areas of high relief caused by cliffs or steep terrain, terrain shadows can cause false positives (a falsely high wetness index).
+
+The 10th, 50th and 90th percentiles of the Tasseled Cap wetness index are intended to capture the extreme (10th and 90th percentile) values and long-term average (50th percentile) values of the wetness index.  Percentiles are used in preference to minimum, maximum and mean, as the min/max/mean statistical measures are more sensitive to undetected cloud/cloud shadow, and can be misleading for non-normally distributed data.
+
+The Tasseled Cap Wetness Percentiles are intended to complement the Water Observations from Space (WOfS) algorithm. WOfS is designed to discriminate open water, but the Tasseled Cap wetness index identifies areas of water and areas where water and vegetation are mixed together; i.e. mangroves and palustrine wetlands.
+
+If you are interested in terrestrial vegetation (where water in the pixel is not a factor), use the Fractional Cover product, which provides a better biophysical characterisation of green vegetation fraction, dry vegetation fraction and bare soil vegetation fraction.
+
+In terms of limitations, caution should be used, especially with the Tasseled Cap wetness index results in areas where residual terrain shadow, or dark soils can cause high 'wetness' index values.
+One of the limitations of using the Tasseled Cap wetness index is that it will identify all 'wet' things, including potential wetlands, groundwater dependent ecosystems, irrigated crops/pasture, man-made water storages and sewerage treatment, and does not discriminate between these. As such it should be used in conjunction with other contextual data to ensure that features identified using the Tasseled Cap Wetness Percentiles are features of interest rather than false positives.
+
+We used the Tasseled Cap transforms described in Crist et al. (1985).
+
+Crist, E. P. (1985). A TM Tasseled Cap equivalent transformation for reflectance factor data. Remote Sensing of Environment, 17(3), 301–306. https://doi.org/10.1016/0034-4257(85)90102-6
+
+For service status information, see https://status.dea.ga.gov.au""",
+                            "product_name": "ga_ls_tcw_percentiles_2",
+                            "bands": bands_tcw_percentile,
+                            "resource_limits": reslim_frac_cover,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "default_bands": ["TCW_PC_10", "TCW_PC_50", "TCW_PC_90"],
+                                "native_resolution": [25, -25],
+                            },
+                            "styling": {
+                                "default_style": "tcw_10_percentile",
+                                "styles": [
+                                    style_tcw_10,
+                                    style_tcw_50,
+                                    style_tcw_90
+                                ],
+                            },
+                        },
                     ],
                 },
                 {
@@ -5234,8 +5738,8 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "native_resolution": [25, -25],
                             },
                             "styling": {
-                                "default_style": "simple_rgb",
-                                "styles": [style_fc_simple_rgb],
+                                "default_style": "fc_rgb",
+                                "styles": [style_fc_rgb],
                             },
                         }
                     ],
@@ -5531,7 +6035,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -5655,7 +6159,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -5722,7 +6226,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                                 "always_fetch_bands": [],
-                                "manual_merge": True,
+                                "manual_merge": False,
                             },
                             "wcs": {
                                 "native_crs": "EPSG:3577",
@@ -5739,11 +6243,11 @@ For service status information, see https://status.dea.ga.gov.au""",
                     ],
                 },
                 {
-                    "title": "Projects",
+                    "title": "Historical Airborne Photography",
                     "abstract": "",
                     "layers": [
                         {
-                            "title": "Projects munged historical airborne photography (HAP)",
+                            "title": "Historical Airborne Photography (HAP)",
                             "name": "historical_airborne_photography",
                             "abstract": "Historical Airborne Photography",
                             "product_name": "historical_airborne_photography",
@@ -5763,53 +6267,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                                 "default_style": "simple_gray",
                                 "styles": [
                                     style_hap_simple_gray,
-                                ],
-                            },
-                        }
-                    ],
-                },
-                {
-                    "title": "Digital Earth Australia Waterbodies",
-                    "abstract": """Digital Earth Australia Waterbodies""",
-                    "layers": [
-                        {
-                            "title": "Digital Earth Australia Waterbodies 25m (Digital Earth Australia Waterbodies)",
-                            "name": "waterbody_area",
-                            "abstract": """Digital Earth Australia Waterbodies uses Geoscience Australia’s archive of over 30 years of Landsat data to identify where almost 300,000 waterbodies are in the Australian landscape and tell us how full or empty those waterbodies are.
-The tool uses a water classification for every available Landsat satellite image and maps the locations of waterbodies across Australia. It provides a time-series of surface area for waterbodies that are present more than 10% of the time and are larger than 3120m2 (5 Landsat pixels).
-The tool can indicate changes in the surface area of waterbodies. This can be used to identify when waterbodies are increasing in surface area (filling) and decreasing in surface area (emptying).
-The way water flowed into these waterbodies cannot be determined directly from satellite imagery. This tool, by itself, cannot be used to determine if the capture of water is legal or illegal. There are many reasons why a waterbody could have filled, which is why it is important for on-ground follow-up work if this tool is used for compliance purposes.
-For more information on Digital Earth Australia Waterbodies, see [hyperlink to full product page text].
-For service status information, see https://status.dea.ga.gov.au""",
-                            "product_name": "water_bodies",
-                            "bands": bands_wamm,
-                            "resource_limits": reslim_waterbody,
-                            "image_processing": {
-                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                                "always_fetch_bands": ["dam_id"],
-                                "manual_merge": False,
-                                "kwargs": {"val": 8388607},
-                            },
-                            "feature_info": {
-                                "include_custom": {
-                                    "timeseries": {
-                                        "function": "datacube_ows.ogc_utils.feature_info_url_template",
-                                        "pass_product_cfg": False,
-                                        "kwargs": {
-                                            "template": "https://data.dea.ga.gov.au/projects/WaterBodies/feature_info/{int(data['dam_id']) // 100:04}/{int(data['dam_id']):06}.csv"
-                                        },
-                                    }
-                                }
-                            },
-                            "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "default_bands": ["dam_id"],
-                                "native_resolution": [25, -25],
-                            },
-                            "styling": {
-                                "default_style": "dam_id",
-                                "styles": [
-                                    style_wamm_dam_id,
                                 ],
                             },
                         }
@@ -7110,6 +7567,151 @@ Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Ar
                     # Folder-type layers include a list of sub-layers
                     "layers": insar_layers,
                 },
+                {
+                    "title": "Collection 3",
+                    "abstract": """
+
+                    """,
+                    "layers": [
+                        {
+                            "title": "DEA C3 Landsat 8 ARD",
+                            "abstract": """
+This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+
+The imagery is captured using the Operational Land Imager (OLI) and Thermal Infra-Red Scanner (TIRS) sensors aboard Landsat 8.
+
+This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
+
+It contains three sub-products that provide corrections or attribution information:
+
+Surface Reflectance NBAR 3 (Landsat 8 OLI-TIRS)
+Surface Reflectance NBART 3 (Landsat 8 OLI-TIRS)
+Surface Reflectance OA 3 (Landsat 8 OLI-TIRS)
+The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.""",
+                            # The WMS name for the layer
+                            "name": "ga_ls8c_ard_3",
+                            # The Datacube name for the associated data product
+                            "product_name": "ga_ls8c_ard_3",
+                            "bands": bands_collection3_landsat_8,
+                            "resource_limits": reslim_tmad,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_c3_simple_rgb,
+                                    style_c3_false_colour,
+                                    style_c3_ndvi,
+                                    style_c3_ndwi,
+                                    style_c3_mndwi,
+                                    style_c3_pure_blue,
+                                    style_c3_pure_green,
+                                    style_c3_pure_red,
+                                    style_c3_pure_nir,
+                                    style_c3_pure_swir1,
+                                    style_c3_pure_swir2,
+                                    style_c3_pure_panchromatic,
+                                    style_c3_pure_aerosol,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "DEA C3 Landsat 7 ARD",
+                            "abstract": """
+The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
+In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
+
+We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
+
+For service status information, see https://status.dea.ga.gov.au""",
+                            # The WMS name for the layer
+                            "name": "ga_ls7e_ard_3",
+                            # The Datacube name for the associated data product
+                            "product_name": "ga_ls7e_ard_3",
+                            "bands": bands_collection3_landsat_7,
+                            "resource_limits": reslim_tmad,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                        style_c3_simple_rgb,
+                                        style_c3_false_colour,
+                                        style_c3_ndvi,
+                                        style_c3_ndwi,
+                                        style_c3_mndwi,
+                                        style_c3_pure_blue,
+                                        style_c3_pure_green,
+                                        style_c3_pure_red,
+                                        style_c3_pure_nir,
+                                        style_c3_pure_swir1,
+                                        style_c3_pure_swir2,
+                                        style_c3_pure_panchromatic,
+                                ],
+                            },
+                        },
+                        {
+                            "title": "DEA C3 Landsat 5 ARD",
+                            "abstract": """
+The United States Geological Survey's (USGS) Landsat satellite program has been capturing images of the Australian continent for more than 30 years. This data is highly useful for land and coastal mapping studies.
+
+In particular, the light reflected from the Earth’s surface (surface reflectance) is important for monitoring environmental resources – such as agricultural production and mining activities – over time.
+
+We need to make accurate comparisons of imagery acquired at different times, seasons and geographic locations. However, inconsistencies can arise due to variations in atmospheric conditions, sun position, sensor view angle, surface slope and surface aspect. These need to be reduced or removed to ensure the data is consistent and can be compared over time.
+
+
+For service status information, see https://status.dea.ga.gov.au""",
+                            # The WMS name for the layer
+                            "name": "ga_ls5t_ard_3",
+                            # The Datacube name for the associated data product
+                            "product_name": "ga_ls5t_ard_3",
+                            "bands": bands_collection3_landsat_5,
+                            "resource_limits": reslim_tmad,
+                            "image_processing": {
+                                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                                "always_fetch_bands": [],
+                                "manual_merge": False,
+                            },
+                            "wcs": {
+                                "native_crs": "EPSG:3577",
+                                "native_resolution": [25, -25],
+                                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+                            },
+                            "styling": {
+                                "default_style": "simple_rgb",
+                                "styles": [
+                                    style_c3_simple_rgb,
+                                    style_c3_false_colour,
+                                    style_c3_ndvi,
+                                    style_c3_ndwi,
+                                    style_c3_mndwi,
+                                    style_c3_pure_blue,
+                                    style_c3_pure_green,
+                                    style_c3_pure_red,
+                                    style_c3_pure_nir,
+                                    style_c3_pure_swir1,
+                                    style_c3_pure_swir2,
+                                ],
+                            },
+                        },
+                    ]
+                }
             ],
         },
     ],  # End of Layers List

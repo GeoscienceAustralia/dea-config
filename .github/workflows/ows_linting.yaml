@@ -1,0 +1,76 @@
+name: OWS CFG Lint Check
+
+on:
+  push:
+    path:
+      - 'dev/services/wms/**'
+      - .github/workflows/ows_linting.yaml
+    pull_request:
+      branches: [ master ]
+      paths:
+        - 'dev/services/wms/**'
+        - .github/workflows/ows_linting.yaml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v2
+
+    - name: Run Python Linter
+      run: |
+        python -m pip install pylint boto3
+        ./check-code.sh
+
+  flake8:
+    name: flake8
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - run: python -m pip install flake8
+      - name: flake8 - dev ows_cfg
+        uses: liskin/gh-problem-matcher-wrap@v1
+        with:
+          linters: flake8
+          run: |
+            flake8 dev/services/wms/ows_refactored/ --ignore=E501
+      - name: flake8 - prod ows_cfg
+        uses: liskin/gh-problem-matcher-wrap@v1
+        with:
+          linters: flake8
+          run: |
+            flake8 prod/services/wms/ows_refactored/ --ignore=E501
+
+  isort:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - run: python -m pip install isort
+      - name: isort - dev ows_cfg
+        uses: liskin/gh-problem-matcher-wrap@v1
+        with:
+          linters: isort
+          run: |
+            isort --check --diff dev/services/wms/ows_refactored/
+      - name: isort - prod ows_cfg
+        uses: liskin/gh-problem-matcher-wrap@v1
+        with:
+          linters: isort
+          run: |
+            isort --check --diff prod/services/wms/ows_refactored/
