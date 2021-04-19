@@ -685,7 +685,7 @@ measurements:
                   3: shadow
                   4: snow
                   5: water
-                  
+
     - name: 'nbar_contiguity'
       dtype: uint8
       nodata: 255

@@ -14,9 +14,6 @@ metadata:
 
 storage:
   crs: EPSG:3577
-  resolution:
-          x: 25
-          y: -25
   dimension_order: ['time', 'y', 'x']
   tile_size:
     x: 100000.0
