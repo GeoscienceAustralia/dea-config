@@ -11,36 +11,6 @@ bands_fc_3 = {
     "ue": [],
 }
 
-style_fc_3_simple = {
-    "name": "simple_fc",
-    "title": "Fractional Cover",
-    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-    "components": {"red": {"bs": 1.0}, "green": {"pv": 1.0}, "blue": {"npv": 1.0}},
-    "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            # pq_masks:band now takes the actual ODC band name, not the identifier.
-            "band": "water",
-            "flags": {"dry": True},
-        },
-        {
-            "band": "water",
-            "flags": {
-                "terrain_shadow": False,
-                "low_solar_angle": False,
-                "high_slope": False,
-                "cloud_shadow": False,
-                "cloud": False,
-            },
-        },
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 0,
-        },
-    ],
-}
-
 style_fc_c3_rgb = {
     "name": "fc_rgb",
     "title": "Three-band fractional cover",
@@ -225,7 +195,6 @@ For service status information, see https://status.dea.ga.gov.au
     "styling": {
         "default_style": "simple_fc",
         "styles": [
-            style_fc_3_simple,
             style_fc_c3_rgb,
             style_fc_bs_c3,
             style_fc_gv_c3,

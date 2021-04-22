@@ -8,34 +8,96 @@ style_c3_wofs_obs = {
     "value_map": {
         "water": [
             {
-                "title": "Invalid",
-                "abstract": "Slope or Cloud",
+                "title": "",
+                "abstract": "",
                 "flags": {
-                    "or": {
-                        "terrain_shadow": True,
-                        "low_solar_angle": True,
-                        "cloud_shadow": True,
-                        "cloud": True,
-                        "high_slope": True,
-                        "noncontiguous": True,
-                    }
+                    "nodata": True,
                 },
+                "alpha": 0.0,
                 "color": "#707070",
             },
             {
-                # Possible Sea Glint, also mark as invalid
-                "title": "Dry",
-                "abstract": "Dry",
+                "title": "",
+                "abstract": "",
                 "flags": {
-                    "dry": True,
+                    "and": {
+                        "noncontiguous": True,
+                        "low_solar_angle": True
+                    }
                 },
-                "color": "#D99694",
+                "alpha": 0.0,
+                "color": "#707070",
             },
             {
-                "title": "Wet",
-                "abstract": "Wet",
-                "flags": {"wet": True},
+                "title": "Cloudy Steep Terrain",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "cloud": True,
+                        "high_slope": True
+                    }
+                },
+                "color": "#f2dcb4",
+            },
+            {
+                "title": "Cloudy Water",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "water_observed": True,
+                        "cloud": True
+                    }
+                },
+                "color": "#bad4f2",
+            },
+            {
+                "title": "Shaded Water",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "water_observed": True,
+                        "cloud_shadow": True
+                    }
+                },
+                "color": "#335277",
+            },
+            {
+                "title": "Cloud",
+                "abstract": "",
+                "flags": {"cloud": True},
+                "color": "#c2c1c0",
+            },
+            {
+                "title": "Cloud Shadow",
+                "abstract": "",
+                "flags": {"cloud_shadow": True},
+                "color": "#4b4b37",
+            },
+            {
+                "title": "Terrain Shadow",
+                "abstract": "",
+                "flags": {"terrain_shadow": True},
+                "color": "#2f2922",
+            },
+            {
+                "title": "Steep Terrain",
+                "abstract": "",
+                "flags": {"high_slope": True},
+                "color": "#776857",
+            },
+            {
+                "title": "Water",
+                "abstract": "",
+                "flags": {"water_observed": True},
                 "color": "#4F81BD",
+            },
+            {
+                "title": "Dry",
+                "abstract": "",
+                "flags": {
+                    "water_observed": False,
+                },
+                "color": "#96966e",
             },
         ],
     },
@@ -46,6 +108,7 @@ style_c3_wofs_obs = {
             "enum": 0,
         }
     ],
+    "legend": {"width": 3.0, "height": 2.1},
 }
 
 style_c3_wofs_obs_wet_only = {
@@ -99,14 +162,16 @@ style_c3_wofs_obs_wet_only = {
 
 
 layers = {
-    "title": "Collection 3 Water",
+    "title": "Geoscience Australia Landsat Water Observations Collection 3",
     "name": "ga_ls_wo_3",
     "abstract": """
-Water Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.
-The WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.
-Data is provided as Water Observation Feature Layers (WOFLs), in a 1 to 1 relationship with the input satellite data. Hence there is one WOFL for each satellite dataset processed for the occurrence of water. The details of the WOfS algorithm and derived statistics are available at http://dx.doi.org/10.1016/j.rse.2015.11.003.
-For service status information, see https://status.dea.ga.gov.au
-""",
+DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
+
+The Water Observations show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.
+
+https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat
+
+For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_wo_3",
     "bands": bands_wofs_obs,
     "resource_limits": reslim_wms_min_zoom_35,
