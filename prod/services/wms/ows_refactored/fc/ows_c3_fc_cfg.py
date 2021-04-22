@@ -35,7 +35,7 @@ c3_fc_pq_mask = [
 
 style_fc_c3_rgb = {
     "name": "fc_rgb",
-    "title": "Three-band fractional cover",
+    "title": "Three-band Fractional Cover",
     "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
         "red": {"bs": 1.0},
@@ -53,7 +53,7 @@ style_fc_c3_rgb = {
 style_fc_gv_c3 = {
     "name": "green_veg_c3",
     "title": "Green Vegetation",
-    "abstract": "Annual of Green Vegetation",
+    "abstract": "Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -92,7 +92,7 @@ style_fc_gv_c3 = {
 style_fc_bs_c3 = {
     "name": "bare_ground_c3",
     "title": "Bare Ground",
-    "abstract": "Annual of Bare Soil",
+    "abstract": "Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -131,8 +131,8 @@ style_fc_bs_c3 = {
 
 style_fc_ngv_c3 = {
     "name": "non_green_veg_c3",
-    "title": "Non green vegetation",
-    "abstract": "Annual of Non Green Vegetation",
+    "title": "Non-Green vegetation",
+    "abstract": "Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
