@@ -193,7 +193,7 @@ For service status information, see https://status.dea.ga.gov.au
         "native_resolution": [25, -25],
     },
     "styling": {
-        "default_style": "simple_fc",
+        "default_style": "fc_rgb",
         "styles": [
             style_fc_c3_rgb,
             style_fc_bs_c3,
