@@ -1,4 +1,3 @@
-from ows_refactored.fc.style_fc_cfg import fc_pq_mask
 from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
     legend_idx_0_100_pixel_fc_ngv_25ticks)
@@ -11,6 +10,29 @@ bands_fc_3 = {
     "ue": [],
 }
 
+c3_fc_pq_mask = [
+    {
+        # pq_masks:band now takes the actual ODC band name, not the identifier.
+        "band": "water",
+        "flags": {"dry": True},
+    },
+    {
+        "band": "water",
+        "flags": {
+            "terrain_shadow": False,
+            "low_solar_angle": False,
+            "high_slope": False,
+            "cloud_shadow": False,
+            "cloud": False,
+        },
+    },
+    {
+        "band": "land",
+        "invert": True,
+        "enum": 0,
+    },
+]
+
 style_fc_c3_rgb = {
     "name": "fc_rgb",
     "title": "Three-band fractional cover",
@@ -21,7 +43,7 @@ style_fc_c3_rgb = {
         "blue": {"npv": 1.0},
     },
     "scale_range": [0.0, 100.0],
-    "pq_masks": fc_pq_mask,
+    "pq_masks": c3_fc_pq_mask,
     "legend": {
         "show_legend": True,
         "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
@@ -30,8 +52,8 @@ style_fc_c3_rgb = {
 
 style_fc_gv_c3 = {
     "name": "green_veg_c3",
-    "title": "Green Vegetation Percentile",
-    "abstract": "Annual Percentile of Green Vegetation",
+    "title": "Green Vegetation",
+    "abstract": "Annual of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -63,14 +85,14 @@ style_fc_gv_c3 = {
             "color": "#006837",
         },
     ],
-    "pq_masks": fc_pq_mask,
+    "pq_masks": c3_fc_pq_mask,
     "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
 style_fc_bs_c3 = {
     "name": "bare_ground_c3",
-    "title": "Bare Ground Percentile",
-    "abstract": "Annual Percentile of Bare Soil",
+    "title": "Bare Ground",
+    "abstract": "Annual of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -102,15 +124,15 @@ style_fc_bs_c3 = {
             "color": "#7a0177",
         },
     ],
-    "pq_masks": fc_pq_mask,
+    "pq_masks": c3_fc_pq_mask,
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
 
 style_fc_ngv_c3 = {
     "name": "non_green_veg_c3",
-    "title": "Non green vegetation Percentile",
-    "abstract": "Annual Percentile of Non Green Vegetation",
+    "title": "Non green vegetation",
+    "abstract": "Annual of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -141,7 +163,7 @@ style_fc_ngv_c3 = {
     ],
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": c3_fc_pq_mask,
 }
 
 layers = {
