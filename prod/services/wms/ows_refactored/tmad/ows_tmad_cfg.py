@@ -111,6 +111,10 @@ style_tmad_rgb_std = {
         },
     },
     "additional_bands": ["sdev", "bcdev", "edev"],
+    "legend": {
+        "show_legend": True,
+        "url": "https://data.dea.ga.gov.au/tmad-annual/geomad.png",
+    },
 }
 
 style_tmad_rgb_sens = {
@@ -134,6 +138,10 @@ style_tmad_rgb_sens = {
                 "scale_from": [0.011, 0.07],
             }
         },
+    },
+    "legend": {
+        "show_legend": True,
+        "url": "https://data.dea.ga.gov.au/tmad-annual/geomad.png",
     },
 }
 
