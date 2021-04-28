@@ -145,7 +145,7 @@ style_c3_wofs_obs_wet_only = {
             },
             {
                 "title": "Wet",
-                "abstract": "Wet",
+                "abstract": "",
                 "flags": {"wet": True},
                 "color": "#4F81BD",
             },
