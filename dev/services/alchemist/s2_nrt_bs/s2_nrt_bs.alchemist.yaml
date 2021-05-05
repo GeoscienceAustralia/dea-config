@@ -6,8 +6,8 @@ specification:
   measurement_renames:
     nbart_nir_1: nir
     nbart_red_edge_1: swir2
-    nbar_blue: blue
-    nbar_red: red
+    nbart_blue: blue
+    nbart_red: red
 
   aws_unsigned: True
   transform: datacube_alchemist.transforms.DeltaNBR_3band
