@@ -43,7 +43,10 @@ output:
   location: s3://dea-public-data-dev/derivative/
   nodata: 255
   dtype: uint8
-  preview_image: [bs, pv, npv]
+  preview_image:
+    red: bs
+    green: pv
+    blue: pv
   explorer_url: https://explorer.dev.dea.ga.gov.au
   write_data_settings:
     overview_resampling: average
