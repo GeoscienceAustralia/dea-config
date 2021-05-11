@@ -1,0 +1,66 @@
+name: lc_ls_landcover_class_cyear_2
+
+description: Geoscience Australia Landsat Land Cover Calendar Year Collection 2
+metadata_type: eo3
+
+metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: lc
+  product:
+    name: lc_ls_2
+
+measurements:
+  - name: level3
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: lifeform_veg_cat_l4a
+    aliases:
+      - lifeform
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: canopyco_veg_cat_l4d
+    aliases:
+      - vegetation_cover
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: watersea_veg_cat_l4a_au
+    aliases:
+      - water_seasonality
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: waterstt_wat_cat_l4a
+    aliases:
+      - water_state
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: inttidal_wat_cat_l4a
+    aliases:
+      - intertidal
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: waterper_wat_cat_l4d_au
+    aliases:
+      - water_persistence
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: baregrad_phy_cat_l4d_au
+    aliases:
+      - bare_gradation
+    dtype: int8
+    nodata: 0
+    units: '1'
+  - name: level4
+    aliases:
+      - full_classification
+    dtype: int8
+    nodata: 0
+    units: '1'
+
