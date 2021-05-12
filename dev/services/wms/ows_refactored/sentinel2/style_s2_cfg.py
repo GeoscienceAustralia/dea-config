@@ -220,6 +220,8 @@ style_s2_nbr = {
             # The count range for which this handler is to be used - a tuple of two ints, the smallest and
             # largest date counts for which this handler will be used.  Required.
             "allowed_count_range": [2, 2],
+            # Preserve user date order
+            "preserve_user_date_order": True,
             # A function, expressed in the standard format as described elsewhere in this example file.
             # The function is assumed to take one arguments, an xarray Dataset.
             # The function returns an xarray Dataset with a single band, which is the input to the
