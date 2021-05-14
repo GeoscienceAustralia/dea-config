@@ -1,4 +1,4 @@
-name: lc_ls_landcover_class_cyear_2.0
+name: lc_ls_landcover_class_cyear_2_0
 
 description: Geoscience Australia Landsat Land Cover Calendar Year Collection 2.0
 metadata_type: eo3
@@ -8,7 +8,7 @@ metadata:
     odc:file_format: GeoTIFF
     odc:product_family: lc
   product:
-    name: lc_ls_landcover_class_cyear_2.0
+    name: lc_ls_landcover_class_cyear_2_0
 
 measurements:
   - name: level3
