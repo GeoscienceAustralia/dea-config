@@ -4,6 +4,6 @@
 set -eu
 set -x
 
-datacube-ows-cfg -i /env/config/inventory.json
+datacube-ows-cfg check -i /env/config/inventory.json
 
 set +x
