@@ -25,5 +25,5 @@ jobs:
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v3
         with:
-          # file_or_dir: products/**/*.yaml
+          file_or_dir: products/**/*.yaml
           config_file: yamllint_cfg.yml

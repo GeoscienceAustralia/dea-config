@@ -6,3 +6,6 @@ config_data: |
       level: warning
     trailing-spaces:
       level: warning
+    indentation:
+      spaces: 2
+      indent-sequences: false
