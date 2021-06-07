@@ -1,7 +1,7 @@
 specification:
   products:
-    - s2a_nrt_granule
-    - s2b_nrt_granule
+    - s2a_ard_granule
+    - s2b_ard_granule
   measurements: ['nbart_blue', 'nbart_green', 'nbart_red', 'nbart_nir_1', 'nbart_swir_2', 'nbart_swir_3', 'fmask']
   measurement_renames:
     nbart_nir_1: nbart_nir
@@ -51,9 +51,9 @@ output:
     naming_conventions: dea_s2_derivative
 
   properties:
-    dea:dataset_maturity: nrt
+    dea:dataset_maturity: interim
 
 processing:
   dask_chunks:
-    x: -1
-    y: 6144
+    x: 6144
+    y: -1
