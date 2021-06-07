@@ -32,6 +32,7 @@ jobs:
         with:
           yamllint_file_or_dir: products/**/*.yaml
           yamllint_strict: false
+          yamllint_config_filepath: yamllint_cfg.yml
           yamllint_comment: true
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
