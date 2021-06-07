@@ -19,6 +19,8 @@ jobs:
 
       - name: Check file naming
         run: |
+          pwd
+          ls -la
           files=$(find products/**/*.yml | wc -l)
           if [ $files -gt 0 ]; then echo "File found with .yml extension, please rename with .yaml" && exit 1; fi
 
