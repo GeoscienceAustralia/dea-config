@@ -5,11 +5,11 @@ on:
     path:
       - 'dev/services/wms/**'
       - .github/workflows/ows_cfg_testing.yaml
-    pull_request:
-      branches: [ master ]
-      paths:
-        - 'dev/services/wms/**'
-        - .github/workflows/ows_cfg_testing.yaml
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'dev/services/wms/**'
+      - .github/workflows/ows_cfg_testing.yaml
 
 jobs:
   build:
