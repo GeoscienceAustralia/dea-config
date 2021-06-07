@@ -19,13 +19,11 @@ jobs:
 
       - name: Check file naming
         run: |
-          pwd
-          ls -la
           files=$(find products/**/*.yml | wc -l)
           if [ $files -gt 0 ]; then echo "File found with .yml extension, please rename with .yaml" && exit 1; fi
 
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v3
         with:
-          file_or_dir: products/**/*.yaml
+          file_or_dir: products
           config_file: yamllint_cfg.yml
