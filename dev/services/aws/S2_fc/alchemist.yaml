@@ -33,7 +33,7 @@ spec:
             memory: 8192Mi
         tty: true
         stdin: true
-        env:	
+        env:
           - name: ALCHEMIST_ADDTOQUEUE_MESSAGE_QUEUE
             value: "alchemist-standard"
           - name: ALCHEMIST_ADDTOQUEUE_ENVIRONMENT
