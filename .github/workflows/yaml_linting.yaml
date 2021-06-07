@@ -23,5 +23,7 @@ jobs:
           if [ $files -gt 0 ]; then echo "File found with .yml extension, please rename with .yaml" && exit 1; fi
 
       - name: yaml-lint
-        run:
-          yamllint products/**/*.yaml
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: products/**/*.yaml
+          config_file: yamllint_cfg.yml
