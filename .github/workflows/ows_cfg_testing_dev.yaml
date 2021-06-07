@@ -1,4 +1,4 @@
-name: OWS CFG Test
+name: OWS DEV CFG Test
 
 on:
   push:
@@ -30,19 +30,6 @@ jobs:
       env:
         OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored
         OWS_INVENTORY_JSON: ./dev/services/wms/inventory.json
-        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
-        WMS_CONFIG_FILE: ows_root_cfg.py
-        CFG_PATH_PREFIX: /env/config/ows_refactored
-
-    - name: Run ows_refactored_cfg test (Prod)
-      run: |
-        docker-compose -f docker-compose.ows.yaml up -d
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /env/config; ./compare-cfg.sh"
-        docker-compose -f docker-compose.ows.yaml down
-      env:
-        OWS_CFG_MOUNT: ./prod/services/wms/ows_refactored
-        OWS_INVENTORY_JSON: ./prod/services/wms/inventory.json
         DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
         WMS_CONFIG_FILE: ows_root_cfg.py
         CFG_PATH_PREFIX: /env/config/ows_refactored
