@@ -2,7 +2,7 @@ name: OWS CFG Lint Check
 
 on:
   push:
-    path:
+    paths:
       - 'dev/services/wms/**'
       - 'prod/services/wms/**'
       - .github/workflows/ows_linting.yaml
