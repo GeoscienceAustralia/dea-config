@@ -3,7 +3,8 @@ description: Water Observations from Space Statistics
 metadata_type: eo3
 
 metadata:
-  product: ga_ls_wo_summary
+  product: 
+    name: ga_ls_wo_summary
 
 measurements:
   - name: count_wet
