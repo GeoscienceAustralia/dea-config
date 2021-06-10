@@ -12,7 +12,7 @@ metadata:
 
 measurements:
   - name: level3
-    dtype: int8
+    dtype: uint8
     nodata: 0
     units: '1'
   - name: lifeform_veg_cat_l4a
