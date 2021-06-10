@@ -1,0 +1,33 @@
+name: Lint YAML files
+
+on:
+  push:
+    paths:
+      - "products/**"
+      - .github/workflows/yaml_linting.yaml
+  pull_request:
+    branches: [master]
+    paths:
+      - "products/**"
+      - .github/workflows/yaml_linting.yaml
+
+jobs:
+  yamllint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check file naming
+        run: |
+          files=$(find products/**/*.yml | wc -l)
+          if [ $files -gt 0 ]; then echo "File found with .yml extension, please rename with .yaml" && exit 1; fi
+
+      - name: 'Yamllint'
+        uses: karancode/yamllint-github-action@master
+        with:
+          yamllint_file_or_dir: products/**/*.yaml
+          yamllint_strict: false
+          yamllint_config_filepath: yamllint_cfg.yml
+          yamllint_comment: true
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
