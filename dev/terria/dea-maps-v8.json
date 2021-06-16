@@ -2,49 +2,9 @@
   "workbench": [],
   "catalog": [
     {
-      "id": "BXljDt",
-      "type": "group",
-      "name": "Hotspots",
-      "members": [
-        {
-          "type": "wms",
-          "name": "Himawari-8 Mosaic, Last 10m",
-          "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-          "opacity": 1,
-          "layers": "public:himawari8_mosaic",
-          "leafletUpdateInterval": 750,
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "m5lE5k",
-          "shareKeys": [
-            "Root Group/Hotspots/Himawari-8 Mosaic, Last 10m"
-          ]
-        },
-        {
-          "type": "wms",
-          "name": "Hotspots, Last 72h",
-          "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-          "opacity": 1,
-          "layers": "public:hotspots_three_days",
-          "leafletUpdateInterval": 750,
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "P5RY1c",
-          "shareKeys": [
-            "Root Group/Hotspots/Hotspots, Last 72h"
-          ]
-        }
-      ],
-      "shareKeys": [
-        "Root Group/Hotspots"
-      ]
-    },
-    {
       "id": "CqkxcG",
       "type": "group",
-      "name": "Satellite images",
+      "name": "Satellite data",
       "members": [
         {
           "id": "c7JrPw",
@@ -66,12 +26,12 @@
               },
               "id": "Wqpk8F",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images multi-sensor - daily/Daily Landsat and Sentinel-2 satellite images"
+                "Root Group/Satellite data/Satellite images multi-sensor - daily/Daily Landsat and Sentinel-2 satellite images"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite images/Satellite images multi-sensor - daily"
+            "Root Group/Satellite data/Satellite images multi-sensor - daily"
           ]
         },
         {
@@ -112,7 +72,7 @@
                   },
                   "id": "Z1RRRa",
                   "shareKeys": [
-                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2 satellite images"
+                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2 satellite images"
                   ]
                 },
                 {
@@ -143,7 +103,7 @@
                   },
                   "id": "8apTli",
                   "shareKeys": [
-                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2A satellite images"
+                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2A satellite images"
                   ]
                 },
                 {
@@ -174,12 +134,12 @@
                   },
                   "id": "AuD7kv",
                   "shareKeys": [
-                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2B satellite images"
+                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2B satellite images"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images"
+                "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images"
               ]
             },
             {
@@ -215,7 +175,7 @@
                   },
                   "id": "SbBCvf",
                   "shareKeys": [
-                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2 satellite images"
+                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2 satellite images"
                   ]
                 },
                 {
@@ -246,7 +206,7 @@
                   },
                   "id": "iNJKMD",
                   "shareKeys": [
-                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2a satellite images"
+                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2a satellite images"
                   ]
                 },
                 {
@@ -277,17 +237,17 @@
                   },
                   "id": "RACNHJ",
                   "shareKeys": [
-                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2b satellite images"
+                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2b satellite images"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive"
+                "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite images/Satellite images 10m - daily"
+            "Root Group/Satellite data/Satellite images 10m - daily"
           ]
         },
         {
@@ -323,7 +283,7 @@
               },
               "id": "5k8KR4",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 8 satellite images"
+                "Root Group/Satellite data/Satellite images 25m - daily/Daily Landsat 8 satellite images"
               ]
             },
             {
@@ -354,7 +314,7 @@
               },
               "id": "bzDSiT",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 7 satellite images"
+                "Root Group/Satellite data/Satellite images 25m - daily/Daily Landsat 7 satellite images"
               ]
             },
             {
@@ -385,12 +345,12 @@
               },
               "id": "rESkby",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 5 satellite images"
+                "Root Group/Satellite data/Satellite images 25m - daily/Daily Landsat 5 satellite images"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite images/Satellite images 25m - daily"
+            "Root Group/Satellite data/Satellite images 25m - daily"
           ]
         },
         {
@@ -425,7 +385,7 @@
               },
               "id": "YKuvNW",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - 16 days/Landsat 8 satellite 16-day composite"
+                "Root Group/Satellite data/Satellite images 25m - 16 days/Landsat 8 satellite 16-day composite"
               ]
             },
             {
@@ -455,7 +415,7 @@
               },
               "id": "2yAWA3",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - 16 days/Landsat 7 satellite 16-day composite"
+                "Root Group/Satellite data/Satellite images 25m - 16 days/Landsat 7 satellite 16-day composite"
               ]
             },
             {
@@ -485,12 +445,12 @@
               },
               "id": "eZgwP8",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - 16 days/Landsat 5 satellite 16-day composite"
+                "Root Group/Satellite data/Satellite images 25m - 16 days/Landsat 5 satellite 16-day composite"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite images/Satellite images 25m - 16 days"
+            "Root Group/Satellite data/Satellite images 25m - 16 days"
           ]
         },
         {
@@ -525,7 +485,7 @@
               },
               "id": "hAUsXi",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 8 satellite images"
+                "Root Group/Satellite data/Satellite images 25m - annual/Yearly average Landsat 8 satellite images"
               ]
             },
             {
@@ -555,7 +515,7 @@
               },
               "id": "pwDY6b",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 7 satellite images"
+                "Root Group/Satellite data/Satellite images 25m - annual/Yearly average Landsat 7 satellite images"
               ]
             },
             {
@@ -585,12 +545,12 @@
               },
               "id": "BpKM2u",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 5 satellite images"
+                "Root Group/Satellite data/Satellite images 25m - annual/Yearly average Landsat 5 satellite images"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite images/Satellite images 25m - annual"
+            "Root Group/Satellite data/Satellite images 25m - annual"
           ]
         },
         {
@@ -625,7 +585,7 @@
               },
               "id": "Mn56Pg",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - Barest Earth/Barest Earth Landsat 8 satellite images"
+                "Root Group/Satellite data/Satellite images 25m - Barest Earth/Barest Earth Landsat 8 satellite images"
               ]
             },
             {
@@ -654,438 +614,28 @@
               },
               "id": "WRTIQP",
               "shareKeys": [
-                "Root Group/Satellite images/Satellite images 25m - Barest Earth/Landsat 30+ Barest Earth Satellite Images (Combined Landsat)"
+                "Root Group/Satellite data/Satellite images 25m - Barest Earth/Landsat 30+ Barest Earth Satellite Images (Combined Landsat)"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite images/Satellite images 25m - Barest Earth"
+            "Root Group/Satellite data/Satellite images 25m - Barest Earth"
           ]
         }
       ],
       "shareKeys": [
-        "Root Group/Satellite images"
-      ]
-    },
-    {
-      "id": "dn823X",
-      "type": "group",
-      "name": "Surface Water",
-      "members": [
-        {
-          "id": "3iIq5b",
-          "type": "group",
-          "name": "Water Observations from Space",
-          "members": [
-            {
-              "type": "wms",
-              "name": "Daily water observations",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "wofs_albers",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "wofs_albers",
-              "chartColor": "white",
-              "timeFilterPropertyName": "data_available_for_dates",
-              "leafletUpdateInterval": 750,
-              "chartType": "momentPoints",
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "iun7iP",
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/Daily water observations"
-              ]
-            },
-            {
-              "type": "wms",
-              "name": "April-October water observations",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "wofs_apr_oct_summary_statistics",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
-              "chartColor": "white",
-              "leafletUpdateInterval": 750,
-              "chartType": "momentPoints",
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "AiQHtl",
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/April-October water observations"
-              ]
-            },
-            {
-              "type": "wms",
-              "name": "November-March water observations",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "wofs_nov_mar_summary_statistics",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
-              "chartColor": "white",
-              "leafletUpdateInterval": 750,
-              "chartType": "momentPoints",
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "hbzXqh",
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/November-March water observations"
-              ]
-            },
-            {
-              "type": "wms",
-              "name": "Annual water observations",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "wofs_annual_summary_statistics",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "wofs_annual_summary_statistics",
-              "chartColor": "white",
-              "leafletUpdateInterval": 750,
-              "chartType": "momentPoints",
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "SpYxSG",
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/Annual water observations"
-              ]
-            },
-            {
-              "type": "wms",
-              "name": "All water observations",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "wofs_filtered_summary",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "wofs_filtered_summary",
-              "leafletUpdateInterval": 750,
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "aNt8yM",
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/All water observations"
-              ]
-            },
-            {
-              "id": "QnhUWK",
-              "type": "group",
-              "name": "April-October water observations source data",
-              "members": [
-                {
-                  "type": "wms",
-                  "name": "April-October clear observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_apr_oct_summary_clear",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
-                  "chartColor": "white",
-                  "leafletUpdateInterval": 750,
-                  "chartType": "momentPoints",
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "M1ThLx",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/April-October water observations source data/April-October clear observations"
-                  ]
-                },
-                {
-                  "type": "wms",
-                  "name": "April-October wet observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_apr_oct_summary_wet",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
-                  "chartColor": "white",
-                  "leafletUpdateInterval": 750,
-                  "chartType": "momentPoints",
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "7vSA2T",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/April-October water observations source data/April-October wet observations"
-                  ]
-                }
-              ],
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/April-October water observations source data"
-              ]
-            },
-            {
-              "id": "XNnNVN",
-              "type": "group",
-              "name": "November-March water observations source data",
-              "members": [
-                {
-                  "type": "wms",
-                  "name": "November-March clear observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_nov_mar_summary_clear",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
-                  "chartColor": "white",
-                  "leafletUpdateInterval": 750,
-                  "chartType": "momentPoints",
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "HGetFm",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March clear observations"
-                  ]
-                },
-                {
-                  "type": "wms",
-                  "name": "November-March wet observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_nov_mar_summary_wet",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
-                  "chartColor": "white",
-                  "leafletUpdateInterval": 750,
-                  "chartType": "momentPoints",
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "iknUf8",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March wet observations"
-                  ]
-                }
-              ],
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/November-March water observations source data"
-              ]
-            },
-            {
-              "id": "AEV4T5",
-              "type": "group",
-              "name": "Annual water observations source data",
-              "members": [
-                {
-                  "type": "wms",
-                  "name": "Annual clear observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_annual_summary_clear",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_annual_summary_clear",
-                  "chartColor": "white",
-                  "leafletUpdateInterval": 750,
-                  "chartType": "momentPoints",
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "614LVP",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/Annual water observations source data/Annual clear observations"
-                  ]
-                },
-                {
-                  "type": "wms",
-                  "name": "Annual wet observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_annual_summary_wet",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_annual_summary_wet",
-                  "chartColor": "white",
-                  "leafletUpdateInterval": 750,
-                  "chartType": "momentPoints",
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "1LlNu1",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/Annual water observations source data/Annual wet observations"
-                  ]
-                }
-              ],
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/Annual water observations source data"
-              ]
-            },
-            {
-              "id": "UwUlQP",
-              "type": "group",
-              "name": "All water observations combined source data",
-              "members": [
-                {
-                  "type": "wms",
-                  "name": "All clear observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_summary_clear",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_summary_clear",
-                  "leafletUpdateInterval": 750,
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "NhDETf",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/All clear observations"
-                  ]
-                },
-                {
-                  "type": "wms",
-                  "name": "All wet observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_summary_wet",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_summary_wet",
-                  "leafletUpdateInterval": 750,
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "Cabw4Q",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/All wet observations"
-                  ]
-                },
-                {
-                  "type": "wms",
-                  "name": "Unfiltered summary of all water observations",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "Water Observations from Space Statistics",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "Water Observations from Space Statistics",
-                  "leafletUpdateInterval": 750,
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "N7GZZR",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/Unfiltered summary of all water observations"
-                  ]
-                },
-                {
-                  "type": "wms",
-                  "name": "Water observations confidence",
-                  "url": "https://ows.dea.ga.gov.au/",
-                  "opacity": 1,
-                  "layers": "wofs_filtered_summary_confidence",
-                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                  "linkedWcsCoverage": "wofs_filtered_summary_confidence",
-                  "leafletUpdateInterval": 750,
-                  "tileErrorHandlingOptions": {
-                    "ignoreUnknownTileErrors": true
-                  },
-                  "id": "7tjxnH",
-                  "shareKeys": [
-                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/Water observations confidence"
-                  ]
-                }
-              ],
-              "shareKeys": [
-                "Root Group/Surface Water/Water Observations from Space/All water observations combined source data"
-              ]
-            }
-          ],
-          "shareKeys": [
-            "Root Group/Surface Water/Water Observations from Space"
-          ]
-        },
-        {
-          "id": "hNyAH2",
-          "type": "group",
-          "name": "Digital Earth Australia Waterbodies",
-          "members": [
-            {
-              "type": "wms",
-              "name": "Digital Earth Australia Waterbodies",
-              "url": "https://hotspots.dea.ga.gov.au/geoserver/public/wms",
-              "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see <a href='https://www.ga.gov.au/dea/products/dea-waterbodies'>https://www.ga.gov.au/dea/products/dea-waterbodies</a>",
-              "layers": "DigitalEarthAustraliaWaterbodies",
-              "featureInfoTemplate": {
-                "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of surface area (not volume) observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area (not volume) observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
-                "partials": {
-                  "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.ga.gov.au/dea/products/dea-waterbodies."
-                }
-              },
-              "id": "DGGjbr",
-              "shareKeys": [
-                "Root Group/Surface Water/Digital Earth Australia Waterbodies/Digital Earth Australia Waterbodies"
-              ]
-            }
-          ],
-          "shareKeys": [
-            "Root Group/Surface Water/Digital Earth Australia Waterbodies"
-          ]
-        },
-        {
-          "id": "uvJG4R",
-          "type": "group",
-          "name": "DEA Wetness Percentiles (Landsat)",
-          "members": [
-            {
-              "type": "wms",
-              "name": "Tasseled Cap Wetness Percentiles",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "ga_ls_tcw_percentiles_2",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
-              "chartColor": "white",
-              "chartType": "momentPoints",
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "hbmz55",
-              "shareKeys": [
-                "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Wetness Percentiles"
-              ]
-            }
-          ],
-          "shareKeys": [
-            "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)"
-          ]
-        }
-      ],
-      "shareKeys": [
-        "Root Group/Surface Water"
+        "Root Group/Satellite data"
       ]
     },
     {
       "id": "ahjVXr",
       "type": "group",
-      "name": "Vegetation",
+      "name": "Land and vegetation",
       "members": [
-        {
-          "type": "wms",
-          "name": "Mangrove Canopy Cover",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "mangrove_cover_v2_0_2",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "mangrove_cover_v2_0_2",
-          "chartColor": "white",
-          "leafletUpdateInterval": 750,
-          "chartType": "momentPoints",
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "3gjEXB",
-          "shareKeys": [
-            "Root Group/Vegetation/Mangrove Canopy Cover"
-          ]
-        },
         {
           "id": "irRsX3",
           "type": "group",
-          "name": "Fractional Cover",
+          "name": "DEA Fractional Cover",
           "members": [
             {
               "type": "wms",
@@ -1104,7 +654,7 @@
               },
               "id": "mYnkqY",
               "shareKeys": [
-                "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations"
+                "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations"
               ]
             },
             {
@@ -1123,7 +673,7 @@
               },
               "id": "8uKmJ8",
               "shareKeys": [
-                "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover"
+                "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover"
               ]
             },
             {
@@ -1142,7 +692,7 @@
               },
               "id": "BLxe8I",
               "shareKeys": [
-                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover"
+                "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover"
               ]
             },
             {
@@ -1167,7 +717,7 @@
                   },
                   "id": "dYcQgZ",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 8 Fractional Cover observations"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 8 Fractional Cover observations"
                   ]
                 },
                 {
@@ -1187,7 +737,7 @@
                   },
                   "id": "Gmlr15",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 7 Fractional Cover observations"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 7 Fractional Cover observations"
                   ]
                 },
                 {
@@ -1207,12 +757,12 @@
                   },
                   "id": "Pak2Rm",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 5 Fractional Cover observations"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 5 Fractional Cover observations"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor"
+                "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor"
               ]
             },
             {
@@ -1236,7 +786,7 @@
                   },
                   "id": "BL3iXJ",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Green Vegetation"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Green Vegetation"
                   ]
                 },
                 {
@@ -1255,7 +805,7 @@
                   },
                   "id": "uqGrkN",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Non-Green Vegetation"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Non-Green Vegetation"
                   ]
                 },
                 {
@@ -1274,12 +824,12 @@
                   },
                   "id": "VScBTN",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Bare Ground"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Bare Ground"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries"
+                "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries"
               ]
             },
             {
@@ -1303,7 +853,7 @@
                   },
                   "id": "7eJRQy",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Green Vegetation"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries/Annual Green Vegetation"
                   ]
                 },
                 {
@@ -1322,7 +872,7 @@
                   },
                   "id": "uFlnzu",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
                   ]
                 },
                 {
@@ -1341,37 +891,454 @@
                   },
                   "id": "L1wwAP",
                   "shareKeys": [
-                    "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Bare Ground"
+                    "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries/Annual Bare Ground"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries"
+                "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Vegetation/Fractional Cover"
+            "Root Group/Land and vegetation/DEA Fractional Cover"
+          ]
+        },
+        {
+          "id": "462q3S",
+          "type": "group",
+          "name": "DEA Mangrove Canopy Cover",
+          "members": [
+            {
+              "type": "wms",
+              "name": "DEA Mangrove Canopy Cover",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "mangrove_cover_v2_0_2",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "mangrove_cover_v2_0_2",
+              "chartColor": "white",
+              "leafletUpdateInterval": 750,
+              "chartType": "momentPoints",
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "3gjEXB",
+              "shareKeys": [
+                "Root Group/Land and vegetation/DEA Mangrove Canopy Cover/DEA Mangrove Canopy Cover"
+              ]
+            }
+          ],
+        },
+      ],
+      "shareKeys": [
+        "Root Group/Land and vegetation"
+      ]
+    },
+    {
+      "id": "dn823X",
+      "type": "group",
+      "name": "Inland waterbodies",
+      "members": [
+        {
+          "id": "3iIq5b",
+          "type": "group",
+          "name": "DEA Water Observations (WOfS)",
+          "members": [
+            {
+              "type": "wms",
+              "name": "Daily water observations",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "wofs_albers",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "wofs_albers",
+              "chartColor": "white",
+              "timeFilterPropertyName": "data_available_for_dates",
+              "leafletUpdateInterval": 750,
+              "chartType": "momentPoints",
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "iun7iP",
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Daily water observations"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "April-October water observations",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "wofs_apr_oct_summary_statistics",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
+              "chartColor": "white",
+              "leafletUpdateInterval": 750,
+              "chartType": "momentPoints",
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "AiQHtl",
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "November-March water observations",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "wofs_nov_mar_summary_statistics",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
+              "chartColor": "white",
+              "leafletUpdateInterval": 750,
+              "chartType": "momentPoints",
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "hbzXqh",
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "Annual water observations",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "wofs_annual_summary_statistics",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "wofs_annual_summary_statistics",
+              "chartColor": "white",
+              "leafletUpdateInterval": 750,
+              "chartType": "momentPoints",
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "SpYxSG",
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "All water observations",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "wofs_filtered_summary",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "wofs_filtered_summary",
+              "leafletUpdateInterval": 750,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "aNt8yM",
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations"
+              ]
+            },
+            {
+              "id": "QnhUWK",
+              "type": "group",
+              "name": "April-October water observations source data",
+              "members": [
+                {
+                  "type": "wms",
+                  "name": "April-October clear observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_apr_oct_summary_clear",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
+                  "chartColor": "white",
+                  "leafletUpdateInterval": 750,
+                  "chartType": "momentPoints",
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "M1ThLx",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations source data/April-October clear observations"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "name": "April-October wet observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_apr_oct_summary_wet",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
+                  "chartColor": "white",
+                  "leafletUpdateInterval": 750,
+                  "chartType": "momentPoints",
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "7vSA2T",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations source data/April-October wet observations"
+                  ]
+                }
+              ],
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations source data"
+              ]
+            },
+            {
+              "id": "XNnNVN",
+              "type": "group",
+              "name": "November-March water observations source data",
+              "members": [
+                {
+                  "type": "wms",
+                  "name": "November-March clear observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_nov_mar_summary_clear",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
+                  "chartColor": "white",
+                  "leafletUpdateInterval": 750,
+                  "chartType": "momentPoints",
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "HGetFm",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations source data/November-March clear observations"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "name": "November-March wet observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_nov_mar_summary_wet",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
+                  "chartColor": "white",
+                  "leafletUpdateInterval": 750,
+                  "chartType": "momentPoints",
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "iknUf8",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations source data/November-March wet observations"
+                  ]
+                }
+              ],
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations source data"
+              ]
+            },
+            {
+              "id": "AEV4T5",
+              "type": "group",
+              "name": "Annual water observations source data",
+              "members": [
+                {
+                  "type": "wms",
+                  "name": "Annual clear observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_annual_summary_clear",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_annual_summary_clear",
+                  "chartColor": "white",
+                  "leafletUpdateInterval": 750,
+                  "chartType": "momentPoints",
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "614LVP",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations source data/Annual clear observations"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "name": "Annual wet observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_annual_summary_wet",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_annual_summary_wet",
+                  "chartColor": "white",
+                  "leafletUpdateInterval": 750,
+                  "chartType": "momentPoints",
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "1LlNu1",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations source data/Annual wet observations"
+                  ]
+                }
+              ],
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations source data"
+              ]
+            },
+            {
+              "id": "UwUlQP",
+              "type": "group",
+              "name": "All water observations combined source data",
+              "members": [
+                {
+                  "type": "wms",
+                  "name": "All clear observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_summary_clear",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_summary_clear",
+                  "leafletUpdateInterval": 750,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "NhDETf",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/All clear observations"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "name": "All wet observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_summary_wet",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_summary_wet",
+                  "leafletUpdateInterval": 750,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "Cabw4Q",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/All wet observations"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "name": "Unfiltered summary of all water observations",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "Water Observations from Space Statistics",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "Water Observations from Space Statistics",
+                  "leafletUpdateInterval": 750,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "N7GZZR",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/Unfiltered summary of all water observations"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "name": "Water observations confidence",
+                  "url": "https://ows.dea.ga.gov.au/",
+                  "opacity": 1,
+                  "layers": "wofs_filtered_summary_confidence",
+                  "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                  "linkedWcsCoverage": "wofs_filtered_summary_confidence",
+                  "leafletUpdateInterval": 750,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "id": "7tjxnH",
+                  "shareKeys": [
+                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/Water observations confidence"
+                  ]
+                }
+              ],
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data"
+              ]
+            }
+          ],
+          "shareKeys": [
+            "Root Group/Inland waterbodies/DEA Water Observations (WOfS)"
+          ]
+        },
+        {
+          "id": "hNyAH2",
+          "type": "group",
+          "name": "DEA Waterbodies",
+          "members": [
+            {
+              "type": "wms",
+              "name": "DEA Waterbodies",
+              "url": "https://hotspots.dea.ga.gov.au/geoserver/public/wms",
+              "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see <a href='https://www.ga.gov.au/dea/products/dea-waterbodies'>https://www.ga.gov.au/dea/products/dea-waterbodies</a>",
+              "layers": "DigitalEarthAustraliaWaterbodies",
+              "featureInfoTemplate": {
+                "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of surface area (not volume) observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area (not volume) observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
+                "partials": {
+                  "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.ga.gov.au/dea/products/dea-waterbodies."
+                }
+              },
+              "id": "DGGjbr",
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Waterbodies/DEA Waterbodies"
+              ]
+            }
+          ],
+          "shareKeys": [
+            "Root Group/Inland waterbodies/DEA Waterbodies"
+          ]
+        },
+        {
+          "id": "uvJG4R",
+          "type": "group",
+          "name": "DEA Wetness Percentiles",
+          "members": [
+            {
+              "type": "wms",
+              "name": "DEA Wetness Percentiles",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "ga_ls_tcw_percentiles_2",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
+              "chartColor": "white",
+              "chartType": "momentPoints",
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "hbmz55",
+              "shareKeys": [
+                "Root Group/Inland waterbodies/DEA Wetness Percentiles/DEA Wetness Percentiles"
+              ]
+            }
+          ],
+          "shareKeys": [
+            "Root Group/Inland waterbodies/DEA Wetness Percentiles"
           ]
         }
       ],
       "shareKeys": [
-        "Root Group/Vegetation"
+        "Root Group/Inland waterbodies"
       ]
     },
     {
       "id": "D7zEZL",
       "type": "group",
-      "name": "Coastal",
+      "name": "Sea, ocean and coastline",
       "members": [
         {
           "id": "dkjsia",
           "type": "group",
-          "name": "Digital Earth Australia Coastlines",
+          "name": "DEA Coastlines",
           "members": [
             {
               "type": "wms",
-              "name": "Digital Earth Australia Coastlines",
+              "name": "DEA Coastlines",
               "id": "dea_coastlines",
               "shortReport": "<i>Zoom in to view detailed rates of coastal change and individual annual coastlines</i></br></br><small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/581/dea-coastlines'>DEA Coastlines product description</a></small>",
               "url": "https://geoserver.dea.ga.gov.au/geoserver/wms",
@@ -1387,7 +1354,7 @@
                 }
               ],
               "shareKeys": [
-                "Root Group/Coastal/Digital Earth Australia Coastlines/Digital Earth Australia Coastlines (beta)"
+                "Root Group/Sea, ocean and coastline/DEA Coastlines/DEA Coastlines"
               ]
             },
             {
@@ -1412,7 +1379,7 @@
                     }
                   ],
                   "shareKeys": [
-                    "Root Group/Coastal/Digital Earth Australia Coastlines/Supplementary layers/Annual coastlines"
+                    "Root Group/Sea, ocean and coastline/DEA Coastlines/Supplementary layers/Annual coastlines"
                   ]
                 },
                 {
@@ -1433,27 +1400,44 @@
                     }
                   ],
                   "shareKeys": [
-                    "Root Group/Coastal/Digital Earth Australia Coastlines/Supplementary layers/Rates of change statistics"
+                    "Root Group/Sea, ocean and coastline/DEA Coastlines/Supplementary layers/Rates of change statistics"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Coastal/Digital Earth Australia Coastlines/Supplementary layers"
+                "Root Group/Sea, ocean and coastline/DEA Coastlines/Supplementary layers"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Coastal/Digital Earth Australia Coastlines"
+            "Root Group/Sea, ocean and coastline/DEA Coastlines"
           ]
         },
         {
           "id": "bsRRuv",
           "type": "group",
-          "name": "Intertidal extent model",
+          "name": "DEA Intertidal (ITEM, NIDEM)",
           "members": [
             {
               "type": "wms",
-              "name": "Intertidal Extent",
+              "name": "DEA Intertidal Elevation (NIDEM)",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "NIDEM",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "NIDEM",
+              "leafletUpdateInterval": 750,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "bWICtK",
+              "shareKeys": [
+                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Elevation (NIDEM)"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "DEA Intertidal Extents (ITEM)",
               "url": "https://ows.dea.ga.gov.au/",
               "opacity": 1,
               "layers": "ITEM_V2.0.0",
@@ -1465,12 +1449,29 @@
               },
               "id": "cXSDLg",
               "shareKeys": [
-                "Root Group/Coastal/Intertidal extent model/Intertidal Extent"
+                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents (ITEM)"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "DEA Intertidal Extents confidence",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "ITEM_V2.0.0_Conf",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
+              "leafletUpdateInterval": 750,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "6E5V7V",
+              "shareKeys": [
+                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents confidence"
               ]
             },
             {
               "type": "geojson",
-              "name": "Intertidal Extent Polygons data access",
+              "name": "DEA Intertidal Extents polygons for data access",
               "info": [
                 {
                   "name": "Abstract",
@@ -1509,39 +1510,22 @@
               },
               "id": "6fBRXw",
               "shareKeys": [
-                "Root Group/Coastal/Intertidal extent model/Intertidal Extent Polygons data access"
-              ]
-            },
-            {
-              "type": "wms",
-              "name": "Intertidal Extent Confidence",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "ITEM_V2.0.0_Conf",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "ITEM_V2.0.0_Conf",
-              "leafletUpdateInterval": 750,
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "6E5V7V",
-              "shareKeys": [
-                "Root Group/Coastal/Intertidal extent model/Intertidal Extent Confidence"
+                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents polygons for data access"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Coastal/Intertidal extent model"
+            "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)"
           ]
         },
         {
           "id": "yC2aqy",
           "type": "group",
-          "name": "Low tide satellite images",
+          "name": "DEA High and Low Tide Imagery (HLTC)",
           "members": [
             {
               "type": "wms",
-              "name": "Low tide Landsat satellite images",
+              "name": "DEA Low Tide Imagery",
               "url": "https://ows.dea.ga.gov.au/",
               "opacity": 1,
               "layers": "low_tide_composite",
@@ -1553,12 +1537,29 @@
               },
               "id": "4XvQxE",
               "shareKeys": [
-                "Root Group/Coastal/Low tide satellite images/Low tide Landsat satellite images"
+                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA Low Tide Imagery"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "DEA High Tide Imagery",
+              "url": "https://ows.dea.ga.gov.au/",
+              "opacity": 1,
+              "layers": "high_tide_composite",
+              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+              "linkedWcsCoverage": "high_tide_composite",
+              "leafletUpdateInterval": 750,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "YLrxLi",
+              "shareKeys": [
+                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA High Tide Imagery"
               ]
             },
             {
               "type": "geojson",
-              "name": "Low Tide Polygons for data access",
+              "name": "DEA Low Tide polygons for data access",
               "info": [
                 {
                   "name": "Abstract",
@@ -1587,39 +1588,12 @@
               },
               "id": "5SAK7J",
               "shareKeys": [
-                "Root Group/Coastal/Low tide satellite images/Low Tide Polygons for data access"
-              ]
-            }
-          ],
-          "shareKeys": [
-            "Root Group/Coastal/Low tide satellite images"
-          ]
-        },
-        {
-          "id": "ilG7XN",
-          "type": "group",
-          "name": "High tide satellite images",
-          "members": [
-            {
-              "type": "wms",
-              "name": "High tide Landsat satellite images",
-              "url": "https://ows.dea.ga.gov.au/",
-              "opacity": 1,
-              "layers": "high_tide_composite",
-              "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-              "linkedWcsCoverage": "high_tide_composite",
-              "leafletUpdateInterval": 750,
-              "tileErrorHandlingOptions": {
-                "ignoreUnknownTileErrors": true
-              },
-              "id": "YLrxLi",
-              "shareKeys": [
-                "Root Group/Coastal/High tide satellite images/High tide Landsat satellite images"
+                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA Low Tide polygons for data access"
               ]
             },
             {
               "type": "geojson",
-              "name": "High Tide Polygons for data access",
+              "name": "DEA High Tide polygons for data access",
               "info": [
                 {
                   "name": "Abstract",
@@ -1648,176 +1622,220 @@
               },
               "id": "IjP3T7",
               "shareKeys": [
-                "Root Group/Coastal/High tide satellite images/High Tide Polygons for data access"
+                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA High Tide polygons for data access"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Coastal/High tide satellite images"
+            "Root Group/Coastal/DEA High and Low Tide Imagery (HLTC)"
           ]
         },
-        {
-          "type": "wms",
-          "name": "National Intertidal Digital Elevation Model",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "NIDEM",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "NIDEM",
-          "leafletUpdateInterval": 750,
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "bWICtK",
-          "shareKeys": [
-            "Root Group/Coastal/National Intertidal Digital Elevation Model"
-          ]
-        }
+        
       ],
       "shareKeys": [
-        "Root Group/Coastal"
+        "Root Group/Sea, ocean and coastline"
       ]
     },
     {
-      "id": "jqk1GN",
+      "id": "UIOgdf",
       "type": "group",
-      "name": "Camden Environmental Monitoring Project InSAR",
+      "name": "Hazards",
       "members": [
         {
-          "type": "wms",
-          "name": "ALOS Displacement",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "alos_displacement",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "alos_displacement",
-          "chartColor": "white",
-          "chartType": "momentPoints",
-          "featureInfoTemplate": {
-            "template": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "DzhvUP",
+          "id": "BXljDt",
+          "type": "group",
+          "name": "DEA Hotspots",
+          "members": [
+            {
+              "type": "wms",
+              "name": "DEA Hotspots, Last 72h",
+              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+              "opacity": 1,
+              "layers": "public:hotspots_three_days",
+              "leafletUpdateInterval": 750,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "P5RY1c",
+              "shareKeys": [
+                "Root Group/Hazards/DEA Hotspots/DEA Hotspots, Last 72h"
+              ]
+            },
+            {
+              "type": "wms",
+              "name": "Himawari-8 Mosaic, Last 10m",
+              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+              "opacity": 1,
+              "layers": "public:himawari8_mosaic",
+              "leafletUpdateInterval": 750,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "id": "m5lE5k",
+              "shareKeys": [
+                "Root Group/Hazards/DEA Hotspots/Himawari-8 Mosaic, Last 10m"
+              ]
+            },
+          ],
           "shareKeys": [
-            "Root Group/Camden Environmental Monitoring Project InSAR/ALOS Displacement"
+            "Root Group/Hazards/DEA Hotspots"
           ]
         },
-        {
-          "type": "wms",
-          "name": "ALOS Velocity",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "alos_velocity",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "alos_velocity",
-          "chartColor": "white",
-          "chartType": "momentPoints",
-          "featureInfoTemplate": {
-            "template": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "KqwIfB",
-          "shareKeys": [
-            "Root Group/Camden Environmental Monitoring Project InSAR/ALOS Velocity"
-          ]
-        },
-        {
-          "type": "wms",
-          "name": "ENVISAT Displacement",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "envisat_displacement",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "envisat_displacement",
-          "chartColor": "white",
-          "chartType": "momentPoints",
-          "featureInfoTemplate": {
-            "template": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "Sc8euJ",
-          "shareKeys": [
-            "Root Group/Camden Environmental Monitoring Project InSAR/ENVISAT Displacement"
-          ]
-        },
-        {
-          "type": "wms",
-          "name": "ENVISAT Velocity",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "envisat_velocity",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "envisat_velocity",
-          "chartColor": "white",
-          "chartType": "momentPoints",
-          "featureInfoTemplate": {
-            "template": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "qzCczV",
-          "shareKeys": [
-            "Root Group/Camden Environmental Monitoring Project InSAR/ENVISAT Velocity"
-          ]
-        },
-        {
-          "type": "wms",
-          "name": "RADARSAT2 Displacement",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "radarsat2_displacement",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "radarsat2_displacement",
-          "chartColor": "white",
-          "chartType": "momentPoints",
-          "featureInfoTemplate": {
-            "template": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "Nb5Pcu",
-          "shareKeys": [
-            "Root Group/Camden Environmental Monitoring Project InSAR/RADARSAT2 Displacement"
-          ]
-        },
-        {
-          "type": "wms",
-          "name": "RADARSAT2 Velocity",
-          "url": "https://ows.dea.ga.gov.au/",
-          "opacity": 1,
-          "layers": "radarsat2_velocity",
-          "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-          "linkedWcsCoverage": "radarsat2_velocity",
-          "chartColor": "white",
-          "chartType": "momentPoints",
-          "featureInfoTemplate": {
-            "template": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          },
-          "id": "3mQ5Ye",
-          "shareKeys": [
-            "Root Group/Camden Environmental Monitoring Project InSAR/RADARSAT2 Velocity"
-          ]
-        }
-      ],
-      "info": [
-        {
-          "name": "Details",
-          "content": "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
-        }
       ],
       "shareKeys": [
-        "Root Group/Camden Environmental Monitoring Project InSAR"
+        "Root Group/Hazards"
+      ]
+    },
+    {
+      "id": "89bGRF",
+      "type": "group",
+      "name": "Other",
+      "members": [
+      {
+        "id": "jqk1GN",
+        "type": "group",
+        "name": "Camden Environmental Monitoring Project InSAR",
+        "members": [
+          {
+            "type": "wms",
+            "name": "ALOS Displacement",
+            "url": "https://ows.dea.ga.gov.au/",
+            "opacity": 1,
+            "layers": "alos_displacement",
+            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+            "linkedWcsCoverage": "alos_displacement",
+            "chartColor": "white",
+            "chartType": "momentPoints",
+            "featureInfoTemplate": {
+              "template": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            "tileErrorHandlingOptions": {
+              "ignoreUnknownTileErrors": true
+            },
+            "id": "DzhvUP",
+            "shareKeys": [
+              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ALOS Displacement"
+            ]
+          },
+          {
+            "type": "wms",
+            "name": "ALOS Velocity",
+            "url": "https://ows.dea.ga.gov.au/",
+            "opacity": 1,
+            "layers": "alos_velocity",
+            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+            "linkedWcsCoverage": "alos_velocity",
+            "chartColor": "white",
+            "chartType": "momentPoints",
+            "featureInfoTemplate": {
+              "template": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            "tileErrorHandlingOptions": {
+              "ignoreUnknownTileErrors": true
+            },
+            "id": "KqwIfB",
+            "shareKeys": [
+              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ALOS Velocity"
+            ]
+          },
+          {
+            "type": "wms",
+            "name": "ENVISAT Displacement",
+            "url": "https://ows.dea.ga.gov.au/",
+            "opacity": 1,
+            "layers": "envisat_displacement",
+            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+            "linkedWcsCoverage": "envisat_displacement",
+            "chartColor": "white",
+            "chartType": "momentPoints",
+            "featureInfoTemplate": {
+              "template": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            "tileErrorHandlingOptions": {
+              "ignoreUnknownTileErrors": true
+            },
+            "id": "Sc8euJ",
+            "shareKeys": [
+              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ENVISAT Displacement"
+            ]
+          },
+          {
+            "type": "wms",
+            "name": "ENVISAT Velocity",
+            "url": "https://ows.dea.ga.gov.au/",
+            "opacity": 1,
+            "layers": "envisat_velocity",
+            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+            "linkedWcsCoverage": "envisat_velocity",
+            "chartColor": "white",
+            "chartType": "momentPoints",
+            "featureInfoTemplate": {
+              "template": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            "tileErrorHandlingOptions": {
+              "ignoreUnknownTileErrors": true
+            },
+            "id": "qzCczV",
+            "shareKeys": [
+              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ENVISAT Velocity"
+            ]
+          },
+          {
+            "type": "wms",
+            "name": "RADARSAT2 Displacement",
+            "url": "https://ows.dea.ga.gov.au/",
+            "opacity": 1,
+            "layers": "radarsat2_displacement",
+            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+            "linkedWcsCoverage": "radarsat2_displacement",
+            "chartColor": "white",
+            "chartType": "momentPoints",
+            "featureInfoTemplate": {
+              "template": "{{#data}}<table><tr><td>Displacement up-down</td><td>{{bands.ud}} mm</td></tr><tr><td>Displacement east-west</td><td>{{bands.ew}} mm</td></tr><tr><td>Displacement uncertainty up-down</td><td>{{bands.upstd}} mm</td></tr><tr><td>Displacement uncertainty east-west</td><td>{{bands.ewstd}} mm</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            "tileErrorHandlingOptions": {
+              "ignoreUnknownTileErrors": true
+            },
+            "id": "Nb5Pcu",
+            "shareKeys": [
+              "Root Group/Other/Camden Environmental Monitoring Project InSAR/RADARSAT2 Displacement"
+            ]
+          },
+          {
+            "type": "wms",
+            "name": "RADARSAT2 Velocity",
+            "url": "https://ows.dea.ga.gov.au/",
+            "opacity": 1,
+            "layers": "radarsat2_velocity",
+            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+            "linkedWcsCoverage": "radarsat2_velocity",
+            "chartColor": "white",
+            "chartType": "momentPoints",
+            "featureInfoTemplate": {
+              "template": "{{#data}}<table><tr><td>Velocity up-down</td><td>{{bands.ud}} mm/year</td></tr><tr><td>Velocity east-west</td><td>{{bands.ew}} mm/year</td></tr><tr><td>Velocity uncertainty up-down</td><td>{{bands.upstd}} mm/year</td></tr><tr><td>Velocity uncertainty east-west</td><td>{{bands.ewstd}} mm/year</td></tr></table>{{/data}}{{#data_links}}<a href='{{data_links}}'>Link to data</a>{{/data_links}}"
+            },
+            "tileErrorHandlingOptions": {
+              "ignoreUnknownTileErrors": true
+            },
+            "id": "3mQ5Ye",
+            "shareKeys": [
+              "Root Group/Other/Camden Environmental Monitoring Project InSAR/RADARSAT2 Velocity"
+            ]
+          }
+        ],
+        "info": [
+          {
+            "name": "Details",
+            "content": "These InSAR-derived datasets were produced by Geoscience Australia under the Camden Environmental Monitoring Project.\nProducts are given for three separately processed satellite radar datasets: ALOS, Envisat and Radarsat-2.\nProducts are derived in up-down and east-west direction from combination of different viewing geometries of the same satellite sensor. The slanted InSAR line-of-sight viewing geometry is insensitive to the north-south direction.\nNegative signals indicate either downward (in up-down products) or westward (in east-west products) surface movements.\nUncertainties of each product result from error propagation of initial line-of-sight data uncertainties during the data combination step.\nThe InSAR processing method used to create these products only uses high-quality pixels with very little signal noise. The resulting products are sparse in some areas (particularly highly vegetated areas) but have a high accuracy as demonstrated by validation with GPS data described in the GA Record. Different InSAR processing methods could be used to retrieve a denser coverage of displacement and velocity observations, but with reduced accuracy.\nALOS products generally have denser spatial coverage than Envisat and Radarsat-2 products. This is because ALOS uses a longer radar wavelength (~24 cm) than Envisat and Radarsat-2 (~6 cm) which enables the radar to better penetrate vegetation.\nA full description of the project and methods used to derive these InSAR products is given in the associated GA Record."
+          }
+        ],
+        "shareKeys": [
+          "Root Group/Other/Camden Environmental Monitoring Project InSAR"
+        ]
+      }
+      ],
+      "shareKeys": [
+        "Root Group/Other"
       ]
     }
   ],
