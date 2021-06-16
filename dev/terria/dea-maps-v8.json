@@ -1454,7 +1454,7 @@
             },
             {
               "type": "wms",
-              "name": "DEA Intertidal Extent confidence",
+              "name": "DEA Intertidal Extents confidence",
               "url": "https://ows.dea.ga.gov.au/",
               "opacity": 1,
               "layers": "ITEM_V2.0.0_Conf",
@@ -1466,12 +1466,12 @@
               },
               "id": "6E5V7V",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extent confidence"
+                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents confidence"
               ]
             },
             {
               "type": "geojson",
-              "name": "DEA Intertidal Extent polygons for data access",
+              "name": "DEA Intertidal Extents polygons for data access",
               "info": [
                 {
                   "name": "Abstract",
@@ -1510,7 +1510,7 @@
               },
               "id": "6fBRXw",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extent polygons for data access"
+                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents polygons for data access"
               ]
             }
           ],
