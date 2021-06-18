@@ -1,53 +1,99 @@
+# Product
+# url: https://explorer.dev.dea.ga.gov.au/products/s2_barest_earth.odc-product.yaml
 name: s2_barest_earth
-description: S2 Barest Earth pixel, Australian Albers Equal Area projection (EPSG:3577)
-metadata_type: eo
+metadata_type: eo3
+description: The Sentinel-2 Barest Earth
 metadata:
-  product_type: s2_barest_earth
-  format:
-    name: GeoTIFF
-storage:
-  driver: GeoTIFF
-  crs: EPSG:3577
-  dimension_order: [time, y, x]
-# possibly fix the dtype
+  product:
+    name: s2_barest_earth
 measurements:
-  - name: s2be_blue
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_green
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_red
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_red_edge_1
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_red_edge_2
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_red_edge_3
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_nir_1
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_nir_2
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_swir_1
-    dtype: int16
-    nodata: -999
-    units: '1'
-  - name: s2be_swir_2
-    dtype: int16
-    nodata: -999
-    units: '1'
+- name: s2be_blue
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - blue
+  - s2be_band_02
+  - s2be_B02
+  - s2be_Band2
+- name: s2be_green
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - green
+  - s2be_band_03
+  - s2be_B03
+  - s2be_Band3
+- name: s2be_red
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - red
+  - s2be_band_04
+  - s2be_B04
+  - s2be_Band4
+- name: s2be_red_edge_1
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - red_edge_1
+  - s2be_band_05
+  - s2be_B05
+  - s2be_Band5
+- name: s2be_red_edge_2
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - red_edge_2
+  - s2be_band_06
+  - s2be_B06
+  - s2be_Band6
+- name: s2be_red_edge_3
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - red_edge_3
+  - s2be_band_07
+  - s2be_B07
+  - s2be_Band7
+- name: s2be_nir_1
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - nir_1
+  - s2be_band_08
+  - s2be_B08
+  - s2be_Band8
+- name: s2be_nir_2
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - nir_2
+  - s2be_band_8A
+  - s2be_B8A
+  - s2be_Band8A
+- name: s2be_swir_2
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - swir_2
+  - s2be_band_11
+  - s2be_B11
+  - s2be_Band11
+- name: s2be_swir_3
+  dtype: int16
+  units: '1'
+  nodata: -999
+  aliases:
+  - swir_3
+  - s2be_band_12
+  - s2be_B12
+  - s2be_Band12
