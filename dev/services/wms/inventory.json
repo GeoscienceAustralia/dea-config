@@ -1008,7 +1008,30 @@
                 "green_veg_c3",
                 "non_green_veg_c3"
             ]
-        }
+        },
+        {
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "level3",
+                "level4",
+            ]
+        },
+        {
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "lifeform",
+                "canopyco",
+                "watersea",
+                "waterper",
+                "baregrad"
+            ]
+        },
     ],
-    "total_layers_count": 81
+    "total_layers_count": 83
 }

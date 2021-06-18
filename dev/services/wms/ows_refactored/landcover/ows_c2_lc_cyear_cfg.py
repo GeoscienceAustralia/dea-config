@@ -210,11 +210,11 @@ layers = {
     "layers": [
         {
             "title": "DEA Land Cover (Landsat)",
-            "name": "ga_ls_landcover_class_cyear_2",
+            "name": "ga_ls_landcover",
             "abstract": """
             Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
         """,
-            "product_name": "ga_ls_landcover",
+            "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_landcover,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
@@ -234,11 +234,11 @@ layers = {
         },
         {
             "title": "DEA Land Cover Environmental Descriptors",
-            "name": "ga_ls_landcover_class_cyear_2",
+            "name": "ga_ls_landcover_descriptors",
             "abstract": """
             Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
         """,
-            "product_name": "ga_ls_landcover",
+            "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_eds,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
