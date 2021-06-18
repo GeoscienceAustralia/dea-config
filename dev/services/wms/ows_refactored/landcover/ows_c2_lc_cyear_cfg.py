@@ -252,7 +252,7 @@ layers = {
                 "default_bands": ["canopyco_veg_cat_l4d"],
             },
             "styling": {
-                "default_style": "canopy_cover",
+                "default_style": "canopyco",
                 "styles": [style_c2_level4_lifeform, style_c2_level4_canopyco, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
             },
         }
