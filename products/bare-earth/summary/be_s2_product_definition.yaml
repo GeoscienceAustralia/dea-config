@@ -35,19 +35,19 @@ measurements:
     dtype: int16
     nodata: -999
     units: '1'
-- name: s2be_nir_1
+  - name: s2be_nir_1
     dtype: int16
     nodata: -999
     units: '1'
-- name: s2be_nir_2
+  - name: s2be_nir_2
     dtype: int16
     nodata: -999
     units: '1'
-- name: s2be_swir_1
+  - name: s2be_swir_1
     dtype: int16
     nodata: -999
     units: '1'
-- name: s2be_swir_2
+  - name: s2be_swir_2
     dtype: int16
     nodata: -999
     units: '1'
