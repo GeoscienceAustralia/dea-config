@@ -26,7 +26,10 @@ style_c2_level3 = {
             {'title': "Natural Aquatic Vegetation", 'abstract': "", 'values': [124], 'color': '#1EBF79', 'alpha': 1},
             {'title': "Artificial Surface", 'abstract': "", 'values': [215], 'color': '#DA5C69', 'alpha': 1},
             {'title': "Natural Bare Surface", 'abstract': "", 'values': [216], 'color': '#F3AB69', 'alpha': 1},
-            {'title': "Water", 'abstract': "", 'values': [220], 'color': '#4D9FDC', 'alpha': 1}]}}
+            {'title': "Water", 'abstract': "", 'values': [220], 'color': '#4D9FDC', 'alpha': 1}
+        ]
+    }
+}
 
 
 style_c2_level4_lifeform = {
@@ -37,7 +40,10 @@ style_c2_level4_lifeform = {
         "lifeform_veg_cat_l4a": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Woody", 'abstract': "", 'values': [1], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Herbaceous", 'abstract': "", 'values': [2], 'color': '#77A71E', 'alpha': 1}]}}
+            {'title': "Herbaceous", 'abstract': "", 'values': [2], 'color': '#77A71E', 'alpha': 1}
+        ]
+    }
+}
 
 
 style_c2_level4_canopyco = {
@@ -51,7 +57,10 @@ style_c2_level4_canopyco = {
             {'title': "Open Vegetation", 'abstract': "(40 to 65 %)", 'values': [12], 'color': '#2D8D2F', 'alpha': 1},
             {'title': "Open Vegetation", 'abstract': "(15 to 40 %)", 'values': [13], 'color': '#50A052', 'alpha': 1},
             {'title': "Sparse Vegetation", 'abstract': "(4 to 15 %)", 'values': [15], 'color': '#75B476', 'alpha': 1},
-            {'title': "Scattered Vegetation", 'abstract': "(1 to 4 %)", 'values': [16], 'color': '#9AC79C', 'alpha': 1}]}}
+            {'title': "Scattered Vegetation", 'abstract': "(1 to 4 %)", 'values': [16], 'color': '#9AC79C', 'alpha': 1}
+        ]
+    }
+}
 
 
 style_c2_level4_watersea = {
@@ -62,7 +71,10 @@ style_c2_level4_watersea = {
         "watersea_veg_cat_l4a_au": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Water > 3 months", 'abstract': "(semi-) permenant", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
-            {'title': "Water < 3 months", 'abstract': "(temporary or seasonal)", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}]}}
+            {'title': "Water < 3 months", 'abstract': "(temporary or seasonal)", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
+        ]
+    }
+}
 
 
 style_c2_level4_waterper = {
@@ -75,7 +87,10 @@ style_c2_level4_waterper = {
             {'title': "Perennial", 'abstract': "(> 9 months)", 'values': [1], 'color': '#1b55ba', 'alpha': 1},
             {'title': "Non-perennial", 'abstract': "(7 to 9 months)", 'values': [7], 'color': '#3479C9', 'alpha': 1},
             {'title': "Non-perennial", 'abstract': "(4 to 6 months)", 'values': [8], 'color': '#4F9DD9', 'alpha': 1},
-            {'title': "Non-perennial", 'abstract': "(1 to 3 months)", 'values': [9], 'color': '#71CAFD', 'alpha': 1}]}}
+            {'title': "Non-perennial", 'abstract': "(1 to 3 months)", 'values': [9], 'color': '#71CAFD', 'alpha': 1}
+        ]
+    }
+}
 
 
 style_c2_level4_baregrad = {
@@ -87,7 +102,10 @@ style_c2_level4_baregrad = {
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Sparsely Vegetated", 'abstract': "", 'values': [10], 'color': '#FFE68C', 'alpha': 1},
             {'title': "Very Sparsely Vegetated", 'abstract': "", 'values': [12], 'color': '#FAD26E', 'alpha': 1},
-            {'title': "Bare Areas, Unvegetated", 'abstract': "", 'values': [15], 'color': '#F3AB69', 'alpha': 1}]}}
+            {'title': "Bare Areas, Unvegetated", 'abstract': "", 'values': [15], 'color': '#F3AB69', 'alpha': 1}
+        ]
+    }
+}
 
 
 style_c2_level4 = {
@@ -201,7 +219,9 @@ style_c2_level4 = {
             {'title': 'Water: Non-perennial (4 to 6 months)', 'abstract': '', 'values': [103], 'color': '#4f9dd9', 'alpha': 1},
             {'title': 'Water: Non-perennial (1 to 3 months)', 'abstract': '', 'values': [104], 'color': '#85cafd', 'alpha': 1},
             # {'title': 'Water: (Snow)', 'abstract': '', 'values': [105], 'color': '#fafafa', 'alpha': 1},
-        ]}}
+        ]
+    }
+}
 
 
 layers = {

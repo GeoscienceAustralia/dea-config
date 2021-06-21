@@ -1016,7 +1016,7 @@
             "styles_count": 2,
             "styles_list": [
                 "level3",
-                "level4",
+                "level4"
             ]
         },
         {
@@ -1031,7 +1031,7 @@
                 "waterper",
                 "baregrad"
             ]
-        },
+        }
     ],
     "total_layers_count": 83
 }
