@@ -19,7 +19,7 @@ services:
     volumes:
       - ./product-def-validator.sh:/env/config/product-def-validator.sh
       - ${PRODUCT_DEF_FILE}:/env/config/products.csv
-    command: ["/bin/sh", "-ec", "while :; do echo '.'; sleep 5 ; done"]
+    command: ["/bin/sh", "-ec", "while :; do echo '.'; sleep 30 ; done"]
 
   postgres:
     build: docker/database/
