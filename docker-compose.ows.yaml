@@ -23,6 +23,7 @@ services:
       - ${OWS_CFG_MOUNT}:${CFG_PATH_PREFIX}
       - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
       - ./compare-cfg.sh:/env/config/compare-cfg.sh
+      - ${PRODUCT_DEF_FILE}:/env/config/products.csv
 
   postgres:
     build: docker/database/

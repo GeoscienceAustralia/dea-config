@@ -33,3 +33,4 @@ jobs:
         DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
         WMS_CONFIG_FILE: ows_root_cfg.py
         CFG_PATH_PREFIX: /env/config/ows_refactored
+        PRODUCT_DEF_FILE: ./workspaces/dev-products.csv
