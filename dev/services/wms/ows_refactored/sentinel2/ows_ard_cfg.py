@@ -1,5 +1,6 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
-from ows_refactored.sentinel2.style_s2_cfg import styles_s2_list, bands_sentinel2
+from ows_refactored.sentinel2.style_s2_cfg import (bands_sentinel2,
+                                                   styles_s2_list)
 
 bands_sentinel2_ard_nbar = {
     "nbar_coastal_aerosol": [
