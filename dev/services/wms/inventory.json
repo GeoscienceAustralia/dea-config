@@ -400,6 +400,82 @@
         },
         {
             "product": [
+                "s2a_ard_granule",
+                "s2b_ard_granule"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2"
+            ]
+        },
+        {
+            "product": [
+                "s2b_ard_granule"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2"
+            ]
+        },
+        {
+            "product": [
+                "s2a_ard_granule"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2"
+            ]
+        },
+        {
+            "product": [
                 "multi_scale_topographic_position"
             ],
             "styles_count": 1,
@@ -1008,7 +1084,30 @@
                 "green_veg_c3",
                 "non_green_veg_c3"
             ]
+        },
+        {
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "level3",
+                "level4"
+            ]
+        },
+        {
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "lifeform",
+                "canopyco",
+                "watersea",
+                "waterper",
+                "baregrad"
+            ]
         }
     ],
-    "total_layers_count": 81
+    "total_layers_count": 86
 }
