@@ -502,6 +502,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
+                    "include": "ows_refactored.landcover.ows_c2_lc_cyear_cfg.layers",
+                    "type": "python",
+                },
+                {
                     "title": "Collection 3",
                     "abstract": """
 
