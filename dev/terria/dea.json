@@ -472,6 +472,45 @@
                     ]
                 },
                 {
+                    "name": "DEA Land Cover (Landsat)",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "DEA Land Cover (Landsat)",
+                            "type": "wms",
+                            "layers": "ga_ls_landcover",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls_landcover",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "dateFormat": {
+                                "currentTime": "'Year: 'yyyy",
+                                "timelineTic": "yyyy"
+                            }
+                        },
+                        {
+                            "name": "DEA Land Cover Environmental Descriptors",
+                            "type": "wms",
+                            "layers": "ga_ls_landcover_descriptors",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls_landcover_descriptors",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "dateFormat": {
+                                "currentTime": "'Year: 'yyyy",
+                                "timelineTic": "yyyy"
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Water Observations from Space",
                     "type": "group",
                     "preserveOrder": true,
