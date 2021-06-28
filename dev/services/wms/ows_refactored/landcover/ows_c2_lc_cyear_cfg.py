@@ -15,14 +15,14 @@ bands_eds = {
 
 style_c2_level3 = {
     "name": "level3",
-    "title": "Level 3",
+    "title": "Basic - 6 classes",
     "abstract": "Standardised colouring of Level 3 land cover classes",
     "value_map": {
         "level3": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0, },
             {'title': "Cultivated Terrestrial Vegetation", 'abstract': "", 'values': [111], 'color': '#ACBC2D', 'alpha': 1},
             {'title': "Natural Terrestrial Vegetation", 'abstract': "", 'values': [112], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
+            #{'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
             {'title': "Natural Aquatic Vegetation", 'abstract': "", 'values': [124], 'color': '#1EBF79', 'alpha': 1},
             {'title': "Artificial Surface", 'abstract': "", 'values': [215], 'color': '#DA5C69', 'alpha': 1},
             {'title': "Natural Bare Surface", 'abstract': "", 'values': [216], 'color': '#F3AB69', 'alpha': 1},
@@ -110,7 +110,7 @@ style_c2_level4_baregrad = {
 
 style_c2_level4 = {
     "name": "level4",
-    "title": "Level 4",
+    "title": "Detailed - 80 classes",
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
