@@ -236,6 +236,7 @@ layers = {
         """,
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_landcover,
+            "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
@@ -260,6 +261,7 @@ layers = {
         """,
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_eds,
+            "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
