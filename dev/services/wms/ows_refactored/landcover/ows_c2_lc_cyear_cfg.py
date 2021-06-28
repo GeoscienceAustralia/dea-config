@@ -15,20 +15,21 @@ bands_eds = {
 
 style_c2_level3 = {
     "name": "level3",
-    "title": "Level 3",
+    "title": "Basic - 6 classes",
     "abstract": "Standardised colouring of Level 3 land cover classes",
     "value_map": {
         "level3": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0, },
             {'title': "Cultivated Terrestrial Vegetation", 'abstract': "", 'values': [111], 'color': '#ACBC2D', 'alpha': 1},
             {'title': "Natural Terrestrial Vegetation", 'abstract': "", 'values': [112], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
+            # {'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
             {'title': "Natural Aquatic Vegetation", 'abstract': "", 'values': [124], 'color': '#1EBF79', 'alpha': 1},
             {'title': "Artificial Surface", 'abstract': "", 'values': [215], 'color': '#DA5C69', 'alpha': 1},
             {'title': "Natural Bare Surface", 'abstract': "", 'values': [216], 'color': '#F3AB69', 'alpha': 1},
             {'title': "Water", 'abstract': "", 'values': [220], 'color': '#4D9FDC', 'alpha': 1}
         ]
-    }
+    },
+    "legend": {"width": 3.0, "height": 1.5},
 }
 
 
@@ -70,8 +71,8 @@ style_c2_level4_watersea = {
     "value_map": {
         "watersea_veg_cat_l4a_au": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Water > 3 months", 'abstract': "(semi-) permenant", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
-            {'title': "Water < 3 months", 'abstract': "(temporary or seasonal)", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
+            {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
+            {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
         ]
     }
 }
@@ -110,7 +111,7 @@ style_c2_level4_baregrad = {
 
 style_c2_level4 = {
     "name": "level4",
-    "title": "Level 4",
+    "title": "Detailed - 80 classes",
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
@@ -220,7 +221,11 @@ style_c2_level4 = {
             {'title': 'Water: Non-perennial (1 to 3 months)', 'abstract': '', 'values': [104], 'color': '#85cafd', 'alpha': 1},
             # {'title': 'Water: (Snow)', 'abstract': '', 'values': [105], 'color': '#fafafa', 'alpha': 1},
         ]
-    }
+    },
+    "legend": {
+        "show_legend": True,
+        "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/lccs/level4-web-legend.png"
+    },
 }
 
 
@@ -236,6 +241,7 @@ layers = {
         """,
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_landcover,
+            "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
@@ -249,7 +255,7 @@ layers = {
             },
             "styling": {
                 "default_style": "level4",
-                "styles": [style_c2_level3, style_c2_level4],
+                "styles": [style_c2_level4, style_c2_level3],
             },
         },
         {
@@ -260,6 +266,7 @@ layers = {
         """,
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_eds,
+            "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
@@ -273,7 +280,7 @@ layers = {
             },
             "styling": {
                 "default_style": "canopyco",
-                "styles": [style_c2_level4_lifeform, style_c2_level4_canopyco, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
+                "styles": [style_c2_level4_canopyco, style_c2_level4_lifeform, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
             },
         }
     ]
