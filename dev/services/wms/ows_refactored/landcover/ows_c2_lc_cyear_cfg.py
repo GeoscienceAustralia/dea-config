@@ -221,7 +221,11 @@ style_c2_level4 = {
             {'title': 'Water: Non-perennial (1 to 3 months)', 'abstract': '', 'values': [104], 'color': '#85cafd', 'alpha': 1},
             # {'title': 'Water: (Snow)', 'abstract': '', 'values': [105], 'color': '#fafafa', 'alpha': 1},
         ]
-    }
+    },
+    "legend": {
+        "show_legend": True,
+        "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/lccs/level4-web-legend.png"
+    },
 }
 
 
