@@ -22,13 +22,14 @@ style_c2_level3 = {
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0, },
             {'title': "Cultivated Terrestrial Vegetation", 'abstract': "", 'values': [111], 'color': '#ACBC2D', 'alpha': 1},
             {'title': "Natural Terrestrial Vegetation", 'abstract': "", 'values': [112], 'color': '#0E7912', 'alpha': 1},
-            #{'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
+            # {'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
             {'title': "Natural Aquatic Vegetation", 'abstract': "", 'values': [124], 'color': '#1EBF79', 'alpha': 1},
             {'title': "Artificial Surface", 'abstract': "", 'values': [215], 'color': '#DA5C69', 'alpha': 1},
             {'title': "Natural Bare Surface", 'abstract': "", 'values': [216], 'color': '#F3AB69', 'alpha': 1},
             {'title': "Water", 'abstract': "", 'values': [220], 'color': '#4D9FDC', 'alpha': 1}
         ]
-    }
+    },
+    "legend": {"width": 3.0, "height": 1.5},
 }
 
 
@@ -70,8 +71,8 @@ style_c2_level4_watersea = {
     "value_map": {
         "watersea_veg_cat_l4a_au": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Water > 3 months", 'abstract': "(semi-) permenant", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
-            {'title': "Water < 3 months", 'abstract': "(temporary or seasonal)", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
+            {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
+            {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
         ]
     }
 }
@@ -250,7 +251,7 @@ layers = {
             },
             "styling": {
                 "default_style": "level4",
-                "styles": [style_c2_level3, style_c2_level4],
+                "styles": [style_c2_level4, style_c2_level3],
             },
         },
         {
@@ -275,7 +276,7 @@ layers = {
             },
             "styling": {
                 "default_style": "canopyco",
-                "styles": [style_c2_level4_lifeform, style_c2_level4_canopyco, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
+                "styles": [style_c2_level4_canopyco, style_c2_level4_lifeform, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
             },
         }
     ]
