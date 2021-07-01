@@ -26,12 +26,12 @@
               },
               "id": "Wqpk8F",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images multi-sensor - daily/Daily Landsat and Sentinel-2 satellite images"
+                "Root Group/Satellite images/Satellite images multi-sensor - daily/Daily Landsat and Sentinel-2 satellite images"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite data/Satellite images multi-sensor - daily"
+            "Root Group/Satellite images/Satellite images multi-sensor - daily"
           ]
         },
         {
@@ -72,7 +72,7 @@
                   },
                   "id": "Z1RRRa",
                   "shareKeys": [
-                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2 satellite images"
+                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2 satellite images"
                   ]
                 },
                 {
@@ -103,7 +103,7 @@
                   },
                   "id": "8apTli",
                   "shareKeys": [
-                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2A satellite images"
+                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2A satellite images"
                   ]
                 },
                 {
@@ -134,12 +134,12 @@
                   },
                   "id": "AuD7kv",
                   "shareKeys": [
-                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2B satellite images"
+                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2B satellite images"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images"
+                "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images"
               ]
             },
             {
@@ -175,7 +175,7 @@
                   },
                   "id": "SbBCvf",
                   "shareKeys": [
-                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2 satellite images"
+                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2 satellite images"
                   ]
                 },
                 {
@@ -206,7 +206,7 @@
                   },
                   "id": "iNJKMD",
                   "shareKeys": [
-                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2a satellite images"
+                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2a satellite images"
                   ]
                 },
                 {
@@ -237,17 +237,17 @@
                   },
                   "id": "RACNHJ",
                   "shareKeys": [
-                    "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2b satellite images"
+                    "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2b satellite images"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 10m - daily/Sentinel 2 satellite imagery archive"
+                "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite data/Satellite images 10m - daily"
+            "Root Group/Satellite images/Satellite images 10m - daily"
           ]
         },
         {
@@ -283,7 +283,7 @@
               },
               "id": "5k8KR4",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - daily/Daily Landsat 8 satellite images"
+                "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 8 satellite images"
               ]
             },
             {
@@ -314,7 +314,7 @@
               },
               "id": "bzDSiT",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - daily/Daily Landsat 7 satellite images"
+                "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 7 satellite images"
               ]
             },
             {
@@ -345,12 +345,12 @@
               },
               "id": "rESkby",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - daily/Daily Landsat 5 satellite images"
+                "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 5 satellite images"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite data/Satellite images 25m - daily"
+            "Root Group/Satellite images/Satellite images 25m - daily"
           ]
         },
         {
@@ -385,7 +385,7 @@
               },
               "id": "YKuvNW",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - 16 days/Landsat 8 satellite 16-day composite"
+                "Root Group/Satellite images/Satellite images 25m - 16 days/Landsat 8 satellite 16-day composite"
               ]
             },
             {
@@ -415,7 +415,7 @@
               },
               "id": "2yAWA3",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - 16 days/Landsat 7 satellite 16-day composite"
+                "Root Group/Satellite images/Satellite images 25m - 16 days/Landsat 7 satellite 16-day composite"
               ]
             },
             {
@@ -445,12 +445,12 @@
               },
               "id": "eZgwP8",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - 16 days/Landsat 5 satellite 16-day composite"
+                "Root Group/Satellite images/Satellite images 25m - 16 days/Landsat 5 satellite 16-day composite"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite data/Satellite images 25m - 16 days"
+            "Root Group/Satellite images/Satellite images 25m - 16 days"
           ]
         },
         {
@@ -485,7 +485,7 @@
               },
               "id": "hAUsXi",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - annual/Yearly average Landsat 8 satellite images"
+                "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 8 satellite images"
               ]
             },
             {
@@ -515,7 +515,7 @@
               },
               "id": "pwDY6b",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - annual/Yearly average Landsat 7 satellite images"
+                "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 7 satellite images"
               ]
             },
             {
@@ -545,12 +545,12 @@
               },
               "id": "BpKM2u",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - annual/Yearly average Landsat 5 satellite images"
+                "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 5 satellite images"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite data/Satellite images 25m - annual"
+            "Root Group/Satellite images/Satellite images 25m - annual"
           ]
         },
         {
@@ -585,7 +585,7 @@
               },
               "id": "Mn56Pg",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - Barest Earth/Barest Earth Landsat 8 satellite images"
+                "Root Group/Satellite images/Satellite images 25m - Barest Earth/Barest Earth Landsat 8 satellite images"
               ]
             },
             {
@@ -614,12 +614,12 @@
               },
               "id": "WRTIQP",
               "shareKeys": [
-                "Root Group/Satellite data/Satellite images 25m - Barest Earth/Landsat 30+ Barest Earth Satellite Images (Combined Landsat)"
+                "Root Group/Satellite images/Satellite images 25m - Barest Earth/Landsat 30+ Barest Earth Satellite Images (Combined Landsat)"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Satellite data/Satellite images 25m - Barest Earth"
+            "Root Group/Satellite images/Satellite images 25m - Barest Earth"
           ]
         }
       ],
@@ -654,7 +654,7 @@
               },
               "id": "mYnkqY",
               "shareKeys": [
-                "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations"
+                "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations"
               ]
             },
             {
@@ -673,7 +673,7 @@
               },
               "id": "8uKmJ8",
               "shareKeys": [
-                "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover"
+                "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover"
               ]
             },
             {
@@ -692,7 +692,7 @@
               },
               "id": "BLxe8I",
               "shareKeys": [
-                "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover"
+                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover"
               ]
             },
             {
@@ -717,7 +717,7 @@
                   },
                   "id": "dYcQgZ",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 8 Fractional Cover observations"
+                    "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 8 Fractional Cover observations"
                   ]
                 },
                 {
@@ -737,7 +737,7 @@
                   },
                   "id": "Gmlr15",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 7 Fractional Cover observations"
+                    "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 7 Fractional Cover observations"
                   ]
                 },
                 {
@@ -757,12 +757,12 @@
                   },
                   "id": "Pak2Rm",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 5 Fractional Cover observations"
+                    "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor/Daily Landsat 5 Fractional Cover observations"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Land and vegetation/DEA Fractional Cover/Daily Fractional Cover observations by sensor"
+                "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations by sensor"
               ]
             },
             {
@@ -786,7 +786,7 @@
                   },
                   "id": "BL3iXJ",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Green Vegetation"
+                    "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Green Vegetation"
                   ]
                 },
                 {
@@ -805,7 +805,7 @@
                   },
                   "id": "uqGrkN",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Non-Green Vegetation"
+                    "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Non-Green Vegetation"
                   ]
                 },
                 {
@@ -824,12 +824,12 @@
                   },
                   "id": "VScBTN",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Bare Ground"
+                    "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Bare Ground"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Land and vegetation/DEA Fractional Cover/Seasonal Fractional Cover summaries"
+                "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries"
               ]
             },
             {
@@ -853,7 +853,7 @@
                   },
                   "id": "7eJRQy",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries/Annual Green Vegetation"
+                    "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Green Vegetation"
                   ]
                 },
                 {
@@ -872,7 +872,7 @@
                   },
                   "id": "uFlnzu",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
+                    "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
                   ]
                 },
                 {
@@ -891,17 +891,17 @@
                   },
                   "id": "L1wwAP",
                   "shareKeys": [
-                    "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries/Annual Bare Ground"
+                    "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Bare Ground"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Land and vegetation/DEA Fractional Cover/Annual Fractional Cover summaries"
+                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Land and vegetation/DEA Fractional Cover"
+            "Root Group/Vegetation/Fractional Cover"
           ]
         },
         {
@@ -925,14 +925,14 @@
               },
               "id": "3gjEXB",
               "shareKeys": [
-                "Root Group/Land and vegetation/DEA Mangrove Canopy Cover/DEA Mangrove Canopy Cover"
+                "Root Group/Vegetation/Mangrove Canopy Cover"
               ]
             }
           ],
         },
       ],
       "shareKeys": [
-        "Root Group/Land and vegetation"
+        "Root Group/Vegetation"
       ]
     },
     {
@@ -962,7 +962,7 @@
               },
               "id": "iun7iP",
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Daily water observations"
+                "Root Group/Surface Water/Water Observations from Space/Daily water observations"
               ]
             },
             {
@@ -981,7 +981,7 @@
               },
               "id": "AiQHtl",
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations"
+                "Root Group/Surface Water/Water Observations from Space/April-October water observations"
               ]
             },
             {
@@ -1000,7 +1000,7 @@
               },
               "id": "hbzXqh",
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations"
+                "Root Group/Surface Water/Water Observations from Space/November-March water observations"
               ]
             },
             {
@@ -1019,7 +1019,7 @@
               },
               "id": "SpYxSG",
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations"
+                "Root Group/Surface Water/Water Observations from Space/Annual water observations"
               ]
             },
             {
@@ -1036,7 +1036,7 @@
               },
               "id": "aNt8yM",
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations"
+                "Root Group/Surface Water/Water Observations from Space/All water observations"
               ]
             },
             {
@@ -1060,7 +1060,7 @@
                   },
                   "id": "M1ThLx",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations source data/April-October clear observations"
+                    "Root Group/Surface Water/Water Observations from Space/April-October water observations source data/April-October clear observations"
                   ]
                 },
                 {
@@ -1079,12 +1079,12 @@
                   },
                   "id": "7vSA2T",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations source data/April-October wet observations"
+                    "Root Group/Surface Water/Water Observations from Space/April-October water observations source data/April-October wet observations"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/April-October water observations source data"
+                "Root Group/Surface Water/Water Observations from Space/April-October water observations source data"
               ]
             },
             {
@@ -1108,7 +1108,7 @@
                   },
                   "id": "HGetFm",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations source data/November-March clear observations"
+                    "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March clear observations"
                   ]
                 },
                 {
@@ -1127,12 +1127,12 @@
                   },
                   "id": "iknUf8",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations source data/November-March wet observations"
+                    "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March wet observations"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/November-March water observations source data"
+                "Root Group/Surface Water/Water Observations from Space/November-March water observations source data"
               ]
             },
             {
@@ -1156,7 +1156,7 @@
                   },
                   "id": "614LVP",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations source data/Annual clear observations"
+                    "Root Group/Surface Water/Water Observations from Space/Annual water observations source data/Annual clear observations"
                   ]
                 },
                 {
@@ -1175,12 +1175,12 @@
                   },
                   "id": "1LlNu1",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations source data/Annual wet observations"
+                    "Root Group/Surface Water/Water Observations from Space/Annual water observations source data/Annual wet observations"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/Annual water observations source data"
+                "Root Group/Surface Water/Water Observations from Space/Annual water observations source data"
               ]
             },
             {
@@ -1202,7 +1202,7 @@
                   },
                   "id": "NhDETf",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/All clear observations"
+                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/All clear observations"
                   ]
                 },
                 {
@@ -1219,7 +1219,7 @@
                   },
                   "id": "Cabw4Q",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/All wet observations"
+                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/All wet observations"
                   ]
                 },
                 {
@@ -1236,7 +1236,7 @@
                   },
                   "id": "N7GZZR",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/Unfiltered summary of all water observations"
+                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/Unfiltered summary of all water observations"
                   ]
                 },
                 {
@@ -1253,17 +1253,17 @@
                   },
                   "id": "7tjxnH",
                   "shareKeys": [
-                    "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data/Water observations confidence"
+                    "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/Water observations confidence"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Water Observations (WOfS)/All water observations combined source data"
+                "Root Group/Surface Water/Water Observations from Space/All water observations combined source data"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Inland waterbodies/DEA Water Observations (WOfS)"
+            "Root Group/Surface Water/Water Observations from Space"
           ]
         },
         {
@@ -1285,12 +1285,12 @@
               },
               "id": "DGGjbr",
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Waterbodies/DEA Waterbodies"
+                "Root Group/Surface Water/Digital Earth Australia Waterbodies/Digital Earth Australia Waterbodies"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Inland waterbodies/DEA Waterbodies"
+            "Root Group/Surface Water/Digital Earth Australia Waterbodies"
           ]
         },
         {
@@ -1313,17 +1313,17 @@
               },
               "id": "hbmz55",
               "shareKeys": [
-                "Root Group/Inland waterbodies/DEA Wetness Percentiles/DEA Wetness Percentiles"
+                "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Wetness Percentiles"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Inland waterbodies/DEA Wetness Percentiles"
+            "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)"
           ]
         }
       ],
       "shareKeys": [
-        "Root Group/Inland waterbodies"
+        "Root Group/Surface Water"
       ]
     },
     {
@@ -1354,7 +1354,7 @@
                 }
               ],
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Coastlines/DEA Coastlines"
+                "Root Group/Coastal/Digital Earth Australia Coastlines/Digital Earth Australia Coastlines (beta)"
               ]
             },
             {
@@ -1379,7 +1379,7 @@
                     }
                   ],
                   "shareKeys": [
-                    "Root Group/Sea, ocean and coastline/DEA Coastlines/Supplementary layers/Annual coastlines"
+                    "Root Group/Coastal/Digital Earth Australia Coastlines/Supplementary layers/Annual coastlines"
                   ]
                 },
                 {
@@ -1400,17 +1400,17 @@
                     }
                   ],
                   "shareKeys": [
-                    "Root Group/Sea, ocean and coastline/DEA Coastlines/Supplementary layers/Rates of change statistics"
+                    "Root Group/Coastal/Digital Earth Australia Coastlines/Supplementary layers/Rates of change statistics"
                   ]
                 }
               ],
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Coastlines/Supplementary layers"
+                "Root Group/Coastal/Digital Earth Australia Coastlines/Supplementary layers"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Sea, ocean and coastline/DEA Coastlines"
+            "Root Group/Coastal/Digital Earth Australia Coastlines"
           ]
         },
         {
@@ -1432,7 +1432,7 @@
               },
               "id": "bWICtK",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Elevation (NIDEM)"
+                "Root Group/Coastal/National Intertidal Digital Elevation Model"
               ]
             },
             {
@@ -1449,7 +1449,7 @@
               },
               "id": "cXSDLg",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents (ITEM)"
+                "Root Group/Coastal/Intertidal extent model/Intertidal Extent"
               ]
             },
             {
@@ -1466,7 +1466,7 @@
               },
               "id": "6E5V7V",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents confidence"
+                "Root Group/Coastal/Intertidal extent model/Intertidal Extent Confidence"
               ]
             },
             {
@@ -1510,12 +1510,12 @@
               },
               "id": "6fBRXw",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)/DEA Intertidal Extents polygons for data access"
+                "Root Group/Coastal/Intertidal extent model/Intertidal Extent Polygons data access"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Sea, ocean and coastline/DEA Intertidal (ITEM, NIDEM)"
+            "Root Group/Coastal/Intertidal extent model"
           ]
         },
         {
@@ -1537,7 +1537,7 @@
               },
               "id": "4XvQxE",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA Low Tide Imagery"
+                "Root Group/Coastal/Low tide satellite images/Low tide Landsat satellite images"
               ]
             },
             {
@@ -1554,7 +1554,7 @@
               },
               "id": "YLrxLi",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA High Tide Imagery"
+                "Root Group/Coastal/High tide satellite images/High tide Landsat satellite images"
               ]
             },
             {
@@ -1588,7 +1588,7 @@
               },
               "id": "5SAK7J",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA Low Tide polygons for data access"
+                "Root Group/Coastal/Low tide satellite images/Low Tide Polygons for data access"
               ]
             },
             {
@@ -1622,18 +1622,18 @@
               },
               "id": "IjP3T7",
               "shareKeys": [
-                "Root Group/Sea, ocean and coastline/DEA High and Low Tide Imagery (HLTC)/DEA High Tide polygons for data access"
+                "Root Group/Coastal/High tide satellite images/High Tide Polygons for data access"
               ]
             }
           ],
           "shareKeys": [
-            "Root Group/Coastal/DEA High and Low Tide Imagery (HLTC)"
+            "Root Group/Coastal/High tide satellite images"
           ]
         },
         
       ],
       "shareKeys": [
-        "Root Group/Sea, ocean and coastline"
+        "Root Group/Coastal"
       ]
     },
     {
@@ -1658,7 +1658,7 @@
               },
               "id": "P5RY1c",
               "shareKeys": [
-                "Root Group/Hazards/DEA Hotspots/DEA Hotspots, Last 72h"
+                "Root Group/Hotspots/Hotspots, Last 72h"
               ]
             },
             {
@@ -1673,17 +1673,17 @@
               },
               "id": "m5lE5k",
               "shareKeys": [
-                "Root Group/Hazards/DEA Hotspots/Himawari-8 Mosaic, Last 10m"
+                "Root Group/Hotspots/Himawari-8 Mosaic, Last 10m"
               ]
             },
           ],
           "shareKeys": [
-            "Root Group/Hazards/DEA Hotspots"
+            "Root Group/Hotspots"
           ]
         },
       ],
       "shareKeys": [
-        "Root Group/Hazards"
+        "Root Group/Hotspots"
       ]
     },
     {
@@ -1714,7 +1714,7 @@
             },
             "id": "DzhvUP",
             "shareKeys": [
-              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ALOS Displacement"
+              "Root Group/Camden Environmental Monitoring Project InSAR/ALOS Displacement"
             ]
           },
           {
@@ -1735,7 +1735,7 @@
             },
             "id": "KqwIfB",
             "shareKeys": [
-              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ALOS Velocity"
+              "Root Group/Camden Environmental Monitoring Project InSAR/ALOS Velocity"
             ]
           },
           {
@@ -1756,7 +1756,7 @@
             },
             "id": "Sc8euJ",
             "shareKeys": [
-              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ENVISAT Displacement"
+              "Root Group/Camden Environmental Monitoring Project InSAR/ENVISAT Displacement"
             ]
           },
           {
@@ -1777,7 +1777,7 @@
             },
             "id": "qzCczV",
             "shareKeys": [
-              "Root Group/Other/Camden Environmental Monitoring Project InSAR/ENVISAT Velocity"
+              "Root Group/Camden Environmental Monitoring Project InSAR/ENVISAT Velocity"
             ]
           },
           {
@@ -1798,7 +1798,7 @@
             },
             "id": "Nb5Pcu",
             "shareKeys": [
-              "Root Group/Other/Camden Environmental Monitoring Project InSAR/RADARSAT2 Displacement"
+              "Root Group/Camden Environmental Monitoring Project InSAR/RADARSAT2 Displacement"
             ]
           },
           {
@@ -1819,7 +1819,7 @@
             },
             "id": "3mQ5Ye",
             "shareKeys": [
-              "Root Group/Other/Camden Environmental Monitoring Project InSAR/RADARSAT2 Velocity"
+              "Root Group/Camden Environmental Monitoring Project InSAR/RADARSAT2 Velocity"
             ]
           }
         ],
@@ -1830,7 +1830,7 @@
           }
         ],
         "shareKeys": [
-          "Root Group/Other/Camden Environmental Monitoring Project InSAR"
+          "Root Group/Camden Environmental Monitoring Project InSAR"
         ]
       }
       ],
