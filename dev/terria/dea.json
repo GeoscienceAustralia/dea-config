@@ -472,6 +472,45 @@
                     ]
                 },
                 {
+                    "name": "DEA Land Cover (Landsat)",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "DEA Land Cover (Landsat)",
+                            "type": "wms",
+                            "layers": "ga_ls_landcover",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls_landcover",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "dateFormat": {
+                                "currentTime": "'Year: 'yyyy",
+                                "timelineTic": "yyyy"
+                            }
+                        },
+                        {
+                            "name": "DEA Land Cover Environmental Descriptors",
+                            "type": "wms",
+                            "layers": "ga_ls_landcover_descriptors",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls_landcover_descriptors",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "dateFormat": {
+                                "currentTime": "'Year: 'yyyy",
+                                "timelineTic": "yyyy"
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Water Observations from Space",
                     "type": "group",
                     "preserveOrder": true,
@@ -1840,6 +1879,163 @@
             "preserveOrder": true,
             "items": [
                 {
+                    "name": "Collection 3 Testing",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "Surface Reflectance (Landsat)",
+                            "type": "wms",
+                            "layers": "ga_ls_ard_3",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "dea_c3_ls_combined",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "featureInfoTemplate": {
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "featureTimesProperty": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "supportsDeltaComparison": true
+                        },
+                        {
+                            "name": "Surface Reflectance (Landsat 8 OLI/TIRS)",
+                            "type": "wms",
+                            "layers": "ga_ls8c_ard_3",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls8c_ard_3",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "featureInfoTemplate": {
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "featureTimesProperty": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "supportsDeltaComparison": true
+                        },
+                        {
+                            "name": "Surface Reflectance (Landsat 7 ETM+)",
+                            "type": "wms",
+                            "layers": "ga_ls7e_ard_3",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls7e_ard_3",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "featureInfoTemplate": {
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "featureTimesProperty": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "supportsDeltaComparison": true
+                        },
+                        {
+                            "name": "Surface Reflectance (Landsat 5 TM)",
+                            "type": "wms",
+                            "layers": "ga_ls5t_ard_3",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls5t_ard_3",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "featureInfoTemplate": {
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "featureTimesProperty": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "supportsDeltaComparison": true
+                        },
+                        {
+                            "name": "Water Observations (Landsat)",
+                            "type": "wms",
+                            "layers": "ga_ls_wo_3",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls_wo_3",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "featureInfoTemplate": {
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "featureTimesProperty": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "supportsDeltaComparison": true
+                        },
+                        {
+                            "name": "Fractional Cover (Landsat)",
+                            "type": "wms",
+                            "layers": "ga_ls_fc_3",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls_fc_3",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1,
+                            "featureInfoTemplate": {
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "featureTimesProperty": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "supportsDeltaComparison": true
+                        }
+                    ]
+                },
+                {
                     "name": "Water Observations from Space",
                     "type": "group",
                     "preserveOrder": true,
@@ -2408,6 +2604,25 @@
                     ]
                 },
                 {
+                    "name": "DEA Wetness Percentiles (Landsat)",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "Tasseled Cap Wetness Percentiles",
+                            "type": "wms",
+                            "layers": "ga_ls_tcw_percentiles_2",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
+                            "ignoreUnknownTileErrors": true,
+                            "chartType": "momentPoints",
+                            "chartColor": "white",
+                            "opacity": 1
+                        }
+                    ]
+                },
+                {
                     "name": "Fractional Cover",
                     "type": "group",
                     "preserveOrder": true,
@@ -2732,6 +2947,54 @@
                             "url": "https://ows.dea.ga.gov.au/",
                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                             "linkedWcsCoverage": "multi_scale_topographic_position",
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1,
+                            "dateFormat": {
+                                "currentTime": "'Year: 'yyyy",
+                                "timelineTic": "yyyy"
+                            }
+                        }
+                    ]
+                },{
+                    "name": "Surface Reflectance Triple Median Absolute Deviation",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "name": "ls8_nbart_tmad_annual",
+                            "type": "wms",
+                            "layers": "ls8_nbart_tmad_annual",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ls8_nbart_tmad_annual",
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1,
+                            "dateFormat": {
+                                "currentTime": "'Year: 'yyyy",
+                                "timelineTic": "yyyy"
+                            }
+                        },
+                        {
+                            "name": "ls7_nbart_tmad_annual",
+                            "type": "wms",
+                            "layers": "ls7_nbart_tmad_annual",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ls7_nbart_tmad_annual",
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1,
+                            "dateFormat": {
+                                "currentTime": "'Year: 'yyyy",
+                                "timelineTic": "yyyy"
+                            }
+                        },
+                        {
+                            "name": "ls5_nbart_tmad_annual",
+                            "type": "wms",
+                            "layers": "ls5_nbart_tmad_annual",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ls5_nbart_tmad_annual",
                             "ignoreUnknownTileErrors": true,
                             "opacity": 1,
                             "dateFormat": {

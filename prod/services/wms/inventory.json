@@ -322,8 +322,8 @@
         },
         {
             "product": [
-                "ga_s2a_ard_nbar_granule",
-                "ga_s2b_ard_nbar_granule"
+                "s2a_ard_granule",
+                "s2b_ard_granule"
             ],
             "styles_count": 17,
             "styles_list": [
@@ -348,7 +348,7 @@
         },
         {
             "product": [
-                "ga_s2b_ard_nbar_granule"
+                "s2b_ard_granule"
             ],
             "styles_count": 17,
             "styles_list": [
@@ -373,7 +373,7 @@
         },
         {
             "product": [
-                "ga_s2a_ard_nbar_granule"
+                "s2a_ard_granule"
             ],
             "styles_count": 17,
             "styles_list": [
