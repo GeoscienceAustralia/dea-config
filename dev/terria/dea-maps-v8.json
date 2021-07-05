@@ -688,7 +688,6 @@
               ]
             }
           ]
-<<<<<<< HEAD
         },
         {
           "id": "u8GXYD",
@@ -758,8 +757,6 @@
           "shareKeys": [
             "Root Group/Satellite images/Satellite images 25m - Barest Earth"
           ]
-=======
->>>>>>> b0cd9af008541f69d3f4bd496a13e95f0ff63ecc
         }
       ],
       "shareKeys": [
@@ -1461,10 +1458,6 @@
             "Root Group/Coastal/High tide satellite images"
           ]
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> b0cd9af008541f69d3f4bd496a13e95f0ff63ecc
       ],
       "shareKeys": [
         "Root Group/Coastal"
