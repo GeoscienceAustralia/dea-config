@@ -687,7 +687,7 @@
                 "Root Group/Vegetation/Mangrove Canopy Cover"
               ]
             }
-          ],
+          ]
         },
         {
           "id": "u8GXYD",
@@ -1457,8 +1457,7 @@
           "shareKeys": [
             "Root Group/Coastal/High tide satellite images"
           ]
-        },
-        
+        }
       ],
       "shareKeys": [
         "Root Group/Coastal"
@@ -1503,12 +1502,12 @@
               "shareKeys": [
                 "Root Group/Hotspots/Himawari-8 Mosaic, Last 10m"
               ]
-            },
+            }
           ],
           "shareKeys": [
             "Root Group/Hotspots"
           ]
-        },
+        }
       ],
       "shareKeys": [
         "Root Group/Hotspots"
