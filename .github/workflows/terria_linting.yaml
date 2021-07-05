@@ -4,12 +4,12 @@ on:
   push:
     paths:
       - 'dev/terria/**'
-      - .github/workflows/terria_linting.yml
+      - .github/workflows/terria_linting.yaml
   pull_request:
     branches: [ master ]
     paths:
       - 'dev/terria/**'
-      - .github/workflows/terria_linting.yml
+      - .github/workflows/terria_linting.yaml
 
 jobs:
   build:
@@ -29,3 +29,4 @@ jobs:
         npm install jsonlint -g
         jsonlint dev/terria/dea-maps.json -q
         jsonlint dev/terria/dea.json -q
+        jsonlint dev/terria/**.json -q
