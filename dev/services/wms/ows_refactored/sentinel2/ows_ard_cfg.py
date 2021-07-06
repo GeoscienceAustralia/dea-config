@@ -52,6 +52,20 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+            "flags": [
+                {
+                    "band": "fmask",
+                    "products": ["s2a_ard_granule", "s2b_ard_granule"],
+                    "ignore_time": False,
+                    "ignore_info_flags": []
+                },
+                {
+                    "band": "land",
+                    "products": ["geodata_coast_100k","geodata_coast_100k"],
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [10.0, 10.0],
@@ -74,6 +88,20 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+            "flags": [
+                {
+                    "band": "fmask",
+                    "product": "s2b_ard_granule",
+                    "ignore_time": False,
+                    "ignore_info_flags": []
+                },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [10.0, 10.0],
@@ -96,6 +124,20 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+            "flags": [
+                {
+                    "band": "fmask",
+                    "product": "s2a_ard_granule",
+                    "ignore_time": False,
+                    "ignore_info_flags": []
+                },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [10.0, 10.0],
