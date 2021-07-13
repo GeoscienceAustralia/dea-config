@@ -19,7 +19,6 @@ bands_sentinel2_ard_nbart = {
     "nbart_nir_2": ["nbar_nir_2", "nir2", "nbart_nir_2"],
     "nbart_swir_2": ["nbar_swir_2", "swir_2", "nbart_swir_2"],
     "nbart_swir_3": ["nbar_swir_3", "swir_3", "nbart_swir_3"],
-    "nbart_swir_3": ["nbar_swir_3", "swir_3", "nbart_swir_3"],
     "fmask": ["fmask"],
 }
 
