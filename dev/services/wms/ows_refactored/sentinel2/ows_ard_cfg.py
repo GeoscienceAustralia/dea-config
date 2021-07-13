@@ -61,7 +61,7 @@ For service status information, see https://status.dea.ga.gov.au
                 },
                 {
                     "band": "land",
-                    "products": ["geodata_coast_100k","geodata_coast_100k"],
+                    "products": ["geodata_coast_100k", "geodata_coast_100k"],
                     "ignore_time": True,
                     "ignore_info_flags": []
                 },
