@@ -1,6 +1,5 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
-from ows_refactored.sentinel2.style_s2_cfg import (style_s2_nbr_list,
-                                                   styles_s2_list)
+from ows_refactored.sentinel2.style_s2_cfg import styles_s2_list
 
 bands_sentinel2 = {
     "nbar_coastal_aerosol": ["nbar_coastal_aerosol", "nbar_narrow_blue"],
@@ -30,6 +29,7 @@ bands_sentinel2 = {
     "nbart_nir_2": ["nbart_nir_2", "nir_2", "nbart_near_infrared_2"],
     "nbart_swir_2": ["nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2"],
     "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
+    "fmask": ["fmask"],
 }
 
 multi_layers = {
@@ -59,6 +59,20 @@ For service status information, see https://status.dea.ga.gov.au
         "always_fetch_bands": [],
         "manual_merge": False,
     },
+    "flags": [
+        {
+            "band": "fmask",
+            "products": ["s2a_nrt_granule", "s2b_nrt_granule"],
+            "ignore_time": False,
+            "ignore_info_flags": [],
+        },
+        {
+            "band": "land",
+            "products": ["geodata_coast_100k", "geodata_coast_100k"],
+            "ignore_time": True,
+            "ignore_info_flags": []
+        },
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
         "native_resolution": [10.0, 10.0],
@@ -68,7 +82,7 @@ For service status information, see https://status.dea.ga.gov.au
             "nbart_blue",
         ],
     },
-    "styling": {"default_style": "simple_rgb", "styles": style_s2_nbr_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
 }
 
 s2b_layer = {
@@ -97,6 +111,20 @@ For service status information, see https://status.dea.ga.gov.au
         "always_fetch_bands": [],
         "manual_merge": False,
     },
+    "flags": [
+        {
+            "band": "fmask",
+            "product": "s2b_nrt_granule",
+            "ignore_time": False,
+            "ignore_info_flags": []
+        },
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": []
+        },
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
         "native_resolution": [10.0, 10.0],
@@ -135,6 +163,20 @@ For service status information, see https://status.dea.ga.gov.au
         "always_fetch_bands": [],
         "manual_merge": False,
     },
+    "flags": [
+        {
+            "band": "fmask",
+            "product": "s2a_nrt_granule",
+            "ignore_time": False,
+            "ignore_info_flags": []
+        },
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": []
+        },
+    ],
     "wcs": {
         "native_crs": "EPSG:3577",
         "native_resolution": [10.0, 10.0],
@@ -144,5 +186,5 @@ For service status information, see https://status.dea.ga.gov.au
             "nbart_blue",
         ],
     },
-    "styling": {"default_style": "simple_rgb", "styles": style_s2_nbr_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
 }

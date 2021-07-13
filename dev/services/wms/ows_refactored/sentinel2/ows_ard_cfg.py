@@ -7,7 +7,8 @@ bands_sentinel2_ard_nbart = {
         "coastal_aerosol",
         "nbart_coastal_aerosol",
         "nbart_narrow_blue",
-        "nbar_narrow_blue" "narrow_blue",
+        "nbar_narrow_blue",
+        "narrow_blue",
     ],
     "nbart_blue": ["nbar_blue", "blue", "nbart_blue"],
     "nbart_green": ["nbar_green", "green", "nbart_green"],
@@ -19,6 +20,7 @@ bands_sentinel2_ard_nbart = {
     "nbart_nir_2": ["nbar_nir_2", "nir2", "nbart_nir_2"],
     "nbart_swir_2": ["nbar_swir_2", "swir_2", "nbart_swir_2"],
     "nbart_swir_3": ["nbar_swir_3", "swir_3", "nbart_swir_3"],
+    "fmask": ["fmask"],
 }
 
 layers = {
@@ -52,6 +54,20 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+            "flags": [
+                {
+                    "band": "fmask",
+                    "products": ["s2a_ard_granule", "s2b_ard_granule"],
+                    "ignore_time": False,
+                    "ignore_info_flags": []
+                },
+                {
+                    "band": "land",
+                    "products": ["geodata_coast_100k", "geodata_coast_100k"],
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [10.0, 10.0],
@@ -74,6 +90,20 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+            "flags": [
+                {
+                    "band": "fmask",
+                    "product": "s2b_ard_granule",
+                    "ignore_time": False,
+                    "ignore_info_flags": []
+                },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [10.0, 10.0],
@@ -96,6 +126,20 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+            "flags": [
+                {
+                    "band": "fmask",
+                    "product": "s2a_ard_granule",
+                    "ignore_time": False,
+                    "ignore_info_flags": []
+                },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [10.0, 10.0],
