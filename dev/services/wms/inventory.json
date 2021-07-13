@@ -324,82 +324,6 @@
         },
         {
             "product": [
-                "ga_s2a_ard_nbar_granule",
-                "ga_s2b_ard_nbar_granule"
-            ],
-            "styles_count": 17,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2"
-            ]
-        },
-        {
-            "product": [
-                "ga_s2b_ard_nbar_granule"
-            ],
-            "styles_count": 17,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2"
-            ]
-        },
-        {
-            "product": [
-                "ga_s2a_ard_nbar_granule"
-            ],
-            "styles_count": 17,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2"
-            ]
-        },
-        {
-            "product": [
                 "s2a_ard_granule",
                 "s2b_ard_granule"
             ],
@@ -1109,5 +1033,5 @@
             ]
         }
     ],
-    "total_layers_count": 86
+    "total_layers_count": 83
 }
