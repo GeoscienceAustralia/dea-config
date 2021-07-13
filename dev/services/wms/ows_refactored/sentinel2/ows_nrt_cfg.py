@@ -30,6 +30,7 @@ bands_sentinel2 = {
     "nbart_nir_2": ["nbart_nir_2", "nir_2", "nbart_near_infrared_2"],
     "nbart_swir_2": ["nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2"],
     "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
+    "fmask": ["fmask"],
 }
 
 multi_layers = {
