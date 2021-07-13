@@ -743,6 +743,7 @@ styles_s2_list = [
     style_s2_ndwi,
     style_s2_mndwi,
     style_s2_ndci,
+    style_s2_nbr,    
     style_s2_pure_aerosol,
     style_s2_pure_blue,
     style_s2_pure_green,
@@ -756,5 +757,3 @@ styles_s2_list = [
     style_s2_pure_swir2,
     style_s2_fmask,
 ]
-
-style_s2_nbr_list = styles_s2_list + [style_s2_nbr]
