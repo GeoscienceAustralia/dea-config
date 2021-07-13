@@ -70,6 +70,7 @@ style_s2_ndvi = {
     "multi_date": [
         {
             "allowed_count_range": [2, 2],
+            "preserve_user_date_order": True,
             "aggregator_function": {
                 "function": "datacube_ows.band_utils.multi_date_delta"
             },
@@ -179,6 +180,7 @@ style_s2_ndwi = {
     "multi_date": [
         {
             "allowed_count_range": [2, 2],
+            "preserve_user_date_order": True,
             "aggregator_function": {
                 "function": "datacube_ows.band_utils.multi_date_delta"
             },
@@ -265,6 +267,7 @@ style_s2_mndwi = {
     "multi_date": [
         {
             "allowed_count_range": [2, 2],
+            "preserve_user_date_order": True,
             "aggregator_function": {
                 "function": "datacube_ows.band_utils.multi_date_delta"
             },
@@ -621,6 +624,67 @@ style_s2_pure_swir2 = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_s2_fmask = {
+    "name": "fmask",
+    "title": "Fmask Classification",
+    "abstract": "Fmask (Function of mask) is used for automated clouds, cloud shadows, snow, and water masking for Landsats 4-8 and Sentinel 2 images.",
+    "include_in_feature_info": False,
+    "needed_bands": ["fmask"],
+    "value_map": {
+        "fmask": [
+            {
+                "title": "No Data",
+                "abstract": "",
+                "values": [
+                    0,    # nodata
+                ],
+                "alpha": 0.0,
+                "color": "#FFFFFF",
+            },
+            {
+                "title": "Clear",
+                "abstract": "",
+                "values": [
+                    1,    # clear/valid
+                ],
+                "color": "#84A278",
+            },
+            {
+                "title": "Cloud",
+                "abstract": "",
+                "values": [
+                    2,    # cloud
+                ],
+                "color": "#D0CFCE",
+            },
+            {
+                "title": "Shadow",
+                "abstract": "",
+                "values": [
+                    3    # shadow
+                ],
+                "color": "#464633",
+            },
+            {
+                "title": "Snow",
+                "abstract": "",
+                "values": [
+                    4    # snow
+                ],
+                "color": "#E0EDFF",
+            },
+            {
+                "title": "Water",
+                "abstract": "",
+                "values": [
+                    5    # water
+                ],
+                "color": "#475B74",
+            },
+        ]
+    }
+}
+
 bands_sentinel2_ard_nbar = {
     "nbar_coastal_aerosol": [
         "nbar_coastal_aerosol",
@@ -690,6 +754,7 @@ styles_s2_list = [
     style_s2_pure_narrow_nir,
     style_s2_pure_swir1,
     style_s2_pure_swir2,
+    style_s2_fmask,
 ]
 
 style_s2_nbr_list = styles_s2_list + [style_s2_nbr]
