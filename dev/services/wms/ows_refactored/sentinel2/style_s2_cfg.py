@@ -108,6 +108,7 @@ style_s2_ndvi = {
             },
             "feature_info_label": "ndvi_delta",
         }
+    ],
 }
 
 style_s2_ndwi = {
