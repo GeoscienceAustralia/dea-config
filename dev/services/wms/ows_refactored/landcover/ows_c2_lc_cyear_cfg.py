@@ -243,6 +243,7 @@ layers = {
             "bands": bands_landcover,
             "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "dynamic": True,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                 "always_fetch_bands": [],
@@ -268,6 +269,7 @@ layers = {
             "bands": bands_eds,
             "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "dynamic": True,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                 "always_fetch_bands": [],
