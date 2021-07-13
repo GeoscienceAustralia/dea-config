@@ -82,7 +82,7 @@ For service status information, see https://status.dea.ga.gov.au
             "nbart_blue",
         ],
     },
-    "styling": {"default_style": "simple_rgb", "styles": style_s2_nbr_list},
+    "styling": {"default_style": "simple_rgb", "styles": style_s2_list},
 }
 
 s2b_layer = {
