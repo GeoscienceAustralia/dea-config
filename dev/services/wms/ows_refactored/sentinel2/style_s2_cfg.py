@@ -44,7 +44,72 @@ style_s2_ndvi = {
         {"value": 0.9, "color": "#237100"},
         {"value": 1.0, "color": "#114D04"},
     ],
+    "pq_masks": [
+        {
+            "band": "fmask",
+            "enum": 0,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 2,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 3,
+            "invert": True,
+        },
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
+    ],
     "legend": legend_idx_0_1_5ticks,
+    "multi_date": [
+        {
+            "allowed_count_range": [2, 2],
+            "preserve_user_date_order": True,
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_delta"
+            },
+            "mpl_ramp": "RdYlBu",
+            "range": [-1.0, 1.0],
+            "pq_masks": [
+                {
+                    "band": "fmask",
+                    "enum": 0,
+                    "invert": True,
+                },
+                {
+                    "band": "fmask",
+                    "enum": 2,
+                    "invert": True,
+                },
+                {
+                    "band": "fmask",
+                    "enum": 3,
+                    "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
+                },
+            ],
+            "legend": {
+                "begin": "-1.0",
+                "end": "1.0",
+                "ticks": [
+                    "-1.0",
+                    "0.0",
+                    "1.0",
+                ],
+            },
+            "feature_info_label": "ndvi_delta",
+        }
+    ],
 }
 
 style_s2_ndwi = {
@@ -78,6 +143,28 @@ style_s2_ndwi = {
             "color": "#08306b",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "fmask",
+            "enum": 0,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 2,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 3,
+            "invert": True,
+        },
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
+    ],
     "legend": {
         "begin": "0.0",
         "end": "0.5",
@@ -88,8 +175,51 @@ style_s2_ndwi = {
             "0.2": {"label": "0.2"},
             "0.4": {"label": "0.4"},
             "0.5": {"prefix": ">"},
-        },
+        }
     },
+    "multi_date": [
+        {
+            "allowed_count_range": [2, 2],
+            "preserve_user_date_order": True,
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_delta"
+            },
+            "mpl_ramp": "RdYlBu",
+            "range": [-1.0, 1.0],
+            "pq_masks": [
+                {
+                    "band": "fmask",
+                    "enum": 0,
+                    "invert": True,
+                },
+                {
+                    "band": "fmask",
+                    "enum": 2,
+                    "invert": True,
+                },
+                {
+                    "band": "fmask",
+                    "enum": 3,
+                    "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
+                },
+            ],
+            "legend": {
+                "begin": "-1.0",
+                "end": "1.0",
+                "ticks": [
+                    "-1.0",
+                    "-0.0",
+                    "1.0",
+                ],
+            },
+            "feature_info_label": "ndwi_delta",
+        }
+    ],
 }
 style_s2_mndwi = {
     # Cannot reuse landsat as we need swir_2 to landsat's swir_1
@@ -111,7 +241,72 @@ style_s2_mndwi = {
         {"value": 0.8, "color": "#1563aa"},
         {"value": 1.0, "color": "#08306b"},
     ],
+    "pq_masks": [
+        {
+            "band": "fmask",
+            "enum": 0,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 2,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 3,
+            "invert": True,
+        },
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
+    ],
     "legend": legend_idx_0_1_5ticks,
+    "multi_date": [
+        {
+            "allowed_count_range": [2, 2],
+            "preserve_user_date_order": True,
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_delta"
+            },
+            "mpl_ramp": "RdYlBu",
+            "range": [-1.0, 1.0],
+            "pq_masks": [
+                {
+                    "band": "fmask",
+                    "enum": 0,
+                    "invert": True,
+                },
+                {
+                    "band": "fmask",
+                    "enum": 2,
+                    "invert": True,
+                },
+                {
+                    "band": "fmask",
+                    "enum": 3,
+                    "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
+                },
+            ],
+            "legend": {
+                "begin": "-1.0",
+                "end": "1.0",
+                "ticks": [
+                    "-1.0",
+                    "0.0",
+                    "1.0",
+                ],
+            },
+            "feature_info_label": "mndwi_delta",
+        }
+    ],
 }
 
 style_s2_ndci = {
@@ -166,7 +361,7 @@ style_s2_ndci = {
 }
 
 style_s2_nbr = {
-    "name": "NBR",
+    "name": "nbr",
     "title": "Normalised Burn Ratio",
     "abstract": "Normalised Burn Ratio - a derived index that that uses the differences in the way health green vegetation and burned vegetation reflect light to find burned area",
     "index_function": {
@@ -205,6 +400,28 @@ style_s2_nbr = {
             "color": "#053061",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "fmask",
+            "enum": 0,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 2,
+            "invert": True,
+        },
+        {
+            "band": "fmask",
+            "enum": 3,
+            "invert": True,
+        },
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
+    ],
     "legend": {
         "show_legend": True,
         "begin": "-1.0",
@@ -213,19 +430,10 @@ style_s2_nbr = {
         "decimal_places": 0,
         "tick_labels": {"-1.0": {"prefix": "<"}, "1.0": {"suffix": ">"}},
     },
-    # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
     "multi_date": [
-        # A multi-date handler.  Different handlers can be declared for different numbers of dates in a request.
         {
-            # The count range for which this handler is to be used - a tuple of two ints, the smallest and
-            # largest date counts for which this handler will be used.  Required.
             "allowed_count_range": [2, 2],
-            # Preserve user date order
             "preserve_user_date_order": True,
-            # A function, expressed in the standard format as described elsewhere in this example file.
-            # The function is assumed to take one arguments, an xarray Dataset.
-            # The function returns an xarray Dataset with a single band, which is the input to the
-            # colour ramp defined below.
             "aggregator_function": {
                 "function": "datacube_ows.band_utils.multi_date_delta"
             },
@@ -416,6 +624,67 @@ style_s2_pure_swir2 = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_s2_fmask = {
+    "name": "fmask",
+    "title": "Fmask Classification",
+    "abstract": "Fmask (Function of mask) is used for automated clouds, cloud shadows, snow, and water masking for Landsats 4-8 and Sentinel 2 images.",
+    "include_in_feature_info": False,
+    "needed_bands": ["fmask"],
+    "value_map": {
+        "fmask": [
+            {
+                "title": "No Data",
+                "abstract": "",
+                "values": [
+                    0,    # nodata
+                ],
+                "alpha": 0.0,
+                "color": "#FFFFFF",
+            },
+            {
+                "title": "Clear",
+                "abstract": "",
+                "values": [
+                    1,    # clear/valid
+                ],
+                "color": "#84A278",
+            },
+            {
+                "title": "Cloud",
+                "abstract": "",
+                "values": [
+                    2,    # cloud
+                ],
+                "color": "#D0CFCE",
+            },
+            {
+                "title": "Shadow",
+                "abstract": "",
+                "values": [
+                    3    # shadow
+                ],
+                "color": "#464633",
+            },
+            {
+                "title": "Snow",
+                "abstract": "",
+                "values": [
+                    4    # snow
+                ],
+                "color": "#E0EDFF",
+            },
+            {
+                "title": "Water",
+                "abstract": "",
+                "values": [
+                    5    # water
+                ],
+                "color": "#475B74",
+            },
+        ]
+    }
+}
+
 bands_sentinel2_ard_nbar = {
     "nbar_coastal_aerosol": [
         "nbar_coastal_aerosol",
@@ -474,6 +743,7 @@ styles_s2_list = [
     style_s2_ndwi,
     style_s2_mndwi,
     style_s2_ndci,
+    style_s2_nbr,
     style_s2_pure_aerosol,
     style_s2_pure_blue,
     style_s2_pure_green,
@@ -485,6 +755,5 @@ styles_s2_list = [
     style_s2_pure_narrow_nir,
     style_s2_pure_swir1,
     style_s2_pure_swir2,
+    style_s2_fmask,
 ]
-
-style_s2_nbr_list = styles_s2_list + [style_s2_nbr]
