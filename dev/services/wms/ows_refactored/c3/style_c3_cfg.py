@@ -240,7 +240,7 @@ style_c3_ndvi_anim = {
             "aggregator_function": {
                 "function": "datacube_ows.band_utils.multi_date_pass"
             },
-            "animate" : True,
+            "animate": True,
             "color_ramp": [
                 {"value": -0.0, "color": "#8F3F20", "alpha": 0.0},
                 {"value": 0.0, "color": "#8F3F20", "alpha": 1.0},
