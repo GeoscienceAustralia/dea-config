@@ -177,6 +177,121 @@ style_c3_ndvi = {
     ],
 }
 
+style_c3_ndvi_anim = {
+    "name": "ndvi_animated",
+    "title": "Normalised Difference Vegetation Index (Animated) - Red, NIR",
+    "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
+    "index_function": {
+        "function": "datacube_ows.band_utils.norm_diff",
+        "mapped_bands": True,
+        "kwargs": {"band1": "nbart_nir", "band2": "nbart_red"},
+    },
+    "needed_bands": ["nbart_red", "nbart_nir"],
+    "color_ramp": [
+        {"value": -0.0, "color": "#8F3F20", "alpha": 0.0},
+        {"value": 0.0, "color": "#8F3F20", "alpha": 1.0},
+        {"value": 0.1, "color": "#A35F18"},
+        {"value": 0.2, "color": "#B88512"},
+        {"value": 0.3, "color": "#CEAC0E"},
+        {"value": 0.4, "color": "#E5D609"},
+        {"value": 0.5, "color": "#FFFF0C"},
+        {"value": 0.6, "color": "#C3DE09"},
+        {"value": 0.7, "color": "#88B808"},
+        {"value": 0.8, "color": "#529400"},
+        {"value": 0.9, "color": "#237100"},
+        {"value": 1.0, "color": "#114D04"},
+    ],
+    "pq_masks": [
+        {
+            "band": "oa_fmask",
+            "enum": 0,
+            "invert": True,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 2,
+            "invert": True,
+        },
+        {
+            "band": "oa_fmask",
+            "enum": 3,
+            "invert": True,
+        },
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 1,
+        },
+    ],
+    "legend": legend_idx_0_1_5ticks,
+    # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
+    "multi_date": [
+        # A multi-date handler.  Different handlers can be declared for different numbers of dates in a request.
+        {
+            # The count range for which this handler is to be used - a tuple of two ints, the smallest and
+            # largest date counts for which this handler will be used.  Required.
+            "allowed_count_range": [2, 10],
+            # Preserve user date order
+            "preserve_user_date_order": True,
+            # A function, expressed in the standard format as described elsewhere in this example file.
+            # The function is assumed to take one arguments, an xarray Dataset.
+            # The function returns an xarray Dataset with a single band, which is the input to the
+            # colour ramp defined below.
+            "aggregator_function": {
+                "function": "datacube_ows.band_utils.multi_date_pass"
+            },
+            "animate" : True,
+            "color_ramp": [
+                {"value": -0.0, "color": "#8F3F20", "alpha": 0.0},
+                {"value": 0.0, "color": "#8F3F20", "alpha": 1.0},
+                {"value": 0.1, "color": "#A35F18"},
+                {"value": 0.2, "color": "#B88512"},
+                {"value": 0.3, "color": "#CEAC0E"},
+                {"value": 0.4, "color": "#E5D609"},
+                {"value": 0.5, "color": "#FFFF0C"},
+                {"value": 0.6, "color": "#C3DE09"},
+                {"value": 0.7, "color": "#88B808"},
+                {"value": 0.8, "color": "#529400"},
+                {"value": 0.9, "color": "#237100"},
+                {"value": 1.0, "color": "#114D04"},
+            ],
+            "pq_masks": [
+                {
+                    "band": "oa_fmask",
+                    "enum": 0,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 2,
+                    "invert": True,
+                },
+                {
+                    "band": "oa_fmask",
+                    "enum": 3,
+                    "invert": True,
+                },
+                {
+                    "band": "land",
+                    "invert": True,
+                    "enum": 1,
+                },
+            ],
+            "legend": {
+                "begin": "-1.0",
+                "end": "1.0",
+                "ticks": [
+                    "-1.0",
+                    "0.0",
+                    "1.0",
+                ],
+            },
+            # The feature info label for the multi-date index value.
+            "feature_info_label": "ndvi_animate",
+        }
+    ],
+}
+
 style_c3_ndwi = {
     "name": "ndwi",
     "title": "Normalised Difference Water Index - Green, NIR",
@@ -690,6 +805,7 @@ styles_c3_ls_common = [
     style_c3_true_colour,
     style_c3_false_colour,
     style_c3_ndvi,
+    style_c3_ndvi_anim,
     style_c3_ndwi,
     style_c3_mndwi,
     style_c3_nbr,

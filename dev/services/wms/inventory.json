@@ -975,6 +975,7 @@
                 "true_colour",
                 "false_colour",
                 "ndvi",
+                "ndvi_animated",
                 "ndwi",
                 "mndwi",
                 "blue",
