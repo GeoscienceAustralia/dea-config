@@ -11,6 +11,8 @@ style_ls_simple_rgb = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_simple_rgb = style_ls_simple_rgb
+
 style_ls_irg = {
     "name": "infrared_green",
     "title": "False colour - Green, SWIR, NIR",
@@ -126,6 +128,8 @@ style_ls_pure_blue = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_pure_blue = style_ls_pure_blue
+
 style_ls_pure_green = {
     "name": "green",
     "title": "Green - 560",
@@ -138,6 +142,8 @@ style_ls_pure_green = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_pure_green = style_ls_pure_green
+
 style_ls_pure_red = {
     "name": "red",
     "title": "Red - 660",
@@ -146,11 +152,29 @@ style_ls_pure_red = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_pure_red = style_ls_pure_red
+
 style_ls_pure_nir = {
     "name": "nir",
     "title": "Near Infrared (NIR) - 840",
     "abstract": "Near infra-red band, centered on 840nm",
     "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_nir_1 = {
+    "name": "nir_1",
+    "title": "Near Infrared (NIR) - 840",
+    "abstract": "Near infra-red band, centered on 840nm",
+    "components": {"red": {"nir_1": 1.0}, "green": {"nir_1": 1.0}, "blue": {"nir_1": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_nir_2 = {
+    "name": "nir_2",
+    "title": "Near Infrared (NIR) - 840",
+    "abstract": "Near infra-red band, centered on 840nm",
+    "components": {"red": {"nir_2": 1.0}, "green": {"nir_2": 1.0}, "blue": {"nir_2": 1.0}},
     "scale_range": [0.0, 3000.0],
 }
 
@@ -173,6 +197,30 @@ style_ls_pure_swir2 = {
         "red": {"swir2": 1.0},
         "green": {"swir2": 1.0},
         "blue": {"swir2": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_swir_2 = {
+    "name": "swir_2",
+    "title": "Shortwave Infrared (SWIR) - 2220",
+    "abstract": "Short wave infra-red band 2, centered on 2220nm",
+    "components": {
+        "red": {"swir_2": 1.0},
+        "green": {"swir_2": 1.0},
+        "blue": {"swir_2": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_swir_3 = {
+    "name": "swir_3",
+    "title": "Shortwave Infrared (SWIR) - 2220",
+    "abstract": "Short wave infra-red band 3, centered on 2220nm",
+    "components": {
+        "red": {"swir_3": 1.0},
+        "green": {"swir_3": 1.0},
+        "blue": {"swir_3": 1.0},
     },
     "scale_range": [0.0, 3000.0],
 }
@@ -309,6 +357,22 @@ styles_ls_list = [
     style_ls_pure_nir,
     style_ls_pure_swir1,
     style_ls_pure_swir2,
+]
+
+
+styles_s2_barest_earth_list = [
+    style_barest_earth_simple_rgb,
+    #style_barest_earth_irg,
+    #style_barest_earth_ndvi,
+    #style_barest_earth_ndwi,
+    #style_barest_earth_mndwi,
+    #style_sentinel_pure_blue,
+    style_barest_earth_pure_green,
+    style_barest_earth_pure_red,
+    style_barest_earth_pure_nir_1,
+    style_barest_earth_pure_nir_2,
+    style_barest_earth_pure_swir_2,
+    style_barest_earth_pure_swir_3,
 ]
 
 styles_barest_earth_mosaic_list = [
