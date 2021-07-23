@@ -47,7 +47,7 @@ For service status information, see https://status.dea.ga.gov.au
             "multi_product": True,
             "product_names": ["s2a_ard_granule", "s2b_ard_granule"],
             "bands": bands_sentinel2_ard_nbart,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "dynamic": True,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -83,7 +83,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
 """,
             "product_name": "s2b_ard_granule",
             "bands": bands_sentinel2_ard_nbart,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "dynamic": True,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -119,7 +119,7 @@ This is a definitive archive of daily Sentinel-2 data. This is processed using c
 """,
             "product_name": "s2a_ard_granule",
             "bands": bands_sentinel2_ard_nbart,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "dynamic": True,
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
