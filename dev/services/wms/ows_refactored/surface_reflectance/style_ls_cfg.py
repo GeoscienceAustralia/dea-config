@@ -362,11 +362,6 @@ styles_ls_list = [
 
 styles_s2_barest_earth_list = [
     style_barest_earth_simple_rgb,
-    #style_barest_earth_irg,
-    #style_barest_earth_ndvi,
-    #style_barest_earth_ndwi,
-    #style_barest_earth_mndwi,
-    #style_sentinel_pure_blue,
     style_barest_earth_pure_green,
     style_barest_earth_pure_red,
     style_barest_earth_pure_nir_1,
