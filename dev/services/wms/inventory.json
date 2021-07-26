@@ -249,7 +249,7 @@
                 "s2a_nrt_granule",
                 "s2b_nrt_granule"
             ],
-            "styles_count": 18,
+            "styles_count": 19,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -268,39 +268,15 @@
                 "narrow_nir",
                 "swir1",
                 "swir2",
-                "NBR"
+                "nbr",
+                "fmask"
             ]
         },
         {
             "product": [
                 "s2b_nrt_granule"
             ],
-            "styles_count": 17,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2"
-            ]
-        },
-        {
-            "product": [
-                "s2a_nrt_granule"
-            ],
-            "styles_count": 18,
+            "styles_count": 19,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -319,7 +295,35 @@
                 "narrow_nir",
                 "swir1",
                 "swir2",
-                "NBR"
+                "nbr",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
+                "s2a_nrt_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "fmask"
             ]
         },
         {
@@ -327,7 +331,7 @@
                 "s2a_ard_granule",
                 "s2b_ard_granule"
             ],
-            "styles_count": 17,
+            "styles_count": 19,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -345,14 +349,16 @@
                 "nir",
                 "narrow_nir",
                 "swir1",
-                "swir2"
+                "swir2",
+                "nbr",
+                "fmask"
             ]
         },
         {
             "product": [
                 "s2b_ard_granule"
             ],
-            "styles_count": 17,
+            "styles_count": 19,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -370,14 +376,16 @@
                 "nir",
                 "narrow_nir",
                 "swir1",
-                "swir2"
+                "swir2",
+                "nbr",
+                "fmask"
             ]
         },
         {
             "product": [
                 "s2a_ard_granule"
             ],
-            "styles_count": 17,
+            "styles_count": 19,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -395,7 +403,9 @@
                 "nir",
                 "narrow_nir",
                 "swir1",
-                "swir2"
+                "swir2",
+                "nbr",
+                "fmask"
             ]
         },
         {
