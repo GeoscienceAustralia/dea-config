@@ -284,6 +284,14 @@ layers = {
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+            "flags": [
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": [],
+                }
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [25, -25],
@@ -310,12 +318,14 @@ layers = {
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "flags": {
-                "band": "land",
-                "product": "geodata_coast_100k",
-                "ignore_time": True,
-                "ignore_info_flags": [],
-            },
+            "flags": [
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": [],
+                }
+            ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [25, -25],
