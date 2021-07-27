@@ -29,13 +29,13 @@ style_c2_level3 = {
             {'title': "Water", 'abstract': "", 'values': [220], 'color': '#4D9FDC', 'alpha': 1}
         ]
     },
-#     "pq_masks": [
-#         {
-#             "band": "land",
-#             "invert": True,
-#             "enum": 0,
-#         }
-#     ],
+    # "pq_masks": [
+    #     {
+    #         "band": "land",
+    #         "invert": True,
+    #         "enum": 0,
+    #     }
+    # ],
     "legend": {"width": 3.0, "height": 1.5},
 }
 
@@ -51,13 +51,13 @@ style_c2_level4_lifeform = {
             {'title': "Herbaceous", 'abstract': "", 'values': [2], 'color': '#77A71E', 'alpha': 1}
         ]
     },
-#     "pq_masks": [
-#         {
-#             "band": "land",
-#             "invert": True,
-#             "enum": 0,
-#         }
-#     ],
+    # "pq_masks": [
+    #     {
+    #         "band": "land",
+    #         "invert": True,
+    #         "enum": 0,
+    #     }
+    # ],
 }
 
 
@@ -75,13 +75,13 @@ style_c2_level4_canopyco = {
             {'title': "Scattered Vegetation", 'abstract': "(1 to 4 %)", 'values': [16], 'color': '#9AC79C', 'alpha': 1}
         ]
     },
-#     "pq_masks": [
-#         {
-#             "band": "land",
-#             "invert": True,
-#             "enum": 0,
-#         }
-#     ],
+    # "pq_masks": [
+    #     {
+    #         "band": "land",
+    #         "invert": True,
+    #         "enum": 0,
+    #     }
+    # ],
 }
 
 
@@ -127,13 +127,13 @@ style_c2_level4_baregrad = {
             {'title': "Bare Areas, Unvegetated", 'abstract': "", 'values': [15], 'color': '#F3AB69', 'alpha': 1}
         ]
     },
-#     "pq_masks": [
-#         {
-#             "band": "land",
-#             "invert": True,
-#             "enum": 0,
-#         }
-#     ],
+    # "pq_masks": [
+    #     {
+    #         "band": "land",
+    #         "invert": True,
+    #         "enum": 0,
+    #     }
+    # ],
 }
 
 
@@ -250,13 +250,13 @@ style_c2_level4 = {
             # {'title': 'Water: (Snow)', 'abstract': '', 'values': [105], 'color': '#fafafa', 'alpha': 1},
         ]
     },
-#     "pq_masks": [
-#         {
-#             "band": "land",
-#             "invert": True,
-#             "enum": 0,
-#         }
-#     ],
+    # "pq_masks": [
+    #     {
+    #         "band": "land",
+    #         "invert": True,
+    #         "enum": 0,
+    #     }
+    # ],
     "legend": {
         "show_legend": True,
         "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/lccs/level4-web-legend.png"
@@ -284,14 +284,14 @@ layers = {
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-#             "flags": [
-#                 {
-#                     "band": "land",
-#                     "product": "geodata_coast_100k",
-#                     "ignore_time": True,
-#                     "ignore_info_flags": [],
-#                 }
-#             ],
+            # "flags": [
+            #     {
+            #         "band": "land",
+            #         "product": "geodata_coast_100k",
+            #         "ignore_time": True,
+            #         "ignore_info_flags": [],
+            #     }
+            # ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [25, -25],
@@ -318,14 +318,14 @@ layers = {
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-#             "flags": [
-#                 {
-#                     "band": "land",
-#                     "product": "geodata_coast_100k",
-#                     "ignore_time": True,
-#                     "ignore_info_flags": [],
-#                 }
-#             ],
+            # "flags": [
+            #     {
+            #         "band": "land",
+            #         "product": "geodata_coast_100k",
+            #         "ignore_time": True,
+            #         "ignore_info_flags": [],
+            #     }
+            # ],
             "wcs": {
                 "native_crs": "EPSG:3577",
                 "native_resolution": [25, -25],
