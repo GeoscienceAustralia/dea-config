@@ -257,6 +257,10 @@ ows_cfg = {
                     "type": "python",
                 },
                 {
+                    "include": "ows_refactored.surface_reflectance.ows_barest_earth_cfg.layers",
+                    "type": "python",
+                },
+                {
                     "include": "ows_refactored.surface_reflectance.ows_nd_cfg.ls8_be_layers",
                     "type": "python",
                 },
