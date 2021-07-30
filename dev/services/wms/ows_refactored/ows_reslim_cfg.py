@@ -1,6 +1,6 @@
 # Reusable Chunks 1. Resource limit configurations
 
-dataset_cache_rules: [
+dataset_cache_rules = [
     {
         "min_datasets": 5,
         "max_age": 60 * 60 * 24,
