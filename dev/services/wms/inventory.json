@@ -66,10 +66,10 @@
                 "simple_rgb",
                 "green",
                 "red",
-                "nir1",
-                "nir2",
-                "swir2",
-                "swir3"
+                "nir_1",
+                "nir_2",
+                "swir_2",
+                "swir_3"
             ]
         },
         {
@@ -1058,5 +1058,5 @@
             ]
         }
     ],
-    "total_layers_count": 83
+    "total_layers_count": 84
 }
