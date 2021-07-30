@@ -22,7 +22,7 @@ style_s2_irg = {
 
 style_s2_ndvi = {
     "name": "ndvi",
-    "title": "NDVI - Red, NIR",
+    "title": "Normalised Difference Vegetation Index - Red, NIR",
     "abstract": "Normalised Difference Vegetation Index - a derived index that correlates well with the existence of vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
@@ -114,7 +114,7 @@ style_s2_ndvi = {
 
 style_s2_ndwi = {
     "name": "ndwi",
-    "title": "NDWI - Green, NIR",
+    "title": "Normalised Difference Water Index - Green, NIR",
     "abstract": "Normalised Difference Water Index - a derived index that correlates well with the existence of water (McFeeters 1996)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
@@ -224,7 +224,7 @@ style_s2_ndwi = {
 style_s2_mndwi = {
     # Cannot reuse landsat as we need swir_2 to landsat's swir_1
     "name": "mndwi",
-    "title": "MNDWI - Green, SWIR",
+    "title": "Modified Normalised Difference Water Index - Green, SWIR",
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
@@ -311,7 +311,7 @@ style_s2_mndwi = {
 
 style_s2_ndci = {
     "name": "ndci",
-    "title": "NDCI - Red Edge, Red",
+    "title": "Normalised Difference Chlorophyll Index - Red Edge, Red",
     "abstract": "Normalised Difference Chlorophyll Index - a derived index that correlates well with the existence of chlorophyll",
     "index_function": {
         "function": "datacube_ows.band_utils.sentinel2_ndci",
@@ -362,7 +362,7 @@ style_s2_ndci = {
 
 style_s2_nbr = {
     "name": "nbr",
-    "title": "Normalised Burn Ratio",
+    "title": "Normalised Burn Ratio - NIR, SWIR",
     "abstract": "Normalised Burn Ratio - a derived index that that uses the differences in the way health green vegetation and burned vegetation reflect light to find burned area",
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
