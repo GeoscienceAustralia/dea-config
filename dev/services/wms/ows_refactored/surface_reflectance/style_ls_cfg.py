@@ -162,6 +162,30 @@ style_ls_pure_nir = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_pure_red_edge_1 = {
+    "name": "red_edge_1",
+    "title": "Vegetation Red Edge 1 - 705",
+    "abstract": "Vegetation Red Edge, centered on 705nm",
+    "components": {"red": {"red_edge_1": 1.0}, "green": {"red_edge_1": 1.0}, "blue": {"red_edge_1": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_red_edge_2 = {
+    "name": "red_edge_2",
+    "title": "Vegetation Red Edge 2 - 740",
+    "abstract": "Vegetation Red Edge, centered on 740nm",
+    "components": {"red": {"red_edge_2": 1.0}, "green": {"red_edge_2": 1.0}, "blue": {"red_edge_2": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_red_edge_3 = {
+    "name": "red_edge_3",
+    "title": "Vegetation Red Edge 3 - 783",
+    "abstract": "Vegetation Red Edge, centered on 783nm",
+    "components": {"red": {"red_edge_3": 1.0}, "green": {"red_edge_3": 1.0}, "blue": {"red_edge_3": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
 style_barest_earth_pure_nir_1 = {
     "name": "nir_1",
     "title": "Near Infrared (NIR) - 840",
@@ -362,12 +386,21 @@ styles_ls_list = [
 
 styles_s2_barest_earth_list = [
     style_barest_earth_simple_rgb,
+    style_ls_irg,
+    style_ls_ndvi,
+    style_barest_earth_pure_blue,
     style_barest_earth_pure_green,
     style_barest_earth_pure_red,
+    style_barest_earth_pure_red_edge_1,
+    style_barest_earth_pure_red_edge_2,
+    style_barest_earth_pure_red_edge_3,
     style_barest_earth_pure_nir_1,
     style_barest_earth_pure_nir_2,
     style_barest_earth_pure_swir_2,
     style_barest_earth_pure_swir_3,
+    style_nd_ferric_iron,
+    style_nd_soil,
+    style_nd_clay_mica,
 ]
 
 styles_barest_earth_mosaic_list = [
