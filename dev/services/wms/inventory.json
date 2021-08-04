@@ -59,6 +59,21 @@
         },
         {
             "product": [
+                "s2_barest_earth"
+            ],
+            "styles_count": 7,
+            "styles_list": [
+                "simple_rgb",
+                "green",
+                "red",
+                "nir_1",
+                "nir_2",
+                "swir_2",
+                "swir_3"
+            ]
+        },
+        {
+            "product": [
                 "ls8_barest_earth_albers"
             ],
             "styles_count": 9,
@@ -1043,5 +1058,5 @@
             ]
         }
     ],
-    "total_layers_count": 83
+    "total_layers_count": 84
 }
