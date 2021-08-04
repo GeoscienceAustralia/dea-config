@@ -2,11 +2,11 @@
 
 dataset_cache_rules = [
     {
-        "max_datasets": 5,
+        "min_datasets": 5,
         "max_age": 60 * 60 * 24,
     },
     {
-        "max_datasets": 9,
+        "min_datasets": 9,
         "max_age": 60 * 60 * 24 * 14,
     },
 ]
