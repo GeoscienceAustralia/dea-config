@@ -169,14 +169,14 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "wofs_apr_oct_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["count_wet"],
             },
             "styling": {
@@ -195,14 +195,14 @@ Water Observations from Space - April to October Statistics is a set of seasonal
             "product_name": "wofs_apr_oct_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["count_clear"],
             },
             "styling": {
@@ -221,14 +221,14 @@ Water Observations from Space - April to October Statistics is a set of seasonal
             "product_name": "wofs_apr_oct_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["frequency"],
             },
             "styling": {
@@ -240,7 +240,7 @@ Water Observations from Space - April to October Statistics is a set of seasonal
             },
         },
         {
-            "title": "Water Observations from Space 25m Wet Count (WOfS November - March Statistics)	",
+            "title": "Water Observations from Space 25m Wet Count (WOfS November - March Statistics)",
             "name": "wofs_nov_mar_summary_wet",
             "abstract": """
 Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -255,14 +255,14 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "wofs_nov_mar_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["count_wet"],
             },
             "styling": {
@@ -281,14 +281,14 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "wofs_nov_mar_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["count_clear"],
             },
             "styling": {
@@ -307,14 +307,14 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
             "product_name": "wofs_nov_mar_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["frequency"],
             },
             "styling": {
