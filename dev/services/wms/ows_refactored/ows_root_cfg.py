@@ -141,6 +141,11 @@ ows_cfg = {
             "WIKID:102171": {  # VicGrid94 alias for delwp.vic.gov.au
                 "alias": "EPSG:3111"
             },
+            "EPSG:32756": { # for insar
+                "geographic": False,
+                "horizontal_coord": "x",
+                "vertical_coord": "y",
+            }
         },
         "allowed_urls": [
             "https://ows.services.dea.ga.gov.au",
@@ -286,14 +291,14 @@ For service status information, see https://status.dea.ga.gov.au
                             "product_name": "mangrove_cover",
                             "bands": bands_mangrove,
                             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+                            "native_crs": "EPSG:3577",
+                            "native_resolution": [25, -25],
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_extent_val",
                                 "always_fetch_bands": ["extent"],
                                 "manual_merge": False,
                             },
                             "wcs": {
-                                "native_crs": "EPSG:3577",
-                                "native_resolution": [25, -25],
                                 "default_bands": ["canopy_cover_class", "extent"],
                             },
                             "styling": {
@@ -363,17 +368,17 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "product_name": "multi_scale_topographic_position",
                             "bands": bands_multi_topog,
                             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+                            "native_crs": "EPSG:4326",
+                            "native_resolution": [
+                                0.000833333333347,
+                                -0.000833333333347,
+                            ],
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
                                 "manual_merge": False,
                             },
                             "wcs": {
-                                "native_crs": "EPSG:4326",
-                                "native_resolution": [
-                                    0.000833333333347,
-                                    -0.000833333333347,
-                                ],
                                 "default_bands": ["regional", "intermediate", "local"],
                             },
                             "legend": {
@@ -427,17 +432,17 @@ For service status information, see https://status.dea.ga.gov.au""",
                             "product_name": "weathering_intensity",
                             "bands": bands_weathering,
                             "resource_limits": reslim_wms_min_zoom_35,
+                            "native_crs": "EPSG:4326",
+                            "native_resolution": [
+                                0.000833333333347,
+                                -0.000833333333347,
+                            ],
                             "image_processing": {
                                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                                 "always_fetch_bands": [],
                                 "manual_merge": False,
                             },
                             "wcs": {
-                                "native_crs": "EPSG:4326",
-                                "native_resolution": [
-                                    0.000833333333347,
-                                    -0.000833333333347,
-                                ],
                                 "default_bands": ["intensity"],
                             },
                             "styling": {

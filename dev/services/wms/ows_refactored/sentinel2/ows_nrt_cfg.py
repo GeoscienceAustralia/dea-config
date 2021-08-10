@@ -54,6 +54,8 @@ For service status information, see https://status.dea.ga.gov.au
     "bands": bands_sentinel2,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [10.0, 10.0],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
@@ -74,8 +76,6 @@ For service status information, see https://status.dea.ga.gov.au
         },
     ],
     "wcs": {
-        "native_crs": "EPSG:3577",
-        "native_resolution": [10.0, 10.0],
         "default_bands": [
             "nbart_red",
             "nbart_green",
@@ -106,6 +106,8 @@ For service status information, see https://status.dea.ga.gov.au
     "bands": bands_sentinel2,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [10.0, 10.0],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
@@ -126,8 +128,6 @@ For service status information, see https://status.dea.ga.gov.au
         },
     ],
     "wcs": {
-        "native_crs": "EPSG:3577",
-        "native_resolution": [10.0, 10.0],
         "default_bands": [
             "nbart_red",
             "nbart_green",
@@ -158,6 +158,8 @@ For service status information, see https://status.dea.ga.gov.au
     "bands": bands_sentinel2,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [10.0, 10.0],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
@@ -178,8 +180,6 @@ For service status information, see https://status.dea.ga.gov.au
         },
     ],
     "wcs": {
-        "native_crs": "EPSG:3577",
-        "native_resolution": [10.0, 10.0],
         "default_bands": [
             "nbart_red",
             "nbart_green",
