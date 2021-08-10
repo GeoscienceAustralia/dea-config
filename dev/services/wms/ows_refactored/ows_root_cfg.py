@@ -141,7 +141,7 @@ ows_cfg = {
             "WIKID:102171": {  # VicGrid94 alias for delwp.vic.gov.au
                 "alias": "EPSG:3111"
             },
-            "EPSG:32756": { # for insar
+            "EPSG:32756": {  # for insar
                 "geographic": False,
                 "horizontal_coord": "x",
                 "vertical_coord": "y",

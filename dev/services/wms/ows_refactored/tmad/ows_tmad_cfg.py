@@ -218,7 +218,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "manual_merge": False,
             },
             "wcs": {
-                "default_bands": ["sdev", "edev", "bcdev"], 
+                "default_bands": ["sdev", "edev", "bcdev"],
             },
             "styling": {
                 "default_style": "arcsec_sdev",
