@@ -34,6 +34,7 @@
                     "linkedWcsCoverage": "ga_ls_ard_3",
                     "chartColor": "white",
                     "timeFilterPropertyName": "data_available_for_dates",
+                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                     "leafletUpdateInterval": 750,
                     "chartType": "momentPoints",
                     "featureInfoTemplate": {
@@ -62,6 +63,7 @@
                     "linkedWcsCoverage": "s2_nrt_granule_nbar_t",
                     "chartColor": "white",
                     "timeFilterPropertyName": "data_available_for_dates",
+                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                     "leafletUpdateInterval": 750,
                     "chartType": "momentPoints",
                     "featureInfoTemplate": {
@@ -93,6 +95,7 @@
                     "linkedWcsCoverage": "s2_ard_granule_nbar_t",
                     "chartColor": "white",
                     "timeFilterPropertyName": "data_available_for_dates",
+                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                     "leafletUpdateInterval": 750,
                     "chartType": "momentPoints",
                     "featureInfoTemplate": {
@@ -129,6 +132,7 @@
                             "linkedWcsCoverage": "s2a_nrt_granule_nbar_t",
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                             "leafletUpdateInterval": 750,
                             "chartType": "momentPoints",
                             "featureInfoTemplate": {
@@ -158,6 +162,7 @@
                             "layers": "s2b_nrt_granule_nbar_t",
                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                             "linkedWcsCoverage": "s2b_nrt_granule_nbar_t",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
                             "leafletUpdateInterval": 750,
@@ -191,6 +196,7 @@
                             "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                             "leafletUpdateInterval": 750,
                             "chartType": "momentPoints",
                             "featureInfoTemplate": {
@@ -222,6 +228,7 @@
                             "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                             "leafletUpdateInterval": 750,
                             "chartType": "momentPoints",
                             "featureInfoTemplate": {
@@ -263,6 +270,7 @@
                             "linkedWcsCoverage": "ga_ls8c_ard_3",
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                             "leafletUpdateInterval": 750,
                             "chartType": "momentPoints",
                             "featureInfoTemplate": {
@@ -294,6 +302,7 @@
                             "linkedWcsCoverage": "ga_ls7e_ard_3",
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                             "leafletUpdateInterval": 750,
                             "chartType": "momentPoints",
                             "featureInfoTemplate": {
@@ -325,6 +334,7 @@
                             "linkedWcsCoverage": "ga_ls5t_ard_3",
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                             "leafletUpdateInterval": 750,
                             "chartType": "momentPoints",
                             "featureInfoTemplate": {

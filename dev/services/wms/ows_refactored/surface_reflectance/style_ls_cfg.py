@@ -11,6 +11,8 @@ style_ls_simple_rgb = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_simple_rgb = style_ls_simple_rgb
+
 style_ls_irg = {
     "name": "infrared_green",
     "title": "False colour - Green, SWIR, NIR",
@@ -126,6 +128,8 @@ style_ls_pure_blue = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_pure_blue = style_ls_pure_blue
+
 style_ls_pure_green = {
     "name": "green",
     "title": "Green - 560",
@@ -138,6 +142,8 @@ style_ls_pure_green = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_pure_green = style_ls_pure_green
+
 style_ls_pure_red = {
     "name": "red",
     "title": "Red - 660",
@@ -146,11 +152,53 @@ style_ls_pure_red = {
     "scale_range": [0.0, 3000.0],
 }
 
+style_barest_earth_pure_red = style_ls_pure_red
+
 style_ls_pure_nir = {
     "name": "nir",
     "title": "Near Infrared (NIR) - 840",
     "abstract": "Near infra-red band, centered on 840nm",
     "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_red_edge_1 = {
+    "name": "red_edge_1",
+    "title": "Vegetation Red Edge 1 - 705",
+    "abstract": "Vegetation Red Edge, centered on 705nm",
+    "components": {"red": {"red_edge_1": 1.0}, "green": {"red_edge_1": 1.0}, "blue": {"red_edge_1": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_red_edge_2 = {
+    "name": "red_edge_2",
+    "title": "Vegetation Red Edge 2 - 740",
+    "abstract": "Vegetation Red Edge, centered on 740nm",
+    "components": {"red": {"red_edge_2": 1.0}, "green": {"red_edge_2": 1.0}, "blue": {"red_edge_2": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_red_edge_3 = {
+    "name": "red_edge_3",
+    "title": "Vegetation Red Edge 3 - 783",
+    "abstract": "Vegetation Red Edge, centered on 783nm",
+    "components": {"red": {"red_edge_3": 1.0}, "green": {"red_edge_3": 1.0}, "blue": {"red_edge_3": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_nir_1 = {
+    "name": "nir_1",
+    "title": "Near Infrared (NIR) - 840",
+    "abstract": "Near infra-red band, centered on 840nm",
+    "components": {"red": {"nir_1": 1.0}, "green": {"nir_1": 1.0}, "blue": {"nir_1": 1.0}},
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_nir_2 = {
+    "name": "nir_2",
+    "title": "Near Infrared (NIR) - 840",
+    "abstract": "Near infra-red band, centered on 840nm",
+    "components": {"red": {"nir_2": 1.0}, "green": {"nir_2": 1.0}, "blue": {"nir_2": 1.0}},
     "scale_range": [0.0, 3000.0],
 }
 
@@ -173,6 +221,30 @@ style_ls_pure_swir2 = {
         "red": {"swir2": 1.0},
         "green": {"swir2": 1.0},
         "blue": {"swir2": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_swir_2 = {
+    "name": "swir_2",
+    "title": "Shortwave Infrared (SWIR) - 2220",
+    "abstract": "Short wave infra-red band 2, centered on 2220nm",
+    "components": {
+        "red": {"swir_2": 1.0},
+        "green": {"swir_2": 1.0},
+        "blue": {"swir_2": 1.0},
+    },
+    "scale_range": [0.0, 3000.0],
+}
+
+style_barest_earth_pure_swir_3 = {
+    "name": "swir_3",
+    "title": "Shortwave Infrared (SWIR) - 2220",
+    "abstract": "Short wave infra-red band 3, centered on 2220nm",
+    "components": {
+        "red": {"swir_3": 1.0},
+        "green": {"swir_3": 1.0},
+        "blue": {"swir_3": 1.0},
     },
     "scale_range": [0.0, 3000.0],
 }
@@ -309,6 +381,26 @@ styles_ls_list = [
     style_ls_pure_nir,
     style_ls_pure_swir1,
     style_ls_pure_swir2,
+]
+
+
+styles_s2_barest_earth_list = [
+    style_barest_earth_simple_rgb,
+    style_ls_irg,
+    style_ls_ndvi,
+    style_barest_earth_pure_blue,
+    style_barest_earth_pure_green,
+    style_barest_earth_pure_red,
+    style_barest_earth_pure_red_edge_1,
+    style_barest_earth_pure_red_edge_2,
+    style_barest_earth_pure_red_edge_3,
+    style_barest_earth_pure_nir_1,
+    style_barest_earth_pure_nir_2,
+    style_barest_earth_pure_swir_2,
+    style_barest_earth_pure_swir_3,
+    style_nd_ferric_iron,
+    style_nd_soil,
+    style_nd_clay_mica,
 ]
 
 styles_barest_earth_mosaic_list = [

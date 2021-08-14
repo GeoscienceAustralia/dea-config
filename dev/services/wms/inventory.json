@@ -59,6 +59,30 @@
         },
         {
             "product": [
+                "s2_barest_earth"
+            ],
+            "styles_count": 16,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir_1",
+                "nir_2",
+                "swir_2",
+                "swir_3",
+                "nd_ferric_iron",
+                "nd_soil",
+                "nd_clay_mica"
+            ]
+        },
+        {
+            "product": [
                 "ls8_barest_earth_albers"
             ],
             "styles_count": 9,
@@ -1047,5 +1071,5 @@
             ]
         }
     ],
-    "total_layers_count": 83
+    "total_layers_count": 84
 }
