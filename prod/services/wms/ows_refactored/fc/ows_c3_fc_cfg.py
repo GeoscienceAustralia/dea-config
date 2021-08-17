@@ -188,6 +188,8 @@ For service status information, see https://status.dea.ga.gov.au
     "bands": bands_fc_3,
     "resource_limits": reslim_wms_min_zoom_35,
     "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
@@ -210,9 +212,7 @@ For service status information, see https://status.dea.ga.gov.au
         },
     ],
     "wcs": {
-        "native_crs": "EPSG:3577",
         "default_bands": ["bs", "pv", "npv"],
-        "native_resolution": [25, -25],
     },
     "styling": {
         "default_style": "fc_rgb",
