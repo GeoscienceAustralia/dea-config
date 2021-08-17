@@ -212,6 +212,8 @@ alos_layers = [
         "product_name": "cemp_insar_alos_displacement",
         "bands": insar_disp_bands,
         "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "native_crs": "EPSG:32756",
+        "native_resolution": [50, -50],
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
@@ -238,6 +240,8 @@ alos_layers = [
         "product_name": "cemp_insar_alos_velocity",
         "bands": insar_vel_bands,
         "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "native_crs": "EPSG:32756",
+        "native_resolution": [50, -50],
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
@@ -268,6 +272,8 @@ envisat_layers = [
         "product_name": "cemp_insar_envisat_displacement",
         "bands": insar_disp_bands,
         "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "native_crs": "EPSG:32756",
+        "native_resolution": [50, -50],
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
@@ -294,6 +300,8 @@ envisat_layers = [
         "product_name": "cemp_insar_envisat_velocity",
         "bands": insar_vel_bands,
         "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "native_crs": "EPSG:32756",
+        "native_resolution": [50, -50],
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
@@ -325,6 +333,8 @@ rs2_layers = [
         "product_name": "cemp_insar_radarsat2_displacement",
         "bands": insar_disp_bands,
         "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "native_crs": "EPSG:32756",
+        "native_resolution": [50, -50],
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },
@@ -352,6 +362,8 @@ rs2_layers = [
         "product_name": "cemp_insar_radarsat2_velocity",
         "bands": insar_vel_bands,
         "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "native_crs": "EPSG:32756",
+        "native_resolution": [50, -50],
         "image_processing": {
             "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         },

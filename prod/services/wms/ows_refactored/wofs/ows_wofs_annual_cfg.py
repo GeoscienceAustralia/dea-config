@@ -176,14 +176,14 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["count_wet"],
             },
             "styling": {
@@ -202,14 +202,14 @@ Water Observations from Space - Annual Statistics is a set of annual statistical
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["count_clear"],
             },
             "styling": {
@@ -236,14 +236,14 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["frequency"],
             },
             "styling": {

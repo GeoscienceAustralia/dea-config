@@ -27,14 +27,14 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "ls8_barest_earth_albers",
             "bands": bands_ls,
             "resource_limits": reslim_wms_min_zoom_35,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["red", "green", "blue"],
             },
             "styling": {
@@ -64,14 +64,14 @@ Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Minera
             "product_name": "landsat_barest_earth",
             "bands": bands_ls,
             "resource_limits": reslim_wms_min_zoom_35,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["red", "green", "blue"],
             },
             "styling": {
