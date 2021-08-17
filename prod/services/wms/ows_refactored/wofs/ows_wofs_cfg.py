@@ -329,10 +329,6 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
             "type": "python",
         },
         {
-            "include": "ows_refactored.wofs.ows_s2_wo_cfg.layers",
-            "type": "python",
-        },
-        {
             "title": "Water Observations from Space 25m albers (WOfS Daily Observations)",
             "name": "wofs_albers",
             "abstract": """
