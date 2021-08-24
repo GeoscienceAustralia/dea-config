@@ -35,6 +35,9 @@ output:
   properties:
     dea:dataset_maturity: interim
     dea:product_maturity: provisional
+    eo:platform: sentinel-2
+    eo:instrument: MSI
+    odc:file_format: GeoTIFF
 
 processing:
   dask_chunks:
