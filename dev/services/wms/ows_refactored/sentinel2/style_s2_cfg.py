@@ -1,6 +1,6 @@
 import copy
 
-from ows.refactored.sentinel2.style_s2_pure_cfg import (
+from ows_refactored.sentinel2.style_s2_pure_cfg import (
     style_s2_pure_aerosol, style_s2_pure_blue, style_s2_pure_green,
     style_s2_pure_narrow_nir, style_s2_pure_nir, style_s2_pure_red,
     style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
