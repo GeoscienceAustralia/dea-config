@@ -335,6 +335,18 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
+                        {
+                            "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.multi_layers",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2b_layer",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2a_layer",
+                            "type": "python",
+                        },
                     ],
                 },
                 {
