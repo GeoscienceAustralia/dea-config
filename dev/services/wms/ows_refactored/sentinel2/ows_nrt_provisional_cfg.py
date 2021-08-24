@@ -1,5 +1,5 @@
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
-from ows_refactored.sentinel2.style_s2_cfg import styles_s2_list
+from ows_refactored.sentinel2.style_s2_cfg import styles_s2_provisional_list
 
 bands_sentinel2 = {
     "nbar_coastal_aerosol": ["nbar_coastal_aerosol", "nbar_narrow_blue"],
@@ -73,7 +73,7 @@ For service status information, see https://status.dea.ga.gov.au
             "nbart_blue",
         ],
     },
-    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }
 
 s2b_layer = {
@@ -116,7 +116,7 @@ For service status information, see https://status.dea.ga.gov.au
             "nbart_blue",
         ],
     },
-    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }
 
 s2a_layer = {
@@ -159,5 +159,5 @@ For service status information, see https://status.dea.ga.gov.au
             "nbart_blue",
         ],
     },
-    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }
