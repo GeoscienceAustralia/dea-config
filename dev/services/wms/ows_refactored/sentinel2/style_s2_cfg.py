@@ -1,6 +1,6 @@
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
 
-s2_nrt_fmask =  [
+s2_nrt_fmask = [
     {
         "band": "fmask",
         "enum": 0,
@@ -23,7 +23,7 @@ s2_nrt_fmask =  [
     },
 ]
 
-s2_provisional_oa_fmask =  [
+s2_provisional_oa_fmask = [
     {
         "band": "oa_fmask",
         "enum": 0,
