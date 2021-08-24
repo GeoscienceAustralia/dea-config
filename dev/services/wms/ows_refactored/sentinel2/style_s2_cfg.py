@@ -124,7 +124,7 @@ style_s2_ndvi = {
 
 style_s2_provisional_ndvi = copy.deepcopy(style_s2_ndvi)
 style_s2_provisional_ndvi["pq_masks"] = s2_provisional_oa_fmask
-style_s2_provisional_ndvi["multi_date"]["pq_masks"] = s2_provisional_oa_fmask
+style_s2_provisional_ndvi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_ndwi = {
     "name": "ndwi",
@@ -196,7 +196,7 @@ style_s2_ndwi = {
 
 style_s2_provisional_ndwi = copy.deepcopy(style_s2_ndwi)
 style_s2_provisional_ndwi["pq_masks"] = s2_provisional_oa_fmask
-style_s2_provisional_ndwi["multi_date"]["pq_masks"] = s2_provisional_oa_fmask
+style_s2_provisional_ndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_mndwi = {
     # Cannot reuse landsat as we need swir_2 to landsat's swir_1
@@ -246,7 +246,7 @@ style_s2_mndwi = {
 
 style_s2_provisional_mndwi = copy.deepcopy(style_s2_mndwi)
 style_s2_provisional_mndwi["pq_masks"] = s2_provisional_oa_fmask
-style_s2_provisional_mndwi["multi_date"]["pq_masks"] = s2_provisional_oa_fmask
+style_s2_provisional_mndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_ndci = {
     "name": "ndci",
