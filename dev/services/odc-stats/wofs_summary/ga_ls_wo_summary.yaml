@@ -44,18 +44,24 @@ product:
   maturity: final
   collection_number: 3
 
-  preview_image_singleband:
-    - measurement: count_clear
-      lookup_table:
-        0: [255, 255, 255]
-    - measurement: count_wet
-      lookup_table:
-        0: [255, 255, 255]
-    - measurement: frequency
-      lookup_table:
-        0: [255, 255, 255]
+  #preview_image:
+  #  - thumbnail_name: clear
+  #    green: count_clear
+  #  - thumbnail_name: wet
+  #    blue: count_wet
 
-  nodata: -999
+  preview_image_singleband:
+    - measurement: frequency
+      bit: 1
+      display_bands:
+      - red
+      - green
+      - blue
+
+  nodata: 
+    count_clear: -999
+    count_wet: -999
+    frequency: -999
   # -- EO Dataset3 relative section --
 
 aws_unsigned: True
