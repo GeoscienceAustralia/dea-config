@@ -29,15 +29,15 @@ layer = {
             "product_name": "historical_airborne_photography",
             "bands": bands_hap,
             "resource_limits": reslim_wms_min_zoom_500_max_datasets,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [1.0, 1.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [1.0, 1.0],
             },
             "styling": {
                 "default_style": "simple_gray",

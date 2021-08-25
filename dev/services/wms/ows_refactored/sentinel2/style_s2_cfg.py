@@ -1,4 +1,57 @@
+import copy
+
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
+from ows_refactored.sentinel2.style_s2_pure_cfg import (
+    style_s2_pure_aerosol, style_s2_pure_blue, style_s2_pure_green,
+    style_s2_pure_narrow_nir, style_s2_pure_nir, style_s2_pure_red,
+    style_s2_pure_redge_1, style_s2_pure_redge_2, style_s2_pure_redge_3,
+    style_s2_pure_swir1, style_s2_pure_swir2)
+
+s2_nrt_fmask = [
+    {
+        "band": "fmask",
+        "enum": 0,
+        "invert": True,
+    },
+    {
+        "band": "fmask",
+        "enum": 2,
+        "invert": True,
+    },
+    {
+        "band": "fmask",
+        "enum": 3,
+        "invert": True,
+    },
+    {
+        "band": "land",
+        "invert": True,
+        "enum": 1,
+    },
+]
+
+s2_provisional_oa_fmask = [
+    {
+        "band": "oa_fmask",
+        "enum": 0,
+        "invert": True,
+    },
+    {
+        "band": "oa_fmask",
+        "enum": 2,
+        "invert": True,
+    },
+    {
+        "band": "oa_fmask",
+        "enum": 3,
+        "invert": True,
+    },
+    {
+        "band": "land",
+        "invert": True,
+        "enum": 1,
+    },
+]
 
 style_s2_simple_rgb = {
     "name": "simple_rgb",
@@ -18,7 +71,6 @@ style_s2_irg = {
     },
     "scale_range": [0.0, 3000.0],
 }
-
 
 style_s2_ndvi = {
     "name": "ndvi",
@@ -44,28 +96,7 @@ style_s2_ndvi = {
         {"value": 0.9, "color": "#237100"},
         {"value": 1.0, "color": "#114D04"},
     ],
-    "pq_masks": [
-        {
-            "band": "fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 3,
-            "invert": True,
-        },
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 1,
-        },
-    ],
+    "pq_masks": s2_nrt_fmask,
     "legend": legend_idx_0_1_5ticks,
     "multi_date": [
         {
@@ -76,28 +107,7 @@ style_s2_ndvi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": [
-                {
-                    "band": "fmask",
-                    "enum": 0,
-                    "invert": True,
-                },
-                {
-                    "band": "fmask",
-                    "enum": 2,
-                    "invert": True,
-                },
-                {
-                    "band": "fmask",
-                    "enum": 3,
-                    "invert": True,
-                },
-                {
-                    "band": "land",
-                    "invert": True,
-                    "enum": 1,
-                },
-            ],
+            "pq_masks": s2_nrt_fmask,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -111,6 +121,10 @@ style_s2_ndvi = {
         }
     ],
 }
+
+style_s2_provisional_ndvi = copy.deepcopy(style_s2_ndvi)
+style_s2_provisional_ndvi["pq_masks"] = s2_provisional_oa_fmask
+style_s2_provisional_ndvi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_ndwi = {
     "name": "ndwi",
@@ -143,28 +157,7 @@ style_s2_ndwi = {
             "color": "#08306b",
         },
     ],
-    "pq_masks": [
-        {
-            "band": "fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 3,
-            "invert": True,
-        },
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 1,
-        },
-    ],
+    "pq_masks": s2_nrt_fmask,
     "legend": {
         "begin": "0.0",
         "end": "0.5",
@@ -186,28 +179,7 @@ style_s2_ndwi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": [
-                {
-                    "band": "fmask",
-                    "enum": 0,
-                    "invert": True,
-                },
-                {
-                    "band": "fmask",
-                    "enum": 2,
-                    "invert": True,
-                },
-                {
-                    "band": "fmask",
-                    "enum": 3,
-                    "invert": True,
-                },
-                {
-                    "band": "land",
-                    "invert": True,
-                    "enum": 1,
-                },
-            ],
+            "pq_masks": s2_nrt_fmask,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -221,6 +193,11 @@ style_s2_ndwi = {
         }
     ],
 }
+
+style_s2_provisional_ndwi = copy.deepcopy(style_s2_ndwi)
+style_s2_provisional_ndwi["pq_masks"] = s2_provisional_oa_fmask
+style_s2_provisional_ndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
+
 style_s2_mndwi = {
     # Cannot reuse landsat as we need swir_2 to landsat's swir_1
     "name": "mndwi",
@@ -241,28 +218,7 @@ style_s2_mndwi = {
         {"value": 0.8, "color": "#1563aa"},
         {"value": 1.0, "color": "#08306b"},
     ],
-    "pq_masks": [
-        {
-            "band": "fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 3,
-            "invert": True,
-        },
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 1,
-        },
-    ],
+    "pq_masks": s2_nrt_fmask,
     "legend": legend_idx_0_1_5ticks,
     "multi_date": [
         {
@@ -273,28 +229,7 @@ style_s2_mndwi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": [
-                {
-                    "band": "fmask",
-                    "enum": 0,
-                    "invert": True,
-                },
-                {
-                    "band": "fmask",
-                    "enum": 2,
-                    "invert": True,
-                },
-                {
-                    "band": "fmask",
-                    "enum": 3,
-                    "invert": True,
-                },
-                {
-                    "band": "land",
-                    "invert": True,
-                    "enum": 1,
-                },
-            ],
+            "pq_masks": s2_nrt_fmask,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -308,6 +243,10 @@ style_s2_mndwi = {
         }
     ],
 }
+
+style_s2_provisional_mndwi = copy.deepcopy(style_s2_mndwi)
+style_s2_provisional_mndwi["pq_masks"] = s2_provisional_oa_fmask
+style_s2_provisional_mndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_ndci = {
     "name": "ndci",
@@ -400,28 +339,7 @@ style_s2_nbr = {
             "color": "#053061",
         },
     ],
-    "pq_masks": [
-        {
-            "band": "fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "fmask",
-            "enum": 3,
-            "invert": True,
-        },
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 1,
-        },
-    ],
+    "pq_masks": s2_nrt_fmask,
     "legend": {
         "show_legend": True,
         "begin": "-1.0",
@@ -500,129 +418,60 @@ style_s2_nbr = {
     ],
 }
 
-style_s2_pure_aerosol = {
-    "name": "aerosol",
-    "title": "Narrow Blue - 440",
-    "abstract": "Coastal Aerosol or Narrow Blue band, approximately 435nm to 450nm",
-    "components": {
-        "red": {"coastal_aerosol": 1.0},
-        "green": {"coastal_aerosol": 1.0},
-        "blue": {"coastal_aerosol": 1.0},
+style_s2_provisional_nbr = copy.deepcopy(style_s2_nbr)
+style_s2_provisional_nbr["pq_masks"] = s2_provisional_oa_fmask
+
+fmask_bits = [
+    {
+        "title": "No Data",
+        "abstract": "",
+        "values": [
+            0,    # nodata
+        ],
+        "alpha": 0.0,
+        "color": "#FFFFFF",
     },
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_blue = {
-    "name": "blue",
-    "title": "Blue - 490",
-    "abstract": "Blue band, approximately 453nm to 511nm",
-    "components": {"red": {"blue": 1.0}, "green": {"blue": 1.0}, "blue": {"blue": 1.0}},
-    "scale_range": [0.0, 3000.0],
-}
-
-style_s2_pure_green = {
-    "name": "green",
-    "title": "Green - 560",
-    "abstract": "Green band, approximately 534nm to 588nm",
-    "components": {
-        "red": {"green": 1.0},
-        "green": {"green": 1.0},
-        "blue": {"green": 1.0},
+    {
+        "title": "Clear",
+        "abstract": "",
+        "values": [
+            1,    # clear/valid
+        ],
+        "color": "#84A278",
     },
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_red = {
-    "name": "red",
-    "title": "Red - 670",
-    "abstract": "Red band, roughly 637nm to 672nm",
-    "components": {"red": {"red": 1.0}, "green": {"red": 1.0}, "blue": {"red": 1.0}},
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_redge_1 = {
-    "name": "red_edge_1",
-    "title": "Vegetation Red Edge - 710",
-    "abstract": "Near infra-red band, centred on 710nm",
-    "components": {
-        "red": {"red_edge_1": 1.0},
-        "green": {"red_edge_1": 1.0},
-        "blue": {"red_edge_1": 1.0},
+    {
+        "title": "Cloud",
+        "abstract": "",
+        "values": [
+            2,    # cloud
+        ],
+        "color": "#D0CFCE",
     },
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_redge_2 = {
-    "name": "red_edge_2",
-    "title": "Vegetation Red Edge - 740",
-    "abstract": "Near infra-red band, centred on 740nm",
-    "components": {
-        "red": {"red_edge_2": 1.0},
-        "green": {"red_edge_2": 1.0},
-        "blue": {"red_edge_2": 1.0},
+    {
+        "title": "Shadow",
+        "abstract": "",
+        "values": [
+            3    # shadow
+        ],
+        "color": "#464633",
     },
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_redge_3 = {
-    "name": "red_edge_3",
-    "title": "Vegetation Red Edge - 780",
-    "abstract": "Near infra-red band, centred on 780nm",
-    "components": {
-        "red": {"red_edge_3": 1.0},
-        "green": {"red_edge_3": 1.0},
-        "blue": {"red_edge_3": 1.0},
+    {
+        "title": "Snow",
+        "abstract": "",
+        "values": [
+            4    # snow
+        ],
+        "color": "#E0EDFF",
     },
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_nir = {
-    "name": "nir",
-    "title": "Near Infrared (NIR) - 840",
-    "abstract": "Near infra-red band, roughly 853nm to 876nm",
-    "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
-    "scale_range": [0.0, 3000.0],
-}
-
-style_s2_pure_narrow_nir = {
-    "name": "narrow_nir",
-    "title": "Narrow Near Infrared - 870",
-    "abstract": "Near infra-red band, centred on 865nm",
-    "components": {"red": {"nir": 1.0}, "green": {"nir": 1.0}, "blue": {"nir": 1.0}},
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_swir1 = {
-    "name": "swir1",
-    "title": "Shortwave Infrared (SWIR) - 1610",
-    "abstract": "Short wave infra-red band 1, roughly 1575nm to 1647nm",
-    "components": {
-        "red": {"swir_2": 1.0},
-        "green": {"swir_2": 1.0},
-        "blue": {"swir_2": 1.0},
+    {
+        "title": "Water",
+        "abstract": "",
+        "values": [
+            5    # water
+        ],
+        "color": "#475B74",
     },
-    "scale_range": [0.0, 3000.0],
-}
-
-
-style_s2_pure_swir2 = {
-    "name": "swir2",
-    "title": "Shortwave Infrared (SWIR) - 2190",
-    "abstract": "Short wave infra-red band 2, roughly 2117nm to 2285nm",
-    "components": {
-        "red": {"swir_3": 1.0},
-        "green": {"swir_3": 1.0},
-        "blue": {"swir_3": 1.0},
-    },
-    "scale_range": [0.0, 3000.0],
-}
+]
 
 style_s2_fmask = {
     "name": "fmask",
@@ -631,108 +480,19 @@ style_s2_fmask = {
     "include_in_feature_info": False,
     "needed_bands": ["fmask"],
     "value_map": {
-        "fmask": [
-            {
-                "title": "No Data",
-                "abstract": "",
-                "values": [
-                    0,    # nodata
-                ],
-                "alpha": 0.0,
-                "color": "#FFFFFF",
-            },
-            {
-                "title": "Clear",
-                "abstract": "",
-                "values": [
-                    1,    # clear/valid
-                ],
-                "color": "#84A278",
-            },
-            {
-                "title": "Cloud",
-                "abstract": "",
-                "values": [
-                    2,    # cloud
-                ],
-                "color": "#D0CFCE",
-            },
-            {
-                "title": "Shadow",
-                "abstract": "",
-                "values": [
-                    3    # shadow
-                ],
-                "color": "#464633",
-            },
-            {
-                "title": "Snow",
-                "abstract": "",
-                "values": [
-                    4    # snow
-                ],
-                "color": "#E0EDFF",
-            },
-            {
-                "title": "Water",
-                "abstract": "",
-                "values": [
-                    5    # water
-                ],
-                "color": "#475B74",
-            },
-        ]
+        "fmask": fmask_bits
     }
 }
 
-bands_sentinel2_ard_nbar = {
-    "nbar_coastal_aerosol": [
-        "nbar_coastal_aerosol",
-        "coastal_aerosol",
-        "nbart_coastal_aerosol",
-        "nbart_narrow_blue",
-        "nbar_narrow_blue" "narrow_blue",
-    ],
-    "nbar_blue": ["nbar_blue", "blue", "nbart_blue"],
-    "nbar_green": ["nbar_green", "green", "nbart_green"],
-    "nbar_red": ["nbar_red", "red", "nbart_red"],
-    "nbar_red_edge_1": ["nbar_red_edge_1", "red_edge_1", "nbart_red_edge_1"],
-    "nbar_red_edge_2": ["nbar_red_edge_2", "red_edge_2", "nbart_red_edge_2"],
-    "nbar_red_edge_3": ["nbar_red_edge_3", "red_edge_3", "nbart_red_edge_3"],
-    "nbar_nir_1": ["nbar_nir_1", "nir", "nir_1", "nbart_nir_1"],
-    "nbar_nir_2": ["nbar_nir_2", "nir2", "nbart_nir_2"],
-    "nbar_swir_2": ["nbar_swir_2", "swir_2", "nbart_swir_2"],
-    "nbar_swir_3": ["nbar_swir_3", "swir_3", "nbart_swir_3"],
-}
-
-bands_sentinel2 = {
-    "nbar_coastal_aerosol": ["nbar_coastal_aerosol", "nbar_narrow_blue"],
-    "nbar_blue": ["nbar_blue"],
-    "nbar_green": ["nbar_green"],
-    "nbar_red": ["nbar_red"],
-    "nbar_red_edge_1": ["nbar_red_edge_1"],
-    "nbar_red_edge_2": ["nbar_red_edge_2"],
-    "nbar_red_edge_3": ["nbar_red_edge_3"],
-    "nbar_nir_1": ["nbar_nir_1", "nbar_near_infrared_1"],
-    "nbar_nir_2": ["nbar_nir_2", "nbar_near_infrared_2"],
-    "nbar_swir_2": ["nbar_swir_2", "nbar_shortwave_infrared_2"],
-    "nbar_swir_3": ["nbar_swir_3", "nbar_shortwave_infrared_3"],
-    "nbart_coastal_aerosol": [
-        "nbart_coastal_aerosol",
-        "coastal_aerosol",
-        "nbart_narrow_blue",
-        "narrow_blue",
-    ],
-    "nbart_blue": ["nbart_blue", "blue"],
-    "nbart_green": ["nbart_green", "green"],
-    "nbart_red": ["nbart_red", "red"],
-    "nbart_red_edge_1": ["nbart_red_edge_1", "red_edge_1"],
-    "nbart_red_edge_2": ["nbart_red_edge_2", "red_edge_2"],
-    "nbart_red_edge_3": ["nbart_red_edge_3", "red_edge_3"],
-    "nbart_nir_1": ["nbart_nir_1", "nir", "nir_1", "nbart_near_infrared_1"],
-    "nbart_nir_2": ["nbart_nir_2", "nir_2", "nbart_near_infrared_2"],
-    "nbart_swir_2": ["nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2"],
-    "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
+style_s2_oa_fmask = {
+    "name": "fmask",
+    "title": "Fmask Classification",
+    "abstract": "Fmask (Function of mask) is used for automated clouds, cloud shadows, snow, and water masking for Landsats 4-8 and Sentinel 2 images.",
+    "include_in_feature_info": False,
+    "needed_bands": ["oa_fmask"],
+    "value_map": {
+        "oa_fmask": fmask_bits
+    }
 }
 
 
@@ -756,4 +516,27 @@ styles_s2_list = [
     style_s2_pure_swir1,
     style_s2_pure_swir2,
     style_s2_fmask,
+]
+
+
+styles_s2_provisional_list = [
+    style_s2_simple_rgb,
+    style_s2_irg,
+    style_s2_provisional_ndvi,
+    style_s2_provisional_ndwi,
+    style_s2_provisional_mndwi,
+    style_s2_ndci,
+    style_s2_provisional_nbr,
+    style_s2_pure_aerosol,
+    style_s2_pure_blue,
+    style_s2_pure_green,
+    style_s2_pure_red,
+    style_s2_pure_redge_1,
+    style_s2_pure_redge_2,
+    style_s2_pure_redge_3,
+    style_s2_pure_nir,
+    style_s2_pure_narrow_nir,
+    style_s2_pure_swir1,
+    style_s2_pure_swir2,
+    style_s2_oa_fmask,
 ]

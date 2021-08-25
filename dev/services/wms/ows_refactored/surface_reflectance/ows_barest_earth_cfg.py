@@ -48,14 +48,14 @@ IEEE Transactions on Geoscience and Remote Sensing 55 (11), 6254-6264
             "bands": bands_s2_barest_earth,
             # "time_resolution": 'year',
             "resource_limits": reslim_wms_min_zoom_35,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["red", "green", "blue"],
             },
             "styling": {"default_style": "simple_rgb", "styles": styles_s2_barest_earth_list},

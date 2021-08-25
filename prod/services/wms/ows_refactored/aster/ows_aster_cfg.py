@@ -59,15 +59,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_false_colour",
             "bands": bands_aster,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1", "Band_2", "Band_3"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "false_colour",
@@ -84,15 +84,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_regolith_ratios",
             "bands": bands_aster,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1", "Band_2", "Band_3"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "simple_rgb",
@@ -108,15 +108,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_aloh_group_composition",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -132,15 +132,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_aloh_group_content",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -156,15 +156,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_feoh_group_content",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -180,15 +180,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_ferric_oxide_composition",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -204,15 +204,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_ferric_oxide_content",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -228,15 +228,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_ferrous_iron_content_in_mgoh",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -252,15 +252,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_ferrous_iron_index",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -276,15 +276,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_green_vegetation",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -300,15 +300,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_gypsum_index",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -324,15 +324,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_kaolin_group_index",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -348,15 +348,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_mgoh_group_composition",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -372,15 +372,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_mgoh_group_content",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -396,15 +396,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_opaque_index",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -420,15 +420,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_silica_index",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",
@@ -444,15 +444,15 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "product_name": "aster_quartz_index",
             "bands": bands_aster_single_band,
             "resource_limits": reslim_wms_min_zoom_10,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [15.0, 15.0],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": ["Band_1"],
-                "native_resolution": [15.0, 15.0],
             },
             "styling": {
                 "default_style": "ramp",

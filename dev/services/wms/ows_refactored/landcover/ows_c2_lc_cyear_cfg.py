@@ -279,6 +279,8 @@ layers = {
             "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "dynamic": True,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                 "always_fetch_bands": [],
@@ -293,8 +295,6 @@ layers = {
             #     }
             # ],
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["level4"],
             },
             "styling": {
@@ -313,6 +313,8 @@ layers = {
             "time_resolution": "year",
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "dynamic": True,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
                 "always_fetch_bands": [],
@@ -327,8 +329,6 @@ layers = {
             #     }
             # ],
             "wcs": {
-                "native_crs": "EPSG:3577",
-                "native_resolution": [25, -25],
                 "default_bands": ["canopyco_veg_cat_l4d"],
             },
             "styling": {

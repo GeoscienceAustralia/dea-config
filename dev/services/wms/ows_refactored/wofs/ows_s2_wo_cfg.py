@@ -160,6 +160,8 @@ layers = {
     "bands": bands_wofs_obs,
     "resource_limits": reslim_wms_min_zoom_35,
     "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [10, -10],
     "flags": [
         {
             "band": "land",
@@ -182,8 +184,6 @@ layers = {
         "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
     },
     "wcs": {
-        "native_crs": "EPSG:3577",
-        "native_resolution": [10, -10],
         "default_bands": ["water"],
     },
     "styling": {

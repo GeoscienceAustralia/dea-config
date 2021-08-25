@@ -96,19 +96,19 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_tcw_percentiles_2",
             "bands": bands_tcw_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "wcs": {
-                "native_crs": "EPSG:3577",
                 "default_bands": [
                     "TCW_PC_10",
                     "TCW_PC_50",
                     "TCW_PC_90",
                 ],
-                "native_resolution": [25, -25],
             },
             "styling": {
                 "default_style": "tcw_10_percentile",
