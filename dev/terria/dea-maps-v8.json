@@ -4,7 +4,7 @@
         {
             "id": "CqkxcG",
             "type": "group",
-            "name": "Satellite data",
+            "name": "Baseline satellite data",
             "members": [
                 {
                     "type": "wms",
@@ -462,7 +462,7 @@
                     ]
                 }
             ],
-            "shareKeys": ["Root Group/Satellite data"]
+            "shareKeys": ["Root Group/Satellite images", "Root Group/Satellite data", "Root Group/Baseline satellite data"]
         },
         {
             "id": "ahjVXr",
@@ -770,7 +770,7 @@
         {
             "id": "dn823X",
             "type": "group",
-            "name": "Inland waterbodies",
+            "name": "Inland water",
             "members": [
                 {
                     "id": "3iIq5b",
@@ -1154,12 +1154,12 @@
                     ]
                 }
             ],
-            "shareKeys": ["Root Group/Surface Water"]
+            "shareKeys": ["Root Group/Surface Water", "Root Group/Inland waterbodies", "Root Group/Inland water"]
         },
         {
             "id": "D7zEZL",
             "type": "group",
-            "name": "Sea, ocean and coastline",
+            "name": "Sea, ocean and coast",
             "members": [
                 {
                     "id": "dkjsia",
@@ -1459,7 +1459,7 @@
                     ]
                 }
             ],
-            "shareKeys": ["Root Group/Coastal"]
+            "shareKeys": ["Root Group/Coastal", "Root Group/Sea, ocean and coastline", "Root Group/Sea, ocean and coast"]
         },
         {
             "id": "UIOgdf",
