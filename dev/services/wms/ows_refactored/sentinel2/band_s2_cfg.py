@@ -30,17 +30,6 @@ bands_sentinel2 = {
 }
 
 bands_sentinel2_provisional = {
-    "nbar_coastal_aerosol": ["nbar_coastal_aerosol", "nbar_narrow_blue"],
-    "nbar_blue": ["nbar_blue"],
-    "nbar_green": ["nbar_green"],
-    "nbar_red": ["nbar_red"],
-    "nbar_red_edge_1": ["nbar_red_edge_1"],
-    "nbar_red_edge_2": ["nbar_red_edge_2"],
-    "nbar_red_edge_3": ["nbar_red_edge_3"],
-    "nbar_nir_1": ["nbar_nir_1", "nbar_near_infrared_1"],
-    "nbar_nir_2": ["nbar_nir_2", "nbar_near_infrared_2"],
-    "nbar_swir_2": ["nbar_swir_2", "nbar_shortwave_infrared_2"],
-    "nbar_swir_3": ["nbar_swir_3", "nbar_shortwave_infrared_3"],
     "nbart_coastal_aerosol": [
         "nbart_coastal_aerosol",
         "coastal_aerosol",
