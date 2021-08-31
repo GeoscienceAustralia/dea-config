@@ -317,7 +317,7 @@ For service status information, see https://status.dea.ga.gov.au
                 {
                     "title": "Near Real-Time",
                     "abstract": """
-This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data.
+This is a 90-day rolling archive of daily Near Real-Time data.
 The Near Real-Time capability provides analysis-ready data that is processed on receipt using
 the best-available ancillary information at the time to provide atmospheric corrections.
 For more information see http://pid.geoscience.gov.au/dataset/ga/122229
@@ -345,6 +345,10 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                         },
                         {
                             "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2a_layer",
+                            "type": "python",
+                        },
+                        {
+                            "include": "ows_refactored.c3.ows_provisional_ard_cfg.layers",
                             "type": "python",
                         },
                     ],
