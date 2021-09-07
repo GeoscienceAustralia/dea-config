@@ -1549,7 +1549,7 @@
                                 {
                                   "type": "wms",
                                   "name": "GSKY Band Math Demo Landsat-8 RED",
-                                  "url": "http://130.56.246.135/ows/test_band_math",
+                                  "url": "https://gsky.nci.org.au/ows/dea",
                                   "opacity": 1,
                                   "layers": "landsat8_nbart_daily",
                                   "parameters": {
