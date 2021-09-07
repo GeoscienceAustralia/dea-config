@@ -3904,8 +3904,7 @@
         "gsky-dev.nci.org.au",
         "gsky-test.nci.org.au",
         "gsky.nci.org.au",
-        "dea-public-data-dev.s3-ap-southeast-2.amazonaws.com",
-        "*.s3.ap-southeast-2.amazonaws.com"
+        "dea-public-data-dev.s3-ap-southeast-2.amazonaws.com"
     ],
     "homeCamera": {
         "north": -8,
