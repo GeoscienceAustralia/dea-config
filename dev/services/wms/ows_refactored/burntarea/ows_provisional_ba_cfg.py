@@ -41,7 +41,7 @@ style_dbsi = {
     },
 }
 
-style_ndvi = {
+style_dndvi = {
     "name": "ga_s2_ndvi_provisional_3",
     "title": "Delta Normalized Difference Vegetation Index (Provisional, NRT Sentinel 2)",
     "abstract": """
