@@ -1,4 +1,4 @@
-#ask about how to generate a legend
+# ask about how to generate a legend
 
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
@@ -13,12 +13,12 @@ style_dbsi = {
     "title": "Delta Bare Soil Index (Provisional, NRT Sentinel 2)",
     "abstract": """
         Delta Bare Soil Index (dBSI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data
-        
+
         Bare Soil Index (BSI) identifies soil or bare-land characteristics by combining blue, red, near infrared (NIR), and short wave infrared (SWIR) spectral bands. SWIR and red spectral bands can be used to identify basic soil mineralogy while blue and NIR spectral bands can help to detect vegetation.
         BSI (Rikimaru and Miyatake 2002) is calculated as: BSI = ((SWIR2 + RED) - (NIR + BLUE)) / ((SWIR2 + RED) + (NIR + BLUE))
-        
-        Delta BSI (dBSI) shows the change in soil characteristics between two events, the difference between a baseline (pre-BSI) and a latter time (post-BSI). The change (delta) in BSI is calculated as: dBSI = pre-BSI - post-BSI 
-        
+
+        Delta BSI (dBSI) shows the change in soil characteristics between two events, the difference between a baseline (pre-BSI) and a latter time (post-BSI). The change (delta) in BSI is calculated as: dBSI = pre-BSI - post-BSI.
+
         This dBSI product is based on two input datasets:
          1) The baseline (pre) BSI is calculated on DEA Sentinel 2 Barest Earth (Roberts, et al. 2019).
          2) The latter (post) BSI is calculated on the latest daily Sentinel-2 (A and B combined) Near Real-Time provisional data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
