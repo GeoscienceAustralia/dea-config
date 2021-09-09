@@ -38,7 +38,7 @@ style_dbsi = {
     "mpl_ramp": "YlOrBr",
     "legend": {
         "url": "",  # need this
-        },
+    },
 }
 
 style_ndvi = {
@@ -81,11 +81,9 @@ style_ndvi = {
         {"value": 0.4, "color": "#88B808"},
         {"value": 0.6, "color": "#529400"},
         {"value": 0.8, "color": "#237100"},
-        {"value": 1.0, "color": "#114D04"},
-        ]
-    "legend": {
-        "url": "",  # need this
-    },
+        {"value": 1.0, "color": "#114D04"},],
+    "legend": { # need this
+        "url": "", },
 }
 
 style_dnbr = {
@@ -156,20 +154,17 @@ style_dnbr_classes = {
     },
     "range": [-1, 1],
     "color_ramp": [
-        {"value": -1.0, "color": "#0be344",},
-        {"value": 0.1, "color": "#0be344",},
-        {"value": 0.05, "color": "#f8fc11",},
-        {"value": 0.1, "color": "#f8671a",},
-        {"value": 1.0, "color": "#f8671a"},
+        {"value": -1.0, "color": "#0be344", },
+        {"value": 0.1, "color": "#0be344", },
+        {"value": 0.05, "color": "#f8fc11", },
+        {"value": 0.1, "color": "#f8671a", },
+        {"value": 1.0, "color": "#f8671a", },
     ],
-    
+
     "legend": {
         "url": "",  # need this
     },
 }
-
-
-
 
 layers = {
     "title": "DEA Burnt Area Input Datasets (Provisional, NRT Sentinel 2) ",
