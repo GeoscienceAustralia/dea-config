@@ -22,7 +22,7 @@ style_dbsi = {
         This dBSI product is based on two input datasets:
          1) The baseline (pre) BSI is calculated on DEA Sentinel 2 Barest Earth (Roberts, et al. 2019).
          2) The latter (post) BSI is calculated on the latest daily Sentinel-2 (A and B combined) Near Real-Time provisional data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
-        The larger the positive dBSI value, the more the area shows characteristics of being burnt. This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt. 
+        The larger the positive dBSI value, the more the area shows characteristics of being burnt. This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
 
         For service status information, see https://status.dea.ga.gov.au
         """,
