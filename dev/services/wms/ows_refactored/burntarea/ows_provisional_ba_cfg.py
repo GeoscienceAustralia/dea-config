@@ -81,8 +81,8 @@ style_ndvi = {
         {"value": 0.4, "color": "#88B808"},
         {"value": 0.6, "color": "#529400"},
         {"value": 0.8, "color": "#237100"},
-        {"value": 1.0, "color": "#114D04"},],
-    "legend": { # need this
+        {"value": 1.0, "color": "#114D04"}, ],
+    "legend": {  # need this
         "url": "", },
 }
 
@@ -175,7 +175,7 @@ layers = {
             "name": "ga_s2_ba_provisional_3",
             "abstract": """ text here, currently working on it""",
             "product_name": "ga_s2_ba_provisional_3",
-            "bands": bands_ba_rasters
+            "bands": bands_ba_rasters,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "dynamic": True,
             "native_crs": "EPSG:3577",
