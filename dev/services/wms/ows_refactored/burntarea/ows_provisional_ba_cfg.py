@@ -34,11 +34,10 @@ style_dbsi = {
             "band": "delta_bsi",
         },
     },
-    "range": [-1,1],
+    "range": [-1,1], 
     "mpl_ramp": "YlOrBr",
-    "legend": {
-        "url": "", #need this
-    },
+    "legend": {"url": "", # need this
+     },
 }
 
 style_ndvi = {
