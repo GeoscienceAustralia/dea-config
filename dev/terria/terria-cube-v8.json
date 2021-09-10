@@ -534,6 +534,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "ojaAS2"
                                 },
                                 {
@@ -561,6 +565,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "poas82"
                                 },
                                 {
@@ -587,6 +595,10 @@
                                     },
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "PGh872"
                                 }
@@ -618,6 +630,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "546ert"
                                 },
                                 {
@@ -633,6 +649,10 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "wejk58"
                                 }
@@ -689,6 +709,10 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "SAD2AS"
                                 },
@@ -766,6 +790,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "89Afe2"
                                         },
                                         {
@@ -782,6 +810,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "kd29md"
                                         },
                                         {
@@ -797,6 +829,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "WER34v"
                                         }
@@ -822,6 +858,10 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "a54fng"
                                 }
@@ -946,6 +986,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "HaP23H"
                                 },
                                 {
@@ -962,6 +1006,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "ASf45Q"
                                 },
                                 {
@@ -977,6 +1025,10 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "WeGs42"
                                 },
@@ -1013,6 +1065,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "ODw8jg"
                                         },
                                         {
@@ -1028,6 +1084,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "qQ2721"
                                         }
@@ -1052,6 +1112,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "VCX276"
                                         },
                                         {
@@ -1067,6 +1131,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "iunKf7"
                                         }
@@ -1091,6 +1159,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "725OCJ"
                                         },
                                         {
@@ -1106,6 +1178,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "456as2"
                                         }
@@ -2629,6 +2705,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "hAUsXi",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 8 satellite images"
@@ -2659,6 +2739,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "pwDY6b",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 7 satellite images"
@@ -2688,6 +2772,10 @@
                                     },
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "BpKM2u",
                                     "shareKeys": [
@@ -2764,6 +2852,10 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "BLxe8I",
                                     "shareKeys": [
@@ -2856,6 +2948,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "7eJRQy",
                                             "shareKeys": [
                                                 "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Green Vegetation"
@@ -2875,6 +2971,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "uFlnzu",
                                             "shareKeys": [
                                                 "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
@@ -2893,6 +2993,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "L1wwAP",
                                             "shareKeys": [
@@ -2925,6 +3029,10 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "3gjEXB",
                                     "shareKeys": [
@@ -3068,6 +3176,10 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
+                                    },
                                     "id": "hbzXqh",
                                     "shareKeys": [
                                         "Root Group/Surface Water/Water Observations from Space/November-March water observations"
@@ -3086,6 +3198,10 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": {
+                                        "currentTime": "'Year: 'yyyy",
+                                        "timelineTic": "yyyy"
                                     },
                                     "id": "SpYxSG",
                                     "shareKeys": [
@@ -3128,6 +3244,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "M1ThLx",
                                             "shareKeys": [
                                                 "Root Group/Surface Water/Water Observations from Space/April-October water observations source data/April-October clear observations"
@@ -3146,6 +3266,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "7vSA2T",
                                             "shareKeys": [
@@ -3176,6 +3300,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "HGetFm",
                                             "shareKeys": [
                                                 "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March clear observations"
@@ -3194,6 +3322,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "iknUf8",
                                             "shareKeys": [
@@ -3224,6 +3356,10 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
+                                            },
                                             "id": "614LVP",
                                             "shareKeys": [
                                                 "Root Group/Surface Water/Water Observations from Space/Annual water observations source data/Annual clear observations"
@@ -3242,6 +3378,10 @@
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
+                                            },
+                                            "dateFormat": {
+                                                "currentTime": "'Year: 'yyyy",
+                                                "timelineTic": "yyyy"
                                             },
                                             "id": "1LlNu1",
                                             "shareKeys": [
