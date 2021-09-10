@@ -46,7 +46,7 @@ style_mangrove_cover_v2 = {
 
 
 layer = {
-    "title": "Mangrove Canopy Cover",
+    "title": "DEA Mangrove Canopy Cover",
     "abstract": "",
     "layers": [
         {

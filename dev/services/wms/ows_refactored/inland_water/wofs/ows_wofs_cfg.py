@@ -2,7 +2,7 @@ from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_percentage_by_25)
 from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15_cache_rules,
                                            reslim_wms_min_zoom_35)
-from ows_refactored.wofs.bands_wo_cfg import (bands_wofs_filt_sum,
+from ows_refactored.inland_water.wofs.bands_wo_cfg import (bands_wofs_filt_sum,
                                               bands_wofs_obs)
 
 style_wofs_filt_freq = {
@@ -260,7 +260,7 @@ style_wofs_obs_wet_only = {
 }
 
 layers = {
-    "title": "Water Observations from Space",
+    "title": "DEA Water Observations (WOfS)",
     "abstract": "WOfS",
     "layers": [
         {
@@ -317,19 +317,19 @@ Water Observations from Space (WOfS) Filtered Statistics helps provide the long 
             },
         },
         {
-            "include": "ows_refactored.wofs.ows_wofs_summary_cfg.layers",
+            "include": "ows_refactored.inland_water.wofs.ows_wofs_summary_cfg.layers",
             "type": "python",
         },
         {
-            "include": "ows_refactored.wofs.ows_wofs_annual_cfg.layers",
+            "include": "ows_refactored.inland_water.wofs.ows_wofs_annual_cfg.layers",
             "type": "python",
         },
         {
-            "include": "ows_refactored.wofs.ows_wofs_seasonal_cfg.layers",
+            "include": "ows_refactored.inland_water.wofs.ows_wofs_seasonal_cfg.layers",
             "type": "python",
         },
         {
-            "include": "ows_refactored.wofs.ows_s2_wo_cfg.layers",
+            "include": "ows_refactored.inland_water.wofs.ows_s2_wo_cfg.layers",
             "type": "python",
         },
         {

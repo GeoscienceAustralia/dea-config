@@ -141,6 +141,10 @@ ows_cfg = {
     },  # END OF wcs SECTION
     "layers": [
         {
+            "include": "ows_refactored.baseline_satellite_data.ows_category_root_cfg.category_layers",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.land_and_vegetation.ows_category_root_cfg.category_layers",
             "type": "python",
         },
@@ -155,94 +159,6 @@ ows_cfg = {
         {
             "include": "ows_refactored.others.ows_category_root_cfg.category_layers",
             "type": "python",
-        },
-        {
-            "title": "Digital Earth Australia - OGC Web Services",
-            "abstract": "Digital Earth Australia OGC Web Services",
-            "layers": [
-                # Hierarchical list of layers.  May be a combination of unnamed/unmappable folder-layers or named mappable layers.
-                {
-                    "include": "ows_refactored.surface_reflectance.ows_geomedian_cfg.layers",
-                    "type": "python",
-                },
-                {
-                    "include": "ows_refactored.surface_reflectance.ows_barest_earth_cfg.layers",
-                    "type": "python",
-                },
-                {
-                    "include": "ows_refactored.surface_reflectance.ows_nd_cfg.ls8_be_layers",
-                    "type": "python",
-                },
-                {
-                    "include": "ows_refactored.surface_reflectance.ows_nd_cfg.ls30_be_layers",
-                    "type": "python",
-                },
-                {
-                    "title": "Near Real-Time",
-                    "abstract": """
-This is a 90-day rolling archive of daily Near Real-Time data.
-The Near Real-Time capability provides analysis-ready data that is processed on receipt using
-the best-available ancillary information at the time to provide atmospheric corrections.
-For more information see http://pid.geoscience.gov.au/dataset/ga/122229
-""",
-                    "layers": [
-                        {
-                            "include": "ows_refactored.sentinel2.ows_nrt_cfg.multi_layers",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2b_layer",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
-                            "type": "python",
-                        },
-                    ],
-                },
-                {
-                    "include": "ows_refactored.sentinel2.ows_ard_cfg.layers",
-                    "type": "python",
-                },
-                {
-                    "include": "ows_refactored.surface_reflectance.ows_tide_cfg.layers",
-                    "type": "python",
-                },
-                {
-                    "include": "ows_refactored.tmad.ows_tmad_cfg.layers",
-                    "type": "python",
-                },
-                {
-                    "title": "Geoscience Australia Collection 3",
-                    "abstract": "Geoscience Australia Collection 3 represents the third reprocessing of Landsat and Sentinel-2 baseline and derivative products",
-                    "layers": [
-                        {
-                            "include": "ows_refactored.c3.ows_c3_cfg.layers",
-                            "type": "python",
-                        },
-                        {
-                            "title": "Geoscience Australia Sentinel-2 Collection 3",
-                            "abstract": """Collection 3 represents a consistent processing and upgrade to the Geoscience Australia's Sentinel-2 Multispectral Imager baseline and derivate product datasets.
-
-For service status information, see https://status.dea.ga.gov.au""",
-                            "layers": [
-                                {
-                                    "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.multi_layers",
-                                    "type": "python",
-                                },
-                                {
-                                    "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2b_layer",
-                                    "type": "python",
-                                },
-                                {
-                                    "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2a_layer",
-                                    "type": "python",
-                                },
-                            ],
-                        },
-                    ],
-                },
-            ],
         },
     ],  # End of Layers List
 }  # End of ows_cfg object
