@@ -11,6 +11,10 @@ category_layers = {
             "type": "python",
         },
         {
+            "include": "ows_refactored.land_and_vegetation.ows_mangrove_cfg.layer",
+            "type": "python",
+        },
+        {
             "title": "Barest Earth",
             "abstract": "",
             "layers": [
