@@ -82,9 +82,9 @@ style_dndvi = {
         {"value": 0.6, "color": "#529400"},
         {"value": 0.8, "color": "#237100"},
         {"value": 1.0, "color": "#114D04"}, ],
-    "legend": {  # need this
-        "url": "", 
-        },
+    "legend": {
+        "url": "",  # need this
+    },
 }
 
 style_dnbr = {
