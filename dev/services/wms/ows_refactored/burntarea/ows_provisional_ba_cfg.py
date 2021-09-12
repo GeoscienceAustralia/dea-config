@@ -83,7 +83,8 @@ style_dndvi = {
         {"value": 0.8, "color": "#237100"},
         {"value": 1.0, "color": "#114D04"}, ],
     "legend": {  # need this
-        "url": "", },
+        "url": "", 
+        },
 }
 
 style_dnbr = {
@@ -116,7 +117,7 @@ style_dnbr = {
         },
     },
     "range": [-1, 1],
-    "mpl_ramp": "PuOr",  # need to ask how to reverse colour ramp
+    "mpl_ramp": "PuOr_r",
     "legend": {
         "url": "",  # need this
     },
@@ -187,10 +188,9 @@ layers = {
             },
             "wcs": {
                 "default_bands": [
-                    "style_dnbr",
-                    "style_dnbr_classes",
-                    "style_dbsi",
-                    "style_ndvi",
+                    "delta_nbr",
+                    "delta_bsi",
+                    "delta_ndvi",
                 ],
             },
             "styling": {
