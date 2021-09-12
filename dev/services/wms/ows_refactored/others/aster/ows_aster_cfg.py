@@ -9,8 +9,8 @@ from ows_refactored.others.aster.abstract_aster_cfg import (
     abstract_aster_mgoh_group_composition, abstract_aster_mgoh_group_content,
     abstract_aster_opaque_index, abstract_aster_quartz_index,
     abstract_aster_regolith_ratios, abstract_aster_silica_index)
-from ows_refactored.others.aster.band_aster_cfg import (bands_aster,
-                                                 bands_aster_single_band)
+from ows_refactored.others.aster.band_aster_cfg import (
+    bands_aster, bands_aster_single_band)
 from ows_refactored.others.aster.style_aster_cfg import (
     style_aster_aloh_comp_ramp, style_aster_aloh_cont_ramp,
     style_aster_b2_gray, style_aster_false_colour, style_aster_feoh_cont_ramp,

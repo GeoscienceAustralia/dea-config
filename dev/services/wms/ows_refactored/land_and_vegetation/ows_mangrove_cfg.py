@@ -1,12 +1,9 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
-
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 bands_mangrove = {
     "canopy_cover_class": [],
     "extent": [],
 }
-
-
 
 style_mangrove_cover_v2 = {
     "name": "mangrove",
@@ -42,8 +39,6 @@ style_mangrove_cover_v2 = {
     },
     "legend": {},
 }
-
-
 
 layer = {
     "title": "DEA Mangrove Canopy Cover",

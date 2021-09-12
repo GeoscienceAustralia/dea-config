@@ -1,6 +1,8 @@
+from ows_refactored.baseline_satellite_data.sentinel2.band_s2_cfg import \
+    bands_sentinel2
+from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
+    styles_s2_list
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
-from ows_refactored.baseline_satellite_data.sentinel2.band_s2_cfg import bands_sentinel2
-from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import styles_s2_list
 
 multi_layers = {
     "name": "s2_nrt_granule_nbar_t",
