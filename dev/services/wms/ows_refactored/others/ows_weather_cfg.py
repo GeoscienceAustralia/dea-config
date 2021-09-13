@@ -40,7 +40,7 @@ layer = {
     "abstract": "",
     "layers": [
         {
-            "title": "Weathering Intensity 1 degree tile (Weathering Intensity)",
+            "title": "Weathering Intensity",
             "name": "weathering_intensity",
             "abstract": """
 Weathering intensity or the degree of weathering is an important characteristic of the

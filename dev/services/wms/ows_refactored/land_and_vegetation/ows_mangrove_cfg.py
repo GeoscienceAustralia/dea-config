@@ -45,8 +45,8 @@ layer = {
     "abstract": "",
     "layers": [
         {
+            "title": "DEA Mangrove Canopy Cover",
             "name": "mangrove_cover_v2_0_2",
-            "title": "Mangrove Canopy Cover 25m 100km tile (Mangrove Canopy Cover V2.0.2)",
             "abstract": """
 Mangrove canopy cover version 2.0.2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 The mangrove canopy cover product provides valuable information about the extent and canopy density of mangroves for each year between 1987 and 2016 for the entire Australian coastline.

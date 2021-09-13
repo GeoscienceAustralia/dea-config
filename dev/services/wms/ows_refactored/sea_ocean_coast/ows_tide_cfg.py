@@ -22,8 +22,8 @@ and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described full
             """,
     "layers": [
         {
+            "title": "DEA High Tide Imagery",
             "name": "high_tide_composite",
-            "title": "High Tide Low Tide Composite 25m Tidal Composite (High Tide)",
             "abstract": """
 High Tide and Low Tide Composites 2.0.0
 
@@ -68,8 +68,8 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         },
         {
+            "title": "DEA Low Tide Imagery",
             "name": "low_tide_composite",
-            "title": "High Tide Low Tide Composite 25m Tidal Composite (Low Tide)",
             "abstract": """
 High Tide and Low Tide Composites 2.0.0
 

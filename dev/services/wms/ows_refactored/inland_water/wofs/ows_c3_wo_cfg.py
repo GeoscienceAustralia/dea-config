@@ -162,7 +162,7 @@ style_c3_wofs_obs_wet_only = {
 
 
 layers = {
-    "title": "Geoscience Australia Landsat Water Observations Collection 3",
+    "title": "DEA Water Observations (Landsat)",
     "name": "ga_ls_wo_3",
     "abstract": """
 DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.

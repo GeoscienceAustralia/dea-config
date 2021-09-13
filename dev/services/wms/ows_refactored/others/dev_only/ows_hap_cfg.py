@@ -23,7 +23,7 @@ layer = {
     "abstract": "",
     "layers": [
         {
-            "title": "Historical Airborne Photography (HAP)",
+            "title": "Historical Airborne Photography",
             "name": "historical_airborne_photography",
             "abstract": "Historical Airborne Photography",
             "product_name": "historical_airborne_photography",

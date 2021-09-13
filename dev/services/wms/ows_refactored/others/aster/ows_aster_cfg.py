@@ -53,7 +53,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
 """,
     "layers": [
         {
-            "title": "ASTER Geoscience Map of Australia (False Colour Mosaic)",
+            "title": "False Colour Mosaic",
             "name": "aster_false_colour",
             "abstract": abstract_aster_false_colour,
             "product_name": "aster_false_colour",
@@ -78,7 +78,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Regolith Ratios)",
+            "title": "Regolith Ratios",
             "name": "aster_regolith_ratios",
             "abstract": abstract_aster_regolith_ratios,
             "product_name": "aster_regolith_ratios",
@@ -102,7 +102,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (AlOH Group Composition)",
+            "title": "AlOH Group Composition",
             "name": "aster_aloh_group_composition",
             "abstract": abstract_aster_aloh_group_composition,
             "product_name": "aster_aloh_group_composition",
@@ -126,7 +126,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (AlOH Group Content)",
+            "title": "AlOH Group Content",
             "name": "aster_aloh_group_content",
             "abstract": abstract_aster_aloh_group_content,
             "product_name": "aster_aloh_group_content",
@@ -150,7 +150,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (FeOH Group Content)",
+            "title": "FeOH Group Content",
             "name": "aster_feoh_group_content",
             "abstract": abstract_aster_feoh_group_content,
             "product_name": "aster_feoh_group_content",
@@ -174,7 +174,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Ferric Oxide Composition)",
+            "title": "Ferric Oxide Composition",
             "name": "aster_ferric_oxide_composition",
             "abstract": abstract_aster_ferric_oxide_composition,
             "product_name": "aster_ferric_oxide_composition",
@@ -198,7 +198,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Ferric Oxide Content)",
+            "title": "Ferric Oxide Content",
             "name": "aster_ferric_oxide_content",
             "abstract": abstract_aster_ferric_oxide_content,
             "product_name": "aster_ferric_oxide_content",
@@ -222,7 +222,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Ferrous Iron Content in MgOH/Carbonate)",
+            "title": "Ferrous Iron Content in MgOH/Carbonate",
             "name": "aster_ferrous_iron_content_in_mgoh",
             "abstract": abstract_aster_ferrous_iron_content_in_mgoh,
             "product_name": "aster_ferrous_iron_content_in_mgoh",
@@ -246,7 +246,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Ferrous Iron Index)",
+            "title": "Ferrous Iron Index",
             "name": "aster_ferrous_iron_index",
             "abstract": abstract_aster_ferrous_iron_index,
             "product_name": "aster_ferrous_iron_index",
@@ -270,7 +270,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Green Vegetation Content)",
+            "title": "Green Vegetation Content",
             "name": "aster_green_vegetation",
             "abstract": abstract_aster_green_vegetation,
             "product_name": "aster_green_vegetation",
@@ -294,7 +294,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Gypsum Index)",
+            "title": "Gypsum Index",
             "name": "aster_gypsum_index",
             "abstract": abstract_aster_gypsum_index,
             "product_name": "aster_gypsum_index",
@@ -318,7 +318,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Kaolin Group Index)",
+            "title": "Kaolin Group Index",
             "name": "aster_kaolin_group_index",
             "abstract": abstract_aster_kaolin_group_index,
             "product_name": "aster_kaolin_group_index",
@@ -342,7 +342,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (MgOH Group Composition)",
+            "title": "MgOH Group Composition",
             "name": "aster_mgoh_group_composition",
             "abstract": abstract_aster_mgoh_group_composition,
             "product_name": "aster_mgoh_group_composition",
@@ -366,7 +366,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (MgOH Group Content)",
+            "title": "MgOH Group Content",
             "name": "aster_mgoh_group_content",
             "abstract": abstract_aster_mgoh_group_content,
             "product_name": "aster_mgoh_group_content",
@@ -390,7 +390,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (Opaque Index)",
+            "title": "Opaque Index",
             "name": "aster_opaque_index",
             "abstract": abstract_aster_opaque_index,
             "product_name": "aster_opaque_index",
@@ -414,7 +414,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (TIR Silica index)",
+            "title": "TIR Silica index",
             "name": "aster_silica_index",
             "abstract": abstract_aster_silica_index,
             "product_name": "aster_silica_index",
@@ -438,7 +438,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             },
         },
         {
-            "title": "ASTER Geoscience Map of Australia (TIR Quartz Index)",
+            "title": "TIR Quartz Index",
             "name": "aster_quartz_index",
             "abstract": abstract_aster_quartz_index,
             "product_name": "aster_quartz_index",

@@ -7,7 +7,11 @@ category_layers = {
             "abstract": "",
             "layers": [
                 {
-                    "include": "ows_refactored.sea_ocean_coast.intertidal.ows_extents_cfg.layers",
+                    "include": "ows_refactored.sea_ocean_coast.intertidal.ows_extents_cfg.item_v2_00_layer",
+                    "type": "python",
+                },
+                {
+                    "include": "ows_refactored.sea_ocean_coast.intertidal.ows_extents_cfg.item_v2_00_conf_layer",
                     "type": "python",
                 },
                 {
