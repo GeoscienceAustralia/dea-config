@@ -157,6 +157,10 @@ ows_cfg = {
             "type": "python",
         },
         {
+            "include": "ows_refactored.hazards.ows_category_root_cfg.category_layers",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.others.ows_category_root_cfg.category_layers",
             "type": "python",
         },

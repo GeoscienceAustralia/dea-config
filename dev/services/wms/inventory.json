@@ -1214,7 +1214,19 @@
                 "waterper",
                 "baregrad"
             ]
+        },
+        {
+            "product": [
+                "ga_s2_ba_provisional_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "ga_s2_dnbr_provisional_3",
+                "ga_s2_dnbrclasses_provisional_3",
+                "ga_s2_dbsi_provisional_3",
+                "ga_s2_ndvi_provisional_3"
+            ]
         }
     ],
-    "total_layers_count": 90
+    "total_layers_count": 91
 }
