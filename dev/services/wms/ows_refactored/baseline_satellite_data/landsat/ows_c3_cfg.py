@@ -1,4 +1,4 @@
-from ows_refactored.baseline_satellite_data.c3.style_c3_cfg import (
+from ows_refactored.baseline_satellite_data.landsat.style_c3_cfg import (
     styles_c3_ls_7, styles_c3_ls_8, styles_c3_ls_common)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15
 
@@ -30,13 +30,13 @@ bands_c3_ls_8.update(
 )
 
 layers = {
-    "title": "Geoscience Australia Landsat Collection 3",
+    "title": "Landsat satellite images",
     "abstract": """Collection 3 represents a consistent processing and upgrade to the Geoscience Australia's Landsat baseline and derivative products.
 
 For service status information, see https://status.dea.ga.gov.au""",
     "layers": [
         {
-            "title": "Geoscience Australia Landsat 8 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
+            "title": "DEA Surface Reflectance (Landsat 8 OLI-TIRS)",
             "abstract": """
 This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
@@ -88,7 +88,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_8},
         },
         {
-            "title": "Geoscience Australia Landsat 7 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
+            "title": "DEA Surface Reflectance (Landsat 7 ETM+)",
             "abstract": """
 This product takes Landsat 7 Enhanced Thematic Mapper Plus (ETM+) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
@@ -138,7 +138,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
         },
         {
-            "title": "Geoscience Australia Landsat 5 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
+            "title": "DEA Surface Reflectance (Landsat 5 TM)",
             "abstract": """
 This product takes Landsat 5 Thematic Mapper (TM) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
@@ -179,61 +179,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 {
                     "band": "land",
                     "product": "geodata_coast_100k",
-                    "ignore_time": True,
-                    "ignore_info_flags": []
-                },
-            ],
-            "wcs": {
-                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-            },
-            "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
-        },
-        {
-            "title": "Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain Collection 3",
-            "name": "ga_ls_ard_3",
-            "abstract": """
-This product takes Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
-
-This product combines:
-Landsat 8 imagery https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs,
-Landsat 7 imagery https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm and
-Landsat 5 Imagery https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
-
-For service status information, see https://status.dea.ga.gov.au""",
-            "multi_product": True,
-            "product_names": [
-                "ga_ls5t_ard_3",
-                "ga_ls7e_ard_3",
-                "ga_ls8c_ard_3",
-            ],
-            "bands": bands_c3_ls_common,
-            "resource_limits": reslim_wms_min_zoom_15,
-            "dynamic": True,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "flags": [
-                {
-                    "band": "oa_fmask",
-                    "products": [
-                        "ga_ls5t_ard_3",
-                        "ga_ls7e_ard_3",
-                        "ga_ls8c_ard_3",
-                    ],
-                    "ignore_time": False,
-                    "ignore_info_flags": [],
-                },
-                {
-                    "band": "land",
-                    "products": [
-                        "geodata_coast_100k",
-                        "geodata_coast_100k",
-                        "geodata_coast_100k",
-                    ],
                     "ignore_time": True,
                     "ignore_info_flags": []
                 },
@@ -348,10 +293,69 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
         },
+    ],
+}
+
+combined_layer = {
+    "title": "DEA Surface Reflectance (Landsat)",
+    "name": "ga_ls_ard_3",
+    "abstract": """
+This product takes Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+
+This product combines:
+Landsat 8 imagery https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs,
+Landsat 7 imagery https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm and
+Landsat 5 Imagery https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
+
+For service status information, see https://status.dea.ga.gov.au""",
+    "multi_product": True,
+    "product_names": [
+        "ga_ls5t_ard_3",
+        "ga_ls7e_ard_3",
+        "ga_ls8c_ard_3",
+    ],
+    "bands": bands_c3_ls_common,
+    "resource_limits": reslim_wms_min_zoom_15,
+    "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "flags": [
         {
-            "title": "DEA Surface Reflectance (Landsat) (provisional)",
-            "name": "ga_ls_ard_provisional_3",
-            "abstract": """Geoscience Australia Landsat Analysis Ready Data Provisional Collection 3
+            "band": "oa_fmask",
+            "products": [
+                "ga_ls5t_ard_3",
+                "ga_ls7e_ard_3",
+                "ga_ls8c_ard_3",
+            ],
+            "ignore_time": False,
+            "ignore_info_flags": [],
+        },
+        {
+            "band": "land",
+            "products": [
+                "geodata_coast_100k",
+                "geodata_coast_100k",
+                "geodata_coast_100k",
+            ],
+            "ignore_time": True,
+            "ignore_info_flags": []
+        },
+    ],
+    "wcs": {
+        "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+    },
+    "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
+}
+
+combined_provisional_layer = {
+    "title": "DEA Surface Reflectance (Landsat) Provisional - near real time",
+    "name": "ga_ls_ard_provisional_3",
+    "abstract": """Geoscience Australia Landsat Analysis Ready Data Provisional Collection 3
 
 This product takes Landsat 7 Enhanced Thematic Mapper Plus (ETM+) and Landsat 8 OLI-TIRS imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
@@ -370,45 +374,43 @@ https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-et
 https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs
 
 For service status information, see https://status.dea.ga.gov.au""",
-            "multi_product": True,
-            "product_names": [
+    "multi_product": True,
+    "product_names": [
+        "ga_ls7e_ard_provisional_3",
+        "ga_ls8c_ard_provisional_3",
+    ],
+    "bands": bands_c3_ls_common,
+    "resource_limits": reslim_wms_min_zoom_15,
+    "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "flags": [
+        {
+            "band": "oa_fmask",
+            "products": [
                 "ga_ls7e_ard_provisional_3",
                 "ga_ls8c_ard_provisional_3",
             ],
-            "bands": bands_c3_ls_common,
-            "resource_limits": reslim_wms_min_zoom_15,
-            "dynamic": True,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "flags": [
-                {
-                    "band": "oa_fmask",
-                    "products": [
-                        "ga_ls7e_ard_provisional_3",
-                        "ga_ls8c_ard_provisional_3",
-                    ],
-                    "ignore_time": False,
-                    "ignore_info_flags": [],
-                },
-                {
-                    "band": "land",
-                    "products": [
-                        "geodata_coast_100k",
-                        "geodata_coast_100k",
-                    ],
-                    "ignore_time": True,
-                    "ignore_info_flags": []
-                },
+            "ignore_time": False,
+            "ignore_info_flags": [],
+        },
+        {
+            "band": "land",
+            "products": [
+                "geodata_coast_100k",
+                "geodata_coast_100k",
             ],
-            "wcs": {
-                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-            },
-            "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
+            "ignore_time": True,
+            "ignore_info_flags": []
         },
     ],
+    "wcs": {
+        "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
+    },
+    "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
 }

@@ -161,7 +161,7 @@ style_c3_wofs_obs_wet_only = {
 }
 
 
-layers = {
+layer = {
     "title": "DEA Water Observations (Landsat)",
     "name": "ga_ls_wo_3",
     "abstract": """

@@ -166,8 +166,8 @@ style_fc_ngv_c3 = {
     "pq_masks": c3_fc_pq_mask,
 }
 
-layers = {
-    "title": "Geoscience Australia Landsat Fractional Cover Collection 3",
+layer = {
+    "title": "DEA Fractional Cover (Landsat)",
     "name": "ga_ls_fc_3",
     "abstract": """
 Fractional Cover (FC), developed by the Joint Remote Sensing Research Program, is a measurement that splits the landscape into three parts, or fractions:
