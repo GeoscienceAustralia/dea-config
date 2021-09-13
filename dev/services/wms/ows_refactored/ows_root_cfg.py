@@ -515,6 +515,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
+                    "include": "ows_refactored.burntarea.ows_provisional_ba_cfg.layers",
+                    "type": "python",
+                },
+                {
                     "title": "Geoscience Australia Collection 3",
                     "abstract": "Geoscience Australia Collection 3 represents the third reprocessing of Landsat and Sentinel-2 baseline and derivative products",
                     "layers": [
