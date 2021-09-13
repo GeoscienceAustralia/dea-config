@@ -1908,7 +1908,7 @@
                                     "name": "Landsat Path Row grid for Australia",
                                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_path_row_grid.geojson",
                                     "id": "F65w3t"
-                                }
+                                },
                                 {
                                     "type": "geojson",
                                     "name": "DEA Collection 3 Summary product grid",
