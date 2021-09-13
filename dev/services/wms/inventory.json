@@ -1221,10 +1221,10 @@
             ],
             "styles_count": 4,
             "styles_list": [
-                "style_dnbr",
-                "style_dnbr_classes",
-                "style_dbsi",
-                "style_dndvi"
+                "ga_s2_dnbr_provisional_3",
+                "ga_s2_dnbrclasses_provisional_3",
+                "ga_s2_dbsi_provisional_3",
+                "ga_s2_ndvi_provisional_3"
             ]
         }
     ],
