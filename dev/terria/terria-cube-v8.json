@@ -1917,7 +1917,7 @@
                                 },
                                 {
                                     "type": "geojson",
-                                    "name": "DEA Collection 2 Albers Tiles grid",
+                                    "name": "DEA Collection 2 Summary product grid",
                                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c2.geojson",
                                     "id": "KTKSdx",
                                     "shareKeys": [
