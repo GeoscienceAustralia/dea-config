@@ -1224,9 +1224,9 @@
                 "style_dnbr",
                 "style_dnbr_classes",
                 "style_dbsi",
-                "style_dndvi",
+                "style_dndvi"
             ]
-        },
+        }
     ],
     "total_layers_count": 91
 }
