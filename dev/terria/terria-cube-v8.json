@@ -1911,13 +1911,13 @@
                                 },
                                 {
                                     "type": "geojson",
-                                    "name": "DEA Collection 3 Summary product grid",
+                                    "name": "DEA Summary Product Grid (Collection 3)",
                                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3.geojson",
                                     "id": "GJY53s"
                                 },
                                 {
                                     "type": "geojson",
-                                    "name": "DEA Collection 2 Albers Tiles grid",
+                                    "name": "DEA Summary Product Grid (Collection 2)",
                                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c2.geojson",
                                     "id": "KTKSdx",
                                     "shareKeys": [
