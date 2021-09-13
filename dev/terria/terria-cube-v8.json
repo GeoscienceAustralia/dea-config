@@ -181,9 +181,9 @@
                                     "name": "DEA Surface Reflectance (Sentinel-2A MSI) Provisional - near real time",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "s2b_nrt_provisional_granule_nbar_t",
+                                    "layers": "s2a_nrt_provisional_granule_nbar_t",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2b_nrt_provisional_granule_nbar_t",
+                                    "linkedWcsCoverage": "s2a_nrt_provisional_granule_nbar_t",
                                     "chartColor": "white",
                                     "timeFilterPropertyName": "data_available_for_dates",
                                     "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
@@ -210,9 +210,9 @@
                                     "name": "DEA Surface Reflectance (Sentinel-2B MSI) Provisional - near real time",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "s2a_nrt_provisional_granule_nbar_t",
+                                    "layers": "s2b_nrt_provisional_granule_nbar_t",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2a_nrt_provisional_granule_nbar_t",
+                                    "linkedWcsCoverage": "s2b_nrt_provisional_granule_nbar_t",
                                     "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                                     "chartColor": "white",
                                     "timeFilterPropertyName": "data_available_for_dates",
@@ -1521,10 +1521,49 @@
                     ]
                 },
                 {
-                    "id": "23DS7g",
+                    "id": "SDj462",
                     "type": "group",
                     "name": "Other",
                     "members": [
+                        {
+                            "id": "23DS7g",
+                            "type": "group",
+                            "name": "Prototypes",
+                            "members": [
+                                {
+                                  "type": "wps",
+                                  "name": "Water Observations from Space Daily Pixel Drill",
+                                  "description": "Water Observations from Space Pixel Drill\n\nWater Observations from Space (WOfS) provides surface water observations derived from satellite imagery for all of Australia. The current product (Version 2.1.5) includes observations taken from 1986 to the present, from the Landsat 5, 7 and 8 satellites. WOfS covers all of mainland Australia and Tasmania but excludes off-shore Territories.\n\nThe WOfS product allows users to get a better understanding of where water is normally present in a landscape, where water is seldom observed, and where inundation has occurred occasionally.\n\nThis Pixel Drill will output the water observations for a point through time as graph.\n\nFor service status information, see https://status.dea.ga.gov.au",
+                                  "url": "https://ows.dev.dea.ga.gov.au/wps/",
+                                  "identifier": "WOfSDrill",
+                                  "id": "QiIrHA"
+                                },
+                                {
+                                  "type": "wps",
+                                  "name": "Fractional Cover Polygon Drill",
+                                  "description": "Fractional Cover Daily Observations Polygon Drill\n\nFractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover\n\nFractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.\n\nThis polygon drill uses Fractional Cover dervied from the Landsat 5, 7 and 8 satellites\n\nFor service status information, see https://status.dea.ga.gov.au",
+                                  "url": "https://ows.dev.dea.ga.gov.au/wps/",
+                                  "identifier": "FractionalCoverDrill",
+                                  "id": "c5wUmB"
+                                },
+                                {
+                                  "type": "wms",
+                                  "name": "GSKY Band Math Demo Landsat-8 RED",
+                                  "url": "https://gsky.nci.org.au/ows/dea",
+                                  "opacity": 1,
+                                  "layers": "landsat8_nbart_daily",
+                                  "parameters": {
+                                    "code": "nbart_red",
+                                    "colorscalerange": "0,3000",
+                                    "colorscheme": "rainbow"
+                                  },
+                                  "tileErrorHandlingOptions": {
+                                    "ignoreUnknownTileErrors": true
+                                  },
+                                  "id": "k1PYws"
+                                }
+                            ]
+                        },
                         {
                             "id": "hfd31s",
                             "type": "group",

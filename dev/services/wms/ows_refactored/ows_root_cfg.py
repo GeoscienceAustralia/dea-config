@@ -335,22 +335,6 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
                             "include": "ows_refactored.sentinel2.ows_nrt_cfg.s2a_layer",
                             "type": "python",
                         },
-                        {
-                            "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.multi_layers",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2b_layer",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2a_layer",
-                            "type": "python",
-                        },
-                        {
-                            "include": "ows_refactored.c3.ows_provisional_ard_cfg.layers",
-                            "type": "python",
-                        },
                     ],
                 },
                 {
@@ -535,14 +519,32 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
-                    "title": "Collection 3",
-                    "abstract": """
-
-                    """,
+                    "title": "Geoscience Australia Collection 3",
+                    "abstract": "Geoscience Australia Collection 3 represents the third reprocessing of Landsat and Sentinel-2 baseline and derivative products"
                     "layers": [
                         {
                             "include": "ows_refactored.c3.ows_c3_cfg.layers",
                             "type": "python",
+                        },
+                        {
+                            "title": "Geoscience Australia Sentinel-2 Collection 3",
+                            "abstract": """Collection 3 represents a consistent processing and upgrade to the Geoscience Australia's Sentinel-2 Multispectral Imager baseline and derivate product datasets.
+
+For service status information, see https://status.dea.ga.gov.au""",
+                            "layers": [
+                                {
+                                    "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.multi_layers",
+                                    "type": "python",
+                                },
+                                {
+                                    "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2b_layer",
+                                    "type": "python",
+                                },
+                                {
+                                    "include": "ows_refactored.sentinel2.ows_nrt_provisional_cfg.s2a_layer",
+                                    "type": "python",
+                                },
+                            ],
                         },
                         {
                             "include": "ows_refactored.wofs.ows_c3_wo_cfg.layers",

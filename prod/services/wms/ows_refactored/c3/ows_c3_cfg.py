@@ -30,12 +30,10 @@ bands_c3_ls_8.update(
 )
 
 layers = {
-    "title": "Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain Collection 3",
-    "abstract": """
-    This product takes Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+    "title": "Geoscience Australia Landsat Collection 3",
+    "abstract": """Collection 3 represents a consistent processing and upgrade to the Geoscience Australia's Landsat baseline and derivative products.
 
-For service status information, see https://status.dea.ga.gov.au
-    """,
+For service status information, see https://status.dea.ga.gov.au""",
     "layers": [
         {
             "title": "Geoscience Australia Landsat 8 Nadir BRDF Adjusted Reflectance Terrain Collection 3",
