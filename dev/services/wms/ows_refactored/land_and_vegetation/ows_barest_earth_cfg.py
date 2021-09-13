@@ -1,6 +1,6 @@
-from ows_refactored.baseline_satellite_data.surface_reflectance.band_ls_cfg import \
+from ows_refactored.baseline_satellite_data.landsat_annual.band_ls_cfg import \
     bands_s2_barest_earth
-from ows_refactored.baseline_satellite_data.surface_reflectance.style_ls_cfg import \
+from ows_refactored.baseline_satellite_data.landsat_annual.style_ls_cfg import \
     styles_s2_barest_earth_list
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 

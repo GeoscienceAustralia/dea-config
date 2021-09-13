@@ -19,3 +19,9 @@ bands_s2_barest_earth = {
     "s2be_swir_2": ["swir1", "swir_2", "shortwave_infrared_1", "near_shortwave_infrared"],
     "s2be_swir_3": ["swir2", "swir_3", "shortwave_infrared_2", "far_shortwave_infrared"],
 }
+
+bands_tmad = {
+    "sdev": [],
+    "edev": [],
+    "bcdev": [],
+}

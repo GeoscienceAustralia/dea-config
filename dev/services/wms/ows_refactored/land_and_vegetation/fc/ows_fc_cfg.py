@@ -10,35 +10,27 @@ For service status information, see https://status.dea.ga.gov.au
 """,
     "layers": [
         {
+            "include": "ows_refactored.land_and_vegetation.fc.ows_c3_fc_cfg.layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_annual_cfg.fcp_rgb_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_seasonal_cfg.fcp_seasonal_rgb_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_annual_cfg.fcp_annual_layers",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_seasonal_cfg.fcp_seasonal_layers",
+            "type": "python",
+        },
+        {  # c2 soon to be decommissioned
             "include": "ows_refactored.land_and_vegetation.fc.ows_fc_albers_cfg.layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_percentiles_cfg.fcp_g_layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_percentiles_cfg.fcp_ngv_layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_percentiles_cfg.fcp_bs_layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_percentiles_cfg.fcp_median_layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_percentiles_cfg.fcp_seasonal_layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.land_and_vegetation.fc.ows_fc_albers_cfg.layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.land_and_vegetation.fc.ows_c3_fc_cfg.layers",
             "type": "python",
         },
     ]

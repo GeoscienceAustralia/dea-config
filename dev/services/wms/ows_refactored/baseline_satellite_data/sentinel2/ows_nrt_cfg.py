@@ -4,9 +4,9 @@ from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
     styles_s2_list
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
-multi_layers = {
+combined_layer = {
+    "title": "DEA Surface Reflectance (Sentinel-2) - near real time",
     "name": "s2_nrt_granule_nbar_t",
-    "title": "Near Real-Time Surface Reflectance (Sentinel 2 (A and B combined))",
     "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
@@ -59,7 +59,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 s2b_layer = {
     "name": "s2b_nrt_granule_nbar_t",
-    "title": "Near Real-Time Surface Reflectance (Sentinel 2B)",
+    "title": "DEA Surface Reflectance (Sentinel-2B MSI) Provisional - near real time",
     "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
@@ -111,7 +111,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 s2a_layer = {
     "name": "s2a_nrt_granule_nbar_t",
-    "title": "Near Real-Time Surface Reflectance (Sentinel 2A)",
+    "title": "DEA Surface Reflectance (Sentinel-2A MSI) Provisional - near real time",
     "abstract": """
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
