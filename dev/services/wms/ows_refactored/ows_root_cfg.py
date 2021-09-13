@@ -531,6 +531,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "type": "python",
                 },
                 {
+                    "include": "ows_refactored.burntarea.ows_provisional_ba_cfg.layers",
+                    "type": "python",
+                },
+                {
                     "title": "Collection 3",
                     "abstract": """
 
