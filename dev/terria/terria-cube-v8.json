@@ -1899,6 +1899,12 @@
                             "members": [
                                 {
                                     "type": "geojson",
+                                    "name": "DEA Collection 3 Summary product grid",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/dea-summary-product-au-grid.geojson",
+                                    "id": "dfgd454"
+                                },
+                                {
+                                    "type": "geojson",
                                     "name": "DEA Albers Tiles grid",
                                     "url": "https://data.dea.ga.gov.au/geomedian-australia/v2.1.0/albers_grid.geojson",
                                     "id": "KTKSdx",
