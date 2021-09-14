@@ -33,11 +33,11 @@ style_dbsi = {
         },
     },
     "pq_masks": [
-    {
+        {
         "band": "land",
         "invert": True,
         "enum": 0,
-    }
+        }
     ],
     "range": [-1, 1],
     "mpl_ramp": "YlOrBr",
@@ -71,11 +71,11 @@ style_dndvi = {
         },
     },
     "pq_masks": [
-    {
+        {
         "band": "land",
         "invert": True,
         "enum": 0,
-    }
+        }
     ],
     "range": [-1, 1],
     "color_ramp": [
@@ -124,11 +124,11 @@ style_dnbr = {
         },
     },
     "pq_masks": [
-    {
+        {
         "band": "land",
         "invert": True,
         "enum": 0,
-    }
+        }
     ],
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
@@ -164,13 +164,12 @@ style_dnbr_classes = {
             "band": "delta_bsi",
         },
     },
-    },
-    "pq_masks": [
-    {
+    "pq_masks": [ 
+        {
         "band": "land",
         "invert": True,
         "enum": 0,
-    }
+        }
     ],
     "range": [-1, 1],
     "color_ramp": [
@@ -197,12 +196,13 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [10.0, 10.0],
             "flags": [
-             {
+                {
             "band": "land",
             "product": "geodata_coast_100k",
             "ignore_time": True,
             "ignore_info_flags": [],
-             },
+                },
+            ],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
