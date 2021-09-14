@@ -33,8 +33,7 @@ style_dbsi = {
         },
     },
     "pq_masks": [
-        {
-        "band": "land",
+        {"band": "land",
         "invert": True,
         "enum": 0,
         }
@@ -71,8 +70,7 @@ style_dndvi = {
         },
     },
     "pq_masks": [
-        {
-        "band": "land",
+        {"band": "land",
         "invert": True,
         "enum": 0,
         }
@@ -124,8 +122,7 @@ style_dnbr = {
         },
     },
     "pq_masks": [
-        {
-        "band": "land",
+        {"band": "land",
         "invert": True,
         "enum": 0,
         }
@@ -164,9 +161,8 @@ style_dnbr_classes = {
             "band": "delta_bsi",
         },
     },
-    "pq_masks": [ 
-        {
-        "band": "land",
+    "pq_masks": [
+        {"band": "land",
         "invert": True,
         "enum": 0,
         }
