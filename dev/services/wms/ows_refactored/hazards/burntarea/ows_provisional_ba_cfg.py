@@ -33,10 +33,11 @@ style_dbsi = {
         },
     },
     "pq_masks": [
-        {"band": "land",
-        "invert": True,
-        "enum": 0,
-            }
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
     ],
     "range": [-1, 1],
     "mpl_ramp": "YlOrBr",
@@ -70,9 +71,10 @@ style_dndvi = {
         },
     },
     "pq_masks": [
-        {"band": "land",
-        "invert": True,
-        "enum": 0,
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
         }
     ],
     "range": [-1, 1],
@@ -122,9 +124,10 @@ style_dnbr = {
         },
     },
     "pq_masks": [
-        {"band": "land",
-        "invert": True,
-        "enum": 0,
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
         }
     ],
     "range": [-1, 1],
@@ -162,9 +165,10 @@ style_dnbr_classes = {
         },
     },
     "pq_masks": [
-        {"band": "land",
-        "invert": True,
-        "enum": 0,
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
         }
     ],
     "range": [-1, 1],
@@ -193,10 +197,10 @@ layers = {
             "native_resolution": [10.0, 10.0],
             "flags": [
                 {
-            "band": "land",
-            "product": "geodata_coast_100k",
-            "ignore_time": True,
-            "ignore_info_flags": [],
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": [],
                 },
             ],
             "image_processing": {
