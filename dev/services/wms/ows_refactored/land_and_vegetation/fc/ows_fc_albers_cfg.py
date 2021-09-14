@@ -18,7 +18,7 @@ fc_albers_flags = [
 ]
 
 layers = {
-    "title": "",
+    "title": "fc albers collection 2",
     "abstract": "",
     "layers": [
         {

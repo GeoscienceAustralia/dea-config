@@ -1,6 +1,6 @@
-from ows_refactored.baseline_satellite_data.surface_reflectance.band_ls_cfg import \
+from ows_refactored.baseline_satellite_data.landsat_annual.band_ls_cfg import \
     bands_ls
-from ows_refactored.baseline_satellite_data.surface_reflectance.style_ls_cfg import \
+from ows_refactored.baseline_satellite_data.landsat_annual.style_ls_cfg import \
     styles_tide_list
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
@@ -19,7 +19,7 @@ tailored to ensure dynamic coastal features are captured whilst still allowing a
 free composite to be generated. The concepts of the Observed Tidal Range (OTR),
 and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al.
 (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016).
-            """,
+    """,
     "layers": [
         {
             "title": "DEA High Tide Imagery",

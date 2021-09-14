@@ -1,5 +1,7 @@
-from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
-from ows_refactored.ows_legend_cfg import legend_idx_percentage_by_20
+from ows_refactored.inland_water.wofs.bands_wo_cfg import (bands_wofs_filt_sum,
+                                                           bands_wofs_sum)
+from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
+                                           legend_idx_percentage_by_25)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 style_wofs_count_wet = {
@@ -167,13 +169,266 @@ style_wofs_frequency_blue = {
     "legend": legend_idx_percentage_by_20,
 }
 
+style_wofs_filt_freq = {
+    "name": "WOfS_filtered_frequency",
+    "title": "Filtered Water Summary",
+    "abstract": "WOfS filtered summary showing the frequency of Wetness",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "wofs_filtered_summary",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["wofs_filtered_summary"],
+    "color_ramp": [
+        {"value": 0.0, "color": "#000000", "alpha": 0.0},
+        {"value": 0.002, "color": "#000000", "alpha": 0.0},
+        {"value": 0.005, "color": "#8e0101", "alpha": 0.25},
+        {"value": 0.01, "color": "#cf2200", "alpha": 0.75},
+        {"value": 0.02, "color": "#e38400"},
+        {"value": 0.05, "color": "#e3df00"},
+        {"value": 0.1, "color": "#a6e300"},
+        {"value": 0.2, "color": "#62e300"},
+        {"value": 0.3, "color": "#00e32d"},
+        {"value": 0.4, "color": "#00e384"},
+        {"value": 0.5, "color": "#00e3c8"},
+        {"value": 0.6, "color": "#00c5e3"},
+        {"value": 0.7, "color": "#0097e3"},
+        {"value": 0.8, "color": "#005fe3"},
+        {"value": 0.9, "color": "#000fe3"},
+        {"value": 1.0, "color": "#5700e3"},
+    ],
+    "legend": {
+        "url": "https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/wofs_full_summary_legend.png",
+    },
+}
+
+style_wofs_filt_freq_blue = {
+    "name": "WOfS_filtered_frequency_blues_transparent",
+    "title": "Water Summary (Blue)",
+    "abstract": "WOfS filtered summary showing the frequency of Wetness",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "wofs_filtered_summary",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["wofs_filtered_summary"],
+    "color_ramp": [
+        {
+            "value": 0.0,
+            "color": "#ffffff",
+            "alpha": 0.0,
+        },
+        {
+            "value": 0.001,
+            "color": "#d5fef9",
+            "alpha": 0.0,
+        },
+        {
+            "value": 0.02,
+            "color": "#d5fef9",
+        },
+        {"value": 0.2, "color": "#71e3ff"},
+        {"value": 0.4, "color": "#01ccff"},
+        {"value": 0.6, "color": "#0178ff"},
+        {"value": 0.8, "color": "#2701ff"},
+        {"value": 1.0, "color": "#5700e3"},
+    ],
+    "legend": legend_idx_percentage_by_20,
+}
+
+style_wofs_confidence = {
+    "name": "wofs_confidence",
+    "title": "Confidence",
+    "abstract": "WOfS Confidence",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "confidence",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["confidence"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#000000",
+        },
+        {"value": 0.01, "color": "#000000"},
+        {"value": 0.02, "color": "#990000"},
+        {"value": 0.05, "color": "#CF2200"},
+        {"value": 0.1, "color": "#E38400"},
+        {"value": 0.25, "color": "#E3DF00"},
+        {"value": 0.5, "color": "#A6E300"},
+        {"value": 0.75, "color": "#62E300"},
+        {"value": 1.0, "color": "#00E32D"},
+    ],
+    "legend": legend_idx_percentage_by_25,
+}
+
+
+style_wofs_obs = {
+    "name": "observations",
+    "title": "Observations",
+    "abstract": "Observations",
+    "value_map": {
+        "water": [
+            {
+                # Make noncontiguous data transparent
+                "title": "",
+                "abstract": "",
+                "flags": {"noncontiguous": True},
+                "alpha": 0.0,
+                "color": "#ffffff",
+            },
+            {
+                # Make sea and sea glint transparent
+                "title": "",
+                "abstract": "",
+                "flags": {"sea": True},
+                "alpha": 0.0,
+                "color": "#4f81bd",
+            },
+            {
+                "title": "Cloudy Steep Terrain",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "high_slope": True,
+                        "cloud": True
+                    }
+                },
+                "color": "#f2dcb4",
+            },
+            {
+                "title": "Cloudy Water",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "cloud": True
+                    }
+                },
+                "color": "#bad4f2",
+            },
+            {
+                "title": "Shaded Water",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "cloud_shadow": True
+                    }
+                },
+                "color": "#335277",
+            },
+            {
+                "title": "Cloud",
+                "abstract": "",
+                "flags": {"cloud": True},
+                "color": "#c2c1c0",
+            },
+            {
+                "title": "Cloud Shadow",
+                "abstract": "",
+                "flags": {"cloud_shadow": True},
+                "color": "#4b4b37",
+            },
+            {
+                "title": "Terrain Shadow or Low Sun Angle",
+                "abstract": "",
+                "flags": {"terrain_or_low_angle": True},
+                "color": "#2f2922",
+            },
+            {
+                "title": "Steep Terrain",
+                "abstract": "",
+                "flags": {"high_slope": True},
+                "color": "#776857",
+            },
+            {
+                "title": "Water",
+                "abstract": "",
+                "flags": {
+                    "and": {
+                        "wet": True,
+                        "sea": False
+                    }
+                },
+                "color": "#4f81bd",
+            },
+            {
+                "title": "Dry",
+                "abstract": "",
+                "flags": {"and": {"dry": True, "sea": False}},
+                "color": "#96966e",
+            },
+        ]
+    },
+    "legend": {"width": 3.0, "height": 2.1},
+}
+
+style_wofs_obs_wet_only = {
+    "name": "wet",
+    "title": "Wet Only",
+    "abstract": "Wet Only",
+    "value_map": {
+        "water": [
+            {
+                "title": "Invalid",
+                "abstract": "Slope or Cloud",
+                "flags": {
+                    "or": {
+                        "terrain_or_low_angle": True,
+                        "cloud_shadow": True,
+                        "cloud": True,
+                        "high_slope": True,
+                        "noncontiguous": True,
+                    }
+                },
+                "color": "#707070",
+                "alpha": 0.0,
+            },
+            {
+                # Possible Sea Glint, also mark as invalid
+                "title": "",
+                "abstract": "",
+                "flags": {"dry": True, "sea": True},
+                "color": "#707070",
+                "alpha": 0.0,
+            },
+            {
+                "title": "Dry",
+                "abstract": "Dry",
+                "flags": {
+                    "dry": True,
+                    "sea": False,
+                },
+                "color": "#D99694",
+                "alpha": 0.0,
+            },
+            {
+                "title": "Wet",
+                "abstract": "Wet or Sea",
+                "flags": {"or": {"wet": True, "sea": True}},
+                "color": "#4F81BD",
+            },
+        ]
+    },
+}
 
 layers = {
-    "title": "Water Observations from Space All of time Summary Statistics",
+    "title": "All water observations combined source data",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "Water Observations from Space 25m Wet Count (WOfS Statistics)",
+            "title": "All wet observations",
             "name": "wofs_summary_wet",
             "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -207,7 +462,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "Water Observations from Space 25m Clear Count (WOfS Statistics)",
+            "title": "All clear observations",
             "name": "wofs_summary_clear",
             "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -241,8 +496,8 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "Water Observations from Space 25m Water Summary (WOfS Statistics)	",
-            "name": "Water Observations from Space Statistics",
+            "title": "Unfiltered summary of all water observations",
+            "name": "Water Observations from Space Statistics",  # TODO: add underscore to link the name
             "abstract": """
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary).
 
@@ -275,5 +530,59 @@ For service status information, see https://status.dea.ga.gov.au
                 ],
             },
         },
+        {
+            "title": "Water observations confidence",
+            "name": "wofs_filtered_summary_confidence",
+            "abstract": """
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green. The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. For more information please see: https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
+""",
+            "product_name": "wofs_filtered_summary",
+            "bands": bands_wofs_filt_sum,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "default_bands": ["confidence"],
+            },
+            "styling": {
+                "default_style": "wofs_confidence",
+                "styles": [
+                    style_wofs_confidence,
+                ],
+            },
+        },
     ],
+}
+
+statistics_layer = {
+    "title": "Water Observations from Space 25m Filtered Water Summary (WOfS Filtered Statistics)",
+    "name": "wofs_filtered_summary",
+    "abstract": """
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level. No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf For service status information, see https://status.dea.ga.gov.au
+""",
+    "product_name": "wofs_filtered_summary",
+    "bands": bands_wofs_filt_sum,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "wcs": {
+        "default_bands": ["wofs_filtered_summary"],
+    },
+    "styling": {
+        "default_style": "WOfS_filtered_frequency",
+        "styles": [
+            style_wofs_filt_freq,
+            style_wofs_filt_freq_blue,
+        ],
+    },
 }

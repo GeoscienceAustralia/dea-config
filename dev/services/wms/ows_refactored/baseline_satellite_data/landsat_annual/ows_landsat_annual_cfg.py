@@ -1,154 +1,108 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15
-
-bands_tmad = {
-    "sdev": [],
-    "edev": [],
-    "bcdev": [],
-}
-
-style_tmad_sdev_std = {
-    "name": "arcsec_sdev",
-    "title": "SMAD",
-    "abstract": "Good for cropland and forest",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_arcsec",
-        "mapped_bands": True,
-        "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
-    },
-    "needed_bands": ["sdev"],
-    "mpl_ramp": "coolwarm",
-    "range": [0.0, 4.0],
-    "legend": {
-        "start": "0.0",
-        "end": "4.0",
-        "ticks": ["0.0", "4.0"],
-        "tick_labels": {
-            "0.0": {"label": "Low\ntmad"},
-            "4.0": {"label": "High\ntmad"},
-        },
-    },
-}
-
-style_tmad_edev_std = {
-    "name": "log_edev",
-    "title": "EMAD",
-    "abstract": "Good for cropland and forest",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_offset_log",
-        "mapped_bands": True,
-        "kwargs": {"band": "edev", "scale_from": [0.025, 0.1], "scale_to": [0.0, 4.0]},
-    },
-    "needed_bands": ["edev"],
-    "mpl_ramp": "coolwarm",
-    "range": [0.0, 4.0],
-    "legend": {
-        "start": "0.0",
-        "end": "4.0",
-        "ticks": ["0.0", "4.0"],
-        "tick_labels": {
-            "0.0": {"label": "Low\ntmad"},
-            "4.0": {"label": "High\ntmad"},
-        },
-    },
-}
-
-
-style_tmad_bcdev_std = {
-    "name": "log_bcdev",
-    "title": "BCMAD",
-    "abstract": "Good for cropland and forest",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band_offset_log",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "bcdev",
-            "scale_from": [0.025, 0.13],
-            "scale_to": [0.0, 4.0],
-        },
-    },
-    "needed_bands": ["bcdev"],
-    "mpl_ramp": "coolwarm",
-    "range": [0.0, 4.0],
-    "legend": {
-        "start": "0.0",
-        "end": "4.0",
-        "ticks": ["0.0", "4.0"],
-        "tick_labels": {
-            "0.0": {"label": "Low\ntmad"},
-            "4.0": {"label": "High\ntmad"},
-        },
-    },
-}
-
-style_tmad_rgb_std = {
-    "name": "tmad_rgb_std",
-    "title": "TMAD multi-band false-colour (standard)",
-    "abstract": "Good for cropland and forest",
-    "components": {
-        "red": {
-            "function": "datacube_ows.band_utils.single_band_arcsec",
-            "mapped_bands": True,
-            "kwargs": {
-                "band": "sdev",
-                "scale_from": [0.017, 0.15],
-            },
-        },
-        "green": {
-            "function": "datacube_ows.band_utils.single_band_offset_log",
-            "mapped_bands": True,
-            "kwargs": {
-                "band": "edev",
-                "scale_from": [0.025, 0.1],
-            },
-        },
-        "blue": {
-            "function": "datacube_ows.band_utils.single_band_offset_log",
-            "mapped_bands": True,
-            "kwargs": {
-                "band": "bcdev",
-                "scale_from": [0.025, 0.13],
-            },
-        },
-    },
-    "additional_bands": ["sdev", "bcdev", "edev"],
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/tmad-annual/geomad.png",
-    },
-}
-
-style_tmad_rgb_sens = {
-    "inherits": style_tmad_rgb_std,
-    "name": "tmad_rgb_sens",
-    "title": "TMAD multi-band false-colour (sensitive)",
-    "abstract": "Good for arid land and desert",
-    "components": {
-        "red": {
-            "kwargs": {
-                "scale_from": [0.0005, 0.11],
-            }
-        },
-        "green": {
-            "kwargs": {
-                "scale_from": [0.010, 0.09],
-            }
-        },
-        "blue": {
-            "kwargs": {
-                "scale_from": [0.011, 0.07],
-            }
-        },
-    },
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/tmad-annual/geomad.png",
-    },
-}
+from ows_refactored.baseline_satellite_data.landsat_annual.band_ls_cfg import (
+    bands_ls, bands_tmad)
+from ows_refactored.baseline_satellite_data.landsat_annual.style_ls_cfg import (
+    styles_ls_list, styles_tmad_list)
+from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15,
+                                           reslim_wms_min_zoom_35)
 
 layers = {
-    "title": "Surface Reflectance Triple Median Absolute Deviation",
-    "abstract": "Surface Reflectance Triple Median Absolute Deviation 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)",
+    "title": "Landsat satellite images - annual",
+    "abstract": "",
     "layers": [
+        {
+            "title": "DEA Surface Reflectance Geomedian (Landsat 8 OLI-TIRS)",
+            "name": "ls8_nbart_geomedian_annual",
+            "abstract": """
+Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
+as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
+mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
+image is the statistical median of all observations for that pixel from a calendar year.
+Annual mosaics are available for the following years:
+
+Landsat 8: 2013 to 2017;
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+
+For service status information, see https://status.dea.ga.gov.au
+                    """,
+            "product_name": "ls8_nbart_geomedian_annual",
+            "bands": bands_ls,
+            # "time_resolution": 'year',
+            "resource_limits": reslim_wms_min_zoom_35,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "default_bands": ["red", "green", "blue"],
+            },
+            "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
+        },
+        {
+            "title": "DEA Surface Reflectance Geomedian (Landsat 7 ETM+)",
+            "name": "ls7_nbart_geomedian_annual",
+            "abstract": """
+Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
+as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
+mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
+image is the statistical median of all observations for that pixel from a calendar year.
+Annual mosaics are available for the following years:
+
+Landsat 7: 2000 to 2017;
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+
+For service status information, see https://status.dea.ga.gov.au
+            """,
+            "product_name": "ls7_nbart_geomedian_annual",
+            "bands": bands_ls,
+            "resource_limits": reslim_wms_min_zoom_35,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "default_bands": ["red", "green", "blue"],
+            },
+            "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
+        },
+        {
+            "title": "DEA Surface Reflectance Geomedian (Landsat 5 TM)",
+            "name": "ls5_nbart_geomedian_annual",
+            "abstract": """
+Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
+as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
+mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
+image is the statistical median of all observations for that pixel from a calendar year.
+Annual mosaics are available for the following years:
+
+Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011;
+
+For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+
+For service status information, see https://status.dea.ga.gov.au
+                    """,
+            "product_name": "ls5_nbart_geomedian_annual",
+            "bands": bands_ls,
+            "resource_limits": reslim_wms_min_zoom_35,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "wcs": {
+                "default_bands": ["red", "green", "blue"],
+            },
+            "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
+        },
         {
             "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
             "abstract": """
@@ -181,13 +135,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             "styling": {
                 "default_style": "arcsec_sdev",
-                "styles": [
-                    style_tmad_sdev_std,
-                    style_tmad_edev_std,
-                    style_tmad_bcdev_std,
-                    style_tmad_rgb_std,
-                    style_tmad_rgb_sens,
-                ],
+                "styles": styles_tmad_list,
             },
         },
         {
@@ -222,13 +170,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             "styling": {
                 "default_style": "arcsec_sdev",
-                "styles": [
-                    style_tmad_sdev_std,
-                    style_tmad_edev_std,
-                    style_tmad_bcdev_std,
-                    style_tmad_rgb_std,
-                    style_tmad_rgb_sens,
-                ],
+                "styles": styles_tmad_list,
             },
         },
         {
@@ -263,13 +205,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
             "styling": {
                 "default_style": "arcsec_sdev",
-                "styles": [
-                    style_tmad_sdev_std,
-                    style_tmad_edev_std,
-                    style_tmad_bcdev_std,
-                    style_tmad_rgb_std,
-                    style_tmad_rgb_sens,
-                ],
+                "styles": styles_tmad_list,
             },
         },
     ],
