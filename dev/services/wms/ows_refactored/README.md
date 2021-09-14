@@ -3,16 +3,25 @@ Goal: Split mega single file ows_cfg.py into multiple manageable/maintainable co
 
 ## Structure
 ### root config
-This file will act as an assembler which include all the layers required for the ows service. `ows_root_cfg.py`
+This file will act as an assembler which include all the categories required for the ows service. `ows_root_cfg.py`, this file lists all 6 categories.
 
-### Resuable
-- legend definition
-- resource limit definition
-- custom functions
+#### Resuable parts shared across all categories
+- legend definition `ows_legend_cfg.py`
+- resource limit definition `ows_reslim_cfg.py`
+- custom functions `ows_util_tools.py`
 
-### Layers Groups
-##### dev_only
-For products that are not to be released to Prod or pending decision for approval to deploy to Production.
+### Categories
+There are 6 categories each contain `ows_category_root_cfg.py`, the 6 categories are:
+
+- `baseline_satellite_data`
+- `hazards`
+- `inland_water`
+- `land_and_vegetation`
+- `others`
+- `sea_ocean_coast`
+
+### layers
+Each layer within its category needs to be included in its categories `ows_category_root_cfg.py` file.
 
 ### Best practices
 #### individual style
