@@ -71,7 +71,13 @@ layers = {
         {
             "title": "DEA Wetness Percentiles (Landsat)",
             "name": "ga_ls_tcw_percentiles_2",
-            "abstract": """
+            "abstract": """Tasseled Cap Wetness Percentiles 25m 2.0.0
+The Tasseled Cap Wetness Percentiles provide a multi-decadal summary of landscape wetness that can be used to identify wetlands and groundwater ecosystems. 
+
+They provide statistical summaries (10th, 50th and 90th percentiles) of the Tasseled Cap wetness index from 1987 to 2017. 
+
+They are intended for use as inputs into classification algorithms to identify potential wetlands and groundwater dependent ecosystems, and characterise salt flats, clay pans, salt lakes and coastal land forms. 
+
 Geoscience Australia Landsat Collection 2 Tasseled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577).
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Areas that are partially covered in water, or where water is mixed with vegetation when viewed from above, provide habitat for a wide range of aquatic organisms.
@@ -92,6 +98,7 @@ In terms of limitations, caution should be used, especially with the Tasseled Ca
 One of the limitations of using the Tasseled Cap wetness index is that it will identify all 'wet' things, including potential wetlands, groundwater dependent ecosystems, irrigated crops/pasture, man-made water storages and sewerage treatment, and does not discriminate between these. As such it should be used in conjunction with other contextual data to ensure that features identified using the Tasseled Cap Wetness Percentiles are features of interest rather than false positives.
 We used the Tasseled Cap transforms described in Crist et al. (1985).
 Crist, E. P. (1985). A TM Tasseled Cap equivalent transformation for reflectance factor data. Remote Sensing of Environment, 17(3), 301–306. https://doi.org/10.1016/0034-4257(85)90102-6
+https://cmi.ga.gov.au/data-products/dea/337/dea-wetness-percentiles-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_tcw_percentiles_2",
             "bands": bands_tcw_percentile,
