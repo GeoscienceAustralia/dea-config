@@ -72,11 +72,11 @@ layers = {
             "title": "DEA Wetness Percentiles (Landsat)",
             "name": "ga_ls_tcw_percentiles_2",
             "abstract": """Tasseled Cap Wetness Percentiles 25m 2.0.0
-The Tasseled Cap Wetness Percentiles provide a multi-decadal summary of landscape wetness that can be used to identify wetlands and groundwater ecosystems. 
+The Tasseled Cap Wetness Percentiles provide a multi-decadal summary of landscape wetness that can be used to identify wetlands and groundwater ecosystems.
 
-They provide statistical summaries (10th, 50th and 90th percentiles) of the Tasseled Cap wetness index from 1987 to 2017. 
+They provide statistical summaries (10th, 50th and 90th percentiles) of the Tasseled Cap wetness index from 1987 to 2017.
 
-They are intended for use as inputs into classification algorithms to identify potential wetlands and groundwater dependent ecosystems, and characterise salt flats, clay pans, salt lakes and coastal land forms. 
+They are intended for use as inputs into classification algorithms to identify potential wetlands and groundwater dependent ecosystems, and characterise salt flats, clay pans, salt lakes and coastal land forms.
 
 Geoscience Australia Landsat Collection 2 Tasseled Cap Wetness Percentiles 1986-2018, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577).
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
