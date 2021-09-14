@@ -19,10 +19,11 @@ category_layers = {
             "title": "Barest Earth",
             "abstract": "",
             "layers": [
-                {
-                    "include": "ows_refactored.land_and_vegetation.ows_barest_earth_cfg.layers",
-                    "type": "python",
-                },
+                # TODO: add barest earth when its ready
+                # {
+                #     "include": "ows_refactored.land_and_vegetation.ows_barest_earth_cfg.layers",
+                #     "type": "python",
+                # },
                 {
                     "include": "ows_refactored.land_and_vegetation.ows_nd_cfg.ls8_be_layers",
                     "type": "python",
