@@ -6,7 +6,7 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 layer = {
     "title": "DEA Fractional Cover (Landsat)",
     "name": "ga_ls_fc_3",
-    "abstract": """
+    "abstract": """Geoscience Australia Landsat Fractional Cover Collection 3
 Fractional Cover (FC), developed by the Joint Remote Sensing Research Program, is a measurement that splits the landscape into three parts, or fractions:
 
 green (leaves, grass, and growing crops)

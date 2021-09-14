@@ -12,7 +12,10 @@ layers = {
         {
             "title": "DEA Surface Reflectance Geomedian (Landsat 8 OLI-TIRS)",
             "name": "ls8_nbart_geomedian_annual",
-            "abstract": """
+            "abstract": """Surface Reflectance 25m Geomedian 2.0.0 (Landsat 8 OLI-TIRS)
+The surface reflectance geomedian product provides an average cloud-free image over the given time period. The geomedian image is calculated with a multi-dimensional median, using all the spectral measurements from the satellite imagery at the same time in order to maintain the relationships among the measurements.
+As of version 2.0.0, the geometric median products are available as annual datasets, each created from one calendar year of earth observation data from a single satellite.
+
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
 as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
 mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
@@ -22,6 +25,7 @@ Annual mosaics are available for the following years:
 Landsat 8: 2013 to 2017;
 
 For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+https://cmi.ga.gov.au/data-products/dea/140/dea-surface-reflectance-geomedian-landsat
 
 For service status information, see https://status.dea.ga.gov.au
                     """,
@@ -44,7 +48,11 @@ For service status information, see https://status.dea.ga.gov.au
         {
             "title": "DEA Surface Reflectance Geomedian (Landsat 7 ETM+)",
             "name": "ls7_nbart_geomedian_annual",
-            "abstract": """
+            "abstract": """Surface Reflectance 25m Geomedian 2.0.0 (Landsat 7 ETM+)
+The surface reflectance geomedian product provides an average cloud-free image over the given time period. The geomedian image is calculated with a multi-dimensional median, using all the spectral measurements from the satellite imagery at the same time in order to maintain the relationships among the measurements.
+
+As of version 2.0.0, the geometric median products are available as annual datasets, each created from one calendar year of earth observation data from a single satellite.
+
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
 as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
 mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
@@ -54,6 +62,7 @@ Annual mosaics are available for the following years:
 Landsat 7: 2000 to 2017;
 
 For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
+https://cmi.ga.gov.au/data-products/dea/140/dea-surface-reflectance-geomedian-landsat
 
 For service status information, see https://status.dea.ga.gov.au
             """,
@@ -75,7 +84,11 @@ For service status information, see https://status.dea.ga.gov.au
         {
             "title": "DEA Surface Reflectance Geomedian (Landsat 5 TM)",
             "name": "ls5_nbart_geomedian_annual",
-            "abstract": """
+            "abstract": """Surface Reflectance 25m Geomedian 2.0.0 (Landsat 5 TM)
+The surface reflectance geomedian product provides an average cloud-free image over the given time period. The geomedian image is calculated with a multi-dimensional median, using all the spectral measurements from the satellite imagery at the same time in order to maintain the relationships among the measurements.
+
+As of version 2.0.0, the geometric median products are available as annual datasets, each created from one calendar year of earth observation data from a single satellite.
+
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed
 as a shaded region. The surface reflectance geometric median (geomedian) is a pixel composite
 mosaic of a time series of earth observations. The value of a pixel in a an annual geomedian
@@ -85,7 +98,7 @@ Annual mosaics are available for the following years:
 Landsat 5: 1988 to 1999, 2004 to 2007, 2009 to 2011;
 
 For more information, see http://pid.geoscience.gov.au/dataset/ga/120374
-
+https://cmi.ga.gov.au/data-products/dea/140/dea-surface-reflectance-geomedian-landsat
 For service status information, see https://status.dea.ga.gov.au
                     """,
             "product_name": "ls5_nbart_geomedian_annual",
@@ -104,8 +117,8 @@ For service status information, see https://status.dea.ga.gov.au
             "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
         },
         {
-            "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 8 Annual Surface Reflectance TMAD)",
-            "abstract": """
+            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 8 OLI-TIRS)",
+            "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 8 OLI-TIRS)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
 multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
@@ -116,6 +129,7 @@ product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 
 terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
 median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+https://cmi.ga.gov.au/data-products/dea/346/dea-surface-reflectance-median-absolute-deviation-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
             "name": "ls8_nbart_tmad_annual",
@@ -139,8 +153,8 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         },
         {
-            "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 7 Annual Surface Reflectance TMAD)",
-            "abstract": """
+            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 7 ETM+)",
+            "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 7 ETM+)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
 multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
@@ -151,6 +165,7 @@ product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 
 terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
 median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+https://cmi.ga.gov.au/data-products/dea/346/dea-surface-reflectance-median-absolute-deviation-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
             "name": "ls7_nbart_tmad_annual",
@@ -174,8 +189,8 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         },
         {
-            "title": "Surface Reflectance Triple Median Absolute Deviation (Landsat 5 Annual Surface Reflectance TMAD)",
-            "abstract": """
+            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 5 TM)",
+            "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 5 TM)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
 multidimensional median of the time series. The median used for this calculation is the geometric median corresponding
@@ -186,6 +201,7 @@ product, TMADs are computed per calendar year, per sensor (Landsat 5, Landsat 7 
 terrain-illumination-corrected surface reflectance data (Analysis Ready Data), compared to the annual geometric
 median of that data.
 For more information, see http://pid.geoscience.gov.au/dataset/ga/130482
+https://cmi.ga.gov.au/data-products/dea/346/dea-surface-reflectance-median-absolute-deviation-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
             "name": "ls5_nbart_tmad_annual",
