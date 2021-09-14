@@ -2648,10 +2648,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "dateFormat": {
-                                        "currentTime": "'Year: 'yyyy",
-                                        "timelineTic": "yyyy"
-                                    },
+                                    "dateFormat": "'Year: 'yyyy",
                                     "id": "hAUsXi",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 8 satellite images"
@@ -2902,10 +2899,7 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": {
-                                                "currentTime": "'Year: 'yyyy",
-                                                "timelineTic": "yyyy"
-                                            },
+                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "uFlnzu",
                                             "shareKeys": [
                                                 "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
@@ -3233,10 +3227,7 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": {
-                                                "currentTime": "'Year: 'yyyy",
-                                                "timelineTic": "yyyy"
-                                            },
+                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "iknUf8",
                                             "shareKeys": [
                                                 "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March wet observations"
