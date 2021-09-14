@@ -36,7 +36,7 @@ style_dbsi = {
         {"band": "land",
         "invert": True,
         "enum": 0,
-        }
+            }
     ],
     "range": [-1, 1],
     "mpl_ramp": "YlOrBr",
