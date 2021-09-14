@@ -4,7 +4,7 @@ from ows_refactored.inland_water.wofs.ows_wofs_summary_cfg import (
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 layer = {
-    "title": "WOfS Albers (collection2)",
+    "title": "DEA Water Observations (Landsat, Collection 2)",
     "abstract": "WOfS",
     "layers": [
         {

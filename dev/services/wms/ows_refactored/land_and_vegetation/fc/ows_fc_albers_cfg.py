@@ -18,20 +18,20 @@ fc_albers_flags = [
 ]
 
 layers = {
-    "title": "fc albers collection 2",
+    "title": "DEA Fractional Cover (Landsat, Collection 2)",
     "abstract": "",
     "layers": [
         {
-            "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 5)",
+            "title": "DEA Fractional Cover (Landsat 5, Collection 2)",
             "name": "ls5_fc_albers",
-            "abstract": """
+            "abstract": """Fractional Cover 25m 2.2.1 (Landsat 5, Collection 2)
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
 
 This product contains Fractional Cover dervied from the Landsat 5 satellite
-
+https://cmi.ga.gov.au/data-products/dea/119/dea-fractional-cover-landsat
 For service status information, see https://status.dea.ga.gov.au
         """,
             "product_name": "ls5_fc_albers",
@@ -56,16 +56,16 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 7)",
+            "title": "DEA Fractional Cover (Landsat 7, Collection 2)",
             "name": "ls7_fc_albers",
-            "abstract": """
+            "abstract": """Fractional Cover 25m 2.2.1 (Landsat 7, Collection 2)
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
 
 This product contains Fractional Cover dervied from the Landsat 7 satellite
-
+https://cmi.ga.gov.au/data-products/dea/119/dea-fractional-cover-landsat
 For service status information, see https://status.dea.ga.gov.au
         """,
             "product_name": "ls7_fc_albers",
@@ -91,16 +91,16 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "Fractional Cover 25m 100km tile (Fractional Cover Landsat 8)",
+            "title": "DEA Fractional Cover (Landsat 8, Collection 2)",
             "name": "ls8_fc_albers",
-            "abstract": """
+            "abstract": """Fractional Cover 25m 2.2.1 (Landsat 8, Collection 2)
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena.
 
 This product contains Fractional Cover dervied from the Landsat 8 satellite
-
+https://cmi.ga.gov.au/data-products/dea/119/dea-fractional-cover-landsat
 For service status information, see https://status.dea.ga.gov.au
         """,
             "product_name": "ls8_fc_albers",
@@ -126,10 +126,12 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "Fractional Cover 25m 100km tile (Fractional Cover Combined)",
+            "title": "DEA Fractional Cover (Landsat, Collection 2)",
             "name": "fc_albers_combined",
-            "abstract": """
-Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites For service status information, see https://status.dea.ga.gov.au
+            "abstract": """Fractional Cover 25m 2.2.1 (Landsat, Collection 2)
+Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. This product contains Fractional Cover dervied from the Landsat 5, 7 and 8 satellites.
+https://cmi.ga.gov.au/data-products/dea/119/dea-fractional-cover-landsat
+For service status information, see https://status.dea.ga.gov.au
         """,
             "multi_product": True,
             "product_names": [
