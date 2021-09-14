@@ -10,11 +10,9 @@ bands_fc_percentile = {
     "BS_PC_90": [],
 }
 
-fc_percentile_flags = [
-    {
-        "band": "land",
-        "product": "geodata_coast_100k",
-        "ignore_time": True,
-        "ignore_info_flags": [],
-    },
-]
+bands_fc_3 = {
+    "bs": ["bare_soil"],
+    "pv": ["photosynthetic_vegetation", "green_vegetation"],
+    "npv": ["non_photosynthetic_vegetation", "brown_vegetation"],
+    "ue": [],
+}
