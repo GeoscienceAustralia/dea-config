@@ -1918,8 +1918,26 @@
                             "members": [
                                 {
                                     "type": "geojson",
-                                    "name": "DEA Albers Tiles grid",
-                                    "url": "https://data.dea.ga.gov.au/geomedian-australia/v2.1.0/albers_grid.geojson",
+                                    "name": "Sentinel-2 MGRS Tile grid for Australia",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2_mgrs_tile_grid.geojson",
+                                    "id": "4w6by3"
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "Landsat Path Row grid for Australia",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_path_row_grid.geojson",
+                                    "id": "F65w3t"
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "DEA Summary Product Grid (Collection 3)",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3.geojson",
+                                    "id": "GJY53s"
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "DEA Summary Product Grid (Collection 2)",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c2.geojson",
                                     "id": "KTKSdx",
                                     "shareKeys": [
                                         "Root Group/DEA Shapes/DEA Albers Tiles grid"
