@@ -1,5 +1,3 @@
-# ask about how to generate a legend
-
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 bands_ba_rasters = {
@@ -10,7 +8,7 @@ bands_ba_rasters = {
 
 style_dbsi = {
     "name": "ga_s2_dbsi_provisional_3",
-    "title": "Delta Bare Soil Index (Provisional, NRT Sentinel 2)",
+    "title": "Delta Bare Soil Index (dBSI)",
     "abstract": """
         Delta Bare Soil Index (dBSI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
@@ -34,16 +32,20 @@ style_dbsi = {
             "band": "delta_bsi",
         },
     },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "range": [-1, 1],
     "mpl_ramp": "YlOrBr",
-    "legend": {
-        "url": "",  # need this
-    },
 }
 
 style_dndvi = {
     "name": "ga_s2_ndvi_provisional_3",
-    "title": "Delta Normalized Difference Vegetation Index (Provisional, NRT Sentinel 2)",
+    "title": "Delta Normalized Difference Vegetation Index (dNDVI)",
     "abstract": """
         Delta Normalized Difference Vegetation Index (dNDVI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
@@ -68,26 +70,33 @@ style_dndvi = {
             "band": "delta_ndvi",
         },
     },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "range": [-1, 1],
     "color_ramp": [
-        {"value": -1.0, "color": "#8F3F20", "alpha": 0.0},
-        {"value": -1.0, "color": "#8F3F20", "alpha": 1.0},
-        {"value": -0.8, "color": "#A35F18"},
-        {"value": -0.6, "color": "#B88512"},
-        {"value": -0.4, "color": "#CEAC0E"},
-        {"value": -0.2, "color": "#E5D609"},
+        {"value": 1.0, "color": "#8F3F20", "alpha": 0.0},
+        {"value": 1.0, "color": "#8F3F20", "alpha": 1.0},
+        {"value": 0.8, "color": "#A35F18"},
+        {"value": 0.6, "color": "#B88512"},
+        {"value": 0.4, "color": "#CEAC0E"},
+        {"value": 0.2, "color": "#E5D609"},
         {"value": 0.0, "color": "#FFFF0C"},
-        {"value": 0.2, "color": "#C3DE09"},
-        {"value": 0.4, "color": "#88B808"},
-        {"value": 0.6, "color": "#529400"},
-        {"value": 0.8, "color": "#237100"},
-        {"value": 1.0, "color": "#114D04"},
+        {"value": -0.2, "color": "#C3DE09"},
+        {"value": -0.4, "color": "#88B808"},
+        {"value": -0.6, "color": "#529400"},
+        {"value": -0.8, "color": "#237100"},
+        {"value": -1.0, "color": "#114D04"},
     ],
 }
 
 style_dnbr = {
     "name": "ga_s2_dnbr_provisional_3",
-    "title": "Delta Normalized Burn Ratio (Provisional, NRT Sentinel 2)",
+    "title": "Delta Normalized Burn Ratio (dNBR)",
     "abstract": """
         Delta Normalized Burn Ratio (DNBR) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
@@ -114,13 +123,20 @@ style_dnbr = {
             "band": "delta_nbr",
         },
     },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
 }
 
 style_dnbr_classes = {
     "name": "ga_s2_dnbrclasses_provisional_3",
-    "title": "Delta Normalized Burn Ratio Classes (Provisional, NRT Sentinel 2)",
+    "title": "Delta Normalized Burn Ratio (dNBR) Classes",
     "abstract": """
         Delta Normalized Burn Ratio (DNBR) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
@@ -148,6 +164,13 @@ style_dnbr_classes = {
             "band": "delta_bsi",
         },
     },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "range": [-1, 1],
     "color_ramp": [
         {"value": -1.0, "color": "#0be344", },
@@ -172,11 +195,20 @@ layers = {
             "dynamic": True,
             "native_crs": "EPSG:3577",
             "native_resolution": [10.0, 10.0],
+            "flags": [
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": [],
+                },
+            ],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
+
             "wcs": {
                 "default_bands": [
                     "delta_nbr",
