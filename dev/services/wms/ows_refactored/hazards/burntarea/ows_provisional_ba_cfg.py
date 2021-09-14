@@ -33,11 +33,11 @@ style_dbsi = {
         },
     },
     "pq_masks": [
-        {
+    {
         "band": "land",
         "invert": True,
         "enum": 0,
-        }
+    }
     ],
     "range": [-1, 1],
     "mpl_ramp": "YlOrBr",
@@ -71,11 +71,11 @@ style_dndvi = {
         },
     },
     "pq_masks": [
-        {
+    {
         "band": "land",
         "invert": True,
         "enum": 0,
-        }
+    }
     ],
     "range": [-1, 1],
     "color_ramp": [
@@ -124,11 +124,11 @@ style_dnbr = {
         },
     },
     "pq_masks": [
-        {
+    {
         "band": "land",
         "invert": True,
         "enum": 0,
-        }
+    }
     ],
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
@@ -166,11 +166,11 @@ style_dnbr_classes = {
     },
     },
     "pq_masks": [
-        {
+    {
         "band": "land",
         "invert": True,
         "enum": 0,
-        }
+    }
     ],
     "range": [-1, 1],
     "color_ramp": [
