@@ -43,10 +43,5 @@ layers = {
             "include": "ows_refactored.inland_water.wofs.ows_wofs_alber_cfg.layer",
             "type": "python",
         },
-        # TODO: add when s2_wo is ready
-        # {
-        #     "include": "ows_refactored.inland_water.wofs.ows_s2_wo_cfg.layer",
-        #     "type": "python",
-        # },
     ],
 }

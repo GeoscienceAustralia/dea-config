@@ -156,11 +156,6 @@ ows_cfg = {
             "include": "ows_refactored.sea_ocean_coast.ows_category_root_cfg.category_layers",
             "type": "python",
         },
-        # TODO: add after burntarea is ready
-        # {
-        #     "include": "ows_refactored.hazards.ows_category_root_cfg.category_layers",
-        #     "type": "python",
-        # },
         {
             "include": "ows_refactored.others.ows_category_root_cfg.category_layers",
             "type": "python",
