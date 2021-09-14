@@ -1,5 +1,7 @@
-from ows_refactored.land_and_vegetation.fc.bands_fc_cfg import (
-    bands_fc_percentile, fc_percentile_flags)
+from ows_refactored.land_and_vegetation.fc.band_fc_cfg import \
+    bands_fc_percentile
+from ows_refactored.land_and_vegetation.fc.flag_fc_cfg import \
+    fc_percentile_flags
 from ows_refactored.land_and_vegetation.fc.style_fc_cfg import (
     style_fc_simple_rgb, styles_fc_bare_list, styles_fc_gv_list,
     styles_fc_ngv_list)

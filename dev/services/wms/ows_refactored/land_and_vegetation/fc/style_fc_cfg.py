@@ -1,16 +1,163 @@
+from ows_refactored.land_and_vegetation.fc.flag_fc_cfg import fc_pq_mask
 from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
     legend_idx_0_100_pixel_fc_ngv_25ticks)
 
-fc_pq_mask = [
+c3_fc_pq_mask = [
+    {
+        # pq_masks:band now takes the actual ODC band name, not the identifier.
+        "band": "water",
+        "flags": {"dry": True},
+    },
+    {
+        "band": "water",
+        "flags": {
+            "terrain_shadow": False,
+            "low_solar_angle": False,
+            "high_slope": False,
+            "cloud_shadow": False,
+            "cloud": False,
+        },
+    },
     {
         "band": "land",
-        "flags": {
-            "sea": True,
-        },
         "invert": True,
+        "enum": 0,
     },
 ]
+
+style_fc_c3_rgb = {
+    "name": "fc_rgb",
+    "title": "Three-band Fractional Cover",
+    "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
+    "components": {
+        "red": {"bs": 1.0},
+        "green": {"pv": 1.0},
+        "blue": {"npv": 1.0},
+    },
+    "scale_range": [0.0, 100.0],
+    "pq_masks": c3_fc_pq_mask,
+    "legend": {
+        "show_legend": True,
+        "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
+    },
+}
+
+style_fc_gv_c3 = {
+    "name": "green_veg_c3",
+    "title": "Green Vegetation",
+    "abstract": "Green Vegetation",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "pv",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["pv"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#ffffcc",
+        },
+        {
+            "value": 25,
+            "color": "#c2e699",
+        },
+        {
+            "value": 50,
+            "color": "#78c679",
+        },
+        {
+            "value": 75,
+            "color": "#31a354",
+        },
+        {
+            "value": 100,
+            "color": "#006837",
+        },
+    ],
+    "pq_masks": c3_fc_pq_mask,
+    "legend": legend_idx_0_100_pixel_fc_25ticks,
+}
+
+style_fc_bs_c3 = {
+    "name": "bare_ground_c3",
+    "title": "Bare Ground",
+    "abstract": "Bare Soil",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "bs",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["bs"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#feebe2",
+        },
+        {
+            "value": 25,
+            "color": "#fbb4b9",
+        },
+        {
+            "value": 50,
+            "color": "#f768a1",
+        },
+        {
+            "value": 75,
+            "color": "#c51b8a",
+        },
+        {
+            "value": 100,
+            "color": "#7a0177",
+        },
+    ],
+    "pq_masks": c3_fc_pq_mask,
+    # Emulates what we had previously
+    "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
+}
+
+style_fc_ngv_c3 = {
+    "name": "non_green_veg_c3",
+    "title": "Non-Green vegetation",
+    "abstract": "Non Green Vegetation",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "npv",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["npv"],
+    "color_ramp": [
+        {
+            "value": 0,
+            "color": "#ffffd4",
+        },
+        {"value": 25, "color": "#fed98e", "legend": {}},
+        {
+            "value": 50,
+            "color": "#fe9929",
+        },
+        {
+            "value": 75,
+            "color": "#d95f0e",
+        },
+        {
+            "value": 100,
+            "color": "#993404",
+        },
+    ],
+    # Emulates what we had previously
+    "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
+    "pq_masks": c3_fc_pq_mask,
+}
 
 style_fc_simple_rgb = {
     "name": "simple_rgb",

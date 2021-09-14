@@ -19,7 +19,7 @@ tailored to ensure dynamic coastal features are captured whilst still allowing a
 free composite to be generated. The concepts of the Observed Tidal Range (OTR),
 and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al.
 (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016).
-            """,
+    """,
     "layers": [
         {
             "title": "DEA High Tide Imagery",
