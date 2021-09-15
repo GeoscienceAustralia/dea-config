@@ -22,7 +22,7 @@ layers = {
     "abstract": "",
     "layers": [
         {
-            "title": "DEA Fractional Cover (Landsat 5, Collection 2)",
+            "title": "DEA Fractional Cover (Landsat 5 TM, Collection 2)",
             "name": "ls5_fc_albers",
             "abstract": """Fractional Cover 25m 2.2.1 (Landsat 5, Collection 2)
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -56,7 +56,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA Fractional Cover (Landsat 7, Collection 2)",
+            "title": "DEA Fractional Cover (Landsat 7 ETM+, Collection 2)",
             "name": "ls7_fc_albers",
             "abstract": """Fractional Cover 25m 2.2.1 (Landsat 7, Collection 2)
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -91,7 +91,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA Fractional Cover (Landsat 8, Collection 2)",
+            "title": "DEA Fractional Cover (Landsat 8 OLI-TIRS, Collection 2)",
             "name": "ls8_fc_albers",
             "abstract": """Fractional Cover 25m 2.2.1 (Landsat 8, Collection 2)
 Fractional Cover version 2.2.1, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.

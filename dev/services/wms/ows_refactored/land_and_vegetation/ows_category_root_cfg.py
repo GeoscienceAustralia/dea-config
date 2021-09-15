@@ -1,5 +1,5 @@
 category_layers = {
-    "title": "Land and Vegetation",
+    "title": "Land and vegetation",
     "abstract": "",
     "layers": [
         {
