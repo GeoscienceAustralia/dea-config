@@ -218,7 +218,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 item_v2_00_conf_layer = {
-    "title": "A Intertidal Extents Confidence(ITEM, Landsat)",
+    "title": "DEA Intertidal Extents confidence (Landsat)",
     "name": "ITEM_V2.0.0_Conf",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Confidence)
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,

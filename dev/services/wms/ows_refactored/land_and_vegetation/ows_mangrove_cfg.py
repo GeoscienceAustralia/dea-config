@@ -41,7 +41,7 @@ style_mangrove_cover_v2 = {
 }
 
 layer = {
-    "title": "DEA Mangrove Canopy Cover",
+    "title": "DEA Mangrove Canopy Cover (Landsat)",
     "abstract": "",
     "layers": [
         {

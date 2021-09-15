@@ -1,5 +1,5 @@
 category_layers = {
-    "title": "Inland Water",
+    "title": "Inland water",
     "abstract": "",
     "layers": [
         {
