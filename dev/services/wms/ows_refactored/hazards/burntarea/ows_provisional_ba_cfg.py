@@ -100,7 +100,7 @@ style_dndvi = {
         {"value": 0.6, "color": "#B88512"},
         {"value": 0.8, "color": "#A35F18"},
         {"value": 1.0, "color": "#8F3F20", "alpha": 1.0},
-        {"value": 1.0, "color": "#8F3F20", "alpha": 0.0},  # red        
+        {"value": 1.0, "color": "#8F3F20", "alpha": 0.0},  # red
     ],
 }
 
