@@ -41,6 +41,17 @@ style_dbsi = {
     ],
     "range": [-1, 1],
     "mpl_ramp": "YlOrBr",
+    "legend": {
+        "begin": "-1.0",
+        "end": "1.0",
+        "decimal_places": 1,
+        "ticks_every": 0.2,
+        "tick_labels": {
+            "-1": {"prefix": "<"},
+            "1": {"prefix": ">"},
+        },
+        "units": "dBSI\n(A larger value can be characteristic of burnt area)",
+    },
 }
 
 style_dndvi = {
@@ -79,18 +90,18 @@ style_dndvi = {
     ],
     "range": [-1, 1],
     "color_ramp": [
-        {"value": 1.0, "color": "#8F3F20", "alpha": 0.0},
-        {"value": 1.0, "color": "#8F3F20", "alpha": 1.0},
-        {"value": 0.8, "color": "#A35F18"},
-        {"value": 0.6, "color": "#B88512"},
-        {"value": 0.4, "color": "#CEAC0E"},
-        {"value": 0.2, "color": "#E5D609"},
+        {"value": -1.0, "color": "#8F3F20", "alpha": 0.0},
+        {"value": -1.0, "color": "#8F3F20", "alpha": 1.0},
+        {"value": -0.8, "color": "#A35F18"},
+        {"value": -0.6, "color": "#B88512"},
+        {"value": -0.4, "color": "#CEAC0E"},
+        {"value": -0.2, "color": "#E5D609"},
         {"value": 0.0, "color": "#FFFF0C"},
-        {"value": -0.2, "color": "#C3DE09"},
-        {"value": -0.4, "color": "#88B808"},
-        {"value": -0.6, "color": "#529400"},
-        {"value": -0.8, "color": "#237100"},
-        {"value": -1.0, "color": "#114D04"},
+        {"value": 0.2, "color": "#C3DE09"},
+        {"value": 0.4, "color": "#88B808"},
+        {"value": 0.6, "color": "#529400"},
+        {"value": 0.8, "color": "#237100"},
+        {"value": 1.0, "color": "#114D04"},
     ],
 }
 
@@ -179,6 +190,9 @@ style_dnbr_classes = {
         {"value": 0.1, "color": "#f8671a", },
         {"value": 1.0, "color": "#f8671a", },
     ],
+    "legend": {
+        "show_legend": True,
+    },
 }
 
 layers = {
