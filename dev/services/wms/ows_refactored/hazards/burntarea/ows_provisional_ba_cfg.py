@@ -43,8 +43,8 @@ style_dbsi = {
     "mpl_ramp": "YlOrBr",
     "include_in_feature_info": False,
     "legend": {
-        "begin": "-1.0",
-        "end": "1.0",
+        "begin": "-1",
+        "end": "1",
         "tick_labels": {
             "-1": {"prefix": "<"},
             "1": {"prefix": ">"},
@@ -102,6 +102,15 @@ style_dndvi = {
         {"value": 1.0, "color": "#8F3F20", "alpha": 1.0},
         {"value": 1.0, "color": "#8F3F20", "alpha": 0.0},  # red
     ],
+    "legend": {
+        "begin": "-1",
+        "end": "1",
+        "tick_labels": {
+            "-1": {"prefix": "<"},
+            "1": {"prefix": ">"},
+        },
+        "units": "\n(larger values can be characteristic of burnt areas)",
+    },
 }
 
 style_dnbr = {
@@ -142,6 +151,15 @@ style_dnbr = {
     ],
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
+    "legend": {
+        "begin": "-1",
+        "end": "1",
+        "tick_labels": {
+            "-1": {"prefix": "<"},
+            "1": {"prefix": ">"},
+        },
+        "units": "\n(larger values can be characteristic of burnt areas)",
+    },
 }
 
 style_dnbr_classes = {
