@@ -49,7 +49,7 @@ style_dbsi = {
             "-1": {"prefix": "<"},
             "1": {"prefix": ">"},
         },
-        "units": "\n(larger values can be characteristic of burnt areas)",
+        "units": "\nlarger values can be characteristic of burnt areas",
     },
 }
 
@@ -109,7 +109,7 @@ style_dndvi = {
             "-1": {"prefix": "<"},
             "1": {"prefix": ">"},
         },
-        "units": "\n(larger values can be characteristic of burnt areas)",
+        "units": "\nlarger values can be characteristic of burnt areas",
     },
 }
 
@@ -158,7 +158,7 @@ style_dnbr = {
             "-1": {"prefix": "<"},
             "1": {"prefix": ">"},
         },
-        "units": "\n(larger values can be characteristic of burnt areas)",
+        "units": "\nlarger values can be characteristic of burnt areas",
     },
 }
 
@@ -203,13 +203,9 @@ style_dnbr_classes = {
     "color_ramp": [
         {"value": -1.0, "color": "#0be344", },
         {"value": 0.1, "color": "#0be344", },
-        {"value": 0.05, "color": "#f8fc11", },
-        {"value": 0.1, "color": "#f8671a", },
+        {"value": 0.5, "color": "#f8fc11", },
         {"value": 1.0, "color": "#f8671a", },
     ],
-    "legend": {
-        "show_legend": True,
-    },
 }
 
 layers = {
