@@ -206,9 +206,6 @@ style_dnbr_classes = {
         {"value": 0.5, "color": "#f8fc11", },
         {"value": 1.0, "color": "#f8671a", },
     ],
-    "legend": {
-        "show_legend": True,
-    },
 }
 
 layers = {
