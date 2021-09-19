@@ -40,16 +40,17 @@ style_dbsi = {
         }
     ],
     "range": [-1, 1],
-    "mpl_ramp": "YlOrBr",
-    "include_in_feature_info": False,
+    "mpl_ramp": "PuOr_r",
     "legend": {
         "begin": "-1",
         "end": "1",
         "tick_labels": {
-            "-1": {"prefix": "<"},
-            "1": {"prefix": ">"},
+            "-1.0": {"label": "<-1"},
+            "0": {"label": "0"},
+            "1.0": {"label": ">1"},
         },
-        "units": "\n(larger values can be characteristic of burnt areas)",
+        "decimal_places": 0,
+        "title": "dBSI\n(larger values can be characteristic of burnt areas)",
     },
 }
 
@@ -88,28 +89,18 @@ style_dndvi = {
         }
     ],
     "range": [-1, 1],
-    "color_ramp": [
-        {"value": -1.0, "color": "#114D04"},  # green
-        {"value": -0.8, "color": "#237100"},
-        {"value": -0.6, "color": "#529400"},
-        {"value": -0.4, "color": "#88B808"},
-        {"value": -0.2, "color": "#C3DE09"},
-        {"value": 0.0, "color": "#FFFF0C"},
-        {"value": 0.2, "color": "#E5D609"},
-        {"value": 0.4, "color": "#CEAC0E"},
-        {"value": 0.6, "color": "#B88512"},
-        {"value": 0.8, "color": "#A35F18"},
-        {"value": 1.0, "color": "#8F3F20", "alpha": 1.0},
-        {"value": 1.0, "color": "#8F3F20", "alpha": 0.0},  # red
-    ],
+    "mpl_ramp": "PuOr",
+    # "mpl_ramp": "RdYlGn_r",
     "legend": {
         "begin": "-1",
         "end": "1",
         "tick_labels": {
-            "-1": {"prefix": "<"},
-            "1": {"prefix": ">"},
+        "-1.0": {"label": "<-1"},
+        "0": {"label": "0"},
+        "1.0": {"label": ">1"},
         },
-        "units": "\n(larger values can be characteristic of burnt areas)",
+        "decimal_places": 0,
+        "title": "dNDVI\n(smaller values can be characteristic of burnt areas)",
     },
 }
 
@@ -155,10 +146,12 @@ style_dnbr = {
         "begin": "-1",
         "end": "1",
         "tick_labels": {
-            "-1": {"prefix": "<"},
-            "1": {"prefix": ">"},
+            "-1.0": {"label": "<-1"},
+            "0": {"label": "0"},
+            "1.0": {"label": ">1"},
         },
-        "units": "\n(larger values can be characteristic of burnt areas)",
+        "decimal_places": 0,
+        "title": "dNBR\n(larger values can be characteristic of burnt areas)",
     },
 }
 
@@ -207,8 +200,9 @@ style_dnbr_classes = {
         {"value": 0.1, "color": "#f8671a", },
         {"value": 1.0, "color": "#f8671a", },
     ],
-    "legend": {
-        "show_legend": True,
+
+    "title": "dNBR classes",
+
     },
 }
 
