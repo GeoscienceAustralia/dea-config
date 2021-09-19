@@ -95,9 +95,9 @@ style_dndvi = {
         "begin": "-1",
         "end": "1",
         "tick_labels": {
-        "-1.0": {"label": "<-1"},
-        "0": {"label": "0"},
-        "1.0": {"label": ">1"},
+            "-1.0": {"label": "<-1"},
+            "0": {"label": "0"},
+            "1.0": {"label": ">1"},
         },
         "decimal_places": 0,
         "title": "dNDVI\n(smaller values can be characteristic of burnt areas)",
@@ -200,9 +200,8 @@ style_dnbr_classes = {
         {"value": 0.1, "color": "#f8671a", },
         {"value": 1.0, "color": "#f8671a", },
     ],
-
-    "title": "dNBR classes",
-
+    "legend": {
+        "title": "dNBR classes",
     },
 }
 
