@@ -196,8 +196,8 @@ style_dnbr_classes = {
     "color_ramp": [
         {"value": -1.0, "color": "#0be344", },
         {"value": 0.1, "color": "#0be344", },
-        {"value": 0.05, "color": "#f8fc11", },
-        {"value": 0.1, "color": "#f8671a", },
+        {"value": 0.10001, "color": "#f8fc11", },
+        {"value": 0.44, "color": "#f8671a", },
         {"value": 1.0, "color": "#f8671a", },
     ],
     "legend": {
