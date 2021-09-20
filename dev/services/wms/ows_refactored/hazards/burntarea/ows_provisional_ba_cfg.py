@@ -40,20 +40,22 @@ style_dbsi = {
         }
     ],
     "range": [-1, 1],
-    "mpl_ramp": "YlOrBr",
+    "mpl_ramp": "PuOr_r",
     "legend": {
-        "begin": "-1.0",
-        "end": "1.0",
+        "begin": "-1",
+        "end": "1",
         "tick_labels": {
-            "-1": {"prefix": "<"},
-            "1": {"prefix": ">"},
+            "-1.0": {"label": "<-1"},
+            "0": {"label": "0"},
+            "1.0": {"label": ">1"},
         },
-        "units": " \nlarger values can be characteristic of burnt areas",
+        "decimal_places": 0,
+        "title": "dBSI\n(larger values can be characteristic of burnt areas)",
     },
 }
 
 style_dndvi = {
-    "name": "ga_s2_ndvi_provisional_3",
+    "name": "ga_s2_dndvi_provisional_3",
     "title": "Delta Normalized Difference Vegetation Index (dNDVI)",
     "abstract": """
         Delta Normalized Difference Vegetation Index (dNDVI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
@@ -87,28 +89,18 @@ style_dndvi = {
         }
     ],
     "range": [-1, 1],
-    "color_ramp": [
-        {"value": -1.0, "color": "#114D04"},  # green
-        {"value": -0.8, "color": "#237100"},
-        {"value": -0.6, "color": "#529400"},
-        {"value": -0.4, "color": "#88B808"},
-        {"value": -0.2, "color": "#C3DE09"},
-        {"value": 0.0, "color": "#FFFF0C"},
-        {"value": 0.2, "color": "#E5D609"},
-        {"value": 0.4, "color": "#CEAC0E"},
-        {"value": 0.6, "color": "#B88512"},
-        {"value": 0.8, "color": "#A35F18"},
-        {"value": 1.0, "color": "#8F3F20", "alpha": 1.0},
-        {"value": 1.0, "color": "#8F3F20", "alpha": 0.0},  # red
-    ],
+    "mpl_ramp": "PuOr",
+    # "mpl_ramp": "RdYlGn_r",
     "legend": {
         "begin": "-1",
         "end": "1",
         "tick_labels": {
-            "-1": {"prefix": "<"},
-            "1": {"prefix": ">"},
+            "-1.0": {"label": "<-1"},
+            "0": {"label": "0"},
+            "1.0": {"label": ">1"},
         },
-        "units": "larger values can be characteristic of burnt areas",
+        "decimal_places": 0,
+        "title": "dNDVI\n(smaller values can be characteristic of burnt areas)",
     },
 }
 
@@ -154,10 +146,12 @@ style_dnbr = {
         "begin": "-1",
         "end": "1",
         "tick_labels": {
-            "-1": {"prefix": "<"},
-            "1": {"prefix": ">"},
+            "-1.0": {"label": "<-1"},
+            "0": {"label": "0"},
+            "1.0": {"label": ">1"},
         },
-        "units": " \nlarger values can be characteristic of burnt areas",
+        "decimal_places": 0,
+        "title": "dNBR\n(larger values can be characteristic of burnt areas)",
     },
 }
 
@@ -200,30 +194,36 @@ style_dnbr_classes = {
     ],
     "range": [-1, 1],
     "color_ramp": [
-        {"value": -1.0, "color": "#0be344", },
-        {"value": 0.099, "color": "#0be344", },
-        {"value": 0.1, "color": "#f8fc11", },
-        {"value": 0.499, "color": "#f8fc11", },
-        {"value": 0.5, "color": "#f8671a", },
-        {"value": 1.0, "color": "#f8671a", },
+        {"value": -1.0, "color": "#0be344"},
+        {"value": 0.0999, "color": "#0be344"},
+        {"value": 0.10, "color": "#f8fc11"},
+        {"value": 0.4399, "color": "#f8fc11"},
+        {"value": 0.44, "color": "#f8671a"},
+        {"value": 1.0, "color": "#f8671a"},
     ],
     "legend": {
-        "begin": "-1",
-        "end": "1",
+        "title": "dNBR classes",
+        "begin": "-1.0",
+        "end": "1.0",
+        "ticks": ["-1.0", "-0.45", "0.1", "0.27", "0.44", "0.72", "1.0"],
         "tick_labels": {
-            "-1": {"prefix": "<"},
-            "1": {"prefix": ">"},
+            "-1.0": {"label": "<-1.0"},
+            "-0.45": {"label": "Unburnt"},
+            "0.1": {"label": "0.1"},
+            "0.27": {"label": "Low to\nModerate"},
+            "0.44": {"label": "0.44"},
+            "0.72": {"label": "Moderate to\nSevere"},
+            "1.0": {"label": ">1.0"},
         },
-    }
-
+    },
 }
 
 layers = {
     "title": "DEA Provisional Burnt Area Characteristics (Near Real-Time Sentinel 2) ",
-    "abstract": " ",
+    "abstract": "",
     "layers": [
         {
-            "title": "DEA Provisional Burnt Area Characteristic Layers (NRT S2)",
+             "title": "DEA Provisional Burnt Area Characteristic Layers (NRT S2)",
             "name": "ga_s2_ba_provisional_3",
             "abstract": """
             The identification of bushfire burn using Earth Observation is often manual, can come with a significant time delay, and at a relatively small scale. Digital Earth Australia (DEA) offer a provisional and preliminary change detection data product, for all of Australia, which uses same day satellite data and cloud-based infrastructure to automatically and rapidly identify areas that show burn characteristics.
@@ -231,7 +231,6 @@ layers = {
             This Near Real-Time (NRT) change detection product is based on:
                 1)	a pre-fire reference baseline (pre-event) dataset - DEA Sentinel 2 Barest Earth (Roberts, et al. 2019). The Barest Earth data shows the spectral data for an area at its least vegetated state based on the Sentinel 2 data archive. The Barest Earth product is produced by a novel high-dimensional statistical technique that extracts a noise-reduced, cloud-free, and robust estimate of the spectral response of the barest state.
                 2)	the latest (post-event) daily Sentinel-2 (A and B combined) NRT provisional satellite data. The NRT provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
-
             The following metrics were calculated to identify burnt area characteristics:
             -	Bare Soil Index (BSI)
             -	Normalized Difference Vegetation Index (NDVI)
