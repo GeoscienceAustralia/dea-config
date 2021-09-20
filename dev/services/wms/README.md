@@ -19,3 +19,14 @@ The web service these configuration files are used at is https://ows.dev.dea.ga.
 5. `docker-compose up`
 
 Note: this requires an indexed datacube database and `.env` configuration needs to point to the database.
+
+### For abstract text display formating
+
+#### Bold
+```
+**Overview**
+```
+#### Italic
+```
+*Overview*
+```
