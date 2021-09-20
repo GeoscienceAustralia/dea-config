@@ -44,12 +44,12 @@ style_dbsi = {
     "legend": {
         "begin": "-1",
         "end": "1",
+        "ticks": ["-1", "0", "1"],
         "tick_labels": {
             "-1.0": {"label": "<-1"},
             "0": {"label": "0"},
             "1.0": {"label": ">1"},
         },
-        "decimal_places": 0,
         "title": "dBSI\n(larger values can be characteristic of burnt areas)",
     },
 }
@@ -90,10 +90,10 @@ style_dndvi = {
     ],
     "range": [-1, 1],
     "mpl_ramp": "PuOr",
-    # "mpl_ramp": "RdYlGn_r",
     "legend": {
         "begin": "-1",
         "end": "1",
+        "ticks": ["-1", "0", "1"],
         "tick_labels": {
             "-1.0": {"label": "<-1"},
             "0": {"label": "0"},
@@ -145,6 +145,7 @@ style_dnbr = {
     "legend": {
         "begin": "-1",
         "end": "1",
+        "ticks": ["-1", "0", "1"],
         "tick_labels": {
             "-1.0": {"label": "<-1"},
             "0": {"label": "0"},
@@ -203,8 +204,8 @@ style_dnbr_classes = {
     ],
     "legend": {
         "title": "dNBR classes",
-        "begin": "-1.0",
-        "end": "1.0",
+        "begin": "-1",
+        "end": "1",
         "ticks": ["-1.0", "-0.45", "0.1", "0.27", "0.44", "0.72", "1.0"],
         "tick_labels": {
             "-1.0": {"label": "<-1.0"},
@@ -231,6 +232,7 @@ layers = {
             This Near Real-Time (NRT) change detection product is based on:
                 1)	a pre-fire reference baseline (pre-event) dataset - DEA Sentinel 2 Barest Earth (Roberts, et al. 2019). The Barest Earth data shows the spectral data for an area at its least vegetated state based on the Sentinel 2 data archive. The Barest Earth product is produced by a novel high-dimensional statistical technique that extracts a noise-reduced, cloud-free, and robust estimate of the spectral response of the barest state.
                 2)	the latest (post-event) daily Sentinel-2 (A and B combined) NRT provisional satellite data. The NRT provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
+
             The following metrics were calculated to identify burnt area characteristics:
             -	Bare Soil Index (BSI)
             -	Normalized Difference Vegetation Index (NDVI)
