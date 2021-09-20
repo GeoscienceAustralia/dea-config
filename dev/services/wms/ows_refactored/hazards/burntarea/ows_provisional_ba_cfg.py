@@ -203,7 +203,7 @@ style_dnbr_classes = {
         {"value": 1.0, "color": "#f8671a"},
     ],
     "legend": {
-        "title": "dNBR classes",
+        "title": "dNBR Classes",
         "begin": "-1",
         "end": "1",
         "ticks": ["-1.0", "0.1", "0.44", "1.0"],
