@@ -253,7 +253,7 @@ layers = {
             NBR is calculated as: NBR = (NIR – SWIR2) / (NIR + SWIR2).
             Delta NBR shows the change in burn characteristics between two events, the difference between a baseline (pre-NBR) and a latter time (post-NBR). The change (delta) in NBR is calculated as: dNBR = pre-NBR - post-NBR.
             Normally dNBR analysis is run on data from a clear pre-fire and a post-fire satellite scene. However, in order to automatically and rapidly identify areas that are characteristic of burns for all of Australia, and on a near real-time basis, the Sentinel 2 Barest Earth layer has been used as a conservative pre-fire reference image.
-    
+
             For service status information, see https://status.dea.ga.gov.au
             """,
             "product_name": "ga_s2_ba_provisional_3",
