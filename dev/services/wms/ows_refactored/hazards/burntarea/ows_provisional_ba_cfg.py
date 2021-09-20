@@ -202,6 +202,18 @@ style_dnbr_classes = {
     ],
     "legend": {
         "title": "dNBR classes",
+        "begin": "-1.0",
+        "end": "1.0",
+        "ticks": ["-1.0", "-0.45", "0.1", "0.27", "0.44", "0.72", "1.0"],
+        "tick_labels": {
+            "-1.0": "-1.0",
+            "-0.45": "Unburnt",
+            "0.1": "0.1",
+            "0.27": "Low to\nModerate",
+            "0.44": "0.44",
+            "0.72": "Moderate to\nSevere",
+            "1.0": "1.0"
+        },
     },
 }
 
