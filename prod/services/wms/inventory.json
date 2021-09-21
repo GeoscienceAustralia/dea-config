@@ -328,6 +328,88 @@
         },
         {
             "product": [
+                "ga_s2am_ard_provisional_3",
+                "ga_s2bm_ard_provisional_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
+                "ga_s2am_ard_provisional_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
+                "ga_s2bm_ard_provisional_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
                 "s2a_ard_granule",
                 "s2b_ard_granule"
             ],
@@ -980,6 +1062,73 @@
         },
         {
             "product": [
+                "ga_ls8c_ard_provisional_3"
+            ],
+            "styles_count": 15,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "panchromatic",
+                "aerosol",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
+                "ga_ls7e_ard_provisional_3"
+            ],
+            "styles_count": 14,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "panchromatic",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
+                "ga_ls8c_ard_provisional_3",
+                "ga_ls7e_ard_provisional_3"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
                 "ga_ls_wo_3"
             ],
             "styles_count": 2,
@@ -1001,5 +1150,5 @@
             ]
         }
     ],
-    "total_layers_count": 79
+    "total_layers_count": 85
 }
