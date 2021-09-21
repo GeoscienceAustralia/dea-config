@@ -8,61 +8,90 @@ product:
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
   explorer_path: https://explorer.dea.ga.gov.au/
-  inherit_skip_properties:
-    - gqa:mean_x
-    - gqa:mean_xy
-    - gqa:mean_y
-    - gqa:stddev_x
-    - gqa:stddev_xy
-    - gqa:stddev_y
-    - gqa:iterative_stddev_y
-    - gqa:iterative_stddev_xy
-    - gqa:iterative_stddev_x
-    - gqa:iterative_mean_y
-    - gqa:iterative_mean_xy
-    - gqa:iterative_mean_x
-    - gqa:cep90
-    - gqa:abs_y
-    - gqa:abs_xy
-    - gqa:abs_x
-    - gqa:abs_iterative_mean_y
-    - gqa:abs_iterative_mean_xy
-    - gqa:abs_iterative_mean_x
-    - fmask:water
-    - fmask:snow
-    - fmask:cloud_shadow
-    - fmask:cloud
-    - fmask:clear
-    - dtr:start_datetime
-    - dtr:end_datetime'
-    - eo:sun_azimuth
-    - eo:cloud_cover
-    - landsat:landsat_product_id
-    - landsat:landsat_scene_id
-    - eo:sun_elevation
-  classifier: level3
+  classifier: ard
   maturity: final
   collection_number: 3
 
-  #preview_image:
-  #  - thumbnail_name: clear
-  #    green: count_clear
-  #  - thumbnail_name: wet
-  #    blue: count_wet
+  inherit_skip_properties:
+    - eo:cloud_cover
+    - fmask:clear
+    - fmask:snow
+    - fmask:cloud
+    - fmask:water
+    - fmask:cloud_shadow
+    - eo:sun_elevation
+    - eo:sun_azimuth
+    - gqa:iterative_stddev_x
+    - gqa:iterative_stddev_y
+    - gqa:iterative_stddev_xy
+    - gqa:stddev_xy
+    - gqa:stddev_x
+    - gqa:stddev_y
+    - gqa:mean_xy
+    - gqa:mean_x
+    - gqa:mean_y
+    - gqa:abs_xy
+    - gqa:abs_x
+    - gqa:abs_y
+    - gqa:abs_iterative_mean_y
+    - gqa:abs_iterative_mean_x
+    - gqa:abs_iterative_mean_xy
+    - gqa:iterative_mean_xy
+    - gqa:iterative_mean_x
+    - gqa:iterative_mean_y
+    - gqa:cep90
+    - landsat:landsat_product_id
+    - landsat:landsat_scene_id
 
-  preview_image_singleband:
-    - measurement: frequency
-      bit: 1
-      display_bands:
-      - red
-      - green
-      - blue
-
-  nodata: 
-    count_clear: -999
-    count_wet: -999
-    frequency: -999
-  # -- EO Dataset3 relative section --
+  preview_image_ows_style:
+    name: WOfS_frequency
+    title: " Water Summary"
+    abstract: WOfS summary showing the frequency of Wetness
+    index_function:
+      function: datacube_ows.band_utils.single_band
+      mapped_bands: 'True'
+      kwargs:
+        band: frequency
+    needed_bands:
+    - frequency
+    include_in_feature_info: 'False'
+    color_ramp:
+    - value: 0
+      color: "#000000"
+      alpha: 0
+    - value: 0.002
+      color: "#000000"
+      alpha: 0
+    - value: 0.005
+      color: "#8e0101"
+      alpha: 0.25
+    - value: 0.01
+      color: "#cf2200"
+      alpha: 0.75
+    - value: 0.02
+      color: "#e38400"
+    - value: 0.05
+      color: "#e3df00"
+    - value: 0.1
+      color: "#a6e300"
+    - value: 0.2
+      color: "#62e300"
+    - value: 0.3
+      color: "#00e32d"
+    - value: 0.4
+      color: "#00e384"
+    - value: 0.5
+      color: "#00e3c8"
+    - value: 0.6
+      color: "#00c5e3"
+    - value: 0.7
+      color: "#0097e3"
+    - value: 0.8
+      color: "#005fe3"
+    - value: 0.9
+      color: "#000fe3"
+    - value: 1
+      color: "#5700e3"
 
 aws_unsigned: True
 
