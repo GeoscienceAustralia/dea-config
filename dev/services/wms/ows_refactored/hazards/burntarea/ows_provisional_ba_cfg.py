@@ -46,9 +46,9 @@ style_dbsi = {
         "end": "1",
         "ticks": ["-1", "0", "1"],
         "tick_labels": {
-            "-1.0": {"label": "<-1"},
+            "-1": {"label": "<-1"},
             "0": {"label": "0"},
-            "1.0": {"label": ">1"},
+            "1": {"label": ">1"},
         },
         "title": "dBSI\n(larger values can be characteristic of burnt areas)",
     },
@@ -95,9 +95,9 @@ style_dndvi = {
         "end": "1",
         "ticks": ["-1", "0", "1"],
         "tick_labels": {
-            "-1.0": {"label": "<-1"},
+            "-1": {"label": "<-1"},
             "0": {"label": "0"},
-            "1.0": {"label": ">1"},
+            "1": {"label": ">1"},
         },
         "decimal_places": 0,
         "title": "dNDVI\n(smaller values can be characteristic of burnt areas)",
@@ -147,9 +147,9 @@ style_dnbr = {
         "end": "1",
         "ticks": ["-1", "0", "1"],
         "tick_labels": {
-            "-1.0": {"label": "<-1"},
+            "-1": {"label": "<-1"},
             "0": {"label": "0"},
-            "1.0": {"label": ">1"},
+            "1": {"label": ">1"},
         },
         "decimal_places": 0,
         "title": "dNBR\n(larger values can be characteristic of burnt areas)",
@@ -204,8 +204,8 @@ style_dnbr_classes = {
     ],
     "legend": {
         "title": "dNBR Classes",
-        "begin": "-1",
-        "end": "1",
+        "begin": "-1.0",
+        "end": "1.0",
         "ticks": ["-1.0", "0.1", "0.44", "1.0"],
         "tick_labels": {
             "-1.0": {"label": "<-1.0"},
