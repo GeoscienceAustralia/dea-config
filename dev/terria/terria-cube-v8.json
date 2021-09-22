@@ -57,7 +57,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat) Provisional - near real time",
+                            "name": "DEA Surface Reflectance (Landsat) (Provisional)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "ga_ls_ard_provisional_3",
@@ -86,7 +86,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2) Provisional - near real time",
+                            "name": "DEA Surface Reflectance (Sentinel-2) (Provisional)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_nrt_provisional_granule_nbar_t",
@@ -178,7 +178,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI) Provisional - near real time",
+                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI) (Provisional)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2a_nrt_provisional_granule_nbar_t",
@@ -207,7 +207,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI) Provisional - near real time",
+                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI) (Provisional)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2b_nrt_provisional_granule_nbar_t",
@@ -359,7 +359,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Landsat 8 OLI-TIRS) Provisional - near real time",
+                                    "name": "DEA Surface Reflectance (Landsat 8 OLI-TIRS) (Provisional)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls8c_ard_provisional_3",
@@ -388,7 +388,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Landst 7 ETM+) Provisional - near real time",
+                                    "name": "DEA Surface Reflectance (Landst 7 ETM+) (Provisional)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_ard_provisional_3",
