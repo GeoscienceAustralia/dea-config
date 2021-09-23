@@ -63,7 +63,7 @@ style_dndvi = {
         Normalized Difference Vegetation Index (NDVI) Normalized Difference Vegetation Index (NDVI) is used to detect green vegetation characteristics by identifying the difference between red/visible and near infrared (NIR) spectral bands.
         NDVI is calculated as: NDVI =  (NIR - RED)/(NIR + RED).
 
-        Delta NDVI (dNDVI) shows the change in vegetation characteristics between two events, the difference between a baseline (pre-NDVI) and a latter time (post-NDVI). The change (delta) in NDVI is calculated as: dNDVI = pre-ndvi - post-NDVI.
+        Delta NDVI (dNDVI) shows the change in vegetation characteristics between two events, the difference between a baseline (pre-NDVI) and a latter time (post-NDVI). In order to standardise dNDVI with the other metrics (where a larger value is characteristic of burn characteristics) the change (delta) in NDVI is calculated as: dNDVI = post-NDVI - pre-NDVI.
 
         This dNDVI product is based on two input datasets:
          1) The baseline (pre) NDVI is calculated on DEA Sentinel 2 Barest Earth (Roberts, et al. 2019).
@@ -89,7 +89,7 @@ style_dndvi = {
         }
     ],
     "range": [-1, 1],
-    "mpl_ramp": "PuOr",
+    "mpl_ramp": "PuOr_r",
     "legend": {
         "begin": "-1",
         "end": "1",
@@ -100,7 +100,7 @@ style_dndvi = {
             "1": {"label": ">1"},
         },
         "decimal_places": 0,
-        "title": "dNDVI\n(smaller values can be characteristic of burnt areas)",
+        "title": "dNDVI\n(larger values can be characteristic of burnt areas)",
     },
 }
 
@@ -202,18 +202,18 @@ style_dnbr_classes = {
         {"value": 0.44, "color": "#f8671a"},
         {"value": 1.0, "color": "#f8671a"},
     ],
-    "legend": {
-        "title": "dNBR Classes",
-        "begin": "-1.0",
-        "end": "1.0",
-        "ticks": ["-1.0", "0.1", "0.44", "1.0"],
-        "tick_labels": {
-            "-1.0": {"label": "<-1.0"},
-            "0.1": {"label": "0.1"},
-            "0.44": {"label": "0.44"},
-            "1.0": {"label": ">1.0"},
-        },
-    },
+    # "legend": {
+    #     "title": "dNBR Classes",
+    #     "begin": "-1.0",
+    #     "end": "1.0",
+    #     "ticks": ["-1.0", "0.1", "0.44", "1.0"],
+    #     "tick_labels": {
+    #         "-1.0": {"label": "<-1.0"},
+    #         "0.1": {"label": "0.1"},
+    #         "0.44": {"label": "0.44"},
+    #         "1.0": {"label": ">1.0"},
+    #     },
+    # },
 }
 
 layers = {
@@ -245,7 +245,7 @@ layers = {
             Vegetation
             Normalized Difference Vegetation Index (NDVI) is used to detect green vegetation characteristics by identifying the difference between red/visible and near infrared (NIR) spectral bands.
             NDVI is calculated as: NDVI = (NIR - RED)/(NIR + RED).
-            Delta NDVI (dNDVI) shows the change in vegetation characteristics between two events, the difference between a baseline (pre-NDVI) and a latter time (post-NDVI). The change (delta) in NDVI is calculated as: dNDVI = pre-NDVI - post-NDVI.
+            Delta NDVI (dNDVI) shows the change in vegetation characteristics between two events, the difference between a baseline (pre-NDVI) and a latter time (post-NDVI). However, in order to standardise dNDVI with the other metrics (where a larger value is characteristic of burn characteristics) the change (delta) is inversed. NDVI is calculated as: dNDVI = post-NDVI - pre-NDVI.
 
             Burnt area
             Normalized Burn Ratio (NBR) identifies areas that have the characteristics of being burnt. NBR looks at the relationship between near infrared (NIR) and short wave infrared (SWIR) spectral signatures. High SWIR reflectance values with low NIR reflectance values are indicative of an area that has been burnt by fire(s), while the opposite is seen in healthy vegetation.
