@@ -71,7 +71,7 @@ style_dndvi = {
         This dNDVI product is based on two input datasets:
          1) The baseline NDVI is calculated on DEA Sentinel 2 Barest Earth (Roberts, et al. 2019).
          2) The post event NDVI is calculated on the latest daily Sentinel-2 (A and B combined) Near Real-Time provisional data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
-        The dNDVI layer contains values between -1 and +1, with positive values being more indicative that the presence of green vegetation in an area has decreased, and therefore showing the characteristics of a burn. 
+        The dNDVI layer contains values between -1 and +1, with positive values being more indicative that the presence of green vegetation in an area has decreased, and therefore showing the characteristics of a burn.
         This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
 
         For service status information, see https://status.dea.ga.gov.au
@@ -121,7 +121,7 @@ style_dnbr = {
         Normally dNBR analysis is run on data from a clear pre-fire and a post-fire satellite scene. However, in order to rapidly identify areas that are characteristic of burns for all of Australia, and on a near real-time basis, this dNBR product is based on two input datasets:
          1) The baseline NBR is calculated on DEA Sentinel 2 Barest Earth (Roberts, et al. 2019).
          2) The post event NBR (NRT-NBR) is calculated on the latest daily Sentinel-2 (A and B combined) Near Real-Time provisional data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
-        
+
         The dNBR data is a general screening tool to identify areas that are likely to have undergone burn. dNBR is a basic metric that can be used to identify areas that show characteristics of burn, but there is no guarantee that values are precise. For example, Landcover change, such as deforestation or changes to water bodies, can often be identified as false positives.
 
         The delta NBR layer contains values between -1 and +1, with positive value being more indicative that an area has undergone a burn. This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
@@ -242,13 +242,13 @@ layers = {
             -	Normalized Burn Ratio (NBR)
             Change (delta) in each metric was calculated by differencing the baseline metric and the post event (NRT) metric. The delta layers contains values between -1 and +1, with positive values being more characterisitc of a burn.
 
-            These layers have been produced as input data into a burnt area vectorisor tool (link here when in production). This data is preliminary and provisional in nature and is still undergoing further development. 
+            These layers have been produced as input data into a burnt area vectorisor tool (link here when in production). This data is preliminary and provisional in nature and is still undergoing further development.
             These metrics should be used as a preliminary screening tool, and not an accurate identification of fire extent. These metrics should be used in combination with each other and can be used with other datasets to strengthen the agreement that the area has indeed been burnt. No decisions on life or property should be made based on this data.
 
             Bare Soil
             Bare Soil Index (BSI) identifies soil or bare-land characteristics by combining blue, red, near infrared (NIR), and short wave infrared (SWIR) spectral bands. SWIR and red spectral bands can be used to identify basic soil mineralogy while blue and NIR spectral bands can help to detect vegetation.
             BSI (Rikimaru and Miyatake 2002) is calculated as: BSI = ((SWIR2 + RED) - (NIR + BLUE)) / ((SWIR2 + RED) + (NIR + BLUE)).
-            Delta BSI (dBSI) shows the change in soil characteristics as the difference between a baseline BSI and a post event BSI (NRT-BSI). The change (delta) in BSI is calculated as: dBSI = (baseline-BSI - NRT-BSI) * -1. Delta BSI is multiplied by negative 1 in order to reverse the scaling so that it can be presented the same way as the other delta indexes, which all have positive values for areas that shows characteristics of being burnt. 
+            Delta BSI (dBSI) shows the change in soil characteristics as the difference between a baseline BSI and a post event BSI (NRT-BSI). The change (delta) in BSI is calculated as: dBSI = (baseline-BSI - NRT-BSI) * -1. Delta BSI is multiplied by negative 1 in order to reverse the scaling so that it can be presented the same way as the other delta indexes, which all have positive values for areas that shows characteristics of being burnt.
 
             Vegetation
             Normalized Difference Vegetation Index (NDVI) is used to detect green vegetation characteristics by identifying the difference between red/visible and near infrared (NIR) spectral bands (Huete and Jackson 1987).
