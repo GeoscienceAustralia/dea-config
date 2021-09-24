@@ -340,7 +340,7 @@ layers = {
             "feature_info": {
                 "include_custom": {
                     "description": {
-                        "function": class_description,
+                        "function": ows_refactored.land_and_vegetation.landcover.lc_class_desc.class_description,
                     }
                 }
             }
