@@ -1,6 +1,6 @@
-from ows_refactored.land_and_vegetation.landcover.lc_class_desc import class_description
+from ows_refactored.land_and_vegetation.landcover.lc_class_desc import \
+    class_description
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
-
 
 bands_landcover = {
     "level3": [],
