@@ -205,22 +205,22 @@ style_dnbr_classes = {
         {"value": 0.44, "color": "#f8671a"},
         {"value": 1.0, "color": "#f8671a"},
     ],
-    # "legend": {
-    #     "title": "dNBR Classes",
-    #     "begin": "-1.0",
-    #     "end": "1.0",
-    #     "ticks": ["-1.0", "0.1", "0.44", "1.0"],
-    #     "tick_labels": {
-    #         "-1.0": {"label": "<-1.0"},
-    #         "0.1": {"label": "0.1"},
-    #         "0.44": {"label": "0.44"},
-    #         "1.0": {"label": ">1.0"},
-    #     },
-    # },
+    "legend": {
+        "title": "dNBR Classes\n(larger positive values can be characteristic of burnt areas)",
+        "begin": "-1.0",
+        "end": "1.0",
+        "ticks": ["-1.0", "0.1", "0.44", "1.0"],
+        "tick_labels": {
+            "-1.0": {"label": "<-1.0"},
+            "0.1": {"label": "0.1"},
+            "0.44": {"label": "0.44"},
+            "1.0": {"label": ">1.0"},
+        },
+    },
 }
 
 layers = {
-    "title": "DEA Provisional Burnt Area Characteristic Layers (Sentinel 2) – near real time",
+    "title": "DEA Burnt Area Characteristic Layers (Sentinel 2, Provisional) – near real time",
     "abstract": "",
     "layers": [
         {
