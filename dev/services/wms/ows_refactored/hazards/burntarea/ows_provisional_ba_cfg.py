@@ -220,7 +220,7 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 layers = {
-    "title": "DEA Burnt Area Characteristic Layers (Sentinel 2, Provisional) – near real time",
+    "title": "DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)",
     "abstract": "",
     "layers": [
         {
