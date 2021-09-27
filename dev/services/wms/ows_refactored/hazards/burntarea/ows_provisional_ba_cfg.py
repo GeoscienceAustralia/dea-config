@@ -15,16 +15,15 @@ style_dbsi = {
         Bare Soil Index (BSI) identifies soil or bare-land characteristics by combining blue, red, near infrared (NIR), and short wave infrared (SWIR) spectral bands. SWIR and red spectral bands can be used to identify basic soil mineralogy while blue and NIR spectral bands can help to detect vegetation.
         BSI (Rikimaru and Miyatake 2002) is calculated as: BSI = ((SWIR2 + RED) - (NIR + BLUE)) / ((SWIR2 + RED) + (NIR + BLUE)).
 
-        Delta BSI (dBSI) shows a change in soil characteristics as the difference between a baseline (baseline-BSI) and post event (NRT-BSI). The change (delta) in BSI is calculated as: dBSI = (baseline-BSI - NRT-BSI) * -1 
+        Delta BSI (dBSI) shows a change in soil characteristics as the difference between a baseline (baseline-BSI) and post event (NRT-BSI). The change (delta) in BSI is calculated as: dBSI = (baseline-BSI - NRT-BSI) * -1.
         dBSI is multiplied by negative 1 in order to reverse the scale so that dBSI values are presented the same way as the other delta indexes, which both have positive values for areas that show burnt characteristics.
-        
+
         This dBSI product is based on two input datasets:
          1) The baseline BSI is calculated on DEA Sentinel 2 Barest Earth (Roberts, et al. 2019).
          2) The post event (NRT-BSI) is calculated on the latest daily Sentinel-2 (A and B combined) Near Real-Time provisional data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
-        The dBSI layer contains values between -1 and +1, with a positive value being more indicative that an area has increased exposure of bare soil, and therefore the characteristics a burn. 
+        The dBSI layer contains values between -1 and +1, with a positive value being more indicative that an area has increased exposure of bare soil, and therefore the characteristics a burn.
         This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
 
-        
         For service status information, see https://status.dea.ga.gov.au
         """,
     "needed_bands": ["delta_bsi"],
@@ -176,7 +175,7 @@ style_dnbr_classes = {
         Normally dNBR analysis is run on data from a clear pre-fire and a post-fire satellite scene. However, in order to rapidly identify areas that are characteristic of burns for all of Australia, and on a near real-time basis, this dNBR product is based on two input datasets:
          1) The baseline NBR is calculated on DEA Sentinel 2 Barest Earth (Roberts, et al. 2019).
          2) The post event NBR (NRT-NBR) is calculated on the latest daily Sentinel-2 (A and B combined) Near Real-Time provisional data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
-        
+
         This dNBR data is a general screening tool to identify areas that are likely to have undergone burn. dNBR is a basic metric that can be used to identify areas that show characteristics of burn, but there is no guarantee that values are precise. For example, Landcover change, such as deforestation or changes to water bodies, can often be identified as false positives.
 
         The delta NBR layer contains values between -1 and +1, with positive value being more indicative that an area has undergone a burn. This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
