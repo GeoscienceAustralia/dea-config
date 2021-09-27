@@ -335,6 +335,13 @@ layers = {
                 "default_style": "canopyco",
                 "styles": [style_c2_level4_canopyco, style_c2_level4_lifeform, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
             },
+            "feature_info": {
+                "include_custom": {
+                    "description": {
+                        "function": "ows_refactored.land_and_vegetation.landcover.lc_class_desc.class_description",
+                    }
+                }
+            }
         }
     ]
 }
