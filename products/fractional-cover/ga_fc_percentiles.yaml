@@ -1,0 +1,62 @@
+name: ga_fc_percentiles
+description: Landsat Fractional Cover percentile 30 metre 96km tile Australian Albers Equal Area projection (EPSG:3577)
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata: 
+  product:
+    name: ga_fc_percentiles
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: fc
+
+measurements:
+  - name: pv_pc_10
+    dtype: uint8
+    units: percent
+    nodata: 255
+    
+  - name: pv_pc_50
+    dtype: uint8
+    units: percent
+    nodata: 255
+
+  - name: pv_pc_90
+    dtype: uint8
+    units: percent
+    nodata: 255
+  
+  - name: bs_pc_10
+    dtype: uint8
+    units: percent
+    nodata: 255
+  
+  - name: bs_pc_50
+    dtype: uint8
+    units: percent
+    nodata: 255
+  
+  - name: bs_pc_90
+    dtype: uint8
+    units: percent
+    nodata: 255
+  
+  - name: npv_pc_10
+    dtype: uint8
+    units: percent
+    nodata: 255
+  
+  - name: npv_pc_50
+    dtype: uint8
+    units: percent
+    nodata: 255
+  
+  - name: npv_pc_90
+    dtype: uint8
+    units: percent
+    nodata: 255
+
+  - name: qa
+    dtype: uint8
+    units: percent
+    nodata: 255
