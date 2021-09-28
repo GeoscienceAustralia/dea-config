@@ -48,11 +48,11 @@ For service status information, see https://status.dea.ga.gov.au
         "end": "1",
         "ticks": ["-1", "0", "1"],
         "tick_labels": {
-            "-1": {"label": "<-1"},
+            "-1": {"label": "-1"},
             "0": {"label": "0"},
-            "1": {"label": ">1"},
+            "1": {"label": "1"},
         },
-        "title": "dBSI\n(larger positive values can be characteristic of burnt areas)",
+        "title": "dBSI\n(larger positive values can be characteristic of burns)",
     },
 }
 
@@ -97,12 +97,12 @@ For service status information, see https://status.dea.ga.gov.au
         "end": "1",
         "ticks": ["-1", "0", "1"],
         "tick_labels": {
-            "-1": {"label": "<-1"},
+            "-1": {"label": "-1"},
             "0": {"label": "0"},
-            "1": {"label": ">1"},
+            "1": {"label": "1"},
         },
         "decimal_places": 0,
-        "title": "dNDVI\n(larger positive values can be characteristic of burnt areas)",
+        "title": "dNDVI\n(larger positive values can be characteristic of burns)",
     },
 }
 
@@ -149,12 +149,12 @@ For service status information, see https://status.dea.ga.gov.au
         "end": "1",
         "ticks": ["-1", "0", "1"],
         "tick_labels": {
-            "-1": {"label": "<-1"},
+            "-1": {"label": "-1"},
             "0": {"label": "0"},
-            "1": {"label": ">1"},
+            "1": {"label": "1"},
         },
         "decimal_places": 0,
-        "title": "dNBR\n(larger positive values can be characteristic of burnt areas)",
+        "title": "dNBR\n(larger positive values can be characteristic of burns)",
     },
 }
 
@@ -206,15 +206,15 @@ For service status information, see https://status.dea.ga.gov.au
         {"value": 1.0, "color": "#f8671a"},
     ],
     "legend": {
-        "title": "dNBR Classes",
+        "title": "dNBR Classes\n(larger positive values can be characteristic of burns)",
         "begin": "-1.0",
         "end": "1.0",
         "ticks": ["-1.0", "0.1", "0.44", "1.0"],
         "tick_labels": {
-            "-1.0": {"label": "<-1.0"},
+            "-1.0": {"label": "-1.0"},
             "0.1": {"label": "0.1"},
             "0.44": {"label": "0.44"},
-            "1.0": {"label": ">1.0"},
+            "1.0": {"label": "1.0"},
         },
     },
 }
@@ -224,7 +224,7 @@ layers = {
     "abstract": "",
     "layers": [
         {
-            "title": "",
+            "title": "DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)",
             "name": "ga_s2_ba_provisional_3",
             "abstract": """
 Bushfires pose a serious and increasing threat to Australia. The detection and mapping of burns have many applications to support communities and ecosystems impacted by fire. However, the identification of bushfire burn using Earth Observation is often manual, can come with a significant time delay, and at a relatively small scale. Digital Earth Australia (DEA) offer a provisional and preliminary change detection data product, for all of Australia, which uses same day satellite data and cloud-based infrastructure to automatically and rapidly identify areas that show burn characteristics.
@@ -238,6 +238,7 @@ The following metrics were calculated to identify burnt area characteristics:
 -	Bare Soil Index (BSI)
 -	Normalized Difference Vegetation Index (NDVI)
 -	Normalized Burn Ratio (NBR)
+
 Change (delta) in each metric was calculated by differencing the baseline metric and the post event (NRT) metric. Each delta layer contains values between -1 and +1, with positive values being more characterisitc of a burn.
 
 These layers have been produced as input data into a burnt area vectorisor tool (link will be provided when in production). This data is preliminary and provisional in nature and is still undergoing further development.
