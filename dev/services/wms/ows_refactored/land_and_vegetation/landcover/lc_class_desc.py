@@ -130,11 +130,13 @@ bare_grad_labels = {
     15: "Bare areas, unvegetated",
 }
 
+
 def class_labels(data):
     return {
         "level3_label": level3_labels[data["level3"]],
         "level4_label": level4_labels[data["level4"]],
     }
+
 
 def env_descriptor_labels(data):
     return {
