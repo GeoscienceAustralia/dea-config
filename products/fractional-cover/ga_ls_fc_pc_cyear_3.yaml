@@ -6,8 +6,6 @@ metadata_type: eo3
 metadata: 
   product:
     name: ga_ls_fc_pc_cyear_3
-  properties:
-    odc:product_family: fc
 
 measurements:
   - name: pv_pc_10
