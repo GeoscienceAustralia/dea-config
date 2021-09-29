@@ -1,7 +1,7 @@
 plugin: fc-percentiles # this can help system find the relative plugin and plugin version
 product:
-  name: fc_percentile
-  short_name: fc_percentile
+  name: ga_ls_fc_pc_cyear_3
+  short_name: ga_ls_fc_pc_cyear_3
   version: 1.6.0
   product_family: fc_percentile
 
@@ -69,7 +69,3 @@ s3_acl: public-read
 # Generic product attributes
 cog_opts:
   zlevel: 9
-  overrides:
-    rgba:
-      compress: JPEG
-      jpeg_quality: 90
