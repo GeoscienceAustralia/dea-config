@@ -7,7 +7,6 @@ metadata:
   product:
     name: ga_ls_fc_pc_cyear_3
   properties:
-    odc:file_format: GeoTIFF
     odc:product_family: fc
 
 measurements:
