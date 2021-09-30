@@ -19,6 +19,7 @@ style_c2_level3 = {
     "abstract": "Standardised colouring of Level 3 land cover classes",
     "value_map": {
         "level3": [
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Cultivated Terrestrial Vegetation", 'abstract': "", 'values': [111], 'color': '#ACBC2D', 'alpha': 1},
             {'title': "Natural Terrestrial Vegetation", 'abstract': "", 'values': [112], 'color': '#0E7912', 'alpha': 1},
             # {'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
@@ -45,6 +46,7 @@ style_c2_level4_lifeform = {
     "abstract": "Lifeform (L4): woody / herbaceous",
     "value_map": {
         "lifeform_veg_cat_l4a": [
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Woody", 'abstract': "", 'values': [1], 'color': '#0E7912', 'alpha': 1},
             {'title': "Herbaceous", 'abstract': "", 'values': [2], 'color': '#77A71E', 'alpha': 1}
         ]
@@ -65,6 +67,7 @@ style_c2_level4_canopyco = {
     "abstract": "Canopy Cover (L4)",
     "value_map": {
         'canopyco_veg_cat_l4d': [
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Closed Vegetation", 'abstract': "(> 65 %)", 'values': [10], 'color': '#0E7912', 'alpha': 1},
             {'title': "Open Vegetation", 'abstract': "(40 to 65 %)", 'values': [12], 'color': '#2D8D2F', 'alpha': 1},
             {'title': "Open Vegetation", 'abstract': "(15 to 40 %)", 'values': [13], 'color': '#50A052', 'alpha': 1},
@@ -88,6 +91,7 @@ style_c2_level4_watersea = {
     "abstract": "Water Seasonality (L4) in vegetated areas",
     "value_map": {
         "watersea_veg_cat_l4a_au": [
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
             {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
         ]
@@ -101,6 +105,7 @@ style_c2_level4_waterper = {
     "abstract": "Water persistence in non-vegetated areas",
     "value_map": {
         "waterper_wat_cat_l4d_au": [
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Perennial", 'abstract': "(> 9 months)", 'values': [1], 'color': '#1b55ba', 'alpha': 1},
             {'title': "Non-perennial", 'abstract': "(7 to 9 months)", 'values': [7], 'color': '#3479C9', 'alpha': 1},
             {'title': "Non-perennial", 'abstract': "(4 to 6 months)", 'values': [8], 'color': '#4F9DD9', 'alpha': 1},
@@ -116,6 +121,7 @@ style_c2_level4_baregrad = {
     "abstract": "Level of vegetation in predominantly bare areas",
     "value_map": {
         "baregrad_phy_cat_l4d_au": [
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Sparsely Vegetated", 'abstract': "", 'values': [10], 'color': '#FFE68C', 'alpha': 1},
             {'title': "Very Sparsely Vegetated", 'abstract': "", 'values': [12], 'color': '#FAD26E', 'alpha': 1},
             {'title': "Bare Areas, Unvegetated", 'abstract': "", 'values': [15], 'color': '#F3AB69', 'alpha': 1}
@@ -137,7 +143,8 @@ style_c2_level4 = {
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
-            {'title': '', 'abstract': '', 'values': [1], 'color': '#97bb1a', 'alpha': 1},
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': 'Cultivated Terrestrial Vegetated', 'abstract': '', 'values': [1], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Woody', 'abstract': '', 'values': [2], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Herbaceous', 'abstract': '', 'values': [3], 'color': '#d1e033', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Closed (> 65 %)', 'abstract': '', 'values': [4], 'color': '#c5a847', 'alpha': 1},
@@ -276,7 +283,7 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
+                "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
@@ -317,7 +324,7 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
+                "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
