@@ -117,7 +117,7 @@ For service status information, see https://status.dea.ga.gov.au
             "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
         },
         {
-            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 8 OLI-TIRS)",
+            "title": "DEA Surface Reflectance TMAD Calendar Year (Landsat 8 OLI-TIRS)",
             "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 8 OLI-TIRS)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -153,7 +153,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         },
         {
-            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 7 ETM+)",
+            "title": "DEA Surface Reflectance TMAD Calendar Year (Landsat 7 ETM+)",
             "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 7 ETM+)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -189,7 +189,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         },
         {
-            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 5 TM)",
+            "title": "DEA Surface Reflectance TMAD Calendar Year (Landsat 5 TM)",
             "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 5 TM)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
