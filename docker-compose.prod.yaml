@@ -19,6 +19,7 @@ services:
       - ./products:/env/config/products
       - ./check-product.sh:/env/config/check-product.sh
       - ./workspaces/prod-products.csv:/env/config/products.csv
+    command: tail -f /dev/null
 
   postgres:
     build: docker/database/
