@@ -24,11 +24,11 @@ services:
     command: tail -f /dev/null
 
   postgres:
-    build: docker/database/
+    image: kartoza/postgis:13-3.1
     environment:
       - POSTGRES_DB=opendatacube
       - POSTGRES_PASSWORD=opendatacubepassword
       - POSTGRES_USER=opendatacube
-    ports:
-      - "5432:5432"
+    # ports:
+    #   - "5432:5432"
     restart: always
