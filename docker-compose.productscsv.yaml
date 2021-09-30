@@ -17,8 +17,10 @@ services:
       - postgres
     volumes:
       - ./products:/env/config/products
-      - ./check-product.sh:/env/config/check-product.sh
-      - ./workspaces/prod-products.csv:/env/config/products.csv
+      - ./check-dev-product-csv.sh:/env/config/check-dev-product-csv.sh
+      - ./check-prod-product-csv.sh:/env/config/check-prod-product-csv.sh
+      - ./workspaces/prod-products.csv:/env/config/prod-products.csv
+      - ./workspaces/dev-products.csv:/env/config/dev-products.csv
     command: tail -f /dev/null
 
   postgres:
@@ -28,5 +30,5 @@ services:
       - POSTGRES_PASSWORD=opendatacubepassword
       - POSTGRES_USER=opendatacube
     ports:
-      - "5432:5432"
+      - "5431:5432"
     restart: always
