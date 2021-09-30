@@ -9,6 +9,7 @@ on:
       - 'docker-compose.productscsv.yaml'
       - 'check-dev-product-csv.sh'
       - 'check-prod-product-csv.sh'
+      - 'docker/database/**'
 
   pull_request:
     branches: [ master ]
@@ -19,6 +20,7 @@ on:
       - 'docker-compose.productscsv.yaml'
       - 'check-dev-product-csv.sh'
       - 'check-prod-product-csv.sh'
+      - 'docker/database/**'
 
 jobs:
   build:
