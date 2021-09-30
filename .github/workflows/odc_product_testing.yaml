@@ -35,13 +35,13 @@ jobs:
     - name: Run csv testing (Dev)
       run: |
         docker-compose -f docker-compose.productscsv.yaml up -d
-        docker-compose -f docker-compose.productscsv.yaml exec -T product /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.productscsv.yaml exec -T product /bin/sh -c "cd /env/config; ./check-dev-product-csv.sh"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-dev-product-csv.sh"
         docker-compose -f docker-compose.productscsv.yaml down
 
     - name: Run csv testing (Prod)
       run: |
         docker-compose -f docker-compose.productscsv.yaml up -d
-        docker-compose -f docker-compose.productscsv.yaml exec -T product /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.productscsv.yaml exec -T product /bin/sh -c "cd /env/config; ./check-prod-product-csv.sh"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-prod-product-csv.sh"
         docker-compose -f docker-compose.productscsv.yaml down

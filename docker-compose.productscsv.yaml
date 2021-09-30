@@ -3,7 +3,7 @@ version: '3.4'
 
 # Default compose will create an ows image, with dev settings and connect to a local db
 services:
-  product:
+  datacube:
     image: opendatacube/datacube-index:latest
     environment:
       # # Defaults are defined in .env file
@@ -24,11 +24,9 @@ services:
     command: tail -f /dev/null
 
   postgres:
-    image: kartoza/postgis:13-3.1
+    image: postgres:12.6-alpine
+    ports:
+      - "5434:5432"
     environment:
-      - POSTGRES_DB=opendatacube
-      - POSTGRES_PASSWORD=opendatacubepassword
-      - POSTGRES_USER=opendatacube
-    # ports:
-    #   - "5432:5432"
+      POSTGRES_PASSWORD: opendatacubepassword
     restart: always
