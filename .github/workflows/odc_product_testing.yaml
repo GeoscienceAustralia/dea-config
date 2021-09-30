@@ -27,5 +27,5 @@ jobs:
       run: |
         docker-compose -f docker-compose.prod.yaml up -d
         docker-compose -f docker-compose.prod.yaml exec -T product /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.prod.yaml exec -T product /bin/sh -c "cd /env/config; ./compare-cfg.sh"
+        docker-compose -f docker-compose.prod.yaml exec -T product /bin/sh -c "cd /env/config; ./check-product.sh"
         docker-compose -f docker-compose.prod.yaml down
