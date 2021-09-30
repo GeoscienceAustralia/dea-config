@@ -10,52 +10,52 @@ metadata:
 measurements:
   - name: pv_pc_10
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
     
   - name: pv_pc_50
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
 
   - name: pv_pc_90
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
   
   - name: bs_pc_10
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
   
   - name: bs_pc_50
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
   
   - name: bs_pc_90
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
   
   - name: npv_pc_10
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
   
   - name: npv_pc_50
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
   
   - name: npv_pc_90
     dtype: uint8
-    units: percent
+    units: 'percent'
     nodata: 255
 
   - name: qa
     dtype: uint8
-    units: 1
+    units: '1'
     nodata: 255
     flags_definition:
       qa:
