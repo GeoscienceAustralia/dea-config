@@ -201,6 +201,57 @@
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "PGh872"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 8 OLI-TIRS)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls8_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls8_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "453ety"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 7 ETM+)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls7_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls7_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "ert896"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 5 TM)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls5_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls5_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "84d5er"
                                 }
                             ]
                         },
@@ -2489,6 +2540,57 @@
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 5 satellite images"
                                     ]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 8 OLI-TIRS)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls8_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls8_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "LHG659"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 7 ETM+)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls7_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls7_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "d8fgdf"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 5 TM)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls5_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls5_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "dfk676"
                                 }
                             ],
                             "shareKeys": [
