@@ -1,0 +1,31 @@
+
+version: '3.4'
+
+# Default compose will create an ows image, with dev settings and connect to a local db
+services:
+  product:
+    image: opendatacube/datacube-index:latest
+    environment:
+      # # Defaults are defined in .env file
+      DB_HOSTNAME: postgres
+      DB_USERNAME: opendatacube
+      DB_PASSWORD: opendatacubepassword
+      DB_DATABASE: opendatacube
+      DB_PORT: 5432
+      AWS_DEFAULT_REGION: ap-southeast-2
+    depends_on:
+      - postgres
+    volumes:
+      - ./products:/env/config/products
+      - ./check-product.sh:/env/config/check-product.sh
+      - ./workspaces/prod-products.csv:/env/config/products.csv
+
+  postgres:
+    build: docker/database/
+    environment:
+      - POSTGRES_DB=opendatacube
+      - POSTGRES_PASSWORD=opendatacubepassword
+      - POSTGRES_USER=opendatacube
+    ports:
+      - "5432:5432"
+    restart: always

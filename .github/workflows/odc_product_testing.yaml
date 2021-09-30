@@ -1,0 +1,31 @@
+name: PRODUCT DEFINITION Test
+
+on:
+  push:
+    paths:
+      - 'products/**'
+      - 'workspaces/prod-products.csv'
+      - .github/workflows/odc_product_testing.yaml
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'products/**'
+      - 'workspaces/prod-products.csv'
+      - .github/workflows/odc_product_testing.yaml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+
+    - name: Run product testing
+      run: |
+        docker-compose -f docker-compose.prod.yaml up -d
+        docker-compose -f docker-compose.prod.yaml exec -T product /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.prod.yaml exec -T product /bin/sh -c "cd /env/config; ./compare-cfg.sh"
+        docker-compose -f docker-compose.prod.yaml down
