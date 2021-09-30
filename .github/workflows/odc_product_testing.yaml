@@ -5,13 +5,16 @@ on:
     paths:
       - 'products/**'
       - 'workspaces/prod-products.csv'
-      - .github/workflows/odc_product_testing.yaml
+      - '.github/workflows/odc_product_testing.yaml'
+      - 'docker-compose.prod.yaml'
+
   pull_request:
     branches: [ master ]
     paths:
       - 'products/**'
       - 'workspaces/prod-products.csv'
-      - .github/workflows/odc_product_testing.yaml
+      - '.github/workflows/odc_product_testing.yaml'
+      - 'docker-compose.prod.yaml'
 
 jobs:
   build:
