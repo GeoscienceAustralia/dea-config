@@ -30,5 +30,5 @@ services:
       - POSTGRES_PASSWORD=opendatacubepassword
       - POSTGRES_USER=opendatacube
     ports:
-      - "5431:5432"
+      - "5432:5432"
     restart: always
