@@ -6,7 +6,7 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 s2b_layer = {
     "name": "s2b_ard_granule_nbar_t",
-    "title": "DEA Surface Reflectance NBART (Sentinel-2B MSI)",
+    "title": "DEA Surface Reflectance (Sentinel-2B MSI)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2B MSI)
 This product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.
 
@@ -51,7 +51,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 s2a_layer = {
     "name": "s2a_ard_granule_nbar_t",
-    "title": "DEA Surface Reflectance NBART (Sentinel-2A MSI)",
+    "title": "DEA Surface Reflectance (Sentinel-2A MSI)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2A MSI)
 This product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.
 
