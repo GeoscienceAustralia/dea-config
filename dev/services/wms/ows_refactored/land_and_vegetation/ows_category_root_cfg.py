@@ -15,7 +15,7 @@ category_layers = {
             "type": "python",
         },
         {
-            "title": "Barest Earth",
+            "title": "GA Barest Earth",
             "abstract": "",
             "layers": [
                 {

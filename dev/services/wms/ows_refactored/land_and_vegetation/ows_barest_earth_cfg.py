@@ -5,7 +5,7 @@ from ows_refactored.land_and_vegetation.style_lav_cfg import \
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 layers = {
-    "title": "Barest Earth Sentinel-2 satellite images",
+    "title": "GA Barest Earth (Sentinel-2)",
     "name": "s2_barest_earth",
     "abstract": """
 Abstract
