@@ -57,7 +57,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real Time)",
+                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_nrt_granule_nbar_t",
@@ -443,7 +443,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real-Time)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2a_nrt_granule_nbar_t",
@@ -472,7 +472,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real-Time)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2b_nrt_granule_nbar_t",
@@ -1460,7 +1460,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Low Tide Imagery",
+                                    "name": "DEA Low Tide Imagery (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "low_tide_composite",
@@ -1474,7 +1474,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA High Tide Imagery",
+                                    "name": "DEA High Tide Imagery (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "high_tide_composite",
@@ -2381,7 +2381,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real Time)",
+                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
                             "url": "https://ows.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_nrt_granule_nbar_t",
@@ -2797,7 +2797,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real-Time)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2a_nrt_granule_nbar_t",
@@ -2829,7 +2829,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real-Time)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2b_nrt_granule_nbar_t",
@@ -3920,7 +3920,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Low Tide Imagery",
+                                    "name": "DEA Low Tide Imagery (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "low_tide_composite",
@@ -3937,7 +3937,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA High Tide Imagery",
+                                    "name": "DEA High Tide Imagery (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "high_tide_composite",
