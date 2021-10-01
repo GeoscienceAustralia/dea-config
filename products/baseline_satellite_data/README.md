@@ -8,10 +8,11 @@ total products defined: 2
 ## geomedian-au
 product owner: ARD
 yaml owner: CORE TEAM
-total products defined: 3
+total products defined: 4
 - `ls8_nbart_geomedian_annual`
 - `ls7_nbart_geomedian_annual`
 - `ls5_nbart_geomedian_annual`
+- `ga_ls8c_nbart_gm_cyear_3`
 
 ## nrt
 product owner: ARD
