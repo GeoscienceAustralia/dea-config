@@ -9,7 +9,7 @@ for prod_def_yaml in $(find /env/config/products -name '*.yaml'); do
     fi
 done
 
-if [ $(datacube product list | wc -l) -ne 65 ]; then
+if [ $(datacube product list | wc -l) -ne 62 ]; then
      exit 1
 fi
 
