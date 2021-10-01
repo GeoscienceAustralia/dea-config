@@ -4,23 +4,17 @@ on:
   push:
     paths:
       - 'products/**'
-      - 'workspaces/prod-products.csv'
       - '.github/workflows/odc_product_testing.yaml'
       - 'docker-compose.productscsv.yaml'
-      - 'check-dev-product-csv.sh'
-      - 'check-prod-product-csv.sh'
-      - 'docker/database/**'
+      - 'check-product-definitions.sh'
 
   pull_request:
     branches: [ master ]
     paths:
       - 'products/**'
-      - 'workspaces/prod-products.csv'
       - '.github/workflows/odc_product_testing.yaml'
       - 'docker-compose.productscsv.yaml'
-      - 'check-dev-product-csv.sh'
-      - 'check-prod-product-csv.sh'
-      - 'docker/database/**'
+      - 'check-product-definitions.sh'
 
 jobs:
   build:
@@ -38,20 +32,4 @@ jobs:
         docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
         docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
         docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-product-definitions.sh"
-        docker-compose -f docker-compose.productscsv.yaml down
-
-    - name: Run csv testing (Dev)
-      run: |
-        docker-compose -f docker-compose.productscsv.yaml up -d
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-dev-product-csv.sh"
-        docker-compose -f docker-compose.productscsv.yaml down
-
-    - name: Run csv testing (Prod)
-      run: |
-        docker-compose -f docker-compose.productscsv.yaml up -d
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-prod-product-csv.sh"
         docker-compose -f docker-compose.productscsv.yaml down
