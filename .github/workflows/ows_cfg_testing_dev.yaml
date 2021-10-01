@@ -4,12 +4,16 @@ on:
   push:
     paths:
       - 'dev/services/wms/**'
-      - .github/workflows/ows_cfg_testing.yaml
+      - .github/workflows/ows_cfg_testing_dev.yaml
+      - 'docker/database/**'
+      - 'docker-compose.ows.yaml'
   pull_request:
     branches: [ master ]
     paths:
       - 'dev/services/wms/**'
-      - .github/workflows/ows_cfg_testing.yaml
+      - .github/workflows/ows_cfg_testing_dev.yaml
+      - 'docker/database/**'
+      - 'docker-compose.ows.yaml'
 
 jobs:
   build:
