@@ -33,6 +33,7 @@ output:
     collection_number: 3
     naming_conventions: dea_c3
   properties:
+    odc:product: ga_s2_ba_provisional_3
     dea:dataset_maturity: interim
     dea:product_maturity: provisional
     eo:instrument: MSI

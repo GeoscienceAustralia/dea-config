@@ -1,4 +1,4 @@
-level3_descriptions = {
+level3_labels = {
     0: "No data",
     111: "Cultivated Terrestrial Vegetation",
     112: "Natural Terrestrial Vegetation",
@@ -9,7 +9,7 @@ level3_descriptions = {
     220: "Water"
 }
 
-level4_descriptions = {
+level4_labels = {
     0: "No data",
     1: 'Cultivated Terrestrial Vegetated',
     3: 'Cultivated Terrestrial Vegetated: Herbaceous',
@@ -93,9 +93,56 @@ level4_descriptions = {
     104: 'Water: Non-perennial (1 to 3 months)',
 }
 
+lifeform_labels = {
+    0: "No data",
+    1: "Woody",
+    2: "Herbaceous",
+}
 
-def class_description(data):
+
+cover_labels = {
+    0: "No data",
+    10: "Closed (> 65 %)",
+    12: "Open (40 to 65 %)",
+    13: "Open (15 to 40 %)",
+    15: "Sparse (4 to 15 %)",
+    16: "Scattered (1 to 4 %)",
+}
+
+water_seasonality_labels = {
+    0: "No data",
+    1: "Water > 3 months (semi-) permenant",
+    2: "Water < 3 months (temporary or seasonal)",
+}
+
+water_persistence_labels = {
+    0: "No data",
+    1: "Perennial (> 9 months)",
+    7: "Non-perennial (7 to 9 months)",
+    8: "Non-perennial (4 to 6 months)",
+    9: "Non-perennial (1 to 3 months)",
+}
+
+bare_grad_labels = {
+    0: "No data",
+    10: "Sparsely vegetated",
+    12: "Very sparsely vegetated",
+    15: "Bare areas, unvegetated",
+}
+
+
+def class_labels(data):
     return {
-        "level3_desc": level3_descriptions[data["level3"]],
-        "level4_desc": level4_descriptions[data["level4"]],
+        "level3_label": level3_labels[data["level3"]],
+        "level4_label": level4_labels[data["level4"]],
+    }
+
+
+def env_descriptor_labels(data):
+    return {
+        "lifeform_label": lifeform_labels[data["lifeform"]],
+        "canopyco_label": cover_labels[data["canopy_cover"]],
+        "watersea_label": water_seasonality_labels[data["water_seasonality"]],
+        "waterper_label": water_persistence_labels[data["water_persistence"]],
+        "baregrad_label": bare_grad_labels[data["bare_gradation"]],
     }
