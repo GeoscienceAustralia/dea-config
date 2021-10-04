@@ -1,5 +1,5 @@
 category_layers = {
-    "title": "Sentinel-2 satellite images",
+    "title": "DEA Surface Reflectance (Sentinel-2)",
     "abstract": "",
     "layers": [
         {
