@@ -9,13 +9,6 @@ metadata:
   product:
     name: ga_ls8c_nbart_gm_cyear_3
 
-  product_type: surface_reflectance_statistical_summary
-  format:
-    name: 'GeoTIFF'
-  instrument:
-    name: 'OLI'
-  platform:
-    code: 'LANDSAT_8'
 measurements:
   - name: blue
     dtype: int16
