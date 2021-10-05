@@ -1,15 +1,14 @@
 name: ga_ls5t_nbart_gm_cyear_3
 description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain, Landsat 5 Geomedian Calendar Year Collection 3
-metadata_type: eo
+metadata_type: eo3
 
 metadata:
-  product_type: surface_reflectance_statistical_summary
-  format:
-    name: 'GeoTIFF'
-  instrument:
-    name: 'TM'
-  platform:
-    code: 'LANDSAT_5'
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: geomedian
+  product:
+    name: ga_ls5t_nbart_gm_cyear_3
+
 measurements:
   - name: blue
     dtype: int16
