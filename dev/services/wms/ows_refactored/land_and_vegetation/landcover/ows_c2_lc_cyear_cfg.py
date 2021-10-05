@@ -19,7 +19,7 @@ style_c2_level3 = {
     "abstract": "Standardised colouring of Level 3 land cover classes",
     "value_map": {
         "level3": [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0, },
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Cultivated Terrestrial Vegetation", 'abstract': "", 'values': [111], 'color': '#ACBC2D', 'alpha': 1},
             {'title': "Natural Terrestrial Vegetation", 'abstract': "", 'values': [112], 'color': '#0E7912', 'alpha': 1},
             # {'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
@@ -143,7 +143,8 @@ style_c2_level4 = {
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
-            {'title': '', 'abstract': '', 'values': [1], 'color': '#97bb1a', 'alpha': 1},
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': 'Cultivated Terrestrial Vegetated', 'abstract': '', 'values': [1], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Woody', 'abstract': '', 'values': [2], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Herbaceous', 'abstract': '', 'values': [3], 'color': '#d1e033', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Closed (> 65 %)', 'abstract': '', 'values': [4], 'color': '#c5a847', 'alpha': 1},
@@ -282,7 +283,7 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
+                "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
@@ -323,7 +324,7 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
+                "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
