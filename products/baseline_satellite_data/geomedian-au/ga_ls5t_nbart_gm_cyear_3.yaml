@@ -7,7 +7,7 @@ metadata:
   format:
     name: 'GeoTIFF'
   instrument:
-    name: 'OLI'
+    name: 'TM'
   platform:
     code: 'LANDSAT_5'
 measurements:

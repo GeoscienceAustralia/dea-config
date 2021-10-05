@@ -7,7 +7,7 @@ metadata:
   format:
     name: 'GeoTIFF'
   instrument:
-    name: 'OLI'
+    name: 'ETM'
   platform:
     code: 'LANDSAT_7'
 measurements:
