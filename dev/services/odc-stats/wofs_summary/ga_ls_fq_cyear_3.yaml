@@ -1,7 +1,7 @@
 plugin: wofs-summary # this can help system find the relative plugin and plugin version
 product:
-  name: ga_ls_wo_summary
-  short_name: ga_ls_wo_summary
+  name: ga_ls_fq_cyear_3
+  short_name: ga_ls_fq_cyear_3
   version: 1.6.0
   product_family: wo_summary
 
