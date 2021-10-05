@@ -2,7 +2,7 @@ plugin: gm-ls # this can help system find the relative plugin and plugin version
 product:
   name: ga_ls8c_nbart_gm_cyear_3
   short_name: ga_ls8c_nbart_gm_cyear_3
-  version: 4.0.0
+  version: 3.0.0
   product_family: geomedian
 
   # -- EO Dataset3 relative section --
