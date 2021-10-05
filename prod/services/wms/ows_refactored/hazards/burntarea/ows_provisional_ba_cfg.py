@@ -261,6 +261,7 @@ These metrics should be used as a preliminary screening tool, and not an accurat
 
 
 **Bare Soil**
+
 Bare Soil Index (BSI) identifies soil or bare-land characteristics by combining blue, red, near infrared (NIR), and short wave infrared (SWIR) spectral bands. SWIR and red spectral bands can be used to identify basic soil mineralogy while blue and NIR spectral bands can help to detect vegetation.
 
 BSI (Rikimaru et al. 2002) is calculated as: BSI = ((SWIR2 + RED) - (NIR + BLUE)) / ((SWIR2 + RED) + (NIR + BLUE)).
@@ -269,6 +270,7 @@ Delta BSI (dBSI) shows the change in soil characteristics as the difference betw
 
 
 **Vegetation**
+
 Normalized Difference Vegetation Index (NDVI) is used to detect green vegetation characteristics by identifying the difference between red/visible and near infrared (NIR) spectral bands (Huete and Jackson 1987).
 
 NDVI is calculated as: NDVI = (NIR - RED)/(NIR + RED).
@@ -277,6 +279,7 @@ Delta NDVI (dNDVI) shows the change in vegetation characteristics as the differe
 
 
 **Burnt area**
+
 Normalized Burn Ratio (NBR) identifies areas that have the characteristics of being burnt. NBR looks at the relationship between near infrared (NIR) and short wave infrared (SWIR) spectral signatures. High SWIR reflectance values with low NIR reflectance values are indicative of an area that has been burnt by fire(s), while the opposite is seen in healthy vegetation.
 
 NBR is calculated as: NBR = (NIR – SWIR2) / (NIR + SWIR2).
