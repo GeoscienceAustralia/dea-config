@@ -3,6 +3,12 @@ description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrai
 metadata_type: eo
 
 metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: geomedian
+  product:
+    name: ga_ls8c_nbart_gm_cyear_3
+
   product_type: surface_reflectance_statistical_summary
   format:
     name: 'GeoTIFF'
