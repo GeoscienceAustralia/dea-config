@@ -129,9 +129,6 @@ For service status information, see https://status.dea.ga.gov.au""",
         "always_fetch_bands": [],
         "manual_merge": False,
     },
-    "wcs": {
-        "default_bands": ["nidem"],
-    },
     "styling": {
         "default_style": "NIDEM",
         "styles": [

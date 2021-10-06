@@ -51,8 +51,5 @@ IEEE Transactions on Geoscience and Remote Sensing 55 (11), 6254-6264
         "always_fetch_bands": [],
         "manual_merge": False,
     },
-    "wcs": {
-        "default_bands": ["red", "green", "blue"],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_barest_earth_list},
 }

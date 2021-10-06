@@ -295,9 +295,6 @@ layers = {
             #         "ignore_info_flags": [],
             #     }
             # ],
-            "wcs": {
-                "default_bands": ["level4"],
-            },
             "styling": {
                 "default_style": "level4",
                 "styles": [style_c2_level4, style_c2_level3],
@@ -336,9 +333,6 @@ layers = {
             #         "ignore_info_flags": [],
             #     }
             # ],
-            "wcs": {
-                "default_bands": ["canopyco_veg_cat_l4d"],
-            },
             "styling": {
                 "default_style": "canopyco",
                 "styles": [style_c2_level4_canopyco, style_c2_level4_lifeform, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
