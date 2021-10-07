@@ -183,9 +183,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["count_wet"],
-            },
             "styling": {
                 "default_style": "annual_water_observations",
                 "styles": [
@@ -210,9 +207,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["count_clear"],
             },
             "styling": {
                 "default_style": "annual_clear_observations",
@@ -250,9 +244,6 @@ For service status information, see https://status.dea.ga.gov.au
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
         "manual_merge": False,
-    },
-    "wcs": {
-        "default_bands": ["frequency"],
     },
     "styling": {
         "default_style": "annual_WOfS_frequency",
