@@ -21,6 +21,7 @@ services:
       - ./check-product-definitions.sh:/env/config/check-product-definitions.sh
       - ./check-dev-product-csv.sh:/env/config/check-dev-product-csv.sh
       - ./check-prod-product-csv.sh:/env/config/check-prod-product-csv.sh
+      - ./check-live-db.sh:/env/config/check-live-db.sh
       - ./workspaces/prod-products.csv:/env/config/prod-products.csv
       - ./workspaces/dev-products.csv:/env/config/dev-products.csv
     command: tail -f /dev/null
