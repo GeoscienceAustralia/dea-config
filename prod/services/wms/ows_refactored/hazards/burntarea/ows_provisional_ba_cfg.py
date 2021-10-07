@@ -46,17 +46,6 @@ For service status information, see https://status.dea.ga.gov.au
     "legend": {
         "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dbsi_legend_edit.png",
     },
-    # "legend": {
-    #     "begin": "-1",
-    #     "end": "1",
-    #     "ticks": ["-1", "0", "1"],
-    #     "tick_labels": {
-    #         "-1": {"label": "-1"},
-    #         "0": {"label": "0"},
-    #         "1": {"label": "1"},
-    #     },
-    #     "title": "dBSI\n(larger positive values can be characteristic of burns)",
-    # },
 }
 
 style_dndvi = {
@@ -98,18 +87,6 @@ For service status information, see https://status.dea.ga.gov.au
     "legend": {
         "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dndvi_legend_edit.png",
     },
-    # "legend": {
-    #     "begin": "-1",
-    #     "end": "1",
-    #     "ticks": ["-1", "0", "1"],
-    #     "tick_labels": {
-    #         "-1": {"label": "-1"},
-    #         "0": {"label": "0"},
-    #         "1": {"label": "1"},
-    #     },
-    #     "decimal_places": 0,
-    #     "title": "dNDVI\n(larger positive values can be characteristic of burns)",
-    # },
 }
 
 style_dnbr = {
@@ -150,9 +127,6 @@ For service status information, see https://status.dea.ga.gov.au
     ],
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
-    # "legend": {
-    #     "url": "",
-    # },
     "legend": {
         "begin": "-1",
         "end": "1",
@@ -217,18 +191,6 @@ For service status information, see https://status.dea.ga.gov.au
     "legend": {
         "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dnbr_class_legend_edit.png",
     },
-    # "legend": {
-    #     "title": "dNBR Classes\n(larger positive values can be characteristic of burns)",
-    #     "begin": "-1.0",
-    #     "end": "1.0",
-    #     "ticks": ["-1.0", "0.1", "0.44", "1.0"],
-    #     "tick_labels": {
-    #         "-1.0": {"label": "-1.0"},
-    #         "0.1": {"label": "0.1"},
-    #         "0.44": {"label": "0.44"},
-    #         "1.0": {"label": "1.0"},
-    #     },
-    # },
 }
 
 layers = {
