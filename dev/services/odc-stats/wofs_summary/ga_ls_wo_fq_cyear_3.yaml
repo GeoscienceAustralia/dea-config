@@ -1,9 +1,9 @@
 plugin: wofs-summary # this can help system find the relative plugin and plugin version
 product:
-  name: ga_ls_fq_cyear_3
-  short_name: ga_ls_fq_cyear_3
+  name: ga_ls_wo_fq_cyear_3
+  short_name: Water Observations Calendar Year (Landsat)
   version: 1.6.0
-  product_family: wo_summary
+  product_family: DEA Water Observations (WOfS)
 
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
@@ -42,6 +42,10 @@ product:
     - gqa:cep90
     - landsat:landsat_product_id
     - landsat:landsat_scene_id
+    - landsat:collection_category
+    - landsat:collection_number
+    - landsat:wrs_path
+    - landsat:wrs_row
 
   preview_image_ows_style:
     name: WOfS_frequency
@@ -103,7 +107,3 @@ s3_acl: public-read
 # Generic product attributes
 cog_opts:
   zlevel: 9
-  overrides:
-    rgba:
-      compress: JPEG
-      jpeg_quality: 90

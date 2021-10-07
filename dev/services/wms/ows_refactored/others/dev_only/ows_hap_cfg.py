@@ -36,9 +36,6 @@ layer = {
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "simple_gray",
                 "styles": [

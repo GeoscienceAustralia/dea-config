@@ -307,14 +307,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-
-            "wcs": {
-                "default_bands": [
-                    "delta_nbr",
-                    "delta_bsi",
-                    "delta_ndvi",
-                ],
-            },
             "styling": {
                 "default_style": "ga_s2_dnbr_provisional_3",
                 "styles": [style_dnbr, style_dnbr_classes, style_dbsi, style_dndvi],
