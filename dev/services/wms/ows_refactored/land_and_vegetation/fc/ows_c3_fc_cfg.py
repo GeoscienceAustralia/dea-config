@@ -48,9 +48,6 @@ For service status information, see https://status.dea.ga.gov.au
             "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
         },
     ],
-    "wcs": {
-        "default_bands": ["bs", "pv", "npv"],
-    },
     "styling": {
         "default_style": "fc_rgb",
         "styles": [

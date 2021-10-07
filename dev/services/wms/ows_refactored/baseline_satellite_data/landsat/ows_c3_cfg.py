@@ -82,9 +82,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "ignore_info_flags": []
                 },
             ],
-            "wcs": {
-                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-            },
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_8},
         },
         {
@@ -132,9 +129,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "ignore_info_flags": []
                 },
             ],
-            "wcs": {
-                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-            },
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
         },
         {
@@ -183,9 +177,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "ignore_info_flags": []
                 },
             ],
-            "wcs": {
-                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-            },
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
         },
         {
@@ -236,9 +227,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "ignore_info_flags": []
                 },
             ],
-            "wcs": {
-                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-            },
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_8},
         },
         {
@@ -288,9 +276,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                     "ignore_info_flags": []
                 },
             ],
-            "wcs": {
-                "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-            },
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
         },
     ],
@@ -346,9 +331,6 @@ For service status information, see https://status.dea.ga.gov.au""",
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-    },
     "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
 }
 
@@ -409,8 +391,5 @@ For service status information, see https://status.dea.ga.gov.au""",
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": ["nbart_red", "nbart_green", "nbart_blue"],
-    },
     "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
 }

@@ -46,17 +46,6 @@ For service status information, see https://status.dea.ga.gov.au
     "legend": {
         "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dbsi_legend_edit.png",
     },
-    # "legend": {
-    #     "begin": "-1",
-    #     "end": "1",
-    #     "ticks": ["-1", "0", "1"],
-    #     "tick_labels": {
-    #         "-1": {"label": "-1"},
-    #         "0": {"label": "0"},
-    #         "1": {"label": "1"},
-    #     },
-    #     "title": "dBSI\n(larger positive values can be characteristic of burns)",
-    # },
 }
 
 style_dndvi = {
@@ -98,18 +87,6 @@ For service status information, see https://status.dea.ga.gov.au
     "legend": {
         "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dndvi_legend_edit.png",
     },
-    # "legend": {
-    #     "begin": "-1",
-    #     "end": "1",
-    #     "ticks": ["-1", "0", "1"],
-    #     "tick_labels": {
-    #         "-1": {"label": "-1"},
-    #         "0": {"label": "0"},
-    #         "1": {"label": "1"},
-    #     },
-    #     "decimal_places": 0,
-    #     "title": "dNDVI\n(larger positive values can be characteristic of burns)",
-    # },
 }
 
 style_dnbr = {
@@ -150,9 +127,6 @@ For service status information, see https://status.dea.ga.gov.au
     ],
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
-    # "legend": {
-    #     "url": "",
-    # },
     "legend": {
         "begin": "-1",
         "end": "1",
@@ -217,18 +191,6 @@ For service status information, see https://status.dea.ga.gov.au
     "legend": {
         "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dnbr_class_legend_edit.png",
     },
-    # "legend": {
-    #     "title": "dNBR Classes\n(larger positive values can be characteristic of burns)",
-    #     "begin": "-1.0",
-    #     "end": "1.0",
-    #     "ticks": ["-1.0", "0.1", "0.44", "1.0"],
-    #     "tick_labels": {
-    #         "-1.0": {"label": "-1.0"},
-    #         "0.1": {"label": "0.1"},
-    #         "0.44": {"label": "0.44"},
-    #         "1.0": {"label": "1.0"},
-    #     },
-    # },
 }
 
 layers = {
@@ -261,6 +223,7 @@ These metrics should be used as a preliminary screening tool, and not an accurat
 
 
 **Bare Soil**
+
 Bare Soil Index (BSI) identifies soil or bare-land characteristics by combining blue, red, near infrared (NIR), and short wave infrared (SWIR) spectral bands. SWIR and red spectral bands can be used to identify basic soil mineralogy while blue and NIR spectral bands can help to detect vegetation.
 
 BSI (Rikimaru et al. 2002) is calculated as: BSI = ((SWIR2 + RED) - (NIR + BLUE)) / ((SWIR2 + RED) + (NIR + BLUE)).
@@ -269,6 +232,7 @@ Delta BSI (dBSI) shows the change in soil characteristics as the difference betw
 
 
 **Vegetation**
+
 Normalized Difference Vegetation Index (NDVI) is used to detect green vegetation characteristics by identifying the difference between red/visible and near infrared (NIR) spectral bands (Huete and Jackson 1987).
 
 NDVI is calculated as: NDVI = (NIR - RED)/(NIR + RED).
@@ -277,6 +241,7 @@ Delta NDVI (dNDVI) shows the change in vegetation characteristics as the differe
 
 
 **Burnt area**
+
 Normalized Burn Ratio (NBR) identifies areas that have the characteristics of being burnt. NBR looks at the relationship between near infrared (NIR) and short wave infrared (SWIR) spectral signatures. High SWIR reflectance values with low NIR reflectance values are indicative of an area that has been burnt by fire(s), while the opposite is seen in healthy vegetation.
 
 NBR is calculated as: NBR = (NIR – SWIR2) / (NIR + SWIR2).
