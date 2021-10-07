@@ -1,5 +1,5 @@
 level3_labels = {
-    0: "No data",
+    "n/a": "No data",
     111: "Cultivated Terrestrial Vegetation",
     112: "Natural Terrestrial Vegetation",
     123: "Cultivated Aquatic Vegetation",
@@ -10,7 +10,7 @@ level3_labels = {
 }
 
 level4_labels = {
-    0: "No data",
+    "n/a": "No data",
     1: 'Cultivated Terrestrial Vegetated',
     3: 'Cultivated Terrestrial Vegetated: Herbaceous',
     4: 'Cultivated Terrestrial Vegetated: Closed (> 65 %)',
@@ -94,14 +94,14 @@ level4_labels = {
 }
 
 lifeform_labels = {
-    0: "No data",
+    "n/a": "No data",
     1: "Woody",
     2: "Herbaceous",
 }
 
 
 cover_labels = {
-    0: "No data",
+    "n/a": "No data",
     10: "Closed (> 65 %)",
     12: "Open (40 to 65 %)",
     13: "Open (15 to 40 %)",
@@ -110,13 +110,13 @@ cover_labels = {
 }
 
 water_seasonality_labels = {
-    0: "No data",
+    "n/a": "No data",
     1: "Water > 3 months (semi-) permenant",
     2: "Water < 3 months (temporary or seasonal)",
 }
 
 water_persistence_labels = {
-    0: "No data",
+    "n/a": "No data",
     1: "Perennial (> 9 months)",
     7: "Non-perennial (7 to 9 months)",
     8: "Non-perennial (4 to 6 months)",
@@ -124,7 +124,7 @@ water_persistence_labels = {
 }
 
 bare_grad_labels = {
-    0: "No data",
+    "n/a": "No data",
     10: "Sparsely vegetated",
     12: "Very sparsely vegetated",
     15: "Bare areas, unvegetated",
