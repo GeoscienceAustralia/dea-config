@@ -1,7 +1,7 @@
 plugin: wofs-summary-fh # this can help system find the relative plugin and plugin version
 product:
   name: ga_ls_wo_fq_myear_3
-  short_name: Water Observations Multi Year (Landsat)
+  short_name: ga_ls_wo_fq_myear_3
   version: 1.6.0
   product_family: DEA Water Observations (WOfS)
 
@@ -48,6 +48,7 @@ product:
     - landsat:wrs_row
 
   preview_image_ows_style:
+    # ref: https://github.com/GeoscienceAustralia/dea-config/blob/master/prod/services/wms/ows_refactored/inland_water/wofs/ows_wofs_summary_cfg.py#L99
     name: WOfS_frequency
     title: " Water Summary"
     abstract: WOfS summary showing the frequency of Wetness
