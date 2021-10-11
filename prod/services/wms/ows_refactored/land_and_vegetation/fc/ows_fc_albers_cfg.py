@@ -45,9 +45,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "flags": fc_albers_flags,
-            "wcs": {
-                "default_bands": ["BS", "PV", "NPV"],
-            },
             "styling": {
                 "default_style": "simple_fc",
                 "styles": [
@@ -80,9 +77,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "flags": fc_albers_flags,
-            "wcs": {
-                "default_bands": ["BS", "PV", "NPV"],
-            },
             "styling": {
                 "default_style": "simple_fc",
                 "styles": [
@@ -115,9 +109,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "flags": fc_albers_flags,
-            "wcs": {
-                "default_bands": ["BS", "PV", "NPV"],
-            },
             "styling": {
                 "default_style": "simple_fc",
                 "styles": [
@@ -162,9 +153,6 @@ For service status information, see https://status.dea.ga.gov.au
                     "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
                 },
             ],
-            "wcs": {
-                "default_bands": ["BS", "PV", "NPV"],
-            },
             "styling": {
                 "default_style": "simple_fc",
                 "styles": [

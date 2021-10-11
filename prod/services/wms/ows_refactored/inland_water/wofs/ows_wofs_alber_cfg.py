@@ -33,9 +33,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
                 "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
             },
-            "wcs": {
-                "default_bands": ["water"],
-            },
             "styling": {
                 "default_style": "observations",
                 "styles": [style_wofs_obs, style_wofs_obs_wet_only],

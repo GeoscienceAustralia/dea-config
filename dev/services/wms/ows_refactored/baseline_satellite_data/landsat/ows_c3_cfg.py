@@ -278,6 +278,10 @@ For service status information, see https://status.dea.ga.gov.au""",
             ],
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
         },
+        {
+            "include": "ows_refactored.baseline_satellite_data.landsat.ows_c3_cfg.combined_provisional_layer",
+            "type": "python",
+        },
     ],
 }
 

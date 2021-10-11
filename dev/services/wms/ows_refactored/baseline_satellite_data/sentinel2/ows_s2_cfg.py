@@ -11,6 +11,10 @@ category_layers = {
             "type": "python",
         },
         {
+            "include": "ows_refactored.baseline_satellite_data.sentinel2.ows_nrt_provisional_cfg.combined_layer",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.baseline_satellite_data.sentinel2.ows_nrt_provisional_cfg.s2b_layer",
             "type": "python",
         },
