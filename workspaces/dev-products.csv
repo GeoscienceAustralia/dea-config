@@ -68,7 +68,6 @@ s2a_ard_granule,https://raw.githubusercontent.com/GeoscienceAustralia/digitalear
 s2b_ard_granule,https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/1e28b0b0d1920a80084682d4040ac1b8f6b8ec9d/digitalearthau/config/eo3/products-aws/s2_ard_granule.odc-product.yaml,s3://dea-public-data/baseline/s2b_ard_granule/
 s2a_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/b8d30d22e39b66b791b3ac8d629868fa33586313/products/nrt/sentinel/s2_nrt.products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
 s2b_nrt_granule,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/b8d30d22e39b66b791b3ac8d629868fa33586313/products/nrt/sentinel/s2_nrt.products.yaml,s3://dea-public-data/L2/sentinel-2-nrt/S2MSIARD
-ga_s2_wo_3,https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/develop/digitalearthau/config/eo3/products-aws/ga_s2_wo_3.odc-product.yaml,s3://dea-public-data-dev/derivative/ga_s2_wo_3/
 water_bodies,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/water_bodies/water_bodies.yaml,s3://dea-public-data/projects/WaterBodies
 weathering_intensity,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/weathering_intensity/weathering_intensity.yaml,s3://dea-public-data/weathering-intensity/v1.0.1
 wofs_albers,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/wofs_albers.yaml,s3://dea-public-data/WOfS/WOFLs/v2.1.5/combined
