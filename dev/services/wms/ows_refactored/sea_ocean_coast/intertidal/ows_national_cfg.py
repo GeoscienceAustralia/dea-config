@@ -80,7 +80,7 @@ style_nidem = {
 
 
 layer = {
-    "title": "DEA Intertidal Elevation (NIDEM, Landsat)",
+    "title": "DEA Intertidal Elevation (NIDEM)",
     "name": "NIDEM",
     "abstract": """
 National Intertidal Digital Elevation Model 25m 1.0.0
@@ -128,9 +128,6 @@ For service status information, see https://status.dea.ga.gov.au""",
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
         "manual_merge": False,
-    },
-    "wcs": {
-        "default_bands": ["nidem"],
     },
     "styling": {
         "default_style": "NIDEM",

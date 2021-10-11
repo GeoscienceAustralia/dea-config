@@ -5,7 +5,7 @@ from ows_refactored.land_and_vegetation.style_lav_cfg import \
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 layers = {
-    "title": "Barest Earth Sentinel-2 satellite images",
+    "title": "GA Barest Earth (Sentinel-2)",
     "name": "s2_barest_earth",
     "abstract": """
 Abstract
@@ -50,9 +50,6 @@ IEEE Transactions on Geoscience and Remote Sensing 55 (11), 6254-6264
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
         "manual_merge": False,
-    },
-    "wcs": {
-        "default_bands": ["red", "green", "blue"],
     },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_barest_earth_list},
 }

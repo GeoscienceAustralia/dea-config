@@ -41,11 +41,11 @@ style_mangrove_cover_v2 = {
 }
 
 layer = {
-    "title": "DEA Mangrove Canopy Cover (Landsat)",
+    "title": "DEA Mangroves",
     "abstract": "",
     "layers": [
         {
-            "title": "DEA Mangrove Canopy Cover (Landsat)",
+            "title": "DEA Mangroves (Landsat)",
             "name": "mangrove_cover_v2_0_2",
             "abstract": """Mangrove Canopy Cover 25m 2.0.2 (Landsat)
 Mangrove canopy cover version 2.0.2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
@@ -65,9 +65,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_extent_val",
                 "always_fetch_bands": ["extent"],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["canopy_cover_class", "extent"],
             },
             "styling": {
                 "default_style": "mangrove",

@@ -4,7 +4,7 @@ from ows_refactored.land_and_vegetation.style_lav_cfg import (
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 ls8_be_layers = {
-    "title": "Barest Earth Landsat 8 satellite images",
+    "title": "GA Barest Earth (Landsat 8 OLI/TIRS)",
     "name": "ls8_barest_earth_mosaic",
     "abstract": """
 A `weighted geometric median’ approach has been used to estimate the median surface reflectance of the barest state (i.e., least vegetation) observed through Landsat-8 OLI observations from 2013 to September 2018 to generate a six-band Landsat-8 Barest Earth pixel composite mosaic over the Australian continent.
@@ -24,9 +24,6 @@ For service status information, see https://status.dea.ga.gov.au
         "always_fetch_bands": [],
         "manual_merge": False,
     },
-    "wcs": {
-        "default_bands": ["red", "green", "blue"],
-    },
     "styling": {
         "default_style": "simple_rgb",
         "styles": styles_barest_earth_mosaic_list,
@@ -35,7 +32,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 
 ls30_be_layers = {
-    "title": "Landsat 30+ Barest Earth Satellite Images (Combined Landsat)",
+    "title": "GA Barest Earth (Landsat)",
     "name": "landsat_barest_earth",
     "abstract": """
 An estimate of the spectra of the barest state (i.e., least vegetation) observed from imagery of the Australian continent collected by the Landsat 5, 7, and 8 satellites over a period of more than 30 years (1983 - 2018).
@@ -52,9 +49,6 @@ Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Minera
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
         "manual_merge": False,
-    },
-    "wcs": {
-        "default_bands": ["red", "green", "blue"],
     },
     "styling": {
         "default_style": "simple_rgb",

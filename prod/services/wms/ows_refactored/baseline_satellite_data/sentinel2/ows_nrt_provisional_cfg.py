@@ -49,13 +49,6 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }
 
@@ -103,13 +96,6 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }
 
@@ -156,12 +142,5 @@ For service status information, see https://status.dea.ga.gov.au""",
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }

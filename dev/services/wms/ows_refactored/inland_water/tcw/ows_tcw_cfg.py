@@ -110,13 +110,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": [
-                    "TCW_PC_10",
-                    "TCW_PC_50",
-                    "TCW_PC_90",
-                ],
-            },
             "styling": {
                 "default_style": "tcw_10_percentile",
                 "styles": [style_tcw_10, style_tcw_50, style_tcw_90],
