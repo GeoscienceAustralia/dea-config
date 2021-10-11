@@ -37,3 +37,14 @@ product owner:
 yaml owner: CORE TEAM
 total products defined: 1
 - `weathering_intensity`
+
+## cemp_insar
+product owner:
+yaml owner: CORE TEAM
+total products defined: 6
+- `cemp_insar_alos_displacement`
+- `cemp_insar_alos_velocity`
+- `cemp_insar_envisat_displacement`
+- `cemp_insar_envisat_velocity`
+- `cemp_insar_radarsat2_displacement`
+- `cemp_insar_radarsat2_velocity`

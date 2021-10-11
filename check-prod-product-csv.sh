@@ -9,8 +9,10 @@ while IFS=, read -r product definition location; do
     fi
 done < /env/config/prod-products.csv
 
-if [ $(datacube product list | wc -l) -ne 69 ]; then
-    exit 1
-fi
+# if [ $(datacube product list | wc -l) -ne 69 ]; then
+#     exit 1
+# fi
+
+datacube product list
 
 set +x
