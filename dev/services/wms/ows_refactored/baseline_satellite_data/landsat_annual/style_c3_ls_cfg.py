@@ -1,7 +1,4 @@
-from functools import partial
-
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
-from ows_refactored.ows_util_tools import swap_scale
 
 style_ls_simple_rgb = {
     "name": "simple_rgb",
