@@ -17,6 +17,7 @@ services:
       - postgres
     volumes:
       - ./products:/env/config/products
+      - ./product_metadata:/env/config/product_metadata
       - ./datacube_init_metadata.sh:/env/config/datacube_init_metadata.sh
       - ./check-product-definitions.sh:/env/config/check-product-definitions.sh
       - ./check-dev-product-csv.sh:/env/config/check-dev-product-csv.sh
