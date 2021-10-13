@@ -944,6 +944,23 @@
                                 },
                                 {
                                     "type": "wms",
+                                    "name": "DEA Water Observations (Sentinel-2, Provisional)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_wo_3",
+                                    "linkedWcsUrl": "https://ows.dev,dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_wo_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "sdg543"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "April-October water observations",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
