@@ -9,6 +9,9 @@ for prod_def_yaml in $(find /env/config/products -name '*.yaml'); do
     fi
 done
 
-datacube product list
+cd /env/config/products
+if [[ $(find . -type f ! -path './decommissioned/*' -name '*.yaml' -not -name '*.nci*' | wc -l) != $(datacube product list | wc -l) ]];then
+    datacube product list | wc -l
+fi
 
 set +x
