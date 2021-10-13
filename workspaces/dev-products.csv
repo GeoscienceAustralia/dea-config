@@ -73,6 +73,6 @@ weathering_intensity,https://raw.githubusercontent.com/GeoscienceAustralia/dea-c
 wofs_albers,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/wofs_albers.yaml,s3://dea-public-data/WOfS/WOFLs/v2.1.5/combined
 wofs_annual_summary,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/wofs_annual_summary.yaml,s3://dea-public-data/WOfS/annual_summary/v2.1.5/combined
 wofs_apr_oct_summary,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/wofs_apr_oct_summary.yaml,s3://dea-public-data/WOfS/apr_oct_summary/v2.1.5/combined
-wofs_filtered_summary,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/filtered_summary/product-definition.yaml,s3://dea-public-data/WOfS/filtered_summary/v2.1.0/combined
+wofs_filtered_summary,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/wofs_filtered_summary.yaml,s3://dea-public-data/WOfS/filtered_summary/v2.1.0/combined
 wofs_nov_mar_summary,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/wofs_nov_mar_summary.yaml,s3://dea-public-data/WOfS/nov_mar_summary/v2.1.5/combined
 wofs_summary,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/inland_water/wofs/wofs_summary.yaml,s3://dea-public-data/WOfS/summary/v2.1.0/combined
