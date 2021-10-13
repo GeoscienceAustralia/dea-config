@@ -2,6 +2,7 @@ name: WORKSPACE CSV Test
 
 on:
   push:
+    branches: [ master ]
     paths:
       - 'workspaces/dev-products.csv'
       - '.github/workflows/workspace_dev_csv_testing.yaml'

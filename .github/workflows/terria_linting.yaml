@@ -2,6 +2,7 @@ name : Terria catalog Linting
 
 on:
   push:
+    branches: [ master ]
     paths:
       - 'dev/terria/**'
       - .github/workflows/terria_linting.yaml

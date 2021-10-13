@@ -2,6 +2,7 @@ name: OWS CFG Lint Check
 
 on:
   push:
+    branches: [ master ]
     paths:
       - 'dev/services/wms/**'
       - 'prod/services/wms/**'

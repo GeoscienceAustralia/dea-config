@@ -2,6 +2,7 @@ name: OWS DEV CFG Test
 
 on:
   push:
+    branches: [ master ]
     paths:
       - 'dev/services/wms/**'
       - .github/workflows/ows_cfg_testing_dev.yaml
