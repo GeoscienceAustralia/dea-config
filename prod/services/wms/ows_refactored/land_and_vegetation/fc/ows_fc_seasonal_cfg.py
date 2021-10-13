@@ -35,13 +35,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": [
-                    "NPV_PC_10",
-                    "NPV_PC_50",
-                    "NPV_PC_90",
-                ],
-            },
             "styling": {"default_style": "green_veg_10", "styles": styles_fc_gv_list},
         },
         {
@@ -68,13 +61,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": [
-                    "NPV_PC_10",
-                    "NPV_PC_50",
-                    "NPV_PC_90",
-                ],
-            },
             "styling": {
                 "default_style": "non_green_veg_10",
                 "styles": styles_fc_ngv_list,
@@ -98,9 +84,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["BS_PC_10", "BS_PC_50", "BS_PC_90"],
             },
             "styling": {
                 "default_style": "bare_ground_10",
@@ -128,9 +111,6 @@ For service status information, see https://status.dea.ga.gov.au
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
         "manual_merge": False,
-    },
-    "wcs": {
-        "default_bands": ["BS_PC_50", "PV_PC_50", "NPV_PC_90"],
     },
     "styling": {
         "default_style": "simple_rgb",

@@ -57,7 +57,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real Time)",
+                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_nrt_granule_nbar_t",
@@ -201,6 +201,57 @@
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "PGh872"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 8 OLI-TIRS)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls8_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls8_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "453ety"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 7 ETM+)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls7_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls7_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "ert896"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 5 TM)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls5_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls5_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "84d5er"
                                 }
                             ]
                         },
@@ -392,7 +443,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real-Time)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2a_nrt_granule_nbar_t",
@@ -421,7 +472,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real-Time)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2b_nrt_granule_nbar_t",
@@ -1426,7 +1477,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Low Tide Imagery",
+                                    "name": "DEA Low Tide Imagery (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "low_tide_composite",
@@ -1440,7 +1491,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA High Tide Imagery",
+                                    "name": "DEA High Tide Imagery (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "high_tide_composite",
@@ -1523,6 +1574,30 @@
                     "type": "group",
                     "name": "Hazards",
                     "members": [
+                        {
+                            "id": "dryhs3",
+                            "type": "group",
+                            "name": "DEA Burnt Area Characteristics",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Burnt Area Characteristics (Sentinel-2 MSI, Provisional)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_ba_provisional_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_ba_provisional_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "FG346d"
+                                }
+                            ]
+                        },
                         {
                             "id": "ASDF2f",
                             "type": "group",
@@ -2347,7 +2422,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real Time)",
+                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
                             "url": "https://ows.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_nrt_granule_nbar_t",
@@ -2506,6 +2581,57 @@
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 5 satellite images"
                                     ]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 8 OLI-TIRS)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls8_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls8_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "LHG659"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 7 ETM+)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls7_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls7_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "d8fgdf"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 5 TM)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ls5_nbart_tmad_annual",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ls5_nbart_tmad_annual",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "dfk676"
                                 }
                             ],
                             "shareKeys": [
@@ -2712,7 +2838,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real-Time)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2a_nrt_granule_nbar_t",
@@ -2744,7 +2870,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real Time)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real-Time)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "s2b_nrt_granule_nbar_t",
@@ -3835,7 +3961,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Low Tide Imagery",
+                                    "name": "DEA Low Tide Imagery (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "low_tide_composite",
@@ -3852,7 +3978,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA High Tide Imagery",
+                                    "name": "DEA High Tide Imagery (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "high_tide_composite",

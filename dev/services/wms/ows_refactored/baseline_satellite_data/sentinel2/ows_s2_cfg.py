@@ -1,5 +1,5 @@
 category_layers = {
-    "title": "Sentinel-2 satellite images",
+    "title": "DEA Surface Reflectance (Sentinel-2)",
     "abstract": "",
     "layers": [
         {
@@ -8,6 +8,10 @@ category_layers = {
         },
         {
             "include": "ows_refactored.baseline_satellite_data.sentinel2.ows_nrt_cfg.s2a_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.baseline_satellite_data.sentinel2.ows_nrt_provisional_cfg.combined_layer",
             "type": "python",
         },
         {

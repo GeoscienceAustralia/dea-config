@@ -1,0 +1,47 @@
+name: WORKSPACE CSV Test
+
+on:
+  push:
+    paths:
+      - 'workspaces/prod-products.csv'
+      - 'workspaces/dev-products.csv'
+      - '.github/workflows/workspace_csv_testing.yaml'
+      - 'docker-compose.productscsv.yaml'
+      - 'check-dev-product-csv.sh'
+      - 'check-prod-product-csv.sh'
+
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'workspaces/prod-products.csv'
+      - 'workspaces/dev-products.csv'
+      - '.github/workflows/workspace_csv_testing.yaml'
+      - 'docker-compose.productscsv.yaml'
+      - 'check-dev-product-csv.sh'
+      - 'check-prod-product-csv.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+
+    - name: Run csv testing (Dev)
+      run: |
+        docker-compose -f docker-compose.productscsv.yaml up -d
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-dev-product-csv.sh"
+        docker-compose -f docker-compose.productscsv.yaml down
+
+    - name: Run csv testing (Prod)
+      run: |
+        docker-compose -f docker-compose.productscsv.yaml up -d
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-prod-product-csv.sh"
+        docker-compose -f docker-compose.productscsv.yaml down

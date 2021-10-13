@@ -58,9 +58,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["regional", "intermediate", "local"],
-            },
             "legend": {
                 "url": "https://data.dea.ga.gov.au/multi-scale-topographic-position/mstp_legend.png",
             },

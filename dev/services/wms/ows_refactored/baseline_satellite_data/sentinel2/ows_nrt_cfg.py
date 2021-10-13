@@ -5,7 +5,7 @@ from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 combined_layer = {
-    "title": "DEA Surface Reflectance (Sentinel-2) - near real time",
+    "title": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
     "name": "s2_nrt_granule_nbar_t",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction near real time (Sentinel-2 MSI)
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
@@ -47,19 +47,12 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
 }
 
 s2b_layer = {
     "name": "s2b_nrt_granule_nbar_t",
-    "title": "DEA Surface Reflectance (Sentinel-2B MSI) near real time",
+    "title": "DEA Surface Reflectance (Sentinel-2B MSI Near Real-Time)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2B MSI) near real time
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
@@ -99,19 +92,12 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
 }
 
 s2a_layer = {
     "name": "s2a_nrt_granule_nbar_t",
-    "title": "DEA Surface Reflectance (Sentinel-2A MSI) near real time",
+    "title": "DEA Surface Reflectance (Sentinel-2A MSI Near Real-Time)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2A MSI) near real time
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
@@ -151,12 +137,5 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
 }

@@ -5,7 +5,7 @@ from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 combined_layer = {
-    "title": "DEA Surface Reflectance (Sentinel-2) Provisional - near real time",
+    "title": "DEA Surface Reflectance (Sentinel-2, Provisional)",
     "name": "s2_nrt_provisional_granule_nbar_t",
     "abstract": """Geoscience Australia Sentinel-2 MSI Analysis Ready Data Provisional Collection 3
 
@@ -49,19 +49,12 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }
 
 s2b_layer = {
     "name": "s2b_nrt_provisional_granule_nbar_t",
-    "title": "DEA Surface Reflectance (Sentinel-2B MSI) Provisional - near real time",
+    "title": "DEA Surface Reflectance (Sentinel-2B MSI, Provisional)",
     "abstract": """Geoscience Australia Sentinel-2B MSI Analysis Ready Data Provisional Collection 3
 
 This product takes Sentinel-2 (MSI) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
@@ -103,19 +96,12 @@ For service status information, see https://status.dea.ga.gov.au
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }
 
 s2a_layer = {
     "name": "s2a_nrt_provisional_granule_nbar_t",
-    "title": "DEA Surface Reflectance (Sentinel-2A MSI) Provisional - near real time",
+    "title": "DEA Surface Reflectance (Sentinel-2A MSI, Provisional)",
     "abstract": """Geoscience Australia Sentinel-2A MSI Analysis Ready Data Provisional Collection 3
 
 This product takes Sentinel-2 (MSI) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
@@ -156,12 +142,5 @@ For service status information, see https://status.dea.ga.gov.au""",
             "ignore_info_flags": []
         },
     ],
-    "wcs": {
-        "default_bands": [
-            "nbart_red",
-            "nbart_green",
-            "nbart_blue",
-        ],
-    },
     "styling": {"default_style": "simple_rgb", "styles": styles_s2_provisional_list},
 }

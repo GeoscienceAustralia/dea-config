@@ -19,7 +19,7 @@ style_c2_level3 = {
     "abstract": "Standardised colouring of Level 3 land cover classes",
     "value_map": {
         "level3": [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0, },
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Cultivated Terrestrial Vegetation", 'abstract': "", 'values': [111], 'color': '#ACBC2D', 'alpha': 1},
             {'title': "Natural Terrestrial Vegetation", 'abstract': "", 'values': [112], 'color': '#0E7912', 'alpha': 1},
             # {'title': "Cultivated Aquatic Vegetation", 'abstract': "", 'values': [123], 'color': '#56ECE7', 'alpha': 1},
@@ -143,7 +143,8 @@ style_c2_level4 = {
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
-            {'title': '', 'abstract': '', 'values': [1], 'color': '#97bb1a', 'alpha': 1},
+            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': 'Cultivated Terrestrial Vegetated', 'abstract': '', 'values': [1], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Woody', 'abstract': '', 'values': [2], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Herbaceous', 'abstract': '', 'values': [3], 'color': '#d1e033', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Closed (> 65 %)', 'abstract': '', 'values': [4], 'color': '#c5a847', 'alpha': 1},
@@ -265,11 +266,11 @@ style_c2_level4 = {
 
 
 layers = {
-    "title": "DEA Land Cover (Landsat)",
+    "title": "DEA Land Cover",
     "name": "",
     "layers": [
         {
-            "title": "DEA Land Cover (Landsat)",
+            "title": "DEA Land Cover Calendar Year (Landsat)",
             "name": "ga_ls_landcover",
             "abstract": """
             Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
@@ -282,7 +283,7 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
+                "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
@@ -294,9 +295,6 @@ layers = {
             #         "ignore_info_flags": [],
             #     }
             # ],
-            "wcs": {
-                "default_bands": ["level4"],
-            },
             "styling": {
                 "default_style": "level4",
                 "styles": [style_c2_level4, style_c2_level3],
@@ -323,7 +321,7 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
+                "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
@@ -335,9 +333,6 @@ layers = {
             #         "ignore_info_flags": [],
             #     }
             # ],
-            "wcs": {
-                "default_bands": ["canopyco_veg_cat_l4d"],
-            },
             "styling": {
                 "default_style": "canopyco",
                 "styles": [style_c2_level4_canopyco, style_c2_level4_lifeform, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],

@@ -57,6 +57,7 @@ ows_cfg = {
             "australia",
             "time-series",
             "fractional-cover",
+            "burn characteristics",
         ],
         "contact_info": {
             "person": "Digital Earth Australia",
@@ -154,6 +155,10 @@ ows_cfg = {
         },
         {
             "include": "ows_refactored.sea_ocean_coast.ows_category_root_cfg.category_layers",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.hazards.ows_category_root_cfg.category_layers",
             "type": "python",
         },
         {

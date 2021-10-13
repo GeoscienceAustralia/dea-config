@@ -42,6 +42,10 @@ product:
     - gqa:cep90
     - landsat:landsat_product_id
     - landsat:landsat_scene_id
+    - landsat:collection_category
+    - landsat:collection_number
+    - landsat:wrs_path
+    - landsat:wrs_row
 
   preview_image_ows_style:
     name: fc_rgb

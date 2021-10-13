@@ -1,0 +1,35 @@
+name: PRODUCT DEFINITION Test
+
+on:
+  push:
+    paths:
+      - 'products/**'
+      - '.github/workflows/odc_product_testing.yaml'
+      - 'docker-compose.productscsv.yaml'
+      - 'check-product-definitions.sh'
+
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'products/**'
+      - '.github/workflows/odc_product_testing.yaml'
+      - 'docker-compose.productscsv.yaml'
+      - 'check-product-definitions.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+
+    - name: Run product definition testing
+      run: |
+        docker-compose -f docker-compose.productscsv.yaml up -d
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
+        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-product-definitions.sh"
+        docker-compose -f docker-compose.productscsv.yaml down

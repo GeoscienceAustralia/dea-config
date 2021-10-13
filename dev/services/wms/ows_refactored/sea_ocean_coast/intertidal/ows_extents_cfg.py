@@ -149,7 +149,7 @@ style_item_confidence = {
 }
 
 item_v2_00_layer = {
-    "title": "DEA Intertidal Extents (ITEM, Landsat)",
+    "title": "DEA Intertidal Extents (ITEM)",
     "name": "ITEM_V2.0.0",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Extents)
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
@@ -206,9 +206,6 @@ For service status information, see https://status.dea.ga.gov.au""",
         "always_fetch_bands": [],
         "manual_merge": False,
     },
-    "wcs": {
-        "default_bands": ["relative"],
-    },
     "styling": {
         "default_style": "relative_layer",
         "styles": [
@@ -218,7 +215,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 item_v2_00_conf_layer = {
-    "title": "DEA Intertidal Extents confidence (Landsat)",
+    "title": "DEA Intertidal Extents confidence",
     "name": "ITEM_V2.0.0_Conf",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Confidence)
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
@@ -274,9 +271,6 @@ For service status information, see https://status.dea.ga.gov.au""",
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val2",
         "always_fetch_bands": [],
         "manual_merge": False,
-    },
-    "wcs": {
-        "default_bands": ["stddev"],
     },
     "styling": {
         "default_style": "confidence_layer",
