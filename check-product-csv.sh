@@ -7,7 +7,7 @@ while IFS=, read -r product definition location; do
     if [[ $definition == *"http"* ]]; then
         datacube product add $definition
     fi
-done < /env/config/prod-products.csv
+done < /env/config/${WORKSPACE_CSV_FILE}
 
 # if [ $(datacube product list | wc -l) -ne 69 ]; then
 #     exit 1
