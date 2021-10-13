@@ -2,6 +2,7 @@ name: OWS PROD CFG Test
 
 on:
   push:
+    branches: [ master ]
     paths:
       - 'prod/services/wms/**'
       - .github/workflows/ows_cfg_testing_prod.yaml
