@@ -7,16 +7,17 @@ This is a central space used to store configuration for our services and product
 
 ### products metadata and products definition testing
 
-#### create an env file
+#### testing workspace csv
+First, create an `.env` file for the `docker-compose` setup
 ```bash
     vi .env
     # inside .env
-    WORKSPACE_CSV_FILE=prod-products.csv
+WORKSPACE_CSV_FILE=prod-products.csv
 ```
-
+then bring up the testing tool
 ```bash
-    docker-compose -f docker-compose.ows.yaml up -d
-    docker-compose exec -it dea-config_ows_1 bash
+    docker-compose -f docker-compose.productscsv.yaml up -d
+    docker exec -it dea-config_datacube_1 bash
     # within the docker container run
     datacube system init
     cd /env/config
@@ -24,23 +25,36 @@ This is a central space used to store configuration for our services and product
     ./check-product-csv.sh
 ```
 
+#### audit checks (local-check-script.sh)
+```bash
+    docker-compose -f docker-compose.productscsv.yaml up -d
+    docker exec -it dea-config_datacube_1 bash
+    # within the docker container run
+    datacube system init
+    cd /env/config
+    ./datacube_init_metadata.sh
+    ./local-check-script.sh
+```
+
+
 ### ows config testing
 First, create an `.env` file for the `docker-compose` setup
 ```bash
     vi .env
     # inside .env
-    OWS_CFG_MOUNT=./dev/services/wms/ows_refactored
-    OWS_INVENTORY_JSON=./dev/services/wms/inventory.json
-    DATACUBE_OWS_CFG=ows_refactored.ows_root_cfg.ows_cfg
-    WMS_CONFIG_FILE=ows_root_cfg.py
-    CFG_PATH_PREFIX=/env/config/ows_refactored
+OWS_CFG_MOUNT=./dev/services/wms/ows_refactored
+OWS_INVENTORY_JSON=./dev/services/wms/inventory.json
+DATACUBE_OWS_CFG=ows_refactored.ows_root_cfg.ows_cfg
+WMS_CONFIG_FILE=ows_root_cfg.py
+CFG_PATH_PREFIX=/env/config/ows_refactored
 ```
 then bring up the testing tool
 ```bash
     docker-compose -f docker-compose.ows.yaml up -d
-    docker-compose exec -it dea-config_ows_1 bash
+    docker exec -it dea-config_ows_1 bash
     # within the docker container run
     cd /env/config
+    datacube system init
     ./compare-cfg.sh
 ```
 
