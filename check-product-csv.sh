@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 set -eu
-set -x
 
 while IFS=, read -r product definition location; do
     if [[ $definition == *"http"* ]]; then
@@ -29,7 +28,4 @@ while IFS=, read -r product definition location; do
     if ! grep -q $product /tmp/live-db-products.csv; then
         echo csv has $product but not in live prod db
     fi
-done < /env/config//${WORKSPACE_CSV_FILE}
-
-
-set +x
+done < /env/config/${WORKSPACE_CSV_FILE}
