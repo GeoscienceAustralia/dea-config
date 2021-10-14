@@ -59,6 +59,31 @@
         },
         {
             "product": [
+                "ga_ls8c_nbart_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "tmad_rgb_sens",
+                "tmad_rgb_std",
+                "log_bcdev",
+                "log_edev",
+                "arcsec_sdev",
+                "count"
+            ]
+        },
+        {
+            "product": [
                 "s2_barest_earth"
             ],
             "styles_count": 16,
@@ -172,6 +197,18 @@
             "styles_list": [
                 "WOfS_frequency",
                 "WOfS_frequency_blues_transparent"
+            ]
+        },
+        {
+            "product": [
+                "ga_ls_wo_fq_myear_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "WOfS_frequency",
+                "WOfS_frequency_blues_transparent",
+                "water_observations",
+                "clear_observations"
             ]
         },
         {
@@ -1228,5 +1265,5 @@
             ]
         }
     ],
-    "total_layers_count": 91
+    "total_layers_count": 93
 }

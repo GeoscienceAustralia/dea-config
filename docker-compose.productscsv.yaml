@@ -13,14 +13,16 @@ services:
       - DB_DATABASE=postgres
       - DB_PORT=5432
       - AWS_DEFAULT_REGION=ap-southeast-2
+      - WORKSPACE_CSV_FILE=${WORKSPACE_CSV_FILE}
     depends_on:
       - postgres
     volumes:
       - ./products:/env/config/products
+      - ./product_metadata:/env/config/product_metadata
       - ./datacube_init_metadata.sh:/env/config/datacube_init_metadata.sh
       - ./check-product-definitions.sh:/env/config/check-product-definitions.sh
-      - ./check-dev-product-csv.sh:/env/config/check-dev-product-csv.sh
-      - ./check-prod-product-csv.sh:/env/config/check-prod-product-csv.sh
+      - ./check-product-csv.sh:/env/config/check-product-csv.sh
+      - ./local-check-script.sh:/env/config/local-check-script.sh
       - ./workspaces/prod-products.csv:/env/config/prod-products.csv
       - ./workspaces/dev-products.csv:/env/config/dev-products.csv
     command: tail -f /dev/null

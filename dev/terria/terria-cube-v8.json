@@ -995,6 +995,23 @@
                                 },
                                 {
                                     "type": "wms",
+                                    "name": "DEA Water Observations (Sentinel-2, Provisional)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_wo_3",
+                                    "linkedWcsUrl": "https://ows.dev,dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_wo_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "sdg543"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "April-October water observations",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
@@ -1057,6 +1074,20 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "lei524"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Water Observations Multi Year (Landsat)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_wo_fq_myear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_wo_fq_myear_3",
+                                    "leafletUpdateInterval": 750,
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "ewr234"
                                 },
                                 {
                                     "id": "cme5me",
@@ -1557,6 +1588,30 @@
                     "type": "group",
                     "name": "Hazards",
                     "members": [
+                        {
+                            "id": "dryhs3",
+                            "type": "group",
+                            "name": "DEA Burnt Area Characteristics",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Burnt Area Characteristics (Sentinel-2 MSI, Provisional)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_ba_provisional_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_ba_provisional_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "FG346d"
+                                }
+                            ]
+                        },
                         {
                             "id": "ASDF2f",
                             "type": "group",

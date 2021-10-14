@@ -66,9 +66,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1", "Band_2", "Band_3"],
-            },
             "styling": {
                 "default_style": "false_colour",
                 "styles": [
@@ -91,9 +88,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1", "Band_2", "Band_3"],
-            },
             "styling": {
                 "default_style": "simple_rgb",
                 "styles": [
@@ -114,9 +108,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",
@@ -139,9 +130,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "ramp",
                 "styles": [
@@ -162,9 +150,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",
@@ -187,9 +172,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "ramp",
                 "styles": [
@@ -210,9 +192,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",
@@ -235,9 +214,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "ramp",
                 "styles": [
@@ -258,9 +234,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",
@@ -283,9 +256,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "ramp",
                 "styles": [
@@ -306,9 +276,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",
@@ -331,9 +298,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "ramp",
                 "styles": [
@@ -354,9 +318,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",
@@ -379,9 +340,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "ramp",
                 "styles": [
@@ -402,9 +360,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",
@@ -427,9 +382,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["Band_1"],
-            },
             "styling": {
                 "default_style": "ramp",
                 "styles": [
@@ -450,9 +402,6 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["Band_1"],
             },
             "styling": {
                 "default_style": "ramp",

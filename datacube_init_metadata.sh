@@ -9,7 +9,6 @@ set -x
 # - eo
 # https://github.com/opendatacube/datacube-core/blob/6d75b686656d8688cc830897d596bfd26cfea336/datacube/index/default-metadata-types.yaml
 
-datacube metadata add https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/nrt/sentinel/eo_s2_nrt.odc-type.yaml
-datacube metadata add https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/develop/digitalearthau/config/eo3/eo3_landsat_ard.odc-type.yaml
-datacube metadata add https://explorer.dev.dea.ga.gov.au/metadata-types/gqa_eo.odc-type.yaml
-datacube metadata add https://explorer.dev.dea.ga.gov.au/metadata-types/eo_plus.odc-type.yaml
+for metadata_yaml in $(find /env/config/product_metadata -name '*.yaml'); do
+    datacube metadata add $metadata_yaml
+done

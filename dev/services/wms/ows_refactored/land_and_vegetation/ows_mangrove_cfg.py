@@ -66,9 +66,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": ["extent"],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["canopy_cover_class", "extent"],
-            },
             "styling": {
                 "default_style": "mangrove",
                 "styles": [

@@ -451,9 +451,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["count_wet"],
-            },
             "styling": {
                 "default_style": "water_observations",
                 "styles": [
@@ -484,9 +481,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["count_clear"],
             },
             "styling": {
                 "default_style": "clear_observations",
@@ -519,9 +513,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["frequency"],
-            },
             "styling": {
                 "default_style": "WOfS_frequency",
                 "styles": [
@@ -547,9 +538,6 @@ For service status information, see https://status.dea.ga.gov.au
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["confidence"],
             },
             "styling": {
                 "default_style": "wofs_confidence",
@@ -579,14 +567,38 @@ For service status information, see https://status.dea.ga.gov.au
         "always_fetch_bands": [],
         "manual_merge": False,
     },
-    "wcs": {
-        "default_bands": ["wofs_filtered_summary"],
-    },
     "styling": {
         "default_style": "WOfS_filtered_frequency",
         "styles": [
             style_wofs_filt_freq,
             style_wofs_filt_freq_blue,
+        ],
+    },
+}
+
+c3_wofs_layer = {
+    "title": "DEA Water Observations Frequency Multi Year (Landsat)",
+    "name": "ga_ls_wo_fq_myear_3",
+    "abstract": """Geoscience Australia Landsat Water Observations Frequency Multi Year Collection 3
+For service status information, see https://status.dea.ga.gov.au
+""",
+    "product_name": "ga_ls_wo_fq_myear_3",
+    "bands": bands_wofs_sum,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [30, -30],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "styling": {
+        "default_style": "WOfS_frequency",
+        "styles": [
+            style_wofs_frequency,
+            style_wofs_frequency_blue,
+            style_wofs_count_wet,
+            style_wofs_count_clear,
         ],
     },
 }

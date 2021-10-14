@@ -60,9 +60,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            "wcs": {
-                "default_bands": ["red", "green", "blue"],
-            },
             "styling": {
                 "default_style": "simple_rgb",
                 "styles": styles_tide_list,
@@ -106,9 +103,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
-            },
-            "wcs": {
-                "default_bands": ["red", "green", "blue"],
             },
             "styling": {
                 "default_style": "simple_rgb",
