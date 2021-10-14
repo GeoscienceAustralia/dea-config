@@ -36,3 +36,4 @@ jobs:
         docker-compose -f docker-compose.productscsv.yaml down
       env:
         WORKSPACE_CSV_FILE: dev-products.csv
+        EXPLORER_ENDPOINT: explorer.dev.dea.ga.gov.au
