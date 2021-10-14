@@ -53,7 +53,6 @@ measurements:
 storage:
   crs: EPSG:3577
   dimension_order:
-  - time
   - y
   - x
   resolution:
