@@ -1,4 +1,4 @@
-name: WORKSPACE CSV Test
+name: WORKSPACE CSV Test (dev)
 
 on:
   push:
