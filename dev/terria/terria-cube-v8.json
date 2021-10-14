@@ -1076,6 +1076,20 @@
                                     "id": "lei524"
                                 },
                                 {
+                                    "type": "wms",
+                                    "name": "DEA Water Observations Multi Year (Landsat)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_wo_fq_myear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_wo_fq_myear_3",
+                                    "leafletUpdateInterval": 750,
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "ewr234"
+                                },
+                                {
                                     "id": "cme5me",
                                     "type": "group",
                                     "name": "April-October water observations source data",
