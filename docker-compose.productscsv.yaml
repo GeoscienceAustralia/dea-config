@@ -13,7 +13,7 @@ services:
       - DB_DATABASE=postgres
       - DB_PORT=5432
       - AWS_DEFAULT_REGION=ap-southeast-2
-      - WORKSPACE_CSV_FILE=${WORKSPACE_CSV_FILE}
+      - ENV=${ENV}
       - EXPLORER_ENDPOINT=${EXPLORER_ENDPOINT}
     depends_on:
       - postgres

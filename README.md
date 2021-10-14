@@ -12,7 +12,7 @@ First, create an `.env` file for the `docker-compose` setup
 ```bash
     vi .env
     # inside .env
-WORKSPACE_CSV_FILE=prod-products.csv
+ENV=prod
 EXPLORER_ENDPOINT=explorer.sandbox.dea.ga.gov.au
 ```
 then bring up the testing tool
