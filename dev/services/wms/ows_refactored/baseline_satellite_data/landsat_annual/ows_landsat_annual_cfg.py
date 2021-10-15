@@ -233,7 +233,7 @@ For service status information, see https://status.dea.ga.gov.au
             "bands": bands_c3_ls,
             "resource_limits": reslim_wms_min_zoom_35,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
