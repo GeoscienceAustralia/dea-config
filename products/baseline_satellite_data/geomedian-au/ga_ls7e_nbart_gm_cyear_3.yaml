@@ -52,9 +52,6 @@ measurements:
     units: '1'
 storage:
   crs: EPSG:3577
-  dimension_order:
-  - y
-  - x
   resolution:
     x: 30
     y: -30
