@@ -351,9 +351,9 @@ style_gm_count = {
     ],
     "legend": {
         "begin": "0",
-        "end": "55",
+        "end": "50",
         "decimal_places": 0,
-        "ticks_every": 20,
+        "ticks_every": 10,
         "tick_labels": {
             "50": {"prefix": ">"},
         },
