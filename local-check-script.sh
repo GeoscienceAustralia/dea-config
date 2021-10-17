@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # This file is mounted to `docker-compose.productcsv.yaml`
 # Used for system maintainer for range of consistency checks
 # each section can be commented out for targetted testing
@@ -44,4 +45,48 @@ while IFS=, read -r id name description ancillary_quality latgqa_cep90 product_t
     fi
 done < /tmp/product_list.csv
 
-# set +x
+set +x
+
+
+set -eu
+
+while IFS=, read -r product definition location; do
+    if [[ $definition == *"http"* ]]; then
+        datacube product add $definition
+    fi
+done < /env/config/dev-products.csv
+
+datacube product list
+
+wget https://explorer.dev.dea.ga.gov.au/audit/storage.csv -O /tmp/live-dev-db-products.csv
+
+# check if workspace csv has all the products in live db
+while IFS=, read -r name count location license definition summary metadata_type; do
+    if ! grep -q $name /env/config/dev-products.csv; then
+        echo missing $name from live dev database
+    fi
+done < /tmp/live-dev-db-products.csv
+
+# check if workspace csv has extra products NOT in live db
+while IFS=, read -r product definition location; do
+    if ! grep -q $product /tmp/live-dev-db-products.csv; then
+        echo csv has $product but not in live dev db
+    fi
+done < /env/config/dev-products.csv
+
+
+wget https://explorer.sandbox.dea.ga.gov.au/audit/storage.csv -O /tmp/live-prod-db-products.csv
+
+# check if workspace csv has all the products in live db
+while IFS=, read -r name count location license definition summary metadata_type; do
+    if ! grep -q $name /env/config/prod-products.csv; then
+        echo missing $name from live prod database
+    fi
+done < /tmp/live-prod-db-products.csv
+
+# check if workspace csv has extra products NOT in live db
+while IFS=, read -r product definition location; do
+    if ! grep -q $product /tmp/live-prod-db-products.csv; then
+        echo csv has $product but not in live prod db
+    fi
+done < /env/config/prod-products.csv

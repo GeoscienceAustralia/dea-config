@@ -1,4 +1,4 @@
-name: WORKSPACE CSV Test
+name: WORKSPACE CSV Test (prod)
 
 on:
   push:
@@ -34,4 +34,5 @@ jobs:
         docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-product-csv.sh"
         docker-compose -f docker-compose.productscsv.yaml down
       env:
-        WORKSPACE_CSV_FILE: prod-products.csv
+        ENV: prod
+        EXPLORER_ENDPOINT: explorer.sandbox.dea.ga.gov.au

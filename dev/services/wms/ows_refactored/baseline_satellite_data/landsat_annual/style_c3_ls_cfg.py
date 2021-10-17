@@ -177,14 +177,19 @@ style_ls_pure_swir2 = {
     "scale_range": [0.0, 3000.0],
 }
 
+# styles tmad
+sdev_scaling = [0.020, 0.18]
+edev_scaling = [6.2, 7.3]
+bcdev_scaling = [0.025, 0.13]
+
 style_tmad_sdev_std = {
     "name": "arcsec_sdev",
-    "title": "SMAD",
+    "title": "Spectral MAD (SMAD)",
     "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_arcsec",
         "mapped_bands": True,
-        "kwargs": {"band": "sdev", "scale_from": [0.017, 0.15], "scale_to": [0.0, 4.0]},
+        "kwargs": {"band": "sdev", "scale_from": sdev_scaling, "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["sdev"],
     "mpl_ramp": "coolwarm",
@@ -194,20 +199,20 @@ style_tmad_sdev_std = {
         "end": "4.0",
         "ticks": ["0.0", "4.0"],
         "tick_labels": {
-            "0.0": {"label": "Low\ntmad"},
-            "4.0": {"label": "High\ntmad"},
+            "0.0": {"label": "Low\nSMAD"},
+            "4.0": {"label": "High\nSMAD"},
         },
     },
 }
 
 style_tmad_edev_std = {
     "name": "log_edev",
-    "title": "EMAD",
+    "title": "Euclidean MAD (EMAD)",
     "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
         "mapped_bands": True,
-        "kwargs": {"band": "edev", "scale_from": [0.025, 0.1], "scale_to": [0.0, 4.0]},
+        "kwargs": {"band": "edev", "scale_from": edev_scaling, "scale_to": [0.0, 4.0]},
     },
     "needed_bands": ["edev"],
     "mpl_ramp": "coolwarm",
@@ -217,22 +222,23 @@ style_tmad_edev_std = {
         "end": "4.0",
         "ticks": ["0.0", "4.0"],
         "tick_labels": {
-            "0.0": {"label": "Low\ntmad"},
-            "4.0": {"label": "High\ntmad"},
+            "0.0": {"label": "Low\nEMAD"},
+            "4.0": {"label": "High\nEMAD"},
         },
     },
 }
 
+
 style_tmad_bcdev_std = {
     "name": "log_bcdev",
-    "title": "BCMAD",
+    "title": "Bray-Curtis MAD (BCMAD)",
     "abstract": "Good for cropland and forest",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band_offset_log",
         "mapped_bands": True,
         "kwargs": {
             "band": "bcdev",
-            "scale_from": [0.025, 0.13],
+            "scale_from": bcdev_scaling,
             "scale_to": [0.0, 4.0],
         },
     },
@@ -244,15 +250,15 @@ style_tmad_bcdev_std = {
         "end": "4.0",
         "ticks": ["0.0", "4.0"],
         "tick_labels": {
-            "0.0": {"label": "Low\ntmad"},
-            "4.0": {"label": "High\ntmad"},
+            "0.0": {"label": "Low\nBCMAD"},
+            "4.0": {"label": "High\nBCMAD"},
         },
     },
 }
 
 style_tmad_rgb_std = {
     "name": "tmad_rgb_std",
-    "title": "TMAD multi-band false-colour (standard)",
+    "title": "MADs - SMAD, EMAD, BCMAD",
     "abstract": "Good for cropland and forest",
     "components": {
         "red": {
@@ -260,7 +266,7 @@ style_tmad_rgb_std = {
             "mapped_bands": True,
             "kwargs": {
                 "band": "sdev",
-                "scale_from": [0.017, 0.15],
+                "scale_from": sdev_scaling,
             },
         },
         "green": {
@@ -268,7 +274,7 @@ style_tmad_rgb_std = {
             "mapped_bands": True,
             "kwargs": {
                 "band": "edev",
-                "scale_from": [0.025, 0.1],
+                "scale_from": edev_scaling,
             },
         },
         "blue": {
@@ -276,21 +282,17 @@ style_tmad_rgb_std = {
             "mapped_bands": True,
             "kwargs": {
                 "band": "bcdev",
-                "scale_from": [0.025, 0.13],
+                "scale_from": bcdev_scaling,
             },
         },
     },
     "additional_bands": ["sdev", "bcdev", "edev"],
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/tmad-annual/geomad.png",
-    },
 }
 
 style_tmad_rgb_sens = {
     "inherits": style_tmad_rgb_std,
     "name": "tmad_rgb_sens",
-    "title": "TMAD multi-band false-colour (sensitive)",
+    "title": "MADs (desert) - SMAD, EMAD, BCMAD",
     "abstract": "Good for arid land and desert",
     "components": {
         "red": {
@@ -300,20 +302,17 @@ style_tmad_rgb_sens = {
         },
         "green": {
             "kwargs": {
-                "scale_from": [0.010, 0.09],
+                "scale_from": [5.9, 6.9],
             }
         },
         "blue": {
             "kwargs": {
-                "scale_from": [0.011, 0.07],
+                "scale_from": [0.008, 0.07],
             }
         },
     },
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/tmad-annual/geomad.png",
-    },
 }
+
 
 style_gm_count = {
     "name": "count",
@@ -338,25 +337,25 @@ style_gm_count = {
             "color": "#890000",
             "alpha": 1,
         },
-        {"value": 20, "color": "#990000"},
-        {"value": 30, "color": "#E38400"},
-        {"value": 40, "color": "#E3DF00"},
-        {"value": 50, "color": "#A6E300"},
-        {"value": 60, "color": "#00E32D"},
-        {"value": 70, "color": "#00E3C8"},
-        {"value": 80, "color": "#0097E3"},
-        {"value": 90, "color": "#005FE3"},
-        {"value": 100, "color": "#000FE3"},
-        {"value": 110, "color": "#000EA9"},
-        {"value": 120, "color": "#5700E3"},
+        {"value": 5, "color": "#990000"},
+        {"value": 10, "color": "#E38400"},
+        {"value": 15, "color": "#E3DF00"},
+        {"value": 20, "color": "#A6E300"},
+        {"value": 25, "color": "#00E32D"},
+        {"value": 30, "color": "#00E3C8"},
+        {"value": 35, "color": "#0097E3"},
+        {"value": 40, "color": "#005FE3"},
+        {"value": 45, "color": "#000FE3"},
+        {"value": 50, "color": "#000EA9"},
+        {"value": 55, "color": "#5700E3"},
     ],
     "legend": {
         "begin": "0",
-        "end": "120",
+        "end": "55",
         "decimal_places": 0,
         "ticks_every": 20,
         "tick_labels": {
-            "120": {"prefix": ">"},
+            "50": {"prefix": ">"},
         },
     },
 }
