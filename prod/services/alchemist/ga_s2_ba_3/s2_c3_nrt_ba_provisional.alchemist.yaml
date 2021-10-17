@@ -19,7 +19,7 @@ output:
     green: delta_ndvi
     blue: delta_bsi
     static_stretch: [-1, 1]
-  explorer_url: https://explorer.dev.dea.ga.gov.au
+  explorer_url: https://explorer.sandbox.dea.ga.gov.au
   write_data_settings:
     overview_resampling: average
   reference_source_dataset: True
