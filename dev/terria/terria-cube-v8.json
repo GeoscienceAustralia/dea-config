@@ -1679,7 +1679,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Burnt Area Characteristics (Sentinel-2 MSI, Provisional)",
+                                    "name": "DEA Burnt Area Characteristics (Sentinel 2 Near Real-Time, Provisional)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2_ba_provisional_3",
@@ -4172,6 +4172,30 @@
                     "type": "group",
                     "name": "Hazards",
                     "members": [
+                        {
+                            "id": "dryhs3",
+                            "type": "group",
+                            "name": "DEA Burnt Area Characteristics",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Burnt Area Characteristics (Sentinel 2 Near Real-Time, Provisional)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_ba_provisional_3",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_ba_provisional_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "FG346d"
+                                }
+                            ]
+                        },
                         {
                             "id": "BXljDt",
                             "type": "group",
