@@ -5,7 +5,7 @@ from ows_refactored.baseline_satellite_data.landsat_annual.style_ls_cfg import \
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 layers = {
-    "title": "DEA High and Low Tide Imagery (Landsat)",
+    "title": "DEA High and Low Tide Imagery (HLTC)",
     "abstract": """
 The High and Low Tide Composites product is composed of two surface reflectance composite mosaics
 of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8)

@@ -57,6 +57,7 @@ ows_cfg = {
             "australia",
             "time-series",
             "fractional-cover",
+            "burn characteristics",
         ],
         "contact_info": {
             "person": "Digital Earth Australia",

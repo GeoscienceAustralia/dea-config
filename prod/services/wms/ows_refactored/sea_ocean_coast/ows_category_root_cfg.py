@@ -1,5 +1,5 @@
 category_layers = {
-    "title": "Sea, Occean and Coast",
+    "title": "Sea, ocean and coast",
     "abstract": "",
     "layers": [
         {
