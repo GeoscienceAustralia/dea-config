@@ -6,11 +6,11 @@ from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15,
                                            reslim_wms_min_zoom_35)
 
 layers = {
-    "title": "Landsat satellite images - annual",
+    "title": "DEA Surface Reflectance Calendar Year (Landsat)",
     "abstract": "",
     "layers": [
         {
-            "title": "DEA Surface Reflectance Geomedian (Landsat 8 OLI-TIRS)",
+            "title": "DEA Surface Reflectance Calendar Year (Landsat 8 OLI-TIRS)",
             "name": "ls8_nbart_geomedian_annual",
             "abstract": """Surface Reflectance 25m Geomedian 2.0.0 (Landsat 8 OLI-TIRS)
 The surface reflectance geomedian product provides an average cloud-free image over the given time period. The geomedian image is calculated with a multi-dimensional median, using all the spectral measurements from the satellite imagery at the same time in order to maintain the relationships among the measurements.
@@ -43,7 +43,7 @@ For service status information, see https://status.dea.ga.gov.au
             "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
         },
         {
-            "title": "DEA Surface Reflectance Geomedian (Landsat 7 ETM+)",
+            "title": "DEA Surface Reflectance Calendar Year (Landsat 7 ETM+)",
             "name": "ls7_nbart_geomedian_annual",
             "abstract": """Surface Reflectance 25m Geomedian 2.0.0 (Landsat 7 ETM+)
 The surface reflectance geomedian product provides an average cloud-free image over the given time period. The geomedian image is calculated with a multi-dimensional median, using all the spectral measurements from the satellite imagery at the same time in order to maintain the relationships among the measurements.
@@ -76,7 +76,7 @@ For service status information, see https://status.dea.ga.gov.au
             "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
         },
         {
-            "title": "DEA Surface Reflectance Geomedian (Landsat 5 TM)",
+            "title": "DEA Surface Reflectance Calendar Year (Landsat 5 TM)",
             "name": "ls5_nbart_geomedian_annual",
             "abstract": """Surface Reflectance 25m Geomedian 2.0.0 (Landsat 5 TM)
 The surface reflectance geomedian product provides an average cloud-free image over the given time period. The geomedian image is calculated with a multi-dimensional median, using all the spectral measurements from the satellite imagery at the same time in order to maintain the relationships among the measurements.
@@ -108,7 +108,7 @@ For service status information, see https://status.dea.ga.gov.au
             "styling": {"default_style": "simple_rgb", "styles": styles_ls_list},
         },
         {
-            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 8 OLI-TIRS)",
+            "title": "DEA Surface Reflectance TMAD Calendar Year (Landsat 8 OLI-TIRS)",
             "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 8 OLI-TIRS)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -141,7 +141,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         },
         {
-            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 7 ETM+)",
+            "title": "DEA Surface Reflectance TMAD Calendar Year (Landsat 7 ETM+)",
             "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 7 ETM+)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -174,7 +174,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             },
         },
         {
-            "title": "DEA Surface Reflectance Median Absolute Deviation (Landsat 5 TM)",
+            "title": "DEA Surface Reflectance TMAD Calendar Year (Landsat 5 TM)",
             "abstract": """Surface Reflectance Euclidean, Spectral and Bray-Curtis Median Absolute Deviation 2.1.0 (Landsat 5 TM)
 The three layers of the TMAD are calculated by computing the multidimensional distance between each observation in a
 time series of multispectral (or higher dimensionality such as hyperspectral) satellite imagery with the
@@ -205,6 +205,6 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "arcsec_sdev",
                 "styles": styles_tmad_list,
             },
-        },
+        }
     ],
 }
