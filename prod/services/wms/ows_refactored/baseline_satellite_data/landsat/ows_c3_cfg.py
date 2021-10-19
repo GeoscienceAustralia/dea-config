@@ -30,7 +30,7 @@ bands_c3_ls_8.update(
 )
 
 layers = {
-    "title": "Landsat satellite images",
+    "title": "DEA Surface Reflectance (Landsat)",
     "abstract": """Collection 3 represents a consistent processing and upgrade to the Geoscience Australia's Landsat baseline and derivative products.
 
 For service status information, see https://status.dea.ga.gov.au""",
@@ -180,7 +180,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_common},
         },
         {
-            "title": "DEA Surface Reflectance (Landsat 8 OLI-TIRS) (provisional)",
+            "title": "DEA Surface Reflectance (Landsat 8 OLI-TIRS, Provisional)",
             "abstract": """Geoscience Australia Landsat 8 OLI-TIRS Analysis Ready Data Provisional Collection 3
 
 This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
@@ -230,7 +230,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_8},
         },
         {
-            "title": "DEA Surface Reflectance (Landsat 7 ETM+) (provisional)",
+            "title": "DEA Surface Reflectance (Landsat 7 ETM+, Provisional)",
             "abstract": """Geoscience Australia Landsat 7 ETM+ Analysis Ready Data Provisional Collection 3
 
 This product takes Landsat 7 Enhanced Thematic Mapper Plus (ETM+) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
@@ -277,6 +277,10 @@ For service status information, see https://status.dea.ga.gov.au""",
                 },
             ],
             "styling": {"default_style": "true_colour", "styles": styles_c3_ls_7},
+        },
+        {
+            "include": "ows_refactored.baseline_satellite_data.landsat.ows_c3_cfg.combined_provisional_layer",
+            "type": "python",
         },
     ],
 }
@@ -335,7 +339,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 combined_provisional_layer = {
-    "title": "DEA Surface Reflectance (Landsat) Provisional - near real time",
+    "title": "DEA Surface Reflectance (Landsat, Provisional)",
     "name": "ga_ls_ard_provisional_3",
     "abstract": """Geoscience Australia Landsat Analysis Ready Data Provisional Collection 3
 
