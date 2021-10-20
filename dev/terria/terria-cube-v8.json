@@ -3832,6 +3832,23 @@
                             ]
                         },
                         {
+                            "id": "lkOP45",
+                            "type": "group",
+                            "name": "DEA Wetlands Insight Tool",
+                            "members": [
+                              {
+                                "type": "geojson",
+                                "name": "DEA Wetlands Insight Tool (Ramsar Wetlands) v4.0.0",
+                                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/ramsar_wetlands_WGS84_20190403_exploded_internal.geojson",
+                                "featureInfoTemplate": {
+                                  "template": " {{WETLAND_NA}} in {{STATE}}, reference {{REFCODE}} in the Ramsar Wetlands of Australia catalogue as at 2020-03-19.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet vegetation, green vegetation, dry vegetation, and bare soil for {{WETLAND_NA}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/WIT_v3/{{RAMSAR_NAM}}_{{WETLAND_NA}}_{{STATE}}_{{REFCODE}}.csv{{/terria.urlEncode}}'>timeseries CSV</a><p/>"
+                                },
+                                "id": "RgYh2M",
+                                "shareKeys": [
+                                  "Root Group/DEA Shapes/DEA Wetlands Insight Tool/DEA Ramsar Wetlands Insight Tool v3.0"
+                                ]
+                        },      
+                        {
                             "id": "uvJG4R",
                             "type": "group",
                             "name": "DEA Wetness Percentiles",
