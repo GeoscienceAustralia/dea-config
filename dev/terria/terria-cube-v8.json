@@ -3812,7 +3812,7 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA Waterbodies",
-                                    "url": "https://hotspots.dea.ga.gov.au/geoserver/public/wms",
+                                    "url": "https://geoserver.dea.ga.gov.au/geoserver/wms",
                                     "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see <a href='https://www.ga.gov.au/dea/products/dea-waterbodies'>https://www.ga.gov.au/dea/products/dea-waterbodies</a>",
                                     "layers": "DigitalEarthAustraliaWaterbodies",
                                     "featureInfoTemplate": {
