@@ -1347,9 +1347,9 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA Waterbodies",
-                                    "url": "https://hotspots.dea.ga.gov.au/geoserver/public/wms",
+                                    "url": "https://geoserver.dea.ga.gov.au/geoserver/wms",
                                     "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see <a href='https://www.ga.gov.au/dea/products/dea-waterbodies'>https://www.ga.gov.au/dea/products/dea-waterbodies</a>",
-                                    "layers": "DigitalEarthAustraliaWaterbodies",
+                                    "layers": "dea:DigitalEarthAustraliaWaterbodies",
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of surface area (not volume) observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' chart-type='lineAndPoint' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area (not volume) observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
                                         "partials": {
