@@ -3832,21 +3832,24 @@
                             ]
                         },
                         {
-                            "id": "lkOi45",
+                            "id": "lkOP45",
                             "type": "group",
                             "name": "DEA Wetlands Insight Tool",
                             "members": [
-                                {
-                                 "type": "geojson",
-                                 "name": "DEA Wetlands Insight Tool (Ramsar Wetlands) v4.0.0",
-                                 "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/ramsar_wetlands_WGS84_20190403_exploded_internal.geojson",
-                                 "featureInfoTemplate": {
-                                   "template": "{{WETLAND_NA}} feature {{FeatureID}}, located in {{RAMSAR_NAM}} Ramsar Wetland Complex in {{STATE}}, reference {{REFCODE}} in the Ramsar Wetlands of Australia catalogue as at 2020-03-19.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/{{RAMSAR_NAM}}_{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet, green, dry, and bare for {{WETLAND_NA}} feature {{FeatureID}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/{{RAMSAR_NAM}}_{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/{{RAMSAR_NAM}}_{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries csv</a><p/>" 
-                                 },
-                                 "id": "RgYh2M"
-                                }
-                            ]
-                        },
+                              {
+                                "type": "geojson",
+                                "name": "DEA Wetlands Insight Tool (Ramsar Wetlands) v4.0.0",
+                                "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/ramsar_wetlands_WGS84_20190403_exploded_internal.geojson",
+                                "featureInfoTemplate": {
+                                  "template": "{{WETLAND_NA}} feature {{FeatureID}}, located in {{RAMSAR_NAM}} Ramsar Wetland Complex in {{STATE}}, reference {{REFCODE}} in the Ramsar Wetlands of Australia catalogue as at 2020-03-19.  <p/> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/{{RAMSAR_NAM}}_{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>Change in water, wet, green, dry, and bare for {{WETLAND_NA}} feature {{FeatureID}}. Ramsar listed {{DESIGNATIO}}</figcaption> </figure> <p/> Download: <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/{{RAMSAR_NAM}}_{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a href='{{#terria.urlEncode}}http://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/Wetlands_Insight_Tool/Ramsar_WIT_v4/{{RAMSAR_NAM}}_{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries csv</a><p/>"
+                                },
+                                "id": "RgYh2M",
+                                "shareKeys": [
+                                    "Root Group/Surface Water/DEA Wetlands Insight Tool/DEA Ramsar Wetlands Insight Tool (Ramsar Wetlands) v4.0.0"
+                                  ]
+                              }
+                                      ]  
+                              },
                         {
                             "id": "uvJG4R",
                             "type": "group",
