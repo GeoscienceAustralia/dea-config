@@ -3,7 +3,7 @@ product:
   name: ga_ls_wo_fq_myear_3
   short_name: ga_ls_wo_fq_myear_3
   version: 1.6.0
-  product_family: DEA Water Observations (WOfS)
+  product_family: wo
 
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
