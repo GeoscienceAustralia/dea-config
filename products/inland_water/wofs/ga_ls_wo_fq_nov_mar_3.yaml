@@ -3,6 +3,9 @@ description: Geoscience Australia Landsat Water Observations Frequency November 
 metadata_type: eo
 
 metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: wo
   product: 
     name: ga_ls_wo_fq_nov_mar_3 
   
