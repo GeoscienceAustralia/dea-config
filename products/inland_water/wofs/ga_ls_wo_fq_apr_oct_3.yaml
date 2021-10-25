@@ -3,25 +3,21 @@ description: Geoscience Australia Landsat Water Observations Frequency April to 
 metadata_type: eo
 
 metadata:
-  product_type: ga_ls_wo_fq_apr_oct_3
-  format:
-    name: 'GeoTIFF'
-  instrument:
-    name: 'TM,ETM,OLI'
-  platform:
-    code: 'LANDSAT_5,LANDSAT_7,LANDSAT_8'
+  product: 
+    name: ga_ls_wo_fq_apr_oct_3 
+
 measurements:
   - name: count_wet
     dtype: int16
-    nodata: -1
+    nodata: -999
     units: '1'
   - name: count_clear
     dtype: int16
-    nodata: -1
+    nodata: -999
     units: '1'
   - name: frequency
     dtype: float32
-    nodata: -1
+    nodata: .nan
     units: '1'
 storage:
   crs: EPSG:3577
@@ -30,8 +26,8 @@ storage:
   - y
   - x
   resolution:
-    x: 25
-    y: -25
+    x: 30
+    y: -30
   tile_size:
-    x: 100000.0
-    y: 100000.0
+    x: 96000.0
+    y: 96000.0
