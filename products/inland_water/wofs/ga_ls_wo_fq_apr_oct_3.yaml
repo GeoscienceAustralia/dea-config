@@ -1,9 +1,9 @@
-name: wofs_apr_oct_summary
-description: Water Observations from Space April to October Statistics
+name: ga_ls_wo_fq_apr_oct_3
+description: Geoscience Australia Landsat Water Observations Frequency April to October Collection 3
 metadata_type: eo
 
 metadata:
-  product_type: wofs_apr_oct_summary
+  product_type: ga_ls_wo_fq_apr_oct_3
   format:
     name: 'GeoTIFF'
   instrument:
