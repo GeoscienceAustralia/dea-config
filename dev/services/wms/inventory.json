@@ -251,6 +251,34 @@
         },
         {
             "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "water_observations"
+            ]
+        },
+        {
+            "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "clear_observations"
+            ]
+        },
+        {
+            "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "WOfS_frequency",
+                "WOfS_frequency_blues_transparent"
+            ]
+        },
+        {
+            "product": [
                 "ga_ls_wo_fq_myear_3"
             ],
             "styles_count": 4,
