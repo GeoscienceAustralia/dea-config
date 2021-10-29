@@ -253,3 +253,33 @@ For service status information, see https://status.dea.ga.gov.au
         ],
     },
 }
+
+
+c3_statistics_layer = {
+    "title": "DEA Water Observations (WOfS) ",
+    "abstract": "WOfS",
+    "layers": [
+        {
+            "title": "Geoscience Australia Landsat Water Observations Frequency Calendar Year Collection 3",
+            "name": "ga_ls_wo_fq_cyear_3",
+            "abstract": """Water Observations Calendar Year (Landsat)""",
+            "product_name": "ga_ls_wo_fq_cyear_3",
+            "bands": bands_wofs_sum,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "styling": {
+                "default_style": "annual_WOfS_frequency",
+                "styles": [
+                    style_annual_wofs_summary_frequency,
+                    style_annual_wofs_summary_frequency_blue,
+                ],
+            },
+        },
+    ],
+}

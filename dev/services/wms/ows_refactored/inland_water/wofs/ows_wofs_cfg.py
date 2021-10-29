@@ -20,6 +20,10 @@ layers = {
             "type": "python",
         },
         {
+            "include": "ows_refactored.inland_water.wofs.ows_wofs_annual_cfg.c3_statistics_layer",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.inland_water.wofs.ows_wofs_summary_cfg.statistics_layer",
             "type": "python",
         },
