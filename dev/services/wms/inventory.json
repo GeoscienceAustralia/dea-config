@@ -59,6 +59,16 @@
         },
         {
             "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "annual_WOfS_frequency",
+                "annual_WOfS_frequency_blues_transparent"
+            ]
+        },
+        {
+            "product": [
                 "ga_ls8c_nbart_gm_cyear_3"
             ],
             "styles_count": 17,
@@ -249,6 +259,7 @@
                 "WOfS_frequency_blues_transparent"
             ]
         },
+
         {
             "product": [
                 "ga_ls_wo_fq_myear_3"
@@ -1315,5 +1326,5 @@
             ]
         }
     ],
-    "total_layers_count": 95
+    "total_layers_count": 96
 }
