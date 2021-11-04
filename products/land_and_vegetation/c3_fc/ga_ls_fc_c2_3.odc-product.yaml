@@ -8,6 +8,7 @@ metadata:
   properties:
     odc:file_format: GeoTIFF
     odc:product_family: fc
+    usgs_collection: 2
   product:
     name: ga_ls_fc_c2_3
 
