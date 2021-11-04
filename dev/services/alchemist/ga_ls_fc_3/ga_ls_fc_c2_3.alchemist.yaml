@@ -57,10 +57,10 @@ output:
     producer: ga.gov.au
     dataset_version: 2.5.0
     collection_number: 3
-    naming_conventions: dea_c3
-    usgs_collection: 2 
+    naming_conventions: dea_c3 
   properties:
     dea:dataset_maturity: interim
+    usgs_collection: 2
 
 processing:
   dask_chunks:
