@@ -58,6 +58,7 @@ output:
     dataset_version: 2.5.0
     collection_number: 3
     naming_conventions: dea_c3
+    usgs_collection: 2 
   properties:
     dea:dataset_maturity: interim
 
