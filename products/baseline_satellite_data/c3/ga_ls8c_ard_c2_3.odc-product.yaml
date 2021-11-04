@@ -14,7 +14,7 @@ metadata:
     odc:producer: ga.gov.au
     eo:instrument: OLI_TIRS
     odc:product_family: ard
-    landsat:collection_number: 1
+    landsat:collection_number: 2
 measurements:
 - name: nbar_coastal_aerosol
   dtype: int16
