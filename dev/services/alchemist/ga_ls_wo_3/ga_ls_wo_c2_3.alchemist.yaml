@@ -43,10 +43,10 @@ output:
     dataset_version: 1.6.0
     collection_number: 3
     naming_conventions: dea_c3
-    usgs_collection: 2
 
   properties:
     dea:dataset_maturity: interim
+    usgs_collection: 2
 
 processing:
   dask_chunks:
