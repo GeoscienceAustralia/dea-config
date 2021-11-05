@@ -14,6 +14,10 @@ For service status information, see https://status.dea.ga.gov.au
             "type": "python",
         },
         {
+            "include": "ows_refactored.land_and_vegetation.fc.ows_c3_fc_cfg.layer_c2",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.land_and_vegetation.fc.ows_fc_annual_cfg.fcp_rgb_layer",
             "type": "python",
         },

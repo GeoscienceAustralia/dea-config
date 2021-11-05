@@ -36,6 +36,55 @@ layers = {
 For service status information, see https://status.dea.ga.gov.au""",
     "layers": [
         {
+            "title": "DEA Surface Reflectance USGS C2 Test (Landsat 8 OLI-TIRS)",
+            "abstract": """Geoscience Australia Landsat 8 OLI-TIRS Analysis Ready Data Collection 3
+This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+
+The imagery is captured using the Operational Land Imager (OLI) and Thermal Infra-Red Scanner (TIRS) sensors aboard Landsat 8.
+
+This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
+
+It contains three sub-products that provide corrections or attribution information:
+
+DEA Surface Reflectance NBAR (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/402/dea-surface-reflectance-nbar-landsat-8-oli-tirs
+DEA Surface Reflectance NBART (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/400/dea-surface-reflectance-nbart-landsat-8-oli-tirs
+DEA Surface Reflectance OA (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/404/dea-surface-reflectance-oa-landsat-8-oli-tirs
+The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.
+
+https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs
+
+For service status information, see https://status.dea.ga.gov.au""",
+            # The WMS name for the layer
+            "name": "ga_ls8c_ard_c2_3",
+            # The Datacube name for the associated data product
+            "product_name": "ga_ls8c_ard_c2_3",
+            "bands": bands_c3_ls_8,
+            "resource_limits": reslim_wms_min_zoom_15,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [25, -25],
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "flags": [
+                # flags is now a list of flag band definitions - NOT a dictionary with identifiers
+                {
+                    "band": "oa_fmask",
+                    "product": "ga_ls8c_ard_c2_3",
+                    "ignore_time": False,
+                    "ignore_info_flags": [],
+                },
+                {
+                    "band": "land",
+                    "product": "geodata_coast_100k",
+                    "ignore_time": True,
+                    "ignore_info_flags": []
+                },
+            ],
+            "styling": {"default_style": "true_colour", "styles": styles_c3_ls_8},
+        },
+        {
             "title": "DEA Surface Reflectance (Landsat 8 OLI-TIRS)",
             "abstract": """Geoscience Australia Landsat 8 OLI-TIRS Analysis Ready Data Collection 3
 This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.

@@ -1127,6 +1127,29 @@
         },
         {
             "product": [
+                "ga_ls8c_ard_c2_3"
+            ],
+            "styles_count": 15,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "nbr",
+                "panchromatic",
+                "aerosol",
+                "fmask"
+            ]
+        },
+        {
+            "product": [
                 "ga_ls7e_ard_3"
             ],
             "styles_count": 14,
@@ -1270,6 +1293,16 @@
         },
         {
             "product": [
+                "ga_ls_wo_c2_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "observations",
+                "wet"
+            ]
+        },
+        {
+            "product": [
                 "ga_s2_wo_3"
             ],
             "styles_count": 2,
@@ -1281,6 +1314,18 @@
         {
             "product": [
                 "ga_ls_fc_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "fc_rgb",
+                "bare_ground_c3",
+                "green_veg_c3",
+                "non_green_veg_c3"
+            ]
+        },
+        {
+            "product": [
+                "ga_ls_fc_c2_3"
             ],
             "styles_count": 4,
             "styles_list": [
@@ -1326,5 +1371,5 @@
             ]
         }
     ],
-    "total_layers_count": 96
+    "total_layers_count": 99
 }
