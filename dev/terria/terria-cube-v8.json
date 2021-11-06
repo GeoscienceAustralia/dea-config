@@ -375,6 +375,35 @@
                                 },
                                 {
                                     "type": "wms",
+                                    "name": "DEA Surface Reflectance USGS C2 Test (Landsat 8 OLI-TIRS)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls8c_ard_c2_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls8c_ard_c2_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n660,{{data.0.bands.nbart_red}}\n870,{{data.0.bands.nbart_nir}}\n1610,{{data.0.bands.nbart_swir_1}}\n2200,{{data.0.bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                        "formats": {
+                                            "lat": {
+                                                "maximumFractionDigits": 5
+                                            },
+                                            "lon": {
+                                                "maximumFractionDigits": 5
+                                            }
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "fehi34"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "DEA Surface Reflectance (Landst 7 ETM+)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
@@ -802,6 +831,23 @@
                                 },
                                 {
                                     "type": "wms",
+                                    "name": "DEA Fractional Cover USGS C2 Test (Landsat)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_fc_c2_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_fc_c2_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "kj3h31"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "Seasonal Fractional Cover",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
@@ -1068,6 +1114,23 @@
                                     "layers": "ga_ls_wo_3",
                                     "linkedWcsUrl": "https://ows.dev,dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_ls_wo_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "sa672d"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Water Observations USGS C2 Test (Landsat)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_wo_c2_3",
+                                    "linkedWcsUrl": "https://ows.dev,dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_wo_c2_3",
                                     "chartColor": "white",
                                     "timeFilterPropertyName": "data_available_for_dates",
                                     "leafletUpdateInterval": 750,
