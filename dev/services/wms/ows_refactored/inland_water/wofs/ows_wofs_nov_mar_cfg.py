@@ -1,5 +1,4 @@
-
-"from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
+from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
 from ows_refactored.inland_water.wofs.style_wofs_cfg import (
     style_seasonal_wofs_summary_frequency,
     style_seasonal_wofs_summary_frequency_blue, style_wofs_seasonal_clear,
