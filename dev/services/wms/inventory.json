@@ -293,9 +293,10 @@
             "product": [
                 "ga_ls_wo_fq_apr_oct_3"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "seasonal_WOfS_frequency"
+                "seasonal_WOfS_frequency",
+                "seasonal_WOfS_frequency_blues_transparent"
             ]
         },
         {
@@ -320,9 +321,10 @@
             "product": [
                 "ga_ls_wo_fq_nov_mar_3"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "seasonal_WOfS_frequency"
+                "seasonal_WOfS_frequency",
+                "seasonal_WOfS_frequency_blues_transparent"
             ]
         },
         {
