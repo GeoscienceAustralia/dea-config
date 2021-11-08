@@ -96,11 +96,11 @@ For service status information, see https://status.dea.ga.gov.au
 
 # Collection 3 layers
 c3_layers = {
-    "title": "April - October water observations source data",
+    "title": "April - October water observations source data (C3)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA April - October Wet Observations Statistics (Landsat)",
+            "title": "DEA April - October Wet Observations Statistics (Landsat, C3)",
             "name": "wofs_apr_oct_summary_wet",
             "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, April - October, Wet)
 The DEA Water Observations Statistic, April to October is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -133,7 +133,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA April - October Clear Observations Statistics (Landsat)",
+            "title": "DEA April - October Clear Observations Statistics (Landsat, C3)",
             "name": "wofs_apr_oct_summary_clear",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, April - October, Clear)
 The DEA Water Observations Statistic, April to October is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -169,7 +169,7 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 c3_statistics_layer = {
-    "title": "DEA April - October Water Observations Frequency Statistics (Landsat)",
+    "title": "DEA April - October Water Observations Frequency Statistics (Landsat, C3)",
     "name": "wofs_apr_oct_summary_statistics",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, April - October, Frequency)
 The DEA Water Observations April to October Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
