@@ -254,30 +254,102 @@ For service status information, see https://status.dea.ga.gov.au
     },
 }
 
-
 c3_statistics_layer = {
-    "title": "DEA Water Observations (WOfS) ",
+    "title": "DEA Annual Water Observations Frequency Statistics (Landsat, C3)",
+    "name": "ga_ls_wo_fq_cyear_3",
+    "abstract": """
+DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Frequency) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+
+This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage).
+
+No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
+
+https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
+
+For service status information, see https://status.dea.ga.gov.au
+""",
+    "product_name": "ga_ls_wo_fq_cyear_3",
+    "bands": bands_wofs_sum,
+    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [30, -30],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "styling": {
+        "default_style": "annual_WOfS_frequency",
+        "styles": [
+            style_annual_wofs_summary_frequency,
+            style_annual_wofs_summary_frequency_blue,
+        ],
+    },
+}
+
+c3_layers = {
+    "title": "DEA Annual Water Observations source data (C3)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "Geoscience Australia Landsat Water Observations Frequency Calendar Year Collection 3",
-            "name": "ga_ls_wo_fq_cyear_3",
-            "abstract": """Water Observations Calendar Year (Landsat)""",
+            "title": "DEA Annual Wet Observations Statistics (Landsat, C3)",
+            "name": "wofs_annual_summary_wet_c3",
+            "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Wet) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+
+This layer contains wet observation count: how many times water was detected in observations that were clear.
+
+No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
+
+https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
+
+For service status information, see https://status.dea.ga.gov.au
+""",
             "product_name": "ga_ls_wo_fq_cyear_3",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "annual_WOfS_frequency",
+                "default_style": "annual_water_observations",
                 "styles": [
-                    style_annual_wofs_summary_frequency,
-                    style_annual_wofs_summary_frequency_blue,
+                    style_wofs_summary_wet,
+                ],
+            },
+        },
+        {
+            "title": "DEA Annual Clear Observations Statistics (Landsat, C3)",
+            "name": "wofs_annual_summary_clear_c3",
+            "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Clear) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
+
+This layer contains wet observation count: how many times water was detected in observations that were clear.
+
+No clear observations causes an area to appear transparent,
+1-15 total clear observations correlates with red and yellow colours,
+18-22 clear observations correlates with light green,
+23+ clear observations correlates with inreasingly dark shades of green.
+
+https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
+For service status information, see https://status.dea.ga.gov.au
+""",
+            "product_name": "ga_ls_wo_fq_cyear_3",
+            "bands": bands_wofs_sum,
+            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "native_crs": "EPSG:3577",
+            "native_resolution": [30, -30],
+            "image_processing": {
+                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+                "always_fetch_bands": [],
+                "manual_merge": False,
+            },
+            "styling": {
+                "default_style": "annual_clear_observations",
+                "styles": [
+                    style_wofs_summary_clear,
                 ],
             },
         },
