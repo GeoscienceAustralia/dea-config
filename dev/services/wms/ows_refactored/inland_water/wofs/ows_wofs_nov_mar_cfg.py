@@ -99,7 +99,7 @@ c3_layers = {
     "layers": [
         {
             "title": "DEA November - March Wet Observations Statistics (Landsat, C3)",
-            "name": "wofs_nov_mar_summary_wet",
+            "name": "wofs_nov_mar_summary_wet_c3",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, November - March, Wet)
 The DEA Water Observations Statistic, November to March Statistics is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -132,7 +132,7 @@ For service status information, see https://status.dea.ga.gov.au
         },
         {
             "title": "DEA November - March Clear Observations Statistics (Landsat, C3)",
-            "name": "wofs_nov_mar_summary_clear",
+            "name": "wofs_nov_mar_summary_clear_c3",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, November - March, Clear)
 The DEA Water Observations Statistic, November - March is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -168,7 +168,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 c3_statistics_layer = {
     "title": "DEA November - March Water Observations Frequency Statistics (Landsat, C3)",
-    "name": "wofs_nov_mar_summary_statistics",
+    "name": "wofs_nov_mar_summary_statistics_c3",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, November - March, Frequency)
 The DEA Water Observations November - March Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
