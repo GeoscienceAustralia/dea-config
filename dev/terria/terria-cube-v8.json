@@ -1509,7 +1509,7 @@
                                     },
                                     "legends": [
                                         {
-                                            "url": "https://data.dea.ga.gov.au/projects/coastlines/DEACoastLines_legend 1.png"
+                                            "url": "https://data.dea.ga.gov.au/projects/coastlines/deacoastlines_legend_v1.1.0.png"
                                         }
                                     ]
                                 },
@@ -1531,7 +1531,7 @@
                                             },
                                             "legends": [
                                                 {
-                                                    "url": "https://data.dea.ga.gov.au/projects/coastlines/DEACoastLines_legend 1.png"
+                                                    "url": "https://data.dea.ga.gov.au/projects/coastlines/deacoastlines_legend_v1.1.0.png"
                                                 }
                                             ]
                                         },
@@ -1549,7 +1549,7 @@
                                             },
                                             "legends": [
                                                 {
-                                                    "url": "https://data.dea.ga.gov.au/projects/coastlines/DEACoastLines_legend 1.png"
+                                                    "url": "https://data.dea.ga.gov.au/projects/coastlines/deacoastlines_legend_v1.1.0.png"
                                                 }
                                             ]
                                         },
