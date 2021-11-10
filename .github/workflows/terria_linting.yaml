@@ -28,6 +28,4 @@ jobs:
     - name: Run Json Linter
       run: |
         npm install jsonlint -g
-        jsonlint dev/terria/dea-maps.json -q
-        jsonlint dev/terria/dea.json -q
         jsonlint dev/terria/**.json -q
