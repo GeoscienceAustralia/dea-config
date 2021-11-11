@@ -1,6 +1,90 @@
 {
+    "total_layers_count": 86,
     "layers": [
         {
+            "layer": "ga_ls_ard_3",
+            "product": [
+                "ga_ls5t_ard_3",
+                "ga_ls7e_ard_3",
+                "ga_ls8c_ard_3"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2_nrt_granule_nbar_t",
+            "product": [
+                "s2a_nrt_granule",
+                "s2b_nrt_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2_ard_granule_nbar_t",
+            "product": [
+                "s2a_ard_granule",
+                "s2b_ard_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ls8_nbart_geomedian_annual",
             "product": [
                 "ls8_nbart_geomedian_annual"
             ],
@@ -20,6 +104,7 @@
             ]
         },
         {
+            "layer": "ls7_nbart_geomedian_annual",
             "product": [
                 "ls7_nbart_geomedian_annual"
             ],
@@ -39,6 +124,7 @@
             ]
         },
         {
+            "layer": "ls5_nbart_geomedian_annual",
             "product": [
                 "ls5_nbart_geomedian_annual"
             ],
@@ -58,6 +144,542 @@
             ]
         },
         {
+            "layer": "ls8_nbart_tmad_annual",
+            "product": [
+                "ls8_nbart_tmad_annual"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens"
+            ]
+        },
+        {
+            "layer": "ls7_nbart_tmad_annual",
+            "product": [
+                "ls7_nbart_tmad_annual"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens"
+            ]
+        },
+        {
+            "layer": "ls5_nbart_tmad_annual",
+            "product": [
+                "ls5_nbart_tmad_annual"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens"
+            ]
+        },
+        {
+            "layer": "ga_ls8c_ard_3",
+            "product": [
+                "ga_ls8c_ard_3"
+            ],
+            "styles_count": 15,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "panchromatic",
+                "aerosol"
+            ]
+        },
+        {
+            "layer": "ga_ls7e_ard_3",
+            "product": [
+                "ga_ls7e_ard_3"
+            ],
+            "styles_count": 14,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "panchromatic"
+            ]
+        },
+        {
+            "layer": "ga_ls5t_ard_3",
+            "product": [
+                "ga_ls5t_ard_3"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_ls8c_ard_provisional_3",
+            "product": [
+                "ga_ls8c_ard_provisional_3"
+            ],
+            "styles_count": 15,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "panchromatic",
+                "aerosol"
+            ]
+        },
+        {
+            "layer": "ga_ls7e_ard_provisional_3",
+            "product": [
+                "ga_ls7e_ard_provisional_3"
+            ],
+            "styles_count": 14,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "panchromatic"
+            ]
+        },
+        {
+            "layer": "ga_ls_ard_provisional_3",
+            "product": [
+                "ga_ls7e_ard_provisional_3",
+                "ga_ls8c_ard_provisional_3"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2b_nrt_granule_nbar_t",
+            "product": [
+                "s2b_nrt_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2a_nrt_granule_nbar_t",
+            "product": [
+                "s2a_nrt_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2_nrt_provisional_granule_nbar_t",
+            "product": [
+                "ga_s2am_ard_provisional_3",
+                "ga_s2bm_ard_provisional_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2b_nrt_provisional_granule_nbar_t",
+            "product": [
+                "ga_s2bm_ard_provisional_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2a_nrt_provisional_granule_nbar_t",
+            "product": [
+                "ga_s2am_ard_provisional_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2a_ard_granule_nbar_t",
+            "product": [
+                "s2a_ard_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "s2b_ard_granule_nbar_t",
+            "product": [
+                "s2b_ard_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_ls_fc_3",
+            "product": [
+                "ga_ls_fc_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "fc_rgb",
+                "bare_ground_c3",
+                "green_veg_c3",
+                "non_green_veg_c3"
+            ]
+        },
+        {
+            "layer": "fcp_rgb",
+            "product": [
+                "fc_percentile_albers_annual"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "fc_rgb"
+            ]
+        },
+        {
+            "layer": "fcp_seasonal_rgb",
+            "product": [
+                "fc_percentile_albers_seasonal"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "simple_rgb"
+            ]
+        },
+        {
+            "layer": "fcp_green_veg",
+            "product": [
+                "fc_percentile_albers_annual"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "green_veg_10",
+                "green_veg_50",
+                "green_veg_90"
+            ]
+        },
+        {
+            "layer": "fcp_non_green_veg",
+            "product": [
+                "fc_percentile_albers_annual"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "non_green_veg_10",
+                "non_green_veg_50",
+                "non_green_veg_90"
+            ]
+        },
+        {
+            "layer": "fcp_bare_ground",
+            "product": [
+                "fc_percentile_albers_annual"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "bare_ground_10",
+                "bare_ground_50",
+                "bare_ground_90"
+            ]
+        },
+        {
+            "layer": "fcp_seasonal_green_veg",
+            "product": [
+                "fc_percentile_albers_seasonal"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "green_veg_10",
+                "green_veg_50",
+                "green_veg_90"
+            ]
+        },
+        {
+            "layer": "fcp_seasonal_non_green_veg",
+            "product": [
+                "fc_percentile_albers_seasonal"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "non_green_veg_10",
+                "non_green_veg_50",
+                "non_green_veg_90"
+            ]
+        },
+        {
+            "layer": "fcp_seasonal_bare_ground",
+            "product": [
+                "fc_percentile_albers_seasonal"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "bare_ground_10",
+                "bare_ground_50",
+                "bare_ground_90"
+            ]
+        },
+        {
+            "layer": "ls5_fc_albers",
+            "product": [
+                "ls5_fc_albers"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "simple_fc"
+            ]
+        },
+        {
+            "layer": "ls7_fc_albers",
+            "product": [
+                "ls7_fc_albers"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "simple_fc"
+            ]
+        },
+        {
+            "layer": "ls8_fc_albers",
+            "product": [
+                "ls8_fc_albers"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "simple_fc"
+            ]
+        },
+        {
+            "layer": "fc_albers_combined",
+            "product": [
+                "ls5_fc_albers",
+                "ls7_fc_albers",
+                "ls8_fc_albers"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "simple_fc"
+            ]
+        },
+        {
+            "layer": "mangrove_cover_v2_0_2",
+            "product": [
+                "mangrove_cover"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "mangrove"
+            ]
+        },
+        {
+            "layer": "ls8_barest_earth_mosaic",
             "product": [
                 "ls8_barest_earth_albers"
             ],
@@ -75,6 +697,7 @@
             ]
         },
         {
+            "layer": "landsat_barest_earth",
             "product": [
                 "landsat_barest_earth"
             ],
@@ -95,420 +718,7 @@
             ]
         },
         {
-            "product": [
-                "mangrove_cover"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "mangrove"
-            ]
-        },
-        {
-            "product": [
-                "wofs_filtered_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "WOfS_filtered_frequency",
-                "WOfS_filtered_frequency_blues_transparent"
-            ]
-        },
-        {
-            "product": [
-                "wofs_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "water_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "clear_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "WOfS_frequency",
-                "WOfS_frequency_blues_transparent"
-            ]
-        },
-        {
-            "product": [
-                "wofs_filtered_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "wofs_confidence"
-            ]
-        },
-        {
-            "product": [
-                "wofs_annual_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "annual_water_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_annual_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "annual_clear_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_annual_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "annual_WOfS_frequency",
-                "annual_WOfS_frequency_blues_transparent"
-            ]
-        },
-        {
-            "product": [
-                "wofs_apr_oct_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_water_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_apr_oct_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_clear_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_apr_oct_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent"
-            ]
-        },
-        {
-            "product": [
-                "wofs_nov_mar_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_water_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_nov_mar_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_clear_observations"
-            ]
-        },
-        {
-            "product": [
-                "wofs_nov_mar_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent"
-            ]
-        },
-        {
-            "product": [
-                "wofs_albers"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "observations",
-                "wet"
-            ]
-        },
-        {
-            "product": [
-                "s2a_nrt_granule",
-                "s2b_nrt_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "s2b_nrt_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "s2a_nrt_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_s2am_ard_provisional_3",
-                "ga_s2bm_ard_provisional_3"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_s2am_ard_provisional_3"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_s2bm_ard_provisional_3"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "s2a_ard_granule",
-                "s2b_ard_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "s2b_ard_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "s2a_ard_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "multi_scale_topographic_position"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "mstp_rgb"
-            ]
-        },
-        {
-            "product": [
-                "weathering_intensity"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "wii"
-            ]
-        },
-        {
+            "layer": "ga_ls_tcw_percentiles_2",
             "product": [
                 "ga_ls_tcw_percentiles_2"
             ],
@@ -520,90 +730,194 @@
             ]
         },
         {
+            "layer": "ga_ls_wo_3",
             "product": [
-                "fc_percentile_albers_annual"
+                "ga_ls_wo_3"
             ],
-            "styles_count": 3,
+            "styles_count": 2,
             "styles_list": [
-                "green_veg_10",
-                "green_veg_50",
-                "green_veg_90"
+                "observations",
+                "wet"
             ]
         },
         {
+            "layer": "wofs_apr_oct_summary_statistics",
             "product": [
-                "fc_percentile_albers_annual"
+                "wofs_apr_oct_summary"
             ],
-            "styles_count": 3,
+            "styles_count": 2,
             "styles_list": [
-                "non_green_veg_10",
-                "non_green_veg_50",
-                "non_green_veg_90"
+                "seasonal_WOfS_frequency",
+                "seasonal_WOfS_frequency_blues_transparent"
             ]
         },
         {
+            "layer": "wofs_nov_mar_summary_statistics",
             "product": [
-                "fc_percentile_albers_annual"
+                "wofs_nov_mar_summary"
             ],
-            "styles_count": 3,
+            "styles_count": 2,
             "styles_list": [
-                "bare_ground_10",
-                "bare_ground_50",
-                "bare_ground_90"
+                "seasonal_WOfS_frequency",
+                "seasonal_WOfS_frequency_blues_transparent"
             ]
         },
         {
+            "layer": "wofs_annual_summary_statistics",
             "product": [
-                "fc_percentile_albers_annual"
+                "wofs_annual_summary"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "fc_rgb"
+                "annual_WOfS_frequency",
+                "annual_WOfS_frequency_blues_transparent"
             ]
         },
         {
+            "layer": "wofs_filtered_summary",
             "product": [
-                "fc_percentile_albers_seasonal"
+                "wofs_filtered_summary"
             ],
-            "styles_count": 3,
+            "styles_count": 2,
             "styles_list": [
-                "green_veg_10",
-                "green_veg_50",
-                "green_veg_90"
+                "WOfS_filtered_frequency",
+                "WOfS_filtered_frequency_blues_transparent"
             ]
         },
         {
+            "layer": "wofs_apr_oct_summary_wet",
             "product": [
-                "fc_percentile_albers_seasonal"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "non_green_veg_10",
-                "non_green_veg_50",
-                "non_green_veg_90"
-            ]
-        },
-        {
-            "product": [
-                "fc_percentile_albers_seasonal"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "bare_ground_10",
-                "bare_ground_50",
-                "bare_ground_90"
-            ]
-        },
-        {
-            "product": [
-                "fc_percentile_albers_seasonal"
+                "wofs_apr_oct_summary"
             ],
             "styles_count": 1,
             "styles_list": [
-                "simple_rgb"
+                "seasonal_water_observations"
             ]
         },
         {
+            "layer": "wofs_apr_oct_summary_clear",
+            "product": [
+                "wofs_apr_oct_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "seasonal_clear_observations"
+            ]
+        },
+        {
+            "layer": "wofs_nov_mar_summary_wet",
+            "product": [
+                "wofs_nov_mar_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "seasonal_water_observations"
+            ]
+        },
+        {
+            "layer": "wofs_nov_mar_summary_clear",
+            "product": [
+                "wofs_nov_mar_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "seasonal_clear_observations"
+            ]
+        },
+        {
+            "layer": "wofs_annual_summary_wet",
+            "product": [
+                "wofs_annual_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "annual_water_observations"
+            ]
+        },
+        {
+            "layer": "wofs_annual_summary_clear",
+            "product": [
+                "wofs_annual_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "annual_clear_observations"
+            ]
+        },
+        {
+            "layer": "wofs_summary_wet",
+            "product": [
+                "wofs_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "water_observations"
+            ]
+        },
+        {
+            "layer": "wofs_summary_clear",
+            "product": [
+                "wofs_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "clear_observations"
+            ]
+        },
+        {
+            "layer": "Water Observations from Space Statistics",
+            "product": [
+                "wofs_summary"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "WOfS_frequency",
+                "WOfS_frequency_blues_transparent"
+            ]
+        },
+        {
+            "layer": "wofs_filtered_summary_confidence",
+            "product": [
+                "wofs_filtered_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "wofs_confidence"
+            ]
+        },
+        {
+            "layer": "wofs_albers",
+            "product": [
+                "wofs_albers"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "observations",
+                "wet"
+            ]
+        },
+        {
+            "layer": "ITEM_V2.0.0",
+            "product": [
+                "item_v2"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "relative_layer"
+            ]
+        },
+        {
+            "layer": "ITEM_V2.0.0_Conf",
+            "product": [
+                "item_v2_conf"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "confidence_layer"
+            ]
+        },
+        {
+            "layer": "NIDEM",
             "product": [
                 "nidem"
             ],
@@ -613,6 +927,7 @@
             ]
         },
         {
+            "layer": "high_tide_composite",
             "product": [
                 "high_tide_comp_20p"
             ],
@@ -632,6 +947,7 @@
             ]
         },
         {
+            "layer": "low_tide_composite",
             "product": [
                 "low_tide_comp_20p"
             ],
@@ -651,255 +967,20 @@
             ]
         },
         {
+            "layer": "ga_s2_ba_provisional_3",
             "product": [
-                "item_v2"
+                "ga_s2_ba_provisional_3"
             ],
-            "styles_count": 1,
+            "styles_count": 4,
             "styles_list": [
-                "relative_layer"
+                "ga_s2_dnbr_provisional_3",
+                "ga_s2_dnbrclasses_provisional_3",
+                "ga_s2_dbsi_provisional_3",
+                "ga_s2_dndvi_provisional_3"
             ]
         },
         {
-            "product": [
-                "item_v2_conf"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "confidence_layer"
-            ]
-        },
-        {
-            "product": [
-                "aster_false_colour"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "false_colour",
-                "gray"
-            ]
-        },
-        {
-            "product": [
-                "aster_regolith_ratios"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_rgb"
-            ]
-        },
-        {
-            "product": [
-                "aster_aloh_group_composition"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_aloh_group_content"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_feoh_group_content"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_ferric_oxide_composition"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_ferric_oxide_content"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_ferrous_iron_content_in_mgoh"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_ferrous_iron_index"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_green_vegetation"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_gypsum_index"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_kaolin_group_index"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_mgoh_group_composition"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_mgoh_group_content"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_opaque_index"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_silica_index"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "aster_quartz_index"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "ramp"
-            ]
-        },
-        {
-            "product": [
-                "ls8_nbart_tmad_annual"
-            ],
-            "styles_count": 5,
-            "styles_list": [
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens"
-            ]
-        },
-        {
-            "product": [
-                "ls7_nbart_tmad_annual"
-            ],
-            "styles_count": 5,
-            "styles_list": [
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens"
-            ]
-        },
-        {
-            "product": [
-                "ls5_nbart_tmad_annual"
-            ],
-            "styles_count": 5,
-            "styles_list": [
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens"
-            ]
-        },
-        {
-            "product": [
-                "ls5_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
-            "product": [
-                "ls7_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
-            "product": [
-                "ls8_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
-            "product": [
-                "ls5_fc_albers",
-                "ls7_fc_albers",
-                "ls8_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
+            "layer": "alos_displacement",
             "product": [
                 "cemp_insar_alos_displacement"
             ],
@@ -912,6 +993,7 @@
             ]
         },
         {
+            "layer": "alos_velocity",
             "product": [
                 "cemp_insar_alos_velocity"
             ],
@@ -924,6 +1006,7 @@
             ]
         },
         {
+            "layer": "envisat_displacement",
             "product": [
                 "cemp_insar_envisat_displacement"
             ],
@@ -936,6 +1019,7 @@
             ]
         },
         {
+            "layer": "envisat_velocity",
             "product": [
                 "cemp_insar_envisat_velocity"
             ],
@@ -948,6 +1032,7 @@
             ]
         },
         {
+            "layer": "radarsat2_displacement",
             "product": [
                 "cemp_insar_radarsat2_displacement"
             ],
@@ -960,6 +1045,7 @@
             ]
         },
         {
+            "layer": "radarsat2_velocity",
             "product": [
                 "cemp_insar_radarsat2_velocity"
             ],
@@ -972,195 +1058,195 @@
             ]
         },
         {
+            "layer": "aster_false_colour",
             "product": [
-                "ga_ls8c_ard_3"
-            ],
-            "styles_count": 15,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "panchromatic",
-                "aerosol",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_ls7e_ard_3"
-            ],
-            "styles_count": 14,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "panchromatic",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_ls5t_ard_3"
-            ],
-            "styles_count": 13,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_ls8c_ard_3",
-                "ga_ls7e_ard_3",
-                "ga_ls5t_ard_3"
-            ],
-            "styles_count": 13,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_ls8c_ard_provisional_3"
-            ],
-            "styles_count": 15,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "panchromatic",
-                "aerosol",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_ls7e_ard_provisional_3"
-            ],
-            "styles_count": 14,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "panchromatic",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_ls8c_ard_provisional_3",
-                "ga_ls7e_ard_provisional_3"
-            ],
-            "styles_count": 13,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "nbr",
-                "fmask"
-            ]
-        },
-        {
-            "product": [
-                "ga_ls_wo_3"
+                "aster_false_colour"
             ],
             "styles_count": 2,
             "styles_list": [
-                "observations",
-                "wet"
+                "false_colour",
+                "gray"
             ]
         },
         {
+            "layer": "aster_regolith_ratios",
             "product": [
-                "ga_ls_fc_3"
+                "aster_regolith_ratios"
             ],
-            "styles_count": 4,
+            "styles_count": 1,
             "styles_list": [
-                "fc_rgb",
-                "bare_ground_c3",
-                "green_veg_c3",
-                "non_green_veg_c3"
+                "simple_rgb"
             ]
         },
         {
+            "layer": "aster_aloh_group_composition",
             "product": [
-                "ga_s2_ba_provisional_3"
+                "aster_aloh_group_composition"
             ],
-            "styles_count": 4,
+            "styles_count": 1,
             "styles_list": [
-                "ga_s2_dnbr_provisional_3",
-                "ga_s2_dnbrclasses_provisional_3",
-                "ga_s2_dbsi_provisional_3",
-                "ga_s2_dndvi_provisional_3"
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_aloh_group_content",
+            "product": [
+                "aster_aloh_group_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_feoh_group_content",
+            "product": [
+                "aster_feoh_group_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferric_oxide_composition",
+            "product": [
+                "aster_ferric_oxide_composition"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferric_oxide_content",
+            "product": [
+                "aster_ferric_oxide_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferrous_iron_content_in_mgoh",
+            "product": [
+                "aster_ferrous_iron_content_in_mgoh"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferrous_iron_index",
+            "product": [
+                "aster_ferrous_iron_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_green_vegetation",
+            "product": [
+                "aster_green_vegetation"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_gypsum_index",
+            "product": [
+                "aster_gypsum_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_kaolin_group_index",
+            "product": [
+                "aster_kaolin_group_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_mgoh_group_composition",
+            "product": [
+                "aster_mgoh_group_composition"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_mgoh_group_content",
+            "product": [
+                "aster_mgoh_group_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_opaque_index",
+            "product": [
+                "aster_opaque_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_silica_index",
+            "product": [
+                "aster_silica_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_quartz_index",
+            "product": [
+                "aster_quartz_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "multi_scale_topographic_position",
+            "product": [
+                "multi_scale_topographic_position"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "mstp_rgb"
+            ]
+        },
+        {
+            "layer": "weathering_intensity",
+            "product": [
+                "weathering_intensity"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "wii"
             ]
         }
-    ],
-    "total_layers_count": 86
+    ]
 }
