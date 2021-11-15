@@ -1237,6 +1237,57 @@
                                     "id": "ewr234"
                                 },
                                 {
+                                    "type": "wms",
+                                    "name": "April-October water observations (C3)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "wofs_apr_oct_summary_statistics_c3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "wofs_apr_oct_summary_statistics_c3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "lkj765"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "November-March water observations (C3)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "wofs_nov_mar_summary_statistics_c3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "wofs_nov_mar_summary_statistics_c3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Start Year: 'yyyy",
+                                    "id": "ASf45R"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "Annual water observations (C3)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_wo_fq_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_wo_fq_cyear_3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "WeGs43"
+                                },
+                                {
                                     "id": "cme5me",
                                     "type": "group",
                                     "name": "April-October water observations source data",
