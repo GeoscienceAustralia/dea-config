@@ -1526,7 +1526,7 @@
                                             "opacity": 1,
                                             "layers": "wofs_nov_mar_summary_clear_3",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
+                                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
