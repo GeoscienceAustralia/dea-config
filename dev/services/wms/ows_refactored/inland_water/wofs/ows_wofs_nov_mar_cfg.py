@@ -6,11 +6,11 @@ from ows_refactored.inland_water.wofs.style_wofs_cfg import (
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 layers = {
-    "title": "Water Observations from Space Seasonal Statistics",
+    "title": "DEA November-March Water Observations Source Data (C2)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA November - March Wet Observations Statistics (Landsat)",
+            "title": "DEA November-March Wet Observation Statistics (Landsat, C2)",
             "name": "wofs_nov_mar_summary_wet",
             "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, November - March, Wet)
 Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -40,7 +40,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA November - March Clear Observations Statistics (Landsat)",
+            "title": "DEA November-March Clear Observation Statistics (Landsat, C2)",
             "name": "wofs_nov_mar_summary_clear",
             "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, November - March, Clear)
 Water Observations from Space - November to March Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green.
@@ -68,7 +68,7 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 statistics_layer = {
-    "title": "DEA November - March Water Observations Frequency Statistics (Landsat)",
+    "title": "DEA November-March Seasonal Water Observations (Landsat, C2)",
     "name": "wofs_nov_mar_summary_statistics",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, November - March, Frequency)
 Water Observations from Space - Seasonal Statistics is a set of seasonal statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - November to March Statistics, a set of seasonal statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. For service status information, see https://status.dea.ga.gov.au
@@ -94,11 +94,11 @@ Water Observations from Space - Seasonal Statistics is a set of seasonal statist
 
 # Collection 3 layers
 c3_layers = {
-    "title": "November - March water observations source data (C3)",
+    "title": "DEA November-March Water Observations Source Data (C3)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA November - March Wet Observations Statistics (Landsat, C3)",
+            "title": "DEA November-March Wet Observation Statistics (Landsat, C3)",
             "name": "wofs_nov_mar_summary_wet_c3",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, November - March, Wet)
 The DEA Water Observations Statistic, November to March Statistics is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -113,7 +113,7 @@ No clear observations of water causes an area to appear transparent,
 https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 For service status information, see https://status.dea.ga.gov.au
 """,
-            "product_name": "ga_ls_wo_fq_nov_mar_3",
+            "product_name": "ga_ls_wo_fq_nov_mar_c3",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "time_resolution": "month",
@@ -132,7 +132,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA November - March Clear Observations Statistics (Landsat, C3)",
+            "title": "DEA November-March Clear Observation Statistics (Landsat, C3)",
             "name": "wofs_nov_mar_summary_clear_c3",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, November - March, Clear)
 The DEA Water Observations Statistic, November - March is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -147,7 +147,7 @@ No clear observations causes an area to appear transparent,
 https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 For service status information, see https://status.dea.ga.gov.au
 """,
-            "product_name": "ga_ls_wo_fq_nov_mar_3",
+            "product_name": "ga_ls_wo_fq_nov_mar_c3",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "time_resolution": "month",
@@ -169,7 +169,7 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 c3_statistics_layer = {
-    "title": "DEA November - March Water Observations Frequency Statistics (Landsat, C3)",
+    "title": "DEA November-March Seasonal Water Observations (Landsat, C3)",
     "name": "wofs_nov_mar_summary_statistics_c3",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, November - March, Frequency)
 The DEA Water Observations November - March Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -184,7 +184,7 @@ deep blue and purple correspond to an area being wet through 80%-100% of clear o
 https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 For service status information, see https://status.dea.ga.gov.au
 """,
-    "product_name": "ga_ls_wo_fq_nov_mar_3",
+    "product_name": "ga_ls_wo_fq_nov_mar_c3",
     "bands": bands_wofs_sum,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "time_resolution": "month",
