@@ -101,7 +101,7 @@ c3_layers = {
     "layers": [
         {
             "title": "DEA April-October Wet Observation Statistics (Landsat, C3)",
-            "name": "wofs_apr_oct_summary_wet_c3",
+            "name": "wofs_apr_oct_summary_wet_3",
             "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, April - October, Wet)
 The DEA Water Observations Statistic, April to October is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -115,7 +115,7 @@ No clear observations of water causes an area to appear transparent,
 https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 For service status information, see https://status.dea.ga.gov.au
 """,
-            "product_name": "ga_ls_wo_fq_apr_oct_c3",
+            "product_name": "ga_ls_wo_fq_apr_oct_3",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "time_resolution": "month",
@@ -135,7 +135,7 @@ For service status information, see https://status.dea.ga.gov.au
         },
         {
             "title": "DEA April-October Clear Observation Statistics (Landsat, C3)",
-            "name": "wofs_apr_oct_summary_clear_c3",
+            "name": "wofs_apr_oct_summary_clear_3",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, April - October, Clear)
 The DEA Water Observations Statistic, April to October is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -149,7 +149,7 @@ No clear observations causes an area to appear transparent,
 https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 For service status information, see https://status.dea.ga.gov.au
 """,
-            "product_name": "ga_ls_wo_fq_apr_oct_c3",
+            "product_name": "ga_ls_wo_fq_apr_oct_3",
             "bands": bands_wofs_sum,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "time_resolution": "month",
@@ -172,7 +172,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 c3_statistics_layer = {
     "title": "DEA April-October Seasonal Water Observations (Landsat, C3)",
-    "name": "wofs_apr_oct_summary_statistics_c3",
+    "name": "wofs_apr_oct_summary_statistics_3",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, April - October, Frequency)
 The DEA Water Observations April to October Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -186,7 +186,7 @@ deep blue and purple correspond to an area being wet through 80%-100% of clear o
 https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 For service status information, see https://status.dea.ga.gov.au
 """,
-    "product_name": "ga_ls_wo_fq_apr_oct_c3",
+    "product_name": "ga_ls_wo_fq_apr_oct_3",
     "bands": bands_wofs_sum,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "native_crs": "EPSG:3577",
