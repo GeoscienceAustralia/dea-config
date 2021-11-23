@@ -1,4 +1,4 @@
-# dataset cache rules - enable caching hints to optimise effectiveness of 
+# dataset cache rules - enable caching hints to optimise effectiveness of
 #                       external caches (e.g Cloudfront)
 
 dataset_cache_rules = [
@@ -70,4 +70,3 @@ reslim_wms_min_zoom_500_max_datasets = {
     },
     "wcs": common_wcs_limits,
 }
-
