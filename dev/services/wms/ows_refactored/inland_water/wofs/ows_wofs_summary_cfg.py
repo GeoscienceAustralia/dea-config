@@ -582,7 +582,7 @@ c3_wofs_layer = {
     "abstract": """Geoscience Australia Landsat Water Observations Frequency Multi Year Collection 3
 For service status information, see https://status.dea.ga.gov.au
 """,
-    "product_name": "ga_ls_wo_fq_myear_c3",
+    "product_name": "ga_ls_wo_fq_myear_3",
     "bands": bands_wofs_sum,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "native_crs": "EPSG:3577",
