@@ -70,3 +70,4 @@ reslim_wms_min_zoom_500_max_datasets = {
     },
     "wcs": common_wcs_limits,
 }
+
