@@ -1108,7 +1108,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Water Observations (Landsat)",
+                                    "name": "DEA Water Observations (Landsat, C3)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_wo_3",
@@ -1125,7 +1125,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Water Observations USGS C2 Test (Landsat)",
+                                    "name": "DEA Water Observations (Landsat, USGS C2 Test)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_wo_c2_3",
@@ -3768,7 +3768,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Water Observations (Landsat)",
+                                    "name": "DEA Water Observations (Landsat, C3)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_wo_3",
