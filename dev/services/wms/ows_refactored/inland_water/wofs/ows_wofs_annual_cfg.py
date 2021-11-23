@@ -256,7 +256,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 c3_statistics_layer = {
     "title": "DEA Annual Water Observation Frequency Statistics (Landsat, C3)",
-    "name": "ga_ls_wo_fq_cyear_3",
+    "name": "ga_ls_wo_fq_cyear_c3",
     "abstract": """
 DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Frequency) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -293,7 +293,7 @@ c3_layers = {
     "layers": [
         {
             "title": "DEA Annual Wet Observation Statistics (Landsat, C3)",
-            "name": "wofs_annual_summary_wet_3",
+            "name": "wofs_annual_summary_wet_c3",
             "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Wet) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains wet observation count: how many times water was detected in observations that were clear.
@@ -323,7 +323,7 @@ For service status information, see https://status.dea.ga.gov.au
         },
         {
             "title": "DEA Annual Clear Observation Statistics (Landsat, C3)",
-            "name": "wofs_annual_summary_clear_3",
+            "name": "wofs_annual_summary_clear_c3",
             "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Clear) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains wet observation count: how many times water was detected in observations that were clear.
