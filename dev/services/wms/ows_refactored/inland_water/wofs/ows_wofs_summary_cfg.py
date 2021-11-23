@@ -428,7 +428,7 @@ layers = {
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA Multi-Year Wet Observations (Landsat, C2)",
+            "title": "DEA Multi-Year Wet Observation Statistics (Landsat, C2)",
             "name": "wofs_summary_wet",
             "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Wet)
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -459,7 +459,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA Multi-Year Clear Observations (Landsat, C2)",
+            "title": "DEA Multi-Year Clear Observation Statistics (Landsat, C2)",
             "name": "wofs_summary_clear",
             "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Clear)
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
