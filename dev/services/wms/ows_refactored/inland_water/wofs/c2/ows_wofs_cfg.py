@@ -35,7 +35,7 @@ layers = {
             "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_nov_mar_cfg.statistics_layer",
             "type": "python",
         },
-                {
+        {
             "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_nov_mar_cfg.layer",
             "type": "python",
         }
