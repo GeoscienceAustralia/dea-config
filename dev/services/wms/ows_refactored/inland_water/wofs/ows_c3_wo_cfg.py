@@ -206,7 +206,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 layer_c2 = {
-    "title": "DEA Water Observations USGS C2 Test (Landsat)",
+    "title": "DEA Water Observations (Landsat, USGS C2 Test)",
     "name": "ga_ls_wo_c2_3",
     "abstract": """ DEA Water Observations (Landsat)
 DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.

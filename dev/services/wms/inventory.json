@@ -961,7 +961,7 @@
             ]
         },
         {
-            "layer": "ga_ls_wo_fq_myear_3",
+            "layer": "ga_ls_wo_fq_myear_c3",
             "product": [
                 "ga_ls_wo_fq_myear_3"
             ],
@@ -1119,7 +1119,7 @@
             ]
         },
         {
-            "layer": "ga_ls_wo_fq_cyear_3",
+            "layer": "ga_ls_wo_fq_cyear_c3",
             "product": [
                 "ga_ls_wo_fq_cyear_3"
             ],

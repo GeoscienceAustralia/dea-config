@@ -156,11 +156,11 @@ style_wofs_summary_clear = {
 
 
 layers = {
-    "title": "Annual water observations source data",
+    "title": "DEA Annual Water Observations Source Data (C2)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA Annual Wet Observations Statistics (Landsat)",
+            "title": "DEA Annual Wet Observation Statistics (Landsat, C2)",
             "name": "wofs_annual_summary_wet",
             "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Annual, Wet)
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -191,7 +191,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA Annual Clear Observations Statistics (Landsat)",
+            "title": "DEA Annual Clear Observation Statistics (Landsat, C2)",
             "name": "wofs_annual_summary_clear",
             "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Annual, Clear)
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time. This product is Water Observations from Space - Annual Statistics, a set of annual statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products that help the understanding of surface water across Australia. As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the WOfS water classifications, and hence can be difficult to interpret on its own. The confidence layer and filtered summary are contained in the Water Observations from Space Statistics - Filtered Summary product, which provide a noise-reduced view of the water summary. This layer contains Water Summary: what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations causes an area to appear transparent, 1-300 total clear observations of water correlate with red and yellow colours, 400 clear observations correlates with light green, 800 clear observations and above correlates with dark green. For more information please see: https://data.dea.ga.gov.au/WOfS/annual_summary/v2.1.5/Product%20Description.pdf
@@ -220,7 +220,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 
 statistics_layer = {
-    "title": "DEA Annual Water Observations Frequency Statistics (Landsat)",
+    "title": "DEA Annual Water Observation Frequency Statistics (Landsat, C2)",
     "name": "wofs_annual_summary_statistics",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Annual, Frequency)
 Water Observations from Space - Annual Statistics is a set of annual statistical summaries of the water observations contained in WOfS. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -255,8 +255,8 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 c3_statistics_layer = {
-    "title": "DEA Annual Water Observations Frequency Statistics (Landsat, C3)",
-    "name": "ga_ls_wo_fq_cyear_3",
+    "title": "DEA Annual Water Observation Frequency Statistics (Landsat, C3)",
+    "name": "ga_ls_wo_fq_cyear_c3",
     "abstract": """
 DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Frequency) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -288,11 +288,11 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 c3_layers = {
-    "title": "DEA Annual Water Observations source data (C3)",
+    "title": "DEA Annual Water Observations Source Data (C3)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA Annual Wet Observations Statistics (Landsat, C3)",
+            "title": "DEA Annual Wet Observation Statistics (Landsat, C3)",
             "name": "wofs_annual_summary_wet_c3",
             "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Wet) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -322,7 +322,7 @@ For service status information, see https://status.dea.ga.gov.au
             },
         },
         {
-            "title": "DEA Annual Clear Observations Statistics (Landsat, C3)",
+            "title": "DEA Annual Clear Observation Statistics (Landsat, C3)",
             "name": "wofs_annual_summary_clear_c3",
             "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Clear) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
