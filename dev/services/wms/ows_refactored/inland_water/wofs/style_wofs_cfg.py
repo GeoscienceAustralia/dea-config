@@ -118,7 +118,7 @@ style_seasonal_wofs_summary_frequency_blue = {
     "title": "Water Summary (Blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
+        "function": "datacube_ows.band_utils0.single_band",
         "mapped_bands": True,
         "kwargs": {
             "band": "frequency",
