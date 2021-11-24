@@ -158,7 +158,7 @@ c3_statistics_layer = {
     "abstract": """
 DEA Annual Calander Year Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Frequency) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage summary of wet observations over time.
 
-This layer contains: 
+This layer contains:
 1) Water Summary- what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage). No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations.
 
 2) Wet observation count- how many times water was detected in observations that were wet.
