@@ -13,7 +13,6 @@ The DEA Water Observations April to October Statistic is a set of seasonal stati
 
 This layer contains: 
 1) Water summary- what percentage of clear observations were detected as wet (ie. the ratio of wet to clear as a percentage).
-
 No clear observations of water causes an area to appear transparent,
 red through to yellow represent areas seen to be wet up to 30% of the time,
 green through to light blue represent areas seen to be wet 40-60% of the time,
@@ -53,7 +52,6 @@ For service status information, see https://status.dea.ga.gov.au
             style_seasonal_wofs_summary_frequency_blue,
             style_wofs_seasonal_wet,
             style_wofs_seasonal_clear,
-
         ],
     },
 }

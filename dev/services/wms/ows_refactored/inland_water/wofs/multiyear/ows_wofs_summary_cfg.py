@@ -6,8 +6,8 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 style_wofs_count_wet = {
     "name": "water_observations",
-    "title": "Wet Count",
-    "abstract": "WOfS summary showing the count of water observations",
+    "title": "Multi Year Summary - Wet Count",
+    "abstract": "WOfS summary showing the count of wet observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -48,7 +48,7 @@ style_wofs_count_wet = {
 
 style_wofs_count_clear = {
     "name": "clear_observations",
-    "title": "Clear Count",
+    "title": "Multi Year Summary - Clear Count",
     "abstract": "WOfS summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -97,7 +97,7 @@ style_wofs_count_clear = {
 
 style_wofs_frequency = {
     "name": "WOfS_frequency",
-    "title": " Water Summary",
+    "title": "Multi Year Summary - Frequency",
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -133,7 +133,7 @@ style_wofs_frequency = {
 
 style_wofs_frequency_blue = {
     "name": "WOfS_frequency_blues_transparent",
-    "title": "Water Summary (Blue)",
+    "title": "Multi Year Summary - Frequency (Blue)",
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",

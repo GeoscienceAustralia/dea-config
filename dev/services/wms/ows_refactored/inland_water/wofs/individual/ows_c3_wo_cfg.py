@@ -3,7 +3,7 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 style_c3_wofs_obs = {
     "name": "observations",
-    "title": "Observations",
+    "title": "Water Observations",
     "abstract": "Observations",
     "value_map": {
         "water": [

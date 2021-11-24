@@ -7,8 +7,8 @@ from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
 #####################
 style_wofs_seasonal_wet = {
     "name": "seasonal_water_observations",
-    "title": "Wet Count",
-    "abstract": "WOfS seasonal summary showing the count of water observations",
+    "title": "Seasonal Summary - Wet Count",
+    "abstract": "WOfS seasonal summary showing the count of wet observations",
     "needed_bands": ["count_wet"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -46,7 +46,7 @@ style_wofs_seasonal_wet = {
 
 style_wofs_seasonal_clear = {
     "name": "seasonal_clear_observations",
-    "title": "Clear Count",
+    "title": "Seasonal Summary - Clear Count",
     "abstract": "WOfS seasonal summary showing the count of clear observations",
     "needed_bands": ["count_clear"],
     "index_function": {
@@ -85,7 +85,7 @@ style_wofs_seasonal_clear = {
 
 style_seasonal_wofs_summary_frequency = {
     "name": "seasonal_WOfS_frequency",
-    "title": " Water Summary",
+    "title": "Seasonal Summary - Frequency",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
     "index_function": {
@@ -115,7 +115,7 @@ style_seasonal_wofs_summary_frequency = {
 
 style_seasonal_wofs_summary_frequency_blue = {
     "name": "seasonal_WOfS_frequency_blues_transparent",
-    "title": "Water Summary (Blue)",
+    "title": "Seasonal Summary - Frequency (Blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils0.single_band",
