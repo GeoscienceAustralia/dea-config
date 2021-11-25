@@ -4,7 +4,7 @@ layers = {
     "abstract": "Digital Earth Australia (DEA) Water Observations from Space (WOfS)",
     "layers": [
         {
-            "include": "ows_refactored.inland_water.wofs.individual.ows_wofs_cfg.ows_c3_wo_cfg.layer_c3",
+            "include": "ows_refactored.inland_water.wofs.individual.ows_wofs_cfg.ows_c3_wo_cfg.layer",
             "type": "python",
         },
         {
