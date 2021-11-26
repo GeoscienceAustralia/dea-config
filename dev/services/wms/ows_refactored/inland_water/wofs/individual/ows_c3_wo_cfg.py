@@ -163,7 +163,7 @@ style_c3_wofs_obs_wet_only = {
 
 layer = {
     "title": "DEA Individual Water Observations (Landsat, C3)",
-    "name": "ga_ls_wo_3",
+    "name": "ga_ls_wo_c3",
     "abstract": """DEA Individual Water Observations (Landsat, C3)
 DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
 
