@@ -823,7 +823,7 @@
             "product": [
                 "s2_barest_earth"
             ],
-            "styles_count": 16,
+            "styles_count": 13,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -837,10 +837,7 @@
                 "nir_1",
                 "nir_2",
                 "swir_2",
-                "swir_3",
-                "nd_ferric_iron",
-                "nd_soil",
-                "nd_clay_mica"
+                "swir_3"
             ]
         },
         {
