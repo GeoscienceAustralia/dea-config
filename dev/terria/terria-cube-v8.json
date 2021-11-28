@@ -1277,7 +1277,7 @@
                                     "opacity": 1,
                                     "layers": "ga_ls_wo_fq_cyear_3",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls_wo_fq_cyear_c3",
+                                    "linkedWcsCoverage": "ga_ls_wo_fq_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
