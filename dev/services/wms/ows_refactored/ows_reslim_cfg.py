@@ -18,7 +18,7 @@ common_wcs_limits = {
     "max_image_size": 800_000_000,
     # Maximum number of datasets that can be accessed in a
     # single query
-    "max_datasets": 30,   # defaults to no limit
+    "max_datasets": 24,   # defaults to no limit
 }
 
 reslim_wms_min_zoom_35 = {
