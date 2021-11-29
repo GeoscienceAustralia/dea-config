@@ -272,6 +272,7 @@ For service status information, see https://status.dea.ga.gov.au
     "bands": bands_wofs_sum,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "native_crs": "EPSG:3577",
+    "time_resolution": "year",
     "native_resolution": [30, -30],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
@@ -309,6 +310,7 @@ For service status information, see https://status.dea.ga.gov.au
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
+            "time_resolution": "year",
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -341,6 +343,7 @@ For service status information, see https://status.dea.ga.gov.au
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
+            "time_resolution": "year",
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
