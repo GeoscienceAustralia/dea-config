@@ -127,7 +127,7 @@ For service status information, see https://status.dea.ga.gov.au
                     "product": "geodata_coast_100k",
                     "ignore_time": True,
                     "ignore_info_flags": [],
-                },
+                }
             ],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
