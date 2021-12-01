@@ -935,6 +935,22 @@
                             "members": [
                                 {
                                     "type": "wms",
+                                    "name": "GA Barest Earth (Sentinel-2)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "s2_barest_earth",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "s2_barest_earth",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "CVypr4prod"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "GA Barest Earth (Landsat 8 OLI/TIRS)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
