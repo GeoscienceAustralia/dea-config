@@ -41,6 +41,13 @@ style_wofs_seasonal_wet = {
             "color": "#5700E3",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": legend_idx_twentyplus_3ticks,
 }
 
@@ -80,6 +87,13 @@ style_wofs_seasonal_clear = {
             "color": "#026900",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": legend_idx_thirtyplus_4ticks,
 }
 
@@ -109,6 +123,13 @@ style_seasonal_wofs_summary_frequency = {
         {"value": 0.8, "color": "#005fe3"},
         {"value": 0.9, "color": "#000fe3"},
         {"value": 1.0, "color": "#5700e3"},
+    ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
     ],
     "legend": legend_idx_percentage_by_20,
 }
@@ -145,6 +166,13 @@ style_seasonal_wofs_summary_frequency_blue = {
         {"value": 0.6, "color": "#0178ff"},
         {"value": 0.8, "color": "#2701ff"},
         {"value": 1.0, "color": "#5700e3"},
+    ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
     ],
     "legend": legend_idx_percentage_by_20,
 }

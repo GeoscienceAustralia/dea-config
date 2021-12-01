@@ -146,7 +146,7 @@ style_s2_wofs_obs_wet_only = {
         {
             "band": "land",
             "invert": True,
-            "enum": 1,
+            "enum": 0,
         },
     ],
 }

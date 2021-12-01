@@ -35,6 +35,13 @@ style_wofs_count_wet = {
             "color": "#5700E3",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": {
         "begin": "0",
         "end": "400",
@@ -83,6 +90,13 @@ style_wofs_count_clear = {
             "color": "#026900",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": {
         "begin": "0",
         "end": "1000",
@@ -127,6 +141,13 @@ style_wofs_frequency = {
         {"value": 0.9, "color": "#000fe3"},
         {"value": 1.0, "color": "#5700e3"},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": {
         "url": "https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/wofs_full_summary_legend.png",
     },
@@ -165,6 +186,13 @@ style_wofs_frequency_blue = {
         {"value": 0.6, "color": "#0178ff"},
         {"value": 0.8, "color": "#2701ff"},
         {"value": 1.0, "color": "#5700e3"},
+    ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
     ],
     "legend": legend_idx_percentage_by_20,
 }
