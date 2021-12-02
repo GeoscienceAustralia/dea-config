@@ -92,7 +92,7 @@ style_fc_gv_c3 = {
     "pq_masks": c3_fc_pq_mask,
 }
 
-style_fc_bs_c3_umasked = {
+style_fc_bs_c3_unmasked = {
     "name": "bare_ground_c3_umasked",
     "title": "Bare Ground Unmasked (Warning: includes invalid data)",
     "abstract": "Bare Soil",
@@ -138,7 +138,7 @@ style_fc_bs_c3 = {
     "pq_masks": c3_fc_pq_mask,
 }
 
-style_fc_ngv_c3_umasked = {
+style_fc_ngv_c3_unmasked = {
     "name": "non_green_veg_c3_unmasked",
     "title": "Non-Green Vegetation Unmasked (Warning: includes invalid data)",
     "abstract": "Non Green Vegetation",
@@ -157,8 +157,8 @@ style_fc_ngv_c3_umasked = {
             "color": "#ffffd4",
         },
         {
-            "value": 25, 
-            "color": "#fed98e", 
+            "value": 25,
+            "color": "#fed98e",
         },
         {
             "value": 50,
