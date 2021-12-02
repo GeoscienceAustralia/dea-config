@@ -125,10 +125,10 @@
                                  {
                                     "type": "wms",
                                     "name": "DEA GeoMAD (Landsat 8 OLI-TIRS)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls8c_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_ls8c_nbart_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
@@ -148,15 +148,15 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "pju765"
+                                    "id": "pju765prod"
                                 },
                                 {
                                     "type": "wms",
                                     "name": "DEA GeoMAD (Landsat 7 ETM+)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_ls7e_nbart_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
@@ -176,15 +176,15 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "DFG426"
+                                    "id": "DFG426prod"
                                 },
                                 {
                                     "type": "wms",
                                     "name": "DEA GeoMAD (Landsat 5 TM)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls5t_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_ls5t_nbart_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
@@ -204,7 +204,7 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "FTY875"
+                                    "id": "FTY875prod"
                                 }
                             ],
                             "shareKeys": [
