@@ -8,7 +8,7 @@ c3_fc_pq_mask = [
         # pq_masks:band now takes the actual ODC band name, not the identifier.
         "band": "water",
         "flags": {
-            "water_observed": False
+            "water_observed": False,
             "terrain_shadow": False,
             "low_solar_angle": False,
             "high_slope": False,
