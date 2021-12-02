@@ -122,7 +122,7 @@
                             "type": "group",
                             "name": "DEA Surface Reflectance Calendar Year (Landsat)",
                             "members": [
-                                 {
+                                {
                                     "type": "wms",
                                     "name": "DEA GeoMAD (Landsat 8 OLI-TIRS)",
                                     "url": "https://ows.dea.ga.gov.au/",
