@@ -24,7 +24,7 @@ c3_fc_pq_mask = [
     },
 ]
 
-style_fc_c3_unmasked = {
+style_fc_c3_rgb_unmasked = {
     "name": "fc_rgb_unmasked",
     "title": "Three-band Fractional Cover Unmasked (Warning: includes invalid data)",
     "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
@@ -40,8 +40,8 @@ style_fc_c3_unmasked = {
     },
 }
 
-style_fc_c3_masked = {
-    "inherits": style_fc_c3_unmasked,
+style_fc_c3_rgb = {
+    "inherits": style_fc_c3_rgb_unmasked,
     "name": "fc_rgb",
     "title": "Three-band Fractional Cover",
     "pq_masks": c3_fc_pq_mask,
