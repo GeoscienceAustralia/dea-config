@@ -93,7 +93,7 @@ style_fc_gv_c3 = {
 }
 
 style_fc_bs_c3_unmasked = {
-    "name": "bare_ground_c3_umasked",
+    "name": "bare_ground_c3_unmasked",
     "title": "Bare Ground Unmasked (Warning: includes invalid data)",
     "abstract": "Bare Soil",
     "index_function": {
