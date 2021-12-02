@@ -9,6 +9,7 @@ layer = {
     "title": "DEA Fractional Cover (Landsat)",
     "name": "ga_ls_fc_3",
     "abstract": """Geoscience Australia Landsat Fractional Cover Collection 3
+
 Fractional Cover (FC), developed by the Joint Remote Sensing Research Program, is a measurement that splits the landscape into three parts, or fractions:
 
 green (leaves, grass, and growing crops)
@@ -21,8 +22,7 @@ DEA uses Fractional Cover to characterise every 30 m square of Australia for any
 
 https://cmi.ga.gov.au/data-products/dea/629/dea-fractional-cover-landsat-c3
 
-For service status information, see https://status.dea.ga.gov.au
-""",
+For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_fc_3",
     "bands": bands_fc_3,
     "resource_limits": reslim_wms_min_zoom_35,
@@ -69,6 +69,7 @@ layer_c2 = {
     "title": "DEA Fractional Cover USGS C2 Test (Landsat)",
     "name": "ga_ls_fc_c2_3",
     "abstract": """Geoscience Australia Landsat Fractional Cover Collection 3
+
 Fractional Cover (FC), developed by the Joint Remote Sensing Research Program, is a measurement that splits the landscape into three parts, or fractions:
 
 green (leaves, grass, and growing crops)
@@ -81,8 +82,7 @@ DEA uses Fractional Cover to characterise every 30 m square of Australia for any
 
 https://cmi.ga.gov.au/data-products/dea/629/dea-fractional-cover-landsat-c3
 
-For service status information, see https://status.dea.ga.gov.au
-""",
+For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_fc_c2_3",
     "bands": bands_fc_3,
     "resource_limits": reslim_wms_min_zoom_35,

@@ -70,6 +70,7 @@ intensity model has broad utility in assisting mineral exploration in variably w
 geochemical landscapes across the Australian continent, mapping chemical and physical
 attributes of soils in agricultural landscapes and in understanding the nature and
 distribution of weathering processes occurring within the upper regolith.
+
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "weathering_intensity",
             "bands": bands_weathering,
