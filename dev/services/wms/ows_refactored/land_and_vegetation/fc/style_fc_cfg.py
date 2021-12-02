@@ -186,11 +186,11 @@ style_fc_ngv_c3 = {
 
 
 styles_fc_c3_masked = [
-    style_fc_c3_rgb, 
+    style_fc_c3_rgb,
     style_fc_bs_c3, style_fc_gv_c3, style_fc_ngv_c3
 ]
 styles_fc_c3_unmasked = [
-    style_fc_c3_rgb_unmasked, 
+    style_fc_c3_rgb_unmasked,
     style_fc_bs_c3_unmasked, style_fc_gv_c3_unmasked, style_fc_ngv_c3_unmasked
 ]
 
