@@ -124,12 +124,12 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance Calendar Year (Landsat 8 OLI-TIRS)",
+                                    "name": "DEA GeoMAD (Landsat 8 OLI-TIRS)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ls8_nbart_geomedian_annual",
+                                    "layers": "ga_ls8c_nbart_gm_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ls8_nbart_geomedian_annual",
+                                    "linkedWcsCoverage": "ga_ls8c_nbart_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
@@ -148,24 +148,21 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "hAUsXi",
-                                    "shareKeys": [
-                                        "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 8 satellite images"
-                                    ]
+                                    "id": "pju765prod"
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance Calendar Year (Landsat 7 ETM+)",
+                                    "name": "DEA GeoMAD (Landsat 7 ETM+)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ls7_nbart_geomedian_annual",
+                                    "layers": "ga_ls7e_nbart_gm_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ls7_nbart_geomedian_annual",
+                                    "linkedWcsCoverage": "ga_ls7e_nbart_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n840,{{data.0.bands.nir}}\n1650,{{data.0.bands.swir1}}\n2220,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
                                         "formats": {
                                             "lat": {
                                                 "maximumFractionDigits": 5
@@ -179,24 +176,21 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "pwDY6b",
-                                    "shareKeys": [
-                                        "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 7 satellite images"
-                                    ]
+                                    "id": "DFG426prod"
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance Calendar Year (Landsat 5 TM)",
+                                    "name": "DEA GeoMAD (Landsat 5 TM)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ls5_nbart_geomedian_annual",
+                                    "layers": "ga_ls5t_nbart_gm_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ls5_nbart_geomedian_annual",
+                                    "linkedWcsCoverage": "ga_ls5t_nbart_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1650</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2220</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n840,{{data.0.bands.nir}}\n1650,{{data.0.bands.swir1}}\n2220,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
                                         "formats": {
                                             "lat": {
                                                 "maximumFractionDigits": 5
@@ -210,61 +204,7 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "BpKM2u",
-                                    "shareKeys": [
-                                        "Root Group/Satellite images/Satellite images 25m - annual/Yearly average Landsat 5 satellite images"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 8 OLI-TIRS)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ls8_nbart_tmad_annual",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ls8_nbart_tmad_annual",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "LHG659"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 7 ETM+)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ls7_nbart_tmad_annual",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ls7_nbart_tmad_annual",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "d8fgdf"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Surface Reflectance TMAD Calendar Year (Landsat 5 TM)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ls5_nbart_tmad_annual",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ls5_nbart_tmad_annual",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "dfk676"
+                                    "id": "FTY875prod"
                                 }
                             ],
                             "shareKeys": [
