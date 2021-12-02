@@ -1,9 +1,8 @@
 from ows_refactored.land_and_vegetation.fc.band_fc_cfg import bands_fc_3
 from ows_refactored.land_and_vegetation.fc.style_fc_cfg import (
-                    style_fc_bs_c3, style_fc_bs_c3_unmasked, 
-                    style_fc_c3_rgb, style_fc_c3_rgb_unmasked, 
-                    style_fc_gv_c3, style_fc_gv_c3_unmasked, 
-                    style_fc_ngv_c3_unmasked)
+    style_fc_bs_c3, style_fc_bs_c3_unmasked, style_fc_c3_rgb,
+    style_fc_c3_rgb_unmasked, style_fc_gv_c3, style_fc_gv_c3_unmasked,
+    style_fc_ngv_c3, style_fc_ngv_c3_unmasked)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 layer = {
@@ -58,7 +57,6 @@ For service status information, see https://status.dea.ga.gov.au
             style_fc_bs_c3,
             style_fc_gv_c3,
             style_fc_ngv_c3,
-
             style_fc_c3_rgb_unmasked,
             style_fc_bs_c3_unmasked,
             style_fc_gv_c3_unmasked,
