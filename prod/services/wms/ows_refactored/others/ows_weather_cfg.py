@@ -42,7 +42,8 @@ layer = {
         {
             "title": "Weathering Intensity",
             "name": "weathering_intensity",
-            "abstract": """
+            "abstract": """Weathering Intensity
+
 Weathering intensity or the degree of weathering is an important characteristic of the
 earth’s surface that has a significant influence on the chemical and physical properties
 of surface materials. Weathering intensity largely controls the degree to which primary
@@ -70,6 +71,7 @@ intensity model has broad utility in assisting mineral exploration in variably w
 geochemical landscapes across the Australian continent, mapping chemical and physical
 attributes of soils in agricultural landscapes and in understanding the nature and
 distribution of weathering processes occurring within the upper regolith.
+
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "weathering_intensity",
             "bands": bands_weathering,
