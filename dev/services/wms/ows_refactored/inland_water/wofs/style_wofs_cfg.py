@@ -150,7 +150,7 @@ style_seasonal_wofs_summary_frequency_blue = {
 }
 
 style_wofs_seasonal_wet_c3 = {
-    "name": "seasonal_water_observations",
+    "name": "seasonal_water_observations_c3",
     "title": "Wet Count",
     "abstract": "WOfS seasonal summary showing the count of water observations",
     "needed_bands": ["count_wet"],
@@ -196,7 +196,7 @@ style_wofs_seasonal_wet_c3 = {
 }
 
 style_wofs_seasonal_clear_c3 = {
-    "name": "seasonal_clear_observations",
+    "name": "seasonal_clear_observations_c3",
     "title": "Clear Count",
     "abstract": "WOfS seasonal summary showing the count of clear observations",
     "needed_bands": ["count_clear"],
@@ -242,7 +242,7 @@ style_wofs_seasonal_clear_c3 = {
 }
 
 style_seasonal_wofs_summary_frequency_c3 = {
-    "name": "seasonal_WOfS_frequency",
+    "name": "seasonal_WOfS_frequency_c3",
     "title": " Water Summary",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
@@ -279,7 +279,7 @@ style_seasonal_wofs_summary_frequency_c3 = {
 }
 
 style_seasonal_wofs_summary_frequency_blue_c3 = {
-    "name": "seasonal_WOfS_frequency_blues_transparent",
+    "name": "seasonal_WOfS_frequency_blues_transparent_c3",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
