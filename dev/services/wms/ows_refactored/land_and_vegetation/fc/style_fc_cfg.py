@@ -7,16 +7,14 @@ c3_fc_pq_mask = [
     {
         # pq_masks:band now takes the actual ODC band name, not the identifier.
         "band": "water",
-        "flags": {"dry": True},
-    },
-    {
-        "band": "water",
         "flags": {
+            "water_observed": False,
             "terrain_shadow": False,
             "low_solar_angle": False,
             "high_slope": False,
             "cloud_shadow": False,
             "cloud": False,
+            "nodata": False,
         },
     },
     {
@@ -26,9 +24,9 @@ c3_fc_pq_mask = [
     },
 ]
 
-style_fc_c3_rgb = {
-    "name": "fc_rgb",
-    "title": "Three-band Fractional Cover",
+style_fc_c3_rgb_unmasked = {
+    "name": "fc_rgb_unmasked",
+    "title": "Three-band Fractional Cover Unmasked (Warning: includes invalid data)",
     "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
         "red": {"bs": 1.0},
@@ -36,16 +34,22 @@ style_fc_c3_rgb = {
         "blue": {"npv": 1.0},
     },
     "scale_range": [0.0, 100.0],
-    "pq_masks": c3_fc_pq_mask,
     "legend": {
         "show_legend": True,
         "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
     },
 }
 
-style_fc_gv_c3 = {
-    "name": "green_veg_c3",
-    "title": "Green Vegetation",
+style_fc_c3_rgb = {
+    "inherits": style_fc_c3_rgb_unmasked,
+    "name": "fc_rgb",
+    "title": "Three-band Fractional Cover",
+    "pq_masks": c3_fc_pq_mask,
+}
+
+style_fc_gv_c3_unmasked = {
+    "name": "green_veg_c3_unmasked",
+    "title": "Green Vegetation Unmasked (Warning: includes invalid data)",
     "abstract": "Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -78,13 +82,19 @@ style_fc_gv_c3 = {
             "color": "#006837",
         },
     ],
-    "pq_masks": c3_fc_pq_mask,
     "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
-style_fc_bs_c3 = {
-    "name": "bare_ground_c3",
-    "title": "Bare Ground",
+style_fc_gv_c3 = {
+    "inherits": style_fc_gv_c3_unmasked,
+    "name": "green_veg_c3",
+    "title": "Green Vegetation",
+    "pq_masks": c3_fc_pq_mask,
+}
+
+style_fc_bs_c3_unmasked = {
+    "name": "bare_ground_c3_unmasked",
+    "title": "Bare Ground Unmasked (Warning: includes invalid data)",
     "abstract": "Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -117,14 +127,20 @@ style_fc_bs_c3 = {
             "color": "#7a0177",
         },
     ],
-    "pq_masks": c3_fc_pq_mask,
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
 
-style_fc_ngv_c3 = {
-    "name": "non_green_veg_c3",
-    "title": "Non-Green vegetation",
+style_fc_bs_c3 = {
+    "inherits": style_fc_bs_c3_unmasked,
+    "name": "bare_ground_c3",
+    "title": "Bare Ground",
+    "pq_masks": c3_fc_pq_mask,
+}
+
+style_fc_ngv_c3_unmasked = {
+    "name": "non_green_veg_c3_unmasked",
+    "title": "Non-Green Vegetation Unmasked (Warning: includes invalid data)",
     "abstract": "Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -140,7 +156,10 @@ style_fc_ngv_c3 = {
             "value": 0,
             "color": "#ffffd4",
         },
-        {"value": 25, "color": "#fed98e", "legend": {}},
+        {
+            "value": 25,
+            "color": "#fed98e",
+        },
         {
             "value": 50,
             "color": "#fe9929",
@@ -156,8 +175,24 @@ style_fc_ngv_c3 = {
     ],
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
+}
+
+style_fc_ngv_c3 = {
+    "inherits": style_fc_ngv_c3_unmasked,
+    "name": "non_green_veg_c3",
+    "title": "Non-Green vegetation",
     "pq_masks": c3_fc_pq_mask,
 }
+
+
+styles_fc_c3_masked = [
+    style_fc_c3_rgb,
+    style_fc_bs_c3, style_fc_gv_c3, style_fc_ngv_c3
+]
+styles_fc_c3_unmasked = [
+    style_fc_c3_rgb_unmasked,
+    style_fc_bs_c3_unmasked, style_fc_gv_c3_unmasked, style_fc_ngv_c3_unmasked
+]
 
 style_fc_simple_rgb = {
     "name": "simple_rgb",

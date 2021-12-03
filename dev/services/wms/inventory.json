@@ -653,12 +653,16 @@
             "product": [
                 "ga_ls_fc_3"
             ],
-            "styles_count": 4,
+            "styles_count": 8,
             "styles_list": [
                 "fc_rgb",
                 "bare_ground_c3",
                 "green_veg_c3",
-                "non_green_veg_c3"
+                "non_green_veg_c3",
+                "fc_rgb_unmasked",
+                "bare_ground_c3_unmasked",
+                "green_veg_c3_unmasked",
+                "non_green_veg_c3_unmasked"
             ]
         },
         {
@@ -666,12 +670,16 @@
             "product": [
                 "ga_ls_fc_c2_3"
             ],
-            "styles_count": 4,
+            "styles_count": 8,
             "styles_list": [
                 "fc_rgb",
                 "bare_ground_c3",
                 "green_veg_c3",
-                "non_green_veg_c3"
+                "non_green_veg_c3",
+                "fc_rgb_unmasked",
+                "bare_ground_c3_unmasked",
+                "green_veg_c3_unmasked",
+                "non_green_veg_c3_unmasked"
             ]
         },
         {
