@@ -2,7 +2,9 @@ from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
 from ows_refactored.inland_water.wofs.style_wofs_cfg import (
     style_seasonal_wofs_summary_frequency,
     style_seasonal_wofs_summary_frequency_blue, style_wofs_seasonal_clear,
-    style_wofs_seasonal_wet)
+    style_wofs_seasonal_wet, style_seasonal_wofs_summary_frequency_c3,
+    style_seasonal_wofs_summary_frequency_blue_c3, style_wofs_seasonal_clear_c3,
+    style_wofs_seasonal_wet_c3)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 layers = {
@@ -137,7 +139,7 @@ For service status information, see https://status.dea.ga.gov.au
             "styling": {
                 "default_style": "seasonal_water_observations",
                 "styles": [
-                    style_wofs_seasonal_wet,
+                    style_wofs_seasonal_wet_c3,
                 ],
             },
         },
@@ -179,7 +181,7 @@ For service status information, see https://status.dea.ga.gov.au
             "styling": {
                 "default_style": "seasonal_clear_observations",
                 "styles": [
-                    style_wofs_seasonal_clear,
+                    style_wofs_seasonal_clear_c3,
                 ],
             },
         },
@@ -224,8 +226,8 @@ For service status information, see https://status.dea.ga.gov.au
     "styling": {
         "default_style": "seasonal_WOfS_frequency",
         "styles": [
-            style_seasonal_wofs_summary_frequency,
-            style_seasonal_wofs_summary_frequency_blue,
+            style_seasonal_wofs_summary_frequency_c3,
+            style_seasonal_wofs_summary_frequency_blue_c3,
         ],
     },
 }

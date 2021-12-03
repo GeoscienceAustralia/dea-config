@@ -964,10 +964,10 @@
             ],
             "styles_count": 4,
             "styles_list": [
-                "WOfS_frequency",
-                "WOfS_frequency_blues_transparent",
-                "water_observations",
-                "clear_observations"
+                "WOfS_frequency_c3",
+                "WOfS_frequency_blues_transparent_c3",
+                "water_observations_c3",
+                "clear_observations_c3"
             ]
         },
         {
@@ -1100,8 +1100,8 @@
             ],
             "styles_count": 2,
             "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent"
+                "seasonal_WOfS_frequency_c3",
+                "seasonal_WOfS_frequency_blues_transparent_c3"
             ]
         },
         {
@@ -1111,8 +1111,8 @@
             ],
             "styles_count": 2,
             "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent"
+                "seasonal_WOfS_frequency_c3",
+                "seasonal_WOfS_frequency_blues_transparent_c3"
             ]
         },
         {
@@ -1133,7 +1133,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "seasonal_water_observations"
+                "seasonal_water_observations_c3"
             ]
         },
         {
@@ -1143,7 +1143,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "seasonal_clear_observations"
+                "seasonal_clear_observations_c3"
             ]
         },
         {
@@ -1153,7 +1153,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "seasonal_water_observations"
+                "seasonal_water_observations_c3"
             ]
         },
         {
@@ -1163,7 +1163,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "seasonal_clear_observations"
+                "seasonal_clear_observations_c3"
             ]
         },
         {
@@ -1173,7 +1173,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "annual_water_observations"
+                "annual_water_observations_c3"
             ]
         },
         {
@@ -1183,7 +1183,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "annual_clear_observations"
+                "annual_clear_observations_c3"
             ]
         },
         {
