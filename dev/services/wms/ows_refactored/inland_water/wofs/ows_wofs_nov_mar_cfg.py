@@ -1,5 +1,5 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
+from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 from ows_refactored.inland_water.wofs.style_wofs_cfg import (
     style_seasonal_wofs_summary_frequency,
     style_seasonal_wofs_summary_frequency_blue,
@@ -10,6 +10,7 @@ from ows_refactored.inland_water.wofs.style_seasonal_wo3_cfg import (
     style_seasonal_wofs_summary_frequency_blue_c3,
     style_wofs_seasonal_wet_c3,
     style_wofs_seasonal_clear_c3)
+
 
 layers = {
     "title": "DEA November-March Water Observations Source Data (C2)",
