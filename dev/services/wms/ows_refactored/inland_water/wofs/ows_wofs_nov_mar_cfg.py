@@ -1,5 +1,5 @@
 from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
-from ows_refactored.inland_water.wofs.style_wofs_cfg import *
+# from ows_refactored.inland_water.wofs.style_wofs_cfg import *
 # from ows_refactored.inland_water.wofs.style_wofs_cfg import style_wofs_seasonal_clear
 # from ows_refactored.inland_water.wofs.style_wofs_cfg import style_seasonal_wofs_summary_frequency
 # from ows_refactored.inland_water.wofs.style_wofs_cfg import style_seasonal_wofs_summary_frequency_blue
@@ -7,7 +7,7 @@ from ows_refactored.inland_water.wofs.style_wofs_cfg import *
 # from ows_refactored.inland_water.wofs.style_wofs_cfg import style_wofs_seasonal_clear_c3
 # from ows_refactored.inland_water.wofs.style_wofs_cfg import style_seasonal_wofs_summary_frequency_c3
 # from ows_refactored.inland_water.wofs.style_wofs_cfg import style_seasonal_wofs_summary_frequency_blue_c3
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+# from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 layers = {
     "title": "DEA November-March Water Observations Source Data (C2)",
