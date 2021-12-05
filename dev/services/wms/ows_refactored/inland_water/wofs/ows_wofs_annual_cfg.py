@@ -485,7 +485,7 @@ c3_layers = {
     "layers": [
         {
             "title": "DEA Annual Wet Observation Statistics (Landsat, C3)",
-            "name": "wofs_annual_summary_wet_c",
+            "name": "wofs_annual_summary_wet_3",
             "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Wet)
 
 DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Wet) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
