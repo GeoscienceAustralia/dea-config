@@ -423,7 +423,7 @@ style_wofs_obs_wet_only = {
 }
 
 style_wofs_count_wet_3 = {
-    "name": "water_observations",
+    "name": "water_observations_3",
     "title": "Wet Count",
     "abstract": "WOfS summary showing the count of water observations",
     "index_function": {
@@ -472,7 +472,7 @@ style_wofs_count_wet_3 = {
 }
 
 style_wofs_count_clear_3 = {
-    "name": "clear_observations",
+    "name": "clear_observations_3",
     "title": "Clear Count",
     "abstract": "WOfS summary showing the count of clear observations",
     "index_function": {
@@ -528,7 +528,7 @@ style_wofs_count_clear_3 = {
 }
 
 style_wofs_frequency_3 = {
-    "name": "WOfS_frequency",
+    "name": "WOfS_frequency_3",
     "title": " Water Summary",
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
@@ -793,7 +793,7 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "WOfS_frequency",
+        "default_style": "WOfS_frequency_3",
         "styles": [
             style_wofs_frequency_3,
             style_wofs_frequency_blue_3,
