@@ -148,8 +148,8 @@ style_seasonal_wofs_summary_frequency_blue = {
     "legend": legend_idx_percentage_by_20,
 }
 
-style_wofs_seasonal_wet_c3 = {
-    "name": "seasonal_water_observations_c3",
+style_wofs_seasonal_wet_3 = {
+    "name": "seasonal_water_observations_3",
     "title": "Wet Count",
     "abstract": "WOfS seasonal summary showing the count of water observations",
     "needed_bands": ["count_wet"],
@@ -194,8 +194,8 @@ style_wofs_seasonal_wet_c3 = {
     "legend": legend_idx_twentyplus_3ticks,
 }
 
-style_wofs_seasonal_clear_c3 = {
-    "name": "seasonal_clear_observations_c3",
+style_wofs_seasonal_clear_3 = {
+    "name": "seasonal_clear_observations_3",
     "title": "Clear Count",
     "abstract": "WOfS seasonal summary showing the count of clear observations",
     "needed_bands": ["count_clear"],
@@ -240,8 +240,8 @@ style_wofs_seasonal_clear_c3 = {
     "legend": legend_idx_thirtyplus_4ticks,
 }
 
-style_seasonal_wofs_summary_frequency_c3 = {
-    "name": "seasonal_WOfS_frequency_c3",
+style_seasonal_wofs_summary_frequency_3 = {
+    "name": "seasonal_WOfS_frequency_3",
     "title": " Water Summary",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
@@ -277,8 +277,8 @@ style_seasonal_wofs_summary_frequency_c3 = {
     "legend": legend_idx_percentage_by_20,
 }
 
-style_seasonal_wofs_summary_frequency_blue_c3 = {
-    "name": "seasonal_WOfS_frequency_blues_transparent_c3",
+style_seasonal_wofs_summary_frequency_blue_3 = {
+    "name": "seasonal_WOfS_frequency_blues_transparent_3",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
@@ -414,7 +414,7 @@ c3_layers = {
     "layers": [
         {
             "title": "DEA November-March Wet Observation Statistics (Landsat, C3)",
-            "name": "wofs_nov_mar_summary_wet_c3",
+            "name": "wofs_nov_mar_summary_wet_3",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, November - March, Wet)
 The DEA Water Observations Statistic, November to March Statistics is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -448,15 +448,15 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "seasonal_water_observations_c3",
+                "default_style": "seasonal_water_observations_3",
                 "styles": [
-                    style_wofs_seasonal_wet_c3,
+                    style_wofs_seasonal_wet_3,
                 ],
             },
         },
         {
             "title": "DEA November-March Clear Observation Statistics (Landsat, C3)",
-            "name": "wofs_nov_mar_summary_clear_c3",
+            "name": "wofs_nov_mar_summary_clear_3",
             "abstract": """Water Observations from Space Statistics 30m 3.1.6 (Landsat, November - March, Clear)
 The DEA Water Observations Statistic, November - March is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -490,9 +490,9 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "seasonal_clear_observations_c3",
+                "default_style": "seasonal_clear_observations_3",
                 "styles": [
-                    style_wofs_seasonal_clear_c3,
+                    style_wofs_seasonal_clear_3,
                 ],
             },
         },
@@ -501,7 +501,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 c3_statistics_layer = {
     "title": "DEA November-March Seasonal Water Observations (Landsat, C3)",
-    "name": "wofs_nov_mar_summary_statistics_c3",
+    "name": "wofs_nov_mar_summary_statistics_3",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, November - March, Frequency)
 The DEA Water Observations November - March Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -535,10 +535,10 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "seasonal_WOfS_frequency_c3",
+        "default_style": "seasonal_WOfS_frequency_3",
         "styles": [
-            style_seasonal_wofs_summary_frequency_c3,
-            style_seasonal_wofs_summary_frequency_blue_c3,
+            style_seasonal_wofs_summary_frequency_3,
+            style_seasonal_wofs_summary_frequency_blue_3,
         ],
     },
 }

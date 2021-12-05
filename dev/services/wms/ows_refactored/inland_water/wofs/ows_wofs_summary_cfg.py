@@ -422,7 +422,7 @@ style_wofs_obs_wet_only = {
     },
 }
 
-style_wofs_count_wet_c3 = {
+style_wofs_count_wet_3 = {
     "name": "water_observations",
     "title": "Wet Count",
     "abstract": "WOfS summary showing the count of water observations",
@@ -471,7 +471,7 @@ style_wofs_count_wet_c3 = {
     },
 }
 
-style_wofs_count_clear_c3 = {
+style_wofs_count_clear_3 = {
     "name": "clear_observations",
     "title": "Clear Count",
     "abstract": "WOfS summary showing the count of clear observations",
@@ -527,7 +527,7 @@ style_wofs_count_clear_c3 = {
     },
 }
 
-style_wofs_frequency_c3 = {
+style_wofs_frequency_3 = {
     "name": "WOfS_frequency",
     "title": " Water Summary",
     "abstract": "WOfS summary showing the frequency of Wetness",
@@ -570,8 +570,8 @@ style_wofs_frequency_c3 = {
     },
 }
 
-style_wofs_frequency_blue_c3 = {
-    "name": "WOfS_frequency_blues_transparent",
+style_wofs_frequency_blue_3 = {
+    "name": "WOfS_frequency_blues_transparent_3",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
@@ -770,7 +770,7 @@ For service status information, see https://status.dea.ga.gov.au
 
 c3_wofs_layer = {
     "title": "DEA Multi-Year Water Observation Frequency (Landsat, C3)",
-    "name": "ga_ls_wo_fq_myear_c3",
+    "name": "ga_ls_wo_fq_myear_3",
     "abstract": """Geoscience Australia Landsat Water Observations Frequency Multi Year Collection 3
 For service status information, see https://status.dea.ga.gov.au
 """,
@@ -795,10 +795,10 @@ For service status information, see https://status.dea.ga.gov.au
     "styling": {
         "default_style": "WOfS_frequency",
         "styles": [
-            style_wofs_frequency_c3,
-            style_wofs_frequency_blue_c3,
-            style_wofs_count_wet_c3,
-            style_wofs_count_clear_c3,
+            style_wofs_frequency_3,
+            style_wofs_frequency_blue_3,
+            style_wofs_count_wet_3,
+            style_wofs_count_clear_3,
         ],
     },
 }

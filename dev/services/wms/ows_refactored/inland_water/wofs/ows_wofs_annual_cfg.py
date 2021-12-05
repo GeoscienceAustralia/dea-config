@@ -154,7 +154,7 @@ style_wofs_summary_clear = {
     "legend": legend_idx_thirtyplus_4ticks,
 }
 
-style_annual_wofs_summary_frequency_c3 = {
+style_annual_wofs_summary_frequency_3 = {
     "name": "annual_WOfS_frequency",
     "title": "Water Summary",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
@@ -193,7 +193,7 @@ style_annual_wofs_summary_frequency_c3 = {
 }
 
 
-style_annual_wofs_summary_frequency_blue_c3 = {
+style_annual_wofs_summary_frequency_blue_3 = {
     "name": "annual_WOfS_frequency_blues_transparent",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
@@ -238,7 +238,7 @@ style_annual_wofs_summary_frequency_blue_c3 = {
 }
 
 
-style_wofs_summary_wet_c3 = {
+style_wofs_summary_wet_3 = {
     "name": "annual_water_observations",
     "title": "Wet Count",
     "abstract": "WOfS annual summary showing the count of water observations",
@@ -285,7 +285,7 @@ style_wofs_summary_wet_c3 = {
     "legend": legend_idx_twentyplus_3ticks,
 }
 
-style_wofs_summary_clear_c3 = {
+style_wofs_summary_clear_3 = {
     "name": "annual_clear_observations",
     "title": "Clear Count",
     "abstract": "WOfS annual summary showing the count of clear observations",
@@ -465,10 +465,10 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "annual_WOfS_frequency",
+        "default_style": "annual_WOfS_frequency_3",
         "styles": [
-            style_annual_wofs_summary_frequency_c3,
-            style_annual_wofs_summary_frequency_blue_c3,
+            style_annual_wofs_summary_frequency_3,
+            style_annual_wofs_summary_frequency_blue_3,
         ],
     },
 }
@@ -479,7 +479,7 @@ c3_layers = {
     "layers": [
         {
             "title": "DEA Annual Wet Observation Statistics (Landsat, C3)",
-            "name": "wofs_annual_summary_wet_c3",
+            "name": "wofs_annual_summary_wet_3",
             "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Wet) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains wet observation count: how many times water was detected in observations that were clear.
@@ -510,15 +510,15 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "annual_water_observations",
+                "default_style": "annual_water_observations_3",
                 "styles": [
-                    style_wofs_summary_wet_c3,
+                    style_wofs_summary_wet_3,
                 ],
             },
         },
         {
             "title": "DEA Annual Clear Observation Statistics (Landsat, C3)",
-            "name": "wofs_annual_summary_clear_c3",
+            "name": "wofs_annual_summary_clear_3",
             "abstract": """DEA Annual Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Clear) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
 This layer contains wet observation count: how many times water was detected in observations that were clear.
@@ -551,9 +551,9 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "annual_clear_observations",
+                "default_style": "annual_clear_observations_3",
                 "styles": [
-                    style_wofs_summary_clear_c3,
+                    style_wofs_summary_clear_3,
                 ],
             },
         },
