@@ -155,7 +155,7 @@ style_c3_wofs_obs_wet_only = {
         {
             "band": "land",
             "invert": True,
-            "enum": 1,
+            "enum": 0,
         },
     ],
 }
@@ -178,7 +178,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "resource_limits": reslim_wms_min_zoom_35,
     "dynamic": True,
     "native_crs": "EPSG:3577",
-    "native_resolution": [25, -25],
+    "native_resolution": [30, -30],
     "flags": [
         {
             "band": "land",

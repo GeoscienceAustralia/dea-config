@@ -1,6 +1,6 @@
 
 layers = {
-    "title": "DEA Water Observations (WOfS)",
+    "title": "DEA Water Observations",
     "abstract": "WOfS",
     "layers": [
         {
