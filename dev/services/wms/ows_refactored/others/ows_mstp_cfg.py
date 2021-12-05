@@ -44,6 +44,7 @@ have broad application in understanding geomorphological and hydrological proces
 regolith and soils over the Australian continent. Lindsay, J, B., Cockburn, J.M.H. and Russell,
 H.A.J. 2015. An integral image approach to performing multi-scale topographic position analysis,
 Geomorphology 245, 51–61.
+
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "multi_scale_topographic_position",
             "bands": bands_multi_topog,

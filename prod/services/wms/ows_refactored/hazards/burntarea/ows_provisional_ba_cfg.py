@@ -9,8 +9,7 @@ bands_ba_rasters = {
 style_dbsi = {
     "name": "ga_s2_dbsi_provisional_3",
     "title": "Delta Bare Soil Index (dBSI)",
-    "abstract": """
-Delta Bare Soil Index (dBSI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
+    "abstract": """Delta Bare Soil Index (dBSI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
 Bare Soil Index (BSI) identifies soil or bare-land characteristics by combining blue, red, near infrared (NIR), and short wave infrared (SWIR) spectral bands. SWIR and red spectral bands can be used to identify basic soil mineralogy while blue and NIR spectral bands can help to detect vegetation.
 BSI (Rikimaru et. al 2002) is calculated as: BSI = ((SWIR2 + RED) - (NIR + BLUE)) / ((SWIR2 + RED) + (NIR + BLUE)).
@@ -24,8 +23,7 @@ This dBSI product is based on two input datasets:
 The dBSI layer contains values between -1 and +1, with a positive value being more indicative that an area has increased exposure of bare soil, and therefore the characteristics a burn.
 This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
 
-For service status information, see https://status.dea.ga.gov.au
-        """,
+For service status information, see https://status.dea.ga.gov.au""",
     "needed_bands": ["delta_bsi"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -51,8 +49,7 @@ For service status information, see https://status.dea.ga.gov.au
 style_dndvi = {
     "name": "ga_s2_dndvi_provisional_3",
     "title": "Delta Normalized Difference Vegetation Index (dNDVI)",
-    "abstract": """
-Delta Normalized Difference Vegetation Index (dNDVI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
+    "abstract": """Delta Normalized Difference Vegetation Index (dNDVI) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
 Normalized Difference Vegetation Index (NDVI) is used to detect green vegetation characteristics by identifying the difference between red/visible and near infrared (NIR) spectral bands (Huete and Jackson 1987).
 
@@ -65,8 +62,7 @@ This dNDVI product is based on two input datasets:
 The dNDVI layer contains values between -1 and +1, with positive values being more indicative that the presence of green vegetation in an area has decreased, and therefore showing the characteristics of a burn.
 This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
 
-For service status information, see https://status.dea.ga.gov.au
-        """,
+For service status information, see https://status.dea.ga.gov.au""",
     "needed_bands": ["delta_ndvi"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -92,8 +88,7 @@ For service status information, see https://status.dea.ga.gov.au
 style_dnbr = {
     "name": "ga_s2_dnbr_provisional_3",
     "title": "Delta Normalized Burn Ratio (dNBR)",
-    "abstract": """
-Delta Normalized Burn Ratio (dNBR) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
+    "abstract": """Delta Normalized Burn Ratio (dNBR) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
 Normalized Burn Ratio (NBR) identifies areas that have the characteristics of being burnt. NBR looks at the relationship between near infrared (NIR) and short wave infrared (SWIR) spectral signatures. High SWIR reflectance values with low NIR reflectance values are indicative of an area that has been burnt by fire(s), while the opposite is seen in healthy vegetation (Wagtendonk et al. 2004).
 
@@ -108,8 +103,7 @@ The dNBR data is a general screening tool to identify areas that are likely to h
 
 The delta NBR layer contains values between -1 and +1, with positive values being more indicative that an area has undergone a burn. This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
 
-For service status information, see https://status.dea.ga.gov.au
-        """,
+For service status information, see https://status.dea.ga.gov.au""",
     "needed_bands": ["delta_nbr"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -144,8 +138,7 @@ For service status information, see https://status.dea.ga.gov.au
 style_dnbr_classes = {
     "name": "ga_s2_dnbrclasses_provisional_3",
     "title": "Delta Normalized Burn Ratio (dNBR) Classes",
-    "abstract": """
-Delta Normalized Burn Ratio (DNBR) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
+    "abstract": """Delta Normalized Burn Ratio (DNBR) based on Sentinel 2 Near Real-Time (Provisional) Surface Reflectance and Sentinel 2 Barest Earth Data.
 
 Burn classes and thresholds are a simplified version of those proposed by USGS, as "Unburnt", "Low to Medium" and "High to Severe". Colour coding was established by UN-SPIDER.
 
@@ -162,8 +155,7 @@ This dNBR data is a general screening tool to identify areas that are likely to 
 
 The delta NBR layer contains values between -1 and +1, with positive values being more indicative that an area has undergone a burn. This metric should be used in combination with the other datasets to strengthen the agreement that the area has indeed been burnt.
 
-For service status information, see https://status.dea.ga.gov.au
-        """,
+For service status information, see https://status.dea.ga.gov.au""",
     "needed_bands": ["delta_nbr"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -200,7 +192,8 @@ layers = {
         {
             "title": "DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)",
             "name": "ga_s2_ba_provisional_3",
-            "abstract": """
+            "abstract": """DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)
+
 Bushfires pose a serious and increasing threat to Australia. The detection and mapping of burns have many applications to support communities and ecosystems impacted by fire. However, the identification of bushfire burn using Earth Observation is often manual, can come with a significant time delay, and at a relatively small scale. Digital Earth Australia (DEA) offer a provisional and preliminary change detection data product, for all of Australia, which uses same day satellite data and cloud-based infrastructure to automatically and rapidly identify areas that show burn characteristics.
 
 Commonly, burnt area analysis is run on data from manually selected, cloud-free, pre-fire and post-fire satellite scenes. Automating the rapid identification of pre- and post-fire scenes is problematic due to cloud cover, differing fire duration, and the difficulty in automatically identifying a suitable pre-fire scene. Therefore, Analysing the change between a pre-fire reference baseline and the latest near real-time satellite data enables rapid, automatic, screening of areas that have changed to show characteristics of undergoing a burn.
@@ -251,8 +244,7 @@ Delta NBR shows the change in burn characteristics as the difference between a b
 Normally dNBR analysis is run on data from a clear pre-fire and a post-fire satellite scene. However, in order to automatically and rapidly identify areas that are characteristic of burns for all of Australia, and on a near real-time basis, the Sentinel 2 Barest Earth layer has been used as a conservative pre-fire reference image.
 dNBR is styled in two layers, as a colour ramp between -1 and +1, and also as a thresholded class layer. Burn classes and thresholds values are a simplified version of those proposed by USGS, as "Unburnt", "Low to Medium" and "High to Severe". Colour coding was established by UN-SPIDER.
 
-For service status information, see https://status.dea.ga.gov.au
-            """,
+For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_s2_ba_provisional_3",
             "bands": bands_ba_rasters,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,

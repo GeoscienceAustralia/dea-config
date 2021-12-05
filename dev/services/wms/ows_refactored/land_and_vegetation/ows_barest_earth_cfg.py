@@ -7,7 +7,8 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 layers = {
     "title": "GA Barest Earth (Sentinel-2)",
     "name": "s2_barest_earth",
-    "abstract": """
+    "abstract": """GA Barest Earth (Sentinel-2)
+
 Abstract
 
 The Sentinel-2 Bare Earth thematic product provides the first national scale mosaic of the Australian continent to support improved mapping of soil and geology. The bare earth algorithm using all available Sentinel-2 A and Sentinel-2 B observations up to September 2020 preferentially weights bare pixels through time to significantly reduce the effect of seasonal vegetation in the imagery. The result are image pixels that are more likely to reflect the mineralogy and/or geochemistry of soil and bedrock.  The algorithm uses a high-dimensional weighted geometric median approach that maintains the spectral relationships across all Sentinel-2 bands. A similar bare earth algorithm has been applied to Geoscience Australia’s deeper Landsat time series archive (please search for "Landsat barest Earth".  Both bare earth products have spectral bands in the visible near infrared and shortwave infrared region of the electromagnetic spectrum. However, the main visible and near-infrared Sentinel-2 bands have a spatial resolution of 10 meters compared to 30m for the Landsat TM equivalents. The weighted median approach is robust to outliers (such as cloud, shadows, saturation, corrupted pixels) and also maintains the relationship between all the spectral wavelengths in the spectra observed through time.
@@ -39,7 +40,8 @@ Roberts, D., Wilford, J., Ghattas, O. (2018). Revealing the Australian Continent
 
 Roberts, D., Mueller, N., Mcintyre, A. (2017). High-dimensional pixel composites from earth observation time series.
 IEEE Transactions on Geoscience and Remote Sensing 55 (11), 6254-6264
-            """,
+
+For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "s2_barest_earth",
     "bands": bands_s2_barest_earth,
     # "time_resolution": 'year',

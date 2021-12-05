@@ -152,6 +152,7 @@ item_v2_00_layer = {
     "title": "DEA Intertidal Extents (ITEM)",
     "name": "ITEM_V2.0.0",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Extents)
+
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
 delineating exposed areas at differing tidal heights and stages.
 
@@ -193,7 +194,9 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
+
 https://cmi.ga.gov.au/data-products/dea/174/dea-intertidal-extents-landsat
+
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "item_v2",
     "time_resolution": "year",
@@ -218,6 +221,7 @@ item_v2_00_conf_layer = {
     "title": "DEA Intertidal Extents confidence",
     "name": "ITEM_V2.0.0_Conf",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Confidence)
+
 The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone,
 delineating exposed areas at differing tidal heights and stages.
 
@@ -259,7 +263,9 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
+
 https://cmi.ga.gov.au/data-products/dea/174/dea-intertidal-extents-landsat
+
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "item_v2_conf",
     "bands": bands_item_conf,
