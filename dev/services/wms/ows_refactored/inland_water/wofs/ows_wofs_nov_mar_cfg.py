@@ -448,7 +448,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "seasonal_water_observations",
+                "default_style": "seasonal_water_observations_c3",
                 "styles": [
                     style_wofs_seasonal_wet_c3,
                 ],
@@ -490,7 +490,7 @@ For service status information, see https://status.dea.ga.gov.au
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "seasonal_clear_observations",
+                "default_style": "seasonal_clear_observations_c3",
                 "styles": [
                     style_wofs_seasonal_clear_c3,
                 ],
@@ -535,7 +535,7 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "seasonal_WOfS_frequency",
+        "default_style": "seasonal_WOfS_frequency_c3",
         "styles": [
             style_seasonal_wofs_summary_frequency_c3,
             style_seasonal_wofs_summary_frequency_blue_c3,
