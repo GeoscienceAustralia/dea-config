@@ -6,7 +6,8 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 layers = {
     "title": "DEA High and Low Tide Imagery (HLTC)",
-    "abstract": """
+    "abstract": """DEA High and Low Tide Imagery (HLTC)
+
 The High and Low Tide Composites product is composed of two surface reflectance composite mosaics
 of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8)
 surface reflectance data (Li et al., 2012). These products have been produced using
@@ -24,8 +25,7 @@ and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described full
         {
             "title": "DEA High Tide Imagery (Landsat)",
             "name": "high_tide_composite",
-            "abstract": """
-High Tide and Low Tide Composites 2.0.0 (Landsat, High Tide)
+            "abstract": """High Tide and Low Tide Composites 2.0.0 (Landsat, High Tide)
 
 The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA).
 The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018).
@@ -47,7 +47,9 @@ The maximum epoch for which the products are calculated is between 1995-2017, al
 The tide stages were calculated bycomparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide.
 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
+
 https://cmi.ga.gov.au/data-products/dea/133/dea-high-and-low-tide-imagery-landsat
+
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "high_tide_comp_20p",
             "bands": bands_ls,
@@ -68,8 +70,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "DEA Low Tide Imagery (Landsat)",
             "name": "low_tide_composite",
-            "abstract": """
-High Tide and Low Tide Composites 2.0.0 (Landsat, Low Tide)
+            "abstract": """High Tide and Low Tide Composites 2.0.0 (Landsat, Low Tide)
 
 The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA).
 The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018).
@@ -91,7 +92,9 @@ The maximum epoch for which the products are calculated is between 1995-2017, al
 The tide stages were calculated bycomparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide.
 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
+
 https://cmi.ga.gov.au/data-products/dea/133/dea-high-and-low-tide-imagery-landsat
+
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "low_tide_comp_20p",
             "time_resolution": "year",

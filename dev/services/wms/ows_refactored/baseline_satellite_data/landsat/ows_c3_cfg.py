@@ -38,6 +38,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "DEA Surface Reflectance USGS C2 Test (Landsat 8 OLI-TIRS)",
             "abstract": """Geoscience Australia Landsat 8 OLI-TIRS Analysis Ready Data Collection 3
+
 This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 The imagery is captured using the Operational Land Imager (OLI) and Thermal Infra-Red Scanner (TIRS) sensors aboard Landsat 8.
@@ -87,6 +88,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "DEA Surface Reflectance (Landsat 8 OLI-TIRS)",
             "abstract": """Geoscience Australia Landsat 8 OLI-TIRS Analysis Ready Data Collection 3
+
 This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 The imagery is captured using the Operational Land Imager (OLI) and Thermal Infra-Red Scanner (TIRS) sensors aboard Landsat 8.
@@ -136,6 +138,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "DEA Surface Reflectance (Landsat 7 ETM+)",
             "abstract": """Geoscience Australia Landsat 7 ETM+ Analysis Ready Data Collection 3
+
 This product takes Landsat 7 Enhanced Thematic Mapper Plus (ETM+) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
@@ -183,6 +186,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "DEA Surface Reflectance (Landsat 5 TM)",
             "abstract": """Geoscience Australia Landsat 5 TM Analysis Ready Data Collection 3
+
 This product takes Landsat 5 Thematic Mapper (TM) imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 This product is a single, cohesive Analysis Ready Data (ARD) package, which allows you to analyse surface reflectance data as is, without the need to apply additional corrections.
@@ -338,6 +342,7 @@ combined_layer = {
     "title": "DEA Surface Reflectance (Landsat)",
     "name": "ga_ls_ard_3",
     "abstract": """Geoscience Australia Landsat Analysis Ready Data Collection 3
+
 This product takes Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 This product combines:
