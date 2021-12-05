@@ -155,7 +155,7 @@ style_wofs_summary_clear = {
 }
 
 style_annual_wofs_summary_frequency_3 = {
-    "name": "annual_WOfS_frequency",
+    "name": "annual_WOfS_frequency_3",
     "title": "Water Summary",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
@@ -194,7 +194,7 @@ style_annual_wofs_summary_frequency_3 = {
 
 
 style_annual_wofs_summary_frequency_blue_3 = {
-    "name": "annual_WOfS_frequency_blues_transparent",
+    "name": "annual_WOfS_frequency_blues_transparent_3",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
