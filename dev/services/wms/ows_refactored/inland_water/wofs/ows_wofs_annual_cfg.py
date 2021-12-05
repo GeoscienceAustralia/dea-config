@@ -239,7 +239,7 @@ style_annual_wofs_summary_frequency_blue_3 = {
 
 
 style_wofs_summary_wet_3 = {
-    "name": "annual_water_observations",
+    "name": "annual_water_observations_3",
     "title": "Wet Count",
     "abstract": "WOfS annual summary showing the count of water observations",
     "index_function": {
@@ -286,7 +286,7 @@ style_wofs_summary_wet_3 = {
 }
 
 style_wofs_summary_clear_3 = {
-    "name": "annual_clear_observations",
+    "name": "annual_clear_observations_3",
     "title": "Clear Count",
     "abstract": "WOfS annual summary showing the count of clear observations",
     "index_function": {
