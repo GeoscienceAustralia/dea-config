@@ -885,6 +885,19 @@
             ]
         },
         {
+            "layer": "ga_ls_wo_fq_myear_3",
+            "product": [
+                "ga_ls_wo_fq_myear_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "WOfS_frequency_3",
+                "WOfS_frequency_blues_transparent_3",
+                "water_observations_3",
+                "clear_observations_3"
+            ]
+        },
+        {
             "layer": "wofs_apr_oct_summary_wet",
             "product": [
                 "wofs_apr_oct_summary"
@@ -994,6 +1007,99 @@
             "styles_list": [
                 "observations",
                 "wet"
+            ]
+        },
+        {
+            "layer": "wofs_apr_oct_summary_statistics_3",
+            "product": [
+                "ga_ls_wo_fq_apr_oct_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "seasonal_WOfS_frequency_3",
+                "seasonal_WOfS_frequency_blues_transparent_3"
+            ]
+        },
+        {
+            "layer": "wofs_nov_mar_summary_statistics_3",
+            "product": [
+                "ga_ls_wo_fq_nov_mar_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "seasonal_WOfS_frequency_3",
+                "seasonal_WOfS_frequency_blues_transparent_3"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_cyear_3",
+            "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "annual_WOfS_frequency_3",
+                "annual_WOfS_frequency_blues_transparent_3"
+            ]
+        },
+        {
+            "layer": "wofs_apr_oct_summary_wet_3",
+            "product": [
+                "ga_ls_wo_fq_apr_oct_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "seasonal_water_observations_3"
+            ]
+        },
+        {
+            "layer": "wofs_apr_oct_summary_clear_3",
+            "product": [
+                "ga_ls_wo_fq_apr_oct_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "seasonal_clear_observations_3"
+            ]
+        },
+        {
+            "layer": "wofs_nov_mar_summary_wet_3",
+            "product": [
+                "ga_ls_wo_fq_nov_mar_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "seasonal_water_observations_3"
+            ]
+        },
+        {
+            "layer": "wofs_nov_mar_summary_clear_3",
+            "product": [
+                "ga_ls_wo_fq_nov_mar_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "seasonal_clear_observations_3"
+            ]
+        },
+        {
+            "layer": "wofs_annual_summary_wet_3",
+            "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "annual_water_observations_3"
+            ]
+        },
+        {
+            "layer": "wofs_annual_summary_clear_3",
+            "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "annual_clear_observations_3"
             ]
         },
         {
