@@ -2,8 +2,8 @@ from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
 from ows_refactored.ows_legend_cfg import legend_idx_percentage_by_20
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
-style_wofs_count_wet = {
-    "name": "water_observations",
+style_wofs_count_wet_3 = {
+    "name": "water_observations_3",
     "title": "Multi Year Summary - Wet Count",
     "abstract": "WOfS summary showing the count of wet observations",
     "index_function": {
@@ -44,8 +44,8 @@ style_wofs_count_wet = {
     },
 }
 
-style_wofs_count_clear = {
-    "name": "clear_observations",
+style_wofs_count_clear_3 = {
+    "name": "clear_observations_3",
     "title": "Multi Year Summary - Clear Count",
     "abstract": "WOfS summary showing the count of clear observations",
     "index_function": {
@@ -93,8 +93,8 @@ style_wofs_count_clear = {
     },
 }
 
-style_wofs_frequency = {
-    "name": "WOfS_frequency",
+style_wofs_frequency_3 = {
+    "name": "WOfS_frequency_3",
     "title": "Multi Year Summary - Frequency",
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
@@ -129,8 +129,8 @@ style_wofs_frequency = {
     },
 }
 
-style_wofs_frequency_blue = {
-    "name": "WOfS_frequency_blues_transparent",
+style_wofs_frequency_blue_3 = {
+    "name": "WOfS_frequency_blues_transparent_3",
     "title": "Multi Year Summary - Frequency (Blue)",
     "abstract": "WOfS summary showing the frequency of Wetness",
     "index_function": {
@@ -183,12 +183,12 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "WOfS_frequency",
+        "default_style": "WOfS_frequency_3",
         "styles": [
-            style_wofs_frequency,
-            style_wofs_frequency_blue,
-            style_wofs_count_wet,
-            style_wofs_count_clear,
+            style_wofs_frequency_3,
+            style_wofs_frequency_blue_3,
+            style_wofs_count_wet_3,
+            style_wofs_count_clear_3,
         ],
     },
 }
