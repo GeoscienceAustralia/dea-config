@@ -15,15 +15,17 @@ fcp_seasonal_layers = {
             "title": "DEA Fractional Cover Percentiles (Landsat, Seasonal, Green Vegetation)",
             "name": "fcp_seasonal_green_veg",
             "abstract": """Fractional Cover 25m Percentiles 2.2.1 (Landsat, Seasonal, Green Vegetation)
+
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
  This contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
 https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-landsat
-For service status information, see https://status.dea.ga.gov.au
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
@@ -41,15 +43,17 @@ For service status information, see https://status.dea.ga.gov.au
             "title": "DEA Fractional Cover Percentiles (Landsat, Seasonal, Non-Green Vegetation)",
             "name": "fcp_seasonal_non_green_veg",
             "abstract": """Fractional Cover 25m Percentiles 2.2.1 (Landsat, Seasonal, Non-Green Vegetation)
+
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program, for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover
 
  This contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons
 
 Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
 https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-landsat
-For service status information, see https://status.dea.ga.gov.au
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
@@ -70,10 +74,12 @@ For service status information, see https://status.dea.ga.gov.au
             "title": "DEA Fractional Cover Percentiles (Landsat, Seasonal, Bare Ground)",
             "name": "fcp_seasonal_bare_ground",
             "abstract": """Fractional Cover 25m Percentiles 2.2.1 (Landsat, Seasonal, Bare Ground)
+
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program for more information please see data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Fractional+Cover FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
 https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-landsat
-For service status information, see https://status.dea.ga.gov.au
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
             "resource_limits": reslim_wms_min_zoom_15_cache_rules,
@@ -97,10 +103,12 @@ fcp_seasonal_rgb_layer = {
     "title": "DEA Fractional Cover Percentiles (Landsat, Seasonal)",
     "name": "fcp_seasonal_rgb",
     "abstract": """Fractional Cover 25m Percentiles 2.2.1 (Landsat, Seasonal)
+
 Fractional Cover Percentiles version 2.2.0, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577). Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region. Fractional cover provides information about the the proportions of green vegetation, non-green vegetation (including deciduous trees during autumn, dry grass, etc.), and bare areas for every 25m x 25m ground footprint. Fractional cover provides insight into how areas of dry vegetation and/or bare soil and green vegetation are changing over time. The percentile summaries are designed to make it easier to analyse and interpret fractional cover. Percentiles provide an indicator of where an observation sits, relative to the rest of the observations for the pixel. For example, the 90th percentile is the value below which 90% of the observations fall. The fractional cover algorithm was developed by the Joint Remote Sensing Research Program. FC-PERCENTILE-SEASONAL-SUMMARY, this contains a (10th, 50th and 90th percentile) of BS, PV and NPV of observations acquired within each calendar season (DJF, MAM, JJA, SON). This product is available for the most recent 8 seasons Fractional Cover products use Water Observations from Space (WOfS) to mask out areas of water, cloud and other phenomena. To be considered in the FCP product a pixel must have had at least 10 clear observations over the year.
+
 https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-landsat
-For service status information, see https://status.dea.ga.gov.au
-""",
+
+For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "fc_percentile_albers_seasonal",
     "bands": bands_fc_percentile,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,

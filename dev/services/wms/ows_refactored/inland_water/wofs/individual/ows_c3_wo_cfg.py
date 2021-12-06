@@ -155,7 +155,7 @@ style_c3_wofs_obs_wet_only = {
         {
             "band": "land",
             "invert": True,
-            "enum": 1,
+            "enum": 0,
         },
     ],
 }
@@ -209,6 +209,7 @@ layer_usgsc2 = {
     "title": "DEA Individual Water Observations (Landsat, USGS C2 Test)",
     "name": "ga_ls_wo_c2_3",
     "abstract": """ DEA Water Observations (Landsat)
+
 DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
 
 The Water Observations show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.

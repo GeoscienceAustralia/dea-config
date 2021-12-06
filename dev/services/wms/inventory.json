@@ -653,12 +653,16 @@
             "product": [
                 "ga_ls_fc_3"
             ],
-            "styles_count": 4,
+            "styles_count": 8,
             "styles_list": [
                 "fc_rgb",
                 "bare_ground_c3",
                 "green_veg_c3",
-                "non_green_veg_c3"
+                "non_green_veg_c3",
+                "fc_rgb_unmasked",
+                "bare_ground_c3_unmasked",
+                "green_veg_c3_unmasked",
+                "non_green_veg_c3_unmasked"
             ]
         },
         {
@@ -666,12 +670,16 @@
             "product": [
                 "ga_ls_fc_c2_3"
             ],
-            "styles_count": 4,
+            "styles_count": 8,
             "styles_list": [
                 "fc_rgb",
                 "bare_ground_c3",
                 "green_veg_c3",
-                "non_green_veg_c3"
+                "non_green_veg_c3",
+                "fc_rgb_unmasked",
+                "bare_ground_c3_unmasked",
+                "green_veg_c3_unmasked",
+                "non_green_veg_c3_unmasked"
             ]
         },
         {
@@ -964,10 +972,10 @@
             ],
             "styles_count": 4,
             "styles_list": [
-                "WOfS_frequency",
-                "WOfS_frequency_blues_transparent",
-                "water_observations",
-                "clear_observations"
+                "WOfS_frequency_3",
+                "WOfS_frequency_blues_transparent_3",
+                "water_observations_3",
+                "clear_observations_3"
             ]
         },
         {
@@ -1100,10 +1108,10 @@
             ],
             "styles_count": 4,
             "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent",
-                "style_wofs_seasonal_wet",
-                "style_wofs_seasonal_clear"
+                "seasonal_WOfS_frequency_3",
+                "seasonal_WOfS_frequency_blues_transparent_3",
+                "style_wofs_seasonal_wet_3",
+                "style_wofs_seasonal_clear_3"
             ]
         },
         {
@@ -1113,10 +1121,10 @@
             ],
             "styles_count": 4,
             "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent",
-                "style_wofs_seasonal_wet",
-                "style_wofs_seasonal_clear"
+                "seasonal_WOfS_frequency_3",
+                "seasonal_WOfS_frequency_blues_transparent_3",
+                "style_wofs_seasonal_wet_3",
+                "style_wofs_seasonal_clear_3"
             ]
         },
         {
@@ -1126,10 +1134,10 @@
             ],
             "styles_count": 4,
             "styles_list": [
-                "annual_WOfS_frequency",
-                "annual_WOfS_frequency_blues_transparent",
-                "style_wofs_seasonal_wet",
-                "style_wofs_seasonal_clear"
+                "annual_WOfS_frequency_3",
+                "annual_WOfS_frequency_blues_transparent_3",
+                "style_wofs_seasonal_wet_3",
+                "style_wofs_seasonal_clear_3"
             ]
         },
         {

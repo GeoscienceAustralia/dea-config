@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 89,
+    "total_layers_count": 90,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -754,6 +754,28 @@
             "styles_count": 1,
             "styles_list": [
                 "mangrove"
+            ]
+        },
+        {
+            "layer": "s2_barest_earth",
+            "product": [
+                "s2_barest_earth"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir_1",
+                "nir_2",
+                "swir_2",
+                "swir_3"
             ]
         },
         {
