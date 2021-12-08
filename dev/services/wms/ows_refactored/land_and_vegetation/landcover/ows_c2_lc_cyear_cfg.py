@@ -15,7 +15,7 @@ bands_eds = {
 
 style_c2_level3 = {
     "name": "level3",
-    "title": "Basic - 6 classes",
+    "title": "Basic",
     "abstract": "Standardised colouring of Level 3 land cover classes",
     "value_map": {
         "level3": [
@@ -63,8 +63,8 @@ style_c2_level4_lifeform = {
 
 style_c2_level4_canopyco = {
     "name": "canopyco",
-    "title": "Canopy Cover",
-    "abstract": "Canopy Cover (L4)",
+    "title": "Vegetation Cover",
+    "abstract": "Vegetation Cover (L4)",
     "value_map": {
         'canopyco_veg_cat_l4d': [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
@@ -139,7 +139,7 @@ style_c2_level4_baregrad = {
 
 style_c2_level4 = {
     "name": "level4",
-    "title": "Detailed - 80 classes",
+    "title": "Detailed",
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
@@ -299,7 +299,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # ],
             "styling": {
                 "default_style": "level4",
-                "styles": [style_c2_level4, style_c2_level3],
+                "styles": [style_c2_level3, style_c2_level4],
             },
             "feature_info": {
                 "include_custom": {
