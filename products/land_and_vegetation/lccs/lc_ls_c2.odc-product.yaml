@@ -63,4 +63,12 @@ measurements:
     dtype: int8
     nodata: 0
     units: '1'
+storage:
+  crs: EPSG:3577
+  tile_size:
+    x: 100000.0
+    y: 100000.0
+  resolution:
+    x: 25
+    y: -25
 
