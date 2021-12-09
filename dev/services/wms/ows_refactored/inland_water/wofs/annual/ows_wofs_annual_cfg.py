@@ -4,9 +4,9 @@ from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_twentyplus_3ticks)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
-style_annual_wofs_summary_frequency = {
-    "name": "annual_WOfS_frequency",
-    "title": "Annual Summary - Frequency",
+style_annual_wofs_summary_frequency_3 = {
+    "name": "annual_WOfS_frequency_3",
+    "title": "Water Summary",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -32,12 +32,20 @@ style_annual_wofs_summary_frequency = {
         {"value": 0.9, "color": "#000fe3"},
         {"value": 1.0, "color": "#5700e3"},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
-style_annual_wofs_summary_frequency_blue = {
-    "name": "annual_WOfS_frequency_blues_transparent",
-    "title": "Annual Summary - Frequency (Blue)",
+
+style_annual_wofs_summary_frequency_blue_3 = {
+    "name": "annual_WOfS_frequency_blues_transparent_3",
+    "title": "Water Summary (Blue)",
     "abstract": "WOfS annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -69,12 +77,20 @@ style_annual_wofs_summary_frequency_blue = {
         {"value": 0.8, "color": "#2701ff"},
         {"value": 1.0, "color": "#5700e3"},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
-style_wofs_summary_wet = {
-    "name": "annual_water_observations",
-    "title": "Annual Summary - Wet Count",
+
+style_wofs_summary_wet_3 = {
+    "name": "annual_water_observations_3",
+    "title": "Wet Count",
     "abstract": "WOfS annual summary showing the count of water observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -109,12 +125,19 @@ style_wofs_summary_wet = {
             "color": "#5700E3",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
+    ],
     "legend": legend_idx_twentyplus_3ticks,
 }
 
-style_wofs_summary_clear = {
-    "name": "annual_clear_observations",
-    "title": "Annual Summary - Clear Count",
+style_wofs_summary_clear_3 = {
+    "name": "annual_clear_observations_3",
+    "title": "Clear Count",
     "abstract": "WOfS annual summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -148,6 +171,13 @@ style_wofs_summary_clear = {
             "value": 30,
             "color": "#026900",
         },
+    ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "enum": 0,
+        }
     ],
     "legend": legend_idx_thirtyplus_4ticks,
 }
@@ -183,12 +213,12 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "annual_WOfS_frequency",
+        "default_style": "annual_WOfS_frequency_3",
         "styles": [
-            style_annual_wofs_summary_frequency,
-            style_annual_wofs_summary_frequency_blue,
-            style_wofs_summary_wet,
-            style_wofs_summary_clear,
+            style_annual_wofs_summary_frequency_3,
+            style_annual_wofs_summary_frequency_blue_3,
+            style_wofs_summary_wet_3,
+            style_wofs_summary_clear_3,
         ],
     },
 }
