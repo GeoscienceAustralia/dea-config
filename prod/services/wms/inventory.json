@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 90,
+    "total_layers_count": 92,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -1346,6 +1346,31 @@
             "styles_count": 1,
             "styles_list": [
                 "wii"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "level4",
+                "level3"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover_descriptors",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "canopyco",
+                "lifeform",
+                "watersea",
+                "waterper",
+                "baregrad"
             ]
         }
     ]

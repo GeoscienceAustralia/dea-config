@@ -650,6 +650,15 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:480px'>\
+                                        <h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>\
+                                        Annual land cover for selected location, \
+                                        {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}\
+                                        <br/><br/>Base class: {{data.0.description.level3_label}}\
+                                        <br/><br/>Full classification: {{data.0.description.level4_label}}\
+                                        <br/><br/></div>"
+                                    },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "546ert"
                                 },
@@ -666,6 +675,20 @@
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
+                                    },
+                                    "featureInfoTemplate": {
+                                      "template": "<div style='width:480px'>\
+                                      <h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>\
+                                      Environmental descriptors for selected location, \
+                                      {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}\
+                                      <br/><br/><table>\
+                                      <tr><td>Life Form:</td><td>{{data.0.description.lifeform_label}}</td></tr>\
+                                      <tr><td>Vegetation Cover:</td><td>{{data.0.description.canopyco_label}}</td></tr>\
+                                      <tr><td>Water Seasonality:</td><td>{{data.0.description.watersea_label}}</td></tr>\
+                                      <tr><td>Water Persistence:</td><td>{{data.0.description.waterper_label}}</td></tr>\
+                                      <tr><td>Bare Gradation:</td><td>{{data.0.description.baregrad_label}}</td></tr>\
+                                      </table>\
+                                      <be/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "wejk58"
