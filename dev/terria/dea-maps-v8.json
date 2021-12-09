@@ -637,11 +637,6 @@
                     "type": "group",
                     "name": "Land and vegetation",
                     "members": [
-                {
-                    "id": "as542d",
-                    "type": "group",
-                    "name": "Land and vegetation",
-                    "members": [
                         {
                             "id": "ret453",
                             "type": "group",
