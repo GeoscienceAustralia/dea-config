@@ -1347,6 +1347,31 @@
             "styles_list": [
                 "wii"
             ]
-        }
+        },
+        {
+            "layer": "ga_ls_landcover",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "level4",
+                "level3"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover_descriptors",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "canopyco",
+                "lifeform",
+                "watersea",
+                "waterper",
+                "baregrad"
+            ]
+        },
     ]
 }
