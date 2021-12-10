@@ -44,7 +44,7 @@ style_wofs_seasonal_wet_3 = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "values": [0],
         }
     ],
     "legend": legend_idx_twentyplus_3ticks,
@@ -90,7 +90,7 @@ style_wofs_seasonal_clear_3 = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "values": [0],
         }
     ],
     "legend": legend_idx_thirtyplus_4ticks,
@@ -127,7 +127,7 @@ style_seasonal_wofs_summary_frequency_3 = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "values": [0],
         }
     ],
     "legend": legend_idx_percentage_by_20,
@@ -170,7 +170,7 @@ style_seasonal_wofs_summary_frequency_blue_3 = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "values": [0],
         }
     ],
     "legend": legend_idx_percentage_by_20,
