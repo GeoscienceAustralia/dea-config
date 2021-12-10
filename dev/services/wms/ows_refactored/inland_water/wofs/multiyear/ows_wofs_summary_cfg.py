@@ -33,6 +33,13 @@ style_wofs_count_wet_3 = {
             "color": "#5700E3",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": {
         "begin": "0",
         "end": "400",
@@ -81,6 +88,13 @@ style_wofs_count_clear_3 = {
             "color": "#026900",
         },
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": {
         "begin": "0",
         "end": "1000",
@@ -124,6 +138,13 @@ style_wofs_frequency_3 = {
         {"value": 0.9, "color": "#000fe3"},
         {"value": 1.0, "color": "#5700e3"},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": {
         "url": "https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/wofs_full_summary_legend.png",
     },
@@ -163,6 +184,13 @@ style_wofs_frequency_blue_3 = {
         {"value": 0.8, "color": "#2701ff"},
         {"value": 1.0, "color": "#5700e3"},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
@@ -177,6 +205,14 @@ For service status information, see https://status.dea.ga.gov.au
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
+    "flags": [
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": [],
+        }
+    ],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],

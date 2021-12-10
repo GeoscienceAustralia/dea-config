@@ -210,6 +210,14 @@ For service status information, see https://status.dea.ga.gov.au
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
+        "flags": [
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": [],
+        }
+    ],
         "manual_merge": False,
     },
     "styling": {
