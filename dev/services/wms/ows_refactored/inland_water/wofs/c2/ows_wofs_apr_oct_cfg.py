@@ -4,8 +4,8 @@ from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_twentyplus_3ticks)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
-style_wofs_seasonal_wet = {
-    "name": "seasonal_water_observations",
+style_wofs_seasonal_apr_wet = {
+    "name": "seasonal_apr_water_observations",
     "title": "Seasonal Summary - Wet Count",
     "abstract": "WOfS seasonal summary showing the count of wet observations",
     "needed_bands": ["count_wet"],
@@ -43,8 +43,8 @@ style_wofs_seasonal_wet = {
     "legend": legend_idx_twentyplus_3ticks,
 }
 
-style_wofs_seasonal_clear = {
-    "name": "seasonal_clear_observations",
+style_wofs_seasonal_apr_clear = {
+    "name": "seasonal_apr_clear_observations",
     "title": "Seasonal Summary - Clear Count",
     "abstract": "WOfS seasonal summary showing the count of clear observations",
     "needed_bands": ["count_clear"],
@@ -82,8 +82,8 @@ style_wofs_seasonal_clear = {
     "legend": legend_idx_thirtyplus_4ticks,
 }
 
-style_seasonal_wofs_summary_frequency = {
-    "name": "seasonal_WOfS_frequency",
+style_seasonal_wofs_summary_apr_frequency = {
+    "name": "seasonal_apr_WOfS_frequency",
     "title": "Seasonal Summary - Frequency",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
@@ -112,8 +112,8 @@ style_seasonal_wofs_summary_frequency = {
     "legend": legend_idx_percentage_by_20,
 }
 
-style_seasonal_wofs_summary_frequency_blue = {
-    "name": "seasonal_WOfS_frequency_blues_transparent",
+style_seasonal_wofs_summary_apr_frequency_blue = {
+    "name": "seasonal_apr_WOfS_frequency_blues_transparent",
     "title": "Seasonal Summary - Frequency (Blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
@@ -206,9 +206,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "seasonal_clear_observations",
+                "default_style": "seasonal_apr_clear_observations",
                 "styles": [
-                    style_wofs_seasonal_clear,
+                    style_wofs_seasonal_apr_clear,
                 ],
             },
         },
@@ -236,10 +236,10 @@ For service status information, see https://status.dea.ga.gov.au""",
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "seasonal_WOfS_frequency",
+        "default_style": "seasonal_apr_WOfS_frequency",
         "styles": [
-            style_seasonal_wofs_summary_frequency,
-            style_seasonal_wofs_summary_frequency_blue,
+            style_seasonal_wofs_summary_apr_frequency,
+            style_seasonal_wofs_summary_apr_frequency_blue,
         ],
     },
 }

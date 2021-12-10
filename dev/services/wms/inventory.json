@@ -928,8 +928,8 @@
             ],
             "styles_count": 2,
             "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent"
+                "seasonal_apr_WOfS_frequency",
+                "seasonal_apr_WOfS_frequency_blues_transparent"
             ]
         },
         {
@@ -1108,10 +1108,10 @@
             ],
             "styles_count": 4,
             "styles_list": [
-                "seasonal_WOfS_frequency_3",
-                "seasonal_WOfS_frequency_blues_transparent_3",
-                "style_wofs_seasonal_wet_3",
-                "style_wofs_seasonal_clear_3"
+                "seasonal_apr_WOfS_frequency_3",
+                "seasonal_apr_WOfS_frequency_blues_transparent_3",
+                "style_apr_wofs_seasonal_wet_3",
+                "style_apr_wofs_seasonal_clear_3"
             ]
         },
         {
