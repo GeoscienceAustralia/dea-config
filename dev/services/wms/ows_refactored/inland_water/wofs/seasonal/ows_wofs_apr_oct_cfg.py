@@ -4,8 +4,8 @@ from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_twentyplus_3ticks)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
-style_wofs_seasonal_apr_wet_3 = {
-    "name": "seasonal_apr_water_observations_3",
+style_wofs_seasonal_wet_3 = {
+    "name": "seasonal_water_observations_3",
     "title": "Wet Count",
     "abstract": "WOfS seasonal summary showing the count of water observations",
     "needed_bands": ["count_wet"],
@@ -50,8 +50,8 @@ style_wofs_seasonal_apr_wet_3 = {
     "legend": legend_idx_twentyplus_3ticks,
 }
 
-style_wofs_seasonal_apr_clear_3 = {
-    "name": "seasonal_apr_clear_observations_3",
+style_wofs_seasonal_clear_3 = {
+    "name": "seasonal_clear_observations_3",
     "title": "Clear Count",
     "abstract": "WOfS seasonal summary showing the count of clear observations",
     "needed_bands": ["count_clear"],
@@ -96,8 +96,8 @@ style_wofs_seasonal_apr_clear_3 = {
     "legend": legend_idx_thirtyplus_4ticks,
 }
 
-style_seasonal_wofs_summary_apr_frequency_3 = {
-    "name": "seasonal_apr_WOfS_frequency_3",
+style_seasonal_wofs_summary_frequency_3 = {
+    "name": "seasonal_WOfS_frequency_3",
     "title": " Water Summary",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
@@ -133,8 +133,8 @@ style_seasonal_wofs_summary_apr_frequency_3 = {
     "legend": legend_idx_percentage_by_20,
 }
 
-style_seasonal_wofs_summary_apr_frequency_blue_3 = {
-    "name": "seasonal_apr_WOfS_frequency_blues_transparent_3",
+style_seasonal_wofs_summary_frequency_blue_3 = {
+    "name": "seasonal_WOfS_frequency_blues_transparent_3",
     "title": "Water Summary (Blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
@@ -178,7 +178,7 @@ style_seasonal_wofs_summary_apr_frequency_blue_3 = {
 
 c3_statistics_layer = {
     "title": "DEA Water Observations April to October (Landsat, C3)",
-    "name": "wofs_apr_oct_summary_statistics_3",
+    "name": "wofs_oct_summary_statistics_3",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, April - October, Frequency)
 The DEA Water Observations April to October Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -225,12 +225,12 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "seasonal_apr_WOfS_frequency_3",
+        "default_style": "seasonal_WOfS_frequency_3",
         "styles": [
-            style_seasonal_wofs_summary_apr_frequency_3,
-            style_seasonal_wofs_summary_apr_frequency_blue_3,
-            style_wofs_seasonal_apr_wet_3,
-            style_wofs_seasonal_apr_clear_3,
+            style_seasonal_wofs_summary_frequency_3,
+            style_seasonal_wofs_summary_frequency_blue_3,
+            style_wofs_seasonal_wet_3,
+            style_wofs_seasonal_clear_3,
         ],
     },
 }
