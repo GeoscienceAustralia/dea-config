@@ -179,9 +179,9 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "seasonal_water_observations",
+                "default_style": "seasonal_apr_water_observations",
                 "styles": [
-                    style_wofs_seasonal_wet,
+                    style_wofs_seasonal_apr_wet,
                 ],
             },
         },
