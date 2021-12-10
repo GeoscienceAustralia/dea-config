@@ -644,10 +644,11 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Land Cover Calendar Year (Landsat)",
+                                    "name": "DEA Land Cover (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_landcover",
+                                    "styles": "level4",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_ls_landcover",
                                     "chartColor": "white",
