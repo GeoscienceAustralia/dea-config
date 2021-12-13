@@ -153,7 +153,7 @@ style_s2_wofs_obs_wet_only = {
 
 
 layer = {
-    "title": "DEA Individual Water Observations (Sentinel-2, Provisional)",
+    "title": "DEA Water Observations (Sentinel-2, Provisional)",
     "name": "ga_s2_wo_3",
     "abstract": """ Prototype Sentinel 2 Water Observations""",
     "product_name": "ga_s2_wo_3",

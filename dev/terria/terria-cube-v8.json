@@ -1002,7 +1002,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Individual Water Observations (Landsat, C3)",
+                                            "name": "DEA Water Observations (Landsat, C3)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_3",
@@ -1014,12 +1014,11 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jg1"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Individual Water Observations (Sentinel-2, Provisional)",
+                                            "name": "DEA Water Observations (Sentinel-2, Provisional)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_s2_wo_3",
@@ -1031,12 +1030,11 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "qQ27212"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Individual Water Observations (Landsat, USGS C2 Test)",
+                                            "name": "DEA Water Observations (Landsat, USGS C2 Test)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_c2_3",
@@ -1048,7 +1046,6 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "qQ27213"
                                         }
                                     ]
@@ -1056,7 +1053,7 @@
                                 {
                                     "id": "cme5me2",
                                     "type": "group",
-                                    "name": "DEA Annual (Calendar Year) Observations",
+                                    "name": "DEA Annual (Calendar Year) Statistics",
                                     "members": [
                                         {
                                             "type": "wms",
@@ -1080,7 +1077,7 @@
                                 {
                                     "id": "cme5me3",
                                     "type": "group",
-                                    "name": "DEA Multi Year Observations",
+                                    "name": "DEA Multi Year Statistics",
                                     "members": [
                                         {
                                             "type": "wms",
@@ -1104,7 +1101,7 @@
                                 {
                                     "id": "cme5me4",
                                     "type": "group",
-                                    "name": "DEA Seasonal Observations",
+                                    "name": "DEA Seasonal Statistics",
                                     "members": [
                                         {
                                             "type": "wms",
@@ -1143,9 +1140,9 @@
                                     ]
                                 },
                                 {
-                                    "id": "cme5me4",
+                                    "id": "cme5me5",
                                     "type": "group",
-                                    "name": "DEA Collection 2 (superseded data products)",
+                                    "name": "DEA Collection 2 (depricated data products)",
                                     "members": [
                                         {
                                             "type": "wms",
