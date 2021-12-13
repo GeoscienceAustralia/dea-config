@@ -1,5 +1,28 @@
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
 
+# PQ mask common
+
+pq_mask_fmask_land = [
+    {
+        "band": "oa_fmask",
+        "values": [0, 2, 3],
+        "invert": True,
+    },
+    {
+        "band": "land",
+        "invert": True,
+        "values": [1],
+    }
+ ]
+
+pq_mask_fmask_only = [
+        {
+            "band": "oa_fmask",
+            "values": [0, 2, 3],
+            "invert": True,
+        }
+]
+
 # Style definition
 style_c3_pure_aerosol = {
     "name": "aerosol",
@@ -50,7 +73,7 @@ style_c3_true_colour = {
     "pq_masks": [
         {
             "band": "oa_fmask",
-            "enum": 0,
+            "values": [0],
             "invert": True,
         }
     ],
@@ -69,7 +92,7 @@ style_c3_false_colour = {
     "pq_masks": [
         {
             "band": "oa_fmask",
-            "enum": 0,
+            "values": [0],
             "invert": True,
         }
     ],
@@ -99,28 +122,7 @@ style_c3_ndvi = {
         {"value": 0.9, "color": "#237100"},
         {"value": 1.0, "color": "#114D04"},
     ],
-    "pq_masks": [
-        {
-            "band": "oa_fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 3,
-            "invert": True,
-        },
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 1,
-        },
-    ],
+    "pq_masks": pq_mask_fmask_land,
     "legend": legend_idx_0_1_5ticks,
     # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
     "multi_date": [
@@ -140,28 +142,7 @@ style_c3_ndvi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": [
-                {
-                    "band": "oa_fmask",
-                    "enum": 0,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 2,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 3,
-                    "invert": True,
-                },
-                {
-                    "band": "land",
-                    "invert": True,
-                    "enum": 1,
-                },
-            ],
+            "pq_masks": pq_mask_fmask_land,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -208,23 +189,7 @@ style_c3_ndwi = {
             "color": "#08306b",
         },
     ],
-    "pq_masks": [
-        {
-            "band": "oa_fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 3,
-            "invert": True,
-        },
-    ],
+    "pq_masks": pq_mask_fmask_only,
     "legend": {
         "begin": "0.0",
         "end": "0.5",
@@ -255,28 +220,7 @@ style_c3_ndwi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": [
-                {
-                    "band": "oa_fmask",
-                    "enum": 0,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 2,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 3,
-                    "invert": True,
-                },
-                {
-                    "band": "land",
-                    "invert": True,
-                    "enum": 1,
-                },
-            ],
+            "pq_masks": pq_mask_fmask_land,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -311,23 +255,7 @@ style_c3_mndwi = {
         {"value": 0.8, "color": "#1563aa"},
         {"value": 1.0, "color": "#08306b"},
     ],
-    "pq_masks": [
-        {
-            "band": "oa_fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 3,
-            "invert": True,
-        },
-    ],
+    "pq_masks": pq_mask_fmask_only,
     "legend": legend_idx_0_1_5ticks,
     # Define behaviour(s) for multi-date requests. If not declared, style only supports single-date requests.
     "multi_date": [
@@ -347,28 +275,7 @@ style_c3_mndwi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": [
-                {
-                    "band": "oa_fmask",
-                    "enum": 0,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 2,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 3,
-                    "invert": True,
-                },
-                {
-                    "band": "land",
-                    "invert": True,
-                    "enum": 1,
-                },
-            ],
+            "pq_masks": pq_mask_fmask_land,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -498,28 +405,7 @@ style_c3_nbr = {
             "color": "#053061",
         },
     ],
-    "pq_masks": [
-        {
-            "band": "oa_fmask",
-            "enum": 0,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 2,
-            "invert": True,
-        },
-        {
-            "band": "oa_fmask",
-            "enum": 3,
-            "invert": True,
-        },
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 1,
-        },
-    ],
+    "pq_masks": pq_mask_fmask_land,
     "legend": {
         "show_legend": True,
         "begin": "-1.0",
@@ -561,28 +447,7 @@ style_c3_nbr = {
                 {"value": 0.66, "color": "#ad28cc"},
                 {"value": 0.88, "color": "#ad28cc"},
             ],
-            "pq_masks": [
-                {
-                    "band": "oa_fmask",
-                    "enum": 0,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 2,
-                    "invert": True,
-                },
-                {
-                    "band": "oa_fmask",
-                    "enum": 3,
-                    "invert": True,
-                },
-                {
-                    "band": "land",
-                    "invert": True,
-                    "enum": 1,
-                },
-            ],
+            "pq_masks": pq_mask_fmask_land,
             "legend": {
                 "begin": "-0.5",
                 "end": "0.88",

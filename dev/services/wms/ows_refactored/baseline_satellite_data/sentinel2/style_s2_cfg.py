@@ -10,48 +10,28 @@ from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
 s2_nrt_fmask = [
     {
         "band": "fmask",
-        "enum": 0,
-        "invert": True,
-    },
-    {
-        "band": "fmask",
-        "enum": 2,
-        "invert": True,
-    },
-    {
-        "band": "fmask",
-        "enum": 3,
+        "values": [0, 2, 3],
         "invert": True,
     },
     {
         "band": "land",
         "invert": True,
-        "enum": 1,
+        "values": [1],
     },
 ]
 
 s2_provisional_oa_fmask = [
     {
         "band": "oa_fmask",
-        "enum": 0,
-        "invert": True,
-    },
-    {
-        "band": "oa_fmask",
-        "enum": 2,
-        "invert": True,
-    },
-    {
-        "band": "oa_fmask",
-        "enum": 3,
+        "values": [0, 2, 3],
         "invert": True,
     },
     {
         "band": "land",
         "invert": True,
-        "enum": 1,
-    },
-]
+        "values": [1],
+    }
+ ]
 
 style_s2_simple_rgb = {
     "name": "simple_rgb",
