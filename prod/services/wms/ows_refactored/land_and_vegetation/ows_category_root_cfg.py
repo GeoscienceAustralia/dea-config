@@ -3,6 +3,10 @@ category_layers = {
     "abstract": "",
     "layers": [
         {
+            "include": "ows_refactored.land_and_vegetation.landcover.ows_c2_lc_cyear_cfg.layers",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.land_and_vegetation.fc.ows_fc_cfg.layers",
             "type": "python",
         },

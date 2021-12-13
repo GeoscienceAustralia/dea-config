@@ -3,7 +3,7 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 style_c3_wofs_obs = {
     "name": "observations",
-    "title": "Observations",
+    "title": "Water Observations",
     "abstract": "Observations",
     "value_map": {
         "water": [
@@ -105,7 +105,7 @@ style_c3_wofs_obs = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "values": [0],
         }
     ],
     "legend": {"width": 3.0, "height": 2.1},
@@ -155,17 +155,16 @@ style_c3_wofs_obs_wet_only = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "values": [0],
         },
     ],
 }
 
 
 layer = {
-    "title": "DEA Water Observations (Landsat)",
-    "name": "ga_ls_wo_3",
-    "abstract": """ DEA Water Observations (Landsat)
-
+    "title": "DEA Individual Water Observations (Landsat, C3)",
+    "name": "ga_ls_wo_c3",
+    "abstract": """DEA Individual Water Observations (Landsat, C3)
 DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
 
 The Water Observations show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.
@@ -189,6 +188,51 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "band": "water",
             "product": "ga_ls_wo_3",
+            "ignore_time": False,
+            "ignore_info_flags": [],
+            "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+        },
+    ],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_bitflag",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+        "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
+    },
+    "styling": {
+        "default_style": "observations",
+        "styles": [style_c3_wofs_obs, style_c3_wofs_obs_wet_only],
+    },
+}
+
+layer_usgsc2 = {
+    "title": "DEA Individual Water Observations (Landsat, USGS C2 Test)",
+    "name": "ga_ls_wo_c2_3",
+    "abstract": """ DEA Water Observations (Landsat)
+
+DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
+
+The Water Observations show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.
+
+https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat
+
+For service status information, see https://status.dea.ga.gov.au""",
+    "product_name": "ga_ls_wo_c2_3",
+    "bands": bands_wofs_obs,
+    "resource_limits": reslim_wms_min_zoom_35,
+    "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "flags": [
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": [],
+        },
+        {
+            "band": "water",
+            "product": "ga_ls_wo_c2_3",
             "ignore_time": False,
             "ignore_info_flags": [],
             "fuse_func": "datacube_ows.wms_utils.wofls_fuser",

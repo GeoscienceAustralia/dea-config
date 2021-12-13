@@ -20,7 +20,8 @@ tailored to ensure dynamic coastal features are captured whilst still allowing a
 free composite to be generated. The concepts of the Observed Tidal Range (OTR),
 and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al.
 (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016).
-    """,
+
+For service status information, see https://status.dea.ga.gov.au""",
     "layers": [
         {
             "title": "DEA High Tide Imagery (Landsat)",
@@ -47,7 +48,6 @@ The maximum epoch for which the products are calculated is between 1995-2017, al
 The tide stages were calculated bycomparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide.
 
 Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band).
-
 https://cmi.ga.gov.au/data-products/dea/133/dea-high-and-low-tide-imagery-landsat
 
 For service status information, see https://status.dea.ga.gov.au""",
