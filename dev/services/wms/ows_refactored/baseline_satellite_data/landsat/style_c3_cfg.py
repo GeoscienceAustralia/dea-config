@@ -13,14 +13,14 @@ pq_mask_fmask_land = [
         "invert": True,
         "values": [1],
     }
- ]
+]
 
 pq_mask_fmask_only = [
-        {
-            "band": "oa_fmask",
-            "values": [0, 2, 3],
-            "invert": True,
-        }
+    {
+        "band": "oa_fmask",
+        "values": [0, 2, 3],
+        "invert": True,
+    }
 ]
 
 # Style definition

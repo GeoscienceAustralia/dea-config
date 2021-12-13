@@ -31,7 +31,7 @@ s2_provisional_oa_fmask = [
         "invert": True,
         "values": [1],
     }
- ]
+]
 
 style_s2_simple_rgb = {
     "name": "simple_rgb",
