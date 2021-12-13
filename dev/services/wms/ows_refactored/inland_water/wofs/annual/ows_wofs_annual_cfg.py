@@ -88,7 +88,7 @@ style_annual_wofs_summary_frequency_blue_3 = {
 }
 
 
-style_wofs_summary_wet_3 = {
+style_annual_wofs_summary_wet_3 = {
     "name": "annual_water_observations_3",
     "title": "Wet Count",
     "abstract": "WOfS annual summary showing the count of water observations",
@@ -135,7 +135,7 @@ style_wofs_summary_wet_3 = {
     "legend": legend_idx_twentyplus_3ticks,
 }
 
-style_wofs_summary_clear_3 = {
+style_annual_wofs_summary_clear_3 = {
     "name": "annual_clear_observations_3",
     "title": "Clear Count",
     "abstract": "WOfS annual summary showing the count of clear observations",
@@ -225,8 +225,8 @@ For service status information, see https://status.dea.ga.gov.au
         "styles": [
             style_annual_wofs_summary_frequency_3,
             style_annual_wofs_summary_frequency_blue_3,
-            style_wofs_summary_wet_3,
-            style_wofs_summary_clear_3,
+            style_annual_wofs_summary_wet_3,
+            style_annual_wofs_summary_clear_3,
         ],
     },
 }
