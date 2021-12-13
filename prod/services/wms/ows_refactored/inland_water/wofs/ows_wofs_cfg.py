@@ -8,14 +8,6 @@ layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.inland_water.wofs.individual.ows_c3_wo_cfg.layer_usgsc2",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.inland_water.wofs.individual.ows_s2_wo_cfg.layer",
-            "type": "python",
-        },
-        {
             "include": "ows_refactored.inland_water.wofs.multiyear.ows_wofs_summary_cfg.c3_wofs_layer",
             "type": "python",
         },
