@@ -20,7 +20,7 @@ c3_fc_pq_mask = [
     {
         "band": "land",
         "invert": True,
-        "enum": 0,
+        "values": [0],
     },
 ]
 
