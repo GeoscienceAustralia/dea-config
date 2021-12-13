@@ -487,7 +487,8 @@ For service status information, see https://status.dea.ga.gov.au
             style_wofs_count_clear,
         ],
     },
-},
+}
+
 freq_layer = {
     "title": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, C2)",
     "name": "Water Observations from Space Statistics",  # TODO: add underscore to link the name
@@ -521,6 +522,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         ],
     }
 }
+
 filtered_layer = {
     "title": "DEA Multi-Year Water Observation Confidence Filtered Statistics (Landsat, C2)",
     "name": "wofs_filtered_summary_confidence",

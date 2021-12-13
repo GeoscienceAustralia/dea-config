@@ -180,7 +180,6 @@ For service status information, see https://status.dea.ga.gov.au""",
         ],
     },
 }
-        
 
 wet_layer = {
     "title": "DEA Annual Wet Observation Statistics (Landsat, C2)",
@@ -213,7 +212,7 @@ For service status information, see https://status.dea.ga.gov.au
             style_wofs_summary_wet,
         ],
     },
-},
+}
 
 statistics_layer = {
     "title": "DEA Annual Water Observation Frequency Statistics (Landsat, C2)",

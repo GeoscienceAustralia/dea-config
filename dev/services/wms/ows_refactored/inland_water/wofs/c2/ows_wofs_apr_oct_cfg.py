@@ -180,7 +180,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             style_wofs_seasonal_wet,
         ],
     },
-},
+}
 
 clear_layer = {
     "title": "DEA April-October Clear Observation Statistics (Landsat, C2)",
