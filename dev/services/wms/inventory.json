@@ -1137,11 +1137,11 @@
             ],
             "styles_count": 5,
             "styles_list": [
-                "annual_WOfS_frequency_3",
-                "annual_WOfS_frequency_cvf_3",
-                "annual_WOfS_frequency_blues_transparent_3",
-                "annual_water_observations_3",
-                "annual_clear_observations_3"
+                "annual_wofs_frequency_3",
+                "annual_wofs_frequency_cvf_3",
+                "annual_wofs_frequency_blues_transparent_3",
+                "annual_wofs_wet_3",
+                "annual_wofs_clear_3"
             ]
         },
         {

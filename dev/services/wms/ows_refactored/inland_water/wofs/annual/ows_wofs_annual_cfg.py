@@ -5,9 +5,9 @@ from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 style_annual_wofs_summary_frequency_3 = {
-    "name": "annual_WOfS_frequency_3",
+    "name": "annual_wofs_frequency_3",
     "title": "Water Summary",
-    "abstract": "WOfS annual summary showing the frequency of Wetness",
+    "abstract": "Water Observations annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -43,9 +43,9 @@ style_annual_wofs_summary_frequency_3 = {
 }
 
 style_annual_wofs_summary_frequency_cvf_3 = {
-    "name": "annual_WOfS_frequency_cvf_3",
+    "name": "annual_wofs_frequency_cvf_3",
     "title": "Water Summary (colour vision friendly)",
-    "abstract": "WOfS annual summary showing the frequency of Wetness",
+    "abstract": "Water Observations annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -73,9 +73,9 @@ style_annual_wofs_summary_frequency_cvf_3 = {
 }
 
 style_annual_wofs_summary_frequency_blue_3 = {
-    "name": "annual_WOfS_frequency_blues_transparent_3",
+    "name": "annual_wofs_frequency_blues_transparent_3",
     "title": "Water Summary (Blue)",
-    "abstract": "WOfS annual summary showing the frequency of Wetness",
+    "abstract": "Water Observations annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -118,9 +118,9 @@ style_annual_wofs_summary_frequency_blue_3 = {
 
 
 style_annual_wofs_summary_wet_3 = {
-    "name": "annual_water_observations_3",
+    "name": "annual_wofs_wet_3",
     "title": "Wet Count",
-    "abstract": "WOfS annual summary showing the count of water observations",
+    "abstract": "Water Observations annual summary showing the count of water observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -165,9 +165,9 @@ style_annual_wofs_summary_wet_3 = {
 }
 
 style_annual_wofs_summary_clear_3 = {
-    "name": "annual_clear_observations_3",
+    "name": "annual_wofs_clear_3",
     "title": "Clear Count",
-    "abstract": "WOfS annual summary showing the count of clear observations",
+    "abstract": "Water Observations annual summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -250,7 +250,7 @@ For service status information, see https://status.dea.ga.gov.au
         }
     ],
     "styling": {
-        "default_style": "annual_WOfS_frequency_3",
+        "default_style": "annual_wofs_frequency_3",
         "styles": [
             style_annual_wofs_summary_frequency_3,
             style_annual_wofs_summary_frequency_cvf_3,
