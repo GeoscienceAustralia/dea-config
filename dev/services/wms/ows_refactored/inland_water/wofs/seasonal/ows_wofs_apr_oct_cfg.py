@@ -4,7 +4,7 @@ from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_twentyplus_3ticks)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
-style_wofs_seasonal_wet_3 = {
+style_seasonal_wofs_wet_3 = {
     "name": "seasonal_wofs_wet_3",
     "title": "Wet Count",
     "abstract": "Water Observations seasonal summary showing the count of water observations",
@@ -50,7 +50,7 @@ style_wofs_seasonal_wet_3 = {
     "legend": legend_idx_twentyplus_3ticks,
 }
 
-style_wofs_seasonal_clear_3 = {
+style_seasonal_wofs_clear_3 = {
     "name": "seasonal_wofs_clear_3",
     "title": "Clear Count",
     "abstract": "Water Observations seasonal summary showing the count of clear observations",
@@ -97,7 +97,7 @@ style_wofs_seasonal_clear_3 = {
 }
 
 style_seasonal_wofs_summary_frequency_3 = {
-    "name": "seasonal_WOfS_frequency_3",
+    "name": "seasonal_wofs_frequency_3",
     "title": " Water Summary",
     "abstract": "Water Observations seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
@@ -134,7 +134,7 @@ style_seasonal_wofs_summary_frequency_3 = {
 }
 
 style_seasonal_wofs_summary_frequency_cvf_3 = {
-    "name": "seasonal_WOfS_frequency_cvf_3",
+    "name": "seasonal_wofs_frequency_cvf_3",
     "title": "Water Summary (colour vision friendly)",
     "abstract": "Water Observations seasonal summary showing the frequency of Wetness",
     "index_function": {
@@ -256,13 +256,13 @@ For service status information, see https://status.dea.ga.gov.au
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "seasonal_WOfS_frequency_3",
+        "default_style": "seasonal_wofs_frequency_3",
         "styles": [
             style_seasonal_wofs_summary_frequency_3,
             style_seasonal_wofs_summary_frequency_cvf_3,
             style_seasonal_wofs_summary_frequency_blue_3,
-            style_wofs_seasonal_wet_3,
-            style_wofs_seasonal_clear_3,
+            style_seasonal_wofs_wet_3,
+            style_seasonal_wofs_clear_3,
         ],
     },
 }
