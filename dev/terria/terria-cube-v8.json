@@ -1073,7 +1073,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "id": "ODw8jg4"
+                                            "id": "ODw8jg4",
+                                            "dateFormat": "'Year: 'yyyy"
                                         }
                                     ]
                                 },
