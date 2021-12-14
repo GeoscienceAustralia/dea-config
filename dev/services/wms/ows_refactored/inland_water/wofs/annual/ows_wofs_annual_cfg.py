@@ -42,6 +42,35 @@ style_annual_wofs_summary_frequency_3 = {
     "legend": legend_idx_percentage_by_20,
 }
 
+style_annual_wofs_summary_frequency_cvf_3 = {
+    "name": "annual_WOfS_frequency_cvf_3",
+    "title": "Water Summary (colour vision friendly)",
+    "abstract": "WOfS annual summary showing the frequency of Wetness",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "frequency",
+        },
+    },
+    "needed_bands": ["frequency"],
+    "include_in_feature_info": False,
+    "color_ramp": [
+        {"value": 0.0, "color": "#FFFFFF", "alpha": 0.0},
+        {"value": 0.02, "color": "#FFFFFF", "alpha": 0.0},
+        {"value": 0.05, "color": '#aee3c0', "alpha": 0.25},
+        {"value": 0.1, "color": '#6dd3ad', "alpha": 0.75},
+        {"value": 0.2, "color": '#44bcad'},
+        {"value": 0.3, "color": '#35a1ab'},
+        {"value": 0.4, "color": '#3487a6'},
+        {"value": 0.5, "color": '#366da0'},
+        {"value": 0.6, "color": '#3d5296'},
+        {"value": 0.7, "color": '#403974'},
+        {"value": 0.8, "color": '#35264c'},
+        {"value": 0.9, "color": '#231526'},
+    ],
+    "legend": legend_idx_percentage_by_20,
+}
 
 style_annual_wofs_summary_frequency_blue_3 = {
     "name": "annual_WOfS_frequency_blues_transparent_3",
@@ -224,6 +253,7 @@ For service status information, see https://status.dea.ga.gov.au
         "default_style": "annual_WOfS_frequency_3",
         "styles": [
             style_annual_wofs_summary_frequency_3,
+            style_annual_wofs_summary_frequency_cvf_3,
             style_annual_wofs_summary_frequency_blue_3,
             style_annual_wofs_summary_wet_3,
             style_annual_wofs_summary_clear_3,
