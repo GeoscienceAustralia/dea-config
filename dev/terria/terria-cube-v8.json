@@ -1069,7 +1069,6 @@
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
-                                            "dateFormat": "'Year: 'yyyy",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
@@ -1158,7 +1157,6 @@
                                             "linkedWcsCoverage": "wofs_albers",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
-                                            "featureTimesProperty": "data_available_for_dates",
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
