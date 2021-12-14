@@ -44,7 +44,19 @@ layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_summary_cfg.layer",
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_summary_cfg.clear_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_summary_cfg.wet_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_summary_cfg.freq_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_summary_cfg.filtered_layer",
             "type": "python",
         },
         {
