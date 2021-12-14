@@ -116,7 +116,6 @@ style_annual_wofs_summary_frequency_blue_3 = {
     "legend": legend_idx_percentage_by_20,
 }
 
-
 style_annual_wofs_summary_wet_3 = {
     "name": "annual_wofs_wet_3",
     "title": "Wet Count",

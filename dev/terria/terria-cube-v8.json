@@ -1010,6 +1010,7 @@
                                             "linkedWcsCoverage": "ga_ls_wo_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "timeFilterPropertyName": "data_available_for_dates",
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
@@ -1026,6 +1027,7 @@
                                             "linkedWcsCoverage": "ga_s2_wo_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "timeFilterPropertyName": "data_available_for_dates",
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
@@ -1042,6 +1044,7 @@
                                             "linkedWcsCoverage": "ga_ls_wo_c2_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "timeFilterPropertyName": "data_available_for_dates",
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
@@ -1066,10 +1069,10 @@
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
+                                            "dateFormat": "'Year: 'yyyy",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jg4"
                                         }
                                     ]
@@ -1093,7 +1096,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "id": "ODw8jg5"
+                                            "id": "ODw8jg5",
+                                            "dateFormat": "'Year: 'yyyy"
                                         }
                                     ]
                                 },
@@ -1153,6 +1157,7 @@
                                             "linkedWcsCoverage": "wofs_albers",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "featureTimesProperty": "data_available_for_dates",
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
