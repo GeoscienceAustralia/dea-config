@@ -64,7 +64,11 @@ layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_apr_oct_cfg.layer",
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_apr_oct_cfg.clear_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_apr_oct_cfg.wet_layer",
             "type": "python",
         },
         {
@@ -72,7 +76,11 @@ layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_nov_mar_cfg.layer",
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_nov_mar_cfg.clear_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_nov_mar_cfg.wet_layer",
             "type": "python",
         }
     ],
