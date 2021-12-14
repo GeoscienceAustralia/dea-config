@@ -172,7 +172,7 @@ style_seasonal_wofs_summary_frequency_cvf_3 = {
 
 style_seasonal_wofs_summary_frequency_blue_3 = {
     "name": "seasonal_wos_frequency_blue_3",
-    "title": "Water Summary (Blue)",
+    "title": "Water Summary (blue)",
     "abstract": "WOfS seasonal summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
