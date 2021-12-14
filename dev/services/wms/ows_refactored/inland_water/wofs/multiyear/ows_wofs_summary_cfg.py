@@ -177,12 +177,19 @@ style_wofs_summary_frequency_cvf_3 = {
         {"value": 0.8, "color": '#35264c'},
         {"value": 0.9, "color": '#231526'},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_frequency_blue_3 = {
     "name": "mysummary_wofs_frequency_blue_3",
-    "title": "Water Summary (Blue)",
+    "title": "Water Summary (blue)",
     "abstract": "Water Observations summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
