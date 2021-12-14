@@ -160,6 +160,13 @@ style_seasonal_wofs_summary_frequency_cvf_3 = {
         {"value": 0.8, "color": '#35264c'},
         {"value": 0.9, "color": '#231526'},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
