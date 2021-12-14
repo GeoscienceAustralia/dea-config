@@ -28,11 +28,15 @@ layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_annual_cfg.layer",
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_annual_cfg.statistics_layer",
             "type": "python",
         },
         {
-            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_annual_cfg.statistics_layer",
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_annual_cfg.clear_layer",
+            "type": "python",
+        },
+        {
+            "include": "ows_refactored.inland_water.wofs.c2.ows_wofs_annual_cfg.wet_layer",
             "type": "python",
         },
         {
