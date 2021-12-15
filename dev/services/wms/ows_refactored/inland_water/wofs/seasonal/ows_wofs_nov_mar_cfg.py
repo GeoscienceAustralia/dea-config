@@ -245,7 +245,7 @@ For service status information, see https://status.dea.ga.gov.au
     "product_name": "ga_ls_wo_fq_nov_mar_3",
     "bands": bands_wofs_sum,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-    "time_resolution": "month",
+    "time_resolution": "year",
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
     "flags": [

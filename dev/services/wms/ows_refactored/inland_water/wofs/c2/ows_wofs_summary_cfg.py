@@ -524,7 +524,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 filtered_layer = {
-    "title": "DEA Multi-Year Water Observation Confidence Filtered Statistics (Landsat, C2)",
+    "title": "DEA Multi-Year Water Observation Confidence Statistics (Landsat, C2)",
     "name": "wofs_filtered_summary_confidence",
     "abstract": """Water Observations from Space Filtered Statistics 25m 2.1.5 (Landsat, Confidence)
 
