@@ -96,7 +96,7 @@ style_c3_wofs_obs = {
         {
             "band": "land",
             "invert": True,
-            "enum": 0,
+            "values": [0],
         }
     ],
     "legend": {"width": 3.0, "height": 2.1},
@@ -146,7 +146,7 @@ style_s2_wofs_obs_wet_only = {
         {
             "band": "land",
             "invert": True,
-            "enum": 1,
+            "values": [1],
         },
     ],
 }
