@@ -6,6 +6,14 @@ bands_ba_rasters = {
     "delta_nbr": [],
 }
 
+pq_ba = [
+    {
+        "band": "land",
+        "invert": True,
+        "values": [0],
+    }
+]
+
 style_dbsi = {
     "name": "ga_s2_dbsi_provisional_3",
     "title": "Delta Bare Soil Index (dBSI)",
@@ -32,13 +40,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "band": "delta_bsi",
         },
     },
-    "pq_masks": [
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 0,
-        }
-    ],
+    "pq_masks": pq_ba,
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
     "legend": {
@@ -71,13 +73,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "band": "delta_ndvi",
         },
     },
-    "pq_masks": [
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 0,
-        }
-    ],
+    "pq_masks": pq_ba,
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
     "legend": {
@@ -112,13 +108,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "band": "delta_nbr",
         },
     },
-    "pq_masks": [
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 0,
-        }
-    ],
+    "pq_masks": pq_ba,
     "range": [-1, 1],
     "mpl_ramp": "PuOr_r",
     "legend": {
@@ -164,13 +154,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "band": "delta_nbr",
         },
     },
-    "pq_masks": [
-        {
-            "band": "land",
-            "invert": True,
-            "enum": 0,
-        }
-    ],
+    "pq_masks": pq_ba,
     "range": [-1, 1],
     "color_ramp": [
         {"value": -1.0, "color": "#0be344"},
