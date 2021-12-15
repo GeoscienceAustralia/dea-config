@@ -248,7 +248,7 @@ For service status information, see https://status.dea.ga.gov.au
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
-    "time_resolution": "month",
+    "time_resolution": "year",
     "flags": [
         {
             "band": "land",
