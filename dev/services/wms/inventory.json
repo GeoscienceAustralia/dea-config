@@ -1103,7 +1103,7 @@
             ]
         },
         {
-            "layer": "wofs_apr_oct_summary_statistics_3",
+            "layer": "ga_ls_wo_fq_apr_oct_3",
             "product": [
                 "ga_ls_wo_fq_apr_oct_3"
             ],
