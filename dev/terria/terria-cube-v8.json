@@ -956,7 +956,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations (Landsat, C3)",
+                                            "name": "DEA Water Observations (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_3",
@@ -997,7 +997,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations Calendar Year (Landsat, C3)",
+                                            "name": "DEA Water Observations Calendar Year (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_cyear_3",
@@ -1021,7 +1021,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations Multi Year (Landsat, C3)",
+                                            "name": "DEA Water Observations Multi Year (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_myear_3",
@@ -3455,7 +3455,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Water Observations (Landsat, C3)",
+                                    "name": "DEA Water Observations (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_wo_3",
