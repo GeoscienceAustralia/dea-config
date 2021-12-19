@@ -170,7 +170,6 @@ style_seasonal_wofs_summary_frequency_cvf_3 = {
     "legend": legend_idx_percentage_by_20,
 }
 
-
 style_seasonal_wofs_summary_frequency_blue_3 = {
     "name": "seasonal_wofs_frequency_blue_3",
     "title": "Water Summary (blue)",
