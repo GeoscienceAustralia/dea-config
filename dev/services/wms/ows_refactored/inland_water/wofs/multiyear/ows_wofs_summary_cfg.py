@@ -232,7 +232,7 @@ style_wofs_frequency_blue_3 = {
 }
 
 c3_wofs_layer = {
-    "title": "DEA Water Observations Multi Year (Landsat, C3)",
+    "title": "DEA Water Observations Multi Year (Landsat)",
     "name": "ga_ls_wo_fq_myear_3",
     "abstract": """Geoscience Australia Landsat Water Observations Frequency Multi Year Collection 3
 For service status information, see https://status.dea.ga.gov.au

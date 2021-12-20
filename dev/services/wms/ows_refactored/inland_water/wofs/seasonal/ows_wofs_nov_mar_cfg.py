@@ -7,7 +7,7 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 style_seasonal_wofs_wet_3 = {
     "name": "seasonal_wos_wet_3",
     "title": "Wet Count",
-    "abstract": "WOfS seasonal summary showing the count of water observations",
+    "abstract": "Water Observations seasonal summary showing the count of water observations",
     "needed_bands": ["count_wet"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -53,7 +53,7 @@ style_seasonal_wofs_wet_3 = {
 style_seasonal_wofs_clear_3 = {
     "name": "seasonal_wos_clear_3",
     "title": "Clear Count",
-    "abstract": "WOfS seasonal summary showing the count of clear observations",
+    "abstract": "Water Observations seasonal summary showing the count of clear observations",
     "needed_bands": ["count_clear"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -99,7 +99,7 @@ style_seasonal_wofs_clear_3 = {
 style_seasonal_wofs_summary_frequency_3 = {
     "name": "seasonal_wos_frequency_3",
     "title": " Water Summary",
-    "abstract": "WOfS seasonal summary showing the frequency of Wetness",
+    "abstract": "Water Observations seasonal summary showing the frequency of Wetness",
     "needed_bands": ["frequency"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -136,7 +136,7 @@ style_seasonal_wofs_summary_frequency_3 = {
 style_seasonal_wofs_summary_frequency_cvf_3 = {
     "name": "seasonal_wos_frequency_cvf_3",
     "title": "Water Summary (colour vision friendly)",
-    "abstract": "WOfS seasonal summary showing the frequency of Wetness",
+    "abstract": "Water Observations seasonal summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -173,7 +173,7 @@ style_seasonal_wofs_summary_frequency_cvf_3 = {
 style_seasonal_wofs_summary_frequency_blue_3 = {
     "name": "seasonal_wos_frequency_blue_3",
     "title": "Water Summary (blue)",
-    "abstract": "WOfS seasonal summary showing the frequency of Wetness",
+    "abstract": "Water Observations seasonal summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -214,7 +214,7 @@ style_seasonal_wofs_summary_frequency_blue_3 = {
 }
 
 c3_statistics_layer = {
-    "title": "DEA Water Observations November to March (Landsat, C3)",
+    "title": "DEA Water Observations November to March (Landsat)",
     "name": "ga_ls_wo_fq_nov_mar_3",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, November - March, Frequency)
 The DEA Water Observations November - March Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
@@ -245,9 +245,9 @@ For service status information, see https://status.dea.ga.gov.au
     "product_name": "ga_ls_wo_fq_nov_mar_3",
     "bands": bands_wofs_sum,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-    "time_resolution": "year",
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
+    "time_resolution": "year",
     "flags": [
         {
             "band": "land",
@@ -268,7 +268,7 @@ For service status information, see https://status.dea.ga.gov.au
             style_seasonal_wofs_summary_frequency_cvf_3,
             style_seasonal_wofs_summary_frequency_blue_3,
             style_seasonal_wofs_wet_3,
-            style_seasonal_wofs_clear_3
+            style_seasonal_wofs_clear_3,
         ],
     },
 }
