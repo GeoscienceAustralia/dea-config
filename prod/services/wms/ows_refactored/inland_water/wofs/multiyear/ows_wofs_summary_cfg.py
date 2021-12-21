@@ -4,7 +4,7 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 style_wofs_count_wet_3 = {
     "name": "mysummary_wofs_wet_3",
-    "title": "Multi Year Summary - Wet Count",
+    "title": "Wet Count",
     "abstract": "Water Observations summary showing the count of wet observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -53,7 +53,7 @@ style_wofs_count_wet_3 = {
 
 style_wofs_count_clear_3 = {
     "name": "mysummary_wofs_clear_3",
-    "title": "Multi Year Summary - Clear Count",
+    "title": "Clear Count",
     "abstract": "Water Observations summary showing the count of clear observations",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -109,7 +109,7 @@ style_wofs_count_clear_3 = {
 
 style_wofs_frequency_3 = {
     "name": "mysummary_wofs_frequency_3",
-    "title": "Multi Year Summary - Frequency",
+    "title": "Water Summary",
     "abstract": "Water Observations summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -177,12 +177,19 @@ style_wofs_summary_frequency_cvf_3 = {
         {"value": 0.8, "color": '#35264c'},
         {"value": 0.9, "color": '#231526'},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
 style_wofs_frequency_blue_3 = {
     "name": "mysummary_wofs_frequency_blue_3",
-    "title": "Multi Year Summary - Frequency (Blue)",
+    "title": "Water Summary (blue)",
     "abstract": "Water Observations summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -225,7 +232,7 @@ style_wofs_frequency_blue_3 = {
 }
 
 c3_wofs_layer = {
-    "title": "DEA Water Observations Multi Year (Landsat, C3)",
+    "title": "DEA Water Observations Multi Year (Landsat)",
     "name": "ga_ls_wo_fq_myear_3",
     "abstract": """Geoscience Australia Landsat Water Observations Frequency Multi Year Collection 3
 For service status information, see https://status.dea.ga.gov.au

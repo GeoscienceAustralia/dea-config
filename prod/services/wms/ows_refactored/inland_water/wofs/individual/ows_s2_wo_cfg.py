@@ -11,15 +11,6 @@ style_c3_wofs_obs = {
                 "title": "",
                 "abstract": "",
                 "flags": {
-                    "nodata": True,
-                },
-                "alpha": 0.0,
-                "color": "#707070",
-            },
-            {
-                "title": "",
-                "abstract": "",
-                "flags": {
                     "and": {
                         "noncontiguous": True,
                         "low_solar_angle": True
@@ -44,7 +35,7 @@ style_c3_wofs_obs = {
                 "abstract": "",
                 "flags": {
                     "and": {
-                        "water_observed": True,
+                        "wet": True,
                         "cloud": True
                     }
                 },
@@ -55,7 +46,7 @@ style_c3_wofs_obs = {
                 "abstract": "",
                 "flags": {
                     "and": {
-                        "water_observed": True,
+                        "wet": True,
                         "cloud_shadow": True
                     }
                 },
@@ -88,14 +79,14 @@ style_c3_wofs_obs = {
             {
                 "title": "Water",
                 "abstract": "",
-                "flags": {"water_observed": True},
+                "flags": {"wet": True},
                 "color": "#4F81BD",
             },
             {
                 "title": "Dry",
                 "abstract": "",
                 "flags": {
-                    "water_observed": False,
+                    "dry": True,
                 },
                 "color": "#96966e",
             },
@@ -111,7 +102,7 @@ style_c3_wofs_obs = {
     "legend": {"width": 3.0, "height": 2.1},
 }
 
-style_c3_wofs_obs_wet_only = {
+style_s2_wofs_obs_wet_only = {
     "name": "wet",
     "title": "Wet Only",
     "abstract": "Wet Only",
@@ -145,7 +136,7 @@ style_c3_wofs_obs_wet_only = {
             },
             {
                 "title": "Wet",
-                "abstract": "",
+                "abstract": "Wet",
                 "flags": {"wet": True},
                 "color": "#4F81BD",
             },
@@ -162,22 +153,15 @@ style_c3_wofs_obs_wet_only = {
 
 
 layer = {
-    "title": "DEA Water Observations (Landsat)",
-    "name": "ga_ls_wo_3",
-    "abstract": """DEA Individual Water Observations (Landsat)
-DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
-
-The Water Observations show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.
-
-https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat
-
-For service status information, see https://status.dea.ga.gov.au""",
-    "product_name": "ga_ls_wo_3",
+    "title": "DEA Water Observations (Sentinel-2, Provisional)",
+    "name": "ga_s2_wo_3",
+    "abstract": """ Prototype Sentinel 2 Water Observations""",
+    "product_name": "ga_s2_wo_3",
     "bands": bands_wofs_obs,
     "resource_limits": reslim_wms_min_zoom_35,
     "dynamic": True,
     "native_crs": "EPSG:3577",
-    "native_resolution": [30, -30],
+    "native_resolution": [10, -10],
     "flags": [
         {
             "band": "land",
@@ -187,7 +171,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         },
         {
             "band": "water",
-            "product": "ga_ls_wo_3",
+            "product": "ga_s2_wo_3",
             "ignore_time": False,
             "ignore_info_flags": [],
             "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
@@ -201,6 +185,6 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "styling": {
         "default_style": "observations",
-        "styles": [style_c3_wofs_obs, style_c3_wofs_obs_wet_only],
+        "styles": [style_c3_wofs_obs, style_s2_wofs_obs_wet_only],
     },
 }

@@ -240,35 +240,6 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance USGS C2 Test (Landsat 8 OLI-TIRS)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_ls8c_ard_c2_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls8c_ard_c2_3",
-                                    "chartColor": "white",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nbart_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n660,{{data.0.bands.nbart_red}}\n870,{{data.0.bands.nbart_nir}}\n1610,{{data.0.bands.nbart_swir_1}}\n2200,{{data.0.bands.nbart_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "fehi34"
-                                },
-                                {
-                                    "type": "wms",
                                     "name": "DEA Surface Reflectance (Landst 7 ETM+)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
@@ -720,23 +691,6 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Fractional Cover USGS C2 Test (Landsat)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_ls_fc_c2_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls_fc_c2_3",
-                                    "chartColor": "white",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "kj3h31"
-                                },
-                                {
-                                    "type": "wms",
                                     "name": "Seasonal Fractional Cover",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
@@ -1002,7 +956,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations (Landsat, C3)",
+                                            "name": "DEA Water Observations (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_3",
@@ -1010,6 +964,7 @@
                                             "linkedWcsCoverage": "ga_ls_wo_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "timeFilterPropertyName": "data_available_for_dates",
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
@@ -1026,27 +981,12 @@
                                             "linkedWcsCoverage": "ga_s2_wo_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "timeFilterPropertyName": "data_available_for_dates",
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
                                             "id": "qQ27212"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Water Observations (Landsat, USGS C2 Test)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "ga_ls_wo_c2_3",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "ga_ls_wo_c2_3",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "qQ27213"
                                         }
                                     ]
                                 },
@@ -1057,7 +997,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations Calendar Year (Landsat, C3)",
+                                            "name": "DEA Water Observations Calendar Year (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_cyear_3",
@@ -1069,8 +1009,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "ODw8jg4"
+                                            "id": "ODw8jg4",
+                                            "dateFormat": "'Year: 'yyyy"
                                         }
                                     ]
                                 },
@@ -1081,7 +1021,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations Multi Year (Landsat, C3)",
+                                            "name": "DEA Water Observations Multi Year (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_myear_3",
@@ -1093,7 +1033,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "id": "ODw8jg5"
+                                            "id": "ODw8jg5",
+                                            "dateFormat": "'Year: 'yyyy"
                                         }
                                     ]
                                 },
@@ -1104,9 +1045,10 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations April to October (Landsat, C3)",
+                                            "name": "DEA Water Observations April to October (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
+                                            "dateFormat": "'Year: 'yyyy",
                                             "layers": "ga_ls_wo_fq_apr_oct_3",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                             "linkedWcsCoverage": "ga_ls_wo_fq_apr_oct_3",
@@ -1116,14 +1058,14 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jg7"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations November to March (Landsat, C3)",
+                                            "name": "DEA Water Observations November to March (Landsat)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
+                                            "dateFormat": "'Year: 'yyyy",
                                             "layers": "ga_ls_wo_fq_nov_mar_3",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                             "linkedWcsCoverage": "ga_ls_wo_fq_nov_mar_3",
@@ -1133,7 +1075,6 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jg8"
                                         }
                                     ]
@@ -1145,7 +1086,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations (Landsat, C2)",
+                                            "name": "DEA Water Observations (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_albers",
@@ -1161,64 +1102,60 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Annual Water Observation Frequency Statistics (Landsat, C2)",
+                                            "name": "DEA Annual Water Observation Frequency Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_annual_summary",
+                                            "layers": "wofs_annual_summary_statistics",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary",
+                                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jh0"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Annual Clear Observation Statistics (Landsat, C2)",
+                                            "name": "DEA Annual Clear Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_annual_summary",
+                                            "layers": "wofs_annual_summary_clear",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary",
+                                            "linkedWcsCoverage": "wofs_annual_summary_clear",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jh2"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Annual Wet Observation Statistics (Landsat, C2)",
+                                            "name": "DEA Annual Wet Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_annual_summary",
+                                            "layers": "wofs_annual_summary_wet",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary",
+                                            "linkedWcsCoverage": "wofs_annual_summary_wet",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jh1"
                                         },
-                                        
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, C2)",
+                                            "name": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_summary",
+                                            "layers": "wofs_filtered_summary",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_summary",
+                                            "linkedWcsCoverage": "wofs_filtered_summary",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
@@ -1229,12 +1166,12 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Clear Observation Statistics (Landsat, C2)",
+                                            "name": "DEA Multi-Year Clear Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_summary",
+                                            "layers": "wofs_summary_clear",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_summary",
+                                            "linkedWcsCoverage": "wofs_summary_clear",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
@@ -1245,12 +1182,12 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Wet Observation Statistics (Landsat, C2)",
+                                            "name": "DEA Multi-Year Wet Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_summary",
+                                            "layers": "wofs_summary_wet",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_summary",
+                                            "linkedWcsCoverage": "wofs_summary_wet",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
@@ -1261,12 +1198,12 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, C2)",
+                                            "name": "DEA Multi-Year Water Observation Confidence Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_summary",
+                                            "layers": "wofs_filtered_summary_confidence",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_summary",
+                                            "linkedWcsCoverage": "wofs_filtered_summary_confidence",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
@@ -1277,7 +1214,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Water Observation Confidence Filtered Statistics (Landsat, C2)",
+                                            "name": "DEA Multi-Year Water Observation Confidence Filtered Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_filtered_summary",
@@ -1293,104 +1230,98 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA April-October Seasonal Water Observations (Landsat, C2)",
+                                            "name": "DEA April-October Seasonal Water Observations (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary",
+                                            "layers": "wofs_apr_oct_summary_statistics",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary",
+                                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jh3"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA April-October Clear Observation Statistics (Landsat, C2)",
+                                            "name": "DEA April-October Clear Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary",
+                                            "layers": "wofs_apr_oct_summary_clear",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary",
+                                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jh5"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA April-October Wet Observation Statistics (Landsat, C2)",
+                                            "name": "DEA April-October Wet Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary",
+                                            "layers": "wofs_apr_oct_summary_wet",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary",
+                                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jh4"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA November-March Seasonal Water Observations (Landsat, C2)",
+                                            "name": "DEA November-March Seasonal Water Observations (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary",
+                                            "layers": "wofs_nov_mar_summary_statistics",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary",
+                                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jj5"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA November-March Clear Observation Statistics (Landsat, C2)",
+                                            "name": "DEA November-March Clear Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary",
+                                            "layers": "wofs_nov_mar_summary_clear",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary",
+                                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jk7"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA November-March Wet Observation Statistics (Landsat, C2)",
+                                            "name": "DEA November-March Wet Observation Statistics (Landsat, depricated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary",
+                                            "layers": "wofs_nov_mar_summary_wet",
                                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary",
+                                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
                                             "id": "ODw8jj1"
                                         }
 
@@ -3524,7 +3455,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Water Observations (Landsat, C3)",
+                                    "name": "DEA Water Observations (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_wo_3",

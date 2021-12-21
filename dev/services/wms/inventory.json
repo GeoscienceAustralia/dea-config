@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 101,
+    "total_layers_count": 98,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -261,30 +261,6 @@
                 "tmad_rgb_std",
                 "tmad_rgb_sens",
                 "count"
-            ]
-        },
-        {
-            "layer": "ga_ls8c_ard_c2_3",
-            "product": [
-                "ga_ls8c_ard_c2_3"
-            ],
-            "styles_count": 15,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "nbr",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "fmask",
-                "panchromatic",
-                "aerosol"
             ]
         },
         {
@@ -666,23 +642,6 @@
             ]
         },
         {
-            "layer": "ga_ls_fc_c2_3",
-            "product": [
-                "ga_ls_fc_c2_3"
-            ],
-            "styles_count": 8,
-            "styles_list": [
-                "fc_rgb",
-                "bare_ground_c3",
-                "green_veg_c3",
-                "non_green_veg_c3",
-                "fc_rgb_unmasked",
-                "bare_ground_c3_unmasked",
-                "green_veg_c3_unmasked",
-                "non_green_veg_c3_unmasked"
-            ]
-        },
-        {
             "layer": "fcp_rgb",
             "product": [
                 "fc_percentile_albers_annual"
@@ -900,20 +859,9 @@
             ]
         },
         {
-            "layer": "ga_ls_wo_c3",
+            "layer": "ga_ls_wo_3",
             "product": [
                 "ga_ls_wo_3"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "observations",
-                "wet"
-            ]
-        },
-        {
-            "layer": "ga_ls_wo_c2_3",
-            "product": [
-                "ga_ls_wo_c2_3"
             ],
             "styles_count": 2,
             "styles_list": [
@@ -1103,7 +1051,7 @@
             ]
         },
         {
-            "layer": "wofs_apr_oct_summary_statistics_3",
+            "layer": "ga_ls_wo_fq_apr_oct_3",
             "product": [
                 "ga_ls_wo_fq_apr_oct_3"
             ],
@@ -1117,7 +1065,7 @@
             ]
         },
         {
-            "layer": "wofs_nov_mar_summary_statistics_3",
+            "layer": "ga_ls_wo_fq_nov_mar_3",
             "product": [
                 "ga_ls_wo_fq_nov_mar_3"
             ],

@@ -150,7 +150,7 @@ style_seasonal_wofs_summary_frequency_blue = {
 
 
 wet_layer = {
-    "title": "DEA November-March Wet Observation Statistics (Landsat, C2)",
+    "title": "DEA November-March Wet Observation Statistics (Landsat, depricated)",
     "name": "wofs_nov_mar_summary_wet",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, November - March, Wet)
 
@@ -183,7 +183,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 clear_layer = {
-    "title": "DEA November-March Clear Observation Statistics (Landsat, C2)",
+    "title": "DEA November-March Clear Observation Statistics (Landsat, depricated)",
     "name": "wofs_nov_mar_summary_clear",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, November - March, Clear)
 
@@ -211,7 +211,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 statistics_layer = {
-    "title": "DEA November-March Seasonal Water Observations (Landsat, C2)",
+    "title": "DEA November-March Seasonal Water Observations (Landsat, depricated)",
     "name": "wofs_nov_mar_summary_statistics",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, November - March, Frequency)
 

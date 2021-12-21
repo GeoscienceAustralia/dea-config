@@ -4,11 +4,11 @@ from ows_refactored.inland_water.wofs.c2.ows_wofs_summary_cfg import (
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 
 layer = {
-    "title": "DEA Water Observations (Landsat, C2)",
+    "title": "DEA Water Observations (Landsat, depricated)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA Water Observations (Landsat, C2)",
+            "title": "DEA Water Observations (Landsat, depricated)",
             "name": "wofs_albers",
             "abstract": """Water Observations from Space 25m 2.1.5 (Landsat)
 

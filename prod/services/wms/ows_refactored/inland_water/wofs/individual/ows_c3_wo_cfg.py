@@ -162,9 +162,9 @@ style_c3_wofs_obs_wet_only = {
 
 
 layer = {
-    "title": "DEA Individual Water Observations (Landsat, C3)",
-    "name": "ga_ls_wo_c3",
-    "abstract": """DEA Individual Water Observations (Landsat, C3)
+    "title": "DEA Water Observations (Landsat)",
+    "name": "ga_ls_wo_3",
+    "abstract": """DEA Individual Water Observations (Landsat)
 DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
 
 The Water Observations show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.

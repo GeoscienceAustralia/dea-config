@@ -423,7 +423,7 @@ style_wofs_obs_wet_only = {
 }
 
 wet_layer = {
-    "title": "DEA Multi-Year Wet Observation Statistics (Landsat, C2)",
+    "title": "DEA Multi-Year Wet Observation Statistics (Landsat, depricated)",
     "name": "wofs_summary_wet",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Wet)
 
@@ -456,7 +456,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 clear_layer = {
-    "title": "DEA Multi-Year Clear Observation Statistics (Landsat, C2)",
+    "title": "DEA Multi-Year Clear Observation Statistics (Landsat, depricated)",
     "name": "wofs_summary_clear",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Clear)
 
@@ -490,7 +490,7 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 freq_layer = {
-    "title": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, C2)",
+    "title": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, depricated)",
     "name": "Water Observations from Space Statistics",  # TODO: add underscore to link the name
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Frequency)
 
@@ -524,7 +524,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 filtered_layer = {
-    "title": "DEA Multi-Year Water Observation Confidence Filtered Statistics (Landsat, C2)",
+    "title": "DEA Multi-Year Water Observation Confidence Statistics (Landsat, depricated)",
     "name": "wofs_filtered_summary_confidence",
     "abstract": """Water Observations from Space Filtered Statistics 25m 2.1.5 (Landsat, Confidence)
 
@@ -554,7 +554,7 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 statistics_layer = {
-    "title": "DEA Multi-Year Water Observation Frequency Filtered Statistics (Landsat, C2)",
+    "title": "DEA Multi-Year Water Observation Frequency Filtered Statistics (Landsat, depricated)",
     "name": "wofs_filtered_summary",
     "abstract": """Water Observations from Space Filtered Statistics 25m 2.1.5 (Landsat, Filtered)
 

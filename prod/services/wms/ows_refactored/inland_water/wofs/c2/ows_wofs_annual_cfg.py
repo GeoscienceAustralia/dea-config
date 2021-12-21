@@ -182,7 +182,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 wet_layer = {
-    "title": "DEA Annual Wet Observation Statistics (Landsat, C2)",
+    "title": "DEA Annual Wet Observation Statistics (Landsat, depricated)",
     "name": "wofs_annual_summary_wet",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Annual, Wet)
 
@@ -215,7 +215,7 @@ For service status information, see https://status.dea.ga.gov.au
 }
 
 statistics_layer = {
-    "title": "DEA Annual Water Observation Frequency Statistics (Landsat, C2)",
+    "title": "DEA Annual Water Observation Frequency Statistics (Landsat, depricated)",
     "name": "wofs_annual_summary_statistics",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Annual, Frequency)
 

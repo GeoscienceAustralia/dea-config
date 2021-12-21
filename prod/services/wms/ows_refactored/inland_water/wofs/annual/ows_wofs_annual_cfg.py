@@ -69,12 +69,19 @@ style_annual_wofs_summary_frequency_cvf_3 = {
         {"value": 0.8, "color": '#35264c'},
         {"value": 0.9, "color": '#231526'},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
 style_annual_wofs_summary_frequency_blue_3 = {
     "name": "annual_wofs_frequency_blues_transparent_3",
-    "title": "Water Summary (Blue)",
+    "title": "Water Summary (blue)",
     "abstract": "Water Observations annual summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -115,7 +122,6 @@ style_annual_wofs_summary_frequency_blue_3 = {
     ],
     "legend": legend_idx_percentage_by_20,
 }
-
 
 style_annual_wofs_summary_wet_3 = {
     "name": "annual_wofs_wet_3",
@@ -212,7 +218,7 @@ style_annual_wofs_summary_clear_3 = {
 }
 
 c3_statistics_layer = {
-    "title": "DEA Water Observations Calendar Year (Landsat, C3)",
+    "title": "DEA Water Observations Calendar Year (Landsat)",
     "name": "ga_ls_wo_fq_cyear_3",
     "abstract": """
 DEA Annual Calander Year Water Observation Statistics 30m 3.1.6 (Landsat, Annual, Frequency) is a set of annual statistical summaries of the DEA Water Observation product which help the understanding of surface water dynamics over the years. The layers available are: the count of clear observations; the count of wet observations; the percentage summary of wet observations over time.
@@ -236,6 +242,7 @@ For service status information, see https://status.dea.ga.gov.au
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
+    "time_resolution": "year",
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],

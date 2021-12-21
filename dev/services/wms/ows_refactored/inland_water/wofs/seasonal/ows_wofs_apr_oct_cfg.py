@@ -160,13 +160,19 @@ style_seasonal_wofs_summary_frequency_cvf_3 = {
         {"value": 0.8, "color": '#35264c'},
         {"value": 0.9, "color": '#231526'},
     ],
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": legend_idx_percentage_by_20,
 }
 
-
 style_seasonal_wofs_summary_frequency_blue_3 = {
     "name": "seasonal_wofs_frequency_blue_3",
-    "title": "Water Summary (Blue)",
+    "title": "Water Summary (blue)",
     "abstract": "Water Observations seasonal summary showing the frequency of Wetness",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -208,8 +214,8 @@ style_seasonal_wofs_summary_frequency_blue_3 = {
 }
 
 c3_statistics_layer = {
-    "title": "DEA Water Observations April to October (Landsat, C3)",
-    "name": "wofs_apr_oct_summary_statistics_3",
+    "title": "DEA Water Observations April to October (Landsat)",
+    "name": "ga_ls_wo_fq_apr_oct_3",
     "abstract": """DEA Water Observations Statistics 30m 3.1.6 (Landsat, April - October, Frequency)
 The DEA Water Observations April to October Statistic is a set of seasonal statistical summaries of the DEA Water Observations product that combines the many years of observations into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -241,7 +247,7 @@ For service status information, see https://status.dea.ga.gov.au
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
-    "time_resolution": "month",
+    "time_resolution": "year",
     "flags": [
         {
             "band": "land",
