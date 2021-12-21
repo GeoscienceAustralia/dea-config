@@ -830,7 +830,7 @@
             ]
         },
         {
-            "layer": "ga_ls_wo_c3",
+            "layer": "ga_ls_wo_3",
             "product": [
                 "ga_ls_wo_3"
             ],
@@ -1011,7 +1011,7 @@
             ]
         },
         {
-            "layer": "wofs_apr_oct_summary_statistics_3",
+            "layer": "ga_ls_wo_fq_apr_oct_3",
             "product": [
                 "ga_ls_wo_fq_apr_oct_3"
             ],
@@ -1025,7 +1025,7 @@
             ]
         },
         {
-            "layer": "wofs_nov_mar_summary_statistics_3",
+            "layer": "ga_ls_wo_fq_nov_mar_3",
             "product": [
                 "ga_ls_wo_fq_nov_mar_3"
             ],
