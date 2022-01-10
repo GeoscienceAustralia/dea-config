@@ -87,7 +87,7 @@ style_item_confidence = {
     "needed_bands": ["stddev"],
     "color_ramp": [
         {"value": 0.0, "color": "#2b83ba", "alpha": 0.0},
-        {"value": 0.01, "color": "#2b83ba", "legend": {"prefix": "<"}},
+        {"value": 0.01, "color": "#2b83ba"},
         {
             "value": 0.055,
             "color": "#55a1b2",
@@ -132,7 +132,7 @@ style_item_confidence = {
             "value": 0.505,
             "color": "#e31a1c",
         },
-        {"value": 0.55, "color": "#e31a1c", "legend": {"prefix": ">"}},
+        {"value": 0.55, "color": "#e31a1c"},
     ],
     "legend": {
         "begin": "0.01",
@@ -143,8 +143,7 @@ style_item_confidence = {
             "0.55": {"prefix": ">"},
         },
         "decimal_places": 2,
-        # Why "NDWI"???
-        "units": "NDWI standard deviation",
+        "units": "standard deviations",
     },
 }
 
