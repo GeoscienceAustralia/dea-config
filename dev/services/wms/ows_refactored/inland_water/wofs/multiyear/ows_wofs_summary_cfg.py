@@ -234,10 +234,8 @@ style_wofs_frequency_blue_3 = {
 c3_wofs_layer = {
     "title": "DEA Water Observations Multi Year (Landsat)",
     "name": "ga_ls_wo_fq_myear_3",
-    "abstract": """Geoscience Australia Landsat Water Observations Frequency Multi Year Collection 3. Statistics calculated from the full depth of time series (1986 to present).
-These are the statistics generated from the DEA Water Observations (Water Observations from Space) suite of products, which gives summaries of how often surface water was observed by the Landsat satellites for various periods (for the period from 1986 to the present).
-
-Water Observations Statistics (WO-STATS) provides information on how many times the Landsat satellites were able to clearly see an area, how many times those observations were wet, and what that means for the percentage of time that water was observed in the landscape.
+    "abstract": """Geoscience Australia Water Observations, Multi Year Frequency Statistics, 1986 to near present (Landsat, Collection 3, 30 m, WO-STATS, Frequency, 3.1.6). 
+The DEA Water Observations Multi Year Statistic is a statistical summary that combines all years (1986 to near present) of the DEA Water Observation product and helps the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations that were observed over the specifed time period in the landscape.
 
 *What this product offers*
 
