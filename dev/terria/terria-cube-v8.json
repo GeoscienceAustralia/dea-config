@@ -993,11 +993,11 @@
                                 {
                                     "id": "cme5me2",
                                     "type": "group",
-                                    "name": "DEA Annual (Calendar Year) Statistics",
+                                    "name": "DEA Annual Statistics",
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations Calendar Year (Landsat)",
+                                            "name": "Annual Water Observation Statistics - Calendar Year",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_cyear_3",
@@ -1021,7 +1021,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations Multi Year (Landsat)",
+                                            "name": "Multi Year Water Observation Statistics",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_myear_3",
@@ -1045,7 +1045,7 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations April to October (Landsat)",
+                                            "name": "Seasonal Water Observation Statistics - April to October",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "dateFormat": "'Year: 'yyyy",
@@ -1062,7 +1062,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations November to March (Landsat)",
+                                            "name": "Seasonal Water Observation Statistics - November to March",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "dateFormat": "'Year: 'yyyy",
