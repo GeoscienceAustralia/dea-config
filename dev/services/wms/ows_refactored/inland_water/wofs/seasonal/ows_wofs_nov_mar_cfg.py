@@ -231,10 +231,7 @@ As no confidence filtering is applied to this product, it is affected by noise w
 
 For more information, see https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 
-For service status information, see https://status.dea.ga.gov.au
-
-
-""",
+For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_wo_fq_nov_mar_3",
     "bands": bands_wofs_sum,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,
