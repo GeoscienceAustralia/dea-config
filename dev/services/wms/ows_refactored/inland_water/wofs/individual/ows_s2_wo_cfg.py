@@ -155,7 +155,8 @@ style_s2_wofs_obs_wet_only = {
 layer = {
     "title": "DEA Water Observations (Sentinel-2, Provisional)",
     "name": "ga_s2_wo_3",
-    "abstract": """ Prototype Sentinel 2 Water Observations
+    "abstract": """<b>Prototype Sentinel 2 Water Observations</b>
+    
 This product is the implementation of the DEA Water Observations (WOs) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 surface reflectance product.
 
 The Digital Earth Australia Water Observations (Sentinel-2) product shows where surface water was observed by the Sentinel 2a and Sentinel 2b satellites on any particular day since 2015. The surface water observations are derived from Geoscience Australia Sentinel-2 surface reflectance imagery for all of Australia. The interim, Near Real Time product is available for a rolling window of the most recent three months of data, and is produced within 24 hours of the satellite passing over an area.
