@@ -164,12 +164,14 @@ style_c3_wofs_obs_wet_only = {
 layer = {
     "title": "DEA Water Observations (Landsat)",
     "name": "ga_ls_wo_3",
-    "abstract": """DEA Individual Water Observations (Landsat)
-DEA Water Observations provides surface water observations derived from Landsat satellite imagery for all of Australia from 1986 to present.
+    "abstract": """Geoscience Australia Water Observations (Landsat, Collection 3, 30 m, Individual Observations, 3.1.6).
+Water Observations are the principal Digital Earth Australia (DEA) Water product (previously known as Water Observations from Space (WOfS)). This product shows where surface water was observed within each individual Landsat (5, 7 and 8) satellite image on each particular day since mid 1986. These daily data layers are termed Water Observations (WOs).
 
-The Water Observations show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.
+WOs show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.
 
-https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.
+
+For more information, see https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_wo_3",
