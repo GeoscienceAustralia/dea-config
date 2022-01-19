@@ -214,10 +214,10 @@ style_seasonal_wofs_summary_frequency_blue_3 = {
 }
 
 c3_statistics_layer = {
-    "title": "DEA Water Observations November to March (Landsat)",
+    "title": "Seasonal Water Observation Statistics - November to March (Landsat)",
     "name": "ga_ls_wo_fq_nov_mar_3",
     "abstract": """Geoscience Australia Water Observations, Seasonal Frequency Statistics, November to March (Landsat, Collection 3, 30 m, WO-STATS-NOV-MAR, 3.1.6).
-The DEA Water Observations November to March Statistic is a set of seasonal statistical summaries of the DEA Water Observation product. The product combines satellite observations, that occur during November to March, into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; and the percentage of wet observations that were observed over the specified time period in the landscape.
+The DEA Seasonal Water Observation (November to March) Statistic is a set of seasonal statistical summaries of the DEA Water Observations product. The product combines satellite observations, that occur during November to March, into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; and the percentage of wet observations that were observed over the specified time period in the landscape.
 
 *What this product offers*
 

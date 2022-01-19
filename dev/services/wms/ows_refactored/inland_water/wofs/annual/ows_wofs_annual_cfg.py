@@ -218,10 +218,10 @@ style_annual_wofs_summary_clear_3 = {
 }
 
 c3_statistics_layer = {
-    "title": "DEA Water Observations Calendar Year (Landsat)",
+    "title": "Calendar Year Water Observation Statistics (Landsat)",
     "name": "ga_ls_wo_fq_cyear_3",
     "abstract": """Geoscience Australia Water Observations, Annual Frequency Statistics, Calendar Year (Landsat, Collection 3, 30 m, WO-STATS-ANNUAL, 3.1.6).
-The DEA Water Observations Annual Statistic is a set of calendar year statistical summaries of the DEA Water Observation product that combines satellite observations, that occur within each calendar year from 1986 to present, into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; and the percentage of wet observations that were observed over the specified time period in the landscape.
+The DEA Annual Water Observation Statistic is a set of calendar year statistical summaries of the DEA Water Observations product that combines satellite observations, that occur within each calendar year from 1986 to present, into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; and the percentage of wet observations that were observed over the specified time period in the landscape.
 
 *What this product offers*
 
