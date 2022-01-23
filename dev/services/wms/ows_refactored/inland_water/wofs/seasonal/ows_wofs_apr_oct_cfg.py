@@ -1,5 +1,8 @@
 from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
-
+from ows_refactored.inland_water.wofs.styles_wo_cfg import (
+    style_seasonal_wofs_clear_3, style_seasonal_wofs_summary_frequency_3,
+    style_seasonal_wofs_summary_frequency_blue_3,
+    style_seasonal_wofs_summary_frequency_cvf_3, style_seasonal_wofs_wet_3)
 from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 
 c3_statistics_layer = {
