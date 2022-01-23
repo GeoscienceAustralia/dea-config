@@ -144,7 +144,7 @@ style_item_confidence = {
         },
         "decimal_places": 2,
         # Why "NDWI"???
-        "strip_location": [ 0.1, 0.5, 0.8, 0.15 ],
+        "strip_location": [0.1, 0.5, 0.8, 0.15],
         "units": "NDWI standard deviation",
     },
 }

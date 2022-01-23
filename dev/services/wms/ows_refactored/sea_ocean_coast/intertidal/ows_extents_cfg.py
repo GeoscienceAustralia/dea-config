@@ -143,7 +143,7 @@ style_item_confidence = {
             "0.55": {"prefix": ">"},
         },
         "decimal_places": 2,
-        "strip_location": [ 0.1, 0.5, 0.8, 0.15 ],
+        "strip_location": [0.1, 0.5, 0.8, 0.15],
         "units": "standard deviations",
     },
 }
