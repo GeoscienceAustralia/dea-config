@@ -216,7 +216,7 @@ style_annual_wofs_summary_clear_3 = {
     "legend": legend_idx_thirtyplus_4ticks,
 }
 
-#  Seasonal 
+# Seasonal
 
 style_seasonal_wofs_wet_3 = {
     "name": "seasonal_wofs_wet_3",
@@ -658,7 +658,7 @@ style_wofs_frequency_blue_3 = {
     "legend": legend_idx_percentage_by_20,
 }
 
-#  Individual 
+# Individual
 
 style_c3_wofs_obs = {
     "name": "observations",
