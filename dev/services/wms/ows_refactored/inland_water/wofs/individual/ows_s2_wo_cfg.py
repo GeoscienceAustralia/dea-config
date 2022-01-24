@@ -155,14 +155,16 @@ style_s2_wofs_obs_wet_only = {
 layer = {
     "title": "DEA Water Observations (Sentinel-2, Provisional)",
     "name": "ga_s2_wo_3",
-    "abstract": """<b>Prototype Sentinel 2 Water Observations.</b>\n
-\n
-This product is the implementation of the DEA Water Observations (WOs) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 surface reflectance product.\n
+    "abstract": """**Prototype Sentinel 2 Water Observations.**
 
-The Digital Earth Australia Water Observations (Sentinel-2) product shows where surface water was observed by the Sentinel 2a and Sentinel 2b satellites on any particular day since 2015. The surface water observations are derived from Geoscience Australia Sentinel-2 surface reflectance imagery for all of Australia. The interim, Near Real Time product is available for a rolling window of the most recent three months of data, and is produced within 24 hours of the satellite passing over an area.\n
 
-The Water Observations show the extent of water in a corresponding Sentinel 2 scene, along with the degree to which the scene was obscured by data quality issues including; cloud, cloud shadows, and where sensor problems cause parts of a scene to not be observable. The Water observations are based on the WOfS algorithm which underpins all of the Digital Earth Australia surface reflectance water products.\n
-\n
+This product is the implementation of the DEA Water Observations (WOs) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 surface reflectance product.
+
+The Digital Earth Australia Water Observations (Sentinel-2) product shows where surface water was observed by the Sentinel 2a and Sentinel 2b satellites on any particular day since 2015. The surface water observations are derived from Geoscience Australia Sentinel-2 surface reflectance imagery for all of Australia. The interim, Near Real Time product is available for a rolling window of the most recent three months of data, and is produced within 24 hours of the satellite passing over an area.
+
+The Water Observations show the extent of water in a corresponding Sentinel 2 scene, along with the degree to which the scene was obscured by data quality issues including; cloud, cloud shadows, and where sensor problems cause parts of a scene to not be observable. The Water observations are based on the WOfS algorithm which underpins all of the Digital Earth Australia surface reflectance water products.
+
+
 For more information, see https://cmi.ga.gov.au/data-products/dea/639/dea-water-observations-sentinel-2-msi""",
     "product_name": "ga_s2_wo_3",
     "bands": bands_wofs_obs,
