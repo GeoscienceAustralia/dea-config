@@ -19,7 +19,7 @@ The DEA Annual Water Observation Statistic is a set of calendar year statistical
 Each dataset in this product consists of the following datasets:
 
 - Clear Count: how many times an area could be clearly seen (i.e. not affected by clouds, shadows or other satellite observation problems)
-- Wet Count: how many times water was detected in observations that were clea
+- Wet Count: how many times water was detected in observations that were clear
 - Water Summary: what percentage of clear observations were detected as wet (i.e. the ratio of wet to clear as a percentage)
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.
