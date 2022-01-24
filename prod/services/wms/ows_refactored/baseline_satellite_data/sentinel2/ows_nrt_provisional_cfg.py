@@ -21,8 +21,7 @@ DEA Surface Reflectance OA (Sentinel-2 MSI)
 
 The resolution is a 10-20m grid based on the ESA Level1C archive.
 
-For service status information, see https://status.dea.ga.gov.au
-""",
+For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
     "product_names": ["ga_s2am_ard_provisional_3", "ga_s2bm_ard_provisional_3"],
     "bands": bands_sentinel2_provisional,
@@ -69,8 +68,7 @@ DEA Surface Reflectance OA (Sentinel-2A MSI)
 
 The resolution is a 10-20m grid based on the ESA Level1C archive.
 
-For service status information, see https://status.dea.ga.gov.au
-""",
+For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_s2bm_ard_provisional_3",
     "bands": bands_sentinel2_provisional,
     "resource_limits": reslim_wms_min_zoom_15_cache_rules,

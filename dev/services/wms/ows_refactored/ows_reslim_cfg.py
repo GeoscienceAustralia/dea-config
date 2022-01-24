@@ -18,7 +18,7 @@ common_wcs_limits = {
     "max_image_size": 800_000_000,
     # Maximum number of datasets that can be accessed in a
     # single query
-    "max_datasets": 30,   # defaults to no limit
+    "max_datasets": 24,   # defaults to no limit
 }
 
 reslim_wms_min_zoom_35 = {
@@ -52,10 +52,10 @@ reslim_wms_min_zoom_10 = {
     "wcs": common_wcs_limits,
 }
 
-reslim_wms_min_zoom_15 = {
+reslim_wms_min_zoom_lvl_7 = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_factor": 15.0,
+        "min_zoom_factor": 6.9,
         # "max_datasets": 16, # Defaults to no dataset limit
         "dataset_cache_rules": dataset_cache_rules
     },

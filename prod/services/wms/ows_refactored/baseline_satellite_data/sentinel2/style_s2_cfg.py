@@ -10,47 +10,27 @@ from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
 s2_nrt_fmask = [
     {
         "band": "fmask",
-        "enum": 0,
-        "invert": True,
-    },
-    {
-        "band": "fmask",
-        "enum": 2,
-        "invert": True,
-    },
-    {
-        "band": "fmask",
-        "enum": 3,
+        "values": [0, 2, 3],
         "invert": True,
     },
     {
         "band": "land",
         "invert": True,
-        "enum": 1,
+        "values": [1],
     },
 ]
 
 s2_provisional_oa_fmask = [
     {
         "band": "oa_fmask",
-        "enum": 0,
-        "invert": True,
-    },
-    {
-        "band": "oa_fmask",
-        "enum": 2,
-        "invert": True,
-    },
-    {
-        "band": "oa_fmask",
-        "enum": 3,
+        "values": [0, 2, 3],
         "invert": True,
     },
     {
         "band": "land",
         "invert": True,
-        "enum": 1,
-    },
+        "values": [1],
+    }
 ]
 
 style_s2_simple_rgb = {
@@ -357,25 +337,24 @@ style_s2_nbr = {
             },
             "color_ramp": [
                 {"value": -0.5, "color": "#768642", "alpha": 0.0},
-                {"value": -0.5, "color": "#768642", "legend": {"label": "<-0.50"}},
+                {"value": -0.5, "color": "#768642"},
                 {
                     "value": -0.25,
                     "color": "#768642",
                     "alpha": 1.0,
-                    "legend": {"label": "-0.25"},
                 },
                 {"value": -0.25, "color": "#a4bd5f"},
-                {"value": -0.1, "color": "#a4bd5f", "legend": {"label": "-0.1"}},
+                {"value": -0.1, "color": "#a4bd5f"},
                 {"value": -0.1, "color": "#00e05d"},
                 {"value": 0.1, "color": "#00e05d"},
-                {"value": 0.1, "color": "#fdf950", "legend": {"label": "0.1"}},
-                {"value": 0.27, "color": "#fdf950", "legend": {"label": "0.27"}},
+                {"value": 0.1, "color": "#fdf950"},
+                {"value": 0.27, "color": "#fdf950"},
                 {"value": 0.27, "color": "#ffae52"},
-                {"value": 0.44, "color": "#ffae52", "legend": {"label": "0.44"}},
+                {"value": 0.44, "color": "#ffae52"},
                 {"value": 0.44, "color": "#ff662e"},
-                {"value": 0.66, "color": "#ff662e", "legend": {"label": "0.66"}},
+                {"value": 0.66, "color": "#ff662e"},
                 {"value": 0.66, "color": "#ad28cc"},
-                {"value": 0.88, "color": "#ad28cc", "legend": {"label": ">1.30"}},
+                {"value": 0.88, "color": "#ad28cc"},
             ],
             "legend": {
                 "begin": "-0.5",

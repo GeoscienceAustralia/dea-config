@@ -15,7 +15,7 @@ bands_eds = {
 
 style_c2_level3 = {
     "name": "level3",
-    "title": "Basic - 6 classes",
+    "title": "Basic",
     "abstract": "Standardised colouring of Level 3 land cover classes",
     "value_map": {
         "level3": [
@@ -63,8 +63,8 @@ style_c2_level4_lifeform = {
 
 style_c2_level4_canopyco = {
     "name": "canopyco",
-    "title": "Canopy Cover",
-    "abstract": "Canopy Cover (L4)",
+    "title": "Vegetation Cover",
+    "abstract": "Vegetation Cover (L4)",
     "value_map": {
         'canopyco_veg_cat_l4d': [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
@@ -139,7 +139,7 @@ style_c2_level4_baregrad = {
 
 style_c2_level4 = {
     "name": "level4",
-    "title": "Detailed - 80 classes",
+    "title": "Detailed",
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
@@ -272,9 +272,11 @@ layers = {
         {
             "title": "DEA Land Cover Calendar Year (Landsat)",
             "name": "ga_ls_landcover",
-            "abstract": """
-            Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
-        """,
+            "abstract": """DEA Land Cover Calendar Year (Landsat)
+
+Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
+
+For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_landcover,
             "time_resolution": "year",
@@ -297,7 +299,7 @@ layers = {
             # ],
             "styling": {
                 "default_style": "level4",
-                "styles": [style_c2_level4, style_c2_level3],
+                "styles": [style_c2_level3, style_c2_level4],
             },
             "feature_info": {
                 "include_custom": {
@@ -310,9 +312,11 @@ layers = {
         {
             "title": "DEA Land Cover Environmental Descriptors",
             "name": "ga_ls_landcover_descriptors",
-            "abstract": """
-            Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
-        """,
+            "abstract": """DEA Land Cover Environmental Descriptors
+
+Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
+
+For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_eds,
             "time_resolution": "year",

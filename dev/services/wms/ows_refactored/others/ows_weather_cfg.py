@@ -19,9 +19,9 @@ style_wii = {
     },
     "color_ramp": [
         {"value": 0, "color": "#ffffff", "alpha": 0},
-        {"value": 1, "color": "#2972a8", "legend": {"label": "Low\nClass 1"}},
+        {"value": 1, "color": "#2972a8"},
         {"value": 3.5, "color": "#fcf24b"},
-        {"value": 6, "color": "#a02406", "legend": {"label": "High\nClass 6"}},
+        {"value": 6, "color": "#a02406"},
     ],
     "legend": {
         "begin": 1,
@@ -70,6 +70,7 @@ intensity model has broad utility in assisting mineral exploration in variably w
 geochemical landscapes across the Australian continent, mapping chemical and physical
 attributes of soils in agricultural landscapes and in understanding the nature and
 distribution of weathering processes occurring within the upper regolith.
+
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "weathering_intensity",
             "bands": bands_weathering,

@@ -183,7 +183,4 @@ styles_s2_barest_earth_list = [
     style_barest_earth_pure_nir_2,
     style_barest_earth_pure_swir_2,
     style_barest_earth_pure_swir_3,
-    style_nd_ferric_iron,
-    style_nd_soil,
-    style_nd_clay_mica,
 ]

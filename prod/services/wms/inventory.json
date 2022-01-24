@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 86,
+    "total_layers_count": 92,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -183,6 +183,84 @@
                 "log_bcdev",
                 "tmad_rgb_std",
                 "tmad_rgb_sens"
+            ]
+        },
+        {
+            "layer": "ga_ls8c_nbart_gm_cyear_3",
+            "product": [
+                "ga_ls8c_nbart_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
+            ]
+        },
+        {
+            "layer": "ga_ls7e_nbart_gm_cyear_3",
+            "product": [
+                "ga_ls7e_nbart_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
+            ]
+        },
+        {
+            "layer": "ga_ls5t_nbart_gm_cyear_3",
+            "product": [
+                "ga_ls5t_nbart_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
             ]
         },
         {
@@ -676,6 +754,28 @@
             "styles_count": 1,
             "styles_list": [
                 "mangrove"
+            ]
+        },
+        {
+            "layer": "s2_barest_earth",
+            "product": [
+                "s2_barest_earth"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir_1",
+                "nir_2",
+                "swir_2",
+                "swir_3"
             ]
         },
         {
@@ -1246,6 +1346,31 @@
             "styles_count": 1,
             "styles_list": [
                 "wii"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "level4",
+                "level3"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover_descriptors",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "canopyco",
+                "lifeform",
+                "watersea",
+                "waterper",
+                "baregrad"
             ]
         }
     ]
