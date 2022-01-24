@@ -1,0 +1,13 @@
+name: dem_1m
+metadata_type: eo3
+description: Digital Elevation Model 1m from elvis
+license: CC-BY-4.0
+
+metadata:
+    product:
+        name: dem_1m
+measurements:
+  - name: dem
+    dtype: float32
+    units: 'metres'
+    nodata: -9999
