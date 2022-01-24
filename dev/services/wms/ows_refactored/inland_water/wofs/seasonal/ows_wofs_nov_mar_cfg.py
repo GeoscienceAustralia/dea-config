@@ -45,7 +45,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "seasonal_wos_frequency_3",
+        "default_style": "seasonal_wofs_frequency_3",
         "styles": [
             style_seasonal_wofs_summary_frequency_3,
             style_seasonal_wofs_summary_frequency_cvf_3,
