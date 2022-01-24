@@ -21,7 +21,7 @@ Each dataset in this product consists of the following datasets:\n
 - Water Summary: what percentage of clear observations were detected as wet (i.e. the ratio of wet to clear as a percentage)\n
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.\n
-
+\n
 For more information, see https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat\n
 
 For service status information, see https://status.dea.ga.gov.au

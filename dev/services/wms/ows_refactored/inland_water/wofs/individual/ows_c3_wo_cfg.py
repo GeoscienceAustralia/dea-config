@@ -6,15 +6,15 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
 layer = {
     "title": "DEA Water Observations (Landsat)",
     "name": "ga_ls_wo_3",
-    "abstract": """<b>Geoscience Australia Water Observations (Landsat, Collection 3, 30 m, Individual Observations, 3.1.6).</b>
+    "abstract": """<b>Geoscience Australia Water Observations (Landsat, Collection 3, 30 m, Individual Observations, 3.1.6).</b>\n
+\n
+Water Observations are the principal Digital Earth Australia (DEA) Water product (previously known as Water Observations from Space (WOfS)). This product shows where surface water was observed within each individual Landsat (5, 7 and 8) satellite image on each particular day since mid 1986. These daily data layers are termed Water Observations (WOs).\n
+\n
+WOs show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.\n
 
-Water Observations are the principal Digital Earth Australia (DEA) Water product (previously known as Water Observations from Space (WOfS)). This product shows where surface water was observed within each individual Landsat (5, 7 and 8) satellite image on each particular day since mid 1986. These daily data layers are termed Water Observations (WOs).
-
-WOs show the extent of water in a corresponding Landsat scene, along with the degree to which the scene was obscured by clouds, shadows or where sensor problems cause parts of a scene to not be observable.
-
-As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.
-
-For more information, see https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat
+As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.\n
+\n
+For more information, see https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat\n
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_wo_3",
