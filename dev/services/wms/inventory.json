@@ -1071,11 +1071,11 @@
             ],
             "styles_count": 5,
             "styles_list": [
-                "seasonal_wos_frequency_3",
-                "seasonal_wos_frequency_cvf_3",
-                "seasonal_wos_frequency_blue_3",
-                "seasonal_wos_wet_3",
-                "seasonal_wos_clear_3"
+                "seasonal_wofs_frequency_3",
+                "seasonal_wofs_frequency_cvf_3",
+                "seasonal_wofs_frequency_blue_3",
+                "seasonal_wofs_wet_3",
+                "seasonal_wofs_clear_3"
             ]
         },
         {
