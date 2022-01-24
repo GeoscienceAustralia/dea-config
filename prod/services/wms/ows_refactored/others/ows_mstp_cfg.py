@@ -17,6 +17,7 @@ style_mstp_rgb = {
     },
     "scale_range": [0.0, 255.0],
     "legend": {
+        "show_legend": True,
         "url": "https://data.dea.ga.gov.au/multi-scale-topographic-position/mstp_legend.png"
     },
 }
