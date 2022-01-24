@@ -7,20 +7,21 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 c3_wofs_layer = {
     "title": "Multi Year Water Observation Statistics (Landsat)",
     "name": "ga_ls_wo_fq_myear_3",
-    "abstract": """<b>Geoscience Australia Water Observations, Multi Year Frequency Statistics, 1986 to near present (Landsat, Collection 3, 30 m, WO-STATS, Frequency, 3.1.6).</b>\n
-\n
-The DEA Multi Year Water Observation Statistic is a statistical summary that combines all years (1986 to near present) of the DEA Water Observations product and helps the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations that were observed over the specifed time period in the landscape.\n
-\n
-<b>What this product offers</b>\n
+    "abstract": """**Geoscience Australia Water Observations, Multi Year Frequency Statistics, 1986 to near present (Landsat, Collection 3, 30 m, WO-STATS, Frequency, 3.1.6).**
 
-Each dataset in this product consists of the following datasets:\n
+The DEA Multi Year Water Observation Statistic is a statistical summary that combines all years (1986 to near present) of the DEA Water Observations product and helps the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations that were observed over the specifed time period in the landscape.
 
-- Clear Count: how many times an area could be clearly seen (i.e. not affected by clouds, shadows or other satellite observation problems)\n
-- Wet Count: how many times water was detected in observations that were clear\n
-- Water Summary: what percentage of clear observations were detected as wet (i.e. the ratio of wet to clear as a percentage)\n
-\n
+
+**What this product offers**
+
+Each dataset in this product consists of the following datasets:
+
+- Clear Count: how many times an area could be clearly seen (i.e. not affected by clouds, shadows or other satellite observation problems)
+- Wet Count: how many times water was detected in observations that were clear
+- Water Summary: what percentage of clear observations were detected as wet (i.e. the ratio of wet to clear as a percentage)
+
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.
-\n
+
 For more information, see https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 
 For service status information, see https://status.dea.ga.gov.au""",
