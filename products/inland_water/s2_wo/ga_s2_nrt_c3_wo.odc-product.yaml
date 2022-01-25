@@ -1,4 +1,4 @@
-name: ga_s2_nrt_c3_wo
+name: ga_s2_wo_provisional_3
 metadata_type: eo3
 description: Sentinel 2 NRT Water Observations Collection 3
 
@@ -6,7 +6,7 @@ license: CC-BY-4.0
 
 metadata:
   product:
-    name: ga_s2_nrt_c3_wo
+    name: ga_s2_wo_provisional_3
   properties:
     odc:file_format: GeoTIFF
     odc:product_family: wo
