@@ -8,11 +8,13 @@ from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
 c3_statistics_layer = {
     "title": "Annual Water Observation Statistics - Calendar Year (Landsat)",
     "name": "ga_ls_wo_fq_cyear_3",
-    "abstract": """<b>Geoscience Australia Water Observations, Annual Frequency Statistics, Calendar Year (Landsat, Collection 3, 30 m, WO-STATS-ANNUAL, 3.1.6).</b>
+    "abstract": """**Geoscience Australia Water Observations, Annual Frequency Statistics, Calendar Year (Landsat, Collection 3, 30 m, WO-STATS-ANNUAL, 3.1.6).**
+
 
 The DEA Annual Water Observation Statistic is a set of calendar year statistical summaries of the DEA Water Observations product that combines satellite observations, that occur within each calendar year from 1986 to present, into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; and the percentage of wet observations that were observed over the specified time period in the landscape.
 
-<b>What this product offers</b>
+
+**What this product offers**
 
 Each dataset in this product consists of the following datasets:
 
@@ -21,6 +23,7 @@ Each dataset in this product consists of the following datasets:
 - Water Summary: what percentage of clear observations were detected as wet (i.e. the ratio of wet to clear as a percentage)
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.
+
 
 For more information, see https://cmi.ga.gov.au/data-products/dea/686/dea-water-observations-statistics-landsat
 
