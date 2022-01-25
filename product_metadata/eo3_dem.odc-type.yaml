@@ -1,0 +1,94 @@
+dataset:
+    creation_dt:
+    - properties
+    - odc:processing_datetime
+    format:
+    - properties
+    - odc:file_format
+    grid_spatial:
+    - grid_spatial
+    - projection
+    id:
+    - id
+    label:
+    - label
+    measurements:
+    - measurements
+    search_fields:
+        dataset_maturity:
+            description: One of - final|interim|nrt  (near real time)
+            indexed: false
+            offset:
+            - properties
+            - dea:dataset_maturity
+        instrument:
+            description: Instrument name
+            indexed: false
+            offset:
+            - properties
+            - eo:instrument
+        lat:
+            description: Latitude range
+            max_offset:
+            -   - extent
+                - lat
+                - end
+            min_offset:
+            -   - extent
+                - lat
+                - begin
+            type: double-range
+        lon:
+            description: Longitude range
+            max_offset:
+            -   - extent
+                - lon
+                - end
+            min_offset:
+            -   - extent
+                - lon
+                - begin
+            type: double-range
+        platform:
+            description: Platform code
+            indexed: false
+            offset:
+            - properties
+            - eo:platform
+        product_family:
+            description: Product family code
+            indexed: false
+            offset:
+            - properties
+            - odc:product_family
+        region_code:
+            description: "Spatial reference code from the provider. For Landsat region_code\
+                \ is a scene path row:\n        '{:03d}{:03d}.format(path,row)'.\n\
+                For Sentinel it is MGRS code. In general it is a unique string identifier\
+                \ that datasets covering roughly the same spatial region share.\n"
+            offset:
+            - properties
+            - odc:region_code
+        collection:
+            description: "Collection of datasets.\n"
+            offset:
+            - properties
+            - odc:collection
+        time:
+            description: Acquisition time range
+            max_offset:
+            -   - properties
+                - dtr:end_datetime
+            -   - properties
+                - datetime
+            min_offset:
+            -   - properties
+                - dtr:start_datetime
+            -   - properties
+                - datetime
+            type: datetime-range
+    sources:
+    - lineage
+    - source_datasets
+description: Default EO3 with no custom fields
+name: eo3
