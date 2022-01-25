@@ -91,4 +91,4 @@ dataset:
     - lineage
     - source_datasets
 description: Default EO3 with no custom fields
-name: eo3
+name: eo3_dem
