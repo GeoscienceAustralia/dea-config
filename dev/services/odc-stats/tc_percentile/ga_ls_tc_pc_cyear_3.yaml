@@ -1,4 +1,7 @@
 plugin: tcw-percentiles # this can help system find the relative plugin and plugin version
+dataset-filters: >-
+  {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
+  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
 product:
   name: ga_ls_tc_pc_cyear_3
   short_name: ga_ls_tc_pc_cyear_3
