@@ -72,8 +72,7 @@ dataset:
         collection:
             description: "Collection of datasets.\n"
             offset:
-            - properties
-            - odc:collection
+            - collection
         time:
             description: Acquisition time range
             max_offset:
