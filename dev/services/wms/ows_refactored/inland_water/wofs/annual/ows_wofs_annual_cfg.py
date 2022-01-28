@@ -3,7 +3,7 @@ from ows_refactored.inland_water.wofs.styles_wo_cfg import (
     style_annual_wofs_summary_clear_3, style_annual_wofs_summary_frequency_3,
     style_annual_wofs_summary_frequency_blue_3,
     style_annual_wofs_summary_frequency_cvf_3, style_annual_wofs_summary_wet_3)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 c3_statistics_layer = {
     "title": "Annual Water Observation Statistics - Calendar Year (Landsat)",
@@ -31,7 +31,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
     "product_name": "ga_ls_wo_fq_cyear_3",
     "bands": bands_wofs_sum,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
     "time_resolution": "year",

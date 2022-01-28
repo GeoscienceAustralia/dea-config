@@ -1,5 +1,5 @@
 from ows_refactored.land_and_vegetation.fc.style_fc_cfg import style_fc_simple
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_10
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_fc = {
     "BS": ["bare_soil"],
@@ -37,7 +37,7 @@ https://cmi.ga.gov.au/data-products/dea/119/dea-fractional-cover-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ls5_fc_albers",
             "bands": bands_fc,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -69,7 +69,7 @@ https://cmi.ga.gov.au/data-products/dea/119/dea-fractional-cover-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ls7_fc_albers",
             "bands": bands_fc,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "dynamic": True,
@@ -102,7 +102,7 @@ https://cmi.ga.gov.au/data-products/dea/119/dea-fractional-cover-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ls8_fc_albers",
             "bands": bands_fc,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "dynamic": True,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
@@ -136,7 +136,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "ls8_fc_albers",
             ],
             "bands": bands_fc,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "dynamic": True,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],

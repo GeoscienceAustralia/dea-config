@@ -2,7 +2,7 @@ from ows_refactored.baseline_satellite_data.landsat_annual.band_ls_cfg import \
     bands_ls
 from ows_refactored.baseline_satellite_data.landsat_annual.style_ls_cfg import \
     styles_tide_list
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 layers = {
     "title": "DEA High and Low Tide Imagery (HLTC)",
@@ -54,7 +54,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "high_tide_comp_20p",
             "bands": bands_ls,
             "time_resolution": "year",
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -99,7 +99,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "low_tide_comp_20p",
             "time_resolution": "year",
             "bands": bands_ls,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {

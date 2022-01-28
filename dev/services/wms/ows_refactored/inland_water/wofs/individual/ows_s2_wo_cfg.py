@@ -1,5 +1,5 @@
 from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_obs
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 style_c3_wofs_obs = {
     "name": "observations",
@@ -168,7 +168,7 @@ The Water Observations show the extent of water in a corresponding Sentinel 2 sc
 For more information, see https://cmi.ga.gov.au/data-products/dea/639/dea-water-observations-sentinel-2-msi""",
     "product_name": "ga_s2_wo_3",
     "bands": bands_wofs_obs,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_standard,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10, -10],
