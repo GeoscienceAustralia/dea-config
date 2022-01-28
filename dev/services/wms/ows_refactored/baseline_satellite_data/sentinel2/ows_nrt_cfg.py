@@ -2,7 +2,7 @@ from ows_refactored.baseline_satellite_data.sentinel2.band_s2_cfg import \
     bands_sentinel2
 from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
     styles_s2_list
-from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2 
+from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 combined_layer = {
     "title": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
