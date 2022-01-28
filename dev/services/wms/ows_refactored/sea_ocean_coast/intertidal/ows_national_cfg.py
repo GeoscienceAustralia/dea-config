@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_nidem = {"nidem": []}
 
@@ -114,7 +114,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "nidem",
     "bands": bands_nidem,
     "time_resolution": "year",
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
     "flags": [

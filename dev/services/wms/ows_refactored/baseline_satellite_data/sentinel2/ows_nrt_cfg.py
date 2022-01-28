@@ -2,7 +2,7 @@ from ows_refactored.baseline_satellite_data.sentinel2.band_s2_cfg import \
     bands_sentinel2
 from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
     styles_s2_list
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_lvl_7
+from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 combined_layer = {
     "title": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
@@ -25,7 +25,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
     "product_names": ["s2a_nrt_granule", "s2b_nrt_granule"],
     "bands": bands_sentinel2,
-    "resource_limits": reslim_wms_min_zoom_lvl_7,
+    "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10.0, 10.0],
@@ -72,7 +72,7 @@ For service status information, see https://status.dea.ga.gov.au
 """,
     "product_name": "s2b_nrt_granule",
     "bands": bands_sentinel2,
-    "resource_limits": reslim_wms_min_zoom_lvl_7,
+    "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10.0, 10.0],
@@ -117,7 +117,7 @@ For more information see http://pid.geoscience.gov.au/dataset/ga/122229
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "s2a_nrt_granule",
     "bands": bands_sentinel2,
-    "resource_limits": reslim_wms_min_zoom_lvl_7,
+    "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10.0, 10.0],

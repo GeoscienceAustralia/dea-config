@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_500_max_datasets
+from ows_refactored.ows_reslim_cfg import reslim_wms_max_datasets_only
 
 bands_hap = {
     "Band_1": [],
@@ -28,7 +28,7 @@ layer = {
             "abstract": "Historical Airborne Photography",
             "product_name": "historical_airborne_photography",
             "bands": bands_hap,
-            "resource_limits": reslim_wms_min_zoom_500_max_datasets,
+            "resource_limits": reslim_wms_max_datasets_only,
             "native_crs": "EPSG:3577",
             "native_resolution": [1.0, 1.0],
             "image_processing": {
