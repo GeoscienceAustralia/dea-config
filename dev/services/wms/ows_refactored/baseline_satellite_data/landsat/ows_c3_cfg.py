@@ -1,6 +1,6 @@
 from ows_refactored.baseline_satellite_data.landsat.style_c3_cfg import (
     styles_c3_ls_7, styles_c3_ls_8, styles_c3_ls_common)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 # bands definition
 bands_c3_ls_common = {
@@ -60,7 +60,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ga_ls8c_ard_3",
             "bands": bands_c3_ls_8,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -108,7 +108,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ga_ls7e_ard_3",
             "bands": bands_c3_ls_7,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -156,7 +156,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ga_ls5t_ard_3",
             "bands": bands_c3_ls_common,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "dynamic": True,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
@@ -207,7 +207,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ga_ls8c_ard_provisional_3",
             "bands": bands_c3_ls_8,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -256,7 +256,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ga_ls7e_ard_provisional_3",
             "bands": bands_c3_ls_7,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -308,7 +308,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "ga_ls8c_ard_3",
     ],
     "bands": bands_c3_ls_common,
-    "resource_limits": reslim_wms_min_zoom_15,
+    "resource_limits": reslim_standard,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
@@ -370,7 +370,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "ga_ls8c_ard_provisional_3",
     ],
     "bands": bands_c3_ls_common,
-    "resource_limits": reslim_wms_min_zoom_15,
+    "resource_limits": reslim_standard,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],

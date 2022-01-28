@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_weathering = {
     "intensity": [],
@@ -74,7 +74,7 @@ distribution of weathering processes occurring within the upper regolith.
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "weathering_intensity",
             "bands": bands_weathering,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:4326",
             "native_resolution": [
                 0.000833333333347,

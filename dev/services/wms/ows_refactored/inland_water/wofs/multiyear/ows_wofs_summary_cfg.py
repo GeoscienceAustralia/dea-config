@@ -2,7 +2,7 @@ from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
 from ows_refactored.inland_water.wofs.styles_wo_cfg import (
     style_wofs_count_clear_3, style_wofs_count_wet_3, style_wofs_frequency_3,
     style_wofs_frequency_blue_3, style_wofs_frequency_cvf_3)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 c3_wofs_layer = {
     "title": "Multi Year Water Observation Statistics (Landsat)",
@@ -27,7 +27,7 @@ For more information, see https://cmi.ga.gov.au/data-products/dea/686/dea-water-
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_wo_fq_myear_3",
     "bands": bands_wofs_sum,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
     "flags": [
