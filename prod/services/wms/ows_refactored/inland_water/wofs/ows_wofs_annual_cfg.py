@@ -2,7 +2,7 @@ from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_sum
 from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_thirtyplus_4ticks,
                                            legend_idx_twentyplus_3ticks)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 style_annual_wofs_summary_frequency = {
     "name": "annual_WOfS_frequency",
@@ -176,7 +176,7 @@ https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-la
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -202,7 +202,7 @@ https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-la
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "wofs_annual_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -239,7 +239,7 @@ https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-la
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "wofs_annual_summary",
     "bands": bands_wofs_sum,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
     "image_processing": {

@@ -1,5 +1,5 @@
 from ows_refactored.inland_water.wofs.bands_wo_cfg import bands_wofs_obs
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 style_c3_wofs_obs = {
     "name": "observations",
@@ -158,7 +158,7 @@ layer = {
     "abstract": """ Prototype Sentinel 2 Water Observations""",
     "product_name": "ga_s2_wo_3",
     "bands": bands_wofs_obs,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10, -10],
