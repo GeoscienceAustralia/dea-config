@@ -260,7 +260,7 @@ style_c2_level4 = {
     # ],
     "legend": {
         "show_legend": True,
-        "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/lccs/level4-web-legend.png"
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_landcover_class_cyear_2/level4-web-legend.png"
     },
 }
 
