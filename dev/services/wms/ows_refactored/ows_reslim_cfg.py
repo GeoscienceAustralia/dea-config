@@ -48,6 +48,15 @@ reslim_for_lccs = {
     "wcs": common_wcs_limits,
 }
 
+reslim_for_mstp = {
+    "wms": {
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
+        "min_zoom_level": 8.1,
+        "dataset_cache_rules": dataset_cache_rules,
+    },
+    "wcs": common_wcs_limits,
+}
+
 reslim_wms_max_datasets_only = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
