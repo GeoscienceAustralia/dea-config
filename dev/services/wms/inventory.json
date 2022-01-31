@@ -914,20 +914,6 @@
             ]
         },
         {
-            "layer": "ga_ls_wo_fq_myear_3",
-            "product": [
-                "ga_ls_wo_fq_myear_3"
-            ],
-            "styles_count": 5,
-            "styles_list": [
-                "mysummary_wofs_frequency_3",
-                "mysummary_wofs_frequency_cvf_3",
-                "mysummary_wofs_frequency_blue_3",
-                "mysummary_wofs_wet_3",
-                "mysummary_wofs_clear_3"
-            ]
-        },
-        {
             "layer": "wofs_apr_oct_summary_wet",
             "product": [
                 "wofs_apr_oct_summary"
@@ -1048,6 +1034,20 @@
             "styles_list": [
                 "observations",
                 "wet"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_myear_3",
+            "product": [
+                "ga_ls_wo_fq_myear_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "mysummary_wofs_frequency_3",
+                "mysummary_wofs_frequency_cvf_3",
+                "mysummary_wofs_frequency_blue_3",
+                "mysummary_wofs_wet_3",
+                "mysummary_wofs_clear_3"
             ]
         },
         {

@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 92,
+    "total_layers_count": 96,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -994,6 +994,62 @@
             "styles_list": [
                 "observations",
                 "wet"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_myear_3",
+            "product": [
+                "ga_ls_wo_fq_myear_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "mysummary_wofs_frequency_3",
+                "mysummary_wofs_frequency_cvf_3",
+                "mysummary_wofs_frequency_blue_3",
+                "mysummary_wofs_wet_3",
+                "mysummary_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_apr_oct_3",
+            "product": [
+                "ga_ls_wo_fq_apr_oct_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "seasonal_wofs_frequency_3",
+                "seasonal_wofs_frequency_cvf_3",
+                "seasonal_wofs_frequency_blue_3",
+                "seasonal_wofs_wet_3",
+                "seasonal_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_nov_mar_3",
+            "product": [
+                "ga_ls_wo_fq_nov_mar_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "seasonal_wofs_frequency_3",
+                "seasonal_wofs_frequency_cvf_3",
+                "seasonal_wofs_frequency_blue_3",
+                "seasonal_wofs_wet_3",
+                "seasonal_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_cyear_3",
+            "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "annual_wofs_frequency_3",
+                "annual_wofs_frequency_cvf_3",
+                "annual_wofs_frequency_blues_transparent_3",
+                "annual_wofs_wet_3",
+                "annual_wofs_clear_3"
             ]
         },
         {
