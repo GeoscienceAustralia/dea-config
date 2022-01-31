@@ -2,7 +2,7 @@ from ows_refactored.inland_water.wofs.bands_wo_cfg import (bands_wofs_filt_sum,
                                                            bands_wofs_sum)
 from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_percentage_by_25)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 style_wofs_count_wet = {
     "name": "water_observations",
@@ -444,7 +444,7 @@ https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-la
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "wofs_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -476,7 +476,7 @@ https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-la
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "wofs_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -508,7 +508,7 @@ https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-la
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "wofs_summary",
             "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -535,7 +535,7 @@ https://cmi.ga.gov.au/data-products/dea/211/dea-water-observations-filtered-stat
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "wofs_filtered_summary",
             "bands": bands_wofs_filt_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -564,7 +564,7 @@ https://cmi.ga.gov.au/data-products/dea/211/dea-water-observations-filtered-stat
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "wofs_filtered_summary",
     "bands": bands_wofs_filt_sum,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
     "image_processing": {

@@ -21,48 +21,35 @@ common_wcs_limits = {
     "max_datasets": 24,   # defaults to no limit
 }
 
-reslim_wms_min_zoom_35 = {
+reslim_standard = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_factor": 35.0,
-        # "max_datasets": 16, # Defaults to no dataset limit
+        "min_zoom_level": 6.9,
         "dataset_cache_rules": dataset_cache_rules
     },
     "wcs": common_wcs_limits,
 }
 
-reslim_wms_min_zoom_15 = {
+reslim_for_sentinel2 = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_factor": 15.0,
-        # "max_datasets": 16, # Defaults to no dataset limit
-        "dataset_cache_rules": dataset_cache_rules,
-    },
-    "wcs": common_wcs_limits,
-}
-reslim_wms_min_zoom_15_cache_rules = reslim_wms_min_zoom_15
-
-reslim_wms_min_zoom_10 = {
-    "wms": {
-        "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_factor": 10.0,
-        # "max_datasets": 16, # Defaults to no dataset limit
+        "min_zoom_factor": 5.9,
         "dataset_cache_rules": dataset_cache_rules,
     },
     "wcs": common_wcs_limits,
 }
 
-reslim_wms_min_zoom_15 = {
+reslim_for_lccs = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_factor": 15.0,
-        # "max_datasets": 16, # Defaults to no dataset limit
-        "dataset_cache_rules": dataset_cache_rules
+        "min_zoom_level": 7.8,
+        "dataset_cache_rules": dataset_cache_rules,
     },
     "wcs": common_wcs_limits,
 }
 
-reslim_wms_min_zoom_500_max_datasets = {
+# N.B. not used in prod.
+reslim_wms_max_datasets_only = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_factor": 500.0,

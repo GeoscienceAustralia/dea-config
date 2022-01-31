@@ -1,7 +1,7 @@
 from ows_refactored.land_and_vegetation.band_lav_cfg import bands_ls
 from ows_refactored.land_and_vegetation.style_lav_cfg import (
     styles_barest_earth_list, styles_barest_earth_mosaic_list)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 ls8_be_layers = {
     "title": "GA Barest Earth (Landsat 8 OLI/TIRS)",
@@ -17,7 +17,7 @@ Landsat 8: 2013 to 2017;
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ls8_barest_earth_albers",
     "bands": bands_ls,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
     "image_processing": {
@@ -44,7 +44,7 @@ Reference: Roberts, D., Wilford, J., Ghattas, O. (2019). Exposed Soil and Minera
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "landsat_barest_earth",
     "bands": bands_ls,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
     "image_processing": {

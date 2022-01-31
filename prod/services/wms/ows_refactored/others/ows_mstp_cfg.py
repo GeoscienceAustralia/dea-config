@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_multi_topog = {
     "regional": [],
@@ -50,7 +50,7 @@ Geomorphology 245, 51–61.
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "multi_scale_topographic_position",
             "bands": bands_multi_topog,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:4326",
             "native_resolution": [
                 0.000833333333347,

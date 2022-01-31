@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_tcw_percentile = {
     "TCW_PC_10": [],
@@ -104,7 +104,7 @@ https://cmi.ga.gov.au/data-products/dea/337/dea-wetness-percentiles-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_tcw_percentiles_2",
             "bands": bands_tcw_percentile,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {

@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_for_lccs
 
 bands_landcover = {
     "level3": [],
@@ -280,7 +280,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_landcover,
             "time_resolution": "year",
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_for_lccs,
             "dynamic": True,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
@@ -320,7 +320,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_landcover_class_cyear_2",
             "bands": bands_eds,
             "time_resolution": "year",
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_for_lccs,
             "dynamic": True,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],

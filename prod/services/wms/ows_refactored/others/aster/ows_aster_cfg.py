@@ -21,7 +21,7 @@ from ows_refactored.others.aster.style_aster_cfg import (
     style_aster_mgoh_cont_ramp, style_aster_opaque_idx_ramp,
     style_aster_quartz_idx_ramp, style_aster_silica_idx_ramp,
     style_aster_simple_rgb)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_10
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 layers = {
     "title": "ASTER Geoscience Map of Australia",
@@ -58,7 +58,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_false_colour,
             "product_name": "aster_false_colour",
             "bands": bands_aster,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -80,7 +80,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_regolith_ratios,
             "product_name": "aster_regolith_ratios",
             "bands": bands_aster,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -101,7 +101,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_aloh_group_composition,
             "product_name": "aster_aloh_group_composition",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -122,7 +122,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_aloh_group_content,
             "product_name": "aster_aloh_group_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -143,7 +143,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_feoh_group_content,
             "product_name": "aster_feoh_group_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -164,7 +164,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_ferric_oxide_composition,
             "product_name": "aster_ferric_oxide_composition",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -185,7 +185,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_ferric_oxide_content,
             "product_name": "aster_ferric_oxide_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -206,7 +206,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_ferrous_iron_content_in_mgoh,
             "product_name": "aster_ferrous_iron_content_in_mgoh",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -227,7 +227,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_ferrous_iron_index,
             "product_name": "aster_ferrous_iron_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -248,7 +248,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_green_vegetation,
             "product_name": "aster_green_vegetation",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -269,7 +269,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_gypsum_index,
             "product_name": "aster_gypsum_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -290,7 +290,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_kaolin_group_index,
             "product_name": "aster_kaolin_group_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -311,7 +311,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_mgoh_group_composition,
             "product_name": "aster_mgoh_group_composition",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -332,7 +332,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_mgoh_group_content,
             "product_name": "aster_mgoh_group_content",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -353,7 +353,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_opaque_index,
             "product_name": "aster_opaque_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -374,7 +374,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_silica_index,
             "product_name": "aster_silica_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
@@ -395,7 +395,7 @@ For parent datafile information, see the dataset record: http://pid.geoscience.g
             "abstract": abstract_aster_quartz_index,
             "product_name": "aster_quartz_index",
             "bands": bands_aster_single_band,
-            "resource_limits": reslim_wms_min_zoom_10,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [15.0, 15.0],
             "image_processing": {
