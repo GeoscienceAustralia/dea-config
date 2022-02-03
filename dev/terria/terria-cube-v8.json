@@ -3451,42 +3451,34 @@
                         {
                             "id": "3iIq5b",
                             "type": "group",
-                            "name": "DEA Water Observations (WOs)",
+                            "name": "DEA Water Observations (WOfS)",
                             "members": [
                                 {
-                                    "id": "c3me5me1",
-                                    "type": "group",
-                                    "name": "DEA Individual Observations",
-                                    "members": [
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Water Observations (Landsat)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "ga_ls_wo_3",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "ga_ls_wo_3",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "timeFilterPropertyName": "data_available_for_dates",
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jg1"
-                                        }
-
-                                    ]
+                                    "type": "wms",
+                                    "name": "DEA Water Observations (Landsat)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_wo_3",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_wo_3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "O3Dw8jg1"
                                 },
                                 {
                                     "id": "c3me5me2",
                                     "type": "group",
-                                    "name": "DEA Annual Statistics",
+                                    "name": "DEA Water Observations Annual",
                                     "members": [
                                         {
 
                                             "type": "wms",
-                                            "name": "Annual Water Observation Statistics - Calendar Year",
+                                            "name": "DEA Water Observations Calendar Year (Landsat)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_cyear_3",
@@ -3506,11 +3498,11 @@
                                 {
                                     "id": "c3me5me3",
                                     "type": "group",
-                                    "name": "DEA Multi Year Statistics",
+                                    "name": "DEA Water Observations Multi Year",
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "Multi Year Water Observation Statistics",
+                                            "name": "DEA Water Observations Multi Year (Landsat)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "ga_ls_wo_fq_myear_3",
@@ -3530,16 +3522,16 @@
                                 {
                                     "id": "c3me5me4",
                                     "type": "group",
-                                    "name": "DEA Seasonal Statistics",
+                                    "name": "DEA Water Observations Seasonal",
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "Seasonal Water Observation Statistics - April to October",
+                                            "name": "DEA Water Observations April to October (Landsat)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "dateFormat": "'Year: 'yyyy",
                                             "layers": "ga_ls_wo_fq_apr_oct_3",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                             "linkedWcsCoverage": "ga_ls_wo_fq_apr_oct_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
@@ -3551,7 +3543,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "Seasonal Water Observation Statistics - November to March",
+                                            "name": "DEA Water Observations November to March (Landsat)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "dateFormat": "'Year: 'yyyy",
@@ -3571,11 +3563,11 @@
                                 {
                                     "id": "c3me5me5",
                                     "type": "group",
-                                    "name": "DEA Landsat Collection 2 (depricated data products)",
+                                    "name": "DEA Water Observations Landsat Collection 2 (deprecated)",
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations (depricated)",
+                                            "name": "DEA Water Observations (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_albers",
@@ -3591,7 +3583,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Annual Water Observation Frequency Statistics (depricated)",
+                                            "name": "DEA Annual Water Observation Frequency Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_annual_summary_statistics",
@@ -3607,7 +3599,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Annual Clear Observation Statistics (depricated)",
+                                            "name": "DEA Annual Clear Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_annual_summary_clear",
@@ -3623,7 +3615,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Annual Wet Observation Statistics (depricated)",
+                                            "name": "DEA Annual Wet Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_annual_summary_wet",
@@ -3639,7 +3631,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Water Observation Frequency Statistics (depricated)",
+                                            "name": "DEA Multi-Year Water Observation Frequency Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_filtered_summary",
@@ -3655,7 +3647,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Clear Observation Statistics (depricated)",
+                                            "name": "DEA Multi-Year Clear Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_summary_clear",
@@ -3671,7 +3663,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Wet Observation Statistics (depricated)",
+                                            "name": "DEA Multi-Year Wet Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_summary_wet",
@@ -3687,7 +3679,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Water Observation Confidence Statistics (depricated)",
+                                            "name": "DEA Multi-Year Water Observation Confidence Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_filtered_summary_confidence",
@@ -3703,11 +3695,11 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA Multi-Year Water Observation Confidence Filtered Statistics (depricated)",
+                                            "name": "DEA Multi-Year Water Observation Confidence Filtered Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_filtered_summary",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                             "linkedWcsCoverage": "wofs_filtered_summary",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
@@ -3719,7 +3711,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA April-October Seasonal Water Observations (depricated)",
+                                            "name": "DEA April-October Seasonal Water Observations (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_apr_oct_summary_statistics",
@@ -3735,7 +3727,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA April-October Clear Observation Statistics (depricated)",
+                                            "name": "DEA April-October Clear Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_apr_oct_summary_clear",
@@ -3751,7 +3743,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA April-October Wet Observation Statistics (depricated)",
+                                            "name": "DEA April-October Wet Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_apr_oct_summary_wet",
@@ -3767,7 +3759,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA November-March Seasonal Water Observations (depricated)",
+                                            "name": "DEA November-March Seasonal Water Observations (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_nov_mar_summary_statistics",
@@ -3783,7 +3775,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA November-March Clear Observation Statistics (depricated)",
+                                            "name": "DEA November-March Clear Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_nov_mar_summary_clear",
@@ -3799,7 +3791,7 @@
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "DEA November-March Wet Observation Statistics (depricated)",
+                                            "name": "DEA November-March Wet Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_nov_mar_summary_wet",
