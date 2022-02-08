@@ -8,8 +8,11 @@ metadata:
   product:
     name: ga_s2_wo_provisional_3
   properties:
+    eo:instrument: MSI
     odc:file_format: GeoTIFF
     odc:product_family: wo
+    odc:producer: ga.gov.au
+    dea:product_maturity: provisional
 
 measurements:
 - name: water
