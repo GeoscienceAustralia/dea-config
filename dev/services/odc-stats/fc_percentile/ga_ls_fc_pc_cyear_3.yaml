@@ -73,3 +73,8 @@ s3_acl: public-read
 # Generic product attributes
 cog_opts:
   zlevel: 9
+apply_eodatasets3: True
+dataset-filters: >-
+  {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
+  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
+
