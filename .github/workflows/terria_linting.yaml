@@ -28,4 +28,5 @@ jobs:
     - name: Run Json Linter
       run: |
         npm install jsonlint -g
-        jsonlint dev/terria/**.json -q
+        cd dev/terria
+        find . -name \*.json -exec jsonlint {} \;
