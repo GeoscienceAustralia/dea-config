@@ -3451,7 +3451,7 @@
                         {
                             "id": "3iIq5b",
                             "type": "group",
-                            "name": "DEA Water Observations (WOfS)",
+                            "name": "DEA Water Observations",
                             "members": [
                                 {
                                     "type": "wms",
