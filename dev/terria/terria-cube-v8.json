@@ -3451,7 +3451,7 @@
                         {
                             "id": "3iIq5b",
                             "type": "group",
-                            "name": "DEA Water Observations (WOfS)",
+                            "name": "DEA Water Observations",
                             "members": [
                                 {
                                     "type": "wms",
@@ -3462,201 +3462,144 @@
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_ls_wo_3",
                                     "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
                                     "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "iun7iP",
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/Daily water observations"
-                                    ]
+                                    "id": "O3Dw8jg1"
                                 },
                                 {
-                                    "type": "wms",
-                                    "name": "April-October water observations",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "wofs_apr_oct_summary_statistics",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "AiQHtl",
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/April-October water observations"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "November-March water observations",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "wofs_nov_mar_summary_statistics",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "hbzXqh",
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/November-March water observations"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "Annual water observations",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "wofs_annual_summary_statistics",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "wofs_annual_summary_statistics",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "SpYxSG",
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/Annual water observations"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "All water observations",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "wofs_filtered_summary",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "wofs_filtered_summary",
-                                    "leafletUpdateInterval": 750,
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "aNt8yM",
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/All water observations"
-                                    ]
-                                },
-                                {
-                                    "id": "QnhUWK",
+                                    "id": "c3me5me2",
                                     "type": "group",
-                                    "name": "April-October water observations source data",
+                                    "name": "DEA Water Observations Annual",
                                     "members": [
                                         {
+
                                             "type": "wms",
-                                            "name": "April-October clear observations",
+                                            "name": "DEA Water Observations Calendar Year (Landsat)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_clear",
+                                            "layers": "ga_ls_wo_fq_cyear_3",
                                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
+                                            "linkedWcsCoverage": "ga_ls_wo_fq_cyear_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "id": "O3Dw8jg4",
+                                            "dateFormat": "'Year: 'yyyy"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "c3me5me3",
+                                    "type": "group",
+                                    "name": "DEA Water Observations Multi Year",
+                                    "members": [
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA Water Observations Multi Year (Landsat)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "ga_ls_wo_fq_myear_3",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "ga_ls_wo_fq_myear_3",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jg5",
+                                            "dateFormat": "'Year: 'yyyy"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "c3me5me4",
+                                    "type": "group",
+                                    "name": "DEA Water Observations Seasonal",
+                                    "members": [
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA Water Observations April to October (Landsat)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
                                             "dateFormat": "'Year: 'yyyy",
-                                            "id": "M1ThLx",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/April-October water observations source data/April-October clear observations"
-                                            ]
+                                            "layers": "ga_ls_wo_fq_apr_oct_3",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "ga_ls_wo_fq_apr_oct_3",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jg7"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "April-October wet observations",
+                                            "name": "DEA Water Observations November to March (Landsat)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_wet",
+                                            "dateFormat": "'Year: 'yyyy",
+                                            "layers": "ga_ls_wo_fq_nov_mar_3",
                                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
+                                            "linkedWcsCoverage": "ga_ls_wo_fq_nov_mar_3",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "7vSA2T",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/April-October water observations source data/April-October wet observations"
-                                            ]
+                                            "id": "O3Dw8jg8"
                                         }
-                                    ],
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/April-October water observations source data"
                                     ]
                                 },
                                 {
-                                    "id": "XNnNVN",
+                                    "id": "c3me5me5",
                                     "type": "group",
-                                    "name": "November-March water observations source data",
+                                    "name": "DEA Water Observations Landsat Collection 2 (deprecated)",
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "November-March clear observations",
+                                            "name": "DEA Water Observations (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_clear",
+                                            "layers": "wofs_albers",
                                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
+                                            "linkedWcsCoverage": "wofs_albers",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "HGetFm",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March clear observations"
-                                            ]
+                                            "id": "O3Dw8jg9"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "November-March wet observations",
+                                            "name": "DEA Annual Water Observation Frequency Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_wet",
+                                            "layers": "wofs_annual_summary_statistics",
                                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
+                                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
                                             "chartColor": "white",
                                             "leafletUpdateInterval": 750,
                                             "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "iknUf8",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/November-March water observations source data/November-March wet observations"
-                                            ]
-                                        }
-                                    ],
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/November-March water observations source data"
-                                    ]
-                                },
-                                {
-                                    "id": "AEV4T5",
-                                    "type": "group",
-                                    "name": "Annual water observations source data",
-                                    "members": [
+                                            "id": "O3Dw8jh0"
+                                        },
                                         {
                                             "type": "wms",
-                                            "name": "Annual clear observations",
+                                            "name": "DEA Annual Clear Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_annual_summary_clear",
@@ -3668,15 +3611,11 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "614LVP",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/Annual water observations source data/Annual clear observations"
-                                            ]
+                                            "id": "O3Dw8jh2"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "Annual wet observations",
+                                            "name": "DEA Annual Wet Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_annual_summary_wet",
@@ -3688,125 +3627,187 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "1LlNu1",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/Annual water observations source data/Annual wet observations"
-                                            ]
-                                        }
-                                    ],
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/Annual water observations source data"
-                                    ]
-                                },
-                                {
-                                    "id": "UwUlQP",
-                                    "type": "group",
-                                    "name": "All water observations combined source data",
-                                    "members": [
+                                            "id": "O3Dw8jh1"
+                                        },
                                         {
                                             "type": "wms",
-                                            "name": "All clear observations",
+                                            "name": "DEA Multi-Year Water Observation Frequency Statistics (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_filtered_summary",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_filtered_summary",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jp1"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA Multi-Year Clear Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_summary_clear",
                                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                             "linkedWcsCoverage": "wofs_summary_clear",
+                                            "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "id": "NhDETf",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/All clear observations"
-                                            ]
+                                            "id": "O3Dw8jp2"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "All wet observations",
+                                            "name": "DEA Multi-Year Wet Observation Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_summary_wet",
                                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                             "linkedWcsCoverage": "wofs_summary_wet",
+                                            "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "id": "Cabw4Q",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/All wet observations"
-                                            ]
+                                            "id": "O3Dw8jp3"
                                         },
                                         {
                                             "type": "wms",
-                                            "name": "Unfiltered summary of all water observations",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "Water Observations from Space Statistics",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "Water Observations from Space Statistics",
-                                            "leafletUpdateInterval": 750,
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "N7GZZR",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/Unfiltered summary of all water observations"
-                                            ]
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Water observations confidence",
+                                            "name": "DEA Multi-Year Water Observation Confidence Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
                                             "layers": "wofs_filtered_summary_confidence",
                                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                             "linkedWcsCoverage": "wofs_filtered_summary_confidence",
+                                            "chartColor": "white",
                                             "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
-                                            "id": "7tjxnH",
-                                            "shareKeys": [
-                                                "Root Group/Surface Water/Water Observations from Space/All water observations combined source data/Water observations confidence"
-                                            ]
+                                            "id": "O3Dw8jp4"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA Multi-Year Water Observation Confidence Filtered Statistics (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_filtered_summary",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_filtered_summary",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jp5"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA April-October Seasonal Water Observations (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_apr_oct_summary_statistics",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jh3"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA April-October Clear Observation Statistics (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_apr_oct_summary_clear",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jh5"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA April-October Wet Observation Statistics (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_apr_oct_summary_wet",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jh4"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA November-March Seasonal Water Observations (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_nov_mar_summary_statistics",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "OD3w8jj5"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA November-March Clear Observation Statistics (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_nov_mar_summary_clear",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jk7"
+                                        },
+                                        {
+                                            "type": "wms",
+                                            "name": "DEA November-March Wet Observation Statistics (deprecated)",
+                                            "url": "https://ows.dea.ga.gov.au/",
+                                            "opacity": 1,
+                                            "layers": "wofs_nov_mar_summary_wet",
+                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
+                                            "chartColor": "white",
+                                            "leafletUpdateInterval": 750,
+                                            "chartType": "momentPoints",
+                                            "tileErrorHandlingOptions": {
+                                                "ignoreUnknownTileErrors": true
+                                            },
+                                            "id": "O3Dw8jj1"
                                         }
-                                    ],
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Water Observations from Space/All water observations combined source data"
+
                                     ]
                                 }
-                            ],
-                            "shareKeys": [
-                                "Root Group/Surface Water/Water Observations from Space"
-                            ]
-                        },
-                        {
-                            "id": "hNyAH2",
-                            "type": "group",
-                            "name": "DEA Waterbodies",
-                            "members": [
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Waterbodies",
-                                    "url": "https://geoserver.dea.ga.gov.au/geoserver/wms",
-                                    "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see <a href='https://www.ga.gov.au/dea/products/dea-waterbodies'>https://www.ga.gov.au/dea/products/dea-waterbodies</a>",
-                                    "layers": "dea:DigitalEarthAustraliaWaterbodies",
-                                    "featureInfoTemplate": {
-                                        "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of surface area (not volume) observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' chart-type='lineAndPoint' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area (not volume) observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
-                                        "partials": {
-                                            "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.ga.gov.au/dea/products/dea-waterbodies."
-                                        }
-                                    },
-                                    "id": "DGGjbr",
-                                    "shareKeys": [
-                                        "Root Group/Surface Water/Digital Earth Australia Waterbodies/Digital Earth Australia Waterbodies"
-                                    ]
-                                }
-                            ],
-                            "shareKeys": [
-                                "Root Group/Surface Water/Digital Earth Australia Waterbodies"
                             ]
                         },
                         {
