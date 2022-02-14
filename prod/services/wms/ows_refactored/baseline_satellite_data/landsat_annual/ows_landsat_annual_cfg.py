@@ -6,8 +6,7 @@ from ows_refactored.baseline_satellite_data.landsat_annual.style_c3_ls_cfg impor
     styles_c3_ls_list
 from ows_refactored.baseline_satellite_data.landsat_annual.style_ls_cfg import (
     styles_ls_list, styles_tmad_list)
-from ows_refactored.ows_reslim_cfg import (reslim_wms_min_zoom_15,
-                                           reslim_wms_min_zoom_35)
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 layers = {
     "title": "DEA Surface Reflectance Calendar Year (Landsat)",
@@ -37,7 +36,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "ls8_nbart_geomedian_annual",
             "bands": bands_ls,
             # "time_resolution": 'year',
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -71,7 +70,7 @@ For service status information, see https://status.dea.ga.gov.au
             """,
             "product_name": "ls7_nbart_geomedian_annual",
             "bands": bands_ls,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -105,7 +104,7 @@ For service status information, see https://status.dea.ga.gov.au
                     """,
             "product_name": "ls5_nbart_geomedian_annual",
             "bands": bands_ls,
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -137,7 +136,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ls8_nbart_tmad_annual",
             "bands": bands_tmad,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -173,7 +172,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ls7_nbart_tmad_annual",
             "bands": bands_tmad,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -209,7 +208,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             # The Datacube name for the associated data product
             "product_name": "ls5_nbart_tmad_annual",
             "bands": bands_tmad,
-            "resource_limits": reslim_wms_min_zoom_15,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
@@ -245,7 +244,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "ga_ls8c_nbart_gm_cyear_3",
             "bands": bands_c3_ls,
             "time_resolution": "year",
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
             "image_processing": {
@@ -278,7 +277,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "ga_ls7e_nbart_gm_cyear_3",
             "bands": bands_c3_ls,
             "time_resolution": "year",
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
             "image_processing": {
@@ -311,7 +310,7 @@ For service status information, see https://status.dea.ga.gov.au
             "product_name": "ga_ls5t_nbart_gm_cyear_3",
             "bands": bands_c3_ls,
             "time_resolution": "year",
-            "resource_limits": reslim_wms_min_zoom_35,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
             "image_processing": {

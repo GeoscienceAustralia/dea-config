@@ -9,7 +9,7 @@
 ###############################################################################################
 import copy
 
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 # InSAR Displacements / Velocity
 insar_disp_bands = {"ew": [], "ud": [], "ewstd": [], "upstd": []}
@@ -211,7 +211,7 @@ alos_layers = [
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_displacement",
         "bands": insar_disp_bands,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "resource_limits": reslim_standard,
         "native_crs": "EPSG:32756",
         "native_resolution": [50, -50],
         "image_processing": {
@@ -239,7 +239,7 @@ alos_layers = [
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_alos_velocity",
         "bands": insar_vel_bands,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "resource_limits": reslim_standard,
         "native_crs": "EPSG:32756",
         "native_resolution": [50, -50],
         "image_processing": {
@@ -271,7 +271,7 @@ envisat_layers = [
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_displacement",
         "bands": insar_disp_bands,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "resource_limits": reslim_standard,
         "native_crs": "EPSG:32756",
         "native_resolution": [50, -50],
         "image_processing": {
@@ -299,7 +299,7 @@ envisat_layers = [
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_envisat_velocity",
         "bands": insar_vel_bands,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "resource_limits": reslim_standard,
         "native_crs": "EPSG:32756",
         "native_resolution": [50, -50],
         "image_processing": {
@@ -332,7 +332,7 @@ rs2_layers = [
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_displacement",
         "bands": insar_disp_bands,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "resource_limits": reslim_standard,
         "native_crs": "EPSG:32756",
         "native_resolution": [50, -50],
         "image_processing": {
@@ -361,7 +361,7 @@ rs2_layers = [
         # The ODC product name for the associated data product
         "product_name": "cemp_insar_radarsat2_velocity",
         "bands": insar_vel_bands,
-        "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+        "resource_limits": reslim_standard,
         "native_crs": "EPSG:32756",
         "native_resolution": [50, -50],
         "image_processing": {

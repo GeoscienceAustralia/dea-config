@@ -2,7 +2,7 @@ from ows_refactored.baseline_satellite_data.sentinel2.band_s2_cfg import \
     bands_sentinel2_provisional
 from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
     styles_s2_provisional_list
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 combined_layer = {
     "title": "DEA Surface Reflectance (Sentinel-2, Provisional)",
@@ -25,7 +25,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
     "product_names": ["ga_s2am_ard_provisional_3", "ga_s2bm_ard_provisional_3"],
     "bands": bands_sentinel2_provisional,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10.0, 10.0],
@@ -71,7 +71,7 @@ The resolution is a 10-20m grid based on the ESA Level1C archive.
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_s2bm_ard_provisional_3",
     "bands": bands_sentinel2_provisional,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10.0, 10.0],
@@ -117,7 +117,7 @@ The resolution is a 10-20m grid based on the ESA Level1C archive.
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_s2am_ard_provisional_3",
     "bands": bands_sentinel2_provisional,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [10.0, 10.0],

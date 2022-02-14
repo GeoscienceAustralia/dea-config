@@ -2,7 +2,7 @@ from ows_refactored.inland_water.wofs.bands_wo_cfg import (bands_wofs_filt_sum,
                                                            bands_wofs_sum)
 from ows_refactored.ows_legend_cfg import (legend_idx_percentage_by_20,
                                            legend_idx_percentage_by_25)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 style_wofs_count_wet = {
     "name": "water_observations",
@@ -94,7 +94,6 @@ style_wofs_count_clear = {
         },
     },
 }
-
 
 style_wofs_frequency = {
     "name": "WOfS_frequency",
@@ -423,14 +422,10 @@ style_wofs_obs_wet_only = {
     },
 }
 
-layers = {
-    "title": "All water observations combined source data",
-    "abstract": "WOfS",
-    "layers": [
-        {
-            "title": "DEA Wet Observations Statistics (Landsat)",
-            "name": "wofs_summary_wet",
-            "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Wet)
+wet_layer = {
+    "title": "DEA Multi-Year Wet Observation Statistics (Landsat, depricated)",
+    "name": "wofs_summary_wet",
+    "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Wet)
 
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -442,27 +437,28 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/
 https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-landsat
 
 For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "wofs_summary",
-            "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "styling": {
-                "default_style": "water_observations",
-                "styles": [
-                    style_wofs_count_wet,
-                ],
-            },
-        },
-        {
-            "title": "DEA Clear Observations Statistics (Landsat)",
-            "name": "wofs_summary_clear",
-            "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Clear)
+    "product_name": "wofs_summary",
+    "bands": bands_wofs_sum,
+    "resource_limits": reslim_standard,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "styling": {
+        "default_style": "water_observations",
+        "styles": [
+            style_wofs_count_wet,
+        ],
+    }
+}
+
+clear_layer = {
+    "title": "DEA Multi-Year Clear Observation Statistics (Landsat, depricated)",
+    "name": "wofs_summary_clear",
+    "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Clear)
 
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product that combines the many years of WOfS observations into summary products which help the understanding of surface water across Australia.  The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time.
 
@@ -473,28 +469,30 @@ As no confidence filtering is applied to this product, it is affected by noise w
 For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/Product%20Description.pdf
 https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-landsat
 
-For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "wofs_summary",
-            "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "styling": {
-                "default_style": "clear_observations",
-                "styles": [
-                    style_wofs_count_clear,
-                ],
-            },
-        },
-        {
-            "title": "DEA Water Observations Frequency Statistics (Landsat)",
-            "name": "Water Observations from Space Statistics",  # TODO: add underscore to link the name
-            "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Frequency)
+For service status information, see https://status.dea.ga.gov.au
+""",
+    "product_name": "wofs_summary",
+    "bands": bands_wofs_sum,
+    "resource_limits": reslim_standard,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "styling": {
+        "default_style": "clear_observations",
+        "styles": [
+            style_wofs_count_clear,
+        ],
+    },
+}
+
+freq_layer = {
+    "title": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, depricated)",
+    "name": "Water Observations from Space Statistics",  # TODO: add underscore to link the name
+    "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, Frequency)
 
 Water Observations from Space (WOfS) Statistics is a set of statistical summaries of the WOfS product which combines WOfS observations into summary products that help the understanding of surface water across Australia. WOfS Statistics is calculated from the full depth time series (1986 – 2018). The water detected for each location is summed through time and then compared to the number of clear observations of that location. The result is a percentage value of the number of times water was observed at the location. The layers available are: the count of clear observations; the count of wet observations; the percentage of wet observations over time (water summary).
 
@@ -506,65 +504,69 @@ For more information please see: https://data.dea.ga.gov.au/WOfS/summary/v2.1.0/
 https://cmi.ga.gov.au/data-products/dea/143/dea-water-observations-statistics-landsat
 
 For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "wofs_summary",
-            "bands": bands_wofs_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "styling": {
-                "default_style": "WOfS_frequency",
-                "styles": [
-                    style_wofs_frequency,
-                    style_wofs_frequency_blue,
-                ],
-            },
-        },
-        {
-            "title": "DEA Water Observations Filtered Statistics Confidence (Landsat)",
-            "name": "wofs_filtered_summary_confidence",
-            "abstract": """Water Observations from Space Filtered Statistics 25m 2.1.5 (Landsat, Confidence)
+    "product_name": "wofs_summary",
+    "bands": bands_wofs_sum,
+    "resource_limits": reslim_standard,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "styling": {
+        "default_style": "WOfS_frequency",
+        "styles": [
+            style_wofs_frequency,
+            style_wofs_frequency_blue,
+        ],
+    }
+}
 
-Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green. The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means. For more information please see: https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
+filtered_layer = {
+    "title": "DEA Multi-Year Water Observation Confidence Statistics (Landsat, depricated)",
+    "name": "wofs_filtered_summary_confidence",
+    "abstract": """Water Observations from Space Filtered Statistics 25m 2.1.5 (Landsat, Confidence)
+
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Confidence: the degree of agreement between water shown in the Water Summary and other national datasets. Areas where there is less than 1% confidence appears black, areas with confidence for between 1% 10% confidence are styled between black and red, areas with 25% confidence are styled yellow, areas with 75% confidence and above correspond to green. The Confidence layer provides understanding of whether the water shown in the Water Summary agrees with where water should exist in the landscape, such as due to sloping land or whether water has been detected in a location by other means.
+
+For more information please see: https://data.dea.ga.gov.au/WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
 https://cmi.ga.gov.au/data-products/dea/211/dea-water-observations-filtered-statistics-landsat
 
-For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "wofs_filtered_summary",
-            "bands": bands_wofs_filt_sum,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "styling": {
-                "default_style": "wofs_confidence",
-                "styles": [
-                    style_wofs_confidence,
-                ],
-            },
-        },
-    ],
+For service status information, see https://status.dea.ga.gov.au
+""",
+    "product_name": "wofs_filtered_summary",
+    "bands": bands_wofs_filt_sum,
+    "resource_limits": reslim_standard,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [25, -25],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "styling": {
+        "default_style": "wofs_confidence",
+        "styles": [
+            style_wofs_confidence,
+        ],
+    }
 }
 
 statistics_layer = {
-    "title": "DEA Water Observations Frequency Filtered Statistics (Landsat)",
+    "title": "DEA Multi-Year Water Observation Frequency Filtered Statistics (Landsat, depricated)",
     "name": "wofs_filtered_summary",
     "abstract": """Water Observations from Space Filtered Statistics 25m 2.1.5 (Landsat, Filtered)
 
-Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level. No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist. For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
+Water Observations from Space (WOfS) Filtered Statistics helps provide the long term understanding of the recurrence of water in the landscape, with much of the noise due to misclassification filtered out. WOfS Filtered Statistics consists of a Confidence layer that compares the WOfS Statistics water summary to other national water datasets, and the Filtered Water Summary which uses the Confidence to mask areas of the WOfS Statistics water summary where Confidence is low. This layer is Filtered Water Summary: A simplified version of the Water Summary, showing the frequency of water observations where the Confidence is above a cutoff level. No clear observations of water causes an area to appear transparent, few clear observations of water correlate with red and yellow colours, deep blue and purple correspond to an area being wet through 90%-100% of clear observations. The Filtered Water Summary layer is a noise-reduced view of surface water across Australia. Even though confidence filtering is applied to the Filtered Water Summary, some cloud and shadow, and sensor noise does persist.
+
+For more information please see: https://data.dea.ga.gov.au/?prefix=WOfS/filtered_summary/v2.1.0/Product%20Description.pdf
 https://cmi.ga.gov.au/data-products/dea/211/dea-water-observations-filtered-statistics-landsat
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "wofs_filtered_summary",
     "bands": bands_wofs_filt_sum,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
     "image_processing": {

@@ -1,7 +1,7 @@
 from ows_refactored.land_and_vegetation.fc.band_fc_cfg import bands_fc_3
 from ows_refactored.land_and_vegetation.fc.style_fc_cfg import (
     style_fc_bs_c3, style_fc_c3_rgb, style_fc_gv_c3, style_fc_ngv_c3)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_35
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 layer = {
     "title": "DEA Fractional Cover (Landsat)",
@@ -23,7 +23,7 @@ https://cmi.ga.gov.au/data-products/dea/629/dea-fractional-cover-landsat-c3
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_fc_3",
     "bands": bands_fc_3,
-    "resource_limits": reslim_wms_min_zoom_35,
+    "resource_limits": reslim_standard,
     "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],

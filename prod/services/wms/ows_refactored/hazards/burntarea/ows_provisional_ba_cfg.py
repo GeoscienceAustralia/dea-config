@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 bands_ba_rasters = {
     "delta_bsi": [],
@@ -231,7 +231,7 @@ dNBR is styled in two layers, as a colour ramp between -1 and +1, and also as a 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_s2_ba_provisional_3",
             "bands": bands_ba_rasters,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_for_sentinel2,
             "dynamic": True,
             "native_crs": "EPSG:3577",
             "native_resolution": [10.0, 10.0],

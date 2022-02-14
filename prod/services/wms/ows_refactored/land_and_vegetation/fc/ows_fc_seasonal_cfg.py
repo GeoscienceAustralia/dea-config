@@ -5,7 +5,7 @@ from ows_refactored.land_and_vegetation.fc.flag_fc_cfg import \
 from ows_refactored.land_and_vegetation.fc.style_fc_cfg import (
     style_fc_simple_rgb, styles_fc_bare_list, styles_fc_gv_list,
     styles_fc_ngv_list)
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 fcp_seasonal_layers = {
     "title": "Seasonal Fractional Cover Summaries",
@@ -28,7 +28,7 @@ https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-lan
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "flags": fc_percentile_flags,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
@@ -56,7 +56,7 @@ https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-lan
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "flags": fc_percentile_flags,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
@@ -82,7 +82,7 @@ https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-lan
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "fc_percentile_albers_seasonal",
             "bands": bands_fc_percentile,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "flags": fc_percentile_flags,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
@@ -111,7 +111,7 @@ https://cmi.ga.gov.au/data-products/dea/120/dea-fractional-cover-percentiles-lan
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "fc_percentile_albers_seasonal",
     "bands": bands_fc_percentile,
-    "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+    "resource_limits": reslim_standard,
     "flags": fc_percentile_flags,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],

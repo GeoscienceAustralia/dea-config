@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_wms_min_zoom_15_cache_rules
+from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_mangrove = {
     "canopy_cover_class": [],
@@ -60,7 +60,7 @@ https://cmi.ga.gov.au/data-products/dea/191/dea-mangrove-canopy-cover-landsat
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "mangrove_cover",
             "bands": bands_mangrove,
-            "resource_limits": reslim_wms_min_zoom_15_cache_rules,
+            "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
             "image_processing": {
