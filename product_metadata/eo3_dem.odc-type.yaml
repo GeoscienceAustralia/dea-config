@@ -15,18 +15,12 @@ dataset:
     measurements:
     - measurements
     search_fields:
-        dataset_maturity:
-            description: One of - final|interim|nrt  (near real time)
-            indexed: false
-            offset:
-            - properties
-            - dea:dataset_maturity
         instrument:
             description: Instrument name
             indexed: false
             offset:
             - properties
-            - eo:instrument
+            - instrument
         lat:
             description: Latitude range
             max_offset:
@@ -54,13 +48,7 @@ dataset:
             indexed: false
             offset:
             - properties
-            - eo:platform
-        product_family:
-            description: Product family code
-            indexed: false
-            offset:
-            - properties
-            - odc:product_family
+            - platform
         region_code:
             description: "Spatial reference code from the provider. For Landsat region_code\
                 \ is a scene path row:\n        '{:03d}{:03d}.format(path,row)'.\n\
@@ -78,12 +66,12 @@ dataset:
             description: Acquisition time range
             max_offset:
             -   - properties
-                - dtr:end_datetime
+                - end_datetime
             -   - properties
                 - datetime
             min_offset:
             -   - properties
-                - dtr:start_datetime
+                - start_datetime
             -   - properties
                 - datetime
             type: datetime-range
