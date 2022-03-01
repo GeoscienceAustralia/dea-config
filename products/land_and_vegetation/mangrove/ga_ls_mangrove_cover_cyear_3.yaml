@@ -1,0 +1,31 @@
+name: ga_ls_mangrove_cover_cyear_3
+description: Geoscience Australia Landsat Mangrove Cover Calendar Year Collection 3
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata: 
+  product:
+    name: ga_ls_mangrove_cover_cyear_3
+
+measurements:
+  - name: canopy_cover_class
+    dtype: uint8
+    units: '1'
+    nodata: 255
+    flags_definition:
+      notobserved:
+        bits: [0,1,2,3,4,5,6,7]
+        description: Mangroves not observed
+        values: {0: true}
+      woodland:
+        bits: [0,1,2,3,4,5,6,7]
+        description: Woodland
+        values: {1: true}
+      open_forest:
+        bits: [0,1,2,3,4,5,6,7]
+        description: Open Forest
+        values: {2: true}
+      closed_forest:
+        bits: [0,1,2,3,4,5,6,7]
+        description: Closed Forest
+        values: {3: true}
