@@ -1,7 +1,6 @@
 specification:
   products:
-    - ga_ls5t_ard_3
-    - ga_ls7e_ard_3
+    - ga_ls8c_ard_3
   measurements: ['nbart_green', 'nbart_red', 'nbart_nir', 'nbart_swir_1', 'nbart_swir_2']
   measurement_renames:
     nbart_green: green
@@ -37,6 +36,16 @@ specification:
         swir2:
           - -32.7
           - 1.02551
+      output_regression_coefficients:
+        bs:
+          - 2.45
+          - 0.9499
+        pv:
+          - 2.77
+          - 0.9481
+        npv:
+          - -0.73
+          - 0.9578
 
 output:
   location: s3://dea-public-data/derivative/
@@ -56,7 +65,7 @@ output:
   metadata:
     product_family: fc
     producer: ga.gov.au
-    dataset_version: 2.5.0
+    dataset_version: 2.5.1
     collection_number: 3
     naming_conventions: dea_c3
   properties:
