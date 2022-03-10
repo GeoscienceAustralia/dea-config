@@ -150,7 +150,7 @@ style_seasonal_wofs_summary_frequency_blue = {
 
 
 wet_layer = {
-    "title": "DEA April-October Wet Observation Statistics (Landsat, depricated)",
+    "title": "DEA April-October Wet Observation Statistics (Landsat, DEPRECATED)",
     "name": "wofs_apr_oct_summary_wet",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, April - October, Wet)
 
@@ -183,7 +183,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 clear_layer = {
-    "title": "DEA April-October Clear Observation Statistics (Landsat, depricated)",
+    "title": "DEA April-October Clear Observation Statistics (Landsat, DEPRECATED)",
     "name": "wofs_apr_oct_summary_clear",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, April - October, Clear)
 
@@ -211,7 +211,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 statistics_layer = {
-    "title": "DEA April-October Seasonal Water Observations (Landsat, depricated)",
+    "title": "DEA April-October Seasonal Water Observations (Landsat, DEPRECATED)",
     "name": "wofs_apr_oct_summary_statistics",
     "abstract": """Water Observations from Space Statistics 25m 2.1.5 (Landsat, April - October, Frequency)
 

@@ -153,9 +153,9 @@ style_s2_wofs_obs_wet_only = {
 
 
 layer = {
-    "title": "DEA Water Observations (Sentinel-2, DEPRECATED)",
-    "name": "ga_s2_wo_3",
-    "abstract": """**Prototype Sentinel 2 Water Observations, DEPRECATED.**
+    "title": "DEA Water Observations (Sentinel-2, Provisional)",
+    "name": "ga_s2_wo_provisional_3",
+    "abstract": """**Prototype Near Real-Time Sentinel 2 Water Observations based on provisional (C3) data.**
 
 
 This product is the implementation of the DEA Water Observations (WOs) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 surface reflectance product.
@@ -166,7 +166,7 @@ The Water Observations show the extent of water in a corresponding Sentinel 2 sc
 
 
 For more information, see https://cmi.ga.gov.au/data-products/dea/639/dea-water-observations-sentinel-2-msi""",
-    "product_name": "ga_s2_wo_3",
+    "product_name": "ga_s2_wo_provisional_3",
     "bands": bands_wofs_obs,
     "resource_limits": reslim_standard,
     "dynamic": True,
