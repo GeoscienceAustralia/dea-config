@@ -4,11 +4,11 @@ from ows_refactored.inland_water.wofs.c2.ows_wofs_summary_cfg import (
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 layer = {
-    "title": "DEA Water Observations (Landsat, depricated)",
+    "title": "DEA Water Observations (Landsat, DEPRECATED)",
     "abstract": "WOfS",
     "layers": [
         {
-            "title": "DEA Water Observations (Landsat, depricated)",
+            "title": "DEA Water Observations (Landsat, DEPRECATED)",
             "name": "wofs_albers",
             "abstract": """Water Observations from Space 25m 2.1.5 (Landsat)
 
