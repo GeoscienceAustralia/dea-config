@@ -181,7 +181,7 @@ For more information, see https://cmi.ga.gov.au/data-products/dea/639/dea-water-
         },
         {
             "band": "water",
-            "product": "ga_s2_wo_3",
+            "product": "ga_s2_wo_provisional_3",
             "ignore_time": False,
             "ignore_info_flags": [],
             "fuse_func": "datacube_ows.wms_utils.wofls_fuser",
