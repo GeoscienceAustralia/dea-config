@@ -2,7 +2,7 @@ plugin: fc-percentiles # this can help system find the relative plugin and plugi
 product:
   name: ga_ls_fc_pc_fyear_3
   short_name: ga_ls_fc_pc_fyear_3
-  version: 1.6.0
+  version: 3.0.0
   product_family: fc_percentile
 
   # -- EO Dataset3 relative section --
