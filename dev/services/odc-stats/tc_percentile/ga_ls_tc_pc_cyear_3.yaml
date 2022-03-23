@@ -46,7 +46,23 @@ product:
     - landsat:collection_number
     - landsat:wrs_path
     - landsat:wrs_row
-    
+
+  preview_image_ows_style:
+    name: tci_rgb
+    title: Three-band TCI 
+    abstract: TCI medians - red is brightness, green is greenness and
+      blue is wetness
+    components:
+      red:
+        bright_pc_50: 1
+      green:
+        green_pc_50: 1
+      blue:
+        wet_pc_50: 1
+    scale_range:
+    - -2000 
+    - 2000
+   
 aws_unsigned: True
 
 max_processing_time: 1200
