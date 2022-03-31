@@ -66,5 +66,5 @@ dataset:
     sources:
     - lineage
     - source_datasets
-description: Default EO3 with no custom fields
+description: EO3 with custom DEM Lidar data fields
 name: eo3_dem
