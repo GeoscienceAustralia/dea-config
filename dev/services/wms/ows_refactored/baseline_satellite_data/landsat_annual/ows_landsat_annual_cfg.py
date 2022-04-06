@@ -1,11 +1,7 @@
 from ows_refactored.baseline_satellite_data.landsat_annual.band_c3_ls_cfg import \
     bands_c3_ls
-from ows_refactored.baseline_satellite_data.landsat_annual.band_ls_cfg import (
-    bands_ls, bands_tmad)
 from ows_refactored.baseline_satellite_data.landsat_annual.style_c3_ls_cfg import \
     styles_c3_ls_list
-from ows_refactored.baseline_satellite_data.landsat_annual.style_ls_cfg import (
-    styles_ls_list, styles_tmad_list)
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 layers = {
