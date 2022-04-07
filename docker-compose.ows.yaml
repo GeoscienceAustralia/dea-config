@@ -23,6 +23,7 @@ services:
       - ${OWS_CFG_MOUNT}:${CFG_PATH_PREFIX}
       - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
       - ./compare-cfg.sh:/env/config/compare-cfg.sh
+      - ./coverage_test/:/tmp/coverage_test:Z
 
   postgres:
     image: kartoza/postgis:13-3.1
@@ -31,5 +32,5 @@ services:
       - POSTGRES_PASSWORD=opendatacubepassword
       - POSTGRES_USER=opendatacube
     ports:
-      - "5432:5432"
+      - "5435:5432"
     restart: always

@@ -1,0 +1,43 @@
+---
+name: CFG code coverage
+
+on:
+  pull_request:
+    branches:
+        - 'master'
+    paths:
+      - '**'
+      - '.github/workflows/coverage.yaml'
+      - 'dev/wms/ows_refactored'
+      - 'prod/wms/ows_refactored'
+
+  push:
+    branches:
+      - 'master'
+    paths:
+      - '**'
+      - '.github/workflows/coverage.yaml'
+      - 'dev/wms/ows_refactored'
+      - 'prod/wms/ows_refactored'
+
+jobs:
+  cfg-code-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Dockerized cfg coverage Pytest (dev)
+        run: |
+          chmod a+rw artifacts
+          docker-compose -f docker-compose.ows.yaml up -d
+          docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /tmp;python3 -m pytest --cov=ows_refactored --cov-report=xml coverage_test/cfg_parser.py"
+          docker-compose -f docker-compose.ows.yaml down
+
+      - name: Upload All coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: /tmp/*.xml
+          fail_ci_if_error: false
