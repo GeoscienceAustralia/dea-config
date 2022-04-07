@@ -31,12 +31,15 @@ jobs:
 
       - name: Dockerized cfg coverage Pytest (dev)
         run: |
+          mkdir artifacts
+          chmod a+rw artifacts
+
           docker-compose -f docker-compose.ows.yaml up -d
-          docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /tmp;python3 -m pytest --cov=ows_refactored --cov-report=xml coverage_test/cfg_parser.py"
+          docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /tmp;python3 -m pytest --cov=ows_refactored --cov-report=xml coverage_test/cfg_parser.py;cp /tmp/coverage.xml /mnt/artifacts"
           docker-compose -f docker-compose.ows.yaml down
 
       - name: Upload All coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
-          file: /tmp/*.xml
+          file:  ./artifacts/*.xml
           fail_ci_if_error: false

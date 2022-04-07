@@ -24,6 +24,7 @@ services:
       - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
       - ./compare-cfg.sh:/env/config/compare-cfg.sh
       - ./coverage_test/:/tmp/coverage_test:Z
+      - ./artifacts:/mnt/artifacts
 
   postgres:
     image: kartoza/postgis:13-3.1
