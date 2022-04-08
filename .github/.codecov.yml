@@ -23,6 +23,14 @@ parsers:
 fixes:
   - /dea-config::
 
+# sample regex patterns
+ignore:
+  - "coverage_test"  # ignore folders and all its contents
+  - "**/*.yaml"         # glob accepted
+  - "**/*.csv"         # glob accepted
+  - "**/*.json"         # glob accepted
+  - "**/*.cfg"         # glob accepted
+
 comment:
   layout: "reach,diff,flags,tree"
   behavior: default
