@@ -12,17 +12,15 @@ services:
       DB_PASSWORD: opendatacubepassword
       DB_DATABASE: opendatacube
       DB_PORT: 5432
-      WMS_CONFIG_PATH: ${CFG_PATH_PREFIX}/${WMS_CONFIG_FILE}
+      WMS_CONFIG_PATH: /dea-config/${OWS_CFG_PATH}
       # # Path from the PYTHONPATH to the config object (default PYTHONPATH is /env)
       DATACUBE_OWS_CFG: ${DATACUBE_OWS_CFG}
       AWS_DEFAULT_REGION: ap-southeast-2
-      PYTHONPATH: /env/config
+      PYTHONPATH: /dea-config/${PYTHON_PATH}
+      INVENTORY: /dea-config/${PYTHON_PATH}/inventory.json
     depends_on:
       - postgres
     volumes:
-      - ${OWS_CFG_MOUNT}:${CFG_PATH_PREFIX}
-      - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
-      - ./compare-cfg.sh:/env/config/compare-cfg.sh
       - ./:/dea-config/
       - ./artifacts:/mnt/artifacts
 

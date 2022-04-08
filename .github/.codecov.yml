@@ -21,7 +21,16 @@ parsers:
       macro: no
 
 fixes:
-  - /env/config::dev/services/wms/
+  - /dea-config::
+
+# sample regex patterns
+ignore:
+  - "/dea-config/coverage_test"  # ignore folders and all its contents
+  - "/dea-config/**/*.yaml"         # glob accepted
+  - "/dea-config/**/*.yml"         # glob accepted
+  - "/dea-config/**/*.csv"         # glob accepted
+  - "/dea-config/**/*.json"         # glob accepted
+  - "/dea-config/**/*.cfg"         # glob accepted
 
 comment:
   layout: "reach,diff,flags,tree"
