@@ -21,7 +21,7 @@ parsers:
       macro: no
 
 fixes:
-  - /env/config::dev/services/wms/
+  - /dea-config::
 
 comment:
   layout: "reach,diff,flags,tree"
