@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 99,
+    "total_layers_count": 71,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -81,108 +81,6 @@
                 "swir1",
                 "swir2",
                 "fmask"
-            ]
-        },
-        {
-            "layer": "ls8_nbart_geomedian_annual",
-            "product": [
-                "ls8_nbart_geomedian_annual"
-            ],
-            "styles_count": 11,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2"
-            ]
-        },
-        {
-            "layer": "ls7_nbart_geomedian_annual",
-            "product": [
-                "ls7_nbart_geomedian_annual"
-            ],
-            "styles_count": 11,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2"
-            ]
-        },
-        {
-            "layer": "ls5_nbart_geomedian_annual",
-            "product": [
-                "ls5_nbart_geomedian_annual"
-            ],
-            "styles_count": 11,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2"
-            ]
-        },
-        {
-            "layer": "ls8_nbart_tmad_annual",
-            "product": [
-                "ls8_nbart_tmad_annual"
-            ],
-            "styles_count": 5,
-            "styles_list": [
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens"
-            ]
-        },
-        {
-            "layer": "ls7_nbart_tmad_annual",
-            "product": [
-                "ls7_nbart_tmad_annual"
-            ],
-            "styles_count": 5,
-            "styles_list": [
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens"
-            ]
-        },
-        {
-            "layer": "ls5_nbart_tmad_annual",
-            "product": [
-                "ls5_nbart_tmad_annual"
-            ],
-            "styles_count": 5,
-            "styles_list": [
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens"
             ]
         },
         {
@@ -642,140 +540,6 @@
             ]
         },
         {
-            "layer": "fcp_rgb",
-            "product": [
-                "fc_percentile_albers_annual"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "fc_rgb"
-            ]
-        },
-        {
-            "layer": "fcp_seasonal_rgb",
-            "product": [
-                "fc_percentile_albers_seasonal"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_rgb"
-            ]
-        },
-        {
-            "layer": "fcp_green_veg",
-            "product": [
-                "fc_percentile_albers_annual"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "green_veg_10",
-                "green_veg_50",
-                "green_veg_90"
-            ]
-        },
-        {
-            "layer": "fcp_non_green_veg",
-            "product": [
-                "fc_percentile_albers_annual"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "non_green_veg_10",
-                "non_green_veg_50",
-                "non_green_veg_90"
-            ]
-        },
-        {
-            "layer": "fcp_bare_ground",
-            "product": [
-                "fc_percentile_albers_annual"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "bare_ground_10",
-                "bare_ground_50",
-                "bare_ground_90"
-            ]
-        },
-        {
-            "layer": "fcp_seasonal_green_veg",
-            "product": [
-                "fc_percentile_albers_seasonal"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "green_veg_10",
-                "green_veg_50",
-                "green_veg_90"
-            ]
-        },
-        {
-            "layer": "fcp_seasonal_non_green_veg",
-            "product": [
-                "fc_percentile_albers_seasonal"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "non_green_veg_10",
-                "non_green_veg_50",
-                "non_green_veg_90"
-            ]
-        },
-        {
-            "layer": "fcp_seasonal_bare_ground",
-            "product": [
-                "fc_percentile_albers_seasonal"
-            ],
-            "styles_count": 3,
-            "styles_list": [
-                "bare_ground_10",
-                "bare_ground_50",
-                "bare_ground_90"
-            ]
-        },
-        {
-            "layer": "ls5_fc_albers",
-            "product": [
-                "ls5_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
-            "layer": "ls7_fc_albers",
-            "product": [
-                "ls7_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
-            "layer": "ls8_fc_albers",
-            "product": [
-                "ls8_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
-            "layer": "fc_albers_combined",
-            "product": [
-                "ls5_fc_albers",
-                "ls7_fc_albers",
-                "ls8_fc_albers"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "simple_fc"
-            ]
-        },
-        {
             "layer": "mangrove_cover_v2_0_2",
             "product": [
                 "mangrove_cover"
@@ -870,39 +634,6 @@
             ]
         },
         {
-            "layer": "wofs_apr_oct_summary_statistics",
-            "product": [
-                "wofs_apr_oct_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent"
-            ]
-        },
-        {
-            "layer": "wofs_nov_mar_summary_statistics",
-            "product": [
-                "wofs_nov_mar_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "seasonal_WOfS_frequency",
-                "seasonal_WOfS_frequency_blues_transparent"
-            ]
-        },
-        {
-            "layer": "wofs_annual_summary_statistics",
-            "product": [
-                "wofs_annual_summary"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "annual_WOfS_frequency",
-                "annual_WOfS_frequency_blues_transparent"
-            ]
-        },
-        {
             "layer": "wofs_filtered_summary",
             "product": [
                 "wofs_filtered_summary"
@@ -911,66 +642,6 @@
             "styles_list": [
                 "WOfS_filtered_frequency",
                 "WOfS_filtered_frequency_blues_transparent"
-            ]
-        },
-        {
-            "layer": "wofs_apr_oct_summary_wet",
-            "product": [
-                "wofs_apr_oct_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_water_observations"
-            ]
-        },
-        {
-            "layer": "wofs_apr_oct_summary_clear",
-            "product": [
-                "wofs_apr_oct_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_clear_observations"
-            ]
-        },
-        {
-            "layer": "wofs_nov_mar_summary_wet",
-            "product": [
-                "wofs_nov_mar_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_water_observations"
-            ]
-        },
-        {
-            "layer": "wofs_nov_mar_summary_clear",
-            "product": [
-                "wofs_nov_mar_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "seasonal_clear_observations"
-            ]
-        },
-        {
-            "layer": "wofs_annual_summary_wet",
-            "product": [
-                "wofs_annual_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "annual_water_observations"
-            ]
-        },
-        {
-            "layer": "wofs_annual_summary_clear",
-            "product": [
-                "wofs_annual_summary"
-            ],
-            "styles_count": 1,
-            "styles_list": [
-                "annual_clear_observations"
             ]
         },
         {
@@ -1012,17 +683,6 @@
             "styles_count": 1,
             "styles_list": [
                 "wofs_confidence"
-            ]
-        },
-        {
-            "layer": "wofs_albers",
-            "product": [
-                "wofs_albers"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "observations",
-                "wet"
             ]
         },
         {

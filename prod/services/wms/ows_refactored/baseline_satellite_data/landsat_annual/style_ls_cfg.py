@@ -363,15 +363,6 @@ style_tmad_rgb_sens = {
     },
 }
 
-styles_tmad_list = [
-    style_tmad_sdev_std,
-    style_tmad_edev_std,
-    style_tmad_bcdev_std,
-    style_tmad_rgb_std,
-    style_tmad_rgb_sens,
-]
-
-
 styles_ls_list = [
     style_ls_simple_rgb,
     style_ls_irg,
