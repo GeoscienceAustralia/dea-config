@@ -21,7 +21,7 @@ parsers:
       macro: no
 
 fixes:
-  - /env/config/ows_refactored::dev/services/wms/ows_refactored/
+  - /env/config::dev/services/wms/
 
 comment:
   layout: "reach,diff,flags,tree"
