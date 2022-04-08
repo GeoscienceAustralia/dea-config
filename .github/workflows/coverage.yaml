@@ -36,7 +36,7 @@ jobs:
         chmod a+rw artifacts
 
         docker-compose -f docker-compose.ows.yaml up -d
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /tmp;./check-coverage.sh"
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config;./check-coverage.sh"
         docker-compose -f docker-compose.ows.yaml down
       env:
         OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored

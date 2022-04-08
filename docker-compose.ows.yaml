@@ -23,9 +23,8 @@ services:
       - ${OWS_CFG_MOUNT}:${CFG_PATH_PREFIX}
       - ${OWS_INVENTORY_JSON}:/env/config/inventory.json
       - ./compare-cfg.sh:/env/config/compare-cfg.sh
-      - ./coverage_test/:/tmp/coverage_test:Z
+      - ./:/dea-config/
       - ./artifacts:/mnt/artifacts
-      - ./check-coverage.sh:/tmp/check-coverage.sh
 
   postgres:
     image: kartoza/postgis:13-3.1
