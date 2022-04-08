@@ -4,6 +4,6 @@
 set -eu
 set -x
 
-find . -name "*.py" | xargs -n1 pylint -j 2 --reports no --disable=W,C,R
+find . -path '**/coverage_test' -prune -false -o -name '*.py' | xargs -n1 pylint -j 2 --reports no --disable=W,C,R
 
 set +x
