@@ -43,6 +43,18 @@ jobs:
         PYTHON_PATH: dev/services/wms/
         DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
 
+    - name: Dockerized cfg coverage Pytest (prod)
+      run: |
+        mv ./artifacts/coverage.xml ./artifacts/dev_coverage.xml
+
+        docker-compose -f docker-compose.ows.yaml up -d
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config;./check-coverage.sh"
+        docker-compose -f docker-compose.ows.yaml down
+      env:
+        OWS_CFG_PATH: prod/services/wms/ows_refactored
+        PYTHON_PATH: prod/services/wms/
+        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+
     - name: Upload All coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
