@@ -25,21 +25,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
 
-      - name: Dockerized cfg coverage Pytest (dev)
-        run: |
-          mkdir artifacts
-          chmod a+rw artifacts
+    - name: Dockerized cfg coverage Pytest (dev)
+      run: |
+        mkdir artifacts
+        chmod a+rw artifacts
 
-          docker-compose -f docker-compose.ows.yaml up -d
-          docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /tmp;./check-coverage.sh"
-          docker-compose -f docker-compose.ows.yaml down
+        docker-compose -f docker-compose.ows.yaml up -d
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /tmp;./check-coverage.sh"
+        docker-compose -f docker-compose.ows.yaml down
+      env:
+        OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored
+        OWS_INVENTORY_JSON: ./dev/services/wms/inventory.json
+        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+        WMS_CONFIG_FILE: ows_root_cfg.py
+        CFG_PATH_PREFIX: /env/config/ows_refactored
 
-      - name: Upload All coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          file:  ./artifacts/*.xml
-          fail_ci_if_error: false
+    - name: Upload All coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        file:  ./artifacts/*.xml
+        fail_ci_if_error: false
