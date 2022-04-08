@@ -25,11 +25,11 @@ fixes:
 
 # sample regex patterns
 ignore:
-  - "coverage_test"  # ignore folders and all its contents
-  - "**/*.yaml"         # glob accepted
-  - "**/*.csv"         # glob accepted
-  - "**/*.json"         # glob accepted
-  - "**/*.cfg"         # glob accepted
+  - "/dea-config/coverage_test"  # ignore folders and all its contents
+  - "/dea-config/**/*.yaml"         # glob accepted
+  - "/dea-config/**/*.csv"         # glob accepted
+  - "/dea-config/**/*.json"         # glob accepted
+  - "/dea-config/**/*.cfg"         # glob accepted
 
 comment:
   layout: "reach,diff,flags,tree"
