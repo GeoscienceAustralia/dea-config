@@ -690,91 +690,11 @@
                                     "id": "asD256"
                                 },
                                 {
-                                    "type": "wms",
-                                    "name": "Seasonal Fractional Cover",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "fcp_seasonal_rgb",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "fcp_seasonal_rgb",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "7as872"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "Annual Fractional Cover",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "fcp_rgb",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "fcp_rgb",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "SAD2AS"
-                                },
-                                {
                                     "id": "UBh43",
                                     "type": "group",
                                     "name": "Seasonal Fractional Cover summaries",
                                     "members": [
-                                        {
-                                            "type": "wms",
-                                            "name": "Seasonal Green Vegetation",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_seasonal_green_veg",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_seasonal_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "LKdf18"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Seasonal Non-Green Vegetation",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_seasonal_non_green_veg",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_seasonal_non_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "JILK24"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Seasonal Bare Ground",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_seasonal_bare_ground",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_seasonal_bare_ground",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "asDX45"
-                                        }
+
                                     ]
                                 },
                                 {
@@ -782,57 +702,7 @@
                                     "type": "group",
                                     "name": "Annual Fractional Cover summaries",
                                     "members": [
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Green Vegetation",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_green_veg",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "89Afe2"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Non-Green Vegetation",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_non_green_veg",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_non_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "kd29md"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Bare Ground",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_bare_ground",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_bare_ground",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "WER34v"
-                                        }
+
                                     ]
                                 }
                             ]
@@ -1103,70 +973,6 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_albers",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_albers",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jg9"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Annual Water Observation Frequency Statistics (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_annual_summary_statistics",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jh0"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Annual Clear Observation Statistics (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_annual_summary_clear",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary_clear",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jh2"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Annual Wet Observation Statistics (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_annual_summary_wet",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary_wet",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jh1"
-                                        },
-                                        {
-                                            "type": "wms",
                                             "name": "DEA Multi-Year Water Observation Frequency Statistics (Landsat, deprecated)",
                                             "url": "https://ows.dev.dea.ga.gov.au/",
                                             "opacity": 1,
@@ -1244,104 +1050,7 @@
                                                 "ignoreUnknownTileErrors": true
                                             },
                                             "id": "ODw8jp5"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA April-October Seasonal Water Observations (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_statistics",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jh3"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA April-October Clear Observation Statistics (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_clear",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jh5"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA April-October Wet Observation Statistics (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_wet",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jh4"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA November-March Seasonal Water Observations (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_statistics",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jj5"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA November-March Clear Observation Statistics (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_clear",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jk7"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA November-March Wet Observation Statistics (Landsat, deprecated)",
-                                            "url": "https://ows.dev.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_wet",
-                                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "ODw8jj1"
                                         }
-
                                     ]
                                 }
                             ]
@@ -1362,7 +1071,7 @@
                                         "partials": {
                                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
                                         }
-                                    },                                   
+                                    },
 				    "legends": [
                                         {
                                             "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
@@ -1382,7 +1091,7 @@
                                         "partials": {
                                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
                                         }
-                                    },                                   
+                                    },
 				    "legends": [
                                         {
                                             "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
@@ -3195,106 +2904,11 @@
                                     ]
                                 },
                                 {
-                                    "type": "wms",
-                                    "name": "Seasonal Fractional Cover",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "fcp_seasonal_rgb",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "fcp_seasonal_rgb",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "8uKmJ8",
-                                    "shareKeys": [
-                                        "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "Annual Fractional Cover",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "fcp_rgb",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "fcp_rgb",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "BLxe8I",
-                                    "shareKeys": [
-                                        "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover"
-                                    ]
-                                },
-                                {
                                     "id": "rTKE41",
                                     "type": "group",
                                     "name": "Seasonal Fractional Cover summaries",
                                     "members": [
-                                        {
-                                            "type": "wms",
-                                            "name": "Seasonal Green Vegetation",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_seasonal_green_veg",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_seasonal_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "BL3iXJ",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Green Vegetation"
-                                            ]
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Seasonal Non-Green Vegetation",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_seasonal_non_green_veg",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_seasonal_non_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "uqGrkN",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Non-Green Vegetation"
-                                            ]
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Seasonal Bare Ground",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_seasonal_bare_ground",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_seasonal_bare_ground",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "VScBTN",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries/Seasonal Bare Ground"
-                                            ]
-                                        }
+
                                     ],
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries"
@@ -3305,66 +2919,7 @@
                                     "type": "group",
                                     "name": "Annual Fractional Cover summaries",
                                     "members": [
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Green Vegetation",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_green_veg",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "7eJRQy",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Green Vegetation"
-                                            ]
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Non-Green Vegetation",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_non_green_veg",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_non_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "uFlnzu",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
-                                            ]
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Bare Ground",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_bare_ground",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_bare_ground",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "L1wwAP",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Bare Ground"
-                                            ]
-                                        }
+
                                     ],
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries"
@@ -3612,70 +3167,6 @@
                                     "members": [
                                         {
                                             "type": "wms",
-                                            "name": "DEA Water Observations (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_albers",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_albers",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jg9"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Annual Water Observation Frequency Statistics (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_annual_summary_statistics",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary_statistics",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jh0"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Annual Clear Observation Statistics (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_annual_summary_clear",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary_clear",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jh2"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA Annual Wet Observation Statistics (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_annual_summary_wet",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_annual_summary_wet",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jh1"
-                                        },
-                                        {
-                                            "type": "wms",
                                             "name": "DEA Multi-Year Water Observation Frequency Statistics (deprecated)",
                                             "url": "https://ows.dea.ga.gov.au/",
                                             "opacity": 1,
@@ -3753,102 +3244,6 @@
                                                 "ignoreUnknownTileErrors": true
                                             },
                                             "id": "O3Dw8jp5"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA April-October Seasonal Water Observations (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_statistics",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_statistics",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jh3"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA April-October Clear Observation Statistics (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_clear",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_clear",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jh5"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA April-October Wet Observation Statistics (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_apr_oct_summary_wet",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_apr_oct_summary_wet",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jh4"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA November-March Seasonal Water Observations (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_statistics",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_statistics",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "OD3w8jj5"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA November-March Clear Observation Statistics (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_clear",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_clear",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jk7"
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "DEA November-March Wet Observation Statistics (deprecated)",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "wofs_nov_mar_summary_wet",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "wofs_nov_mar_summary_wet",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "id": "O3Dw8jj1"
                                         }
                                     ]
                                 }
@@ -3864,7 +3259,7 @@
                                 "name": "DEA Wetlands Insight Tool (Ramsar Wetlands) v4.0.0",
                                 "shortReport": "<i>Click on a polygon to view the Wetlands Insight Tool plot </i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://cmi.ga.gov.au/data-products/dea/669/dea-wetlands-insight-tool-ramsar-wetlands'>DEA Wetlands Insight Tool (Ramsar Wetlands) product description</a></small>",
                                  "url": "https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_wit_ramsar_class_myear_3/1-0-0/1986--P35Y/ramsar_wetlands_WGS84_20190403_exploded_internal.geojson",
-                                 "description":"The Wetlands Insight Tool (Ramsar Wetlands) summarises how the amount of water, green vegetation, dry vegetation and bare soil varies over time within each wetland boundary. It provides the user with the ability to compare how the wetland is behaving now with how it has behaved in the past.  This allows users to identify how changes in water availability have affected the wetland. It achieves this by presenting a combined view of Water Observations from Space (DEA Water Observations), Tasseled Cap Wetness (DEA Wetness Percentiles) and Fractional Cover (DEA Fractional Cover) measurements from the Landsat series of satellites, summarised as a stacked line plot to show how that wetland has changed over time.", 
+                                 "description":"The Wetlands Insight Tool (Ramsar Wetlands) summarises how the amount of water, green vegetation, dry vegetation and bare soil varies over time within each wetland boundary. It provides the user with the ability to compare how the wetland is behaving now with how it has behaved in the past.  This allows users to identify how changes in water availability have affected the wetland. It achieves this by presenting a combined view of Water Observations from Space (DEA Water Observations), Tasseled Cap Wetness (DEA Wetness Percentiles) and Fractional Cover (DEA Fractional Cover) measurements from the Landsat series of satellites, summarised as a stacked line plot to show how that wetland has changed over time.",
                                  "info": [
                                    {
                                     "name":"Accuracy and limitations",
@@ -3876,12 +3271,12 @@
                                    },
                                    {
                                     "name":"Full Product Description",
-                                    "content":"Please visit the <a style=\"color:lightseagreen\" href='https://cmi.ga.gov.au/data-products/dea/669/dea-wetlands-insight-tool-ramsar-wetlands#basics'>DEA Wetlands Insight Tool (Ramsar Wetlands) Product Description</a></small> " 
-                                   }, 
+                                    "content":"Please visit the <a style=\"color:lightseagreen\" href='https://cmi.ga.gov.au/data-products/dea/669/dea-wetlands-insight-tool-ramsar-wetlands#basics'>DEA Wetlands Insight Tool (Ramsar Wetlands) Product Description</a></small> "
+                                   },
                                    {
                                     "name":"Licence",
-                                    "content":"DEA Wetlands Insight Tool plots and data are provided under a <a style=\"color:lightseagreen\" href='https://creativecommons.org/licenses/by/4.0/'>CC BY Attribution 4.0 International License</a></small>. Please comply with this licence when using the DEA Wetlands Insight Tool plots and data, and cite <a style=\"color:lightseagreen\" href='https://doi.org/10.1109/IGARSS.2019.8897806'>Dunn et al 2019</a></small> and <a style=\"color:lightseagreen\" href='https://doi.org/10.5281/zenodo.4446325'>Ai and Dunn 2021</a></small>.</br></br>Ramsar Wetland boundaries in the geojson vector file come from the Ramsar Wetlands of Australia Dataset under a <a style=\"color:lightseagreen\" href='https://creativecommons.org/licenses/by/3.0/au/deed.en'>Creative Commons Attribution 3.0 Australia Licence</a></small>. We created individual wetland polygons from the multipart Ramsar polygons in the dataset, modifying the <a style=\"color:lightseagreen\" href='http://www.environment.gov.au/fed/catalog/search/resource/details.page?uuid=%7B3F208CDF-28ED-4B1F-B965-A733EB58D952%7D'>Ramsar Wetlands of Australia Dataset</a></small>." 
-                                   }  
+                                    "content":"DEA Wetlands Insight Tool plots and data are provided under a <a style=\"color:lightseagreen\" href='https://creativecommons.org/licenses/by/4.0/'>CC BY Attribution 4.0 International License</a></small>. Please comply with this licence when using the DEA Wetlands Insight Tool plots and data, and cite <a style=\"color:lightseagreen\" href='https://doi.org/10.1109/IGARSS.2019.8897806'>Dunn et al 2019</a></small> and <a style=\"color:lightseagreen\" href='https://doi.org/10.5281/zenodo.4446325'>Ai and Dunn 2021</a></small>.</br></br>Ramsar Wetland boundaries in the geojson vector file come from the Ramsar Wetlands of Australia Dataset under a <a style=\"color:lightseagreen\" href='https://creativecommons.org/licenses/by/3.0/au/deed.en'>Creative Commons Attribution 3.0 Australia Licence</a></small>. We created individual wetland polygons from the multipart Ramsar polygons in the dataset, modifying the <a style=\"color:lightseagreen\" href='http://www.environment.gov.au/fed/catalog/search/resource/details.page?uuid=%7B3F208CDF-28ED-4B1F-B965-A733EB58D952%7D'>Ramsar Wetlands of Australia Dataset</a></small>."
+                                   }
                                  ],
                                  "featureInfoTemplate": {
                                    "template": "<p>{{WETLAND_NA}} is located in <a style=\"color:lightseagreen\" href='{{#terria.urlEncode}}http://www.environment.gov.au/cgi-bin/wetlands/ramsardetails.pl?refcode={{REFCODE}}{{/terria.urlEncode}}'>{{RAMSAR_NAM}}</a>.</br>This wetland complex was listed as site number {{REFCODE}} in the Australian Ramsar Wetlands <a style=\"color:lightseagreen\" href='{{#terria.urlEncode}}https://www.awe.gov.au/water/wetlands/australian-wetlands-database/australian-ramsar-wetlands{{/terria.urlEncode}}'>Catalogue</a> on {{#terria.formatDateTime}}{format: \"dS mmmm yyyy\"}{{DESIGNATIO}}{{/terria.formatDateTime}}.</br>For additional metadata please click the 'Show Raw Data' button above.</p> <figure> <img style='width: 100%' src='{{#terria.urlEncode}}https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_wit_ramsar_class_myear_3/1-0-0/1986--P35Y/{{FeatureID}}.png{{/terria.urlEncode}}'/> <figcaption>The Wetlands Insight Tool plot for {{WETLAND_NA}} feature {{FeatureID}} shows the change in the observed percentage of the wetland polygon classified as bare soil, dry vegetation, green vegetation, wet and open water.</br>White hashed areas on the plot indicate low-data periods where less than four clear observations in a 12-month period are available for the polygon.</figcaption> </figure> <p/> Download: <a style=\"color:lightseagreen\" href='{{#terria.urlEncode}}https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_wit_ramsar_class_myear_3/1-0-0/1986--P35Y/{{FeatureID}}.png{{/terria.urlEncode}}'>chart image</a> | <a style=\"color:lightseagreen\" href='{{#terria.urlEncode}}https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_wit_ramsar_class_myear_3/1-0-0/1986--P35Y/{{FeatureID}}.csv{{/terria.urlEncode}}'>timeseries csv</a><p/>"

@@ -711,45 +711,6 @@
                                     ]
                                 },
                                 {
-                                    "type": "wms",
-                                    "name": "Seasonal Fractional Cover",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "fcp_seasonal_rgb",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "fcp_seasonal_rgb",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "8uKmJ8",
-                                    "shareKeys": [
-                                        "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "Annual Fractional Cover",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "fcp_rgb",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "fcp_rgb",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "BLxe8I",
-                                    "shareKeys": [
-                                        "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover"
-                                    ]
-                                },
-                                {
                                     "id": "rTKE41",
                                     "type": "group",
                                     "name": "Seasonal Fractional Cover summaries",
@@ -821,66 +782,6 @@
                                     "type": "group",
                                     "name": "Annual Fractional Cover summaries",
                                     "members": [
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Green Vegetation",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_green_veg",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "7eJRQy",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Green Vegetation"
-                                            ]
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Non-Green Vegetation",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_non_green_veg",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_non_green_veg",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "uFlnzu",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Non-Green Vegetation"
-                                            ]
-                                        },
-                                        {
-                                            "type": "wms",
-                                            "name": "Annual Bare Ground",
-                                            "url": "https://ows.dea.ga.gov.au/",
-                                            "opacity": 1,
-                                            "layers": "fcp_bare_ground",
-                                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                            "linkedWcsCoverage": "fcp_bare_ground",
-                                            "chartColor": "white",
-                                            "leafletUpdateInterval": 750,
-                                            "chartType": "momentPoints",
-                                            "tileErrorHandlingOptions": {
-                                                "ignoreUnknownTileErrors": true
-                                            },
-                                            "dateFormat": "'Year: 'yyyy",
-                                            "id": "L1wwAP",
-                                            "shareKeys": [
-                                                "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries/Annual Bare Ground"
-                                            ]
-                                        }
                                     ],
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries"
