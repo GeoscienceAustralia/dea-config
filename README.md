@@ -40,16 +40,17 @@ then bring up the testing tool
 
 ### ows config testing
 First, create an `.env` file for the `docker-compose` setup
+
 ```bash
     vi .env
     # inside .env
-OWS_CFG_MOUNT=./dev/services/wms/ows_refactored
-OWS_INVENTORY_JSON=./dev/services/wms/inventory.json
+OWS_CFG_PATH=dev/services/wms/ows_refactored
 DATACUBE_OWS_CFG=ows_refactored.ows_root_cfg.ows_cfg
-WMS_CONFIG_FILE=ows_root_cfg.py
-CFG_PATH_PREFIX=/env/config/ows_refactored
+PYTHON_PATH=dev/services/wms/
 ```
+
 then bring up the testing tool
+
 ```bash
     docker-compose -f docker-compose.ows.yaml up -d
     docker exec -it dea-config_ows_1 bash

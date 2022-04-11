@@ -30,11 +30,9 @@ jobs:
       run: |
         docker-compose -f docker-compose.ows.yaml up -d
         docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /env/config; ./compare-cfg.sh"
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config; ./compare-cfg.sh"
         docker-compose -f docker-compose.ows.yaml down
       env:
-        OWS_CFG_MOUNT: ./dev/services/wms/ows_refactored
-        OWS_INVENTORY_JSON: ./dev/services/wms/inventory.json
+        OWS_CFG_PATH: dev/services/wms/ows_refactored
+        PYTHON_PATH: dev/services/wms/
         DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
-        WMS_CONFIG_FILE: ows_root_cfg.py
-        CFG_PATH_PREFIX: /env/config/ows_refactored

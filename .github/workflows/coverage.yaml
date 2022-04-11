@@ -1,0 +1,62 @@
+---
+name: CFG code coverage
+
+on:
+  pull_request:
+    branches:
+        - 'master'
+    paths:
+      - '**'
+      - '.github/workflows/coverage.yaml'
+      - 'dev/wms/ows_refactored'
+      - 'prod/wms/ows_refactored'
+
+  push:
+    branches:
+      - 'master'
+    paths:
+      - '**'
+      - '.github/workflows/coverage.yaml'
+      - 'dev/wms/ows_refactored'
+      - 'prod/wms/ows_refactored'
+
+jobs:
+  cfg-code-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+
+    - name: Dockerized cfg coverage Pytest (dev)
+      run: |
+        mkdir artifacts
+        chmod a+rw artifacts
+
+        docker-compose -f docker-compose.ows.yaml up -d
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config;./check-coverage.sh"
+        docker-compose -f docker-compose.ows.yaml down
+      env:
+        OWS_CFG_PATH: dev/services/wms/ows_refactored
+        PYTHON_PATH: dev/services/wms/
+        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+
+    - name: Dockerized cfg coverage Pytest (prod)
+      run: |
+        mv ./artifacts/coverage.xml ./artifacts/dev_coverage.xml
+
+        docker-compose -f docker-compose.ows.yaml up -d
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config;./check-coverage.sh"
+        docker-compose -f docker-compose.ows.yaml down
+      env:
+        OWS_CFG_PATH: prod/services/wms/ows_refactored
+        PYTHON_PATH: prod/services/wms/
+        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+
+    - name: Upload All coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        file:  ./artifacts/*.xml
+        fail_ci_if_error: false
