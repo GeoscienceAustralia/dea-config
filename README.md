@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/GeoscienceAustralia/dea-config/branch/master/graph/badge.svg?token=zuk7FaS1HA)](https://codecov.io/gh/GeoscienceAustralia/dea-config)
 # DEA Config
 Config files for dea services
 
