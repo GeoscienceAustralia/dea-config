@@ -688,22 +688,6 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "asD256"
-                                },
-                                {
-                                    "id": "UBh43",
-                                    "type": "group",
-                                    "name": "Seasonal Fractional Cover summaries",
-                                    "members": [
-
-                                    ]
-                                },
-                                {
-                                    "id": "Mwn637",
-                                    "type": "group",
-                                    "name": "Annual Fractional Cover summaries",
-                                    "members": [
-
-                                    ]
                                 }
                             ]
                         },
@@ -2901,28 +2885,6 @@
                                     "id": "mYnkqY",
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations"
-                                    ]
-                                },
-                                {
-                                    "id": "rTKE41",
-                                    "type": "group",
-                                    "name": "Seasonal Fractional Cover summaries",
-                                    "members": [
-
-                                    ],
-                                    "shareKeys": [
-                                        "Root Group/Vegetation/Fractional Cover/Seasonal Fractional Cover summaries"
-                                    ]
-                                },
-                                {
-                                    "id": "nI2Kfn",
-                                    "type": "group",
-                                    "name": "Annual Fractional Cover summaries",
-                                    "members": [
-
-                                    ],
-                                    "shareKeys": [
-                                        "Root Group/Vegetation/Fractional Cover/Annual Fractional Cover summaries"
                                     ]
                                 }
                             ],
