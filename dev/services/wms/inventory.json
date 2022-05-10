@@ -540,9 +540,9 @@
             ]
         },
         {
-            "layer": "mangrove_cover_v2_0_2",
+            "layer": "ga_ls_mangrove_cover_cyear_3",
             "product": [
-                "mangrove_cover"
+                "ga_ls_mangrove_cover_cyear_3"
             ],
             "styles_count": 1,
             "styles_list": [
