@@ -7,12 +7,10 @@ fc_percentile_flags = [
     },
 ]
 
-fc_pq_mask = [
+fc_percentile_pq_mask = [
     {
         "band": "land",
-        "flags": {
-            "sea": True,
-        },
         "invert": True,
+        "values": [0],
     },
 ]

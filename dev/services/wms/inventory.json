@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 71,
+    "total_layers_count": 72,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -537,6 +537,26 @@
                 "bare_ground_c3_unmasked",
                 "green_veg_c3_unmasked",
                 "non_green_veg_c3_unmasked"
+            ]
+        },
+        {
+            "layer": "ga_ls_fc_pc_cyear_3",
+            "product": [
+                "ga_ls_fc_pc_cyear_3"
+            ],
+            "styles_count": 11,
+            "styles_list": [
+                "green_veg_10",
+                "green_veg_50",
+                "green_veg_90",
+                "non_green_veg_10",
+                "non_green_veg_50",
+                "non_green_veg_90",
+                "bare_ground_10",
+                "bare_ground_50",
+                "bare_ground_90",
+                "qa",
+                "fc_rgb"
             ]
         },
         {

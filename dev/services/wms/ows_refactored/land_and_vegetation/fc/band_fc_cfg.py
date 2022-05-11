@@ -1,13 +1,14 @@
 bands_fc_percentile = {
-    "PV_PC_10": [],
-    "PV_PC_50": [],
-    "PV_PC_90": [],
-    "NPV_PC_10": [],
-    "NPV_PC_50": [],
-    "NPV_PC_90": [],
-    "BS_PC_10": [],
-    "BS_PC_50": [],
-    "BS_PC_90": [],
+    "pv_pc_10": [],
+    "pv_pc_50": [],
+    "pv_pc_90": [],
+    "npv_pc_10": [],
+    "npv_pc_50": [],
+    "npv_pc_90": [],
+    "bs_pc_10": [],
+    "bs_pc_50": [],
+    "bs_pc_90": [],
+    "qa": [],
 }
 
 bands_fc_3 = {
