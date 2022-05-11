@@ -1,4 +1,5 @@
-from ows_refactored.land_and_vegetation.fc.flag_fc_cfg import fc_pq_mask
+from ows_refactored.land_and_vegetation.fc.flag_fc_cfg import \
+    fc_percentile_pq_mask
 from ows_refactored.ows_legend_cfg import (
     legend_idx_0_100_pixel_fc_25ticks, legend_idx_0_100_pixel_fc_bs_25ticks,
     legend_idx_0_100_pixel_fc_ngv_25ticks)
@@ -194,43 +195,6 @@ styles_fc_c3_unmasked = [
     style_fc_bs_c3_unmasked, style_fc_gv_c3_unmasked, style_fc_ngv_c3_unmasked
 ]
 
-style_fc_simple_rgb = {
-    "name": "simple_rgb",
-    "title": "Simple RGB",
-    "abstract": "Simple true-colour image, using the red, green and blue bands",
-    "components": {
-        "red": {"BS_PC_50": 1.0},
-        "green": {"PV_PC_50": 1.0},
-        "blue": {"NPV_PC_50": 1.0},
-    },
-    "scale_range": [0.0, 100.0],
-    "pq_masks": fc_pq_mask,
-}
-
-style_fc_simple = {
-    "name": "simple_fc",
-    "title": "Fractional Cover",
-    "abstract": "Fractional cover representation, with green vegetation in green, dead vegetation in blue, and bare soil in red",
-    "components": {"red": {"BS": 1.0}, "green": {"PV": 1.0}, "blue": {"NPV": 1.0}},
-    "scale_range": [0.0, 100.0],
-    "pq_masks": [
-        {
-            "band": "water",
-            "flags": {"dry": True},
-        },
-        {
-            "band": "water",
-            "flags": {
-                "terrain_or_low_angle": False,
-                "high_slope": False,
-                "cloud_shadow": False,
-                "cloud": False,
-                "sea": False,
-            }
-        },
-    ],
-}
-
 style_fc_gv_10 = {
     "name": "green_veg_10",
     "title": "10th Percentile",
@@ -239,11 +203,11 @@ style_fc_gv_10 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "PV_PC_10",
+            "band": "pv_pc_10",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["PV_PC_10"],
+    "needed_bands": ["pv_pc_10"],
     "color_ramp": [
         {
             "value": 0,
@@ -266,7 +230,7 @@ style_fc_gv_10 = {
             "color": "#006837",
         },
     ],
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
     "legend": legend_idx_0_100_pixel_fc_25ticks,
 }
 
@@ -278,11 +242,11 @@ style_fc_gv_50 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "PV_PC_50",
+            "band": "pv_pc_50",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["PV_PC_50"],
+    "needed_bands": ["pv_pc_50"],
     "color_ramp": [
         {"value": 0, "color": "#ffffcc"},
         {"value": 25, "color": "#c2e699"},
@@ -292,7 +256,7 @@ style_fc_gv_50 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
 }
 
 style_fc_gv_90 = {
@@ -303,11 +267,11 @@ style_fc_gv_90 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "PV_PC_90",
+            "band": "pv_pc_90",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["PV_PC_90"],
+    "needed_bands": ["pv_pc_90"],
     "color_ramp": [
         {"value": 0, "color": "#ffffcc"},
         {"value": 25, "color": "#c2e699"},
@@ -317,7 +281,7 @@ style_fc_gv_90 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
 }
 
 style_fc_ngv_10 = {
@@ -328,11 +292,11 @@ style_fc_ngv_10 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "NPV_PC_10",
+            "band": "npv_pc_10",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["NPV_PC_10"],
+    "needed_bands": ["npv_pc_10"],
     "color_ramp": [
         {
             "value": 0,
@@ -354,7 +318,7 @@ style_fc_ngv_10 = {
     ],
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
 }
 
 style_fc_ngv_50 = {
@@ -365,11 +329,11 @@ style_fc_ngv_50 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "NPV_PC_50",
+            "band": "npv_pc_50",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["NPV_PC_50"],
+    "needed_bands": ["npv_pc_50"],
     "color_ramp": [
         {"value": 0, "color": "#ffffd4"},
         {"value": 25, "color": "#fed98e"},
@@ -379,7 +343,7 @@ style_fc_ngv_50 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
 }
 
 style_fc_ngv_90 = {
@@ -390,11 +354,11 @@ style_fc_ngv_90 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "NPV_PC_90",
+            "band": "npv_pc_90",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["NPV_PC_90"],
+    "needed_bands": ["npv_pc_90"],
     "color_ramp": [
         {"value": 0, "color": "#ffffd4"},
         {"value": 25, "color": "#fed98e"},
@@ -404,7 +368,7 @@ style_fc_ngv_90 = {
     ],
     # old behaviour was wrong.  This is what Leo and Emma requested
     "legend": legend_idx_0_100_pixel_fc_ngv_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
 }
 
 style_fc_bs_10 = {
@@ -415,11 +379,11 @@ style_fc_bs_10 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "BS_PC_10",
+            "band": "bs_pc_10",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["BS_PC_10"],
+    "needed_bands": ["bs_pc_10"],
     "color_ramp": [
         {
             "value": 0,
@@ -442,7 +406,7 @@ style_fc_bs_10 = {
             "color": "#7a0177",
         },
     ],
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
     # Emulates what we had previously
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
 }
@@ -455,11 +419,11 @@ style_fc_bs_50 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "BS_PC_50",
+            "band": "bs_pc_50",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["BS_PC_50"],
+    "needed_bands": ["bs_pc_50"],
     "color_ramp": [
         {"value": 0, "color": "#feebe2"},
         {"value": 25, "color": "#fbb4b9"},
@@ -469,7 +433,7 @@ style_fc_bs_50 = {
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
 }
 
 style_fc_bs_90 = {
@@ -480,11 +444,11 @@ style_fc_bs_90 = {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
         "kwargs": {
-            "band": "BS_PC_90",
+            "band": "bs_pc_90",
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["BS_PC_90"],
+    "needed_bands": ["bs_pc_90"],
     "color_ramp": [
         {"value": 0, "color": "#feebe2"},
         {"value": 25, "color": "#fbb4b9"},
@@ -494,7 +458,57 @@ style_fc_bs_90 = {
     ],
     # Old behaviour was wrong - this is what Leo and Emma have requested.
     "legend": legend_idx_0_100_pixel_fc_bs_25ticks,
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
+}
+
+style_fc_pc_qa = {
+    "name": "qa",
+    "title": "Quality Assurance",
+    "abstract": "Quality Assurance",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "qa",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["qa"],
+    "value_map": {
+        "qa": [
+            {
+                "title": "Insufficient observations wet",
+                "abstract": "",
+                "values": [
+                    0,
+                ],
+                "color": "#7884A2",
+            },
+            {
+                "title": "Insufficient observations dry",
+                "abstract": "",
+                "values": [
+                    1,
+                ],
+                "color": "#A29678",
+            },
+            {
+                "title": "Sufficient observations",
+                "abstract": "",
+                "values": [
+                    2,
+                ],
+                "color": "#84A278",
+            },
+
+        ],
+    },
+    "pq_masks": fc_percentile_pq_mask,
+    "legend": {
+        "show_legend": True,
+        "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
+    },
+
 }
 
 style_fc_rgb = {
@@ -502,32 +516,28 @@ style_fc_rgb = {
     "title": "Three-band fractional cover",
     "abstract": "Fractional cover medians - red is bare soil, green is green vegetation and blue is non-green vegetation",
     "components": {
-        "red": {"BS_PC_50": 1.0},
-        "green": {"PV_PC_50": 1.0},
-        "blue": {"NPV_PC_50": 1.0},
+        "red": {"bs_pc_50": 1.0},
+        "green": {"pv_pc_50": 1.0},
+        "blue": {"npv_pc_50": 1.0},
     },
     "scale_range": [0.0, 100.0],
-    "pq_masks": fc_pq_mask,
+    "pq_masks": fc_percentile_pq_mask,
     "legend": {
         "show_legend": True,
         "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
     },
 }
 
-styles_fc_gv_list = [
+styles_fc_pc_list = [
     style_fc_gv_10,
     style_fc_gv_50,
     style_fc_gv_90,
-]
-
-styles_fc_ngv_list = [
     style_fc_ngv_10,
     style_fc_ngv_50,
     style_fc_ngv_90,
-]
-
-styles_fc_bare_list = [
     style_fc_bs_10,
     style_fc_bs_50,
     style_fc_bs_90,
+    style_fc_pc_qa,
+    style_fc_rgb,
 ]
