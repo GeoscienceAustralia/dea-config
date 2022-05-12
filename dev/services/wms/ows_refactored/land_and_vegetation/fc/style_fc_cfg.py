@@ -197,7 +197,7 @@ styles_fc_c3_unmasked = [
 
 style_fc_gv_10 = {
     "name": "green_veg_10",
-    "title": "10th Percentile",
+    "title": "Green Vegetation 10th Percentile",
     "abstract": "10th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -236,7 +236,7 @@ style_fc_gv_10 = {
 
 style_fc_gv_50 = {
     "name": "green_veg_50",
-    "title": "50th Percentile",
+    "title": "Green Vegetation 50th Percentile",
     "abstract": "50th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -261,7 +261,7 @@ style_fc_gv_50 = {
 
 style_fc_gv_90 = {
     "name": "green_veg_90",
-    "title": "90th Percentile",
+    "title": "Green Vegetation 90th Percentile",
     "abstract": "90th Percentile of Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -286,7 +286,7 @@ style_fc_gv_90 = {
 
 style_fc_ngv_10 = {
     "name": "non_green_veg_10",
-    "title": "10th Percentile",
+    "title": "Non-green Vegetation 10th Percentile",
     "abstract": "10th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -323,7 +323,7 @@ style_fc_ngv_10 = {
 
 style_fc_ngv_50 = {
     "name": "non_green_veg_50",
-    "title": "50th Percentile",
+    "title": "Non-green Vegetation 50th Percentile",
     "abstract": "50th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -348,7 +348,7 @@ style_fc_ngv_50 = {
 
 style_fc_ngv_90 = {
     "name": "non_green_veg_90",
-    "title": "90th Percentile",
+    "title": "Non-green Vegetation 90th Percentile",
     "abstract": "90th Percentile of Non Green Vegetation",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -373,7 +373,7 @@ style_fc_ngv_90 = {
 
 style_fc_bs_10 = {
     "name": "bare_ground_10",
-    "title": "10th Percentile",
+    "title": "Bare soil 10th Percentile",
     "abstract": "10th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -413,7 +413,7 @@ style_fc_bs_10 = {
 
 style_fc_bs_50 = {
     "name": "bare_ground_50",
-    "title": "50th Percentile",
+    "title": "Bare soil 50th Percentile",
     "abstract": "50th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -438,7 +438,7 @@ style_fc_bs_50 = {
 
 style_fc_bs_90 = {
     "name": "bare_ground_90",
-    "title": "90th Percentile",
+    "title": "Bare soil 90th Percentile",
     "abstract": "90th Percentile of Bare Soil",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -504,11 +504,6 @@ style_fc_pc_qa = {
         ],
     },
     "pq_masks": fc_percentile_pq_mask,
-    "legend": {
-        "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/fractional-cover/FC_legend.png",
-    },
-
 }
 
 style_fc_rgb = {
