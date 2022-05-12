@@ -524,6 +524,7 @@ style_fc_rgb = {
 }
 
 styles_fc_pc_list = [
+    style_fc_rgb,
     style_fc_gv_10,
     style_fc_gv_50,
     style_fc_gv_90,
@@ -534,5 +535,4 @@ styles_fc_pc_list = [
     style_fc_bs_50,
     style_fc_bs_90,
     style_fc_pc_qa,
-    style_fc_rgb,
 ]
