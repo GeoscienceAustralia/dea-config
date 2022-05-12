@@ -691,7 +691,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "Annual Fractional Cover Summaries - Calendar Year (Landsat)",
+                                    "name": "DEA Fractional Cover Percentiles Calendar Year (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_fc_pc_cyear_3",

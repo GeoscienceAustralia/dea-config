@@ -7,7 +7,7 @@ from ows_refactored.land_and_vegetation.fc.style_fc_cfg import \
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 layer = {
-    "title": "Annual Fractional Cover Summaries - Calendar Year (Landsat)",
+    "title": "DEA Fractional Cover Percentiles Calendar Year (Landsat)",
     "name": "ga_ls_fc_pc_cyear_3",
     "abstract": """Fractional Cover 30m Percentiles 3.0.0 (Landsat, Annual)
 Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
