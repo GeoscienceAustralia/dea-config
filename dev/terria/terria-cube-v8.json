@@ -688,6 +688,24 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "asD256"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "Annual Fractional Cover Summaries - Calendar Year (Landsat)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_fc_pc_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_fc_pc_cyear_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "fccy256",
+                                    "dateFormat": "'Year: 'yyyy"
                                 }
                             ]
                         },
