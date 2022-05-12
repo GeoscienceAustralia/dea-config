@@ -631,15 +631,21 @@
             ]
         },
         {
-            "layer": "ga_ls_tcw_percentiles_2",
+            "layer": "ga_ls_tc_pc_cyear_3",
             "product": [
-                "ga_ls_tcw_percentiles_2"
+                "ga_ls_tc_pc_cyear_3"
             ],
-            "styles_count": 3,
+            "styles_count": 9,
             "styles_list": [
-                "tcw_10_percentile",
-                "tcw_50_percentile",
-                "tcw_90_percentile"
+                "wet_10_percentile",
+                "wet_50_percentile",
+                "wet_90_percentile",
+                "green_10_percentile",
+                "green_50_percentile",
+                "green_90_percentile",
+                "bright_10_percentile",
+                "bright_50_percentile",
+                "bright_90_percentile"
             ]
         },
         {
