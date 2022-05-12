@@ -98,7 +98,7 @@ legend_idx_0_100_pixel_fc_ngv_25ticks = {
     "end": 100,
     "units": "% / pixel",
     "ticks_every": 25,
-    "title": "Percentage of Pixel that is Green Vegetation",
+    "title": "Percentage of Pixel that is Non-green Vegetation",
     "rcParams": {"font.size": 9},
 }
 
