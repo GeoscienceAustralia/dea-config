@@ -1147,17 +1147,18 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Wetness Percentiles",
+                                    "name": "DEA Tasseled Cap Indices Percentiles - Calendar Year (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls_tcw_percentiles_2",
+                                    "layers": "ga_ls_tc_pc_cyear_3",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
+                                    "linkedWcsCoverage": "ga_ls_tc_pc_cyear_3",
                                     "chartColor": "white",
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": "'Year: 'yyyy",
                                     "id": "kwer37"
                                 }
                             ]
