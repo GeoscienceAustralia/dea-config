@@ -21,17 +21,17 @@ wet_legend = {
 }
 
 green_legend = {
-    "begin": -1200,
-    "end": 0,
-    "tick_every": 120,
+    "begin": 0,
+    "end": 2000,
+    "tick_every": 200,
     "title": "Tasseled Cap Greenness",
     "rcParams": {"font.size": 9},
 }
 
 bright_legend = {
     "begin": 0,
-    "end": 2000,
-    "tick_every": 200,
+    "end": 4000,
+    "tick_every": 400,
     "title": "Tasseled Cap Brightness",
     "rcParams": {"font.size": 9},
 }
@@ -100,8 +100,8 @@ style_tcg_10 = {
             "band": "green_pc_10",
         },
     },
-    "range": [-1200.0, 0.0],
-    "mpl_ramp": "YlGn_r",
+    "range": [0, 2000],
+    "mpl_ramp": "YlGn",
     "legend": green_legend
 }
 
@@ -117,8 +117,8 @@ style_tcg_50 = {
             "band": "green_pc_50",
         },
     },
-    "range": [-1200.0, 0.0],
-    "mpl_ramp": "YlGn_r",
+    "range": [0, 2000],
+    "mpl_ramp": "YlGn",
     "legend": green_legend
 }
 
@@ -134,8 +134,8 @@ style_tcg_90 = {
             "band": "green_pc_90",
         },
     },
-    "range": [-1200.0, 0.0],
-    "mpl_ramp": "YlGn_r",
+    "range": [0, 2000],
+    "mpl_ramp": "YlGn",
     "legend": green_legend
 }
 
@@ -151,14 +151,14 @@ style_tcb_10 = {
             "band": "bright_pc_10",
         },
     },
-    "range": [0, 2000.0],
-    "mpl_ramp": "Wistia_r",
+    "range": [0, 4000.0],
+    "mpl_ramp": "Wistia",
     "legend": bright_legend
 }
 
 style_tcb_50 = {
     "name": "bright_50_percentile",
-    "title": "Tasseled Cap Brightness 10th Percentile",
+    "title": "Tasseled Cap Brightness 50th Percentile",
     "abstract": "The 50th Percentile of Tasseled Cap Brightness Index",
     "needed_bands": ["bright_pc_50"],
     "index_function": {
@@ -168,8 +168,8 @@ style_tcb_50 = {
             "band": "bright_pc_50",
         },
     },
-    "range": [0, 2000.0],
-    "mpl_ramp": "Wistia_r",
+    "range": [0, 4000.0],
+    "mpl_ramp": "Wistia",
     "legend": bright_legend
 }
 
@@ -185,8 +185,8 @@ style_tcb_90 = {
             "band": "bright_pc_90",
         },
     },
-    "range": [0, 2000.0],
-    "mpl_ramp": "Wistia_r",
+    "range": [0, 4000.0],
+    "mpl_ramp": "Wistia",
     "legend": bright_legend
 }
 
