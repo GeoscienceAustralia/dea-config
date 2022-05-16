@@ -195,7 +195,7 @@ layers = {
     "abstract": "",
     "layers": [
         {
-            "title": "DEA Tasseled Cap Indices Percentiles - Calendar Year (Landsat)",
+            "title": "DEA Tasseled Cap Indices Percentiles Calendar Year (Landsat)",
             "name": "ga_ls_tc_pc_cyear_3",
             "abstract": """Tasseled Cap Indices Percentiles 30m 1.0.0
 
