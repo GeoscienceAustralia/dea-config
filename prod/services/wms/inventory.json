@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 68,
+    "total_layers_count": 69,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -511,9 +511,29 @@
             ]
         },
         {
-            "layer": "mangrove_cover_v2_0_2",
+            "layer": "ga_ls_fc_pc_cyear_3",
             "product": [
-                "mangrove_cover"
+                "ga_ls_fc_pc_cyear_3"
+            ],
+            "styles_count": 11,
+            "styles_list": [
+                "green_veg_10",
+                "green_veg_50",
+                "green_veg_90",
+                "non_green_veg_10",
+                "non_green_veg_50",
+                "non_green_veg_90",
+                "bare_ground_10",
+                "bare_ground_50",
+                "bare_ground_90",
+                "qa",
+                "fc_rgb"
+            ]
+        },
+        {
+            "layer": "ga_ls_mangrove_cover_cyear_3",
+            "product": [
+                "ga_ls_mangrove_cover_cyear_3"
             ],
             "styles_count": 1,
             "styles_list": [
@@ -582,15 +602,21 @@
             ]
         },
         {
-            "layer": "ga_ls_tcw_percentiles_2",
+            "layer": "ga_ls_tc_pc_cyear_3",
             "product": [
-                "ga_ls_tcw_percentiles_2"
+                "ga_ls_tc_pc_cyear_3"
             ],
-            "styles_count": 3,
+            "styles_count": 9,
             "styles_list": [
-                "tcw_10_percentile",
-                "tcw_50_percentile",
-                "tcw_90_percentile"
+                "wet_10_percentile",
+                "wet_50_percentile",
+                "wet_90_percentile",
+                "green_10_percentile",
+                "green_50_percentile",
+                "green_90_percentile",
+                "bright_10_percentile",
+                "bright_50_percentile",
+                "bright_90_percentile"
             ]
         },
         {

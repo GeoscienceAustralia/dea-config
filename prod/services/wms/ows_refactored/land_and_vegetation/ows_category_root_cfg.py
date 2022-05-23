@@ -11,7 +11,7 @@ category_layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.land_and_vegetation.ows_mangrove_cfg.layer",
+            "include": "ows_refactored.land_and_vegetation.ows_c3_mangrove_cfg.layer",
             "type": "python",
         },
         {

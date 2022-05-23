@@ -56,13 +56,3 @@ reslim_for_mstp = {
     },
     "wcs": common_wcs_limits,
 }
-
-# N.B. not used in prod.
-reslim_wms_max_datasets_only = {
-    "wms": {
-        "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_factor": 500.0,
-        "max_datasets": 6,
-    },
-    "wcs": common_wcs_limits,
-}
