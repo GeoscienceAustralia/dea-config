@@ -25,6 +25,13 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
 
+    - name: Run tab detector
+      run: |
+        if grep -Pn "\t" dev/terria/*.json; then
+            echo 'Please replace tab with white spaces as per the lines indicated'
+            exit 1
+        fi
+
     - name: Run Json Linter
       run: |
         npm install jsonlint -g
