@@ -709,6 +709,27 @@
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations"
                                     ]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Fractional Cover Percentiles Calendar Year (Landsat)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_fc_pc_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_fc_pc_cyear_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "fccy256",
+                                    "shareKeys": [
+                                        "Root Group/Vegetation/Fractional Cover/Calendar Year Fractional Cover observations"
+                                    ],
+                                    "dateFormat": "'Year: 'yyyy"
                                 }
                             ],
                             "shareKeys": ["Root Group/Vegetation/Fractional Cover"]
@@ -723,9 +744,9 @@
                                     "name": "DEA Mangroves (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "mangrove_cover_v2_0_2",
+                                    "layers": "ga_ls_mangrove_cover_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "mangrove_cover_v2_0_2",
+                                    "linkedWcsCoverage": "ga_ls_mangrove_cover_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
@@ -964,12 +985,12 @@
                                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
                                         }
                                     },
-				    "legends": [
+                                    "legends": [
                                         {
                                             "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
-					    "imageScaling": 0.5
+                                            "imageScaling": 0.5
                                         }
-				    ],
+                                    ],
                                     "id": "DGGjbr",
                                     "shareKeys": [
                                         "Root Group/Surface Water/Digital Earth Australia Waterbodies/Digital Earth Australia Waterbodies v2"
@@ -987,12 +1008,12 @@
                                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
                                         }
                                     },
-				    "legends": [
+                                    "legends": [
                                         {
                                             "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
-					    "imageScaling": 0.5
+                                            "imageScaling": 0.5
                                         }
-				    ],
+                                    ],
                                     "id": "DGGjbt",
                                     "shareKeys": [
                                         "Root Group/Surface Water/Digital Earth Australia Waterbodies/Digital Earth Australia Waterbodies v1"
@@ -1060,6 +1081,24 @@
                                     "id": "hbmz55",
                                     "shareKeys": [
                                         "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Wetness Percentiles"
+                                    ]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Tasseled Cap Indices Percentiles Calendar Year (Landsat)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_tc_pc_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_tc_pc_cyear_3",
+                                    "chartColor": "white",
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "hbmzp5",
+                                    "shareKeys": [
+                                        "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Indices Percentiles"
                                     ]
                                 }
                             ],

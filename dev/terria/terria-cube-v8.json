@@ -1147,6 +1147,22 @@
                             "members": [
                                 {
                                     "type": "wms",
+                                    "name": "DEA Wetness Percentiles",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_tcw_percentiles_2",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
+                                    "chartColor": "white",
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "kwerw7"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "DEA Tasseled Cap Indices Percentiles Calendar Year (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
@@ -2887,6 +2903,27 @@
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations"
                                     ]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Fractional Cover Percentiles Calendar Year (Landsat)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_fc_pc_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_fc_pc_cyear_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "fccY356",
+                                    "shareKeys": [
+                                        "Root Group/Vegetation/Fractional Cover/Calendar Year Fractional Cover observations"
+                                    ],
+                                    "dateFormat": "'Year: 'yyyy"
                                 }
                             ],
                             "shareKeys": ["Root Group/Vegetation/Fractional Cover"]
@@ -2901,9 +2938,9 @@
                                     "name": "DEA Mangroves (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "mangrove_cover_v2_0_2",
+                                    "layers": "ga_ls_mangrove_cover_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "mangrove_cover_v2_0_2",
+                                    "linkedWcsCoverage": "ga_ls_mangrove_cover_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
@@ -3269,6 +3306,24 @@
                                     "id": "hbmz55",
                                     "shareKeys": [
                                         "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Wetness Percentiles"
+                                    ]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Tasseled Cap Indices Percentiles Calendar Year (Landsat)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_tc_pc_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_tc_pc_cyear_3",
+                                    "chartColor": "white",
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "hbmzp5",
+                                    "shareKeys": [
+                                        "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Indices Percentiles"
                                     ]
                                 }
                             ],
