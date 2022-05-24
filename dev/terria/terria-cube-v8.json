@@ -1074,12 +1074,12 @@
                                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
                                         }
                                     },
-				    "legends": [
+                                    "legends": [
                                         {
                                             "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
-					    "imageScaling": 0.5
+                                            "imageScaling": 0.5
                                         }
-				    ],
+                                    ],
                                     "id": "AS145s"
                                 },
                                 {
@@ -1094,12 +1094,12 @@
                                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
                                         }
                                     },
-				    "legends": [
+                                    "legends": [
                                         {
                                             "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
-					    "imageScaling": 0.5
+                                            "imageScaling": 0.5
                                         }
-				    ],
+                                    ],
                                     "id": "AS145t"
                                 }
                             ]
