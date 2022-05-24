@@ -602,6 +602,18 @@
             ]
         },
         {
+            "layer": "ga_ls_tcw_percentiles_2",
+            "product": [
+                "ga_ls_tcw_percentiles_2"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "tcw_10_percentile",
+                "tcw_50_percentile",
+                "tcw_90_percentile"
+            ]
+        },
+        {
             "layer": "ga_ls_tc_pc_cyear_3",
             "product": [
                 "ga_ls_tc_pc_cyear_3"
