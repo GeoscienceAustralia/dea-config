@@ -1067,6 +1067,24 @@
                             "members": [
                                 {
                                     "type": "wms",
+                                    "name": "DEA Wetness Percentiles",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_tcw_percentiles_2",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_tcw_percentiles_2",
+                                    "chartColor": "white",
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "hbmz55",
+                                    "shareKeys": [
+                                        "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Wetness Percentiles"
+                                    ]
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "DEA Tasseled Cap Indices Percentiles Calendar Year (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
@@ -1078,7 +1096,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "hbmz55",
+                                    "id": "hbmzp5",
                                     "shareKeys": [
                                         "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Indices Percentiles"
                                     ]
