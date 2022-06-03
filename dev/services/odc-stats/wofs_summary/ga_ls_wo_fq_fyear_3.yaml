@@ -102,3 +102,4 @@ s3_acl: public-read
 # Generic product attributes
 cog_opts:
   zlevel: 9
+apply_eodatasets3: True
