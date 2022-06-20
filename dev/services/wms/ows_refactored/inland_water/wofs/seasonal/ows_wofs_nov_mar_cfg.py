@@ -6,7 +6,7 @@ from ows_refactored.inland_water.wofs.styles_wo_cfg import (
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 c3_statistics_layer = {
-    "title": "Seasonal Water Observation Statistics - November to March (Landsat)",
+    "title": "DEA Water Observations November to March (Landsat)",
     "name": "ga_ls_wo_fq_nov_mar_3",
     "abstract": """**Geoscience Australia Water Observations, Seasonal Frequency Statistics, November to March (Landsat, Collection 3, 30 m, WO-STATS-NOV-MAR, 3.1.6).**
 

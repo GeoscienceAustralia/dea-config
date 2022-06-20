@@ -6,7 +6,7 @@ from ows_refactored.inland_water.wofs.styles_wo_cfg import (
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 c3_statistics_layer = {
-    "title": "Annual Water Observation Statistics - Calendar Year (Landsat)",
+    "title": "DEA Water Observations Calendar Year (Landsat)",
     "name": "ga_ls_wo_fq_cyear_3",
     "abstract": """**Geoscience Australia Water Observations, Annual Frequency Statistics, Calendar Year (Landsat, Collection 3, 30 m, WO-STATS-ANNUAL, 3.1.6).**
 
