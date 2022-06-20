@@ -1206,7 +1206,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Intertidal Elevation (NIDEM)",
+                                    "name": "DEA Intertidal Elevation (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "NIDEM",
@@ -1223,7 +1223,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Intertidal Extents (ITEM)",
+                                    "name": "DEA Intertidal Extents (Landsat)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ITEM_V2.0.0",
