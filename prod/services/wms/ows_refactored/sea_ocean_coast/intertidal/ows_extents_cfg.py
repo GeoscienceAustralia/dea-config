@@ -150,7 +150,7 @@ style_item_confidence = {
 }
 
 item_v2_00_layer = {
-    "title": "DEA Intertidal Extents (ITEM)",
+    "title": "DEA Intertidal Extents (Landsat)",
     "name": "ITEM_V2.0.0",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Extents)
 

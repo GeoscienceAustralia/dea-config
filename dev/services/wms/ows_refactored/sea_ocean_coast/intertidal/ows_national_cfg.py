@@ -80,7 +80,7 @@ style_nidem = {
 
 
 layer = {
-    "title": "DEA Intertidal Elevation (NIDEM)",
+    "title": "DEA Intertidal Elevation (Landsat)",
     "name": "NIDEM",
     "abstract": """National Intertidal Digital Elevation Model 25m 1.0.0
 
