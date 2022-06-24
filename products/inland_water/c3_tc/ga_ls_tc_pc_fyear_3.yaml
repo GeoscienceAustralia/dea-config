@@ -1,0 +1,54 @@
+name: ga_ls_tc_pc_fyear_3
+description: Geoscience Australia Landsat Tasseled Cap Percentile Financial Year Collection 3
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata: 
+  product:
+    name: ga_ls_tc_pc_fyear_3
+
+measurements:
+  - name: wet_pc_10
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: wet_pc_50
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: wet_pc_90
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: green_pc_10
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: green_pc_50
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: green_pc_90
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: bright_pc_10
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: bright_pc_50
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
+
+  - name: bright_pc_90
+    dtype: int16
+    units: 'percent'
+    nodata: -9999
