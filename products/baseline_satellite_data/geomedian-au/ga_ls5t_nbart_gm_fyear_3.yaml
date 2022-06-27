@@ -10,41 +10,27 @@ metadata:
     name: ga_ls5t_nbart_gm_fyear_3
 
 measurements:
-  - name: nbart_blue
-    aliases:
-      - blue
+  - name: blue
     dtype: int16
     nodata: -999
     units: '1'
-  - name: nbart_green
-    aliases:
-      - green
+  - name: green
     dtype: int16
     nodata: -999
     units: '1'
-  - name: nbart_red
-    aliases:
-      - red
+  - name: red
     dtype: int16
     nodata: -999
     units: '1'
-  - name: nbart_nir
-    aliases:
-      - nir
+  - name: nir
     dtype: int16
     nodata: -999
     units: '1'
-  - name: nbart_swir_1
-    aliases:
-      - swir_1
-      - swir1
+  - name: swir1
     dtype: int16
     nodata: -999
     units: '1'
-  - name: nbart_swir_2
-    aliases:
-      - swir_2
-      - swir2
+  - name: swir2
     dtype: int16
     nodata: -999
     units: '1'
