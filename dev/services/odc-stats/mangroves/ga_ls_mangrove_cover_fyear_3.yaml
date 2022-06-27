@@ -50,3 +50,4 @@ s3_acl: public-read
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
+plugin_config: {}
