@@ -68,6 +68,12 @@ max_processing_time: 2400
 job_queue_max_lease: 300
 renew_safety_margin: 60
 future_poll_interval: 2
+
+resampling: bilinear
+cloud_filters:
+  cloud: [["dilation", 5]]
+  shadow: [["dilation", 10]]
+
 s3_acl: public-read
 # Generic product attributes
 cog_opts:
