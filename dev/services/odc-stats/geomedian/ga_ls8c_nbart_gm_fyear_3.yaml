@@ -1,4 +1,10 @@
 plugin: gm-ls # this can help system find the relative plugin and plugin version
+plugin_config:
+  resampling: bilinear
+  cloud_filters:
+    cloud: [["dilation", 5]]
+    shadow: [["dilation", 10]]
+
 product:
   name: ga_ls8c_nbart_gm_fyear_3
   short_name: ga_ls8c_nbart_gm_fyear_3
@@ -75,8 +81,3 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 
-plugin_config:
-  resampling: bilinear
-  cloud_filters:
-    cloud: [["dilation", 5]]
-    shadow: [["dilation", 10]]
