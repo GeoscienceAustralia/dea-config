@@ -75,7 +75,7 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 
-plugin-config:
+plugin_config:
   resampling: bilinear
   cloud_filters:
     cloud: [["dilation", 5]]
