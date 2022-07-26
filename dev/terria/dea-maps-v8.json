@@ -1184,7 +1184,13 @@
                                             "url": "http://services.ga.gov.au/gis/services/Geomorphology_Smartline/MapServer/WMSServer",
                                             "excludeMembers": [
                                                 "Geomorphic Smartline"
-                                            ]
+                                            ],
+                                            "itemProperties": {
+                                                "getFeatureInfoFormat": {
+                                                "type": "xml",
+                                                "format": "text/xml"
+                                                }
+                                            }
                                         },
                                         {
                                             "id": "fhty455",
@@ -1193,7 +1199,13 @@
                                             "url": "http://services.ga.gov.au/gis/services/Australian_Coastal_Sediment_Compartments/MapServer/WMSServer",
                                             "excludeMembers": [
                                                 "Geomorphic Smartline"
-                                            ]
+                                            ],
+                                            "itemProperties": {
+                                                "getFeatureInfoFormat": {
+                                                "type": "xml",
+                                                "format": "text/xml"
+                                                }
+                                            }
                                         }
                                     ]
                                 }
