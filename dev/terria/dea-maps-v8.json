@@ -1216,6 +1216,14 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:480px'>\
+                                        <h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>\
+                                        Elevation relative to Mean Sea Level (approximately equivelent to AHD): \
+                                        <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1>\
+                                        <i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
+                                    },
                                     "id": "bWICtK",
                                     "shareKeys": [
                                         "Root Group/Coastal/National Intertidal Digital Elevation Model"
@@ -1485,6 +1493,40 @@
                     "type": "group",
                     "name": "Other",
                     "members": [
+                        {
+                            "id": "lmn467",
+                            "type": "group",
+                            "name": "DEA Shapes",
+                            "members": [
+                                {
+                                    "type": "geojson",
+                                    "name": "Sentinel-2 MGRS Tile grid for Australia",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2_mgrs_tile_grid.geojson",
+                                    "id": "458eft"
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "Landsat Path Row grid for Australia",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_path_row_grid.geojson",
+                                    "id": "fr874s"
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "DEA Summary Product Grid (Collection 3)",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3.geojson",
+                                    "id": "xss124"
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "DEA Summary Product Grid (Collection 2)",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c2.geojson",
+                                    "id": "fgfttd",
+                                    "shareKeys": [
+                                        "Root Group/DEA Shapes/DEA Albers Tiles grid"
+                                    ]
+                                }
+                            ]
+                        },
                         {
                             "id": "jqk1GN",
                             "type": "group",

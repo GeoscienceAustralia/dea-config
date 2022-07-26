@@ -1201,6 +1201,14 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:480px'>\
+                                        <h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>\
+                                        Elevation relative to Mean Sea Level (approximately equivelent to AHD): \
+                                        <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1>\
+                                        <i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
+                                    },
                                     "id": "basdi2"
                                 },
                                 {
@@ -1214,14 +1222,6 @@
                                     "leafletUpdateInterval": 750,
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
-                                    },
-                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
-                                    "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'>\
-                                        <h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>\
-                                        Elevation relative to Mean Sea Level (approximately equivelent to AHD): \
-                                        <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1>\
-                                        <i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
                                     "id": "AS31sf"
                                 },
