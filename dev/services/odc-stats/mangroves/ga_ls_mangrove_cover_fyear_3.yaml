@@ -2,7 +2,7 @@ plugin: mangroves # this can help system find the relative plugin and plugin ver
 product:
   name: ga_ls_mangrove_cover_fyear_3
   short_name: ga_ls_mangrove_cover_fyear_3
-  version: 2.0.2
+  version: 3.0.0
   product_family: mangrove_cover
 
   # -- EO Dataset3 relative section --
