@@ -1,4 +1,11 @@
 plugin: tcw-percentiles # this can help system find the relative plugin and plugin version
+plugin_config:
+  cloud_filters:
+    cloud:
+      - [dilation, 5]
+    shadow:
+      - [dilation, 10]
+
 product:
   name: ga_ls_tc_pc_cyear_3
   short_name: ga_ls_tc_pc_cyear_3
@@ -74,7 +81,14 @@ s3_acl: public-read
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
-dataset-filters: >-
+dataset_filters: >-
   {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
   {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
+output_location: >-
+  s3://dea-public-data-dev/derivative/ga_ls_tc_pc_cyear_3/1-0-0
 
+# save-tasks config
+input_products: ga_ls5t_ard_3-ga_ls7e_ard_3-ga_ls8c_ard_3
+frequency: annual
+grid: au-30
+gqa: 1
