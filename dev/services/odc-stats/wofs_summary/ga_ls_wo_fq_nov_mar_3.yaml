@@ -1,4 +1,11 @@
 plugin: wofs-summary # this can help system find the relative plugin and plugin version
+plugin_config:
+  cloud_filters:
+    cloud:
+      - [dilation, 5]
+    cloud_shadow:
+      - [dilation, 10]
+
 product:
   name: ga_ls_wo_fq_nov_mar_3
   short_name: ga_ls_wo_fq_nov_mar_3
@@ -102,3 +109,10 @@ s3_acl: public-read
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
+output_location: >-
+  s3://dea-public-data-dev/derivative/ga_ls_wo_fq_nov_mar_3/1-6-0
+
+# save-tasks options
+input_products: ga_ls_wo_3
+frequency: seasonal
+grid: au-30

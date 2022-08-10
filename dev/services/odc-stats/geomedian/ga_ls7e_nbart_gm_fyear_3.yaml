@@ -1,4 +1,11 @@
 plugin: gm-ls
+plugin_config:
+  cloud_filters:
+    cloud:
+      - [dilation, 5]
+    shadow:
+      - [dilation, 10]
+
 product:
   name: ga_ls7e_nbart_gm_fyear_3
   short_name: ga_ls7e_nbart_gm_fyear_3
@@ -53,11 +60,11 @@ product:
     abstract: Simple true-colour image, using the red, green and blue bands
     components:
       red:
-        red: 1
+        nbart_red: 1
       green:
-        green: 1
+        nbart_green: 1
       blue:
-        blue: 1
+        nbart_blue: 1
     scale_range:
     - 0
     - 3000
@@ -73,3 +80,11 @@ s3_acl: public-read
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
+output_location: >-
+  s3://dea-public-data-dev/derivative/ga_ls7e_nbart_gm_fyear_3/3-0-0
+
+# save-tasks options
+input_products: ga_ls7e_ard_3
+frequency: annual-fy
+grid: au-30
+qga: 1
