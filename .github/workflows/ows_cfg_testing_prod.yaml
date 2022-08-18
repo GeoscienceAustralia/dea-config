@@ -37,3 +37,14 @@ jobs:
         OWS_CFG_PATH: prod/services/wms/ows_refactored
         PYTHON_PATH: prod/services/wms/
         DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+
+    - name: Run cmi-checker for layers (Prod)
+      run: |
+        docker-compose -f docker-compose.ows.yaml up -d
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
+        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config; python cmi_check.py"
+        docker-compose -f docker-compose.ows.yaml down
+      env:
+        OWS_CFG_PATH: prod/services/wms/ows_refactored
+        PYTHON_PATH: prod/services/wms/
+        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
