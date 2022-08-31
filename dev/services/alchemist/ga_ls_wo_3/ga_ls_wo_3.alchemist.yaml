@@ -47,7 +47,7 @@ output:
     naming_conventions: dea_c3
 
   properties:
-    dea:dataset_maturity: interim
+    dea:dataset_maturity: final
 
 processing:
   dask_chunks:
