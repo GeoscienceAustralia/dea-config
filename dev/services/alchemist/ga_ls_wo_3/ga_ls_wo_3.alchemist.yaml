@@ -46,9 +46,6 @@ output:
     collection_number: 3
     naming_conventions: dea_c3
 
-  properties:
-    dea:dataset_maturity: final
-
 processing:
   dask_chunks:
     x: -1
