@@ -17,22 +17,19 @@ on:
       - 'docker-compose.ows.yaml'
 
 jobs:
-  build:
+ build-and-push:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+    - uses: docker://ghcr.io/kciter/aws-ecr-action:latest
       with:
-        fetch-depth: 0
-
-    - name: Run ows_refactored_cfg test (dev)
-      run: |
-        docker-compose -f docker-compose.ows.yaml up -d
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config; ./compare-cfg.sh"
-        docker-compose -f docker-compose.ows.yaml down
-      env:
-        OWS_CFG_PATH: dev/services/wms/ows_refactored
-        PYTHON_PATH: dev/services/wms/
-        DATACUBE_OWS_CFG: ows_refactored.ows_root_cfg.ows_cfg
+        access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+        repo: docker/repo
+        region: ap-northeast-2
+        tags: latest,${{ github.sha }}
+        create_repo: true
+        image_scanning_configuration: true
+        set_repo_policy: true
+        repo_policy_file: repo-policy.json
