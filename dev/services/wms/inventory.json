@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 73,
+    "total_layers_count": 76,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -30,6 +30,91 @@
             "product": [
                 "s2a_nrt_granule",
                 "s2b_nrt_granule"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_s2m_ard_3",
+            "product": [
+                "ga_s2am_ard_3",
+                "ga_s2bm_ard_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_s2am_ard_3",
+            "product": [
+                "ga_s2am_ard_3"
+            ],
+            "styles_count": 19,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_s2bm_ard_3",
+            "product": [
+                "ga_s2bm_ard_3"
             ],
             "styles_count": 19,
             "styles_list": [
