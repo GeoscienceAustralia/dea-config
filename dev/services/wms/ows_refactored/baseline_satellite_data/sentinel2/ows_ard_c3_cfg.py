@@ -1,7 +1,7 @@
 from ows_refactored.baseline_satellite_data.sentinel2.band_s2_cfg import \
-    bands_sentinel2_ard_nbart
+    bands_sentinel2_c3
 from ows_refactored.baseline_satellite_data.sentinel2.style_s2_cfg import \
-    styles_s2_list
+    styles_s2_c3_list
 from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 s2b_c3_layer = {
@@ -21,7 +21,7 @@ https://cmi.ga.gov.au/data-products/dea/190/dea-surface-reflectance-nbart-sentin
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_s2bm_ard_3",
-    "bands": bands_sentinel2_ard_nbart,
+    "bands": bands_sentinel2_c3,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
@@ -33,7 +33,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [
         {
-            "band": "fmask",
+            "band": "s2cloudless_mask",
             "product": "ga_s2bm_ard_3",
             "ignore_time": False,
             "ignore_info_flags": []
@@ -45,7 +45,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "ignore_info_flags": []
         },
     ],
-    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_c3_list},
 }
 
 s2a_c3_layer = {
@@ -65,7 +65,7 @@ https://cmi.ga.gov.au/data-products/dea/190/dea-surface-reflectance-nbart-sentin
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_s2am_ard_3",
-    "bands": bands_sentinel2_ard_nbart,
+    "bands": bands_sentinel2_c3,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
@@ -77,7 +77,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [
         {
-            "band": "fmask",
+            "band": "s2cloudless_mask",
             "product": "ga_s2am_ard_3",
             "ignore_time": False,
             "ignore_info_flags": []
@@ -89,7 +89,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "ignore_info_flags": []
         },
     ],
-    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_c3_list},
 }
 
 combined_layer = {
@@ -118,7 +118,7 @@ https://cmi.ga.gov.au/data-products/dea/190/dea-surface-reflectance-nbart-sentin
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
     "product_names": ["ga_s2am_ard_3", "ga_s2bm_ard_3"],
-    "bands": bands_sentinel2_ard_nbart,
+    "bands": bands_sentinel2_c3,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
     "native_crs": "EPSG:3577",
@@ -130,7 +130,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [
         {
-            "band": "fmask",
+            "band": "s2cloudless_mask",
             "products": ["ga_s2am_ard_3", "ga_s2bm_ard_3"],
             "ignore_time": False,
             "ignore_info_flags": []
@@ -142,5 +142,5 @@ For service status information, see https://status.dea.ga.gov.au""",
             "ignore_info_flags": []
         },
     ],
-    "styling": {"default_style": "simple_rgb", "styles": styles_s2_list},
+    "styling": {"default_style": "simple_rgb", "styles": styles_s2_c3_list},
 }
