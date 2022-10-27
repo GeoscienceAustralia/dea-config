@@ -481,6 +481,34 @@ fmask_bits = [
     },
 ]
 
+s2cloudless_mask_bits = [
+    {
+        "title": "No Data",
+        "abstract": "",
+        "values": [
+            0,    # nodata
+        ],
+        "alpha": 0.0,
+        "color": "#FFFFFF",
+    },
+    {
+        "title": "Clear",
+        "abstract": "",
+        "values": [
+            1,    # clear/valid
+        ],
+        "color": "#84A278",
+    },
+    {
+        "title": "Cloud",
+        "abstract": "",
+        "values": [
+            2,    # cloud
+        ],
+        "color": "#D0CFCE",
+    },
+]
+
 style_s2_fmask = {
     "name": "fmask",
     "title": "Fmask Classification",
@@ -510,7 +538,7 @@ style_s2_cloudless_mask = {
     "include_in_feature_info": False,
     "needed_bands": ["s2cloudless_mask"],
     "value_map": {
-        "fmask": fmask_bits
+        "fmask": s2cloudless_mask_bits
     }
 }
 
