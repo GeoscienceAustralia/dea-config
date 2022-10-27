@@ -555,7 +555,7 @@ styles_s2_c3_list = [
     style_s2_pure_narrow_nir,
     style_s2_pure_swir1,
     style_s2_pure_swir2,
-    style_s2_oa_fmask,
+    style_s2_fmask,
     style_s2_cloudless_mask,
 ]
 
