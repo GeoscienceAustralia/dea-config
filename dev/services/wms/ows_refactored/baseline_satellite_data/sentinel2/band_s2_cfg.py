@@ -26,7 +26,28 @@ bands_sentinel2 = {
     "nbart_nir_2": ["nbart_nir_2", "nir_2", "nbart_near_infrared_2"],
     "nbart_swir_2": ["nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2"],
     "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
-    "fmask": ["fmask"],
+    "fmask": ["fmask"]
+}
+
+bands_sentinel2_c3 = {
+    "nbart_coastal_aerosol": [
+        "nbart_coastal_aerosol",
+        "coastal_aerosol",
+        "nbart_narrow_blue",
+        "narrow_blue",
+    ],
+    "nbart_blue": ["nbart_blue", "blue"],
+    "nbart_green": ["nbart_green", "green"],
+    "nbart_red": ["nbart_red", "red"],
+    "nbart_red_edge_1": ["nbart_red_edge_1", "red_edge_1"],
+    "nbart_red_edge_2": ["nbart_red_edge_2", "red_edge_2"],
+    "nbart_red_edge_3": ["nbart_red_edge_3", "red_edge_3"],
+    "nbart_nir_1": ["nbart_nir_1", "nir", "nir_1", "nbart_near_infrared_1"],
+    "nbart_nir_2": ["nbart_nir_2", "nir_2", "nbart_near_infrared_2"],
+    "nbart_swir_2": ["nbart_swir_2", "swir_2", "nbart_shortwave_infrared_2"],
+    "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
+    "oa_fmask": ["oa_fmask", "fmask"],
+    "s2cloudless_mask": ["s2cloudless_mask"],
 }
 
 bands_sentinel2_provisional = {
