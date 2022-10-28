@@ -538,7 +538,7 @@ style_s2_cloudless_mask = {
     "include_in_feature_info": False,
     "needed_bands": ["s2cloudless_mask"],
     "value_map": {
-        "fmask": s2cloudless_mask_bits
+        "s2cloudless_mask": s2cloudless_mask_bits
     }
 }
 
