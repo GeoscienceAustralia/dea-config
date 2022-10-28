@@ -114,6 +114,38 @@
                             "id": "HIOF54"
                         },
                         {
+                            "type": "wms",
+                            "name": "DEA Surface Reflectance (Sentinel-2) Collection 3",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "ga_s2m_ard_3",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_s2m_ard_3",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "featureInfoTemplate": {
+                                "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "qJzPBD",
+                            "shareKeys": [
+                                "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2 satellite images"
+                            ]
+                        },
+                        {
                             "id": "SDFa45",
                             "type": "group",
                             "name": "DEA Surface Reflectance Calendar Year (Landsat)",
@@ -592,6 +624,64 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "53z1gR"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI) Collection 3",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2am_ard_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2am_ard_3",
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                        "formats": {
+                                            "lat": {
+                                                "maximumFractionDigits": 5
+                                            },
+                                            "lon": {
+                                                "maximumFractionDigits": 5
+                                            }
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "TrYgsw"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI) Collection 3",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2bm_ard_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2bm_ard_3",
+                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                        "formats": {
+                                            "lat": {
+                                                "maximumFractionDigits": 5
+                                            },
+                                            "lon": {
+                                                "maximumFractionDigits": 5
+                                            }
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "DR7QYa"
                                 }
                             ]
                         }
@@ -623,13 +713,7 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'>\
-                                        <h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>\
-                                        Annual land cover for selected location, \
-                                        {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}\
-                                        <br/><br/>Base class: {{data.0.description.level3_label}}\
-                                        <br/><br/>Full classification: {{data.0.description.level4_label}}\
-                                        <br/><br/></div>"
+                                        "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "546ert"
@@ -649,18 +733,7 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "featureInfoTemplate": {
-                                      "template": "<div style='width:480px'>\
-                                      <h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>\
-                                      Environmental descriptors for selected location, \
-                                      {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}\
-                                      <br/><br/><table>\
-                                      <tr><td>Life Form:</td><td>{{data.0.description.lifeform_label}}</td></tr>\
-                                      <tr><td>Vegetation Cover:</td><td>{{data.0.description.canopyco_label}}</td></tr>\
-                                      <tr><td>Water Seasonality:</td><td>{{data.0.description.watersea_label}}</td></tr>\
-                                      <tr><td>Water Persistence:</td><td>{{data.0.description.waterper_label}}</td></tr>\
-                                      <tr><td>Bare Gradation:</td><td>{{data.0.description.baregrad_label}}</td></tr>\
-                                      </table>\
-                                      <be/><br/></div>"
+                                      "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Environmental descriptors for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/><table><tr><td>Life Form:</td><td>{{data.0.description.lifeform_label}}</td></tr><tr><td>Vegetation Cover:</td><td>{{data.0.description.canopyco_label}}</td></tr><tr><td>Water Seasonality:</td><td>{{data.0.description.watersea_label}}</td></tr><tr><td>Water Persistence:</td><td>{{data.0.description.waterper_label}}</td></tr><tr><td>Bare Gradation:</td><td>{{data.0.description.baregrad_label}}</td></tr></table><br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "wejk58"
@@ -1203,11 +1276,7 @@
                                     },
                                     "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'>\
-                                        <h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>\
-                                        Elevation relative to Mean Sea Level (approximately equivelent to AHD): \
-                                        <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1>\
-                                        <i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
+                                        "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
                                     "id": "basdi2"
                                 },
@@ -3274,11 +3343,7 @@
                                     },
                                     "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'>\
-                                        <h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>\
-                                        Elevation relative to Mean Sea Level (approximately equivelent to AHD): \
-                                        <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1>\
-                                        <i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
+                                        "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
                                     "id": "bWICtK",
                                     "shareKeys": [
