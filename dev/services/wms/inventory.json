@@ -81,7 +81,8 @@
                 "swir1",
                 "swir2",
                 "fmask",
-                "s2cloudless_mask"
+                "s2cloudless_mask",
+                "s2cloudless_prob"
             ]
         },
         {
@@ -110,7 +111,8 @@
                 "swir1",
                 "swir2",
                 "fmask",
-                "s2cloudless_mask"
+                "s2cloudless_mask",
+                "s2cloudless_prob"
             ]
         },
         {
@@ -139,7 +141,8 @@
                 "swir1",
                 "swir2",
                 "fmask",
-                "s2cloudless_mask"
+                "s2cloudless_mask",
+                "s2cloudless_prob"
             ]
         },
         {

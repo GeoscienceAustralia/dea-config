@@ -48,6 +48,7 @@ bands_sentinel2_c3 = {
     "nbart_swir_3": ["nbart_swir_3", "swir_3", "nbart_shortwave_infrared_3"],
     "oa_fmask": ["oa_fmask", "fmask"],
     "s2cloudless_mask": ["s2cloudless_mask"],
+    "s2cloudless_prob": ["s2cloudless_prob"],
 }
 
 bands_sentinel2_provisional = {
