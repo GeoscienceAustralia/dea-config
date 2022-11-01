@@ -542,6 +542,21 @@ style_s2_cloudless_mask = {
     }
 }
 
+style_s2_cloudless_prob = {
+    "name": "s2cloudless_prob",
+    "title": "S2 Cloudless Mask Probability",
+    "abstract": "S2 Cloudless Probabilities given for s2cloudless_mask classification",
+    "include_in_feature_info": False,
+    "needed_bands": ["s2cloudless_prob"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {"band": "s2cloudless_prob"},
+    },
+    "mpl_ramp": "inferno",
+    "range": [0.0, 1.0]
+}
+
 styles_s2_list = [
     style_s2_simple_rgb,
     style_s2_irg,
@@ -585,6 +600,7 @@ styles_s2_c3_list = [
     style_s2_pure_swir2,
     style_s2_fmask,
     style_s2_cloudless_mask,
+    style_s2_cloudless_prob,
 ]
 
 
