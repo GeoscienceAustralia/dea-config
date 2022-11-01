@@ -11,4 +11,3 @@ def black_cloud(data, band, band_mapper=None):
     if band_mapper:
         band = band_mapper(band)
     return data[band] * cloudless_prob
-
