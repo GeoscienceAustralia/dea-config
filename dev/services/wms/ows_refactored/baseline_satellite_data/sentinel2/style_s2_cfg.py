@@ -542,6 +542,65 @@ style_s2_cloudless_mask = {
     }
 }
 
+style_s2_alpha_cloud = {
+    "name": "s2cloud_prob_transparent",
+    "title": "S2 Cloudless Mask Probability (alpha)",
+    "abstract": "S2 Cloudless Probabilities given for s2cloudless_mask classification. x% chance of cloud = x% transparent.",
+    "include_in_feature_info": False,
+    "additional_bands": ["s2cloudless_prob"],
+    "components": {
+        "red": {
+            "red": 1.0,
+            "scale_range": (0, 3000),
+        },
+        "green": {
+            "green": 1.0,
+            "scale_range": (0, 3000),
+        },
+        "blue": {
+            "blue": 1.0,
+            "scale_range": (0, 3000),
+        },
+        "alpha": {
+            "function": "ows_refactored.baseline_satellite_data.sentinel2.utils.invert_alpha",
+        }
+    }
+}
+
+style_s2_blackcloud = {
+    "name": "s2cloud_prob_dark",
+    "title": "S2 Cloudless Mask Probability (dark)",
+    "abstract": "S2 Cloudless Probabilities given for s2cloudless_mask classification. x% chance of cloud = x% dark.",
+    "include_in_feature_info": False,
+    "additional_bands": ["red", "green", "blue", "s2cloudless_prob"],
+    "components": {
+        "red": {
+            "function": "ows_refactored.baseline_satellite_data.sentinel2.utils.black_cloud",
+            "mapped_bands": True,
+            "kwargs": {
+                "band": "red",
+                "scale_from": [0, 3000],
+            }
+        },
+        "green": {
+            "function": "ows_refactored.baseline_satellite_data.sentinel2.utils.black_cloud",
+            "mapped_bands": True,
+            "kwargs": {
+                "band": "green",
+                "scale_from": [0, 3000],
+            }
+        },
+        "blue": {
+            "function": "ows_refactored.baseline_satellite_data.sentinel2.utils.black_cloud",
+            "mapped_bands": True,
+            "kwargs": {
+                "band": "blue",
+                "scale_from": [0, 3000],
+            }
+        },
+    }
+}
+
 style_s2_cloudless_prob = {
     "name": "s2cloudless_prob",
     "title": "S2 Cloudless Mask Probability",
@@ -601,6 +660,8 @@ styles_s2_c3_list = [
     style_s2_fmask,
     style_s2_cloudless_mask,
     style_s2_cloudless_prob,
+    style_s2_blackcloud,
+    style_s2_alpha_cloud,
 ]
 
 
