@@ -60,7 +60,7 @@
                 "ga_s2am_ard_3",
                 "ga_s2bm_ard_3"
             ],
-            "styles_count": 21,
+            "styles_count": 23,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -82,7 +82,9 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob"
+                "s2cloudless_prob",
+                "s2cloud_prob_dark",
+                "s2cloud_prob_transparent"
             ]
         },
         {
@@ -90,7 +92,7 @@
             "product": [
                 "ga_s2am_ard_3"
             ],
-            "styles_count": 21,
+            "styles_count": 23,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -112,7 +114,9 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob"
+                "s2cloudless_prob",
+                "s2cloud_prob_dark",
+                "s2cloud_prob_transparent"
             ]
         },
         {
@@ -120,7 +124,7 @@
             "product": [
                 "ga_s2bm_ard_3"
             ],
-            "styles_count": 21,
+            "styles_count": 23,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -142,7 +146,9 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob"
+                "s2cloudless_prob",
+                "s2cloud_prob_dark",
+                "s2cloud_prob_transparent"
             ]
         },
         {
