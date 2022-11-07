@@ -18,7 +18,7 @@ on:
       - 'check-product-definitions.sh'
 
 jobs:
-  build:
+  odc-indexing:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,3 +34,17 @@ jobs:
         docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
         docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-product-definitions.sh"
         docker-compose -f docker-compose.productscsv.yaml down
+
+  eo3-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+
+    - name: Run eo3-validate
+      run: |
+        docker run -v products:/code/products opendatacube/eo-datasets:latest ls
+        docker run -v products:/code/products opendatacube/eo-datasets:latest eo3-validate ./products/baseline_satellite_data
