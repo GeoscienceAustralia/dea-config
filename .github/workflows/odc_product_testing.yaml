@@ -44,7 +44,11 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Run eo3-validate
+    - name: Run eo3-validate for product
       run: |
-        docker run -v $PWD/products:/code/products opendatacube/eo-datasets:latest ls
-        docker run -v $PWD/products:/code/products opendatacube/eo-datasets:latest eo3-validate ./products/baseline_satellite_data
+        docker run -v $PWD/:/code/dea-config opendatacube/eo-datasets:latest eo3-validate \
+          ./dea-config/products/baseline_satellite_data \
+          ./dea-config/products/hazards \
+          ./dea-config/products/inland_water \
+          ./dea-config/products/land_and_vegetation \
+          ./dea-config/products/sea_ocean_coast
