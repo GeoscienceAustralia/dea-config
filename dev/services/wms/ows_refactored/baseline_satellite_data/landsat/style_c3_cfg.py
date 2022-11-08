@@ -560,21 +560,21 @@ style_c3_true_colour_pan = {
             "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
             "kwargs": {
                 "output_band": "nbart_red",
-                "scale_from": [50, 600],
+                "scale_from": [0, 3000],
             }
         },
         "green": {
             "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
             "kwargs": {
                 "output_band": "nbart_green",
-                "scale_from": [50, 600],
+                "scale_from": [0, 3000],
             }
         },
         "blue": {
             "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
             "kwargs": {
                 "output_band": "nbart_blue",
-                "scale_from": [50, 600],
+                "scale_from": [0, 3000],
             }
         },
     },

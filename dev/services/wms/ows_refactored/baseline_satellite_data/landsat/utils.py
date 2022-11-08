@@ -10,7 +10,7 @@ def brovey_pansharpen(data,
                       pan_band='nbart_panchromatic'):
 
     # Calculate total
-    da_total = data[[red_band, green_band, blue_band]].to_array().sum(dim="variable")
+    da_total = data[[red_band, green_band, blue_band]].to_array().mean(dim="variable")
 
     # Perform Brovey Transform in form of: band / total * panchromatic
     data_pansharpened = data[[red_band, green_band, blue_band]] / da_total * data[pan_band]
