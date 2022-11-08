@@ -554,6 +554,7 @@ style_c3_true_colour_pan = {
     "name": "true_colour_pan",
     "title": "True Colour - Pansharpened",
     "abstract": "True-colour image pansharpened to 15 metre resolution using Brovey pansharpening",
+    "additional_bands": ["nbart_red", "nbart_green", "nbart_blue", "nbart_panchromatic"],
     "components": {
         "red": {
             "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
