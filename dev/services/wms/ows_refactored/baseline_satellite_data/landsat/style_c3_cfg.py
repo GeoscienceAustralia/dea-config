@@ -550,6 +550,37 @@ style_c3_fmask = {
     }
 }
 
+style_c3_true_colour_pan = {
+    "name": "true_colour_pan",
+    "title": "True Colour - Pansharpened",
+    "abstract": "True-colour image pansharpened to 15 metre resolution using Brovey pansharpening",
+    "additional_bands": ["nbart_red", "nbart_green", "nbart_blue", "nbart_panchromatic"],
+    "components": {
+        "red": {
+            "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
+            "kwargs": {
+                "output_band": "nbart_red",
+                "scale_from": [0, 3000],
+            }
+        },
+        "green": {
+            "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
+            "kwargs": {
+                "output_band": "nbart_green",
+                "scale_from": [0, 3000],
+            }
+        },
+        "blue": {
+            "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
+            "kwargs": {
+                "output_band": "nbart_blue",
+                "scale_from": [0, 3000],
+            }
+        },
+    },
+}
+
+
 # Styles grouping
 styles_c3_ls_common = [
     style_c3_true_colour,
@@ -574,3 +605,4 @@ styles_c3_ls_7.append(style_c3_ls7_pure_panchromatic)
 styles_c3_ls_8 = styles_c3_ls_common.copy()
 styles_c3_ls_8.append(style_c3_ls8_pure_panchromatic)
 styles_c3_ls_8.append(style_c3_pure_aerosol)
+styles_c3_ls_8.append(style_c3_true_colour_pan)
