@@ -556,21 +556,21 @@ style_c3_true_colour_pan = {
     "abstract": "True-colour image pansharpened to 15 metre resolution using Brovey pansharpening",
     "components": {
         "red": {
-            "function": ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen,
+            "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
             "kwargs": {
                 "output_band": "nbart_red",
                 "scale_from": [50, 600],
             }
         },
         "green": {
-            "function": ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen,
+            "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
             "kwargs": {
                 "output_band": "nbart_green",
                 "scale_from": [50, 600],
             }
         },
         "blue": {
-            "function": ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen,
+            "function": "ows_refactored.baseline_satellite_data.landsat.utils.brovey_pansharpen",
             "kwargs": {
                 "output_band": "nbart_blue",
                 "scale_from": [50, 600],
