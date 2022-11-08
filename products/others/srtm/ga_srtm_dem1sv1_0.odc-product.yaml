@@ -14,15 +14,15 @@ measurements:
 - name: dem
   dtype: float32
   units: metre
-  nodata: -340282350000000000000000000000000000000
+  nodata: -3.4028235e+38
 - name: dem_s
   dtype: float32
   units: metre
-  nodata: -340282350000000000000000000000000000000
+  nodata: -3.4028235e+38
 - name: dem_h
   dtype: float32
   units: metre
-  nodata: -340282350000000000000000000000000000000
+  nodata: -3.4028235e+38
 storage:
   crs: EPSG:4326
   resolution:
