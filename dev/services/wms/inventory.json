@@ -266,6 +266,7 @@
             "styles_count": 16,
             "styles_list": [
                 "true_colour",
+                "true_colour_pan",
                 "false_colour",
                 "ndvi",
                 "ndwi",
@@ -279,8 +280,7 @@
                 "swir2",
                 "fmask",
                 "panchromatic",
-                "aerosol",
-                "true_colour_pan"
+                "aerosol"
             ]
         },
         {
@@ -288,9 +288,10 @@
             "product": [
                 "ga_ls7e_ard_3"
             ],
-            "styles_count": 14,
+            "styles_count": 15,
             "styles_list": [
                 "true_colour",
+                "true_colour_pan",
                 "false_colour",
                 "ndvi",
                 "ndwi",
