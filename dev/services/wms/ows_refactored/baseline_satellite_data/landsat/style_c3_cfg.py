@@ -601,6 +601,7 @@ styles_c3_ls_common = [
 
 styles_c3_ls_7 = styles_c3_ls_common.copy()
 styles_c3_ls_7.append(style_c3_ls7_pure_panchromatic)
+styles_c3_ls_7.append(style_c3_true_colour_pan)
 
 styles_c3_ls_8 = styles_c3_ls_common.copy()
 styles_c3_ls_8.append(style_c3_ls8_pure_panchromatic)
