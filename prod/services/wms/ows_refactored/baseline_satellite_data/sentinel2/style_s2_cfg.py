@@ -33,6 +33,20 @@ s2_provisional_oa_fmask = [
     }
 ]
 
+s2_c3_cloudless_mask = [
+    {
+        "band": "s2cloudless_mask",
+        "values": [0, 2, 3],
+        "invert": True,
+    },
+    {
+        "band": "land",
+        "invert": True,
+        "values": [1],
+    }
+]
+
+
 style_s2_simple_rgb = {
     "name": "simple_rgb",
     "title": "Simple RGB",
@@ -106,6 +120,10 @@ style_s2_provisional_ndvi = copy.deepcopy(style_s2_ndvi)
 style_s2_provisional_ndvi["pq_masks"] = s2_provisional_oa_fmask
 style_s2_provisional_ndvi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
+style_s2_c3_ndvi = copy.deepcopy(style_s2_ndvi)
+style_s2_c3_ndvi["pq_masks"] = s2_c3_cloudless_mask
+style_s2_c3_ndvi["multi_date"][0]["pq_masks"] = s2_c3_cloudless_mask
+
 style_s2_ndwi = {
     "name": "ndwi",
     "title": "Normalised Difference Water Index - Green, NIR",
@@ -178,6 +196,10 @@ style_s2_provisional_ndwi = copy.deepcopy(style_s2_ndwi)
 style_s2_provisional_ndwi["pq_masks"] = s2_provisional_oa_fmask
 style_s2_provisional_ndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
+style_s2_c3_ndwi = copy.deepcopy(style_s2_ndwi)
+style_s2_c3_ndwi["pq_masks"] = s2_c3_cloudless_mask
+style_s2_c3_ndwi["multi_date"][0]["pq_masks"] = s2_c3_cloudless_mask
+
 style_s2_mndwi = {
     # Cannot reuse landsat as we need swir_2 to landsat's swir_1
     "name": "mndwi",
@@ -227,6 +249,10 @@ style_s2_mndwi = {
 style_s2_provisional_mndwi = copy.deepcopy(style_s2_mndwi)
 style_s2_provisional_mndwi["pq_masks"] = s2_provisional_oa_fmask
 style_s2_provisional_mndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
+
+style_s2_c3_mndwi = copy.deepcopy(style_s2_mndwi)
+style_s2_c3_mndwi["pq_masks"] = s2_c3_cloudless_mask
+style_s2_c3_mndwi["multi_date"][0]["pq_masks"] = s2_c3_cloudless_mask
 
 style_s2_ndci = {
     "name": "ndci",
@@ -400,6 +426,9 @@ style_s2_nbr = {
 style_s2_provisional_nbr = copy.deepcopy(style_s2_nbr)
 style_s2_provisional_nbr["pq_masks"] = s2_provisional_oa_fmask
 
+style_s2_c3_nbr = copy.deepcopy(style_s2_nbr)
+style_s2_c3_nbr["pq_masks"] = s2_c3_cloudless_mask
+
 fmask_bits = [
     {
         "title": "No Data",
@@ -452,6 +481,34 @@ fmask_bits = [
     },
 ]
 
+s2cloudless_mask_bits = [
+    {
+        "title": "No Data",
+        "abstract": "",
+        "values": [
+            0,    # nodata
+        ],
+        "alpha": 0.0,
+        "color": "#FFFFFF",
+    },
+    {
+        "title": "Clear",
+        "abstract": "",
+        "values": [
+            1,    # clear/valid
+        ],
+        "color": "#84A278",
+    },
+    {
+        "title": "Cloud",
+        "abstract": "",
+        "values": [
+            2,    # cloud
+        ],
+        "color": "#D0CFCE",
+    },
+]
+
 style_s2_fmask = {
     "name": "fmask",
     "title": "Fmask Classification",
@@ -474,6 +531,31 @@ style_s2_oa_fmask = {
     }
 }
 
+style_s2_cloudless_mask = {
+    "name": "s2cloudless_mask",
+    "title": "S2 Cloudless Mask Classification",
+    "abstract": "S2 Cloudless Mask is used for automated cloud masking Sentinel 2 images.",
+    "include_in_feature_info": False,
+    "needed_bands": ["s2cloudless_mask"],
+    "value_map": {
+        "s2cloudless_mask": s2cloudless_mask_bits
+    }
+}
+
+style_s2_cloudless_prob = {
+    "name": "s2cloudless_prob",
+    "title": "S2 Cloudless Mask Probability",
+    "abstract": "S2 Cloudless Probabilities given for s2cloudless_mask classification",
+    "include_in_feature_info": False,
+    "needed_bands": ["s2cloudless_prob"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {"band": "s2cloudless_prob"},
+    },
+    "mpl_ramp": "inferno",
+    "range": [0.0, 1.0]
+}
 
 styles_s2_list = [
     style_s2_simple_rgb,
@@ -495,6 +577,30 @@ styles_s2_list = [
     style_s2_pure_swir1,
     style_s2_pure_swir2,
     style_s2_fmask,
+]
+
+styles_s2_c3_list = [
+    style_s2_simple_rgb,
+    style_s2_irg,
+    style_s2_c3_ndvi,
+    style_s2_c3_ndwi,
+    style_s2_c3_mndwi,
+    style_s2_ndci,
+    style_s2_c3_nbr,
+    style_s2_pure_aerosol,
+    style_s2_pure_blue,
+    style_s2_pure_green,
+    style_s2_pure_red,
+    style_s2_pure_redge_1,
+    style_s2_pure_redge_2,
+    style_s2_pure_redge_3,
+    style_s2_pure_nir,
+    style_s2_pure_narrow_nir,
+    style_s2_pure_swir1,
+    style_s2_pure_swir2,
+    style_s2_fmask,
+    style_s2_cloudless_mask,
+    style_s2_cloudless_prob,
 ]
 
 
