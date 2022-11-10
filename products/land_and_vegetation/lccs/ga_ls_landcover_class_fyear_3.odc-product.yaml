@@ -21,7 +21,7 @@ measurements:
     dtype: uint8
     nodata: 0
     units: '1'
-  - name: canopyco_veg_cat_l4d
+  - name: canopyco_veg_cat_l4d_au
     aliases:
       - vegetation_cover
     dtype: uint8
