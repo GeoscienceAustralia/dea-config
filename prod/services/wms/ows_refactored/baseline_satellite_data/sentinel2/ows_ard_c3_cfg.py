@@ -6,7 +6,7 @@ from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 s2b_c3_layer = {
     "name": "ga_s2bm_ard_3",
-    "title": "DEA Surface Reflectance (Sentinel-2B MSI,  Collection 3)",
+    "title": "DEA Surface Reflectance (Sentinel-2B MSI, Collection 3)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2B MSI)
 
 This product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.
