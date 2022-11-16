@@ -35,7 +35,7 @@ s2_provisional_oa_fmask = [
 
 s2_c3_cloudless_mask = [
     {
-        "band": "s2cloudless_mask",
+        "band": "oa_s2cloudless_mask",
         "values": [0, 2, 3],
         "invert": True,
     },
