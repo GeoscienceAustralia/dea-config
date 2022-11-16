@@ -33,7 +33,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [
         {
-            "band": "s2cloudless_mask",
+            "band": "oa_s2cloudless_mask",
             "product": "ga_s2bm_ard_3",
             "ignore_time": False,
             "ignore_info_flags": []
@@ -77,7 +77,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [
         {
-            "band": "s2cloudless_mask",
+            "band": "oa_s2cloudless_mask",
             "product": "ga_s2am_ard_3",
             "ignore_time": False,
             "ignore_info_flags": []
@@ -122,7 +122,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [
         {
-            "band": "s2cloudless_mask",
+            "band": "oa_s2cloudless_mask",
             "products": ["ga_s2am_ard_3", "ga_s2bm_ard_3"],
             "ignore_time": False,
             "ignore_info_flags": []
