@@ -65,3 +65,16 @@ measurements:
           1: insufficient observations dry
           2: sufficient observations
         description: Quality Assurance
+
+storage:
+  crs: EPSG:3577
+dimension_order:
+  - time
+  - y
+  - x
+  resolution:
+    x: 30
+    y: -30
+  tile_size:
+    x: 96000.0
+    y: 96000.0

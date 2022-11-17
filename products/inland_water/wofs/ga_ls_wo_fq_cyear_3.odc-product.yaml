@@ -1,5 +1,6 @@
 name: ga_ls_wo_fq_cyear_3 
-description: Geoscience Australia Landsat Water Observations Frequency Calendar Year Collection 3 
+description: Geoscience Australia Landsat Water Observations Frequency Calendar Year Collection 3
+license: CC-BY-4.0
 metadata_type: eo3
 
 metadata:

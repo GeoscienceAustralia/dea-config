@@ -52,3 +52,16 @@ measurements:
     dtype: int16
     units: 'percent'
     nodata: -9999
+
+storage:
+  crs: EPSG:3577
+  dimension_order:
+  - time
+  - y
+  - x
+  resolution:
+    x: 30
+    y: -30
+  tile_size:
+    x: 96000.0
+    y: 96000.0
