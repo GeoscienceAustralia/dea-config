@@ -1,6 +1,7 @@
 name: ga_ls_landcover_class_cyear_2
 
 description: Geoscience Australia Landsat Land Cover Calendar Year Collection 2.0
+license: CC-BY-4.0
 metadata_type: eo3
 
 metadata:
