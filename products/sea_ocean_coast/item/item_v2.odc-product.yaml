@@ -1,5 +1,6 @@
 name: item_v2
-description: Relative Extents Model
+description: Intertidal Extents Model 25m 2.0.0
+license: CC-BY-4.0
 metadata_type: eo
 
 managed: true

@@ -1,5 +1,6 @@
 name: nidem
 description: National Intertidal Digital Elevation Model 25m 1.0.0
+license: CC-BY-4.0
 metadata_type: eo
 
 metadata:

@@ -1,5 +1,6 @@
 name: high_tide_comp_20p
-description: High tide 20 percentage composites 25m v. 2.0.0
+description: High Tide Composite 25m 2.0.0
+license: CC-BY-4.0
 metadata_type: eo
 
 managed: true

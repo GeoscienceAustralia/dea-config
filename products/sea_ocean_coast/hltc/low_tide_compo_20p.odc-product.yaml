@@ -2,7 +2,8 @@
 ---
 
 name: low_tide_comp_20p
-description: Low tide 20 percentage composites 25m v. 2.0.0
+description: Low Tide Composite 25m 2.0.0
+license: CC-BY-4.0
 metadata_type: eo
 managed: true
 
