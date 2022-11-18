@@ -66,15 +66,11 @@ measurements:
           2: sufficient observations
         description: Quality Assurance
 
-storage:
-  crs: EPSG:3577
-  dimension_order:
-  - time
-  - y
-  - x
-  resolution:
-    x: 30
+load:
+  crs: 'epsg:3577'
+  resolution: 
     y: -30
-  tile_size:
-    x: 96000.0
-    y: 96000.0
+    x: 30
+  align:
+    y: 0
+    x: 0
