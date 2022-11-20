@@ -42,7 +42,7 @@ measurements:
       nodata: -999
       units: 'metres'
 
-storage:
+load:
     crs: EPSG:3577
     resolution:
         x: 25
