@@ -1,7 +1,7 @@
 name: wofs_summary
 description: Water Observations from Space Statistics
 metadata_type: eo
-
+license: CC-BY-4.0
 metadata:
   product_type: wofs_statistical_summary
   format:
@@ -23,12 +23,8 @@ measurements:
     dtype: float32
     nodata: -1
     units: '1'
-storage:
+load:
   crs: EPSG:3577
-  dimension_order:
-  - time
-  - y
-  - x
   resolution:
     x: 25
     y: -25

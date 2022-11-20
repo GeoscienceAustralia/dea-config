@@ -1,4 +1,5 @@
 description: Water Observations from Space Statistics confidence filtered
+license: CC-BY-4.0
 measurements:
 -   dtype: float32
     name: confidence
@@ -18,12 +19,8 @@ metadata:
     product_type: wofs_filtered_summary
 metadata_type: eo
 name: wofs_filtered_summary
-storage:
+load:
     crs: EPSG:3577
-    dimension_order:
-    - time
-    - y
-    - x
     resolution:
         x: 25
         y: -25
