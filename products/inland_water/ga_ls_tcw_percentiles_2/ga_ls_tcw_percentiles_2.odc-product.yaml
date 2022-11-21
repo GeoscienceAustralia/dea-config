@@ -27,16 +27,11 @@ measurements:
 # Typical settings, usually no need to change.
 # For derived products usually good idea to copy source product settings
 # for tile_size and resolution
-storage:
-  crs: EPSG:3577
-  tile_size:
-    x: 100000.0
-    y: 100000.0
-  resolution:
-    x: 25
+load:
+  crs: 'epsg:3577'
+  resolution: 
     y: -25
-  chunking:
-    x: 1000
-    y: 1000
-    time: 1
-  dimension_order: [time, y, x]
+    x: 25
+  align:
+    y: 0
+    x: 0

@@ -10,15 +10,6 @@ metadata:
     name: GeoTIFF
   instrument:
     name: OLI
-load:
-  driver: GeoTIFF
-  crs: EPSG:3577
-  tile_size:
-    x: 25000.0
-    y: 25000.0
-  resolution:
-    x: 25
-    y: -25
 # possibly fix the dtype
 measurements:
   - name: blue
@@ -45,3 +36,12 @@ measurements:
     dtype: int16
     nodata: -999
     units: '1'
+
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0
