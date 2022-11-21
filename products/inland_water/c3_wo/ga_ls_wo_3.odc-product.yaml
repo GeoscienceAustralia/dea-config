@@ -57,3 +57,12 @@ measurements:
         bits: [7, 6, 5, 4, 3, 2, 1, 0]
         description: Clear and Wet
         values: {128: true}
+
+load:
+  crs: 'epsg:3577'
+  resolution:
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0

@@ -24,9 +24,6 @@ measurements:
     nodata: -9999
     units: '1' 
 
-# Typical settings, usually no need to change.
-# For derived products usually good idea to copy source product settings
-# for tile_size and resolution
 load:
   crs: 'epsg:3577'
   resolution: 

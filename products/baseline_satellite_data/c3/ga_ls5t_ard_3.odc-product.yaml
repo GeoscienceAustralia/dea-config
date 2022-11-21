@@ -166,7 +166,6 @@ measurements:
     nodata: .nan
     units: '1'
 
-
 load:
   crs: 'epsg:3577'
   resolution:

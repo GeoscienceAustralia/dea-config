@@ -85,4 +85,12 @@ measurements:
         '0': false
         '1': true
       description: Low solar incidence angle
-...
+
+load:
+  crs: 'epsg:3577'
+  resolution:
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0
