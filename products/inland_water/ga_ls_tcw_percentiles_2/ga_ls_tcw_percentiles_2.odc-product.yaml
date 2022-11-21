@@ -1,5 +1,6 @@
 name: ga_ls_tcw_percentiles_2
 description: Geoscience Australia Landsat Tasseled Cap Wetness Percentiles Collection 2, 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)
+license: CC-BY-4.0
 
 metadata_type: eo
 metadata:
@@ -14,19 +15,19 @@ measurements:
   - name: TCW_PC_10
     dtype: int16
     nodata: -9999
-    units: '1' 
+    units: '1'
   - name: TCW_PC_50
     dtype: int16
     nodata: -9999
-    units: '1' 
+    units: '1'
   - name: TCW_PC_90
     dtype: int16
     nodata: -9999
-    units: '1' 
+    units: '1'
 
 load:
   crs: 'epsg:3577'
-  resolution: 
+  resolution:
     y: -25
     x: 25
   align:
