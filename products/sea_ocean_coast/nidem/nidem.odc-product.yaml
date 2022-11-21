@@ -12,8 +12,12 @@ measurements:
     name: 'nidem'
     nodata: -9999
     units: 'metres'
+
 load:
-  crs: EPSG:3577
+  crs: 'epsg:3577'
   resolution:
-    x: 25
     y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0
