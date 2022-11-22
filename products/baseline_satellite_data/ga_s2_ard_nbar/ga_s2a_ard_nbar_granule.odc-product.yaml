@@ -336,3 +336,12 @@ metadata:
     product_type: S2MSIARD_NBAR
 metadata_type: eo_plus
 name: ga_s2a_ard_nbar_granule
+
+load:
+  crs: 'epsg:3577'
+  resolution:
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0

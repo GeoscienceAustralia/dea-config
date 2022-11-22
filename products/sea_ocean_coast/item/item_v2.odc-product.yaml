@@ -1,5 +1,6 @@
 name: item_v2
-description: Relative Extents Model
+description: Intertidal Extents Model 25m 2.0.0
+license: CC-BY-4.0
 metadata_type: eo
 
 managed: true
@@ -16,8 +17,11 @@ measurements:
   nodata: -6666
   units: '0.1'
 
-storage:
-  crs: EPSG:3577
+load:
+  crs: 'epsg:3577'
   resolution:
-    x: 25
     y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

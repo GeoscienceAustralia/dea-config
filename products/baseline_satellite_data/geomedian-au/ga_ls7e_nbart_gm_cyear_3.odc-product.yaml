@@ -1,5 +1,6 @@
 name: ga_ls7e_nbart_gm_cyear_3
 description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain, Landsat 7 Geomedian Calendar Year Collection 3
+license: CC-BY-4.0
 metadata_type: eo3
 
 metadata:
@@ -50,11 +51,12 @@ measurements:
     dtype: int16
     nodata: -999
     units: '1'
-storage:
-  crs: EPSG:3577
-  resolution:
-    x: 30
+
+load:
+  crs: 'epsg:3577'
+  resolution: 
     y: -30
-  tile_size:
-    x: 3200.0
-    y: 3200.0
+    x: 30
+  align:
+    y: 0
+    x: 0

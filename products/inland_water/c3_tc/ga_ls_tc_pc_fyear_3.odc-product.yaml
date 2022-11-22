@@ -52,3 +52,12 @@ measurements:
     dtype: int16
     units: 'percent'
     nodata: -9999
+
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0

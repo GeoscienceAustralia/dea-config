@@ -29,3 +29,12 @@ measurements:
         bits: [0,1,2,3,4,5,6,7]
         description: Closed Forest
         values: {3: true}
+
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0

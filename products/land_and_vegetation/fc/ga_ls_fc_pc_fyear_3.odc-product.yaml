@@ -65,3 +65,12 @@ measurements:
           1: insufficient observations dry
           2: sufficient observations
         description: Quality Assurance
+
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0

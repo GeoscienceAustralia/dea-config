@@ -2,7 +2,8 @@
 ---
 
 name: low_tide_comp_20p
-description: Low tide 20 percentage composites 25m v. 2.0.0
+description: Low Tide Composite 25m 2.0.0
+license: CC-BY-4.0
 metadata_type: eo
 managed: true
 
@@ -44,8 +45,11 @@ measurements:
       nodata: -999
       units: 'metres'
 
-storage:
-    crs: EPSG:3577
-    resolution:
-        x: 25
-        y: -25
+load:
+  crs: 'epsg:3577'
+  resolution:
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

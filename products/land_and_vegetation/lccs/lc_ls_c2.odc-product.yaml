@@ -1,6 +1,7 @@
 name: ga_ls_landcover_class_cyear_2
 
 description: Geoscience Australia Landsat Land Cover Calendar Year Collection 2.0
+license: CC-BY-4.0
 metadata_type: eo3
 
 metadata:
@@ -63,12 +64,12 @@ measurements:
     dtype: uint8
     nodata: 0
     units: '1'
-storage:
-  crs: EPSG:3577
-  tile_size:
-    x: 100000.0
-    y: 100000.0
-  resolution:
-    x: 25
-    y: -25
 
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

@@ -1,5 +1,6 @@
 name: nidem
 description: National Intertidal Digital Elevation Model 25m 1.0.0
+license: CC-BY-4.0
 metadata_type: eo
 
 metadata:
@@ -11,8 +12,12 @@ measurements:
     name: 'nidem'
     nodata: -9999
     units: 'metres'
-storage:
-  crs: EPSG:3577
+
+load:
+  crs: 'epsg:3577'
   resolution:
-    x: 25
     y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

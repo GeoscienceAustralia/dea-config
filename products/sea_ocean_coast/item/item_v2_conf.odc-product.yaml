@@ -1,7 +1,8 @@
 
 ---
 name: item_v2_conf
-description: Average ndwi Standard Deviation, the Confidence Layer
+description: Intertidal Extents Model confidence 25m 2.0.0
+license: CC-BY-4.0
 metadata_type: eo
 
 managed: true
@@ -19,8 +20,11 @@ measurements:
   nodata: -6666
   units: '1'
 
-storage:
-  crs: EPSG:3577
+load:
+  crs: 'epsg:3577'
   resolution:
-    x: 25
     y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0
