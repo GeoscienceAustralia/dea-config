@@ -234,7 +234,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "resource_limits": reslim_for_sentinel2,
             "dynamic": True,
             "native_crs": "EPSG:3577",
-            "native_resolution": [10.0, 10.0],
+            "native_resolution": [10.0, -10.0],
             "flags": [
                 {
                     "band": "land",
