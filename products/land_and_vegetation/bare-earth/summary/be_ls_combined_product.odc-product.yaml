@@ -1,6 +1,9 @@
 name: landsat_barest_earth
-description: Landsat-5/Landsat-7/Landsat-8 combined Barest Earth pixel composite albers 25 metre, 100km tile, Australian Albers Equal Area projection (EPSG:3577)
+description: Landsat 30+ Barest Earth
 metadata_type: eo
+
+license: CC-BY-4.0
+
 metadata:
   product_type: landsat_barest_earth
   platform:
@@ -9,6 +12,7 @@ metadata:
     name: GeoTIFF
   instrument:
     name: TM,ETM+,OLI
+
 storage:
   driver: GeoTIFF
   crs: EPSG:3577
@@ -19,6 +23,7 @@ storage:
     x: 25
     y: -25
   dimension_order: [time, y, x]
+
 # possibly fix the dtype
 measurements:
   - name: blue
@@ -46,3 +51,11 @@ measurements:
     nodata: -999
     units: '1'
 
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

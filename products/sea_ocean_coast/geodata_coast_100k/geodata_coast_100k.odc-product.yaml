@@ -1,4 +1,18 @@
+name: geodata_coast_100k
 description: Coastline data for Australia
+metadata_type: eo
+
+license: CC-BY-4.0
+
+metadata:
+  format:
+    name: GeoTIFF
+  instrument:
+    name: unknown
+  platform:
+    code: unknown
+  product_type: model
+
 measurements:
 - dtype: uint8
   flags_definition:
@@ -21,13 +35,12 @@ measurements:
   name: land
   nodata: 0
   units: '1'
-metadata:
-  format:
-    name: GeoTIFF
-  instrument:
-    name: unknown
-  platform:
-    code: unknown
-  product_type: model
-metadata_type: eo
-name: geodata_coast_100k
+
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

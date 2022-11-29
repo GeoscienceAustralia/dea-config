@@ -1,11 +1,15 @@
 name: multi_scale_topographic_position
 description: Multi-scale Topographic Position Image
 managed: true
+metadata_type: eo
+
+license: CC-BY-4.0
+
 metadata:
     format:
         name: GeoTIFF
     product_type: topographic_model
-metadata_type: eo
+
 storage:
     crs: EPSG:4326
     resolution:
@@ -14,6 +18,7 @@ storage:
     tile_size:
         latitude: 1.0
         longitude: 1.0
+
 measurements:
 -   dtype: int16
     name: regional
@@ -27,3 +32,9 @@ measurements:
     name: local
     nodata: 0
     units: '0.0039'
+
+load:
+  crs: 'EPSG:4326'
+  resolution: 
+    latitude: -0.000833333333347
+    longitude: 0.000833333333347

@@ -7,6 +7,8 @@ name: s2a_nrt_granule
 description: Sentinel-2A MSI ARD NRT - NBAR NBART and Pixel Quality
 metadata_type: eo_s2_nrt
 
+license: CC-BY-4.0
+
 metadata:
     format:
         name: GeoTiff

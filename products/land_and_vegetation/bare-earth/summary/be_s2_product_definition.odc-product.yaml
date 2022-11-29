@@ -2,10 +2,14 @@
 # url: https://explorer.dev.dea.ga.gov.au/products/s2_barest_earth.odc-product.yaml
 name: s2_barest_earth
 metadata_type: eo3
-description: The Sentinel-2 Barest Earth
+description: Sentinel-2 Barest Earth
+
+license: CC-BY-4.0
+
 metadata:
   product:
     name: s2_barest_earth
+
 measurements:
 - name: s2be_blue
   dtype: int16
@@ -97,3 +101,12 @@ measurements:
   - s2be_band_12
   - s2be_B12
   - s2be_Band12
+
+load:
+  crs: 'epsg:3577'
+  resolution: 
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0
