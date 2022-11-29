@@ -16,10 +16,15 @@ ows_cfg = {
                 "vertical_coord": "y",
             },
             "EPSG:4326": {"geographic": True, "vertical_coord_first": True},  # WGS-84
-            "EPSG:3577": {  # GDA-94, internal representation
+            "EPSG:3577": {  # GDA-94, Albers - native CRS for most DEA products
                 "geographic": False,
                 "horizontal_coord": "x",
                 "vertical_coord": "y",
+            },
+            "EPSG:4238": {  # GDA-94 (geographic) - native CRS for ASTER
+                "geographic": True,
+                "horizontal_coord": "longitude",
+                "vertical_coord": "latitude",
             },
             "EPSG:3111": {  # VicGrid94 for delwp.vic.gov.au
                 "geographic": False,
