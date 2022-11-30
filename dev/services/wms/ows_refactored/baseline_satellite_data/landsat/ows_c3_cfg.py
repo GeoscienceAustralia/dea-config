@@ -73,7 +73,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # flags is now a list of flag band definitions - NOT a dictionary with identifiers
                 {
                     "band": "oa_fmask",
-                    "product": "ga_ls8c_ard_3",
+                    "product": "ga_ls9c_ard_3",
                     "ignore_time": False,
                     "ignore_info_flags": [],
                 },
