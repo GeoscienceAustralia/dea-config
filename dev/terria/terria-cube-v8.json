@@ -246,7 +246,7 @@
                                     "name": "DEA Surface Reflectance (Landsat 9 OLI-TIRS)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls8c_ard_3",
+                                    "layers": "ga_ls9c_ard_3",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_ls9c_ard_3",
                                     "chartColor": "white",
