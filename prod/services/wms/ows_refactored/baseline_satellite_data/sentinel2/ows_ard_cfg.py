@@ -9,6 +9,8 @@ s2b_layer = {
     "title": "DEA Surface Reflectance (Sentinel-2B MSI)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2B MSI)
 
+**This dataset has been replaced with an updated version. This service will be decommissioned in January 2023. For more information please see https://bit.ly/3FAeAcN**
+
 This product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.
 
 These corrections have been applied to all satellite imagery in the Sentinel-2 archive. This is undertaken to allow comparison of imagery acquired at different times, in different seasons and in different geographic locations.
@@ -53,6 +55,8 @@ s2a_layer = {
     "title": "DEA Surface Reflectance (Sentinel-2A MSI)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2A MSI)
 
+**This dataset has been replaced with an updated version. This service will be decommissioned in January 2023. For more information please see https://bit.ly/3FAeAcN**
+
 This product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.
 
 These corrections have been applied to all satellite imagery in the Sentinel-2 archive. This is undertaken to allow comparison of imagery acquired at different times, in different seasons and in different geographic locations.
@@ -96,6 +100,8 @@ combined_layer = {
     "title": "DEA Surface Reflectance (Sentinel-2)",
     "name": "s2_ard_granule_nbar_t",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2 MSI)
+
+**This dataset has been replaced with an updated version. This service will be decommissioned in January 2023. For more information please see https://bit.ly/3FAeAcN**
 
 This product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.
 

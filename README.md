@@ -4,6 +4,17 @@ Config files for dea services
 
 This is a central space used to store configuration for our services and products.
 
+
+## Formatting for Terria Data Description section in `ows config`
+#### Bold
+```
+**Overview**
+```
+#### Italic
+```
+*Overview*
+```
+
 ## Testing
 
 ### products metadata and products definition testing
