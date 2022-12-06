@@ -9,6 +9,8 @@ combined_layer = {
     "name": "s2_nrt_granule_nbar_t",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction near real time (Sentinel-2 MSI)
 
+**This dataset has been replaced with an updated version. This service will be decommissioned in January 2023. For more information please see https://bit.ly/3FAeAcN**
+
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
@@ -56,6 +58,8 @@ s2b_layer = {
     "title": "DEA Surface Reflectance (Sentinel-2B MSI Near Real-Time)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2B MSI) near real time
 
+**This dataset has been replaced with an updated version. This service will be decommissioned in January 2023. For more information please see https://bit.ly/3FAeAcN**
+
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
 The Normalised Difference Chlorophyll Index (NDCI) is based on the method of Mishra & Mishra 2012, and adapted to bands on the Sentinel-2A & B sensors.
@@ -102,6 +106,8 @@ s2a_layer = {
     "name": "s2a_nrt_granule_nbar_t",
     "title": "DEA Surface Reflectance (Sentinel-2A MSI Near Real-Time)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2A MSI) near real time
+
+**This dataset has been replaced with an updated version. This service will be decommissioned in January 2023. For more information please see https://bit.ly/3FAeAcN**
 
 This is a 90-day rolling archive of daily Sentinel-2 Near Real Time data. The Near Real-Time capability provides analysis-ready data that is processed on receipt using the best-available ancillary information at the time to provide atmospheric corrections.
 
