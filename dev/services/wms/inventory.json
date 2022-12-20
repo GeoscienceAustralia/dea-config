@@ -54,9 +54,7 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob",
-                "s2cloud_prob_dark",
-                "s2cloud_prob_transparent"
+                "s2cloudless_prob"
             ]
         },
         {
@@ -86,9 +84,7 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob",
-                "s2cloud_prob_dark",
-                "s2cloud_prob_transparent"
+                "s2cloudless_prob"
             ]
         },
         {
@@ -118,9 +114,7 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob",
-                "s2cloud_prob_dark",
-                "s2cloud_prob_transparent"
+                "s2cloudless_prob"
             ]
         },
         {
