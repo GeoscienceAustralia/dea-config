@@ -1,5 +1,3 @@
-import copy
-
 from ows_refactored.baseline_satellite_data.sentinel2.style_s2_pure_cfg import (
     style_s2_pure_aerosol, style_s2_pure_blue, style_s2_pure_green,
     style_s2_pure_narrow_nir, style_s2_pure_nir, style_s2_pure_red,
