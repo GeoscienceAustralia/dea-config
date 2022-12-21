@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 77,
+    "total_layers_count": 68,
     "layers": [
         {
             "layer": "ga_ls_ard_3",
@@ -27,41 +27,12 @@
             ]
         },
         {
-            "layer": "s2_nrt_granule_nbar_t",
-            "product": [
-                "s2a_nrt_granule",
-                "s2b_nrt_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
             "layer": "ga_s2m_ard_3",
             "product": [
                 "ga_s2am_ard_3",
                 "ga_s2bm_ard_3"
             ],
-            "styles_count": 23,
+            "styles_count": 21,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -83,9 +54,7 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob",
-                "s2cloud_prob_dark",
-                "s2cloud_prob_transparent"
+                "s2cloudless_prob"
             ]
         },
         {
@@ -93,7 +62,7 @@
             "product": [
                 "ga_s2am_ard_3"
             ],
-            "styles_count": 23,
+            "styles_count": 21,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -115,9 +84,7 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob",
-                "s2cloud_prob_dark",
-                "s2cloud_prob_transparent"
+                "s2cloudless_prob"
             ]
         },
         {
@@ -125,7 +92,7 @@
             "product": [
                 "ga_s2bm_ard_3"
             ],
-            "styles_count": 23,
+            "styles_count": 21,
             "styles_list": [
                 "simple_rgb",
                 "infrared_green",
@@ -147,38 +114,7 @@
                 "swir2",
                 "fmask",
                 "s2cloudless_mask",
-                "s2cloudless_prob",
-                "s2cloud_prob_dark",
-                "s2cloud_prob_transparent"
-            ]
-        },
-        {
-            "layer": "s2_ard_granule_nbar_t",
-            "product": [
-                "s2a_ard_granule",
-                "s2b_ard_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
+                "s2cloudless_prob"
             ]
         },
         {
@@ -422,203 +358,6 @@
                 "green",
                 "red",
                 "nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "s2b_nrt_granule_nbar_t",
-            "product": [
-                "s2b_nrt_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "s2a_nrt_granule_nbar_t",
-            "product": [
-                "s2a_nrt_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "s2_nrt_provisional_granule_nbar_t",
-            "product": [
-                "ga_s2am_ard_provisional_3",
-                "ga_s2bm_ard_provisional_3"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "s2b_nrt_provisional_granule_nbar_t",
-            "product": [
-                "ga_s2bm_ard_provisional_3"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "s2a_nrt_provisional_granule_nbar_t",
-            "product": [
-                "ga_s2am_ard_provisional_3"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "s2a_ard_granule_nbar_t",
-            "product": [
-                "s2a_ard_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "s2b_ard_granule_nbar_t",
-            "product": [
-                "s2b_ard_granule"
-            ],
-            "styles_count": 19,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "ndci",
-                "nbr",
-                "aerosol",
-                "blue",
-                "green",
-                "red",
-                "red_edge_1",
-                "red_edge_2",
-                "red_edge_3",
-                "nir",
-                "narrow_nir",
                 "swir1",
                 "swir2",
                 "fmask"
