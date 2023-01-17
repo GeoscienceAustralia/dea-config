@@ -59,7 +59,7 @@ measurements:
         values: {128: true}
 
 load:
-  crs: 'epsg:3577'
+  crs: 'EPSG:3577'
   resolution:
     y: -30
     x: 30

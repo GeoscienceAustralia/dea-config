@@ -54,7 +54,7 @@ measurements:
     nodata: -9999
 
 load:
-  crs: 'epsg:3577'
+  crs: 'EPSG:3577'
   resolution: 
     y: -30
     x: 30
