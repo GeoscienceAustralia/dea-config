@@ -14,7 +14,7 @@ measurements:
     units: 'metres'
 
 load:
-  crs: 'epsg:3577'
+  crs: 'EPSG:3577'
   resolution:
     y: -25
     x: 25
