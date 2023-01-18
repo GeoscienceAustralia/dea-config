@@ -365,7 +365,7 @@ metadata_type: eo_plus
 name: ga_s2b_ard_nbar_granule
 
 load:
-  crs: 'epsg:3577'
+  crs: 'EPSG:3577'
   resolution:
     y: -10
     x: 10

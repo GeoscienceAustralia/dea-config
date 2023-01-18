@@ -33,7 +33,7 @@ measurements:
     nodata: .nan
 
 load:
-  crs: 'epsg:3577'
+  crs: 'EPSG:3577'
   resolution:
     y: -10
     x: 10

@@ -889,7 +889,7 @@ measurements:
                        2297, 2298, 2299, 2300, 2301, 2302, 2303]
 
 load:
-  crs: 'epsg:3577'
+  crs: 'EPSG:3577'
   resolution:
     y: -10
     x: 10
