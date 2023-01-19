@@ -57,7 +57,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2, Collection 3)",
+                            "name": "DEA Surface Reflectance (Sentinel-2)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "ga_s2m_ard_3",
@@ -395,7 +395,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI, Collection 3)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2am_ard_3",
@@ -424,7 +424,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI, Collection 3)",
+                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2bm_ard_3",

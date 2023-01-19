@@ -6,7 +6,7 @@ from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 s2b_layer = {
     "name": "ga_s2bm_ard_3",
-    "title": "DEA Surface Reflectance (Sentinel-2B MSI, Collection 3)",
+    "title": "DEA Surface Reflectance (Sentinel-2B MSI)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2B MSI)
 
 This product has been corrected to account for variations caused by atmospheric properties, sun position and sensor view angle at time of image capture.
@@ -50,7 +50,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 
 s2a_layer = {
     "name": "ga_s2am_ard_3",
-    "title": "DEA Surface Reflectance (Sentinel-2A MSI, Collection 3)",
+    "title": "DEA Surface Reflectance (Sentinel-2A MSI)",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2A MSI)
 
 This product takes Sentinel-2A imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
@@ -93,7 +93,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 combined_layer = {
-    "title": "DEA Surface Reflectance (Sentinel-2 MSI, Collection 3)",
+    "title": "DEA Surface Reflectance (Sentinel-2 MSI)",
     "name": "ga_s2m_ard_3",
     "abstract": """Sentinel-2 Multispectral Instrument - Nadir BRDF Adjusted Reflectance + Terrain Illumination Correction (Sentinel-2 MSI)
 
