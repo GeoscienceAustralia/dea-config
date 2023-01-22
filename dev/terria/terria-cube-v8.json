@@ -2345,7 +2345,7 @@
                             "type": "group",
                             "name": "DEA Surface Reflectance (Sentinel-2)",
                             "members": [
-							    {
+                                {
                                     "type": "wms",
                                     "name": "DEA Surface Reflectance (Sentinel-2A MSI)",
                                     "url": "https://ows.dea.ga.gov.au/",
@@ -2376,7 +2376,7 @@
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2a satellite images"
                                 },
-								{
+                                {
                                     "type": "wms",
                                     "name": "DEA Surface Reflectance (Sentinel-2B MSI)",
                                     "url": "https://ows.dea.ga.gov.au/",
