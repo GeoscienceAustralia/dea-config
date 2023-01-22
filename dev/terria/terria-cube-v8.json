@@ -2375,6 +2375,7 @@
                                     "id": "iNJKMD",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2a satellite images"
+                                    ]
                                 },
                                 {
                                     "type": "wms",
