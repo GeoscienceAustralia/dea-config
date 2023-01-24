@@ -10,7 +10,7 @@ bands_ls_s2_shared = {
 }
 
 combined_layer = {
-    "title": "DEA Surface Reflectance (Combined Sentinel-2/Landsat)",
+    "title": "DEA Surface Reflectance (Landsat and Sentinel-2)",
     "name": "s2_ls_combined",
     "abstract": """Geoscience Australia Landsat and Sentinel-2 Analysis Ready Data Collection 3
 
