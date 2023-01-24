@@ -55,4 +55,3 @@ styles_combined = [
     style_combined_pure_red,
 ]
 
-

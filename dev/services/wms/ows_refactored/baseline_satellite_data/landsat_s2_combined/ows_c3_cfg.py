@@ -1,4 +1,5 @@
-from ows_refactored.baseline_satellite_data.landsat_s2_combined.style_combined_cfg import styles_combined
+from ows_refactored.baseline_satellite_data.landsat_s2_combined.style_combined_cfg import \
+     styles_combined
 from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 # bands definition
@@ -27,7 +28,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
     "product_names": [
         # Sentinel-2 listed first to set priority on overlap areas.
-        "ga_s2am_ard_3", 
+        "ga_s2am_ard_3",
         "ga_s2bm_ard_3",
         # Landsat listed second.
         "ga_ls5t_ard_3",
@@ -46,7 +47,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "true_colour", 
+        "default_style": "true_colour",
         "styles": styles_combined
     },
 }
