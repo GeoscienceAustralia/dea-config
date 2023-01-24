@@ -51,4 +51,3 @@ For service status information, see https://status.dea.ga.gov.au""",
         "styles": styles_combined
     },
 }
-
