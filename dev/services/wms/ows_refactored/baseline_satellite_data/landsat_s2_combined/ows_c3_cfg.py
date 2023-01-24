@@ -12,7 +12,7 @@ bands_ls_s2_shared = {
 combined_layer = {
     "title": "DEA Surface Reflectance (Combined Sentinel-2/Landsat)",
     "name": "s2_ls_combined",
-    "abstract": """Geoscience Australia Landsat Analysis Ready Data Collection 3
+    "abstract": """Geoscience Australia Landsat and Sentinel-2 Analysis Ready Data Collection 3
 
 This product takes Sentinel-2 and Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
