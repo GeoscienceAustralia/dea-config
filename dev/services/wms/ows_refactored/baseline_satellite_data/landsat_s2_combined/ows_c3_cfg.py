@@ -1,5 +1,5 @@
 from ows_refactored.baseline_satellite_data.landsat_s2_combined.style_combined_cfg import \
-     styles_combined
+    styles_combined
 from ows_refactored.ows_reslim_cfg import reslim_for_sentinel2
 
 # bands definition
