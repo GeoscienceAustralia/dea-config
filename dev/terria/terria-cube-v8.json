@@ -26,7 +26,7 @@
                             },
                             "id": "DgAS65"
                         },
-						{
+                        {
                             "type": "wms",
                             "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
