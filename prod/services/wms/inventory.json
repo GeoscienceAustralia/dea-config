@@ -1,10 +1,10 @@
 {
-    "total_layers_count": 69,
+    "total_layers_count": 65,
     "layers": [
          {
             "layer": "s2_ls_combined",
-            "product": [ 
-                "ga_s2am_ard_3", 
+            "product": [
+                "ga_s2am_ard_3",
                 "ga_s2bm_ard_3",
                 "ga_ls5t_ard_3",
                 "ga_ls7e_ard_3",
