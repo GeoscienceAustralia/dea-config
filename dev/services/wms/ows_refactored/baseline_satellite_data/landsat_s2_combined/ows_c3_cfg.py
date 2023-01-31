@@ -25,7 +25,7 @@ This product combines:
    * Landsat-5 https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
    * Landsat-7 https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm
    * Landsat-8 https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs
-   * Landsat-9 
+   * Landsat-9
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
