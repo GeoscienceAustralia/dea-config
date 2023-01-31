@@ -16,13 +16,16 @@ combined_layer = {
 
 This product takes Sentinel-2 and Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
-Where Sentinel-2 and Landsat data are both available, the higher resolution
-Sentinel-2 data is used.
+Where Sentinel-2 and Landsat data are both available, the higher resolution Sentinel-2 data is used.
 
 This product combines:
 
-   * Sentinel-2A/Sentinel-2B
-   * Landsat-5/Landsat-7/Landsat-8/Landsat-9
+   * Sentinel-2A https://cmi.ga.gov.au/data-products/dea/683/dea-surface-reflectance-sentinel-2a-msi
+   * Sentinel-2B https://cmi.ga.gov.au/data-products/dea/825/dea-surface-reflectance-sentinel-2b-msi
+   * Landsat-5 https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
+   * Landsat-7 https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm
+   * Landsat-8 https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs
+   * Landsat-9 
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
