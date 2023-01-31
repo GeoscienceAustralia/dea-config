@@ -93,7 +93,7 @@ ows_cfg = {
         "max_width": 512,
         "max_height": 512,
         # Allow the WMS/WMTS GetCapabilities responses to be cached for 1 hour
-        "caps_cache_maxage": 3600,
+        "caps_cache_maxage": 60 * 60,
     },  # END OF wms SECTION
     "wmts": {
         # Config for WMTS service, for all products/layers
@@ -125,8 +125,8 @@ ows_cfg = {
     "wcs": {
         # Config for WCS service, for all products/coverages
         "default_geographic_CRS": "EPSG:4326",
-        "caps_cache_maxage": 3600,
-        "default_desc_cache_maxage": 3600,
+        "caps_cache_maxage": 60 * 60,
+        "default_desc_cache_maxage": 60 * 60,
         "formats": {
             "GeoTIFF": {
                 "renderers": {
