@@ -29,7 +29,7 @@ reslim_standard = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_level": 6.9,
-        "dataset_cache_rules": dataset_cache_rules
+        "dataset_cache_rules": dataset_cache_rules,
         "max_datasets": 24,
     },
     "wcs": common_wcs_limits,
