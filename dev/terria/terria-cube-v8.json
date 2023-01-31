@@ -13,7 +13,7 @@
                     "members": [
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
+                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, GSKY)",
                             "url": "https://gsky.nci.org.au/ows/dea",
                             "opacity": 1,
                             "layers": "blend_sentinel2_landsat_nbart_daily",
@@ -25,6 +25,34 @@
                                 "ignoreUnknownTileErrors": true
                             },
                             "id": "DgAS65"
+                        },
+                        {
+                            "type": "wms",
+                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "s2_ls_combined",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "s2_ls_combined",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "featureInfoTemplate": {
+                                "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.nbart_red}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n660,{{data.0.bands.nbart_red}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "72HiKx"
                         },
                         {
                             "type": "wms",
@@ -2008,7 +2036,7 @@
                     "members": [
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
+                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, GSKY)",
                             "url": "https://gsky.nci.org.au/ows/dea",
                             "opacity": 1,
                             "layers": "blend_sentinel2_landsat_nbart_daily",
@@ -2023,6 +2051,34 @@
                             "shareKeys": [
                                 "Root Group/Satellite images/Satellite images multi-sensor - daily/Daily Landsat and Sentinel-2 satellite images"
                             ]
+                        },
+                        {
+                            "type": "wms",
+                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "s2_ls_combined",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "s2_ls_combined",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "featureInfoTemplate": {
+                                "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.nbart_red}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n660,{{data.0.bands.nbart_red}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "65KRiP"
                         },
                         {
                             "type": "wms",
