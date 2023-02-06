@@ -46,18 +46,21 @@ measurements:
   nodata: -999
   aliases:
   - nbar_band05
+  - nbar_common_nir
 - name: nbar_swir_1
   dtype: int16
   units: '1'
   nodata: -999
   aliases:
   - nbar_band06
+  - nbar_common_swir_1
 - name: nbar_swir_2
   dtype: int16
   units: '1'
   nodata: -999
   aliases:
   - nbar_band07
+  - nbar_common_swir_2
 - name: nbar_panchromatic
   dtype: int16
   units: '1'
@@ -99,6 +102,7 @@ measurements:
   aliases:
   - nbart_band05
   - nir
+  - nbart_common_nir
 - name: nbart_swir_1
   dtype: int16
   units: '1'
@@ -107,6 +111,7 @@ measurements:
   - nbart_band06
   - swir_1
   - swir1
+  - nbart_common_swir_1
 - name: nbart_swir_2
   dtype: int16
   units: '1'
@@ -115,6 +120,7 @@ measurements:
   - nbart_band07
   - swir_2
   - swir2
+  - nbart_common_swir_2
 - name: nbart_panchromatic
   dtype: int16
   units: '1'
