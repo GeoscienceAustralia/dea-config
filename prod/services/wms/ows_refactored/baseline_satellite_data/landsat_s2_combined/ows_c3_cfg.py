@@ -42,6 +42,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "bands": bands_ls_s2_shared,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
+    # pseudo-"native" CRS and resolution for WCS
     "native_crs": "EPSG:3577",
     "native_resolution": [10, -10],
     "image_processing": {
