@@ -1,5 +1,3 @@
-import copy
-
 from ows_refactored.baseline_satellite_data.sentinel2.style_s2_pure_cfg import (
     style_s2_pure_aerosol, style_s2_pure_blue, style_s2_pure_green,
     style_s2_pure_narrow_nir, style_s2_pure_nir, style_s2_pure_red,
@@ -7,22 +5,9 @@ from ows_refactored.baseline_satellite_data.sentinel2.style_s2_pure_cfg import (
     style_s2_pure_swir1, style_s2_pure_swir2)
 from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks
 
-s2_nrt_fmask = [
+s2_cloudless_mask = [
     {
-        "band": "fmask",
-        "values": [0, 2, 3],
-        "invert": True,
-    },
-    {
-        "band": "land",
-        "invert": True,
-        "values": [1],
-    },
-]
-
-s2_provisional_oa_fmask = [
-    {
-        "band": "oa_fmask",
+        "band": "oa_s2cloudless_mask",
         "values": [0, 2, 3],
         "invert": True,
     },
@@ -76,7 +61,7 @@ style_s2_ndvi = {
         {"value": 0.9, "color": "#237100"},
         {"value": 1.0, "color": "#114D04"},
     ],
-    "pq_masks": s2_nrt_fmask,
+    "pq_masks": s2_cloudless_mask,
     "legend": legend_idx_0_1_5ticks,
     "multi_date": [
         {
@@ -87,7 +72,7 @@ style_s2_ndvi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": s2_nrt_fmask,
+            "pq_masks": s2_cloudless_mask,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -101,10 +86,6 @@ style_s2_ndvi = {
         }
     ],
 }
-
-style_s2_provisional_ndvi = copy.deepcopy(style_s2_ndvi)
-style_s2_provisional_ndvi["pq_masks"] = s2_provisional_oa_fmask
-style_s2_provisional_ndvi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_ndwi = {
     "name": "ndwi",
@@ -137,7 +118,7 @@ style_s2_ndwi = {
             "color": "#08306b",
         },
     ],
-    "pq_masks": s2_nrt_fmask,
+    "pq_masks": s2_cloudless_mask,
     "legend": {
         "begin": "0.0",
         "end": "0.5",
@@ -159,7 +140,7 @@ style_s2_ndwi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": s2_nrt_fmask,
+            "pq_masks": s2_cloudless_mask,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -173,10 +154,6 @@ style_s2_ndwi = {
         }
     ],
 }
-
-style_s2_provisional_ndwi = copy.deepcopy(style_s2_ndwi)
-style_s2_provisional_ndwi["pq_masks"] = s2_provisional_oa_fmask
-style_s2_provisional_ndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_mndwi = {
     # Cannot reuse landsat as we need swir_2 to landsat's swir_1
@@ -198,7 +175,7 @@ style_s2_mndwi = {
         {"value": 0.8, "color": "#1563aa"},
         {"value": 1.0, "color": "#08306b"},
     ],
-    "pq_masks": s2_nrt_fmask,
+    "pq_masks": s2_cloudless_mask,
     "legend": legend_idx_0_1_5ticks,
     "multi_date": [
         {
@@ -209,7 +186,7 @@ style_s2_mndwi = {
             },
             "mpl_ramp": "RdYlBu",
             "range": [-1.0, 1.0],
-            "pq_masks": s2_nrt_fmask,
+            "pq_masks": s2_cloudless_mask,
             "legend": {
                 "begin": "-1.0",
                 "end": "1.0",
@@ -223,10 +200,6 @@ style_s2_mndwi = {
         }
     ],
 }
-
-style_s2_provisional_mndwi = copy.deepcopy(style_s2_mndwi)
-style_s2_provisional_mndwi["pq_masks"] = s2_provisional_oa_fmask
-style_s2_provisional_mndwi["multi_date"][0]["pq_masks"] = s2_provisional_oa_fmask
 
 style_s2_ndci = {
     "name": "ndci",
@@ -319,7 +292,7 @@ style_s2_nbr = {
             "color": "#053061",
         },
     ],
-    "pq_masks": s2_nrt_fmask,
+    "pq_masks": s2_cloudless_mask,
     "legend": {
         "show_legend": True,
         "begin": "-1.0",
@@ -397,9 +370,6 @@ style_s2_nbr = {
     ],
 }
 
-style_s2_provisional_nbr = copy.deepcopy(style_s2_nbr)
-style_s2_provisional_nbr["pq_masks"] = s2_provisional_oa_fmask
-
 fmask_bits = [
     {
         "title": "No Data",
@@ -452,6 +422,34 @@ fmask_bits = [
     },
 ]
 
+s2cloudless_mask_bits = [
+    {
+        "title": "No Data",
+        "abstract": "",
+        "values": [
+            0,    # nodata
+        ],
+        "alpha": 0.0,
+        "color": "#FFFFFF",
+    },
+    {
+        "title": "Clear",
+        "abstract": "",
+        "values": [
+            1,    # clear/valid
+        ],
+        "color": "#84A278",
+    },
+    {
+        "title": "Cloud",
+        "abstract": "",
+        "values": [
+            2,    # cloud
+        ],
+        "color": "#D0CFCE",
+    },
+]
+
 style_s2_fmask = {
     "name": "fmask",
     "title": "Fmask Classification",
@@ -463,17 +461,31 @@ style_s2_fmask = {
     }
 }
 
-style_s2_oa_fmask = {
-    "name": "fmask",
-    "title": "Fmask Classification",
-    "abstract": "Fmask (Function of mask) is used for automated clouds, cloud shadows, snow, and water masking for Landsats 4-8 and Sentinel 2 images.",
+style_s2_cloudless_mask = {
+    "name": "s2cloudless_mask",
+    "title": "S2 Cloudless Mask Classification",
+    "abstract": "S2 Cloudless Mask is used for automated cloud masking Sentinel 2 images.",
     "include_in_feature_info": False,
-    "needed_bands": ["oa_fmask"],
+    "needed_bands": ["s2cloudless_mask"],
     "value_map": {
-        "oa_fmask": fmask_bits
+        "s2cloudless_mask": s2cloudless_mask_bits
     }
 }
 
+style_s2_cloudless_prob = {
+    "name": "s2cloudless_prob",
+    "title": "S2 Cloudless Mask Probability",
+    "abstract": "S2 Cloudless Probabilities given for s2cloudless_mask classification",
+    "include_in_feature_info": False,
+    "needed_bands": ["s2cloudless_prob"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {"band": "s2cloudless_prob"},
+    },
+    "mpl_ramp": "inferno",
+    "range": [0.0, 1.0]
+}
 
 styles_s2_list = [
     style_s2_simple_rgb,
@@ -495,27 +507,6 @@ styles_s2_list = [
     style_s2_pure_swir1,
     style_s2_pure_swir2,
     style_s2_fmask,
-]
-
-
-styles_s2_provisional_list = [
-    style_s2_simple_rgb,
-    style_s2_irg,
-    style_s2_provisional_ndvi,
-    style_s2_provisional_ndwi,
-    style_s2_provisional_mndwi,
-    style_s2_ndci,
-    style_s2_provisional_nbr,
-    style_s2_pure_aerosol,
-    style_s2_pure_blue,
-    style_s2_pure_green,
-    style_s2_pure_red,
-    style_s2_pure_redge_1,
-    style_s2_pure_redge_2,
-    style_s2_pure_redge_3,
-    style_s2_pure_nir,
-    style_s2_pure_narrow_nir,
-    style_s2_pure_swir1,
-    style_s2_pure_swir2,
-    style_s2_oa_fmask,
+    style_s2_cloudless_mask,
+    style_s2_cloudless_prob,
 ]

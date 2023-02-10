@@ -28,7 +28,7 @@ jobs:
 
     - name: Run Python Linter
       run: |
-        python -m pip install pylint boto3
+        python -m pip install pylint datacube-ows
         ./check-code.sh
 
   flake8:

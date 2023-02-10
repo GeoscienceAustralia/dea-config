@@ -1,0 +1,30 @@
+
+---
+name: item_v2_conf
+description: Intertidal Extents Model confidence 25m 2.0.0
+license: CC-BY-4.0
+metadata_type: eo
+
+managed: true
+metadata:
+  format:
+    name: GeoTIFF
+  product_type: item_v2.0.0
+  statistic:
+    name: stddev
+    source: ndwi
+
+measurements:
+- name: stddev
+  dtype: float32
+  nodata: -6666
+  units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

@@ -1,0 +1,61 @@
+name: landsat_barest_earth
+description: Landsat 30+ Barest Earth
+metadata_type: eo
+
+license: CC-BY-4.0
+
+metadata:
+  product_type: landsat_barest_earth
+  platform:
+    code: LANDSAT_5,LANDSAT_7,LANDSAT_8
+  format:
+    name: GeoTIFF
+  instrument:
+    name: TM,ETM+,OLI
+
+storage:
+  driver: GeoTIFF
+  crs: EPSG:3577
+  tile_size:
+    x: 100000.0
+    y: 100000.0
+  resolution:
+    x: 25
+    y: -25
+  dimension_order: [time, y, x]
+
+# possibly fix the dtype
+measurements:
+  - name: blue
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: green
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: red
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nir
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: swir1
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: swir2
+    dtype: int16
+    nodata: -999
+    units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution: 
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

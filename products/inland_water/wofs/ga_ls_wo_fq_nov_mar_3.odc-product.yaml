@@ -1,0 +1,34 @@
+name: ga_ls_wo_fq_nov_mar_3
+description: Geoscience Australia Landsat Water Observations Frequency November to March Collection 3
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: wo
+  product: 
+    name: ga_ls_wo_fq_nov_mar_3 
+  
+measurements:
+  - name: count_wet
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: count_clear
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: frequency
+    dtype: float32
+    nodata: .nan
+    units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution: 
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0

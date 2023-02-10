@@ -1,0 +1,35 @@
+name: wofs_summary
+description: Water Observations from Space Statistics
+metadata_type: eo
+license: CC-BY-4.0
+
+metadata:
+  product_type: wofs_statistical_summary
+  format:
+    name: 'GeoTIFF'
+  instrument:
+    name: 'TM,ETM+,OLI'
+  platform:
+    code: 'LANDSAT_5,LANDSAT_7,LANDSAT_8'
+measurements:
+  - name: count_wet
+    dtype: int16
+    nodata: -1
+    units: '1'
+  - name: count_clear
+    dtype: int16
+    nodata: -1
+    units: '1'
+  - name: frequency
+    dtype: float32
+    nodata: -1
+    units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution: 
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

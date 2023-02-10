@@ -1,0 +1,27 @@
+name: item_v2
+description: Intertidal Extents Model 25m 2.0.0
+license: CC-BY-4.0
+metadata_type: eo
+
+managed: true
+metadata:
+  format:
+    name: GeoTIFF
+  product_type: item_v2.0.0
+  statistic:
+    name: decile
+
+measurements:
+- name: relative
+  dtype: int16
+  nodata: -6666
+  units: '0.1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

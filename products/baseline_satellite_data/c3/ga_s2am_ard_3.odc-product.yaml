@@ -70,6 +70,7 @@ measurements:
     aliases:
       - nbart_band08
       - nir_1
+      - nbart_common_nir
     dtype: int16
     nodata: -999
     units: '1'
@@ -84,6 +85,7 @@ measurements:
     aliases:
       - nbart_band11
       - swir_2
+      - nbart_common_swir_1
       # Requested for backwards compatibility with previous collection
       - swir2
     dtype: int16
@@ -93,6 +95,7 @@ measurements:
     aliases:
       - nbart_band12
       - swir_3
+      - nbart_common_swir_2
     dtype: int16
     nodata: -999
     units: '1'
@@ -219,3 +222,12 @@ measurements:
     dtype: float64
     nodata: .nan
     units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0

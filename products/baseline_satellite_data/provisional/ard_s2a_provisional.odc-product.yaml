@@ -199,3 +199,12 @@ measurements:
     dtype: float32
     nodata: .nan
     units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0

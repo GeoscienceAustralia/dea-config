@@ -1,0 +1,52 @@
+name: high_tide_comp_20p
+description: High Tide Composite 25m 2.0.0
+license: CC-BY-4.0
+metadata_type: eo
+
+managed: true
+metadata:
+    format:
+        name: GeoTIFF
+    product_type: tidal_composite
+    statistic:
+        name: precisegeomedian
+        source: nbar
+        tidal_range:
+            name: high
+            min: 80
+            max: 100
+
+measurements:
+    - name: blue
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: green
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: red
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: nir
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: swir1
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+    - name: swir2
+      dtype: float32
+      nodata: -999
+      units: 'metres'
+
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -25
+    x: 25
+  align:
+    y: 0
+    x: 0

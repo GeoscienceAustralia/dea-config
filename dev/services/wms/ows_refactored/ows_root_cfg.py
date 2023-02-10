@@ -16,10 +16,15 @@ ows_cfg = {
                 "vertical_coord": "y",
             },
             "EPSG:4326": {"geographic": True, "vertical_coord_first": True},  # WGS-84
-            "EPSG:3577": {  # GDA-94, internal representation
+            "EPSG:3577": {  # GDA-94 Albers - native CRS for most DEA products
                 "geographic": False,
                 "horizontal_coord": "x",
                 "vertical_coord": "y",
+            },
+            "EPSG:4238": {  # GDA-94 (geographic) - native CRS for ASTER
+                "geographic": True,
+                "horizontal_coord": "longitude",
+                "vertical_coord": "latitude",
             },
             "EPSG:3111": {  # VicGrid94 for delwp.vic.gov.au
                 "geographic": False,
@@ -87,6 +92,8 @@ ows_cfg = {
         "s3_aws_zone": "ap-southeast-2",
         "max_width": 512,
         "max_height": 512,
+        # Allow the WMS/WMTS GetCapabilities responses to be cached for 1 hour
+        "caps_cache_maxage": 60 * 60,
     },  # END OF wms SECTION
     "wmts": {
         # Config for WMTS service, for all products/layers
@@ -118,6 +125,8 @@ ows_cfg = {
     "wcs": {
         # Config for WCS service, for all products/coverages
         "default_geographic_CRS": "EPSG:4326",
+        "caps_cache_maxage": 60 * 60,
+        "default_desc_cache_maxage": 60 * 60,
         "formats": {
             "GeoTIFF": {
                 "renderers": {

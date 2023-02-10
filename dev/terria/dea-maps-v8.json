@@ -55,12 +55,12 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2 Near Real-Time)",
+                            "name": "DEA Surface Reflectance (Sentinel-2)",
                             "url": "https://ows.dea.ga.gov.au/",
                             "opacity": 1,
-                            "layers": "s2_nrt_granule_nbar_t",
+                            "layers": "ga_s2m_ard_3",
                             "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                            "linkedWcsCoverage": "s2_nrt_granule_nbar_t",
+                            "linkedWcsCoverage": "ga_s2m_ard_3",
                             "chartColor": "white",
                             "timeFilterPropertyName": "data_available_for_dates",
                             "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
@@ -68,38 +68,6 @@
                             "chartType": "momentPoints",
                             "featureInfoTemplate": {
                                 "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                "formats": {
-                                    "lat": {
-                                        "maximumFractionDigits": 5
-                                    },
-                                    "lon": {
-                                        "maximumFractionDigits": 5
-                                    }
-                                }
-                            },
-                            "tileErrorHandlingOptions": {
-                                "ignoreUnknownTileErrors": true
-                            },
-                            "id": "Z1RRRa",
-                            "shareKeys": [
-                                "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2 satellite images"
-                            ]
-                        },
-                        {
-                            "type": "wms",
-                            "name": "DEA Surface Reflectance (Sentinel-2)",
-                            "url": "https://ows.dea.ga.gov.au/",
-                            "opacity": 1,
-                            "layers": "s2_ard_granule_nbar_t",
-                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                            "linkedWcsCoverage": "s2_ard_granule_nbar_t",
-                            "chartColor": "white",
-                            "timeFilterPropertyName": "data_available_for_dates",
-                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
-                            "leafletUpdateInterval": 750,
-                            "chartType": "momentPoints",
-                            "featureInfoTemplate": {
-                                "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
                                 "formats": {
                                     "lat": {
                                         "maximumFractionDigits": 5
@@ -411,83 +379,19 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI Near Real-Time)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "s2a_nrt_granule_nbar_t",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2a_nrt_granule_nbar_t",
-                                    "chartColor": "white",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "8apTli",
-                                    "shareKeys": [
-                                        "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2A satellite images"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI Near Real-Time)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "s2b_nrt_granule_nbar_t",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2b_nrt_granule_nbar_t",
-                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
-                                    "chartColor": "white",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "AuD7kv",
-                                    "shareKeys": [
-                                        "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 90-day expedited satellite images/Expedited Sentinel 2B satellite images"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
                                     "name": "DEA Surface Reflectance (Sentinel-2A MSI)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "s2a_ard_granule_nbar_t",
+                                    "layers": "ga_s2am_ard_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2a_ard_granule_nbar_t",
+                                    "linkedWcsCoverage": "ga_s2am_ard_3",
                                     "chartColor": "white",
                                     "timeFilterPropertyName": "data_available_for_dates",
                                     "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
                                         "formats": {
                                             "lat": {
                                                 "maximumFractionDigits": 5
@@ -500,109 +404,16 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "iNJKMD",
-                                    "shareKeys": [
-                                        "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2a satellite images"
-                                    ]
+                                    "id": "rlm2Fc"
                                 },
                                 {
                                     "type": "wms",
                                     "name": "DEA Surface Reflectance (Sentinel-2B MSI)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "s2b_ard_granule_nbar_t",
+                                    "layers": "ga_s2bm_ard_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2b_ard_granule_nbar_t",
-                                    "chartColor": "white",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbar_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbar_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbar_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbar_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbar_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbar_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbar_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbar_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbar_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbar_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbar_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBAR at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBAR Reflectance'>nm,NBAR Reflectance\n440,{{data.0.bands.nbar_coastal_aerosol}}\n490,{{data.0.bands.nbar_blue}}\n560,{{data.0.bands.nbar_green}}\n670,{{data.0.bands.nbar_red}}\n710,{{data.0.bands.nbar_red_edge_1}}\n740,{{data.0.bands.nbar_red_edge_2}}\n780,{{data.0.bands.nbar_red_edge_3}}\n840,{{data.0.bands.nbar_nir_1}}\n870,{{data.0.bands.nbar_nir_2}}\n1610,{{data.0.bands.nbar_swir_2}}\n2190,{{data.0.bands.nbar_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "RACNHJ",
-                                    "shareKeys": [
-                                        "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2b satellite images"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2, Provisional)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "s2_nrt_provisional_granule_nbar_t",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2_nrt_provisional_granule_nbar_t",
-                                    "chartColor": "white",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "IUTY45"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2A MSI, Provisional)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "s2a_nrt_provisional_granule_nbar_t",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2a_nrt_provisional_granule_nbar_t",
-                                    "chartColor": "white",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "SDF32t"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Surface Reflectance (Sentinel-2B MSI, Provisional)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "s2b_nrt_provisional_granule_nbar_t",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "s2b_nrt_provisional_granule_nbar_t",
+                                    "linkedWcsCoverage": "ga_s2bm_ard_3",
                                     "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
                                     "chartColor": "white",
                                     "timeFilterPropertyName": "data_available_for_dates",
@@ -622,7 +433,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "fgh369"
+                                    "id": "qH2Uyn"
                                 }
                             ],
                             "shareKeys": [
@@ -1230,11 +1041,7 @@
                                     },
                                     "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'>\
-                                        <h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>\
-                                        Elevation relative to Mean Sea Level (approximately equivelent to AHD): \
-                                        <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1>\
-                                        <i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
+                                        "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
                                     "id": "bWICtK",
                                     "shareKeys": [
@@ -1281,7 +1088,7 @@
                                     "info": [
                                         {
                                             "name": "Abstract",
-                                            "content": "The Intertidal Extents Model (ITEM v2.0) product analyses GA’s historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, delineating exposed areas at differing tidal heights and stages. <p/> The product differs from previous methods used to map the intertidal zone which have been predominately focused on analysing a small number of individual satellite images per location (e.g Ryu et al., 2002; Murray et al., 2012). By utilising a full 30 year time series of observations and a global tidal model (Egbert and Erofeeva, 2002), the methodology enables us to overcome the requirement for clear, high quality observations acquired concurrent to the time of high and low tide."
+                                            "content": "The Intertidal Extents Model (ITEM v2.0) product analyses GA's historic archive of satellite imagery to derive a model of the spatial extents of the intertidal zone throughout the tidal cycle. The model can assist in understanding the relative elevation profile of the intertidal zone, delineating exposed areas at differing tidal heights and stages. <p/> The product differs from previous methods used to map the intertidal zone which have been predominately focused on analysing a small number of individual satellite images per location (e.g Ryu et al., 2002; Murray et al., 2012). By utilising a full 30 year time series of observations and a global tidal model (Egbert and Erofeeva, 2002), the methodology enables us to overcome the requirement for clear, high quality observations acquired concurrent to the time of high and low tide."
                                         },
                                         {
                                             "name": "Overview",
