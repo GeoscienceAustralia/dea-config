@@ -5,6 +5,8 @@ plugin_config:
       - [dilation, 5]
     cloud_shadow:
       - [dilation, 10]
+  transform_code: EPSG:9688
+  area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
   name: ga_ls_wo_fq_fyear_3
