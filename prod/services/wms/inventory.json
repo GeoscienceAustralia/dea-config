@@ -11,12 +11,21 @@
                 "ga_ls8c_ard_3",
                 "ga_ls9c_ard_3"
             ],
-            "styles_count": 4,
+            "styles_count": 13,
             "styles_list": [
                 "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
                 "blue",
                 "green",
-                "red"
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask"
             ]
         },
         {
