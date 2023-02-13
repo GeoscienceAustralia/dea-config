@@ -7,6 +7,9 @@ bands_ls_s2_shared = {
     "nbart_blue": ["nbart_blue", "blue"],
     "nbart_green": ["nbart_green", "green"],
     "nbart_red": ["nbart_red", "red"],
+    "nbart_common_nir": ["nbart_common_nir", "nir"],
+    "nbart_common_swir_1": ["nbart_common_swir_1", "swir1"],
+    "nbart_common_swir_2": ["nbart_common_swir_2", "swir2"],
 }
 
 combined_layer = {
@@ -50,6 +53,36 @@ For service status information, see https://status.dea.ga.gov.au""",
         "always_fetch_bands": [],
         "manual_merge": False,
     },
+    "flags": [
+        {
+            "band": "oa_fmask",
+            "products": [
+                # Should line up with product_names above.
+                "ga_s2am_ard_3",
+                "ga_s2bm_ard_3",
+                "ga_ls5t_ard_3",
+                "ga_ls7e_ard_3",
+                "ga_ls8c_ard_3",
+                "ga_ls9c_ard_3",
+            ],
+            "ignore_time": False,
+            "ignore_info_flags": [],
+        },
+        {
+            "band": "land",
+            "products": [
+                # Should line up with product_names above.
+                "geodata_coast_100k",
+                "geodata_coast_100k",
+                "geodata_coast_100k",
+                "geodata_coast_100k",
+                "geodata_coast_100k",
+                "geodata_coast_100k",
+            ]
+            "ignore_time": True,
+            "ignore_info_flags": []
+        },
+    ],
     "styling": {
         "default_style": "true_colour",
         "styles": styles_combined
