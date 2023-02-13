@@ -10,6 +10,7 @@ bands_ls_s2_shared = {
     "nbart_common_nir": ["nbart_common_nir", "nir"],
     "nbart_common_swir_1": ["nbart_common_swir_1", "swir1"],
     "nbart_common_swir_2": ["nbart_common_swir_2", "swir2"],
+    "oa_fmask": ["oa_fmask"]
 }
 
 combined_layer = {

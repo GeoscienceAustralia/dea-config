@@ -390,7 +390,7 @@ style_combined_fmask = {
     "include_in_feature_info": False,
     "needed_bands": ["oa_fmask"],
     "value_map": {
-        "fmask": [
+        "oa_fmask": [
             {
                 "title": "No Data",
                 "abstract": "",
