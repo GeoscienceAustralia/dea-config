@@ -49,7 +49,7 @@ style_combined_false_colour = {
     "title": "False colour - Green, SWIR, NIR",
     "abstract": "False Colour image with SWIR1->Red, NIR->Green, and Green->Blue",
     "components": {
-        "red": {"nbart_commmon_swir_1": 1.0},
+        "red": {"nbart_common_swir_1": 1.0},
         "green": {"nbart_common_nir": 1.0},
         "blue": {"nbart_green": 1.0},
     },
