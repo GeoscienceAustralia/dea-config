@@ -1,5 +1,7 @@
 name: Terria catalog preview
 
+# Run this action only when either of the Terria Cube or DEA Maps
+# configs or this workflow itself are edited 
 on:
   push:
     paths:
@@ -15,11 +17,17 @@ jobs:
 
     steps:
 
+      # Obtain the name of the current branch by using cut command to 
+      # extract the third segment of the "GITHUB_REF" var, then assign 
+      # this as a "BRANCH_NAME" var that can be accessed by the next step
       - name: Set branch name
         id: parse-branch-name
         run: |
             BRANCH_NAME=$(echo $GITHUB_REF | cut -d/ -f3)
             echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+      # Use the "BRANCH_NAME" var to create a Terria URL that points to
+      # the modified Terria config directly from Github itself
       - uses: mshick/add-pr-comment@v2
         with:
           message: |
