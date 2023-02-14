@@ -23,14 +23,11 @@ jobs:
             BRANCH_NAME=$(echo $GITHUB_REF | cut -d/ -f3)
             echo "Branch name is: $BRANCH_NAME"
             echo "BRANCH_NAME=BRANCH_NAME" >> $GITHUB_OUTPUT
+            echo "::set-output name=BRANCH_NAME::$BRANCH_NAME"
 
       - uses: mshick/add-pr-comment@v2
         with:
 #          repo-token: ${{ secrets.GITHUB_TOKEN }}
 #          repo-token-user-login: 'github-actions[bot]'
           message: |
-            **Terria Cube config preview:** https://terria-cube.terria.io/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/terria_config_link/dev/terria/terria-cube-v8.json
-            
-            **DEA Maps config preview:** https://maps.dea.ga.gov.au/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/terria_config_link/dev/terria/dea-maps-v8.json
-            
             Branch name is: ${{ steps.parse-branch-name.outputs.BRANCH_NAME }}
