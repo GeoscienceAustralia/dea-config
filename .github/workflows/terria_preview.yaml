@@ -3,6 +3,7 @@ on:
     branches:
       - terria_config_link
     paths:
+      - '.github/workflows/terria_preview.yaml'
       - 'dev/terria/terria-cube-v8.json'
       - 'dev/terria/dea-maps-v8.json'
 
