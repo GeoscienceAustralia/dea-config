@@ -17,11 +17,11 @@ jobs:
 
     steps:
 
-      - name: Set ticket number
-        id: parse-ticket-number
+      - name: Set branch name
+        id: parse-branch-name
         run: |
-            TICKET_NUMBER=$(echo $GITHUB_REF_NAME_SLUG | cut -c1-9 | tr '[:upper:]' '[:lower:]')
-            echo "::set-output name= TICKET_NUMBER::$TICKET_NUMBER"
+            BRANCH_NAME=$(echo $GITHUB_REF | cut -d/ -f3)
+            echo "::set-output name= BRANCH_NAME::$BRANCH_NAME"
 
       - uses: mshick/add-pr-comment@v2
         with:
@@ -30,4 +30,5 @@ jobs:
             **Terria Cube config preview:** https://terria-cube.terria.io/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/terria_config_link/dev/terria/terria-cube-v8.json
             
             **DEA Maps config preview:** https://maps.dea.ga.gov.au/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/terria_config_link/dev/terria/dea-maps-v8.json
-            'Link to JIRA ticket: https://jira.jira/jira/browse/${{ steps.parse-ticket-number.outputs.TICKET_NUMBER }}'
+            
+            Link to JIRA ticket: https://jira.jira/jira/browse/${{ steps.parse-branch-name.outputs.BRANCH_NAME }}
