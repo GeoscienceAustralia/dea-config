@@ -16,14 +16,14 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: Set ticket number
-        id: parse-ticket-number
-        run: |
-            TICKET_NUMBER=$(echo $GITHUB_REF_NAME_SLUG | cut -c1-9 | tr '[:upper:]' '[:lower:]')
-            echo "::set-output name= TICKET_NUMBER::$TICKET_NUMBER"
 
-      - uses: mshick/add-pr-comment@v1
+      - name: Set branch name
+        id: parse-branch-name
+        run: |
+            BRANCH_NAME=$(echo $GITHUB_REF | cut -d/ -f3)
+            echo "Branch name is: $BRANCH_NAME"
+            echo "BRANCH_NAME=BRANCH_NAME" >> $GITHUB_OUTPUT
+            echo "::set-output name=BRANCH_NAME::$BRANCH_NAME"
+      - uses: mshick/add-pr-comment@v2
         with:
-          message: 'Link to JIRA ticket: https://jira.jira/jira/browse/${{ steps.parse-ticket-number.outputs.TICKET_NUMBER }}'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]'
+          message: 'Branch name is: ${{ steps.parse-branch-name.outputs.BRANCH_NAME }}'
