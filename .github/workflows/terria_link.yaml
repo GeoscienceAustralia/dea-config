@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - terria_config_link
+    paths:
+      - 'dev/terria/terria-cube-v8.json'
+      - 'dev/terria/dea-maps-v8.json'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            **Terria config link:** https://maps.dea.ga.gov.au/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/terria_config_link/dev/terria/terria-cube-v8.json
