@@ -2,8 +2,6 @@ name: Terria catalog preview
 
 on:
   push:
-    branches:
-      - terria_config_link
     paths:
       - '.github/workflows/terria_preview.yaml'
       - 'dev/terria/terria-cube-v8.json'
