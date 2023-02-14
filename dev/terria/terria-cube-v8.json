@@ -28,7 +28,7 @@
                         },
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
+                            "name": "TESTING DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_ls_combined",
