@@ -25,6 +25,7 @@ jobs:
 
       - uses: mshick/add-pr-comment@v2
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: |
             **Terria Cube config preview:** https://terria-cube.terria.io/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/terria_config_link/dev/terria/terria-cube-v8.json
             
