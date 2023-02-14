@@ -31,7 +31,7 @@ jobs:
       - uses: mshick/add-pr-comment@v2
         with:
           message: |
-            <img align="left" width="80" height="40" src="https://raw.githubusercontent.com/TerriaJS/terriajs/main/terria-logo.png" alt="Terria Cube">
+            <img align="left" width="80" height="50" src="https://raw.githubusercontent.com/TerriaJS/terriajs/main/terria-logo.png" alt="Terria Cube">
 
             **Terria Cube preview:** https://terria-cube.terria.io/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/${{ steps.parse-branch-name.outputs.BRANCH_NAME }}/dev/terria/terria-cube-v8.json
             
