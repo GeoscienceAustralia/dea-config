@@ -28,7 +28,7 @@ jobs:
         run: |
             BRANCH_NAME=$(echo $GITHUB_REF | cut -d/ -f3)
             echo $GITHUB_REF
-            echo $BASE_BRANCH
+            echo ${{ github.base_ref }}
             echo $BRANCH_NAME
             echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
