@@ -1,13 +1,16 @@
 name: Terria catalog preview
 
-# Run this action only when either of the Terria Cube or DEA Maps
-# configs or this workflow itself are edited 
 on:
   push:
+    branches: [ master ]
     paths:
-      - '.github/workflows/terria_preview.yaml'
-      - 'dev/terria/terria-cube-v8.json'
-      - 'dev/terria/dea-maps-v8.json'
+      - 'dev/terria/**'
+      - .github/workflows/terria_preview.yaml
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'dev/terria/**'
+      - .github/workflows/terria_preview.yaml
 
 jobs:
   comment:
