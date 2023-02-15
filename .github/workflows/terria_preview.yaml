@@ -1,0 +1,36 @@
+name: Terria catalog preview
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'dev/terria/**'
+      - .github/workflows/terria_preview.yaml
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'dev/terria/**'
+      - .github/workflows/terria_preview.yaml
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+
+      # Create a Terria URL that points to the modified Terria config 
+      # directly from Github itself, and post as a comment on the PR
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            <img align="left" width="128" height="80" src="https://raw.githubusercontent.com/TerriaJS/terriajs/main/terria-logo.png" alt="Terria Cube">
+
+            **Terria Cube preview:**
+            https://terria-cube.terria.io/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/${{ github.head_ref }}/dev/terria/terria-cube-v8.json
+            
+            <img align="left" width="128" height="48" src="https://raw.githubusercontent.com/GeoscienceAustralia/dea-docs/master/_static/DEA-Logo-Inline.png" alt="DEA Maps">
+            
+            **DEA Maps preview:**
+            https://maps.dea.ga.gov.au/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/${{ github.head_ref }}/dev/terria/dea-maps-v8.json
