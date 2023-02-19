@@ -1,11 +1,6 @@
 name: Terria catalog preview
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - 'dev/terria/**'
-      - .github/workflows/terria_preview.yaml
   pull_request:
     branches: [ master ]
     paths:
