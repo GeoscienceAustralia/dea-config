@@ -13,21 +13,6 @@
                     "members": [
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, GSKY)",
-                            "url": "https://gsky.nci.org.au/ows/dea",
-                            "opacity": 1,
-                            "layers": "blend_sentinel2_landsat_nbart_daily",
-                            "chartColor": "white",
-                            "timeFilterPropertyName": "data_available_for_dates",
-                            "leafletUpdateInterval": 750,
-                            "chartType": "momentPoints",
-                            "tileErrorHandlingOptions": {
-                                "ignoreUnknownTileErrors": true
-                            },
-                            "id": "DgAS65"
-                        },
-                        {
-                            "type": "wms",
                             "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
@@ -1931,24 +1916,6 @@
                     "type": "group",
                     "name": "Baseline satellite data",
                     "members": [
-                        {
-                            "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, GSKY)",
-                            "url": "https://gsky.nci.org.au/ows/dea",
-                            "opacity": 1,
-                            "layers": "blend_sentinel2_landsat_nbart_daily",
-                            "chartColor": "white",
-                            "timeFilterPropertyName": "data_available_for_dates",
-                            "leafletUpdateInterval": 750,
-                            "chartType": "momentPoints",
-                            "tileErrorHandlingOptions": {
-                                "ignoreUnknownTileErrors": true
-                            },
-                            "id": "Wqpk8F",
-                            "shareKeys": [
-                                "Root Group/Satellite images/Satellite images multi-sensor - daily/Daily Landsat and Sentinel-2 satellite images"
-                            ]
-                        },
                         {
                             "type": "wms",
                             "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
