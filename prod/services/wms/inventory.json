@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 65,
+    "total_layers_count": 62,
     "layers": [
          {
             "layer": "s2_ls_combined",
@@ -272,76 +272,6 @@
             "layer": "ga_ls5t_ard_3",
             "product": [
                 "ga_ls5t_ard_3"
-            ],
-            "styles_count": 13,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "nbr",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "fmask"
-            ]
-        },
-        {
-            "layer": "ga_ls8c_ard_provisional_3",
-            "product": [
-                "ga_ls8c_ard_provisional_3"
-            ],
-            "styles_count": 15,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "nbr",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "fmask",
-                "panchromatic",
-                "aerosol"
-            ]
-        },
-        {
-            "layer": "ga_ls7e_ard_provisional_3",
-            "product": [
-                "ga_ls7e_ard_provisional_3"
-            ],
-            "styles_count": 14,
-            "styles_list": [
-                "true_colour",
-                "false_colour",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "nbr",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "fmask",
-                "panchromatic"
-            ]
-        },
-        {
-            "layer": "ga_ls_ard_provisional_3",
-            "product": [
-                "ga_ls7e_ard_provisional_3",
-                "ga_ls8c_ard_provisional_3"
             ],
             "styles_count": 13,
             "styles_list": [
