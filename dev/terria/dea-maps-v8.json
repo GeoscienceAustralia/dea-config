@@ -8,6 +8,35 @@
                     "members": [
                         {
                             "type": "wms",
+                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "s2_ls_combined",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "s2_ls_combined",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "featureInfoTemplate": {
+                                "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>Blue</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Near Infrared (NIR)</b></td><td>{{data.0.bands.nbart_common_nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR)</b></td><td>{{data.0.bands.nbart_common_swir_1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR)</b></td><td>{{data.0.bands.nbart_common_swir_2}}</td></tr>  <tr><td><b>Normalised Difference Vegetation Index</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:3}{{data.0.band_derived.ndvi}}{{/terria.formatNumber}}</td></tr>  <tr><td><b>Normalised Difference Water Index</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:3}{{data.0.band_derived.ndwi}}{{/terria.formatNumber}}</td></tr><tr><td><b>Modified Normalised Difference Water Index</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:3}{{data.0.band_derived.mndwi}}{{/terria.formatNumber}}</td></tr><tr><td><b>Normalised Burn Ratio</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:3}{{data.0.band_derived.nbr}}{{/terria.formatNumber}}</td></tr></table><p><chart id='{{x}}{{y}}{{time}}' title='NBART at {{x}},{{y}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n660,{{data.0.bands.nbart_red}}\n840,{{data.0.bands.nbart_common_nir}}\n1650,{{data.0.bands.nbart_common_swir_1}}\n2220,{{data.0.bands.nbart_common_swir_2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "Wqpk8F"
+                        },
+                        {
+                            "type": "wms",
                             "name": "DEA Surface Reflectance (Landsat)",
                             "url": "https://ows.dea.ga.gov.au/",
                             "opacity": 1,
