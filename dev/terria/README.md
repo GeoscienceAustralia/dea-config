@@ -1,32 +1,30 @@
-## DEA Maps and Terria Cube configs
+## Terria Cube TerriaJS config
 
-TerriaJS config files for DEA Maps and Terria Cube are located here:
+This directory contains the `terria-cube-v8.json` TerriaJS config file for the development Terria Cube map (https://terria-cube.terria.io/).
 
-* Terria Cube: https://github.com/GeoscienceAustralia/dea-config/blob/master/dev/terria/terria-cube-v8.json
-* DEA Maps: https://github.com/GeoscienceAustralia/dea-config/blob/master/dev/terria/dea-maps-v8.json
+The Terria Cube catalogue contains two sections: 
 
-### Terria config change testing
+* **DEA Development** (for testing dev/non-prod OWS and Geoserver endpoints)
+* **DEA Production** (for testing production OWS and Geoserver endpoints). 
 
-Please test changes on Terria Cube first before implementing them on DEA Maps.
+Once changes have been tested on Terria Cube, they can be implemented in the DEA Maps catalogue by editing [the config here](https://github.com/GeoscienceAustralia/dea-config/blob/master/prod/terria/dea-maps-v8.json).
 
-The Terria Cube catalogue (`terria-cube-v8.json`) contains two sections: "DEA Development" (for dev/non-prod OWS and Geoserver endpoints) and "DEA Production" (for production OWS and Geoserver endpoints). 
-Once changes have been tested on Terria Cube, they can be implemented in the DEA Maps catalogue by editing `dea-maps-v8.json`.
+### Testing Terria config changes using the Terria preview bot
 
-When making a change to `terria-cube-v8.json` or `dea-maps-v8.json`, test the changed file using a clean Terria instance:
+1. Make edits to the `terria-cube-v8.json`
+2. Create a draft pull request
+3. Once the pull request has been created, the Terria preview bot will post a comment containing links to a preview the draft config on Terria Cube:
 
-1. Terria Cube: https://terria-cube.terria.io/#clean
-2. DEA Maps: https://maps.dea.ga.gov.au/#clean
+![](../../_static/terria_preview.jpg)
 
-#### Procedural Way
-2. Click on `Explore map data` button
-3. Go to `My Data` tab on the pop up
-4. Click on `Add Local Data`
-5. On the next page, under `Step 2: Select file` Click on `Browse...` Button
-6. Select the file from the new pop up `file explorer window`
-7. Click open
+4. Test the layer on the preview on Terria Cube, and update the pull request to fix any issues.
+5. When ready, mark the pull request as "Ready for review".
 
-#### Quick and easy way
-2. Drag the file from folder and drop into the web page
+### Testing Terria config changes manually
+
+1. Download the `terria-cube-v8.json` file to your PC
+2. Launch a clean instance of DEA Maps by appending `#clean` to the URL: https://terria-cube.terria.io/#clean
+2. Drag the `terria-cube-v8.json` file from your PC into DEA Maps
 
 ### Catalog Json files standard
 
