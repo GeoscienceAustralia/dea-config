@@ -27,15 +27,28 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v3
 
-    - name: Run tab detector
+    - name: Run tab detector for Terria Cube
       run: |
         if grep -Pn "\t" dev/terria/*.json; then
             echo 'Please replace tab with white spaces as per the lines indicated'
             exit 1
         fi
 
-    - name: Run Json Linter
+    - name: Run Json Linter for Terria Cube
       run: |
         npm install jsonlint -g
         cd dev/terria
+        find . -name \*.json -exec jsonlint {} \;
+
+    - name: Run tab detector for DEA Maps
+      run: |
+        if grep -Pn "\t" prod/terria/*.json; then
+            echo 'Please replace tab with white spaces as per the lines indicated'
+            exit 1
+        fi
+
+    - name: Run Json Linter for DEA Maps
+      run: |
+        npm install jsonlint -g
+        cd prod/terria
         find . -name \*.json -exec jsonlint {} \;

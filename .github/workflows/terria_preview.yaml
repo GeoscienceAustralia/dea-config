@@ -29,4 +29,4 @@ jobs:
             <img align="left" width="128" height="48" src="https://raw.githubusercontent.com/GeoscienceAustralia/dea-docs/master/_static/DEA-Logo-Inline.png" alt="DEA Maps">
             
             **DEA Maps preview:**
-            https://maps.dea.ga.gov.au/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/${{ github.head_ref }}/dev/terria/dea-maps-v8.json
+            https://maps.dea.ga.gov.au/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/${{ github.head_ref }}/prod/terria/dea-maps-v8.json
