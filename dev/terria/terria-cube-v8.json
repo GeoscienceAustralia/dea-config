@@ -13,7 +13,7 @@
                     "members": [
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
+                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_ls_combined",
@@ -1918,7 +1918,7 @@
                     "members": [
                         {
                             "type": "wms",
-                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2, OWS)",
+                            "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
                             "url": "https://ows.dea.ga.gov.au/",
                             "opacity": 1,
                             "layers": "s2_ls_combined",
