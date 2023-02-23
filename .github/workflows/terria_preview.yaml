@@ -5,6 +5,7 @@ on:
     branches: [ master ]
     paths:
       - 'dev/terria/**'
+      - 'prod/terria/**'
       - .github/workflows/terria_preview.yaml
 
 jobs:

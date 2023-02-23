@@ -5,11 +5,13 @@ on:
     branches: [ master ]
     paths:
       - 'dev/terria/**'
+      - 'prod/terria/**'
       - .github/workflows/terria_linting.yaml
   pull_request:
     branches: [ master ]
     paths:
       - 'dev/terria/**'
+      - 'prod/terria/**'
       - .github/workflows/terria_linting.yaml
 
 jobs:
