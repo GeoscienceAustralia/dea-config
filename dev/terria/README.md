@@ -23,8 +23,8 @@ Once changes have been tested on Terria Cube, they can be implemented in the DEA
 ### Testing Terria config changes manually
 
 1. Download the `terria-cube-v8.json` file to your PC
-2. Launch a clean instance of DEA Maps by appending `#clean` to the URL: https://terria-cube.terria.io/#clean
-2. Drag the `terria-cube-v8.json` file from your PC into DEA Maps
+2. Launch a clean instance of Terria Cube by appending `#clean` to the URL: https://terria-cube.terria.io/#clean
+2. Drag the `terria-cube-v8.json` file from your PC into Terria Cube
 
 ### Catalog Json files standard
 
