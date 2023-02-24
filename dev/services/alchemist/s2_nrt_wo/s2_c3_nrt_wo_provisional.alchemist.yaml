@@ -52,6 +52,7 @@ output:
 
   properties:
     odc:product: ga_s2_wo_provisional_3
+    dea:dataset_maturity: interim
     dea:product_maturity: provisional
     eo:instrument: MSI
     odc:file_format: GeoTIFF
