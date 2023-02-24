@@ -15,7 +15,11 @@ c3_fc_pq_mask = [
             "high_slope": False,
             "cloud_shadow": False,
             "cloud": False,
-            "nodata": False,
+            # "nodata": False,
+            # Do NOT mask on nodata.  If masking data is unavailable
+            # (e.g. because WOFS processing has stalled) then masking
+            # on nodata results in ALL FC data being masked - which
+            # is the opposite of what we want in this case.
         },
     },
     {
