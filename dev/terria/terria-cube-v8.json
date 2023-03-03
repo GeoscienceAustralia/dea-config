@@ -881,7 +881,7 @@
                                     },
                                     "legends": [
                                         {
-                                            "url": "https://data.dea.ga.gov.au/projects/coastlines/deacoastlines_legend_v1.1.0.png"
+                                            "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_coastlines/supplementary/deacoastlines_legend.png"
                                         }
                                     ]
                                 },
@@ -907,11 +907,6 @@
                                                 "unstable data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline is affected by <b>unstable data</b> at this location. This may be caused by errors in the tidal model used to reduce the influence of tide, the presence of gently sloping intertidal mudflats or sandbars that can lead to inaccurate shoreline mapping, or noisy satellite imagery caused by high levels of cloud.</i></blockquote>",
                                               }
                                             },
-                                            "legends": [
-                                                {
-                                                    "url": "https://data.dea.ga.gov.au/projects/coastlines/deacoastlines_legend_v1.1.0.png"
-                                                }
-                                            ]
                                         },
                                         {
                                             "type": "wms",
@@ -933,11 +928,6 @@
                                                 "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>",
                                               }
                                             },
-                                            "legends": [
-                                                {
-                                                    "url": "https://data.dea.ga.gov.au/projects/coastlines/deacoastlines_legend_v1.1.0.png"
-                                                }
-                                            ]
                                         },
                                         {
                                             "id": "Jgt655",
