@@ -31,17 +31,15 @@ jobs:
       #   with:
       #     python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        run: >-
-        docker run -it -v ${PWD}/services/alchemist:/code/config opendatacube/datacube-alchemist:latest python -c "
-        from datacube_alchemist.worker import Alchemist
-        import os
-        from fnmatch import fnmatch
-
-        root = '/code/config/dev/services/alchemist'
-        pattern = '*.yaml'
-
-        for path, subdirs, files in os.walk(root):
-            for name in files:
-                if fnmatch(name, pattern):
-                    alchemist = Alchemist(config_file=os.path.join(path, name))
-        "
+        run: |
+            docker run -it -v ${PWD}/services/alchemist:/code/config opendatacube/datacube-alchemist:latest python -c " \
+            from datacube_alchemist.worker import Alchemist \
+            import os \
+            from fnmatch import fnmatch \
+            root = '/code/config/dev/services/alchemist'\
+            pattern = '*.yaml'\
+            for path, subdirs, files in os.walk(root):\
+                for name in files:\
+                    if fnmatch(name, pattern):\
+                        alchemist = Alchemist(config_file=os.path.join(path, name))\
+            "
