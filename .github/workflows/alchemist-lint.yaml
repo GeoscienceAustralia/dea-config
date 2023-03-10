@@ -1,0 +1,55 @@
+name: Alchemist CFG Lint Check
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'dev/services/alchemist/**'
+      - 'prod/services/alchemist/**'
+      - .github/workflows/alchemist-lint.yaml
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'dev/services/alchemist/**'
+      - 'prod/services/alchemist/**'
+      - .github/workflows/alchemist-lint.yaml
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      # You can use PyPy versions in python-version.
+      # For example, pypy-2.7 and pypy-3.8
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+git@github.com:opendatacube/datacube-alchemist.git
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      # You can test your matrix by printing the current Python version
+      - uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            from datacube_alchemist.worker import Alchemist
+            import os
+
+            directory = './dev/services/alchemist/ga_ls_wo_3'
+
+            # iterate over files in
+            # that directory
+            for filename in os.listdir(directory):
+                f = os.path.join(directory, filename)
+                # checking if it is a file
+                if os.path.isfile(f):
+                  alchemist = Alchemist(config_file=f)
