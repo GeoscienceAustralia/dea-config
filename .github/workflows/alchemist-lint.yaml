@@ -32,7 +32,7 @@ jobs:
       #     python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-            docker run -it -v ${PWD}/services/alchemist:/code/config opendatacube/datacube-alchemist:latest python -c " \
+            docker run -t -v ${PWD}/services/alchemist:/code/config opendatacube/datacube-alchemist:latest python -c " \
             from datacube_alchemist.worker import Alchemist \
             import os \
             from fnmatch import fnmatch \
