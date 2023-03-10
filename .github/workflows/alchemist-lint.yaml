@@ -43,13 +43,12 @@ jobs:
           script: |
             from datacube_alchemist.worker import Alchemist
             import os
+            from fnmatch import fnmatch
 
-            directory = './dev/services/alchemist/ga_ls_wo_3'
+            root = './dev/services/alchemist'
+            pattern = "*.yaml"
 
-            # iterate over files in
-            # that directory
-            for filename in os.listdir(directory):
-                f = os.path.join(directory, filename)
-                # checking if it is a file
-                if os.path.isfile(f):
-                  alchemist = Alchemist(config_file=f)
+            for path, subdirs, files in os.walk(root):
+                for name in files:
+                    if fnmatch(name, pattern):
+                        alchemist = Alchemist(config_file=os.path.join(path, name))
