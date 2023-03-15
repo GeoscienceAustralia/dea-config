@@ -2659,6 +2659,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "dateFormat": "'Year: 'yyyy",
                                     "id": "hbmzp5",
                                     "shareKeys": [
                                         "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Indices Percentiles"
