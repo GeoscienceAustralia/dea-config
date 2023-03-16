@@ -158,7 +158,7 @@ layer = {
     "abstract": """**Prototype Near Real-Time Sentinel 2 Water Observations based on provisional (C3) data.**
 
 
-This product is the implementation of the DEA Water Observations (DEA WO) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 Near Real Time surface reflectance product. This is a rapid, provisional, product. This product has not been validated and is of unknown accuracy.
+This product is the implementation of the DEA Water Observations (DEA WO) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 Near Real Time surface reflectance product. This is a rapid, provisional, product. It has not been validated and is of unknown accuracy.
 
 The Provisional Digital Earth Australia Water Observations (Sentinel-2) product shows where surface water was observed by the Sentinel 2a and Sentinel 2b satellites on any particular day over the most recent 3 months. The surface water observations are derived from Geoscience Australia Sentinel-2 Near Real Time surface reflectance imagery for all of Australia. The provisional, Near Real Time product is available for a rolling window of the most recent three months of data, and is produced within 24 hours of the satellite passing over an area.
 
