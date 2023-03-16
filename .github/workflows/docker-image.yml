@@ -9,6 +9,14 @@ on:
   release:
     types: [created, edited, published]
 
+
+permissions:
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
+
+env:
+  IMAGE_NAME: geoscienceaustralia/dea-datakube-config
+
 jobs:
 
   build:
@@ -28,22 +36,32 @@ jobs:
     - name: Run linting and tests
       run: ./check-code.sh
 
-    - name: Login to DockerHub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-    - name: Push to DockerHub (master branch or tagged release only)
-      if: github.ref == 'refs/heads/master' || github.event_name == 'release'
+    # If action is triggered by a release, push image to
+    # AWS ECR using custom image tag extracted from the release
+    - name: Get current version tag from release to use as image tag
+      if: github.event_name == 'release'
       run: |
-        # figure out extra tag
-        git fetch --prune --unshallow 2> /dev/null || true
-        tag=$(git describe --tags)
-        DOCKER_IMAGE=geoscienceaustralia/dea-datakube-config
-        # build local docker image
-        docker build -t ${DOCKER_IMAGE}:latest .
-        # tag and push images
-        docker tag ${DOCKER_IMAGE}:latest ${DOCKER_IMAGE}:${tag}
-        docker push ${DOCKER_IMAGE}:latest
-        docker push ${DOCKER_IMAGE}:${tag}
+        echo "RELEASE=${GITHUB_REF/refs\/tags\/}" >> $GITHUB_ENV
+
+    # If action is trigged by a push (not release), push a
+    # latest/unstable image to AWS ECR using image tag based
+    # on the most recent Github tag and commit hash
+    - name: Get git commit hash for push to branch to use as image tag
+      if: github.event_name != 'release'
+      run: |
+        git fetch --all --tags
+        echo "RELEASE=$(git describe --tags)" >> $GITHUB_ENV
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: arn:aws:iam::538673716275:role/github-actions-role
+        aws-region: ap-southeast-2
+
+    - name: Push image to ECR
+      uses: whoan/docker-build-with-cache-action@master
+      with:
+        context: ./
+        registry: 538673716275.dkr.ecr.ap-southeast-2.amazonaws.com
+        image_name: ${{ env.IMAGE_NAME }}
+        image_tag: latest,${{ env.RELEASE }}
