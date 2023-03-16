@@ -158,9 +158,9 @@ layer = {
     "abstract": """**Prototype Near Real-Time Sentinel 2 Water Observations based on provisional (C3) data.**
 
 
-This product is the implementation of the DEA Water Observations (WOs) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 surface reflectance product. This product has not been validated and is of unknown accuracy.
+This product is the implementation of the DEA Water Observations (DEA WO) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 Near Real Time surface reflectance product. This is a rapid, provisional, product. This product has not been validated and is of unknown accuracy.
 
-The Digital Earth Australia Water Observations (Sentinel-2) product shows where surface water was observed by the Sentinel 2a and Sentinel 2b satellites on any particular day since 2015. The surface water observations are derived from Geoscience Australia Sentinel-2 surface reflectance imagery for all of Australia. The interim, Near Real Time product is available for a rolling window of the most recent three months of data, and is produced within 24 hours of the satellite passing over an area.
+The Provisional Digital Earth Australia Water Observations (Sentinel-2) product shows where surface water was observed by the Sentinel 2a and Sentinel 2b satellites on any particular day over the most recent 3 months. The surface water observations are derived from Geoscience Australia Sentinel-2 Near Real Time surface reflectance imagery for all of Australia. The provisional, Near Real Time product is available for a rolling window of the most recent three months of data, and is produced within 24 hours of the satellite passing over an area.
 
 The Water Observations show the extent of water in a corresponding Sentinel 2 scene, along with the degree to which the scene was obscured by data quality issues including; cloud, cloud shadows, and where sensor problems cause parts of a scene to not be observable. The Water observations are based on the WOfS algorithm which underpins all of the Digital Earth Australia surface reflectance water products.
 
