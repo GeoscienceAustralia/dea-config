@@ -2496,6 +2496,23 @@
                                     "id": "O3Dw8jg1"
                                 },
                                 {
+                                    "type": "wms",
+                                    "name": "DEA Water Observations (Sentinel-2, Provisional)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_wo_provisional_3",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_wo_provisional_3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "qQ27213"
+                                },
+                                {
                                     "id": "c3me5me2",
                                     "type": "group",
                                     "name": "DEA Water Observations Annual",
