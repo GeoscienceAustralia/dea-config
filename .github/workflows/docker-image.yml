@@ -49,7 +49,7 @@ jobs:
     - name: Get git commit hash for push to branch to use as image tag
       if: github.event_name != 'release'
       run: |
-        git fetch --all --tags
+        git fetch --prune --unshallow 2> /dev/null || true
         echo "RELEASE=$(git describe --tags)" >> $GITHUB_ENV
 
     - name: Configure AWS credentials
