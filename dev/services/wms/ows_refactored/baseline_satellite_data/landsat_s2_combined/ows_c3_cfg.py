@@ -86,10 +86,11 @@ For service status information, see https://status.dea.ga.gov.au""",
         "ga_ls9c_ard_3",
     ],
     "mosaic_date_func": {
-        # 6 day rolling window.  5 days should give full continental coverage of Sentinel-2,
-        # plus an extra day to allow for patchy coverage on most recent day.
-        # Note that the window is calculated from the most-recent available day, not the 
-        # the calendar's idea of what "today" might be.
+        # 6 day rolling window.  5 days should give full continental coverage
+        # of Sentinel-2, plus an extra day to allow for patchy coverage on
+        # most recent day.
+        # Note that the window is calculated from the most-recent available
+        # day, not the the calendar's idea of what "today" might be.
         "function": "datacube_ows.ogc_utils.rolling_window_ndays",
         "pass_layer_cfg": True,
         "kwargs": {
