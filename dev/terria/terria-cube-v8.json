@@ -1599,7 +1599,7 @@
                                     "name": "DEA Coastlines 48 km coastal grid (Collection 3)",
                                     "url": "https://data.dea.ga.gov.au/derivative/dea_coastlines/supplementary/albers_grids/ga_summary_grid_c3_48km_coastal_clipped.geojson",
                                     "id": "GHt78c",
-									"featureInfoTemplate": {
+                                    "featureInfoTemplate": {
                                         "template": "<div style='width:480px'><h1 style='font-weight:normal'>ID: <b>{{id}}</b></br>Type: <b>{{type}}</b></h1></div>"
                                     }
 								},
@@ -1608,7 +1608,7 @@
                                     "name": "DEA Intertidal 32 km coastal grid (Collection 3)",
                                     "url": "https://data.dea.ga.gov.au/derivative/dea_coastlines/supplementary/albers_grids/ga_summary_grid_c3_32km_coastal_clipped.geojson",
                                     "id": "TY67mT",
-									"featureInfoTemplate": {
+                                    "featureInfoTemplate": {
                                         "template": "<div style='width:480px'><h1 style='font-weight:normal'>ID: <b>{{id}}</b></br>Type: <b>{{type}}</b></h1></div>"
                                     }
                                 }
