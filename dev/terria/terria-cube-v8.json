@@ -1593,6 +1593,18 @@
                                     "shareKeys": [
                                         "Root Group/DEA Shapes/DEA Albers Tiles grid"
                                     ]
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "DEA Coastlines 48 km coastal grid (Collection 3)",
+                                    "url": "https://data.dea.ga.gov.au/derivative/dea_coastlines/supplementary/albers_grids/ga_summary_grid_c3_48km_coastal_clipped.geojson",
+                                    "id": "GHt78c"
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "DEA Intertidal 32 km coastal grid (Collection 3)",
+                                    "url": "https://data.dea.ga.gov.au/derivative/dea_coastlines/supplementary/albers_grids/ga_summary_grid_c3_32km_coastal_clipped.geojson",
+                                    "id": "TY67mT"
                                 }
                             ]
                         },
