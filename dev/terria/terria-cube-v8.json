@@ -1602,7 +1602,7 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:480px'><h1 style='font-weight:normal'>ID: <b>{{id}}</b></br>Type: <b>{{type}}</b></h1></div>"
                                     }
-								},
+                                },
                                 {
                                     "type": "geojson",
                                     "name": "DEA Intertidal 32 km coastal grid (Collection 3)",
