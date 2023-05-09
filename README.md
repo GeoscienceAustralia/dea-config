@@ -1,9 +1,21 @@
 [![codecov](https://codecov.io/gh/GeoscienceAustralia/dea-config/branch/master/graph/badge.svg?token=zuk7FaS1HA)](https://codecov.io/gh/GeoscienceAustralia/dea-config)
 # DEA Config
-Config files for dea services
+Config files for Digital Earth Australia (DEA) services
 
 This is a central space used to store configuration for our services and products.
 
+Below are notable folders:
+
+- [configs for DEV ENV](https://github.com/GeoscienceAustralia/dea-config/tree/master/dev)
+- [configs for PROD ENV](https://github.com/GeoscienceAustralia/dea-config/tree/master/prod)
+- [products definition](https://github.com/GeoscienceAustralia/dea-config/tree/master/products)
+- [product metadatas](https://github.com/GeoscienceAustralia/dea-config/tree/master/product_metadata)
+
+## Docker image
+
+image name: `geoscienceaustralia/dea-datakube-config`
+up to version `1.5.38-13-g43d4569a` images are available from: [dockerhub](https://hub.docker.com/r/geoscienceaustralia/dea-datakube-config)
+newer images are only available from AWS ECR
 
 ## Formatting for Terria Data Description section in `ows config`
 #### Bold
