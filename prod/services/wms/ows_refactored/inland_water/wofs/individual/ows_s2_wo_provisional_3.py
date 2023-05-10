@@ -155,7 +155,7 @@ style_s2_wofs_obs_wet_only = {
 layer = {
     "title": "DEA Water Observations Provisional (Sentinel-2 NRT)",
     "name": "ga_s2_wo_provisional_3",
-    "abstract": """**Prototype Geoscience Australia Sentinel 2 Near Real Time Water Observations Provisional Collection 3.**
+    "abstract": """**Prototype Geoscience Australia Sentinel 2 Near Real Time Water Observations Provisional Collection 3**
 
 
 This product is the implementation of the DEA Water Observations (DEA WO) product (previously known as Water Observations from Space, or WOfS) on the Geoscience Australia Sentinel-2 Near Real Time surface reflectance product. This is a rapid, provisional, product. It has not been validated and is of unknown accuracy.

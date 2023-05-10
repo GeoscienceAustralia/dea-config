@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 62,
+    "total_layers_count": 63,
     "layers": [
          {
             "layer": "s2_ls_combined",
@@ -428,6 +428,17 @@
             "layer": "ga_ls_wo_3",
             "product": [
                 "ga_ls_wo_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "observations",
+                "wet"
+            ]
+        },
+        {
+            "layer": "ga_s2_wo_provisional_3",
+            "product": [
+                "ga_s2_wo_provisional_3"
             ],
             "styles_count": 2,
             "styles_list": [
