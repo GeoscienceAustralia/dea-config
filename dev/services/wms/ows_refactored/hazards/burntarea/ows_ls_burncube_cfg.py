@@ -20,7 +20,7 @@ style_burncube = {
     },
     # "pq_masks": pq_ba,
     "value_map": {
-        "Burnt area": [
+        "TEST2 area": [
             {
                 "title": "Burncube",
                 "abstract": "burnt area",
