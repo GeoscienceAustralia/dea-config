@@ -36,13 +36,13 @@ layers = {
     "layers": [
         {
             "title": "DEA Burncube Burnt Area (Landsat)",
-            "name": "ga_ls_nbart_bc_cyear_3_demo",
+            "name": "ga_ls_nbart_bc_fyear_3_demo",
             "abstract": """Burncube Burnt Area 30m 0.0.0 (Landsat, Collection 3)
             ADD words about the product.
             ADD DOI and collaboration.
             ADD CMI https://cmi.ga.gov.au/data-products/dea/634/dea-mangrove-canopy-cover-landsat
             For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "ga_ls_nbart_bc_cyear_3_demo",
+            "product_name": "ga_ls_nbart_bc_fyear_3_demo",
             "bands": bands_in_burncube,
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",

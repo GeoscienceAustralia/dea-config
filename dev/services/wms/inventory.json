@@ -983,9 +983,9 @@
             ]
         },
         {
-            "layer": "ga_ls_nbart_bc_cyear_3_demo",
+            "layer": "ga_ls_nbart_bc_fyear_3_demo",
             "product": [ 
-                "ga_ls_nbart_bc_cyear_3_demo"
+                "ga_ls_nbart_bc_fyear_3_demo"
             ],
             "styles_count": 1,
             "styles_list": [
