@@ -2,12 +2,12 @@ from ows_refactored.ows_reslim_cfg import reslim_standard
 
 # bands definition
 bands_in_burncube = {
-    "wofssevere": ["wofssevere"],
+    "wofssevere": "wofssevere",
 }
 
-bands_burncube = {
-    "style_burncube": [],
-}
+# bands_burncube = {
+#     "style_burncube": [],
+# }
 
 # pq_ba = [
 #     {
