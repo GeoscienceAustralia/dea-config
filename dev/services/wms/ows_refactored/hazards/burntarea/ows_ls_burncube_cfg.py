@@ -50,7 +50,7 @@ layer = {
             ADD CMI https://cmi.ga.gov.au/data-products/dea/634/dea-mangrove-canopy-cover-landsat
             For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_nbart_bc_cyear_3_demo",
-            "bands": wofssevere,
+            "bands": "wofssevere",
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
