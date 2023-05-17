@@ -2,20 +2,8 @@ from ows_refactored.ows_reslim_cfg import reslim_standard
 
 # bands definition
 bands_in_burncube = {
-    "wofssevere": "wofssevere",
+    "wofssevere": [],
 }
-
-# bands_burncube = {
-#     "style_burncube": [],
-# }
-
-# pq_ba = [
-#     {
-#         "band": "land",
-#         "invert": True,
-#         "values": [0],
-#     }
-# ]
 
 style_burncube = {
     "name": "burncube",
