@@ -9,13 +9,13 @@ bands_burncube = {
     "style_burncube": [],
 }
 
-pq_ba = [
-    {
-        "band": "land",
-        "invert": True,
-        "values": [0],
-    }
-]
+# pq_ba = [
+#     {
+#         "band": "land",
+#         "invert": True,
+#         "values": [0],
+#     }
+# ]
 
 style_burncube = {
     "name": "burncube",
@@ -29,7 +29,7 @@ style_burncube = {
             "band": "wofssevere",
         },
     },
-    "pq_masks": pq_ba,
+    # "pq_masks": pq_ba,
     "value_map": {
         "Burnt area": [
             {
