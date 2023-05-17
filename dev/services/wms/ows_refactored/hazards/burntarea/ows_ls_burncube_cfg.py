@@ -37,7 +37,7 @@ style_burncube = {
     "legend": {},
 }
 
-layer = {
+layers = {
     "title": "DEA Burncube Burnt Area",
     "abstract": "",
     "layers": [
