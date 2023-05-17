@@ -7,7 +7,7 @@ bands_in_burncube = {
 
 style_burncube = {
     "name": "burncube",
-    "title": "Burnt Area",
+    "title": "Burnt area",
     "abstract": "words here",
     "needed_bands": ["wofssevere"],
     "index_function": {
