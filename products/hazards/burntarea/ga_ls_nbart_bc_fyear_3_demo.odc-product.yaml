@@ -1,0 +1,50 @@
+name: ga_ls_nbart_bc_fyear_3_demo
+description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain, Landsat 8 Burn Cube 4 Financial Years Collection 3
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: burncube
+  product:
+    name: ga_ls_nbart_bc_fyear_3_demo
+
+measurements:
+  - name: wofssevere
+    dtype: float64
+    nodata: -999
+    units: '1'
+  - name: wofsseverity
+    dtype: float64
+    nodata: -999
+    units: '1'
+  - name: wofsmoderate
+    dtype: float64
+    nodata: -999
+    units: '1'
+  - name: severe
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: severity
+    dtype: float64
+    nodata: -999
+    units: '1'
+  - name: moderate
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: count
+    dtype: int16
+    nodata: -999
+    units: '1'
+
+load:
+  crs: 'epsg:3577'
+  resolution:
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0
