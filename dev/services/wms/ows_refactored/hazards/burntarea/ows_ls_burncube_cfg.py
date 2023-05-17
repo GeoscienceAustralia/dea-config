@@ -60,9 +60,6 @@ layers = {
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
             "time_resolution": "summary",
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-            },
             "styling": {
                 "default_style": "burncube",
                 "styles": [
