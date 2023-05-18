@@ -23,7 +23,7 @@ style_severe_burncube = {
             {
                 "title": "Severe",
                 "abstract": "",
-                "flags": {"wofssevere": 1},
+                "values": [1],
                 "color": "#C0504D",
             },
         ]
@@ -48,7 +48,7 @@ style_moderate_burncube = {
             {
                 "title": "Moderate",
                 "abstract": "",
-                "flags": {"wofsmoderate": 1},
+                "values": [1],
                 "color": "#F79646",
             },
         ]
@@ -73,7 +73,7 @@ layers = {
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [30, -30],
-            "time_resolution": "year",
+            "time_resolution": "summary",
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
             },
