@@ -19,15 +19,15 @@ style_burncube = {
         },
     },
     # "pq_masks": pq_ba,
-    "value_map": {
-        "TEST2 area": [
-            {
-                "title": "Burncube",
-                "abstract": "burnt area",
-                "color": "#833d08",
-            },
-        ]
-    },
+    # "value_map": {
+    #     "TEST2 area": [
+    #         {
+    #             "title": "Burncube",
+    #             "abstract": "burnt area",
+    #             "color": "#833d08",
+    #         },
+    #     ]
+    # },
     "legend": {},
 }
 
