@@ -987,9 +987,10 @@
             "product": [ 
                 "ga_ls_nbart_bc_fyear_3_demo"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "burncube"
+                "severe_burncube",
+                "moderate_burncube"
             ]
         }
     ]

@@ -6,8 +6,8 @@ bands_in_burncube = {
     "wofsmoderate": [],
 }
 
-style_burncube = {
-    "name": "burncube",
+style_severe_burncube = {
+    "name": "severe_burncube",
     "title": "TEST area",
     "abstract": "words here",
     "needed_bands": ["wofssevere"],
@@ -18,18 +18,45 @@ style_burncube = {
             "band": "wofssevere",
         },
     },
-    # "pq_masks": pq_ba,
-    # "value_map": {
-    #     "TEST2 area": [
-    #         {
-    #             "title": "Burncube",
-    #             "abstract": "burnt area",
-    #             "color": "#833d08",
-    #         },
-    #     ]
-    # },
+        "value_map": {
+        "wofssevere": [
+            {
+                "title": "Severe",
+                "abstract": "words here",
+                "flags": {"wofssevere": 1},
+                "color": "#C0504D",
+            },
+        ]
+    },
     "legend": {},
 }
+
+style_moderate_burncube = {
+    "name": "moderate_burncube",
+    "title": "TEST area",
+    "abstract": "words here",
+    "needed_bands": ["wofsmoderate"],
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "wofsmoderate",
+        },
+    },
+        "value_map": {
+        "wofsmoderate": [
+            {
+                "title": "Moderate",
+                "abstract": "words here",
+                "flags": {"wofsmoderate": 1},
+                "color": "#F79646",
+            },
+        ]
+    },
+    "legend": {},
+}
+
+
 
 layers = {
     "title": "DEA Burncube Burnt Area",
@@ -53,9 +80,10 @@ layers = {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
             },
             "styling": {
-                "default_style": "burncube",
+                "default_style": "severe_burncube",
                 "styles": [
-                    style_burncube,
+                    style_moderate_burncube,
+                    style_severe_burncube,
                 ],
             },
         },
