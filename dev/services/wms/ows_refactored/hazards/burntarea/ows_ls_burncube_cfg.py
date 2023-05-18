@@ -41,8 +41,8 @@ style_moderate_burncube = {
         "mapped_bands": True,
         "kwargs": {
             "band": "wofsmoderate",
+            },
         },
-    },
         "value_map": {
         "wofsmoderate": [
             {
@@ -55,8 +55,6 @@ style_moderate_burncube = {
     },
     "legend": {},
 }
-
-
 
 layers = {
     "title": "DEA Burncube Burnt Area",
