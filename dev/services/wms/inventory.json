@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 66,
+    "total_layers_count": 67,
     "layers": [
         {
             "layer": "s2_ls_combined",
@@ -981,6 +981,17 @@
             "styles_list": [
                 "wii"
             ]
-        }
+        },
+        {
+            "layer": "ga_ls_nbart_bc_fyear_3_demo",
+            "product": [ 
+                "ga_ls_nbart_bc_fyear_3_demo"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "severe_burncube",
+                "moderate_burncube"
+            ]
+        }    
     ]
 }
