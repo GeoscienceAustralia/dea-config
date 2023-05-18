@@ -18,7 +18,7 @@ style_severe_burncube = {
             "band": "wofssevere",
         },
     },
-        "value_map": {
+    "value_map": {
         "wofssevere": [
             {
                 "title": "Severe",
@@ -41,9 +41,9 @@ style_moderate_burncube = {
         "mapped_bands": True,
         "kwargs": {
             "band": "wofsmoderate",
-            },
         },
-        "value_map": {
+    },
+    "value_map": {
         "wofsmoderate": [
             {
                 "title": "Moderate",
