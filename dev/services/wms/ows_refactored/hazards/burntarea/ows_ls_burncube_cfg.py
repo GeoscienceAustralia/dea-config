@@ -8,8 +8,8 @@ bands_in_burncube = {
 
 style_severe_burncube = {
     "name": "severe_burncube",
-    "title": "TEST area",
-    "abstract": "words here",
+    "title": "Burncube Severe",
+    "abstract": "burnt area",
     "needed_bands": ["wofssevere"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -22,7 +22,7 @@ style_severe_burncube = {
         "wofssevere": [
             {
                 "title": "Severe",
-                "abstract": "words here",
+                "abstract": "",
                 "flags": {"wofssevere": 1},
                 "color": "#C0504D",
             },
@@ -33,8 +33,8 @@ style_severe_burncube = {
 
 style_moderate_burncube = {
     "name": "moderate_burncube",
-    "title": "TEST area",
-    "abstract": "words here",
+    "title": "Burncube moderate",
+    "abstract": "burnt area",
     "needed_bands": ["wofsmoderate"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -47,7 +47,7 @@ style_moderate_burncube = {
         "wofsmoderate": [
             {
                 "title": "Moderate",
-                "abstract": "words here",
+                "abstract": "",
                 "flags": {"wofsmoderate": 1},
                 "color": "#F79646",
             },
