@@ -10,12 +10,14 @@ style_combined_burncube = {
     "name": "combined_burncube",
     "title": "Burncube Burnt Area",
     "abstract": "",
-    "needed_bands": ["wofssevere","wofsmoderate"],
+    "needed_bands": ["wofssevere", "wofsmoderate"],
     "index_expression": "2*wofssevere + wofsmoderate",
     "color_ramp": [
-        {"value": 0.0, "color": "#FFFFFF", "alpha": 0.0},
-        {"value": 1, "color": "#F79646"},
-        {"value": 2, "color": "#C0504D"},
+        {"value": 0.99, "color": "#0000", "alpha": 0.0},
+        {"value": 1.0, "color": "#F79646", "alpha": 1.0}, # moderate
+        {"value": 1.49, "color": "#F79646","alpha": 1.0},
+        {"value": 1.5, "color": "#C0504D", "alpha": 1.0},
+        {"value": 2.0, "color": "#C0504D", "alpha": 1.0}, # severe
     ],
     "legend": {
         "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dnbr_class_legend_edit.png",
@@ -49,7 +51,7 @@ style_severe_burncube = {
 
 style_moderate_burncube = {
     "name": "moderate_burncube",
-    "title": "Burncube moderate",
+    "title": "Burncube Moderate",
     "abstract": "burnt area",
     "needed_bands": ["wofsmoderate"],
     "index_function": {
