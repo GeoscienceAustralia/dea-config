@@ -13,11 +13,9 @@ style_combined_burncube = {
     "needed_bands": ["wofssevere", "wofsmoderate"],
     "index_expression": "2*wofssevere + wofsmoderate",
     "color_ramp": [
-        {"value": 0.99, "color": "#0000", "alpha": 0.0},
-        {"value": 1.0, "color": "#F79646", "alpha": 1.0},
-        {"value": 1.49, "color": "#F79646", "alpha": 1.0},
-        {"value": 1.5, "color": "#C0504D", "alpha": 1.0},
-        {"value": 2.0, "color": "#C0504D", "alpha": 1.0},
+        {"value": 0.0, "color": "#FFFFFF", "alpha": 0.0},
+        {"value": 1, "color": "#F79646"},
+        {"value": 2, "color": "#C0504D"},
     ],
     "legend": {
         "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/derivative/ga_s2_ba_provisional_3/dnbr_class_legend_edit.png",
