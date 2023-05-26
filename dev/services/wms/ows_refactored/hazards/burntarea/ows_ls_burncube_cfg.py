@@ -93,7 +93,7 @@ layers = {
             
             Roberts, Dale & Mueller, Norman & McIntyre, Alexis. (2017). High-Dimensional Pixel Composites From Earth Observation Time Series. IEEE Transactions on Geoscience and Remote Sensing. PP. 1-11. 10.1109/TGRS.2017.2723896. 
             
-            To do, add link to CMI when released, e.g. CMI https://cmi.ga.gov.au/data-products/dea/634/dea-mangrove-canopy-cover-landsat
+            Draft CMI https://cmi.ga.gov.au/data-products/dea/841/draft...-burncube-historic-burnt-area
             
             For service status information, see https://status.dea.ga.gov.au""",
 
