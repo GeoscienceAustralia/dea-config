@@ -1180,7 +1180,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Burncube Burnt Area (Landsat, Developmental)",
+                                    "name": "DEA BurnCube Historic Burnt Area (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_nbart_bc_fyear_3_demo",
