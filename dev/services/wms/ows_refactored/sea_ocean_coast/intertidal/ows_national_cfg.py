@@ -78,6 +78,61 @@ style_nidem = {
     },
 }
 
+style_nidem_macro = {
+    "name": "NIDEM_macro",
+    "title": "National Intertidal Digital Elevation Model macrotidal",
+    "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "nidem",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["nidem"],
+    "mpl_ramp": "viridis",
+    "range": [-5.0, 5.0],
+    "legend": {
+        "begin": "-5.0",
+        "end": "5.0",
+        "ticks": ["-5.0", "0.0", "5.0"],
+        "units": "metres",
+        "tick_labels": {
+            "-5.0": {"prefix": ">"},
+            "5.0": {"prefix": "<"},
+        },
+    },
+}
+
+
+style_nidem_micro = {
+    "name": "NIDEM_micro",
+    "title": "National Intertidal Digital Elevation Model microtidal",
+    "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "nidem",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["nidem"],
+    "mpl_ramp": "viridis",
+    "range": [-1.0, 1.0],
+    "legend": {
+        "begin": "-1.0",
+        "end": "1.0",
+        "ticks": ["-1.0", "0.0", "1.0"],
+        "units": "metres",
+        "tick_labels": {
+            "-1.0": {"prefix": ">"},
+            "1.0": {"prefix": "<"},
+        },
+    },
+}
+
 
 layer = {
     "title": "DEA Intertidal Elevation (Landsat)",
@@ -134,6 +189,8 @@ For service status information, see https://status.dea.ga.gov.au""",
         "default_style": "NIDEM",
         "styles": [
             style_nidem,
+            style_nidem_macro,
+            style_nidem_micro,
         ],
     },
 }
