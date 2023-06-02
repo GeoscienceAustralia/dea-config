@@ -1,0 +1,188 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "ausbath_09_v4.tiff",
+  "properties": {
+    "odc:product": "ga_multi_ausbath_0",
+    "start_datetime": "2009-01-01T00:00:00Z",
+    "end_datetime": "2009-12-31T23:59:59.999999Z",
+    "created": "2009-01-01T00:00:00Z",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            91.9976220703125,
+            -60.00243896484375
+          ],
+          [
+            171.99762207031063,
+            -60.00243896484375
+          ],
+          [
+            171.99762207031063,
+            -8.002438964844963
+          ],
+          [
+            91.9976220703125,
+            -8.002438964844963
+          ],
+          [
+            91.9976220703125,
+            -60.00243896484375
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      91.9976220703125,
+      -60.00243896484375,
+      171.99762207031063,
+      -8.002438964844963
+    ],
+    "proj:shape": [
+      20800,
+      32000
+    ],
+    "proj:transform": [
+      0.0024999999999999415,
+      0,
+      91.9976220703125,
+      0,
+      -0.0024999999999999415,
+      -8.002438964844963,
+      0,
+      0,
+      1
+    ],
+    "proj:projjson": {
+      "$schema": "https://proj.org/schemas/v0.6/projjson.schema.json",
+      "type": "GeographicCRS",
+      "name": "WGS 84",
+      "datum": {
+        "type": "GeodeticReferenceFrame",
+        "name": "World Geodetic System 1984",
+        "ellipsoid": {
+          "name": "WGS 84",
+          "semi_major_axis": 6378137,
+          "inverse_flattening": 298.257223563
+        }
+      },
+      "coordinate_system": {
+        "subtype": "ellipsoidal",
+        "axis": [
+          {
+            "name": "Geodetic latitude",
+            "abbreviation": "Lat",
+            "direction": "north",
+            "unit": "degree"
+          },
+          {
+            "name": "Geodetic longitude",
+            "abbreviation": "Lon",
+            "direction": "east",
+            "unit": "degree"
+          }
+        ]
+      },
+      "id": {
+        "authority": "EPSG",
+        "code": 4326
+      }
+    },
+    "datetime": "2023-06-02T02:44:44.526750Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          91.9976220703125,
+          -60.00243896484375
+        ],
+        [
+          171.99762207031063,
+          -60.00243896484375
+        ],
+        [
+          171.99762207031063,
+          -8.002438964844963
+        ],
+        [
+          91.9976220703125,
+          -8.002438964844963
+        ],
+        [
+          91.9976220703125,
+          -60.00243896484375
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "s3://dea-public-data-dev/ausbath_09_v4/ausbath_09_v4.stac-item.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "height_depth": {
+      "href": "s3://dea-public-data-dev/ausbath_09_v4/ausbath_09_v4.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "height_depth",
+      "raster:bands": [
+        {
+          "data_type": "int16",
+          "scale": 1,
+          "offset": 0,
+          "sampling": "area",
+          "nodata": -32768,
+          "statistics": {
+            "mean": -2910.655039943609,
+            "minimum": -8437,
+            "maximum": 3364,
+            "stddev": 2054.306526999299,
+            "valid_percent": 99.84984984984985
+          },
+          "histogram": {
+            "count": 11,
+            "min": -8437,
+            "max": 3364,
+            "buckets": [
+              43,
+              2215,
+              96199,
+              230967,
+              112017,
+              44818,
+              37348,
+              156083,
+              1218,
+              52
+            ]
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "height_depth",
+          "description": "Height/Depth Above/Below Sea Level"
+        }
+      ],
+      "roles": []
+    }
+  },
+  "bbox": [
+    91.9976220703125,
+    -60.00243896484375,
+    171.99762207031063,
+    -8.002438964844963
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
+  ]
+}
