@@ -645,11 +645,10 @@
             "product": [
                 "nidem"
             ],
-            "styles_count": 3,
+            "styles_count": 2,
             "styles_list": [
-                "NIDEM",
-                "NIDEM_macro",
-                "NIDEM_micro"
+                "nidem_macro",
+                "nidem_micro"
             ]
         },
         {
