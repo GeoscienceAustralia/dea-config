@@ -1,7 +1,7 @@
 name: ga_multi_ausbath_0
 license: CC-BY-4.0
 metadata_type: eo3
-description: Australian Bathymetry and Topography Grid, June 2009
+description: Geoscience Australia Australian Bathymetry and Topography Grid, June 2009
 metadata:
   product:
     name: ga_multi_ausbath_0
