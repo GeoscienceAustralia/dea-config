@@ -257,7 +257,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Landst 7 ETM+)",
+                                    "name": "DEA Surface Reflectance (Landsat 7 ETM+)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_ard_3",
@@ -2197,7 +2197,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Surface Reflectance (Landst 7 ETM+)",
+                                    "name": "DEA Surface Reflectance (Landsat 7 ETM+)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_ard_3",
