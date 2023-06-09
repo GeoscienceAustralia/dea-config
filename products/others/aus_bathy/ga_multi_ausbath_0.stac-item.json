@@ -125,11 +125,26 @@
       "rel": "self",
       "href": "s3://dea-public-data-dev/ausbath_09_v4/ausbath_09_v4.stac-item.json",
       "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "http://dx.doi.org/10.4225/25/53D99B6581B9A",
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "rel": "preview",
+      "href":"ausbath_09_v4.thumbnail.jpg",
+      "type": "image/jpeg"
     }
   ],
   "assets": {
+    "thumbnail": {
+      "href": "ausbath_09_v4.thumbnail.jpg",
+      "roles": ["thumbnail"],
+      "type": "image/jpeg"
+    },
     "height_depth": {
-      "href": "s3://dea-public-data-dev/ausbath_09_v4/ausbath_09_v4.tiff",
+      "href": "ausbath_09_v4.tiff",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "title": "height_depth",
       "raster:bands": [
@@ -171,7 +186,7 @@
           "description": "Height/Depth Above/Below Sea Level"
         }
       ],
-      "roles": []
+      "roles": ["data"]
     }
   },
   "bbox": [
