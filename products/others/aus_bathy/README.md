@@ -8,6 +8,8 @@
 This data product was produced and published by Geoscience Australia in 2009, with complete
 information provided via http://dx.doi.org/10.4225/25/53D99B6581B9A 
 
+![](ausbath_09_v4.thumbnail.jpg)
+
 
 ## Process
 

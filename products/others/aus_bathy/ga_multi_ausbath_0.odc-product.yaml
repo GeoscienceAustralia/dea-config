@@ -15,8 +15,8 @@ measurements:
 load:
   crs: EPSG:4326
   align:
-    x: 0
-    y: 0
+    longitude: 0
+    latitude: 0
   resolution:
-    x: 0.0024999999999999415
-    y: -0.0024999999999999415
+    longitude: 0.0024999999999999415
+    latitude: -0.0024999999999999415
