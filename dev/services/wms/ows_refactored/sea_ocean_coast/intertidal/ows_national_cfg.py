@@ -2,86 +2,10 @@ from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_nidem = {"nidem": []}
 
-style_nidem = {
-    "name": "NIDEM",
-    "title": "National Intertidal Digital Elevation Model",
-    "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "nidem",
-        },
-    },
-    "include_in_feature_info": False,
-    "needed_bands": ["nidem"],
-    "color_ramp": [
-        {"value": -2.51, "color": "#440154"},
-        {
-            "value": -2.5,
-            "color": "#440154",
-        },
-        {
-            "value": -2.34,
-            "color": "#460e61",
-        },
-        {
-            "value": -2.18,
-            "color": "#471b6e",
-        },
-        {"value": -2.02, "color": "#472877"},
-        {"value": -1.86, "color": "#45347f"},
-        {"value": -1.7, "color": "#413f85"},
-        {"value": -1.58, "color": "#3b4d8a"},
-        {"value": -1.42, "color": "#37578b"},
-        {"value": -1.26, "color": "#32618c"},
-        {
-            "value": -1.1,
-            "color": "#2e6b8d",
-        },
-        {"value": -0.94, "color": "#2a748e"},
-        {"value": -0.78, "color": "#267d8e"},
-        {"value": -0.62, "color": "#23868d"},
-        {"value": -0.46, "color": "#208f8c"},
-        {"value": -0.3, "color": "#1e9889"},
-        {"value": -0.14, "color": "#1fa186"},
-        {
-            "value": 0.0,
-            "color": "#26ac7f",
-        },
-        {"value": 0.14, "color": "#32b579"},
-        {"value": 0.3, "color": "#41bd70"},
-        {"value": 0.46, "color": "#54c566"},
-        {"value": 0.62, "color": "#69cc59"},
-        {"value": 0.78, "color": "#80d24b"},
-        {"value": 0.94, "color": "#99d83c"},
-        {
-            "value": 1.1,
-            "color": "#b2dc2c",
-        },
-        {"value": 1.26, "color": "#cce01e"},
-        {"value": 1.42, "color": "#e5e31a"},
-        {
-            "value": 1.5,
-            "color": "#fde724",
-        },
-    ],
-    "legend": {
-        "begin": "-2.5",
-        "end": "1.5",
-        "ticks": ["-2.5", "-1.1", "0.0", "1.5"],
-        "units": "metres",
-        "tick_labels": {
-            "1.5": {"prefix": ">"},
-            "-2.5": {"prefix": "<"},
-        },
-    },
-}
-
 style_nidem_macro = {
-    "name": "NIDEM_macro",
-    "title": "National Intertidal Digital Elevation Model macrotidal",
-    "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
+    "name": "nidem_macro",
+    "title": "Intertidal elevation (macrotidal)",
+    "abstract": "Intertidal elevation visualised for macrotidal coastal environments",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -92,24 +16,24 @@ style_nidem_macro = {
     "include_in_feature_info": False,
     "needed_bands": ["nidem"],
     "mpl_ramp": "viridis",
-    "range": [-5.0, 5.0],
+    "range": [-4.0, 2.0],
     "legend": {
-        "begin": "-5.0",
-        "end": "5.0",
-        "ticks": ["-5.0", "0.0", "5.0"],
+        "begin": "-4.0",
+        "end": "2.0",
+        "ticks": ["-4.0", "0.0", "2.0"],
         "units": "metres",
         "tick_labels": {
-            "-5.0": {"prefix": ">"},
-            "5.0": {"prefix": "<"},
+            "2.0": {"prefix": ">"},
+            "-4.0": {"prefix": "<"},
         },
     },
 }
 
 
 style_nidem_micro = {
-    "name": "NIDEM_micro",
-    "title": "National Intertidal Digital Elevation Model microtidal",
-    "abstract": "National Intertidal Digital Elevation Model 25 m v1.0.0",
+    "name": "nidem_micro",
+    "title": "Elevation (microtidal)",
+    "abstract": "Intertidal elevation visualised for microtidal coastal environments",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -120,15 +44,15 @@ style_nidem_micro = {
     "include_in_feature_info": False,
     "needed_bands": ["nidem"],
     "mpl_ramp": "viridis",
-    "range": [-1.0, 1.0],
+    "range": [-1.0, 0.5],
     "legend": {
         "begin": "-1.0",
-        "end": "1.0",
-        "ticks": ["-1.0", "0.0", "1.0"],
+        "end": "0.5",
+        "ticks": ["-1.0", "0.0", "0.5"],
         "units": "metres",
         "tick_labels": {
-            "-1.0": {"prefix": ">"},
-            "1.0": {"prefix": "<"},
+            "0.5": {"prefix": ">"},
+            "-1.0": {"prefix": "<"},
         },
     },
 }
@@ -186,9 +110,8 @@ For service status information, see https://status.dea.ga.gov.au""",
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "NIDEM",
+        "default_style": "nidem_macro",
         "styles": [
-            style_nidem,
             style_nidem_macro,
             style_nidem_micro,
         ],
