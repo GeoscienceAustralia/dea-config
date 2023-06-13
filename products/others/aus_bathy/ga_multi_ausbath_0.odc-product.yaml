@@ -1,0 +1,22 @@
+name: ga_multi_ausbath_0
+license: CC-BY-4.0
+metadata_type: eo3
+description: Geoscience Australia Australian Bathymetry and Topography Grid, June 2009
+metadata:
+  product:
+    name: ga_multi_ausbath_0
+  properties:
+    odc:file_format: GeoTIFF
+measurements:
+- name: height_depth
+  dtype: int16
+  units: 'm'
+  nodata: -32768
+load:
+  crs: EPSG:4326
+  align:
+    longitude: 0
+    latitude: 0
+  resolution:
+    longitude: 0.0024999999999999415
+    latitude: -0.0024999999999999415
