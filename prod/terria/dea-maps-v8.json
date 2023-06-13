@@ -617,7 +617,7 @@
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2_wo_provisional_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2_wo_provisional_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
