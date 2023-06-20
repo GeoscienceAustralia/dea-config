@@ -1180,12 +1180,12 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA BurnCube Historic Burnt Area (Landsat, Developmental)",
+                                    "name": "DEA BurnCube Historic Burnt Area Calendar Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls_nbart_bc_fyear_3_demo",
+                                    "layers": "ga_ls8c_bc_4cyear",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls_nbart_bc_fyear_3_demo",
+                                    "linkedWcsCoverage": "ga_ls8c_bc_4cyear",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
