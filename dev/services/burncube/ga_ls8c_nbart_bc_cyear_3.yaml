@@ -1,0 +1,87 @@
+output_folder: s3://dea-public-data-dev/projects/burn_cube/derivative
+
+input_products:
+  platform: ls
+  geomed_name: ga_ls8c_nbart_gm_4cyear_2016
+  wofs_summary_name: ga_ls_wo_fq_cyear_3
+  ard_names:
+    - ga_ls8c_ard_3
+  input_ard_bands:
+    - nbart_red
+    - nbart_green
+    - nbart_blue
+    - nbart_nir
+    - nbart_swir_1
+    - nbart_swir_2
+  input_gm_bands:
+    - red
+    - green
+    - blue
+    - nir
+    - swir1
+    - swir2
+
+product:
+  name: ga_ls8c_nbart_bc_cyear_3
+  short_name: ga_ls8c_nbart_bc_cyear_3
+  version: 3.0.0
+  product_family: burncube
+  bands:
+    - wofsstartdate
+    - wofsseverity
+    - wofssevere
+    - wofsmoderate
+    - wofsduration
+    - wofscorroborate
+    - wofscleaned
+    - count
+  inherit_skip_properties:
+    - eo:cloud_cover
+    - fmask:clear
+    - fmask:snow
+    - fmask:cloud
+    - fmask:water
+    - fmask:cloud_shadow
+    - eo:sun_elevation
+    - eo:sun_azimuth
+    - gqa:iterative_stddev_x
+    - gqa:iterative_stddev_y
+    - gqa:iterative_stddev_xy
+    - gqa:stddev_xy
+    - gqa:stddev_x
+    - gqa:stddev_y
+    - gqa:mean_xy
+    - gqa:mean_x
+    - gqa:mean_y
+    - gqa:abs_xy
+    - gqa:abs_x
+    - gqa:abs_y
+    - gqa:abs_iterative_mean_y
+    - gqa:abs_iterative_mean_x
+    - gqa:abs_iterative_mean_xy
+    - gqa:iterative_mean_xy
+    - gqa:iterative_mean_x
+    - gqa:iterative_mean_y
+    - gqa:cep90
+    - landsat:landsat_product_id
+    - landsat:landsat_scene_id
+    - landsat:collection_category
+    - landsat:collection_number
+    - landsat:wrs_path
+    - landsat:wrs_row
+    - fmask:clear
+  thumbnail_styling:
+    index_function:
+      function: datacube_ows.band_utils.single_band
+      kwargs:
+        band: wofssevere
+      mapped_bands: true
+    mpl_ramp: Oranges
+    name: ga_ls8c_nbart_bc_cyear_3
+    needed_bands:
+    - wofssevere
+    range:
+    - 0
+    - 1
+
+task_table: 10-year-historical-processing-4year-geomad.csv
