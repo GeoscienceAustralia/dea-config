@@ -78,7 +78,7 @@ layers = {
     "layers": [
         {
             "title": "DEA BurnCube Historic Burnt Area Calendar Year (Landsat)",
-            "name": "ga_ls_nbart_bc_cyear_3",
+            "name": "ga_ls8c_nbart_bc_cyear_3",
             "abstract": """BurnCube Historic Burnt Area, Calendar Year, 30m, 0.0.0 (Landsat, Collection 3)
 
 Bushfires pose a serious and increasing threat to Australia. The detection and mapping of burns have many applications to support communities and ecosystems impacted by fire. Digital Earth Australia (DEA) offer a preliminary data product which was developed in collaboration with the Australian National University (ANU) to map historic burns with Landsat 8 data within continental Australia.
@@ -96,7 +96,7 @@ Roberts, Dale & Mueller, Norman & McIntyre, Alexis. (2017). High-Dimensional Pix
 Draft CMI https://cmi.ga.gov.au/data-products/dea/841/draft...-burncube-historic-burnt-area
 
 For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "ga_ls_nbart_bc_cyear_3",
+            "product_name": "ga_ls8c_nbart_bc_cyear_3",
             "bands": bands_in_burncube,
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
