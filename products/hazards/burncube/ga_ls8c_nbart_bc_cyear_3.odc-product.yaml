@@ -1,0 +1,70 @@
+name: ga_ls8c_nbart_bc_cyear_3
+description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain, Landsat 8 Burn Cube 4 Calendar Years Collection 3
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: burncube
+  product:
+    name: ga_ls8c_nbart_bc_cyear_3
+
+measurements:
+  - name: wofsstartdate
+    aliases:
+      - startdate
+      - bushfire_startdate
+    dtype: float64
+    nodata: 0
+    units: '1'
+  - name: wofssevere
+    aliases:
+      - severe
+    dtype: float64
+    nodata: -999
+    units: '1'
+  - name: wofsseverity
+    aliases:
+      - severity
+    dtype: float64
+    nodata: -999
+    units: '1'
+  - name: wofsmoderate
+    aliases:
+      - moderate
+    dtype: float64
+    nodata: -999
+    units: '1'
+  - name: wofsduration
+    aliases:
+      - duration
+      - bushfire_duration
+    dtype: float64
+    nodata: 0
+    units: '1'
+  - name: wofscorroborate
+    aliases:
+      - corroborate
+    dtype: float64
+    nodata: 0
+    units: '1'
+  - name: wofscleaned
+    aliases:
+      - cleaned
+    dtype: float64
+    nodata: 0
+    units: '1'
+  - name: count
+    dtype: int16
+    nodata: -999
+    units: '1'
+
+load:
+  crs: 'epsg:3577'
+  resolution:
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0
