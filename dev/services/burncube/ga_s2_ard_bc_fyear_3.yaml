@@ -1,0 +1,90 @@
+output_folder: s3://dea-public-data-dev/projects/burn_cube/derivative
+
+input_products:
+  platform: s2
+  geomed_name: ga_s2ab_ard_gm_4fyear_2015
+  wofs_summary_name: ga_ls_wo_fq_fyear_3
+  ard_names:
+    - ga_s2am_ard_3
+    - ga_s2bm_ard_3
+  input_ard_bands:
+    - nbart_blue
+    - nbart_green
+    - nbart_red
+    - nbart_nir_2
+    - nbart_swir_2
+    - nbart_swir_3
+  input_gm_bands:
+    - nbart_blue
+    - nbart_green
+    - nbart_red
+    - nbart_nir_2
+    - nbart_swir_2
+    - nbart_swir_3
+
+product:
+  name: ga_s2_ard_bc_fyear_3
+  short_name: ga_s2_ard_bc_fyear_3
+  version: 3.0.0
+  product_family: burncube
+  bands:
+    - wofsstartdate
+    - wofsseverity
+    - wofssevere
+    - wofsmoderate
+    - wofsduration
+    - wofscorroborate
+    - wofscleaned
+    - count
+  inherit_skip_properties:
+    - eo:cloud_cover
+    - fmask:clear
+    - fmask:snow
+    - fmask:cloud
+    - fmask:water
+    - fmask:cloud_shadow
+    - eo:sun_elevation
+    - eo:sun_azimuth
+    - gqa:iterative_stddev_x
+    - gqa:iterative_stddev_y
+    - gqa:iterative_stddev_xy
+    - gqa:stddev_xy
+    - gqa:stddev_x
+    - gqa:stddev_y
+    - gqa:mean_xy
+    - gqa:mean_x
+    - gqa:mean_y
+    - gqa:abs_xy
+    - gqa:abs_x
+    - gqa:abs_y
+    - gqa:abs_iterative_mean_y
+    - gqa:abs_iterative_mean_x
+    - gqa:abs_iterative_mean_xy
+    - gqa:iterative_mean_xy
+    - gqa:iterative_mean_x
+    - gqa:iterative_mean_y
+    - gqa:cep90
+    - s2cloudless:clear
+    - s2cloudless:cloud
+    - sat:orbit_state
+    - sat:relative_orbit
+    - sentinel:datastrip_id
+    - sentinel:datatake_start_datetime
+    - sentinel:sentinel_tile_id
+    - sentinel:product_name
+  thumbnail_styling:
+    index_function:
+      function: datacube_ows.band_utils.single_band
+      kwargs:
+        band: wofssevere
+      mapped_bands: true
+    mpl_ramp: Oranges
+    name: ga_s2_ard_bc_fyear_3
+    needed_bands:
+    - wofssevere
+    range:
+    - 0
+    - 1
+  
+
+task_table: 10-year-historical-processing-4year-geomad.csv
