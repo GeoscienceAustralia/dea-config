@@ -13,6 +13,6 @@ category_layers = {
         {
             "include": "ows_refactored.hazards.burntarea.ows_s2_burncube_cyear_cfg.layers",
             "type": "python",
-        }
+        },
     ]
 }
