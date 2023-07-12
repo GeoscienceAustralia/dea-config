@@ -995,5 +995,17 @@
                 "moderate_burncube"
             ]
         }    
+        {
+            "layer": "ga_s2_ard_bc_cyear_3",
+            "product": [ 
+                "ga_s2_ard_bc_cyear_3"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "combined_burncube",
+                "severe_burncube",
+                "moderate_burncube"
+            ]
+        }
     ]
 }
