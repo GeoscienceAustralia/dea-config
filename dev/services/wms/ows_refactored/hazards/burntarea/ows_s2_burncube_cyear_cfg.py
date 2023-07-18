@@ -27,13 +27,6 @@ style_severe_burncube = {
     "title": "BurnCube: Severe",
     "abstract": "burnt area",
     "needed_bands": ["wofssevere"],
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "wofssevere",
-        },
-    },
     "value_map": {
         "wofssevere": [
             {
@@ -52,13 +45,6 @@ style_moderate_burncube = {
     "title": "BurnCube: Moderate",
     "abstract": "burnt area",
     "needed_bands": ["wofsmoderate"],
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {
-            "band": "wofsmoderate",
-        },
-    },
     "value_map": {
         "wofsmoderate": [
             {
