@@ -1194,23 +1194,6 @@
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "FD346d"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA BurnCube Historic Burnt Area Financial Year (Landsat, Developmental)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_ls8c_nbart_bc_fyear_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls8c_nbart_bc_fyear_3",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "FC346d"
                                 }
                             ]
                         },
