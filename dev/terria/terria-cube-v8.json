@@ -1194,7 +1194,7 @@
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "FD346d"
-                                }
+                                },
                                 {
                                     "type": "wms",
                                     "name": "DEA BurnCube Historic Burnt Area Financial Year (Landsat, Developmental)",
