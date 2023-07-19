@@ -27,7 +27,6 @@ style_severe_burncube = {
     "title": "BurnCube: Severe",
     "abstract": "burnt area",
     "needed_bands": ["wofssevere"],
-    },
     "value_map": {
         "wofssevere": [
             {
@@ -46,7 +45,6 @@ style_moderate_burncube = {
     "title": "BurnCube: Moderate",
     "abstract": "burnt area",
     "needed_bands": ["wofsmoderate"],
-    },
     "value_map": {
         "wofsmoderate": [
             {
@@ -59,6 +57,7 @@ style_moderate_burncube = {
     },
     "legend": {},
 }
+
 
 layers = {
     "title": "DEA BurnCube Historic Burnt Area",
