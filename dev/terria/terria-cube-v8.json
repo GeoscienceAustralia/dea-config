@@ -1195,13 +1195,6 @@
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "FD346d"
                                 }
-                            ]
-                        },
-                        {
-                            "id": "rrybc7",
-                            "type": "group",
-                            "name": "DEA Historic Burnt Area",
-                            "members": [
                                 {
                                     "type": "wms",
                                     "name": "DEA BurnCube Historic Burnt Area Financial Year (Landsat, Developmental)",
