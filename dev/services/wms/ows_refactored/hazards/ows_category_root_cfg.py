@@ -10,7 +10,7 @@ category_layers = {
             "include": "ows_refactored.hazards.burntarea.ows_ls_burncube_cfg.layers",
             "type": "python",
         },
-                {
+        {
             "include": "ows_refactored.hazards.burntarea.ows_ls_burncube_fy_cfg.layers",
             "type": "python",
         },
