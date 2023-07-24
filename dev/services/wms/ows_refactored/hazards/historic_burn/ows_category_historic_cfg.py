@@ -1,11 +1,7 @@
 category_layers = {
-    "title": "Hazards",
+    "title": "Historic Burnt Area",
     "abstract": "",
     "layers": [
-        {
-            "include": "ows_refactored.hazards.burntarea.ows_provisional_ba_cfg.layers",
-            "type": "python",
-        },
         {
             "include": "ows_refactored.hazards.burntarea.ows_ls_burncube_cfg.layers",
             "type": "python",
