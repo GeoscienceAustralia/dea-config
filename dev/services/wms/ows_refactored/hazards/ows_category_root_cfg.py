@@ -1,4 +1,4 @@
-layers = {
+category_layers = {
     "title": "Hazards",
     "abstract": "",
     "layers": [
