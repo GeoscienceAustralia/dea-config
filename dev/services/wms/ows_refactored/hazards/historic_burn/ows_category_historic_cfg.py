@@ -1,4 +1,4 @@
-category_layers = {
+layers = {
     "title": "DEA BurnCube Historic Burnt Area",
     "abstract": "",
     "layers": [

@@ -1,4 +1,4 @@
-category_layers = {
+layers = {
     "title": "DEA Near Real-Time Burnt Area",
     "abstract": "",
     "layers": [
