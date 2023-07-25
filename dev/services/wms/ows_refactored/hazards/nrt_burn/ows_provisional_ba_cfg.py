@@ -208,9 +208,9 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 layers = {
-        "title": "DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)",
-        "name": "ga_s2_ba_provisional_3",
-        "abstract": """DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)
+    "title": "DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)",
+    "name": "ga_s2_ba_provisional_3",
+    "abstract": """DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)
 
 Bushfires pose a serious and increasing threat to Australia. The detection and mapping of burns have many applications to support communities and ecosystems impacted by fire. However, the identification of bushfire burn using Earth Observation is often manual, can come with a significant time delay, and at a relatively small scale. Digital Earth Australia (DEA) offer a provisional and preliminary change detection data product, for all of Australia, which uses same day satellite data and cloud-based infrastructure to automatically and rapidly identify areas that show burn characteristics.
 
