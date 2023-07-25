@@ -62,7 +62,7 @@ layers = {
     "title": "DEA BurnCube Historic Burnt Area Calendar Year (Sentinel-2)",
     "abstract": "",
     "layers": [
-        {    
+        {
             "title": "DEA BurnCube Historic Burnt Area Calendar Year (Sentinel-2)",
             "name": "ga_s2_ard_bc_cyear_3",
             "abstract": """BurnCube Historic Burnt Area, Calendar Year, 30m, 0.0.0 (Sentinel-2, Collection 3)
