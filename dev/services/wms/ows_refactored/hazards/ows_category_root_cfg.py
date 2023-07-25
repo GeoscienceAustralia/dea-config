@@ -3,19 +3,11 @@ category_layers = {
     "abstract": "",
     "layers": [
         {
-            "include": "ows_refactored.hazards.burntarea.ows_provisional_ba_cfg.layers",
+            "include": "ows_refactored.hazards.historic_burn.ows_category_historic_cfg.layers",
             "type": "python",
         },
         {
-            "include": "ows_refactored.hazards.burntarea.ows_ls_burncube_cfg.layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.hazards.burntarea.ows_ls_burncube_fy_cfg.layers",
-            "type": "python",
-        },
-        {
-            "include": "ows_refactored.hazards.burntarea.ows_s2_burncube_cyear_cfg.layers",
+            "include": "ows_refactored.hazards.nrt_burn.ows_category_nrt_cfg.layers",
             "type": "python",
         },
     ]

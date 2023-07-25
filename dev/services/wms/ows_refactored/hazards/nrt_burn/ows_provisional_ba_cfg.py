@@ -209,12 +209,8 @@ For service status information, see https://status.dea.ga.gov.au""",
 
 layers = {
     "title": "DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)",
-    "abstract": "",
-    "layers": [
-        {
-            "title": "DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)",
-            "name": "ga_s2_ba_provisional_3",
-            "abstract": """DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)
+    "name": "ga_s2_ba_provisional_3",
+    "abstract": """DEA Burnt Area Characteristic Layers (Sentinel 2 Near Real-Time, Provisional)
 
 Bushfires pose a serious and increasing threat to Australia. The detection and mapping of burns have many applications to support communities and ecosystems impacted by fire. However, the identification of bushfire burn using Earth Observation is often manual, can come with a significant time delay, and at a relatively small scale. Digital Earth Australia (DEA) offer a provisional and preliminary change detection data product, for all of Australia, which uses same day satellite data and cloud-based infrastructure to automatically and rapidly identify areas that show burn characteristics.
 
@@ -264,29 +260,27 @@ Normally dNBR analysis is run on data from a clear pre-fire and a post-fire sate
 dNBR is styled in two layers, as a colour ramp between -1 and +1, and also as a thresholded class layer. Burn classes and thresholds values are a simplified version of those proposed by USGS, as "Unburnt", "Low to Medium" and "High to Severe". Colour coding was established by UN-SPIDER.
 
 For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "ga_s2_ba_provisional_3",
-            "bands": bands_ba_rasters,
-            "resource_limits": reslim_for_sentinel2,
-            "dynamic": True,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [10.0, -10.0],
-            "flags": [
-                {
-                    "band": "land",
-                    "product": "geodata_coast_100k",
-                    "ignore_time": True,
-                    "ignore_info_flags": [],
-                },
-            ],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "styling": {
-                "default_style": "ga_s2_dnbr_provisional_3",
-                "styles": [style_dnbr, style_dnbr_classes, style_dbsi, style_dndvi],
-            },
+    "product_name": "ga_s2_ba_provisional_3",
+    "bands": bands_ba_rasters,
+    "resource_limits": reslim_for_sentinel2,
+    "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [10.0, -10.0],
+    "flags": [
+        {
+            "band": "land",
+            "product": "geodata_coast_100k",
+            "ignore_time": True,
+            "ignore_info_flags": [],
         },
     ],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False,
+    },
+    "styling": {
+        "default_style": "ga_s2_dnbr_provisional_3",
+        "styles": [style_dnbr, style_dnbr_classes, style_dbsi, style_dndvi],
+    },
 }
