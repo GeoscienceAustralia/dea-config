@@ -1225,6 +1225,22 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "F3D46d"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA BurnCube Historic Burnt Area Financial Year (Sentinel 2a and 2b, Developmental)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_ard_bc_fyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_ard_bc_fyear_3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "F3D92d"
                                 }
                             ]
                         },
