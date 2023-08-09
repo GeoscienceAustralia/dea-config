@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 63,
+    "total_layers_count": 64,
     "layers": [
          {
             "layer": "s2_ls_combined",
@@ -33,7 +33,8 @@
             "product": [
                 "ga_ls5t_ard_3",
                 "ga_ls7e_ard_3",
-                "ga_ls8c_ard_3"
+                "ga_ls8c_ard_3",
+                "ga_ls9c_ard_3"
             ],
             "styles_count": 13,
             "styles_list": [
@@ -219,6 +220,31 @@
                 "tmad_rgb_std",
                 "tmad_rgb_sens",
                 "count"
+            ]
+        },
+        {
+            "layer": "ga_ls9c_ard_3",
+            "product": [
+                "ga_ls9c_ard_3"
+            ],
+            "styles_count": 16,
+            "styles_list": [
+                "true_colour",
+                "true_colour_pan",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "panchromatic",
+                "fmask"
             ]
         },
         {

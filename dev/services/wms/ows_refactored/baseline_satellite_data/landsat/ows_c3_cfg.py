@@ -39,7 +39,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "title": "DEA Surface Reflectance (Landsat 9 OLI-TIRS)",
             "abstract": """Geoscience Australia Landsat 9 OLI-TIRS Analysis Ready Data Collection 3
 
-This product takes Landsat 8 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
+This product takes Landsat 9 imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 The imagery is captured using the Operational Land Imager (OLI) and Thermal Infra-Red Scanner (TIRS) sensors aboard Landsat 9.
 
