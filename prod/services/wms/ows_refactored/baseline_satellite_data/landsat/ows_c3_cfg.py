@@ -257,6 +257,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "ga_ls5t_ard_3",
         "ga_ls7e_ard_3",
         "ga_ls8c_ard_3",
+        "ga_ls9c_ard_3",
 
     ],
     "bands": bands_c3_ls_common,
