@@ -50,7 +50,7 @@ It contains three sub-products that provide corrections or attribution informati
 DEA Surface Reflectance NBAR (Landsat 9 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/402/dea-surface-reflectance-nbar-landsat-9-oli-tirs
 DEA Surface Reflectance NBART (Landsat 9 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/400/dea-surface-reflectance-nbart-landsat-9-oli-tirs
 DEA Surface Reflectance OA (Landsat 9 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/404/dea-surface-reflectance-oa-landsat-9-oli-tirs
-The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.
+The resolution is a 30 m grid based on the USGS Landsat Collection 2 archive.
 
 https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-9-oli-tirs
 
