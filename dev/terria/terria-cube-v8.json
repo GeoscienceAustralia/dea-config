@@ -1156,7 +1156,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Burnt Area Characteristics (Sentinel 2 Near Real-Time, Provisional)",
+                                    "name": "DEA Burnt Area Characteristics (Deprecated, Sentinel 2 Near Real-Time)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2_ba_provisional_3",
@@ -3129,7 +3129,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Burnt Area Characteristics (Sentinel 2 Near Real-Time, Provisional)",
+                                    "name": "DEA Burnt Area Characteristics (Deprecated, Sentinel 2 Near Real-Time)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2_ba_provisional_3",
