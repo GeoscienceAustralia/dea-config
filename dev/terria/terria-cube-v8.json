@@ -3168,10 +3168,10 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "Himawari-8 Mosaic, Last 10m",
+                                    "name": "Himawari-9 Mosaic, Last 10m",
                                     "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
                                     "opacity": 1,
-                                    "layers": "public:himawari8_mosaic",
+                                    "layers": "public:himawari9_mosaic",
                                     "leafletUpdateInterval": 750,
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
