@@ -2844,7 +2844,7 @@
                                     },
                                     "legends": [
                                         {
-                                            "url": "https://data.dea.ga.gov.au/projects/coastlines/deacoastlines_legend_v1.1.0.png"
+                                            "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_coastlines/supplementary/deacoastlines_legend.png"
                                         }
                                     ],
                                     "shareKeys": [
