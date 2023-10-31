@@ -736,7 +736,7 @@
                                         "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of surface area (not volume) observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' chart-type='lineAndPoint' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area (not volume) observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
                                         "partials": {
                                             "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
-                                        }
+                                        }   
                                     },
                                     "legends": [
                                         {
