@@ -1,0 +1,22 @@
+name: ga_multi_ausbathytopo250m_0
+license: CC-BY-4.0
+metadata_type: eo3
+description: Geoscience Australia AusBathyTopo 250m (Australia) 2023 Grid - A High-resolution Depth Model for Australia
+metadata:
+  product:
+    name: ga_multi_ausbathytopo250m_0
+  properties:
+    odc:file_format: GeoTIFF
+measurements:
+- name: height_depth
+  dtype: float32
+  units: 'm'
+  nodata: -32767
+load:
+  crs: EPSG:4326
+  align:
+    longitude: 0
+    latitude: 0
+  resolution:
+    longitude: 0.0024999999999999415
+    latitude: -0.0024999999999999415
