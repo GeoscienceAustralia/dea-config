@@ -15,6 +15,6 @@ information provided via:
 
 1. Use [rio-stac](https://github.com/developmentseed/rio-stac) to generate STAC Item metadata:
 
-    rio stac https://s3.ap-southeast-2.amazonaws.com/ausseabed-public-warehouse-bathymetry/L3/6009f454-290d-4c9a-a43d-00b254681696/Australian_Bathymetry_and_Topography_2023_250m_MSL_cog.tif | jq > ga_multi_ausbathytopo250m_0.stac-item.json
+    rio stac https://s3.ap-southeast-2.amazonaws.com/ausseabed-public-warehouse-bathymetry/L3/6009f454-290d-4c9a-a43d-00b254681696/Australian_Bathymetry_and_Topography_2023_250m_MSL_cog.tif | jq > ga_ausbathytopo250m_2023.stac-item.json
 
 2. Manually add some metadata to the STAC JSON, and manually create an ODC Product Definition YAML.

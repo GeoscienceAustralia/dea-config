@@ -1,10 +1,10 @@
-name: ga_multi_ausbathytopo250m_0
+name: ga_ausbathytopo250m_2023
 license: CC-BY-4.0
 metadata_type: eo3
 description: Geoscience Australia AusBathyTopo 250m (Australia) 2023 Grid - A High-resolution Depth Model for Australia
 metadata:
   product:
-    name: ga_multi_ausbathytopo250m_0
+    name: ga_ausbathytopo250m_2023
   properties:
     odc:file_format: GeoTIFF
 measurements:
