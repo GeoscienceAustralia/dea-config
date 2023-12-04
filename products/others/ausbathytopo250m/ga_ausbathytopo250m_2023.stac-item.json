@@ -120,8 +120,29 @@
       ]
     ]
   },
-  "links": [],
+  "links": [
+    {
+      "rel": "self",
+      "href": "s3://dea-public-data-dev/ga_austopobathy250m_2023/ga_austopobathy250m_2023.stac-item.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://doi.org/10.26186/148758",
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "rel": "preview",
+      "href":"ga_austopobathy250m_2023.thumbnail.jpg",
+      "type": "image/jpeg"
+    }
+  ],
   "assets": {
+    "thumbnail": {
+      "href": "ga_austopobathy250m_2023.thumbnail.jpg",
+      "roles": ["thumbnail"],
+      "type": "image/jpeg"
+    },
     "height_depth": {
       "href": "https://s3.ap-southeast-2.amazonaws.com/ausseabed-public-warehouse-bathymetry/L3/6009f454-290d-4c9a-a43d-00b254681696/Australian_Bathymetry_and_Topography_2023_250m_MSL_cog.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
