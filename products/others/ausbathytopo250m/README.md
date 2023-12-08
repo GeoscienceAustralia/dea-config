@@ -46,7 +46,7 @@ ds_reprojected.load()
 # Export to file
 vmin, vmax = ds_reprojected.quantile([0.02, 0.98])
 plt.imsave(
-    "ga_austopobathy250m_2023.thumbnail.jpg",
+    "ga_ausbathytopo250m_2023.thumbnail.jpg",
     ds_reprojected.squeeze("band"),
     cmap="viridis",
     vmin=vmin,

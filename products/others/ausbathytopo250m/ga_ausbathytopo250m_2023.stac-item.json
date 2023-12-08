@@ -123,7 +123,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "s3://dea-public-data-dev/ga_austopobathy250m_2023/ga_austopobathy250m_2023.stac-item.json",
+      "href": "s3://dea-public-data-dev/ga_ausbathytopo250m_2023/ga_ausbathytopo250m_2023.stac-item.json",
       "type": "application/json"
     },
     {
@@ -133,13 +133,13 @@
     },
     {
       "rel": "preview",
-      "href":"ga_austopobathy250m_2023.thumbnail.jpg",
+      "href":"ga_ausbathytopo250m_2023.thumbnail.jpg",
       "type": "image/jpeg"
     }
   ],
   "assets": {
     "thumbnail": {
-      "href": "ga_austopobathy250m_2023.thumbnail.jpg",
+      "href": "ga_ausbathytopo250m_2023.thumbnail.jpg",
       "roles": ["thumbnail"],
       "type": "image/jpeg"
     },
