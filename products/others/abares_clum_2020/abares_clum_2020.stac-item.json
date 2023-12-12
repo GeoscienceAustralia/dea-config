@@ -1,0 +1,289 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "clum_50m1220m.tiff",
+  "properties": {
+    "odc:product": "abares_clum_2020",
+    "start_datetime": "2020-01-01T00:00:00Z",
+    "end_datetime": "2020-12-31T23:59:59.999999Z",
+    "created": "2020-12-18T00:00:00Z",
+    "proj:epsg": 3577,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -1888000,
+            -4847000
+          ],
+          [
+            2122000,
+            -4847000
+          ],
+          [
+            2122000,
+            -1010000
+          ],
+          [
+            -1888000,
+            -1010000
+          ],
+          [
+            -1888000,
+            -4847000
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -1888000,
+      -4847000,
+      2122000,
+      -1010000
+    ],
+    "proj:shape": [
+      76740,
+      80200
+    ],
+    "proj:transform": [
+      50,
+      0,
+      -1888000,
+      0,
+      -50,
+      -1010000,
+      0,
+      0,
+      1
+    ],
+    "proj:projjson": {
+      "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+      "type": "ProjectedCRS",
+      "name": "GDA_1994_Albers",
+      "base_crs": {
+        "name": "GDA94",
+        "datum": {
+          "type": "GeodeticReferenceFrame",
+          "name": "Geocentric Datum of Australia 1994",
+          "ellipsoid": {
+            "name": "GRS 1980",
+            "semi_major_axis": 6378137,
+            "inverse_flattening": 298.257222101004
+          }
+        },
+        "coordinate_system": {
+          "subtype": "ellipsoidal",
+          "axis": [
+            {
+              "name": "Geodetic latitude",
+              "abbreviation": "Lat",
+              "direction": "north",
+              "unit": "degree"
+            },
+            {
+              "name": "Geodetic longitude",
+              "abbreviation": "Lon",
+              "direction": "east",
+              "unit": "degree"
+            }
+          ]
+        },
+        "id": {
+          "authority": "EPSG",
+          "code": 4283
+        }
+      },
+      "conversion": {
+        "name": "unnamed",
+        "method": {
+          "name": "Albers Equal Area",
+          "id": {
+            "authority": "EPSG",
+            "code": 9822
+          }
+        },
+        "parameters": [
+          {
+            "name": "Latitude of false origin",
+            "value": 0,
+            "unit": "degree",
+            "id": {
+              "authority": "EPSG",
+              "code": 8821
+            }
+          },
+          {
+            "name": "Longitude of false origin",
+            "value": 132,
+            "unit": "degree",
+            "id": {
+              "authority": "EPSG",
+              "code": 8822
+            }
+          },
+          {
+            "name": "Latitude of 1st standard parallel",
+            "value": -18,
+            "unit": "degree",
+            "id": {
+              "authority": "EPSG",
+              "code": 8823
+            }
+          },
+          {
+            "name": "Latitude of 2nd standard parallel",
+            "value": -36,
+            "unit": "degree",
+            "id": {
+              "authority": "EPSG",
+              "code": 8824
+            }
+          },
+          {
+            "name": "Easting at false origin",
+            "value": 0,
+            "unit": "metre",
+            "id": {
+              "authority": "EPSG",
+              "code": 8826
+            }
+          },
+          {
+            "name": "Northing at false origin",
+            "value": 0,
+            "unit": "metre",
+            "id": {
+              "authority": "EPSG",
+              "code": 8827
+            }
+          }
+        ]
+      },
+      "coordinate_system": {
+        "subtype": "Cartesian",
+        "axis": [
+          {
+            "name": "Easting",
+            "abbreviation": "",
+            "direction": "east",
+            "unit": "metre"
+          },
+          {
+            "name": "Northing",
+            "abbreviation": "",
+            "direction": "north",
+            "unit": "metre"
+          }
+        ]
+      }
+    },
+    "datetime": "2023-12-12T04:53:58.651543Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          109.49189045629166,
+          -42.819799634376466
+        ],
+        [
+          157.2296349016157,
+          -42.41685258398354
+        ],
+        [
+          150.6379152782991,
+          -8.195533824918815
+        ],
+        [
+          115.39287378744866,
+          -8.496991638690623
+        ],
+        [
+          109.49189045629166,
+          -42.819799634376466
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "s3://dea-public-data-dev/abares_clum_2020/abares_clum_2020.stac-item.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://doi.org/10.25814/aqjw-rq15",
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "rel": "preview",
+      "href":"abares_clum_2020.thumbnail.jpg",
+      "type": "image/jpeg"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "abares_clum_2020.thumbnail.jpg",
+      "roles": ["thumbnail"],
+      "type": "image/jpeg"
+    },
+    "class": {
+      "href": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/abares_clum_2020/clum_50m1220m.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "class",
+      "raster:bands": [
+        {
+          "data_type": "int16",
+          "scale": 1,
+          "offset": 0,
+          "sampling": "area",
+          "nodata": 0,
+          "statistics": {
+            "mean": 204.61780707841777,
+            "minimum": 3,
+            "maximum": 779,
+            "stddev": 85.32418919376595,
+            "valid_percent": 50.25809151785714
+          },
+          "histogram": {
+            "count": 11,
+            "min": 3,
+            "max": 779,
+            "buckets": [
+              31,
+              175436,
+              229246,
+              50694,
+              32793,
+              6634,
+              3314,
+              4019,
+              2169,
+              14
+            ]
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "class",
+          "description": "Australian Land Use and Management (ALUM) Classification class"
+        }
+      ],
+      "roles": ["data"]
+    }
+  },
+  "bbox": [
+    109.49189045629166,
+    -42.819799634376466,
+    157.2296349016157,
+    -8.195533824918815
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
+  ]
+}
