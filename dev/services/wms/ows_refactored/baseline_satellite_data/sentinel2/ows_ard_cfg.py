@@ -19,7 +19,7 @@ It contains two sub-products that provide corrections or attribution information
 
    * DEA Surface Reflectance NBART (Sentinel-2B MSI) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-sentinel-2b-msi/
    * DEA Surface Reflectance OA (Sentinel-2B MSI) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-sentinel-2b-msi/
-   
+
 The resolution is a 10/20/60 m grid based on the ESA Level 1C archive.
 
 Full product description: https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
