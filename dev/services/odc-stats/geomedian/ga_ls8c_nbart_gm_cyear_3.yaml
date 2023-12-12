@@ -6,8 +6,8 @@ plugin_config:
       - [dilation, 6]
     shadow:
       - [dilation, 6]
-  # transform_code: EPSG:9688
-  # area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
+  transform_code: EPSG:9688
+  area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
   name: ga_ls8c_nbart_gm_cyear_3
