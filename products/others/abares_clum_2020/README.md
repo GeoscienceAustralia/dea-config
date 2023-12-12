@@ -13,7 +13,7 @@ information provided via:
 
 ## Process
 
-1. Download `Catchment Scale Land Use of Australia – raster package (GeoTIFF and supporting files) – ZIP [126 MB]`
+1. Download [`Catchment Scale Land Use of Australia – raster package (GeoTIFF and supporting files) – ZIP [126 MB]`](https://www.agriculture.gov.au/sites/default/files/documents/geotiff_clum_50m1220m.zip)
 2. Convert to a Cloud Optimised GeoTIFF:
 
 ```
