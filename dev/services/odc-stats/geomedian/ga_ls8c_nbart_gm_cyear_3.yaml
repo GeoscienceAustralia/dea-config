@@ -2,11 +2,12 @@ plugin: gm-ls # this can help system find the relative plugin and plugin version
 plugin_config:
   cloud_filters:
     cloud:
-      - [dilation, 5]
+      - [opening, 3]
+      - [dilation, 6]
     shadow:
-      - [dilation, 10]
-  transform_code: EPSG:9688
-  area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
+      - [dilation, 6]
+  # transform_code: EPSG:9688
+  # area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
   name: ga_ls8c_nbart_gm_cyear_3
@@ -83,10 +84,10 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls8c_nbart_gm_cyear_3/3-0-0
+  s3://dea-public-data-dev/test/gm-ls8-dilation-6-cloud-opening-3-v3/3-0-0
 
 # save-tasks options
-input_products: ga_ls8c_ard_3
-frequency: annual
-grid: au-30
-qga: 1
+# input_products: ga_ls8c_ard_3
+# frequency: annual
+# grid: au-30
+# qga: 1
