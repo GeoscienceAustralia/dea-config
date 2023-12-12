@@ -15,8 +15,7 @@ WOs show the extent of water in a corresponding Landsat scene, along with the de
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.
 
-
-For more information, see https://cmi.ga.gov.au/data-products/dea/613/dea-water-observations-landsat
+For more information, see https://docs.dea.ga.gov.au/data/product/dea-water-observations-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_wo_3",
