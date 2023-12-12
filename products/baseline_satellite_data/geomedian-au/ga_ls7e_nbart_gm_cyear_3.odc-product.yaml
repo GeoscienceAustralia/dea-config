@@ -11,27 +11,27 @@ metadata:
     name: ga_ls7e_nbart_gm_cyear_3
 
 measurements:
-  - name: blue
+  - name: nbart_blue
     dtype: int16
     nodata: -999
     units: '1'
-  - name: green
+  - name: nbart_green
     dtype: int16
     nodata: -999
     units: '1'
-  - name: red
+  - name: nbart_red
     dtype: int16
     nodata: -999
     units: '1'
-  - name: nir
+  - name: nbart_nir
     dtype: int16
     nodata: -999
     units: '1'
-  - name: swir1
+  - name: nbart_swir_1
     dtype: int16
     nodata: -999
     units: '1'
-  - name: swir2
+  - name: nbart_swir_2
     dtype: int16
     nodata: -999
     units: '1'
