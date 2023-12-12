@@ -100,8 +100,6 @@ One of the limitations of using the Tasseled Cap wetness index is that it will i
 We used the Tasseled Cap transforms described in Crist et al. (1985).
 Crist, E. P. (1985). A TM Tasseled Cap equivalent transformation for reflectance factor data. Remote Sensing of Environment, 17(3), 301–306. https://doi.org/10.1016/0034-4257(85)90102-6
 
-https://cmi.ga.gov.au/data-products/dea/337/dea-wetness-percentiles-landsat
-
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_tcw_percentiles_2",
             "bands": bands_tcw_percentile,

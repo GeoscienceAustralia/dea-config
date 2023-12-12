@@ -201,7 +201,7 @@ layers = {
 
 The Tasseled Cap Indices Percentiles provide an annual summary of landscape wetness, greenness and brightness indices that can be used to identify wetlands and groundwater ecosystems.
 
-They provide annual statistical summaries (10th, 50th and 90th percentiles) of the Tasseled Cap indicies.
+They provide annual statistical summaries (10th, 50th and 90th percentiles) of the Tasseled Cap indices.
 
 They are intended for use as inputs into classification algorithms to identify potential wetlands and groundwater dependent ecosystems, and characterise salt flats, clay pans, salt lakes and coastal land forms.
 
@@ -225,8 +225,6 @@ In terms of limitations, caution should be used, especially with the Tasseled Ca
 One of the limitations of using the Tasseled Cap wetness index is that it will identify all 'wet' things, including potential wetlands, groundwater dependent ecosystems, irrigated crops/pasture, man-made water storages and sewerage treatment, and does not discriminate between these. As such it should be used in conjunction with other contextual data to ensure that features identified using the Tasseled Cap Wetness Percentiles are features of interest rather than false positives.
 We used the Tasseled Cap transforms described in Crist et al. (1985).
 Crist, E. P. (1985). A TM Tasseled Cap equivalent transformation for reflectance factor data. Remote Sensing of Environment, 17(3), 301–306. https://doi.org/10.1016/0034-4257(85)90102-6
-
-https://cmi.ga.gov.au/data-products/dea/337/dea-wetness-percentiles-landsat
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_tc_pc_cyear_3",
