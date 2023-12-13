@@ -47,12 +47,12 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 It contains three sub-products that provide corrections or attribution information:
 
-DEA Surface Reflectance NBAR (Landsat 9 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/819/dea-surface-reflectance-nbar-landsat-9-oli-tirs
-DEA Surface Reflectance NBART (Landsat 9 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/817/dea-surface-reflectance-nbart-landsat-9-oli-tirs
-DEA Surface Reflectance OA (Landsat 9 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/818/dea-surface-reflectance-oa-landsat-9-oli-tirs
+DEA Surface Reflectance NBAR (Landsat 9 OLI-TIRS) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbar-landsat-9/
+DEA Surface Reflectance NBART (Landsat 9 OLI-TIRS) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-landsat-9/
+DEA Surface Reflectance OA (Landsat 9 OLI-TIRS) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-landsat-9/
 The resolution is a 30 m grid based on the USGS Landsat Collection 2 archive.
 
-https://cmi.ga.gov.au/data-products/dea/816/dea-surface-reflectance-landsat-9
+https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9/
 
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
@@ -63,7 +63,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "bands": bands_c3_ls_8,
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -98,12 +98,12 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 It contains three sub-products that provide corrections or attribution information:
 
-DEA Surface Reflectance NBAR (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/402/dea-surface-reflectance-nbar-landsat-8-oli-tirs
-DEA Surface Reflectance NBART (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/400/dea-surface-reflectance-nbart-landsat-8-oli-tirs
-DEA Surface Reflectance OA (Landsat 8 OLI-TIRS) https://cmi.ga.gov.au/data-products/dea/404/dea-surface-reflectance-oa-landsat-8-oli-tirs
+DEA Surface Reflectance NBAR (Landsat 8 OLI-TIRS) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbar-landsat-8-oli-tirs/
+DEA Surface Reflectance NBART (Landsat 8 OLI-TIRS) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-landsat-8-oli-tirs/
+DEA Surface Reflectance OA (Landsat 8 OLI-TIRS) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-landsat-8-oli-tirs/
 The resolution is a 30 m grid based on the USGS Landsat Collection 1 and 2 archive.
 
-https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs
+https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
 
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
@@ -114,7 +114,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "bands": bands_c3_ls_8,
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -147,12 +147,12 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 It contains three sub-products that provide corrections or attribution information:
 
-DEA Surface Reflectance NBAR (Landsat 7 ETM+) https://cmi.ga.gov.au/data-products/dea/476/dea-surface-reflectance-nbar-landsat-7-etm
-DEA Surface Reflectance NBART (Landsat 7 ETM+) https://cmi.ga.gov.au/data-products/dea/399/dea-surface-reflectance-nbart-landsat-7-etm
-DEA Surface Reflectance OA (Landsat 7 ETM+) https://cmi.ga.gov.au/data-products/dea/478/dea-surface-reflectance-oa-landsat-7-etm
+DEA Surface Reflectance NBAR (Landsat 7 ETM+) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbar-landsat-7-etm/
+DEA Surface Reflectance NBART (Landsat 7 ETM+) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-landsat-7-etm/
+DEA Surface Reflectance OA (Landsat 7 ETM+) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-landsat-7-etm/
 The resolution is a 30 m grid based on the USGS Landsat Collection 1 and 2 archive.
 
-https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm
+https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
 
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
@@ -163,7 +163,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "bands": bands_c3_ls_7,
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -196,12 +196,12 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 It contains three sub-products that provide corrections or attribution information:
 
-DEA Surface Reflectance NBAR (Landsat 5 TM) https://cmi.ga.gov.au/data-products/dea/367/dea-surface-reflectance-nbar-landsat-5-tm
-DEA Surface Reflectance NBART (Landsat 5 TM) https://cmi.ga.gov.au/data-products/dea/477/dea-surface-reflectance-nbart-landsat-5-tm
-DEA Surface Reflectance OA (Landsat 5 TM) https://cmi.ga.gov.au/data-products/dea/369/dea-surface-reflectance-oa-landsat-5-tm
+DEA Surface Reflectance NBAR (Landsat 5 TM) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbar-landsat-5-tm/
+DEA Surface Reflectance NBART (Landsat 5 TM) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-landsat-5-tm/
+DEA Surface Reflectance OA (Landsat 5 TM) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-landsat-5-tm/
 The resolution is a 30 m grid based on the USGS Landsat Collection 1 archive.
 
-https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
+https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
 
 For service status information, see https://status.dea.ga.gov.au""",
             # The WMS name for the layer
@@ -212,7 +212,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "resource_limits": reslim_standard,
             "dynamic": True,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
                 "always_fetch_bands": [],
@@ -246,10 +246,10 @@ combined_layer = {
 This product takes Landsat imagery captured over the Australian continent and corrects for inconsistencies across land and coastal fringes. The result is accurate and standardised surface reflectance data, which is instrumental in identifying and quantifying environmental change.
 
 This product combines:
-Landsat 9 imagery https://cmi.ga.gov.au/data-products/dea/816/dea-surface-reflectance-landsat-9,
-Landsat 8 imagery https://cmi.ga.gov.au/data-products/dea/365/dea-surface-reflectance-landsat-8-oli-tirs,
-Landsat 7 imagery https://cmi.ga.gov.au/data-products/dea/475/dea-surface-reflectance-landsat-7-etm and
-Landsat 5 Imagery https://cmi.ga.gov.au/data-products/dea/358/dea-surface-reflectance-landsat-5-tm
+Landsat 9 imagery https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9/,
+Landsat 8 imagery https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/,
+Landsat 7 imagery https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/ and
+Landsat 5 Imagery https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
@@ -264,7 +264,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "resource_limits": reslim_standard,
     "dynamic": True,
     "native_crs": "EPSG:3577",
-    "native_resolution": [25, -25],
+    "native_resolution": [30, -30],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],

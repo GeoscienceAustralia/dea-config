@@ -81,7 +81,7 @@ ows_cfg = {
             "email": "earth.observation@ga.gov.au",
         },
         "fees": "",
-        "access_constraints": "© Commonwealth of Australia (Geoscience Australia) 2018. "
+        "access_constraints": "© Commonwealth of Australia (Geoscience Australia). "
         "This product is released under the Creative Commons Attribution 4.0 International Licence. "
         "http://creativecommons.org/licenses/by/4.0/legalcode",
     },  # END OF global SECTION

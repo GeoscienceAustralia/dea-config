@@ -24,7 +24,7 @@ Cosine (spectral) distance (SMAD)
 Bray Curtis dissimilarity (BCMAD)
 Together, they provide information on variance in the landscape over the given year and are useful for change detection applications.
 
-For more information, see https://cmi.ga.gov.au/data-products/dea/645/dea-geomad-landsat
+For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls8c_nbart_gm_cyear_3",
@@ -56,7 +56,7 @@ Cosine (spectral) distance (SMAD)
 Bray Curtis dissimilarity (BCMAD)
 Together, they provide information on variance in the landscape over the given year and are useful for change detection applications.
 
-For more information, see https://cmi.ga.gov.au/data-products/dea/645/dea-geomad-landsat
+For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls7e_nbart_gm_cyear_3",
@@ -88,7 +88,7 @@ Cosine (spectral) distance (SMAD)
 Bray Curtis dissimilarity (BCMAD)
 Together, they provide information on variance in the landscape over the given year and are useful for change detection applications.
 
-For more information, see https://cmi.ga.gov.au/data-products/dea/645/dea-geomad-landsat
+For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls5t_nbart_gm_cyear_3",

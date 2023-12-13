@@ -7,7 +7,6 @@ Collaborative research, undertaken by Geoscience Australia, the Commonwealth Sci
 
 For parent datafile information, see the dataset record: http://pid.geoscience.gov.au/dataset/ga/74347
 
-
 False colour RGB composite
 
 - Red: B3
