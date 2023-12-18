@@ -25,7 +25,7 @@ This product combines:
    * Landsat-5 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
    * Landsat-7 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
    * Landsat-8 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
-   * Landsat-9 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9/
+   * Landsat-9 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9-oli-tirs/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
@@ -71,7 +71,7 @@ This product combines:
    * Landsat-5 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
    * Landsat-7 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
    * Landsat-8 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
-   * Landsat-9 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9/
+   * Landsat-9 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9-oli-tirs/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
