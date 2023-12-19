@@ -797,7 +797,7 @@
                                 {
                                     "type": "geojson",
                                     "name": "DEA Wetlands Insight Tool (Ramsar Wetlands) v4.0.0",
-                                    "shortReport": "<i>Click on a polygon to view the Wetlands Insight Tool plot </i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://cmi.ga.gov.au/data-products/dea/669/dea-wetlands-insight-tool-ramsar-wetlands'>DEA Wetlands Insight Tool (Ramsar Wetlands) product description</a></small>",
+                                    "shortReport": "<i>Click on a polygon to view the Wetlands Insight Tool plot </i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://docs.dea.ga.gov.au/data/product/dea-wetlands-insight-tool-ramsar-wetlands/'>DEA Wetlands Insight Tool (Ramsar Wetlands) product description</a></small>",
                                     "url": "https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_wit_ramsar_class_myear_3/1-0-0/1986--P35Y/ramsar_wetlands_WGS84_20190403_exploded_internal.geojson",
                                     "description": "The Wetlands Insight Tool (Ramsar Wetlands) summarises how the amount of water, green vegetation, dry vegetation and bare soil varies over time within each wetland boundary. It provides the user with the ability to compare how the wetland is behaving now with how it has behaved in the past.  This allows users to identify how changes in water availability have affected the wetland. It achieves this by presenting a combined view of Water Observations from Space (DEA Water Observations), Tasseled Cap Wetness (DEA Wetness Percentiles) and Fractional Cover (DEA Fractional Cover) measurements from the Landsat series of satellites, summarised as a stacked line plot to show how that wetland has changed over time.",
                                     "info": [
@@ -811,7 +811,7 @@
                                         },
                                         {
                                             "name": "Full Product Description",
-                                            "content": "Please visit the <a style=\"color:lightseagreen\" href='https://cmi.ga.gov.au/data-products/dea/669/dea-wetlands-insight-tool-ramsar-wetlands#basics'>DEA Wetlands Insight Tool (Ramsar Wetlands) Product Description</a></small> "
+                                            "content": "Please visit the <a style=\"color:lightseagreen\" href='https://docs.dea.ga.gov.au/data/product/dea-wetlands-insight-tool-ramsar-wetlands/'>DEA Wetlands Insight Tool (Ramsar Wetlands) Product Description</a></small> "
                                         },
                                         {
                                             "name": "Licence",
@@ -880,7 +880,7 @@
                                     "type": "wms",
                                     "name": "DEA Coastlines",
                                     "id": "dea_coastlines_dev",
-                                    "shortReport": "<i>Zoom in to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/581/dea-coastlines'>DEA Coastlines product description</a></small>",
+                                    "shortReport": "<i>Zoom in to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                     "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                     "opacity": 1,
                                     "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
@@ -894,7 +894,7 @@
                                         "insufficient data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline may be affected by <b>limited good quality satellite observations</b> at this location. This can lead to noisier and less reliable shorelines.</i></blockquote>",
                                         "unstable data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline is affected by <b>unstable data</b> at this location. This may be caused by errors in the tidal model used to reduce the influence of tide, the presence of gently sloping intertidal mudflats or sandbars that can lead to inaccurate shoreline mapping, or noisy satellite imagery caused by high levels of cloud.</i></blockquote>",
                                         "insufficient observations": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>There are <b>insufficient years of good quality annual shoreline data (< 25 years)</b> to calculate reliable rates of coastal change at this location.</i></blockquote>",
-                                        "likely rocky shoreline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
+                                        "likely rocky coastline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
                                         "extreme value (> 50 m)": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This location has been identified as having an <b>extreme rate of coastal change (> 50 metres per year)</b> and should be interpreted with caution.</blockquote>",
                                         "high angular variability": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This rate of coastal change is unlikely to be accurate due to high levels of <b>angular variability</b> from this point to each annual shoreline. This can occur in complex coastal environments like river mouths, sandbars and mudflats that do not show linear patterns of coastal change over time.</i></blockquote>",
                                         "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>",
@@ -915,7 +915,7 @@
                                             "type": "wms",
                                             "name": "DEA Coastlines annual shorelines",
                                             "id": "dea_coastlines_annual_dev",
-                                            "shortReport": "<i>Zoom in to view individual annual shorelines from 1988 to the present</i></br></br><small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/581/dea-coastlines'>DEA Coastlines product description</a></small>",
+                                            "shortReport": "<i>Zoom in to view individual annual shorelines from 1988 to the present</i></br></br><small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                             "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                             "opacity": 1,
                                             "layers": "dea:AnnualShorelines",
@@ -933,7 +933,7 @@
                                             "type": "wms",
                                             "name": "DEA Coastlines rates of change statistics",
                                             "id": "dea_coastlines_statistics_dev",
-                                            "shortReport": "<i>Zoom in to view detailed rates of coastal change along the Australian coastline</i></br></br><small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/581/dea-coastlines'>DEA Coastlines product description</a></small>",
+                                            "shortReport": "<i>Zoom in to view detailed rates of coastal change along the Australian coastline</i></br></br><small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                             "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                             "opacity": 1,
                                             "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
@@ -943,7 +943,7 @@
                                               "partials": {
                                                 "good": "",
                                                 "insufficient observations": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>There are <b>insufficient years of good quality annual shoreline data (< 25 years)</b> to calculate reliable rates of coastal change at this location.</i></blockquote>",
-                                                "likely rocky shoreline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
+                                                "likely rocky coastline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
                                                 "extreme value (> 50 m)": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This location has been identified as having an <b>extreme rate of coastal change (> 50 metres per year)</b> and should be interpreted with caution.</blockquote>",
                                                 "high angular variability": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This rate of coastal change is unlikely to be accurate due to high levels of <b>angular variability</b> from this point to each annual shoreline. This can occur in complex coastal environments like river mouths, sandbars and mudflats that do not show linear patterns of coastal change over time.</i></blockquote>",
                                                 "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>",
@@ -989,9 +989,9 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
+                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal Elevation product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
+                                        "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
                                     "id": "basdi2"
                                 },
@@ -2751,7 +2751,7 @@
                                 {
                                 "type": "geojson",
                                 "name": "DEA Wetlands Insight Tool (Ramsar Wetlands) v4.0.0",
-                                "shortReport": "<i>Click on a polygon to view the Wetlands Insight Tool plot </i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://cmi.ga.gov.au/data-products/dea/669/dea-wetlands-insight-tool-ramsar-wetlands'>DEA Wetlands Insight Tool (Ramsar Wetlands) product description</a></small>",
+                                "shortReport": "<i>Click on a polygon to view the Wetlands Insight Tool plot </i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://docs.dea.ga.gov.au/data/product/dea-wetlands-insight-tool-ramsar-wetlands/'>DEA Wetlands Insight Tool (Ramsar Wetlands) product description</a></small>",
                                  "url": "https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_wit_ramsar_class_myear_3/1-0-0/1986--P35Y/ramsar_wetlands_WGS84_20190403_exploded_internal.geojson",
                                  "description":"The Wetlands Insight Tool (Ramsar Wetlands) summarises how the amount of water, green vegetation, dry vegetation and bare soil varies over time within each wetland boundary. It provides the user with the ability to compare how the wetland is behaving now with how it has behaved in the past.  This allows users to identify how changes in water availability have affected the wetland. It achieves this by presenting a combined view of Water Observations from Space (DEA Water Observations), Tasseled Cap Wetness (DEA Wetness Percentiles) and Fractional Cover (DEA Fractional Cover) measurements from the Landsat series of satellites, summarised as a stacked line plot to show how that wetland has changed over time.",
                                  "info": [
@@ -2765,7 +2765,7 @@
                                    },
                                    {
                                     "name":"Full Product Description",
-                                    "content":"Please visit the <a style=\"color:lightseagreen\" href='https://cmi.ga.gov.au/data-products/dea/669/dea-wetlands-insight-tool-ramsar-wetlands#basics'>DEA Wetlands Insight Tool (Ramsar Wetlands) Product Description</a></small> "
+                                    "content":"Please visit the <a style=\"color:lightseagreen\" href='https://docs.dea.ga.gov.au/data/product/dea-wetlands-insight-tool-ramsar-wetlands/'>DEA Wetlands Insight Tool (Ramsar Wetlands) Product Description</a></small> "
                                    },
                                    {
                                     "name":"Licence",
@@ -2843,7 +2843,7 @@
                                     "type": "wms",
                                     "name": "DEA Coastlines",
                                     "id": "dea_coastlines",
-                                    "shortReport": "<i>Zoom in to view detailed rates of coastal change and individual annual coastlines</i></br></br><small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/581/dea-coastlines'>DEA Coastlines product description</a></small>",
+                                    "shortReport": "<i>Zoom in to view detailed rates of coastal change and individual annual coastlines</i></br></br><small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                     "url": "https://geoserver.dea.ga.gov.au/geoserver/wms",
                                     "opacity": 1,
                                     "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
@@ -2881,7 +2881,7 @@
                                             "type": "wms",
                                             "name": "Annual coastlines",
                                             "id": "dea_coastlines_annual",
-                                            "shortReport": "<i>Zoom in to view individual annual coastlines from 1988 to the present</i></br></br><small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/581/dea-coastlines'>DEA Coastlines product description</a></small>",
+                                            "shortReport": "<i>Zoom in to view individual annual coastlines from 1988 to the present</i></br></br><small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                             "url": "https://geoserver.dea.ga.gov.au/geoserver/wms",
                                             "opacity": 1,
                                             "layers": "dea:AnnualShorelines",
@@ -2899,7 +2899,7 @@
                                             "type": "wms",
                                             "name": "Rates of change statistics",
                                             "id": "dea_coastlines_statistics",
-                                            "shortReport": "<i>Zoom in to view detailed rates of coastal change along the Australian coastline</i></br></br><small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/581/dea-coastlines'>DEA Coastlines product description</a></small>",
+                                            "shortReport": "<i>Zoom in to view detailed rates of coastal change along the Australian coastline</i></br></br><small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                             "url": "https://geoserver.dea.ga.gov.au/geoserver/wms",
                                             "opacity": 1,
                                             "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
@@ -2946,9 +2946,9 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description</a></small>",
+                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal Elevation product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://cmi.ga.gov.au/data-products/dea/325/dea-intertidal-elevation-landsat'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
+                                        "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
                                     "id": "bWICtK",
                                     "shareKeys": [
