@@ -729,6 +729,7 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA Waterbodies (version 3.0)",
+                                    "shortReport": "<i>Click to highlight a hatched Waterbody polygon. View the DEA Waterbodies timeseries of the percentage of the waterbody surface area observed as wet and the estimated latest open water surface area.</i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://docs.dea.ga.gov.au/data/product/dea-waterbodies-landsat/'>DEA Waterbodies product description</a></small>",
                                     "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                     "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br>For more detailed information see <a href='https://www.dea.ga.gov.au/products/dea-waterbodies'>https://www.dea.ga.gov.au/products/dea-waterbodies</a>",
                                     "layers": "dea:DigitalEarthAustraliaWaterbodies_v3",
