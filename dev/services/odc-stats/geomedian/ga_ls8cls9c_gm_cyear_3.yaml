@@ -10,9 +10,9 @@ plugin_config:
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
-  name: ga_ls8c_nbart_gm_cyear_3
-  short_name: ga_ls8c_nbart_gm_cyear_3
-  version: 3.0.0
+  name: ga_ls8c_ls9c_gm_cyear_3
+  short_name: ga_ls8c_ls9c_gm_cyear_3
+  version: 4.0.0
   product_family: geomedian
 
   # -- EO Dataset3 relative section --
@@ -78,17 +78,10 @@ max_processing_time: 2400
 job_queue_max_lease: 300
 renew_safety_margin: 60
 future_poll_interval: 2
-# s3_acl: bucket-owner-full-control
 s3_acl: public-read
 # Generic product attributes
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/test/gm-ls8-dilation-6-cloud-opening-3-v3-prod/3-0-0
-
-# save-tasks options
-# input_products: ga_ls8c_ard_3
-# frequency: annual
-# grid: au-30
-# qga: 1
+  s3://dea-public-data-dev/derivative/ga_ls8cls9c_gm_cyear_3/4-0-0

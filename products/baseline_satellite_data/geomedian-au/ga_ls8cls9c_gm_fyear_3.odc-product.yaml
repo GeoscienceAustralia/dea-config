@@ -1,5 +1,5 @@
-name: ga_ls7e_nbart_gm_fyear_3
-description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain, Landsat 7 Geomedian Financial Year Collection 3
+name: ga_ls8cls9c_gm_fyear_3
+description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain, Landsat 8 and 9 Geomedian Financial Year Collection 3
 license: CC-BY-4.0
 metadata_type: eo3
 
@@ -8,44 +8,30 @@ metadata:
     odc:file_format: GeoTIFF
     odc:product_family: geomedian
   product:
-    name: ga_ls7e_nbart_gm_fyear_3
+    name: ga_ls8cls9c_fm_cyear_3
 
 measurements:
   - name: nbart_blue
-    aliases:
-      - blue
     dtype: int16
     nodata: -999
     units: '1'
   - name: nbart_green
-    aliases:
-      - green
     dtype: int16
     nodata: -999
     units: '1'
   - name: nbart_red
-    aliases:
-      - red
     dtype: int16
     nodata: -999
     units: '1'
   - name: nbart_nir
-    aliases:
-      - nir
     dtype: int16
     nodata: -999
     units: '1'
   - name: nbart_swir_1
-    aliases:
-      - swir_1
-      - swir1
     dtype: int16
     nodata: -999
     units: '1'
   - name: nbart_swir_2
-    aliases:
-      - swir_2
-      - swir2
     dtype: int16
     nodata: -999
     units: '1'
