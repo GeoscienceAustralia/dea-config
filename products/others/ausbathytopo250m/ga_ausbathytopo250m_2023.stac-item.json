@@ -123,7 +123,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "s3://dea-public-data-dev/ga_ausbathytopo250m_2023/ga_ausbathytopo250m_2023.stac-item.json",
+      "href": "s3://dea-public-data/projects/ga_ausbathytopo250m_2023/ga_ausbathytopo250m_2023.stac-item.json",
       "type": "application/json"
     },
     {
