@@ -10,8 +10,8 @@ plugin_config:
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
-  name: ga_ls8c_ls9c_gm_cyear_3
-  short_name: ga_ls8c_ls9c_gm_cyear_3
+  name: ga_ls8cls9c_gm_cyear_3
+  short_name: ga_ls8cls9c_gm_cyear_3
   version: 4.0.0
   product_family: geomedian
 
