@@ -229,10 +229,10 @@
       "roles": ["thumbnail"],
       "type": "image/jpeg"
     },
-    "class": {
+    "alum_class": {
       "href": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/abares_clum_2020/clum_50m1220m.tiff",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "title": "class",
+      "title": "alum_class",
       "raster:bands": [
         {
           "data_type": "int16",
@@ -268,7 +268,7 @@
       ],
       "eo:bands": [
         {
-          "name": "class",
+          "name": "alum_class",
           "description": "Australian Land Use and Management (ALUM) Classification class"
         }
       ],
