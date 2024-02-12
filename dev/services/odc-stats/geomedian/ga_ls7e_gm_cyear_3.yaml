@@ -87,7 +87,7 @@ output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls7e_gm_cyear_3/4-0-0
 
 # save-tasks options
-# input_products: ga_ls7e_ard_3
-# frequency: annual
-# grid: au-30
-# qga: 1
+input_products: ga_ls7e_ard_3
+frequency: annual
+grid: au_extended_30
+gqa: 1
