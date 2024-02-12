@@ -1,0 +1,204 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "Australian_Bathymetry_and_Topography_2023_250m_MSL_cog.tif",
+  "properties": {
+    "odc:product": "ga_ausbathytopo250m_2023",
+    "start_datetime": "2023-01-01T00:00:00Z",
+    "end_datetime": "2023-12-31T23:59:59.999999Z",
+    "created": "2023-08-30T00:00:00Z",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            92.00013888887796,
+            -59.999860839874
+          ],
+          [
+            172.0001388888053,
+            -59.999860839874
+          ],
+          [
+            172.0001388888053,
+            -7.999860839921219
+          ],
+          [
+            92.00013888887796,
+            -7.999860839921219
+          ],
+          [
+            92.00013888887796,
+            -59.999860839874
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      92.00013888887796,
+      -59.999860839874,
+      172.0001388888053,
+      -7.999860839921219
+    ],
+    "proj:shape": [
+      20800,
+      32000
+    ],
+    "proj:transform": [
+      0.0024999999999977297,
+      0,
+      92.00013888887796,
+      0,
+      -0.00249999999999773,
+      -7.999860839921219,
+      0,
+      0,
+      1
+    ],
+    "proj:projjson": {
+      "$schema": "https://proj.org/schemas/v0.4/projjson.schema.json",
+      "type": "GeographicCRS",
+      "name": "WGS 84",
+      "datum": {
+        "type": "GeodeticReferenceFrame",
+        "name": "World Geodetic System 1984",
+        "ellipsoid": {
+          "name": "WGS 84",
+          "semi_major_axis": 6378137,
+          "inverse_flattening": 298.257223563
+        }
+      },
+      "coordinate_system": {
+        "subtype": "ellipsoidal",
+        "axis": [
+          {
+            "name": "Geodetic latitude",
+            "abbreviation": "Lat",
+            "direction": "north",
+            "unit": "degree"
+          },
+          {
+            "name": "Geodetic longitude",
+            "abbreviation": "Lon",
+            "direction": "east",
+            "unit": "degree"
+          }
+        ]
+      },
+      "id": {
+        "authority": "EPSG",
+        "code": 4326
+      }
+    },
+    "datetime": "2023-11-28T00:48:52.678570Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          92.00013888887796,
+          -59.999860839874
+        ],
+        [
+          172.0001388888053,
+          -59.999860839874
+        ],
+        [
+          172.0001388888053,
+          -7.999860839921219
+        ],
+        [
+          92.00013888887796,
+          -7.999860839921219
+        ],
+        [
+          92.00013888887796,
+          -59.999860839874
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "s3://dea-public-data/projects/ga_ausbathytopo250m_2023/ga_ausbathytopo250m_2023.stac-item.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://doi.org/10.26186/148758",
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "rel": "preview",
+      "href":"ga_ausbathytopo250m_2023.thumbnail.jpg",
+      "type": "image/jpeg"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "ga_ausbathytopo250m_2023.thumbnail.jpg",
+      "roles": ["thumbnail"],
+      "type": "image/jpeg"
+    },
+    "height_depth": {
+      "href": "https://s3.ap-southeast-2.amazonaws.com/ausseabed-public-warehouse-bathymetry/L3/6009f454-290d-4c9a-a43d-00b254681696/Australian_Bathymetry_and_Topography_2023_250m_MSL_cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "height_depth",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1,
+          "offset": 0,
+          "sampling": "point",
+          "nodata": -32767,
+          "unit": "metre",
+          "statistics": {
+            "mean": -2825.7195945945946,
+            "minimum": -8281.115234375,
+            "maximum": 3355.60546875,
+            "stddev": 2013.2851065276611,
+            "valid_percent": 100
+          },
+          "histogram": {
+            "count": 11,
+            "min": -8281.115234375,
+            "max": 3355.60546875,
+            "buckets": [
+              47,
+              3132,
+              100077,
+              216369,
+              119643,
+              49183,
+              37653,
+              154652,
+              1174,
+              54
+            ]
+          }
+        }
+      ],
+      "eo:bands": [
+        {
+          "name": "height_depth",
+          "description": "Height/depth relative to Mean Sea Level"
+        }
+      ],
+      "roles": ["data"]
+    }
+  },
+  "bbox": [
+    92.00013888887796,
+    -59.999860839874,
+    172.0001388888053,
+    -7.999860839921219
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
+  ]
+}
