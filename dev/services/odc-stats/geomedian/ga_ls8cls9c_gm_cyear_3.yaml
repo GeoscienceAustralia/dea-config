@@ -85,3 +85,9 @@ cog_opts:
 apply_eodatasets3: True
 output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls8cls9c_gm_cyear_3/4-0-0
+
+# save-tasks options
+input_products: ga_ls8c_ard_3-ga_ls9c_ard_3
+frequency: annual
+grid: au_extended_30
+gqa: 1
