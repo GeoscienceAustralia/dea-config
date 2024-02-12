@@ -1,0 +1,22 @@
+name: abares_clum_2020
+license: CC-BY-4.0
+metadata_type: eo3
+description: ABARES Catchment Scale Land Use of Australia - Update December 2020
+metadata:
+  product:
+    name: abares_clum_2020
+  properties:
+    odc:file_format: GeoTIFF
+measurements:
+- name: alum_class
+  dtype: int16
+  nodata: 0
+  units: '1'
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -50
+    x: 50
+  align:
+    y: 0
+    x: 0
