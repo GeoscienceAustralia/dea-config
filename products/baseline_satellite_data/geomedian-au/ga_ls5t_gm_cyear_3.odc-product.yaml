@@ -8,7 +8,7 @@ metadata:
     odc:file_format: GeoTIFF
     odc:product_family: geomedian
   product:
-    name: ga_ls5tgm_cyear_3
+    name: ga_ls5t_gm_cyear_3
 
 measurements:
   - name: nbart_blue
