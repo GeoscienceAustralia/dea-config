@@ -26,7 +26,7 @@ jobs:
             **Terria Cube preview:**
             https://terria-cube.terria.io/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/${{ github.head_ref }}/dev/terria/terria-cube-v8.json
             
-            <img align="left" width="128" height="48" src="https://raw.githubusercontent.com/GeoscienceAustralia/dea-docs/master/_static/DEA-Logo-Inline.png" alt="DEA Maps">
+            <img align="left" width="128" height="48" src="https://docs.dea.ga.gov.au/_images/dea-logo-inline.svg" alt="DEA Maps">
             
             **DEA Maps preview:**
             https://maps.dea.ga.gov.au/#clean&https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/${{ github.head_ref }}/prod/terria/dea-maps-v8.json
