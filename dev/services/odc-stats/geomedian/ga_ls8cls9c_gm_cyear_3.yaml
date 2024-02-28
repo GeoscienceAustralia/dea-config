@@ -1,17 +1,18 @@
-plugin: gm-ls
+plugin: gm-ls # this can help system find the relative plugin and plugin version
 plugin_config:
   cloud_filters:
     cloud:
-      - [dilation, 5]
+      - [opening, 3]
+      - [dilation, 6]
     shadow:
-      - [dilation, 10]
+      - [dilation, 6]
   transform_code: EPSG:9688
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
-  name: ga_ls7e_nbart_gm_cyear_3
-  short_name: ga_ls7e_nbart_gm_cyear_3
-  version: 3.0.0
+  name: ga_ls8cls9c_gm_cyear_3
+  short_name: ga_ls8cls9c_gm_cyear_3
+  version: 4.0.0
   product_family: geomedian
 
   # -- EO Dataset3 relative section --
@@ -83,10 +84,10 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls7e_nbart_gm_cyear_3/3-0-0
+  s3://dea-public-data-dev/derivative/ga_ls8cls9c_gm_cyear_3/4-0-0
 
 # save-tasks options
-input_products: ga_ls7e_ard_3
+input_products: ga_ls8c_ard_3-ga_ls9c_ard_3
 frequency: annual
-grid: au-30
-qga: 1
+grid: au_extended_30
+gqa: 1
