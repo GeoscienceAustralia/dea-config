@@ -30,7 +30,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
-    "time_resolution": "month",
+    "time_resolution": "summary",
     "flags": [
         {
             "band": "land",
