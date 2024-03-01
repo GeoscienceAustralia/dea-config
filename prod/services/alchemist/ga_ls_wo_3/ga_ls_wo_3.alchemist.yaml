@@ -1,8 +1,8 @@
 specification:
   products:
-    - ga_ls5t_ard_3
-    - ga_ls7e_ard_3
-    - ga_ls8c_ard_3
+    # - ga_ls5t_ard_3
+    # - ga_ls7e_ard_3
+    # - ga_ls8c_ard_3
     - ga_ls9c_ard_3
   measurements: ['nbart_blue', 'nbart_green', 'nbart_red', 'nbart_nir', 'nbart_swir_1', 'nbart_swir_2', 'oa_fmask']
   measurement_renames:
@@ -18,7 +18,7 @@ specification:
     dsm_path:  's3://dea-non-public-data/dsm/dsm1sv1_0_Clean.tiff'
 
 output:
-  location: s3://dea-public-data/derivative/
+  location: s3://dea-public-data-dev/derivative/
   nodata: 1
   dtype: uint8
   explorer_url: https://explorer.dea.ga.gov.au
