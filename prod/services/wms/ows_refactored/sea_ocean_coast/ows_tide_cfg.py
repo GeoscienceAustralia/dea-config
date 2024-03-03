@@ -56,7 +56,7 @@ https://docs.dea.ga.gov.au/data/product/dea-high-and-low-tide-imagery-landsat/
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "high_tide_comp_20p",
             "bands": bands_ls,
-            "time_resolution": "year",
+            "time_resolution": "summary",
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
             "native_resolution": [25, -25],
@@ -100,7 +100,7 @@ https://docs.dea.ga.gov.au/data/product/dea-high-and-low-tide-imagery-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "low_tide_comp_20p",
-            "time_resolution": "year",
+            "time_resolution": "summary",
             "bands": bands_ls,
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",

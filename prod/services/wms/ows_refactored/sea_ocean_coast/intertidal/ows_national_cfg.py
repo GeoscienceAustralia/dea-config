@@ -113,7 +113,7 @@ While image compositing and masking methods have been applied to remove the majo
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "nidem",
     "bands": bands_nidem,
-    "time_resolution": "year",
+    "time_resolution": "summary",
     "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],

@@ -44,7 +44,7 @@ IEEE Transactions on Geoscience and Remote Sensing 55 (11), 6254-6264
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "s2_barest_earth",
     "bands": bands_s2_barest_earth,
-    # "time_resolution": 'year',
+    "time_resolution": 'summary',
     "resource_limits": reslim_for_sentinel2,
     "native_crs": "EPSG:3577",
     "native_resolution": [10, -10],
