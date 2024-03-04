@@ -1,12 +1,28 @@
-from ows_refactored.sea_ocean_coast.intertidal_c3.landsat_annual.style_intertidal_cfg import style_intertidal_elevation
+from ows_refactored.sea_ocean_coast.intertidal_c3.landsat_annual.style_intertidal_cfg import (
+    styles_intertidal_list,
+)
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
-bands_intertidal = {"elevation": []}
+bands_intertidal = {
+    "elevation": [],
+    "elevation_uncertainty": [],
+    "exposure": [],
+    "extents": [],
+    "ta_hat": [],
+    "ta_hot": [],
+    "ta_lat": [],
+    "ta_lot": [],
+    "ta_offset_high": [],
+    "ta_offset_low": [],
+    "ta_spread": [],
+}
 
-layer = {
+abstract_intertidal = """Geoscience Australia Sentinel-2 Landsat Intertidal Calendar Year Collection 3"""
+
+dea_intertidal_layer = {
     "title": "DEA Intertidal (Sentinel-2, Landsat)",
     "name": "ga_s2ls_intertidal_cyear_3",
-    "abstract": """Testing""",
+    "abstract": abstract_intertidal,
     "product_name": "ga_s2ls_intertidal_cyear_3",
     "bands": bands_intertidal,
     "time_resolution": "summary",
@@ -20,8 +36,6 @@ layer = {
     },
     "styling": {
         "default_style": "style_intertidal_elevation",
-        "styles": [
-            style_intertidal_elevation,
-        ],
+        "styles": styles_intertidal_list,
     },
 }
