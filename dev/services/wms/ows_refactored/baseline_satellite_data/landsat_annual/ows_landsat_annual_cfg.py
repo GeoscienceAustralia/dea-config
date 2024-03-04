@@ -1,6 +1,6 @@
-from ows_refactored.baseline_satellite_data.landsat_annual.band_c3_ls_cfg import \
+from ows_refactored.baseline_satellite_data.landsat_annual.band_c3_ls_nbart_cfg import \
     bands_c3_ls
-from ows_refactored.baseline_satellite_data.landsat_annual.style_c3_ls_cfg import \
+from ows_refactored.baseline_satellite_data.landsat_annual.style_c3_ls_nbart_cfg import \
     styles_c3_ls_list
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
