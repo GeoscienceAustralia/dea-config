@@ -26,7 +26,7 @@ Together, they provide information on variance in the landscape over the given y
 
 v4.0.0 Changelog:
 Cloud masks have been cleaned using a 3-pixel morphological opening on clouds and a 6-pixel dilation on cloud and shadows.
-The south-west origin point of the DEA Summary Product Grid has been shifted 20 tiles west and 17 tiles south in this version (v4.0.0).
+The south-west origin point of the DEA Summary Product Grid has been shifted 20 tiles west and 17 tiles south in this version.
 A single combined product for Landsat 8 and 9 is provided. A standalone Landsat 8 product will no longer be provided from calendar year 2022 and onwards.
 Band measurement names were updated for consistency with DEA's ARD products by adding the 'nbart' prefix.
 
@@ -65,7 +65,7 @@ Together, they provide information on variance in the landscape over the given y
 
 v4.0.0 Changelog:
 Cloud masks have been cleaned using a 3-pixel morphological opening on clouds and a 6-pixel dilation on cloud and shadows.
-The south-west origin point of the DEA Summary Product Grid has been shifted 20 tiles west and 17 tiles south in this version (v4.0.0).
+The south-west origin point of the DEA Summary Product Grid has been shifted 20 tiles west and 17 tiles south in this version.
 A single combined product for Landsat 8 and 9 is provided. A standalone Landsat 8 product will no longer be provided from calendar year 2022 and o$
 Band measurement names were updated for consistency with DEA's ARD products by adding the 'nbart' prefix.
 
@@ -103,7 +103,7 @@ Together, they provide information on variance in the landscape over the given y
 
 v4.0.0 Changelog:
 Cloud masks have been cleaned using a 3-pixel morphological opening on clouds and a 6-pixel dilation on cloud and shadows.
-The south-west origin point of the DEA Summary Product Grid has been shifted 20 tiles west and 17 tiles south in this version (v4.0.0).
+The south-west origin point of the DEA Summary Product Grid has been shifted 20 tiles west and 17 tiles south in this version.
 A single combined product for Landsat 8 and 9 is provided. A standalone Landsat 8 product will no longer be provided from calendar year 2022 and o$
 Band measurement names were updated for consistency with DEA's ARD products by adding the 'nbart' prefix.
 
