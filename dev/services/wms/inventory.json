@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 71,
+    "total_layers_count": 74,
     "layers": [
         {
             "layer": "s2_ls_combined",
@@ -151,6 +151,84 @@
                 "fmask",
                 "s2cloudless_mask",
                 "s2cloudless_prob"
+            ]
+        },
+        {
+            "layer": "ga_ls8cls9c_gm_cyear_3",
+            "product": [
+                "ga_ls8cls9c_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
+            ]
+        },
+        {
+            "layer": "ga_ls7e_gm_cyear_3",
+            "product": [
+                "ga_ls7e_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
+            ]
+        },
+        {
+            "layer": "ga_ls5t_gm_cyear_3",
+            "product": [
+                "ga_ls5t_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
             ]
         },
         {
@@ -625,9 +703,12 @@
             "product": [
                 "ga_s2ls_intertidal_cyear_3"
             ],
-            "styles_count": 1,
+            "styles_count": 4,
             "styles_list": [
-                "intertidal_elevation"
+                "intertidal_elevation",
+                "intertidal_elevation_macro",
+                "intertidal_elevation_uncertainty",
+                "intertidal_exposure",                
             ]
         },
         {
