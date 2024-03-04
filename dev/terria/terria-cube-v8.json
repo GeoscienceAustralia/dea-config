@@ -108,6 +108,90 @@
                             "members": [
                                 {
                                     "type": "wms",
+                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS) v4",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls8cls9c_gm_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls8cls9c_gm_cyear_3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td$
+                                        "formats": {
+                                            "lat": {
+                                                "maximumFractionDigits": 5
+                                            },
+                                            "lon": {
+                                                "maximumFractionDigits": 5
+                                            }
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "hTd67a"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA GeoMAD (Landsat 7 ETM+) v4",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls7e_gm_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls7e_gm_cyear_3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td$
+                                        "formats": {
+                                            "lat": {
+                                                "maximumFractionDigits": 5
+                                            },
+                                            "lon": {
+                                                "maximumFractionDigits": 5
+                                            }
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "aFG456"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA GeoMAD (Landsat 5 TM) v4",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls5t_gm_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls5t_gm_cyear_3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td$
+                                        "formats": {
+                                            "lat": {
+                                                "maximumFractionDigits": 5
+                                            },
+                                            "lon": {
+                                                "maximumFractionDigits": 5
+                                            }
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "ATY879"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "DEA GeoMAD (Landsat 8 OLI-TIRS)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
