@@ -108,7 +108,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS) v4",
+                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS, version 4)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls8cls9c_gm_cyear_3",
