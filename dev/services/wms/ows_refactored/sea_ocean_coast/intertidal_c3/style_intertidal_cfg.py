@@ -1,0 +1,1 @@
+from ows_refactored.ows_legend_cfg import legend_idx_0_1_5ticks

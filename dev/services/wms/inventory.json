@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 70,
+    "total_layers_count": 71,
     "layers": [
         {
             "layer": "s2_ls_combined",
@@ -618,6 +618,16 @@
                 "annual_wofs_frequency_blues_transparent_3",
                 "annual_wofs_wet_3",
                 "annual_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_s2ls_intertidal_cyear_3",
+            "product": [
+                "ga_s2ls_intertidal_cyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "intertidal_elevation"
             ]
         },
         {
