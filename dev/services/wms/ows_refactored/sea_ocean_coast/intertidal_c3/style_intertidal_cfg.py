@@ -1,6 +1,5 @@
 from ows_refactored.ows_legend_cfg import legend_idx_percentage_by_20
 
-
 style_intertidal_elevation = {
     "name": "intertidal_elevation",
     "title": "Elevation",

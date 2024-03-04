@@ -1,7 +1,7 @@
+from ows_refactored.ows_reslim_cfg import reslim_standard
 from ows_refactored.sea_ocean_coast.intertidal_c3.landsat_annual.style_intertidal_cfg import (
     styles_intertidal_list,
 )
-from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_intertidal = {
     "elevation": [],
