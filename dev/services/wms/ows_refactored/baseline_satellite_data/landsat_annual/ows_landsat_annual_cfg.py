@@ -11,7 +11,7 @@ layers = {
         {
             "title": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS)",
             "name": "ga_ls8cls9c_gm_cyear_3",
-            "abstract": """DEA Geometric Median and Median Absolute Deviation (Landsat 8 & 9 OLI-TIRS)
+            "abstract": """Geoscience Australia Landsat 8 and 9 Geometric Median and Median Absolute Deviation Collection 3
 
 This product provides statistical tools to exploit the time series of Earth Observation data available in Digital Earth Australia, providing annual images of general conditions and how much an area changes for a given year.
 
@@ -50,7 +50,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "DEA GeoMAD (Landsat 7 ETM+)",
             "name": "ga_ls7e_gm_cyear_3",
-            "abstract": """DEA Geometric Median and Median Absolute Deviation (Landsat 7 ETM+)
+            "abstract": """Geoscience Australia Landsat 7 Geometric Median and Median Absolute Deviation Collection 3
 
 This product provides statistical tools to exploit the time series of Earth Observation data available in Digital Earth Australia, providing annual images of general conditions and how much an area changes for a given year.
 
@@ -88,7 +88,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         {
             "title": "DEA GeoMAD (Landsat 5 TM)",
             "name": "ga_ls5t_gm_cyear_3",
-            "abstract": """DEA Geometric Median and Median Absolute Deviation (Landsat 5 TM)
+            "abstract": """Geoscience Australia Landsat 5 Geometric Median and Median Absolute Deviation Collection 3
 
 This product provides statistical tools to exploit the time series of Earth Observation data available in Digital Earth Australia, providing annual images of general conditions and how much an area changes for a given year.
 
