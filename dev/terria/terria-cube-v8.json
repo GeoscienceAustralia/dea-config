@@ -136,7 +136,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 7 ETM+) v4",
+                                    "name": "DEA GeoMAD (Landsat 7 ETM+, version 4)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_gm_cyear_3",
