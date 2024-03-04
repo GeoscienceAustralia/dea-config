@@ -1,7 +1,4 @@
-from ows_refactored.ows_legend_cfg import (
-    legend_idx_0_1_5ticks,
-    legend_idx_percentage_by_20,
-)
+from ows_refactored.ows_legend_cfg import legend_idx_percentage_by_20
 
 
 style_intertidal_elevation = {

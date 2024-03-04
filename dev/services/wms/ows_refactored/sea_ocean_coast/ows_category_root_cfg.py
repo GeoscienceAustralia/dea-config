@@ -7,7 +7,7 @@ category_layers = {
             "abstract": "",
             "layers": [
                 {
-                    # DEA Intertidal Collection 3 
+                    # DEA Intertidal Collection 3
                     "include": "ows_refactored.sea_ocean_coast.intertidal_c3.ows_intertidal_cfg.dea_intertidal_layer",
                     "type": "python",
                 },
