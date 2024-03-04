@@ -195,7 +195,7 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 
-https://docs.dea.ga.gov.au/data/product/dea-intertidal-extents-landsat/
+https://knowledge.dea.ga.gov.au/data/product/dea-intertidal-extents-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "item_v2",
@@ -264,7 +264,7 @@ The Intertidal Extents Model product is a national scale gridded dataset charact
 ITEM v2.0 has implemented an improved tidal modelling framework (see Sagar et al. 2018) over that utilised in ITEM v1.0. The expanded Landsat archive within the Digital Earth Australia (DEA) has also enabled the model extent to be increased to cover a number of offshore reefs, including the full Great Barrier Reef and southern sections of the Torres Strait Islands.
 The DEA archive and new tidal modelling framework has improved the coverage and quality of the ITEM v2.0 relative extents model, particularly in regions where AGDC cell boundaries in ITEM v1.0 produced discontinuities or the imposed v1.0 cell structure resulted in poor quality tidal modelling (see Sagar et al. 2017).
 
-https://docs.dea.ga.gov.au/data/product/dea-intertidal-extents-landsat/
+https://knowledge.dea.ga.gov.au/data/product/dea-intertidal-extents-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "item_v2_conf",
