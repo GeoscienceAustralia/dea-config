@@ -34,7 +34,7 @@ dea_intertidal_layer = {
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "style_intertidal_elevation",
+        "default_style": "intertidal_elevation",
         "styles": styles_intertidal_list,
     },
 }
