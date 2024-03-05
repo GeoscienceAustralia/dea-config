@@ -199,7 +199,7 @@ https://docs.dea.ga.gov.au/data/product/dea-intertidal-extents-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "item_v2",
-    "time_resolution": "year",
+    "time_resolution": "summary",
     "bands": bands_item,
     "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
@@ -270,7 +270,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "item_v2_conf",
     "bands": bands_item_conf,
     "resource_limits": reslim_standard,
-    "time_resolution": "year",
+    "time_resolution": "summary",
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],
     "image_processing": {
