@@ -1,5 +1,7 @@
 from ows_refactored.baseline_satellite_data.landsat_annual.band_c3_ls_cfg import \
     bands_c3_ls
+from ows_refactored.baseline_satellite_data.landsat_annual.band_c3_ls_nbart_cfg import \
+    bands_c3_ls_nbart
 from ows_refactored.baseline_satellite_data.landsat_annual.style_c3_ls_cfg import \
     styles_c3_ls_list
 from ows_refactored.ows_reslim_cfg import reslim_standard
@@ -35,7 +37,7 @@ For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls8cls9c_gm_cyear_3",
-            "bands": bands_c3_ls,
+            "bands": bands_c3_ls_nbart,
             "time_resolution": "summary",
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
@@ -73,7 +75,7 @@ For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls7e_gm_cyear_3",
-            "bands": bands_c3_ls,
+            "bands": bands_c3_ls_nbart,
             "time_resolution": "summary",
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
@@ -111,7 +113,7 @@ For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls5t_gm_cyear_3",
-            "bands": bands_c3_ls,
+            "bands": bands_c3_ls_nbart,
             "time_resolution": "summary",
             "resource_limits": reslim_standard,
             "native_crs": "EPSG:3577",
