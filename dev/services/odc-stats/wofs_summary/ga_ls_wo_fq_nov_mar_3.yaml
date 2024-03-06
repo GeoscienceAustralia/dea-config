@@ -113,7 +113,7 @@ cog_opts:
 apply_eodatasets3: True
 dataset_filters: >-
   {"datetime": "1986-01--P35Y"}|{"datetime": "2021-01--P1Y", "eo:platform": "landsat-8"}|{"datetime": "2021-01--P1Y", "eo:platform": "landsat-7"}|
-  {"datetime": "2021-01--P1Y", "eo:platform": "landsat-5"}
+  {"datetime": "2021-01--P1Y", "eo:platform": "landsat-5"}|{"datetime": "2022-01--P1Y"}
 output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls_wo_fq_nov_mar_3/2-0-0
 
