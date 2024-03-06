@@ -5,8 +5,8 @@ from datacube_ows.band_utils import scalable
 def elevation_adaptive(data, band, lot, hot, band_mapper=None):
     """
     Experimental adaptive elevation function, using pixel-level
-    tide metadata to calculate relative elevation for any 
-    given location. 
+    tide metadata to calculate relative elevation for any
+    given location.
 
     This implementation should be free of any tile-based
     discontinuities in the resulting visualisation.
