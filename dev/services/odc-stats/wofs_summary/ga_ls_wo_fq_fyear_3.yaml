@@ -2,16 +2,16 @@ plugin: wofs-summary # this can help system find the relative plugin and plugin 
 plugin_config:
   cloud_filters:
     cloud:
-      - [dilation, 5]
+      - [dilation, 6]
     cloud_shadow:
-      - [dilation, 10]
+      - [dilation, 6]
   transform_code: EPSG:9688
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
   name: ga_ls_wo_fq_fyear_3
   short_name: ga_ls_wo_fq_fyear_3
-  version: 1.6.0
+  version: 2.0.0
   product_family: wo
 
   # -- EO Dataset3 relative section --
@@ -112,10 +112,13 @@ s3_acl: public-read
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
+dataset_filters: >-
+  {"datetime": "1987-01--P34Y"}|{"datetime": "2021-01--P1Y", "eo:platform": "landsat-8"}|{"datetime": "2021-01--P1Y", "eo:platform": "landsat-7"}|
+  {"datetime": "2021-01--P1Y", "eo:platform": "landsat-5"}
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_wo_fq_fyear_3/1-6-0
+  s3://dea-public-data-dev/derivative/ga_ls_wo_fq_fyear_3/2-0-0
 
 # save-tasks options
 input_products: ga_ls_wo_3
 frequency: annual-fy
-grid: au-30
+grid: au_extended_30
