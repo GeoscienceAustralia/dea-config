@@ -3,7 +3,7 @@ from datacube_ows.band_utils import scalable
 
 @scalable
 def elevation_adaptive(data, band, lot, hot, band_mapper=None):
-    
+
     # Calculate observed tide range (max - min)
     otr = data[hot] - data[lot]
 
@@ -86,7 +86,6 @@ style_intertidal_elevation_macro = {
     },
 }
 
-
 style_intertidal_elevation_uncertainty = {
     "name": "intertidal_elevation_uncertainty",
     "title": "Elevation uncertainty",
@@ -113,7 +112,6 @@ style_intertidal_elevation_uncertainty = {
     },
 }
 
-
 style_intertidal_exposure = {
     "name": "intertidal_exposure",
     "title": "Exposure",
@@ -131,10 +129,10 @@ style_intertidal_exposure = {
         {"value": 0, "color": '#2f0f3d'},
         {'value': 10, 'color': '#4f1552'},
         {'value': 20, 'color': '#72195f'},
-        {'value': 30, 'color': '#931f63'},        
+        {'value': 30, 'color': '#931f63'},    
         {'value': 40, 'color': '#b32e5e'},
         {'value': 50, 'color': '#ce4356'},
-        {'value': 60, 'color': '#e26152'},         
+        {'value': 60, 'color': '#e26152'},    
         {'value': 70, 'color': '#ee845d'},
         {'value': 80, 'color': '#f5a672'},
         {'value': 90, 'color': '#faca8f'},
@@ -142,7 +140,6 @@ style_intertidal_exposure = {
     ],
     "legend": legend_intertidal_percentage_by_20,
 }
-
 
 style_intertidal_extents = {
     "name": "intertidal_extents",
@@ -191,7 +188,6 @@ style_intertidal_extents = {
     }
 }
 
-
 style_intertidal_elevation_adaptive = {
     "name": "intertidal_elevation_adaptive",
     "title": "Elevation",
@@ -221,7 +217,6 @@ style_intertidal_elevation_adaptive = {
         },
     },
 }
-
 
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
