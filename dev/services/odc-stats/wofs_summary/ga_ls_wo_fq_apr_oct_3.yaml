@@ -119,5 +119,5 @@ output_location: >-
 
 # save-tasks options
 input_products: ga_ls_wo_3
-frequency: seasonal
+frequency: apr-oct
 grid: au_extended_30
