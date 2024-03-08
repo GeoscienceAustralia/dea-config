@@ -109,3 +109,10 @@ s3_acl: public-read
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
+output_location: >-
+  s3://dea-public-data-dev/derivative/ga_ls_wo_fq_myear_3/2-0-0
+
+
+input_products: ga_ls_wo_fq_cyear_3
+frequency: all
+grid: au_extended_30
