@@ -27,14 +27,14 @@ measurements:
       - uncertainty
 
   - name: exposure
-    dtype: int16
+    dtype: uint8
     units: "percent"
-    nodata: -999
+    nodata: 255
 
   - name: extents
-    dtype: int16
+    dtype: uint8
     units: "class"
-    nodata: -999
+    nodata: 255
     flags_definition:
       extents:
         description: Intertidal extents class
@@ -75,23 +75,23 @@ measurements:
     aliases:
       - lat
   - name: ta_offset_high
-    dtype: int16
+    dtype: uint8
     units: "percent"
-    nodata: -999
+    nodata: 255
     aliases:
       - offset_high
 
   - name: ta_offset_low
-    dtype: int16
+    dtype: uint8
     units: "percent"
-    nodata: -999
+    nodata: 255
     aliases:
       - offset_low
 
   - name: ta_spread
-    dtype: int16
+    dtype: uint8
     units: "percent"
-    nodata: -999
+    nodata: 255
     aliases:
       - spread
 
@@ -103,9 +103,9 @@ measurements:
       - ndwi_corr
 
   - name: qa_ndwi_freq
-    dtype: int16
+    dtype: uint8
     units: "percent"
-    nodata: -999
+    nodata: 255
     aliases:
       - ndwi_freq
 
