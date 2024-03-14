@@ -33,7 +33,7 @@ A single combined product for Landsat 8 and 9 is provided. A standalone Landsat 
 Band measurement names were updated for consistency with DEA's ARD products by adding the 'nbart' prefix.
 
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls8cls9c_gm_cyear_3",
@@ -71,7 +71,7 @@ The south-west origin point of the DEA Summary Product Grid has been shifted 20 
 A single combined product for Landsat 8 and 9 is provided. A standalone Landsat 8 product will no longer be provided from calendar year 2022 and o$
 Band measurement names were updated for consistency with DEA's ARD products by adding the 'nbart' prefix.
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls7e_gm_cyear_3",
@@ -109,7 +109,7 @@ The south-west origin point of the DEA Summary Product Grid has been shifted 20 
 A single combined product for Landsat 8 and 9 is provided. A standalone Landsat 8 product will no longer be provided from calendar year 2022 and o$
 Band measurement names were updated for consistency with DEA's ARD products by adding the 'nbart' prefix.
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls5t_gm_cyear_3",
@@ -141,7 +141,7 @@ Cosine (spectral) distance (SMAD)
 Bray Curtis dissimilarity (BCMAD)
 Together, they provide information on variance in the landscape over the given year and are useful for change detection applications.
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls8c_nbart_gm_cyear_3",
@@ -173,7 +173,7 @@ Cosine (spectral) distance (SMAD)
 Bray Curtis dissimilarity (BCMAD)
 Together, they provide information on variance in the landscape over the given year and are useful for change detection applications.
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls7e_nbart_gm_cyear_3",
@@ -205,7 +205,7 @@ Cosine (spectral) distance (SMAD)
 Bray Curtis dissimilarity (BCMAD)
 Together, they provide information on variance in the landscape over the given year and are useful for change detection applications.
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-geometric-median-and-median-absolute-deviation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls5t_nbart_gm_cyear_3",
