@@ -20,7 +20,7 @@ information provided via:
 gdalwarp /gdata1/data/land_use/ABARES_CLUM/geotiff_clum_50m1220m/clum_50m1220m.tif clum_50m1220m.tiff -of COG -co NUM_THREADS=ALL_CPUS -co PREDICTOR=YES
 ```
 
-4. Use [rio-stac](https://github.com/developmentseed/rio-stac) to generate STAC Item metadata:
+4. Use [rio-stac](https://github.com/developmentseed/rio-stac) to generate STAC Item metadata (`--densify-geom` ensures that EPSG:3577 geometry is correctly transformed to EPSG:4326 coords):
 ```
 rio stac https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/abares_clum_2020/clum_50m1220m.tiff --densify-geom 10 | jq > abares_clum_2020.stac-item.json
 ```
