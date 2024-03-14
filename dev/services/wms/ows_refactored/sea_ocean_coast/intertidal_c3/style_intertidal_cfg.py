@@ -41,6 +41,33 @@ style_intertidal_elevation = {
     },
 }
 
+style_intertidal_elevation_micro = {
+    "name": "intertidal_elevation_micro",
+    "title": "Elevation (microtidal style)",
+    "abstract": "Intertidal elevation in metres above Mean Sea Level",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "elevation",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["elevation"],
+    "mpl_ramp": "viridis",
+    "range": [-1.0, 0.5],
+    "legend": {
+        "begin": "-1.0",
+        "end": "0.5",
+        "ticks": ["-1.0", "-0.5", "0.0", "0.5"],
+        "units": "metres above Mean Sea Level",
+        "tick_labels": {
+            "0.5": {"prefix": ">"},
+            "-1.0": {"prefix": "<"},
+        },
+    },
+}
+
 style_intertidal_elevation_macro = {
     "name": "intertidal_elevation_macro",
     "title": "Elevation (macrotidal style)",
@@ -172,7 +199,7 @@ style_intertidal_extents = {
 
 style_intertidal_elevation_adaptive = {
     "name": "intertidal_elevation_adaptive",
-    "title": "Elevation",
+    "title": "Elevation (experimental adaptive style)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.elevation_adaptive",
@@ -203,6 +230,7 @@ style_intertidal_elevation_adaptive = {
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
     style_intertidal_elevation,
+    style_intertidal_elevation_micro,
     style_intertidal_elevation_macro,
     style_intertidal_elevation_adaptive,
     style_intertidal_elevation_uncertainty,
