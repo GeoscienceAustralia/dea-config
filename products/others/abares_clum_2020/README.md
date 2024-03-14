@@ -22,7 +22,7 @@ gdalwarp /gdata1/data/land_use/ABARES_CLUM/geotiff_clum_50m1220m/clum_50m1220m.t
 
 4. Use [rio-stac](https://github.com/developmentseed/rio-stac) to generate STAC Item metadata:
 ```
-rio stac https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/abares_clum_2020/clum_50m1220m.tiff | jq > abares_clum_2020.stac-item.json
+rio stac https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/abares_clum_2020/clum_50m1220m.tiff --densify-geom 10 | jq > abares_clum_2020.stac-item.json
 ```
 2. Manually add some metadata to the STAC JSON, and manually create an ODC Product Definition YAML.
 
