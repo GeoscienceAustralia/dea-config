@@ -18,7 +18,7 @@ bare ground (soil or rock)
 
 DEA uses Fractional Cover to characterise every 30 m square of Australia for any point in time from 1987 to today.
 
-https://docs.dea.ga.gov.au/data/product/dea-fractional-cover-landsat/
+https://knowledge.dea.ga.gov.au/data/product/dea-fractional-cover-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_fc_3",
