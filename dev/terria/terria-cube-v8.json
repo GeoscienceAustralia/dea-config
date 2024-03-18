@@ -14,7 +14,7 @@
                         {
                             "type": "wms",
                             "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
-                            "url": "https://ows.dev.dea.ga.gov.au/wms",
+                            "url": "https://ows.dev.dea.ga.gov.au",
                             "opacity": 1,
                             "layers": "s2_ls_combined",
                             "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
@@ -1087,7 +1087,7 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA Intertidal (Sentinel-2, Landsat)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "url": "https://ows.dev.dea.ga.gov.au/wms",
                                     "opacity": 1,
                                     "layers": "ga_s2ls_intertidal_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
