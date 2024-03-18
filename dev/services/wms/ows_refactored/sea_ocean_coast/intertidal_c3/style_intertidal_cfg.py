@@ -227,6 +227,35 @@ style_intertidal_elevation_adaptive = {
     },
 }
 
+style_intertidal_elevation_uncertainty_adaptive = {
+    "name": "intertidal_elevation_uncertainty_adaptive",
+    "title": "Elevation uncertainty (experimental)",
+    "abstract": "Intertidal elevation uncertainty",
+    "index_function": {
+        "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.uncertainty_adaptive",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "elevation_uncertainty",
+            "lot": "ta_lot",
+            "hot": "ta_hot",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["elevation_uncertainty", "ta_lot", "ta_hot"],
+    "mpl_ramp": "inferno",
+    "range": [0.05, 0.3],
+    "legend": {
+        "begin": "0.05",
+        "end": "0.3",
+        "ticks": ["0.05", "0.3"],
+        "units": "",
+        "tick_labels": {
+            "0.05": {"label": "Low"},
+            "0.3": {"label": "High"},
+        },
+    },
+}
+
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
     style_intertidal_elevation,
@@ -234,6 +263,7 @@ styles_intertidal_list = [
     style_intertidal_elevation_macro,
     style_intertidal_elevation_adaptive,
     style_intertidal_elevation_uncertainty,
+    style_intertidal_elevation_uncertainty_adaptive,
     style_intertidal_exposure,
     style_intertidal_extents,
 ]
