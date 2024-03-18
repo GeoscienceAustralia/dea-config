@@ -33,7 +33,7 @@ def uncertainty_adaptive(data, band, lot, hot, band_mapper=None):
     Experimental adaptive elevation uncertainty function, using
     pixel-level tide metadata to calculate relative uncertainty.
     """
-    
+
     # Calculate observed tide range (max - min)
     otr = data[hot] - data[lot]
 
