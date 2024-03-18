@@ -112,10 +112,6 @@ s3_acl: public-read
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
-# Not needed for year>=2022
-# dataset_filters: >-
-#   {"datetime": "1986-01--P35Y"}|{"datetime": "2021-01--P1Y", "eo:platform": "landsat-8"}|{"datetime": "2021-01--P1Y", "eo:platform": "landsat-7"}|
-#   {"datetime": "2021-01--P1Y", "eo:platform": "landsat-5"}
 output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls_wo_fq_cyear_3/2-0-0
 
