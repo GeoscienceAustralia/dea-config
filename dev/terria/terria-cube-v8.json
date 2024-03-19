@@ -1092,6 +1092,7 @@
                                     "layers": "ga_s2ls_intertidal_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2ls_intertidal_cyear_3",
+                                    "dateFormat": "'Year: 'yyyy",
                                     "leafletUpdateInterval": 750,
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
