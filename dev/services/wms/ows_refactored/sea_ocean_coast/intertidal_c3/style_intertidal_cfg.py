@@ -14,8 +14,8 @@ legend_intertidal_percentage_by_20 = {
     },
 }
 
-style_intertidal_elevation = {
-    "name": "intertidal_elevation",
+style_intertidal_elevation_meso = {
+    "name": "intertidal_elevation_meso",
     "title": "Elevation (mesotidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
@@ -242,14 +242,14 @@ style_intertidal_elevation_uncertainty_adaptive = {
     "include_in_feature_info": False,
     "needed_bands": ["elevation_uncertainty", "ta_lot", "ta_hot"],
     "mpl_ramp": "inferno",
-    "range": [0.1, 0.3],
+    "range": [0.0, 0.3],
     "legend": {
-        "begin": "0.1",
+        "begin": "0.0",
         "end": "0.3",
-        "ticks": ["0.1", "0.3"],
+        "ticks": ["0.0", "0.3"],
         "units": "",
         "tick_labels": {
-            "0.1": {"label": "Low"},
+            "0.0": {"label": "Low"},
             "0.3": {"label": "High"},
         },
     },
@@ -257,12 +257,12 @@ style_intertidal_elevation_uncertainty_adaptive = {
 
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
-    style_intertidal_elevation,
-    style_intertidal_elevation_micro,
-    style_intertidal_elevation_macro,
     style_intertidal_elevation_adaptive,
-    style_intertidal_elevation_uncertainty,
     style_intertidal_elevation_uncertainty_adaptive,
     style_intertidal_exposure,
     style_intertidal_extents,
+    style_intertidal_elevation_micro,
+    style_intertidal_elevation_meso,
+    style_intertidal_elevation_macro,
+    style_intertidal_elevation_uncertainty,
 ]
