@@ -16,7 +16,7 @@ legend_intertidal_percentage_by_20 = {
 
 style_intertidal_elevation = {
     "name": "intertidal_elevation",
-    "title": "Elevation",
+    "title": "Elevation (mesotidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -43,7 +43,7 @@ style_intertidal_elevation = {
 
 style_intertidal_elevation_micro = {
     "name": "intertidal_elevation_micro",
-    "title": "Elevation (microtidal style)",
+    "title": "Elevation (microtidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -70,7 +70,7 @@ style_intertidal_elevation_micro = {
 
 style_intertidal_elevation_macro = {
     "name": "intertidal_elevation_macro",
-    "title": "Elevation (macrotidal style)",
+    "title": "Elevation (macrotidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -199,7 +199,7 @@ style_intertidal_extents = {
 
 style_intertidal_elevation_adaptive = {
     "name": "intertidal_elevation_adaptive",
-    "title": "Elevation (experimental adaptive style)",
+    "title": "Elevation (adaptive)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.elevation_adaptive",
@@ -228,7 +228,7 @@ style_intertidal_elevation_adaptive = {
 
 style_intertidal_elevation_uncertainty_adaptive = {
     "name": "intertidal_elevation_uncertainty_adaptive",
-    "title": "Elevation uncertainty (experimental)",
+    "title": "Elevation uncertainty (adaptive)",
     "abstract": "Intertidal elevation uncertainty",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.uncertainty_adaptive",
