@@ -213,7 +213,7 @@ style_intertidal_elevation_adaptive = {
     "include_in_feature_info": False,
     "needed_bands": ["elevation", "ta_lot", "ta_hot"],
     "mpl_ramp": "viridis",
-    "range": [0.05, 0.7],
+    "range": [0.1, 0.7],
     "legend": {
         "begin": "0.0",
         "end": "1.0",
