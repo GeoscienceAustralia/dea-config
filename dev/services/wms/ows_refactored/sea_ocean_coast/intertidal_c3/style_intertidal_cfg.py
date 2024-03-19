@@ -258,11 +258,11 @@ style_intertidal_elevation_uncertainty_adaptive = {
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
     style_intertidal_elevation_adaptive,
-    style_intertidal_elevation_uncertainty_adaptive,    
+    style_intertidal_elevation_uncertainty_adaptive,
     style_intertidal_exposure,
     style_intertidal_extents,
     style_intertidal_elevation_micro,
     style_intertidal_elevation_meso,
-    style_intertidal_elevation_macro,    
+    style_intertidal_elevation_macro,
     style_intertidal_elevation_uncertainty,
 ]
