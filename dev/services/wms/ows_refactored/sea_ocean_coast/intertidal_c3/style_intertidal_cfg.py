@@ -215,14 +215,13 @@ style_intertidal_elevation_adaptive = {
     "mpl_ramp": "viridis",
     "range": [0.1, 0.7],
     "legend": {
-        "begin": "0.0",
-        "end": "1.0",
-        "ticks": ["0.0", "0.5", "1.0"],
+        "begin": "0.1",
+        "end": "0.7",
+        "ticks": ["0.1", "0.7"],
         "units": "",
         "tick_labels": {
-            "0.0": {"label": "Low"},
-            "0.5": {"label": ""},
-            "1.0": {"label": "High"},
+            "0.1": {"label": "Low"},
+            "0.7": {"label": "High"},
         },
     },
 }
@@ -243,14 +242,14 @@ style_intertidal_elevation_uncertainty_adaptive = {
     "include_in_feature_info": False,
     "needed_bands": ["elevation_uncertainty", "ta_lot", "ta_hot"],
     "mpl_ramp": "inferno",
-    "range": [0.05, 0.3],
+    "range": [0.1, 0.3],
     "legend": {
-        "begin": "0.05",
+        "begin": "0.1",
         "end": "0.3",
-        "ticks": ["0.05", "0.3"],
+        "ticks": ["0.1", "0.3"],
         "units": "",
         "tick_labels": {
-            "0.05": {"label": "Low"},
+            "0.1": {"label": "Low"},
             "0.3": {"label": "High"},
         },
     },
