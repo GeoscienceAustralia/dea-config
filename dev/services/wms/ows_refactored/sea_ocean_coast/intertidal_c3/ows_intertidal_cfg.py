@@ -16,7 +16,13 @@ bands_intertidal = {
     "ta_spread": [],
 }
 
-abstract_intertidal = """Geoscience Australia Sentinel-2 Landsat Intertidal Calendar Year Collection 3"""
+abstract_intertidal = """Geoscience Australia Sentinel-2 Landsat Intertidal Calendar Year Collection 3
+
+The DEA Intertidal product suite is the next generation of our DEA intertidal products that have been used across government and industry for helping better characterise and understand the complex intertidal zone that often defines the interface between land and sea.   
+
+Incorporating both Sentinel-2 and Landsat data, the product suite adds a temporal component to our elevation product for the intertidal zone, enabling users to better monitor and understand some of the most dynamic regions of Australia’s coastlines. With an improved tidal modelling capability, the product suite has been expanded to include a continental scale mapping of intertidal exposure over time, enabling scientists and managers to integrate the data into ecological and migratory species applications and modelling
+
+For service status information, see https://status.dea.ga.gov.au"""
 
 dea_intertidal_layer = {
     "title": "DEA Intertidal (Sentinel-2, Landsat)",
@@ -34,7 +40,7 @@ dea_intertidal_layer = {
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "intertidal_elevation",
+        "default_style": "intertidal_elevation_adaptive",
         "styles": styles_intertidal_list,
     },
 }
