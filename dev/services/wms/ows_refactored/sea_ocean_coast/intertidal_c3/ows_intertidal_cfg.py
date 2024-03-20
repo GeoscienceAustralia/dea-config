@@ -14,6 +14,8 @@ bands_intertidal = {
     "ta_offset_high": [],
     "ta_offset_low": [],
     "ta_spread": [],
+    "qa_ndwi_corr": [],
+    "qa_ndwi_freq": [],
 }
 
 abstract_intertidal = """Geoscience Australia Sentinel-2 Landsat Intertidal Calendar Year Collection 3

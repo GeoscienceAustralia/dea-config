@@ -255,6 +255,47 @@ style_intertidal_elevation_uncertainty_adaptive = {
     },
 }
 
+style_intertidal_corr = {
+    "name": "intertidal_corr",
+    "title": "NDWI tide correlation",
+    "abstract": "Correlation between NDWI and tide height",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "qa_ndwi_corr",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["qa_ndwi_corr"],
+    "mpl_ramp": "RdBu",
+    "range": [-0.5, 0.5],
+    "legend": {
+        "begin": "-0.5",
+        "end": "0.5",
+        "ticks": ["-0.5", "0.0", "0.5"],
+        "units": "correlation",
+    },
+}
+
+style_intertidal_freq = {
+    "name": "intertidal_freq",
+    "title": "NDWI frequency",
+    "abstract": "NDWI inundation frequency",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "qa_ndwi_freq",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["qa_ndwi_freq"],
+    "mpl_ramp": "RdBu",
+    "range": [0, 100],
+    "legend": legend_intertidal_percentage_by_20,
+}
+
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
     style_intertidal_elevation_adaptive,
@@ -265,4 +306,6 @@ styles_intertidal_list = [
     style_intertidal_elevation_meso,
     style_intertidal_elevation_macro,
     style_intertidal_elevation_uncertainty,
+    style_intertidal_corr,
+    style_intertidal_freq,
 ]
