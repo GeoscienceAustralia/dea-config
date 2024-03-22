@@ -1228,6 +1228,7 @@
                                 {
                                     "type": "geojson",
                                     "name": "DEA Low Tide polygons for data access",
+                                    "opacity": 0.3,
                                     "info": [
                                         {
                                             "name": "Abstract",
@@ -1259,6 +1260,7 @@
                                 {
                                     "type": "geojson",
                                     "name": "DEA High Tide polygons for data access",
+                                    "opacity": 0.2,
                                     "info": [
                                         {
                                             "name": "Abstract",
