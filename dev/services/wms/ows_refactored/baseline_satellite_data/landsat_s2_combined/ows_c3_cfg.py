@@ -20,12 +20,12 @@ Where Sentinel-2 and Landsat data are both available, the higher resolution Sent
 
 This product combines:
 
-   * Sentinel-2A https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
-   * Sentinel-2B https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
-   * Landsat-5 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
-   * Landsat-7 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
-   * Landsat-8 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
-   * Landsat-9 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9-oli-tirs/
+   * Sentinel-2A https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
+   * Sentinel-2B https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
+   * Landsat-5 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
+   * Landsat-7 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
+   * Landsat-8 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
+   * Landsat-9 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9-oli-tirs/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
@@ -66,12 +66,12 @@ Where Sentinel-2 and Landsat data are both available from the same day, the high
 
 This product combines:
 
-   * Sentinel-2A https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
-   * Sentinel-2B https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
-   * Landsat-5 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
-   * Landsat-7 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
-   * Landsat-8 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
-   * Landsat-9 https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9-oli-tirs/
+   * Sentinel-2A https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
+   * Sentinel-2B https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
+   * Landsat-5 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
+   * Landsat-7 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
+   * Landsat-8 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
+   * Landsat-9 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-9-oli-tirs/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,

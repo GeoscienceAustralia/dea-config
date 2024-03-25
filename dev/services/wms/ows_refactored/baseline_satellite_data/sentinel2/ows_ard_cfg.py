@@ -17,12 +17,12 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 It contains two sub-products that provide corrections or attribution information:
 
-   * DEA Surface Reflectance NBART (Sentinel-2B MSI) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-sentinel-2b-msi/
-   * DEA Surface Reflectance OA (Sentinel-2B MSI) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-sentinel-2b-msi/
+   * DEA Surface Reflectance NBART (Sentinel-2B MSI) https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-sentinel-2b-msi/
+   * DEA Surface Reflectance OA (Sentinel-2B MSI) https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-sentinel-2b-msi/
 
 The resolution is a 10/20/60 m grid based on the ESA Level 1C archive.
 
-Full product description: https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
+Full product description: https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_s2bm_ard_3",
@@ -66,12 +66,12 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 It contains two sub-products that provide corrections or attribution information:
 
-   * DEA Surface Reflectance NBART (Sentinel-2A MSI) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-sentinel-2a-msi/
-   * DEA Surface Reflectance OA (Sentinel-2A MSI) https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-sentinel-2a-msi/
+   * DEA Surface Reflectance NBART (Sentinel-2A MSI) https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-nbart-sentinel-2a-msi/
+   * DEA Surface Reflectance OA (Sentinel-2A MSI) https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-oa-sentinel-2a-msi/
 
 The resolution is a 10/20/60 m grid based on the ESA Level 1C archive.
 
-Full product description: https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
+Full product description: https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_s2am_ard_3",
@@ -115,8 +115,8 @@ This product is a single, cohesive Analysis Ready Data (ARD) package, which allo
 
 The resolution is a 10/20/60 m grid based on the ESA Level 1C archive.
 
-Full Sentinel-2A product description: https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
-Full Sentinel-2B product description: https://docs.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
+Full Sentinel-2A product description: https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
+Full Sentinel-2B product description: https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,

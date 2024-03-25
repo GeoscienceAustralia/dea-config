@@ -14,9 +14,9 @@ legend_intertidal_percentage_by_20 = {
     },
 }
 
-style_intertidal_elevation = {
-    "name": "intertidal_elevation",
-    "title": "Elevation",
+style_intertidal_elevation_meso = {
+    "name": "intertidal_elevation_meso",
+    "title": "Elevation (mesotidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -41,9 +41,36 @@ style_intertidal_elevation = {
     },
 }
 
+style_intertidal_elevation_micro = {
+    "name": "intertidal_elevation_micro",
+    "title": "Elevation (microtidal)",
+    "abstract": "Intertidal elevation in metres above Mean Sea Level",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "elevation",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["elevation"],
+    "mpl_ramp": "viridis",
+    "range": [-1.0, 0.5],
+    "legend": {
+        "begin": "-1.0",
+        "end": "0.5",
+        "ticks": ["-1.0", "-0.5", "0.0", "0.5"],
+        "units": "metres above Mean Sea Level",
+        "tick_labels": {
+            "0.5": {"prefix": ">"},
+            "-1.0": {"prefix": "<"},
+        },
+    },
+}
+
 style_intertidal_elevation_macro = {
     "name": "intertidal_elevation_macro",
-    "title": "Elevation (macrotidal style)",
+    "title": "Elevation (macrotidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -172,7 +199,7 @@ style_intertidal_extents = {
 
 style_intertidal_elevation_adaptive = {
     "name": "intertidal_elevation_adaptive",
-    "title": "Elevation",
+    "title": "Elevation (adaptive)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.elevation_adaptive",
@@ -184,28 +211,101 @@ style_intertidal_elevation_adaptive = {
         },
     },
     "include_in_feature_info": False,
-    "needed_bands": ["elevation"],
+    "needed_bands": ["elevation", "ta_lot", "ta_hot"],
     "mpl_ramp": "viridis",
-    "range": [0.05, 0.7],
+    "range": [0.1, 0.7],
     "legend": {
-        "begin": "0.0",
-        "end": "1.0",
-        "ticks": ["0.0", "0.5", "1.0"],
+        "begin": "0.1",
+        "end": "0.7",
+        "ticks": ["0.1", "0.7"],
         "units": "",
         "tick_labels": {
-            "0.0": {"label": "Low"},
-            "0.5": {"label": ""},
-            "1.0": {"label": "High"},
+            "0.1": {"label": "Low"},
+            "0.7": {"label": "High"},
         },
     },
 }
 
+style_intertidal_elevation_uncertainty_adaptive = {
+    "name": "intertidal_elevation_uncertainty_adaptive",
+    "title": "Elevation uncertainty (adaptive)",
+    "abstract": "Intertidal elevation uncertainty",
+    "index_function": {
+        "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.uncertainty_adaptive",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "elevation_uncertainty",
+            "lot": "ta_lot",
+            "hot": "ta_hot",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["elevation_uncertainty", "ta_lot", "ta_hot"],
+    "mpl_ramp": "inferno",
+    "range": [0.0, 0.3],
+    "legend": {
+        "begin": "0.0",
+        "end": "0.3",
+        "ticks": ["0.0", "0.3"],
+        "units": "",
+        "tick_labels": {
+            "0.0": {"label": "Low"},
+            "0.3": {"label": "High"},
+        },
+    },
+}
+
+style_intertidal_corr = {
+    "name": "intertidal_corr",
+    "title": "NDWI tide correlation",
+    "abstract": "Correlation between NDWI and tide height",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "qa_ndwi_corr",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["qa_ndwi_corr"],
+    "mpl_ramp": "RdBu",
+    "range": [-0.5, 0.5],
+    "legend": {
+        "begin": "-0.5",
+        "end": "0.5",
+        "ticks": ["-0.5", "0.0", "0.5"],
+        "units": "correlation",
+    },
+}
+
+style_intertidal_freq = {
+    "name": "intertidal_freq",
+    "title": "NDWI frequency",
+    "abstract": "NDWI inundation frequency",
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "qa_ndwi_freq",
+        },
+    },
+    "include_in_feature_info": False,
+    "needed_bands": ["qa_ndwi_freq"],
+    "mpl_ramp": "RdBu",
+    "range": [0, 100],
+    "legend": legend_intertidal_percentage_by_20,
+}
+
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
-    style_intertidal_elevation,
-    style_intertidal_elevation_macro,
     style_intertidal_elevation_adaptive,
-    style_intertidal_elevation_uncertainty,
+    style_intertidal_elevation_uncertainty_adaptive,
     style_intertidal_exposure,
     style_intertidal_extents,
+    style_intertidal_elevation_micro,
+    style_intertidal_elevation_meso,
+    style_intertidal_elevation_macro,
+    style_intertidal_elevation_uncertainty,
+    style_intertidal_corr,
+    style_intertidal_freq,
 ]
