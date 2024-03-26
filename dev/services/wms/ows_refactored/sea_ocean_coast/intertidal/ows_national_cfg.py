@@ -87,12 +87,12 @@ While image compositing and masking methods have been applied to remove the majo
 - Journal article: Bishop-Taylor et al. 2019 (https://doi.org/10.1016/j.ecss.2019.03.006)
 - Data available on THREDDS: http://dapds00.nci.org.au/thredds/catalogs/fk4/nidem_1_0.html
 - eCat catalogue listing including data access: http://pid.geoscience.gov.au/dataset/ga/123678
-- listing for extended metadata: https://docs.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/
+- listing for extended metadata: https://knowledge.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "nidem",
     "bands": bands_nidem,
-    "time_resolution": "year",
+    "time_resolution": "summary",
     "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [25, -25],

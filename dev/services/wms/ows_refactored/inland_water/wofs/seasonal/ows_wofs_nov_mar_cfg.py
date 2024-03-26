@@ -22,7 +22,7 @@ Each dataset in this product consists of the following datasets:
 
 As no confidence filtering is applied to this product, it is affected by noise where misclassifications have occurred in the input water classifications, and can be difficult to interpret on its own.
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-water-observations-statistics-landsat/
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-water-observations-statistics-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls_wo_fq_nov_mar_3",
@@ -30,7 +30,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
-    "time_resolution": "month",
+    "time_resolution": "summary",
     "flags": [
         {
             "band": "land",

@@ -162,7 +162,7 @@ This product is the implementation of the DEA Water Observations (DEA WO) produc
 
 The Provisional Digital Earth Australia Water Observations (Sentinel-2) product shows where surface water was observed by the Sentinel 2A and Sentinel 2B satellites on any particular day over the most recent 3 months. The surface water observations are derived from Geoscience Australia Sentinel-2 Near Real Time surface reflectance imagery for all of Australia. The provisional, Near Real Time product is available for a rolling window of the most recent three months of data, and is produced within 24 hours of the satellite passing over an area.
 
-For more information, see https://docs.dea.ga.gov.au/data/product/dea-water-observations-provisional-sentinel-2-nrt/""",
+For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-water-observations-provisional-sentinel-2-nrt/""",
     "product_name": "ga_s2_wo_provisional_3",
     "bands": bands_wofs_obs,
     "resource_limits": reslim_standard,
