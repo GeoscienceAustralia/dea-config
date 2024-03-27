@@ -2,16 +2,16 @@ plugin: wofs-summary # this can help system find the relative plugin and plugin 
 plugin_config:
   cloud_filters:
     cloud:
-      - [dilation, 5]
+      - [dilation, 6]
     cloud_shadow:
-      - [dilation, 10]
+      - [dilation, 6]
   transform_code: EPSG:9688
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
-  name: ga_ls_wo_fq_cyear_3
-  short_name: ga_ls_wo_fq_cyear_3
-  version: 1.6.0
+  name: ga_ls_wo_fq_nov_mar_3
+  short_name: ga_ls_wo_fq_nov_mar_3
+  version: 2.0.0
   product_family: wo
 
   # -- EO Dataset3 relative section --
@@ -57,18 +57,17 @@ product:
     - landsat:wrs_row
 
   preview_image_ows_style:
-    # ref: https://github.com/GeoscienceAustralia/dea-config/blob/master/prod/services/wms/ows_refactored/inland_water/wofs/ows_wofs_annual_cfg.py#L7
-    name: annual_WOfS_frequency
-    title: Water Summary
-    abstract: WOfS annual summary showing the frequency of Wetness
+    # ref: https://github.com/GeoscienceAustralia/dea-config/blob/master/prod/services/wms/ows_refactored/inland_water/wofs/style_wofs_cfg.py#L86
+    name: seasonal_WOfS_frequency
+    title: ' Water Summary'
+    abstract: WOfS seasonal summary showing the frequency of Wetness
+    needed_bands:
+      - frequency
     index_function:
       function: datacube_ows.band_utils.single_band
       mapped_bands: 'True'
       kwargs:
         band: frequency
-    include_in_feature_info: 'False'
-    needed_bands:
-      - frequency
     color_ramp:
       - value: 0
         color: '#000000'
@@ -113,9 +112,9 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_wo_fq_cyear_3/1-6-0
+  s3://dea-public-data-dev/derivative/ga_ls_wo_fq_nov_mar_3/2-0-0
 
 # save-tasks options
 input_products: ga_ls_wo_3
-frequency: annual
-grid: au-30
+frequency: nov-mar
+grid: au_extended_30
