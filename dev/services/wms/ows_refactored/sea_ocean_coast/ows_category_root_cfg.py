@@ -11,6 +11,17 @@ category_layers = {
                     "include": "ows_refactored.sea_ocean_coast.intertidal_c3.ows_intertidal_cfg.dea_intertidal_layer",
                     "type": "python",
                 },
+            ]
+        },
+        {
+            # HLTC Collection 2 (nested folder structure is defined below)
+            "include": "ows_refactored.sea_ocean_coast.ows_tide_cfg.layers",
+            "type": "python",
+        },
+        {
+            "title": "Other",
+            "abstract": "",
+            "layers": [
                 {
                     # ITEM 2.0 Collection 2
                     "include": "ows_refactored.sea_ocean_coast.intertidal.ows_extents_cfg.item_v2_00_layer",
@@ -27,11 +38,6 @@ category_layers = {
                     "type": "python",
                 },
             ]
-        },
-        {
-            # HLTC Collection 2 (nested folder structure is defined below)
-            "include": "ows_refactored.sea_ocean_coast.ows_tide_cfg.layers",
-            "type": "python",
         },
     ]
 }

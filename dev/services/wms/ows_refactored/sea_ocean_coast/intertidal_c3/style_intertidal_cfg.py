@@ -152,7 +152,7 @@ style_intertidal_exposure = {
 
 style_intertidal_elevation_adaptive = {
     "name": "intertidal_elevation_adaptive",
-    "title": "Elevation (adaptive)",
+    "title": "Elevation",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.elevation_adaptive",
@@ -181,7 +181,7 @@ style_intertidal_elevation_adaptive = {
 
 style_intertidal_elevation_uncertainty_adaptive = {
     "name": "intertidal_elevation_uncertainty_adaptive",
-    "title": "Elevation uncertainty (adaptive)",
+    "title": "Elevation uncertainty",
     "abstract": "Intertidal elevation uncertainty",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.uncertainty_adaptive",
