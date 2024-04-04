@@ -150,56 +150,9 @@ style_intertidal_exposure = {
     "legend": legend_intertidal_percentage_by_20,
 }
 
-style_intertidal_extents = {
-    "name": "intertidal_extents",
-    "title": "Extents",
-    "abstract": "Intertidal Extents classification",
-    "needed_bands": ["extents"],
-    "value_map": {
-        "extents": [
-            {
-                "title": "Dry",
-                "abstract": "",
-                "values": [0],
-                "color": "#dddddd",
-            },
-            {
-                "title": "Inland intermittent wet",
-                "abstract": "",
-                "values": [1],
-                "color": "#00a7c8",
-            },
-            {
-                "title": "Inland persistent wet",
-                "abstract": "",
-                "values": [2],
-                "color": "#00667a",
-            },
-            {
-                "title": "Tidally influenced wet",
-                "abstract": "",
-                "values": [3],
-                "color": "#2a5fa1",
-            },
-            {
-                "title": "Intertidal (low confidence)",
-                "abstract": "",
-                "values": [4],
-                "color": "#ffe8a1",
-            },
-            {
-                "title": "Intertidal (high confidence)",
-                "abstract": "",
-                "values": [5],
-                "color": "#ffc001",
-            },
-        ]
-    }
-}
-
 style_intertidal_elevation_adaptive = {
     "name": "intertidal_elevation_adaptive",
-    "title": "Elevation (adaptive)",
+    "title": "Elevation",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.elevation_adaptive",
@@ -228,7 +181,7 @@ style_intertidal_elevation_adaptive = {
 
 style_intertidal_elevation_uncertainty_adaptive = {
     "name": "intertidal_elevation_uncertainty_adaptive",
-    "title": "Elevation uncertainty (adaptive)",
+    "title": "Elevation uncertainty",
     "abstract": "Intertidal elevation uncertainty",
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.uncertainty_adaptive",
@@ -301,7 +254,6 @@ styles_intertidal_list = [
     style_intertidal_elevation_adaptive,
     style_intertidal_elevation_uncertainty_adaptive,
     style_intertidal_exposure,
-    style_intertidal_extents,
     style_intertidal_elevation_micro,
     style_intertidal_elevation_meso,
     style_intertidal_elevation_macro,
