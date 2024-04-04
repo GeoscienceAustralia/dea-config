@@ -254,10 +254,4 @@ styles_intertidal_list = [
     style_intertidal_elevation_adaptive,
     style_intertidal_elevation_uncertainty_adaptive,
     style_intertidal_exposure,
-    style_intertidal_elevation_micro,
-    style_intertidal_elevation_meso,
-    style_intertidal_elevation_macro,
-    style_intertidal_elevation_uncertainty,
-    style_intertidal_corr,
-    style_intertidal_freq,
 ]
