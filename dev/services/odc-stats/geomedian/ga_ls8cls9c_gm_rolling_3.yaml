@@ -89,6 +89,6 @@ output_location: >-
 # save-tasks options
 input_products: ga_ls8c_ard_3-ga_ls9c_ard_3
 frequency: rolling-3months
-temporal-range: 2022-01--P3M
+year: 2022
 grid: au_extended_30
 gqa: 1
