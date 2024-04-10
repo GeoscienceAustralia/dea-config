@@ -1057,7 +1057,7 @@
                                 {
                                     "type": "geojson",
                                     "name": "DEA Intertidal 32 km tile grid",
-                                    "url": "https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal.geojson",
+                                    "url": "https://data.dea.ga.gov.au/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal_prod.geojson",
                                     "id": "67ttyU"
                                 },
                             ]
