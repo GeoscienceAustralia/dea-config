@@ -1,0 +1,95 @@
+plugin: fc-percentiles # this can help system find the relative plugin and plugin version
+plugin_config:
+  cloud_filters:
+    cloud:
+      - [dilation, 6]
+    cloud_shadow:
+      - [dilation, 6]
+  transform_code: EPSG:9688
+  area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
+
+product:
+  name: ga_ls_fc_pc_fyear_3
+  short_name: ga_ls_fc_pc_fyear_3
+  version: 4.0.0
+  product_family: fc_percentile
+
+  # -- EO Dataset3 relative section --
+  naming_conventions_values: dea_c3
+  explorer_path: https://explorer.dea.ga.gov.au/
+  classifier: ard
+  maturity: final
+  collection_number: 3
+
+  inherit_skip_properties:
+    - eo:cloud_cover
+    - fmask:clear
+    - fmask:snow
+    - fmask:cloud
+    - fmask:water
+    - fmask:cloud_shadow
+    - eo:sun_elevation
+    - eo:sun_azimuth
+    - gqa:iterative_stddev_x
+    - gqa:iterative_stddev_y
+    - gqa:iterative_stddev_xy
+    - gqa:stddev_xy
+    - gqa:stddev_x
+    - gqa:stddev_y
+    - gqa:mean_xy
+    - gqa:mean_x
+    - gqa:mean_y
+    - gqa:abs_xy
+    - gqa:abs_x
+    - gqa:abs_y
+    - gqa:abs_iterative_mean_y
+    - gqa:abs_iterative_mean_x
+    - gqa:abs_iterative_mean_xy
+    - gqa:iterative_mean_xy
+    - gqa:iterative_mean_x
+    - gqa:iterative_mean_y
+    - gqa:cep90
+    - landsat:landsat_product_id
+    - landsat:landsat_scene_id
+    - landsat:collection_category
+    - landsat:collection_number
+    - landsat:wrs_path
+    - landsat:wrs_row
+
+  preview_image_ows_style:
+    name: fc_rgb
+    title: Three-band fractional cover
+    abstract: Fractional cover medians - red is bare soil, green is green vegetation and
+      blue is non-green vegetation
+    components:
+      red:
+        bs_pc_50: 1
+      green:
+        pv_pc_50: 1
+      blue:
+        npv_pc_50: 1
+    scale_range:
+    - 0
+    - 100
+
+aws_unsigned: True
+
+max_processing_time: 1200
+job_queue_max_lease: 300
+renew_safety_margin: 60
+future_poll_interval: 2
+s3_acl: public-read
+# Generic product attributes
+cog_opts:
+  zlevel: 9
+apply_eodatasets3: True
+dataset_filters: >-
+  {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
+  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
+output_location: >-
+  s3://dea-public-data-dev/derivative/ga_ls_fc_pc_fyear_3/4-0-0
+
+# save-tasks options
+input_products: ga_ls_fc_3+ga_ls_wo_3
+frequency: annual-fy
+grid: au_extended_30
