@@ -1104,6 +1104,7 @@
                                     "partials": {
                                         "la" = "<script>document.write({{data_links}}.split(\“/\“)[4])</script>",
                                         "lo" = "<script>document.write(\“{{data_links}}\”.split(\“/\“))</script>"
+                                     },
                                     "id": "ab1264fr",       
                                 },
                                 {
