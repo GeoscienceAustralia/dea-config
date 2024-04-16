@@ -51,15 +51,15 @@ measurements:
     dtype: int16
     nodata: -999
     units: '1'
-  - name: sdev
+  - name: smad
     dtype: float32
     nodata: .nan
     units: '1'
-  - name: edev
+  - name: emad
     dtype: float32
     nodata: .nan
     units: '1'
-  - name: bcdev
+  - name: bcmad
     dtype: float32
     nodata: .nan
     units: '1'
