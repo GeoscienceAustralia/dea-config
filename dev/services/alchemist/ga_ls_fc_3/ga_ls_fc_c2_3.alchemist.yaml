@@ -66,4 +66,3 @@ processing:
   dask_chunks:
     x: -1
     y: 4096
-
