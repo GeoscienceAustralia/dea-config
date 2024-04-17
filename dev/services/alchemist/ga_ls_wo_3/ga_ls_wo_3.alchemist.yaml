@@ -7,7 +7,7 @@ specification:
   measurements: ['nbart_blue', 'nbart_green', 'nbart_red', 'nbart_nir', 'nbart_swir_1', 'nbart_swir_2', 'oa_fmask']
   measurement_renames:
     oa_fmask: fmask
-  
+
   aws_unsigned: False
   transform: wofs.virtualproduct.WOfSClassifier
   transform_url: 'https://github.com/GeoscienceAustralia/wofs/'
