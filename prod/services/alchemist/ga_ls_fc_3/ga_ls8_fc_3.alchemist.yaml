@@ -1,6 +1,7 @@
 specification:
   products:
     - ga_ls8c_ard_3
+    - ga_ls9c_ard_3
   measurements: ['nbart_green', 'nbart_red', 'nbart_nir', 'nbart_swir_1', 'nbart_swir_2']
   measurement_renames:
     nbart_green: green
@@ -46,7 +47,36 @@ specification:
         npv:
           - -0.73
           - 0.9578
-
+    ga_ls9c_ard_3:
+      regression_coefficients:
+        blue:
+          - 4.1
+          - 0.97470
+        green:
+          - 28.9
+          - 0.99779
+        red:
+          - 27.4
+          - 1.00446
+        nir:
+          - 0.4
+          - 0.98906
+        swir1:
+          - 25.6
+          - 0.99467
+        swir2:
+          - -32.7
+          - 1.02551
+      output_regression_coefficients:
+        bs:
+          - 2.45
+          - 0.9499
+        pv:
+          - 2.77
+          - 0.9481
+        npv:
+          - -0.73
+          - 0.9578
 output:
   location: s3://dea-public-data/derivative/
   nodata: 255
