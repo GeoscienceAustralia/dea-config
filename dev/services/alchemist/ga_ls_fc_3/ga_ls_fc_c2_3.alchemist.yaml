@@ -60,6 +60,7 @@ output:
     naming_conventions: dea_c3 
   properties:
     dea:dataset_maturity: interim
+    usgs_collection: 2
 
 processing:
   dask_chunks:
