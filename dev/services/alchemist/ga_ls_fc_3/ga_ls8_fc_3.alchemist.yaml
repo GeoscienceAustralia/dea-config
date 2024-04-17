@@ -1,7 +1,6 @@
 specification:
   products:
-    - ga_ls5t_ard_3
-    - ga_ls7e_ard_3
+    - ga_ls8c_ard_3
   measurements: ['nbart_green', 'nbart_red', 'nbart_nir', 'nbart_swir_1', 'nbart_swir_2']
   measurement_renames:
     nbart_green: green
@@ -16,6 +15,28 @@ specification:
   override_product_family: ard
   basis: nbart_green
 
+  transform_args_per_product:
+    ga_ls8c_ard_3:
+      regression_coefficients:
+        blue:
+          - 4.1
+          - 0.97470
+        green:
+          - 28.9
+          - 0.99779
+        red:
+          - 27.4
+          - 1.00446
+        nir:
+          - 0.4
+          - 0.98906
+        swir1:
+          - 25.6
+          - 0.99467
+        swir2:
+          - -32.7
+          - 1.02551
+
 output:
   location: s3://dea-public-data-dev/derivative/
   nodata: 255
@@ -23,7 +44,7 @@ output:
   preview_image:
     red: bs
     green: pv
-    blue: pv
+    blue: npv
   explorer_url: https://explorer.dev.dea.ga.gov.au
   write_data_settings:
     overview_resampling: average
@@ -34,7 +55,7 @@ output:
   metadata:
     product_family: fc
     producer: ga.gov.au
-    dataset_version: 2.5.0
+    dataset_version: 2.5.1
     collection_number: 3
     naming_conventions: dea_c3
   properties:
