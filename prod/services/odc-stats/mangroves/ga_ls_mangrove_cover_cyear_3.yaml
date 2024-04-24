@@ -1,4 +1,8 @@
 plugin: mangroves # this can help system find the relative plugin and plugin version
+plugin_config: 
+  mangroves_extent: maximum_extent_of_mangroves_Apr2019.shp # this needs to be overwritten by the path where shapefile presents
+  pv_thresholds: [14, 40, 62]
+
 product:
   name: ga_ls_mangrove_cover_cyear_3
   short_name: ga_ls_mangrove_cover_cyear_3
@@ -52,8 +56,6 @@ cog_opts:
 apply_eodatasets3: True
 output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls_mangrove_cover_cyear_3/4-0-0
-# this needs to be overwritten by the path where shapefile presents
-plugin_config: {mangroves_extent: maximum_extent_of_mangroves_Apr2019.shp}
 
 # save-tasks config
 input_products: >-
