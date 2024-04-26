@@ -11,7 +11,7 @@ plugin_config:
 product:
   name: ga_ls_fc_pc_cyear_3
   short_name: ga_ls_fc_pc_cyear_3
-  version: 3.0.1
+  version: 3.1.0
   product_family: fc_percentile
 
   # -- EO Dataset3 relative section --
@@ -87,7 +87,7 @@ dataset_filters: >-
   {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
   {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_fc_pc_cyear_3/3-0-1
+  s3://dea-public-data-dev/derivative/ga_ls_fc_pc_cyear_3/3-1-0
 
 # save-tasks options
 input_products: ga_ls_fc_3+ga_ls_wo_3
