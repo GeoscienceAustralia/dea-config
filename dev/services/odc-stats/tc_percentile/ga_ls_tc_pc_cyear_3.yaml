@@ -2,25 +2,25 @@ plugin: tcw-percentiles # this can help system find the relative plugin and plug
 plugin_config:
   cloud_filters:
     cloud:
-      - [dilation, 5]
+      - [dilation, 6]
     shadow:
-      - [dilation, 10]
+      - [dilation, 6]
   transform_code: EPSG:9688
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
   name: ga_ls_tc_pc_cyear_3
   short_name: ga_ls_tc_pc_cyear_3
-  version: 1.0.0
+  version: 2.0.1
   product_family: tci
-  
+
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
   explorer_path: https://explorer.dea.ga.gov.au/
   classifier: ard
   maturity: final
   collection_number: 3
-  
+
   inherit_skip_properties:
     - eo:cloud_cover
     - fmask:clear
@@ -58,7 +58,7 @@ product:
 
   preview_image_ows_style:
     name: tci_rgb
-    title: Three-band TCI 
+    title: Three-band TCI
     abstract: TCI medians - red is brightness, green is greenness and
       blue is wetness
     components:
@@ -69,9 +69,9 @@ product:
       blue:
         wet_pc_50: 1
     scale_range:
-    - -2000 
+    - -2000
     - 2000
-   
+
 aws_unsigned: True
 
 max_processing_time: 1200
@@ -85,12 +85,13 @@ cog_opts:
 apply_eodatasets3: True
 dataset_filters: >-
   {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
-  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
+  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}|
+  {"eo:platform": "landsat-9"}
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_tc_pc_cyear_3/1-0-0
+  s3://dea-public-data-dev/test/derivative/ga_ls_tc_pc_cyear_3/2-0-1
 
 # save-tasks config
-input_products: ga_ls5t_ard_3-ga_ls7e_ard_3-ga_ls8c_ard_3
+input_products: ga_ls5t_ard_3-ga_ls7e_ard_3-ga_ls8c_ard_3-ga_ls9c_ard_3
 frequency: annual
-grid: au-30
+grid: au_extended_30
 gqa: 1
