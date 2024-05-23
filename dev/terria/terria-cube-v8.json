@@ -1816,6 +1816,13 @@
                                 },
                                 {
                                     "type": "geojson",
+                                    "name": "DEA Summary Product Grid (Collection 3, expanded)",
+                                    "shortReport": "<small>This is an <b>experimental</b> layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> by expanding it to encompass new satellite data processed over Australia's external territories.</small>",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3_expanded.geojson",
+                                    "id": "tu8951"
+                                },
+                                {
+                                    "type": "geojson",
                                     "name": "DEA Summary Product Grid (Collection 3)",
                                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3.geojson",
                                     "id": "GJY53s"
