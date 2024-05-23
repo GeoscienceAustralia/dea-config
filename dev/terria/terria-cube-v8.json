@@ -1820,10 +1820,10 @@
                                     "info": [
                                         {
                                             "name": "Important information",
-                                            "content": "This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> by updating region code IDs to account for new satellite data processed over Australia's external territories."
+                                            "content": "This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> in 2024 by updating region code IDs to account for new satellite data processed over Australia's external territories."
                                         }
                                     ],
-                                    "shortReport": "<small><b>Note:</b> This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> by updating region code IDs to account for new satellite data processed over Australia's external territories.</small>",
+                                    "shortReport": "<small><b>Note:</b> This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> in 2024 by updating region code IDs to account for new satellite data processed over Australia's external territories.</small>",
                                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3_expanded.geojson",
                                     "id": "tu8951"
                                 },
