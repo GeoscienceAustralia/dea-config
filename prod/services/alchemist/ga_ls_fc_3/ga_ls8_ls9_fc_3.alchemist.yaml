@@ -85,7 +85,7 @@ output:
     red: bs
     green: pv
     blue: npv
-  explorer_url: https://explorer.dev.dea.ga.gov.au
+  explorer_url: https://explorer.dea.ga.gov.au
   write_data_settings:
     overview_resampling: average
   reference_source_dataset: True
