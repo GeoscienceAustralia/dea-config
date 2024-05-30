@@ -104,7 +104,7 @@
                         {
                             "id": "SDFa45",
                             "type": "group",
-                            "name": "DEA Surface Reflectance Calendar Year (Landsat)",
+                            "name": "DEA GeoMAD Surface Reflectance Calendar Year (Landsat)",
                             "members": [
                                 {
                                     "type": "wms",
