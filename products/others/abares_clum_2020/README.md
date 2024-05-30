@@ -24,7 +24,7 @@ gdalwarp /gdata1/data/land_use/ABARES_CLUM/geotiff_clum_50m1220m/clum_50m1220m.t
 ```
 rio stac https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/abares_clum_2020/clum_50m1220m.tiff --densify-geom 10 | jq > abares_clum_2020.stac-item.json
 ```
-4. Manually add some metadata to the STAC JSON (can compare against existing layers, e.g. [here](https://github.com/GeoscienceAustralia/dea-config/blob/master/products/others/ausbathytopo250m/ga_ausbathytopo250m_2023.stac-item.json)), and manually create an ODC Product Definition YAML.
+4. Manually add some metadata to the STAC JSON (can compare against existing layers, e.g. [here](https://github.com/GeoscienceAustralia/dea-config/blob/master/products/others/ausbathytopo250m/ga_ausbathytopo250m_2023.stac-item.json)), and manually create an ODC Product Definition YAML (example [here](https://github.com/GeoscienceAustralia/dea-config/blob/master/products/others/ausbathytopo250m/ga_ausbathytopo250m_2023.odc-product.yaml)).
 
 5. Generate thumbnail using `odc-geo`:
 
