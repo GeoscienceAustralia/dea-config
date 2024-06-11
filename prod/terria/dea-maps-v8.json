@@ -99,11 +99,11 @@
                         {
                             "id": "VEvPmu",
                             "type": "group",
-                            "name": "DEA Surface Reflectance Calendar Year (Landsat)",
+                            "name": "DEA GeoMAD Surface Reflectance Calendar Year (Landsat)",
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 8 OLI-TIRS)",
+                                    "name": "DEA GeoMAD (Landsat 8 OLI-TIRS, version 3)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls8c_nbart_gm_cyear_3",
@@ -131,7 +131,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 7 ETM+)",
+                                    "name": "DEA GeoMAD (Landsat 7 ETM+, version 3)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_nbart_gm_cyear_3",
@@ -159,7 +159,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 5 TM)",
+                                    "name": "DEA GeoMAD (Landsat 5 TM, version 3)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls5t_nbart_gm_cyear_3",
