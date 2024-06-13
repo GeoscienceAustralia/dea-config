@@ -16,28 +16,6 @@ specification:
   override_product_family: ard
   basis: nbart_green
 
-  transform_args_per_product:
-    ga_ls8c_ard_3:
-      regression_coefficients:
-        blue:
-          - 4.1
-          - 0.97470
-        green:
-          - 28.9
-          - 0.99779
-        red:
-          - 27.4
-          - 1.00446
-        nir:
-          - 0.4
-          - 0.98906
-        swir1:
-          - 25.6
-          - 0.99467
-        swir2:
-          - -32.7
-          - 1.02551
-
 output:
   location: s3://dea-public-data/derivative/
   nodata: 255
