@@ -1,5 +1,5 @@
 
-# ABARES Catchment scale land use of Australia - Update December 2024
+# ABARES Catchment scale land use of Australia - Update December 2023
 
 ## About the Data
 
