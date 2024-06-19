@@ -352,11 +352,6 @@
   },
   "links":[
     {
-      "rel":"self",
-      "href":"s3://dea-public-data-dev/abares_clum_2023/abares_clum_2023.stac-item.json",
-      "type":"application/json"
-    },
-    {
       "rel":"via",
       "href":"http://www.doi.org/10.25814/2w2p-ph98",
       "type":"text/html;charset=utf-8"
