@@ -371,7 +371,7 @@
       "type":"image/jpeg"
     },
     "alum_class":{
-      "href":"https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/abares_clum_2023/clum_50m_2023.tiff",
+      "href":"clum_50m_2023.tiff",
       "type":"image/tiff; application=geotiff; profile=cloud-optimized",
       "title":"alum_class",
       "raster:bands":[
