@@ -1,6 +1,6 @@
 plugin: dem_in_stats # this can help system find the relative plugin and plugin version
 plugin_config:
-  resampling: max
+  resampling: nearest
   input_bands: [nidem]
   measurements: [elevation]
 
