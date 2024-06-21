@@ -10,8 +10,8 @@ plugin_config:
     surface: 210
 
 product:
-  name: ga_ls_veg_class_l1_cyear_3
-  short_name: ga_ls_veg_class_l1_cyear_3
+  name: ga_ls_staging_l3_l4_cyear_3
+  short_name: ga_ls_staging_l3_l4_cyear_3
   version: 0.0.1
   product_family: lccs
 
