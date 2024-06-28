@@ -86,7 +86,7 @@ apply_eodatasets3: True
 dataset_filters: >-
   {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
   {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}|
-  {"eo:platform": "landsat-9"}
+  {"datetime": "2022-01--P10Y", "eo:platform": "landsat-9"}
 output_location: >-
   s3://dea-public-data/derivative/ga_ls_tc_pc_cyear_3/2-0-0
 
