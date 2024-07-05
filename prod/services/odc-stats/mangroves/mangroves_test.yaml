@@ -1,0 +1,63 @@
+plugin: mangroves # this can help system find the relative plugin and plugin version
+plugin_config:
+  mangroves_extent: maximum_extent_of_mangroves_Apr2019.shp # this needs to be overwritten by the path where shapefile presents
+  pv_thresholds: [14, 40, 62]
+
+product:
+  name: ga_ls_mangrove_cover_cyear_3
+  short_name: ga_ls_mangrove_cover_cyear_3
+  version: 4.0.1
+  product_family: mangrove_cover
+
+  # -- EO Dataset3 relative section --
+  naming_conventions_values: dea_c3
+  explorer_path: https://explorer.dea.ga.gov.au/
+  classifier: ard
+  maturity: final
+  collection_number: 3
+
+  preview_image_ows_style:
+    name: mangrove
+    title: Mangrove Cover
+    abstract: Mangrove canopy cover class
+    value_map:
+      canopy_cover_class:
+        - title: "Not Observed"
+          abstract: "(Clear Obs < 3)"
+          values:
+            - 0
+          color: "#BDBDBD"
+        - title: "Woodland"
+          abstract: "(20% - 50% cover)"
+          values:
+            - 1
+          color: "#9FFF4C"
+        - title: "Open Forest"
+          abstract: "(50% - 80% cover)"
+          values:
+            - 2
+          color: "#5ECC00"
+        - title: "Closed Forest"
+          abstract: "(>80% cover)"
+          values:
+            - 3
+          color: "#3B7F00"
+
+aws_unsigned: True
+
+max_processing_time: 1200
+job_queue_max_lease: 300
+renew_safety_margin: 60
+future_poll_interval: 2
+s3_acl: public-read
+# Generic product attributes
+cog_opts:
+  zlevel: 9
+apply_eodatasets3: True
+output_location: >-
+  s3://dea-public-data-dev/test/derivative/ga_ls_mangrove_cover_cyear_3/4-0-1
+# save-tasks config
+input_products: >-
+  s3://dea-public-data/derivative/ga_ls_fc_pc_cyear_3/4-0-0/+s3://dea-public-data/derivative/ga_ls_tc_pc_cyear_3/2-0-0/
+frequency: annual
+grid: au_extended_30
