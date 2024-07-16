@@ -163,6 +163,33 @@ style_intertidal_elevation_adaptive = {
             "hot": "ta_hot",
         },
     },
+    "multi_date": [
+        {
+            "allowed_count_range": [2, 2],
+            "animate": False,
+            "preserve_user_date_order": True,
+            "pass_raw_data": True,
+            "aggregator_function": {
+                "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.multi_date_raw_elevation",
+                "mapped_bands": True,
+                "kwargs": {
+                    "band": "elevation",
+                }
+            },
+            "mpl_ramp": "RdBu",
+            "range": [-0.5, 0.5],
+            "legend": {
+                "begin": "-0.5",
+                "end": "0.5",
+                "ticks": [
+                    "-0.5",
+                    "0.0",
+                    "0.5",
+                ]
+            },
+            "feature_info_label": "elevation_difference",
+        },
+    ],
     "include_in_feature_info": False,
     "needed_bands": ["elevation", "ta_lot", "ta_hot"],
     "mpl_ramp": "viridis",
