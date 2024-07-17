@@ -1087,7 +1087,7 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA Intertidal (Sentinel-2, Landsat)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/wms",
+                                    "url": "https://nc-ows.dev.dea.ga.gov.au/wms",
                                     "opacity": 1,
                                     "layers": "ga_s2ls_intertidal_cyear_3",
                                     "linkedWcsUrl": "https://nc-ows.dev.dea.ga.gov.au/",
