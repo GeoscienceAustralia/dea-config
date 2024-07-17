@@ -1090,7 +1090,7 @@
                                     "url": "https://ows.dev.dea.ga.gov.au/wms",
                                     "opacity": 1,
                                     "layers": "ga_s2ls_intertidal_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://nc-ows.dev.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2ls_intertidal_cyear_3",
                                     "dateFormat": "'Year: 'yyyy",
                                     "availableDiffStyles": ["intertidal_elevation_adaptive"],
