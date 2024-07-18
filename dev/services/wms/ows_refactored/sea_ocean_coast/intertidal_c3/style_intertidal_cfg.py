@@ -179,6 +179,7 @@ style_intertidal_elevation_adaptive = {
             "mpl_ramp": "RdBu",
             "range": [-0.5, 0.5],
             "legend": {
+                "title": "Elevation change (metres)",
                 "begin": "-0.5",
                 "end": "0.5",
                 "ticks": [
