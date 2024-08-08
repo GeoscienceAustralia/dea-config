@@ -1,16 +1,19 @@
-plugin: veg_count # this can help system find the relative plugin and plugin version
+plugin: woody_cover # this can help system find the relative plugin and plugin version
 plugin_config:
-  cloud_filters:
-    cloud:
-      - [dilation, 6]
-    cloud_shadow:
-      - [dilation, 6]
-  transform_code: EPSG:9688
-  area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
+  input_bands: [nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, nbart_swir_2, classes_l3_l4]
+  mask_bands: 
+    classes_l3_l4: 110
+  model_path: woody_treelite.so
+  output_classes:
+    woody: 113
+    herbaceous: 114
+  chunks:
+    y: 400 
+    x: 400 
 
 product:
-  name: ga_ls_veg_water_cyear_3
-  short_name: ga_ls_veg_water_cyear_3
+  name: ga_ls_woody_cover_cyear_3
+  short_name: ga_ls_woody_cover_cyear_3
   version: 0.0.1
   product_family: lccs
 
@@ -83,9 +86,9 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/test/lccs/ga_ls_veg_water_cyear_3/0-0-1
+  s3://dea-public-data-dev/test/lccs/ga_ls_woody_cover_cyear_3/0-0-1
 
 # save-tasks options
-input_products: ga_ls_fc_3+ga_ls_wo_3
+input_products: ga_ls5t_gm_cyear_3-ga_ls7e_gm_cyear_3-ga_ls8cls9c_gm_cyear_3-s3://dea-public-data-dev/test/lccs/ga_ls_staging_l3_l4_cyear_3/0-0-1/
 frequency: annual
 grid: au_extended_30
