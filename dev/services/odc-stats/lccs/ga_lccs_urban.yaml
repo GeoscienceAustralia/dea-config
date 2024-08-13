@@ -81,7 +81,7 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/test/tebadi-tests/lccs/ga_ls_urban_cyear_3/0-0-1
+  s3://dea-public-data-dev/test/tebadi-tests/lccs/ga_ls_urban_cyear_3/0-0-1-r1
 
 # save-tasks options
 input_products: ga_ls5t_gm_cyear_3-ga_ls7e_gm_cyear_3-ga_ls8cls9c_gm_cyear_3
