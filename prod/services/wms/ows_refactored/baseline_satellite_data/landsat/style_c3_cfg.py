@@ -11,7 +11,7 @@ pq_mask_fmask_land = [
     {
         "band": "land",
         "invert": True,
-        "values": [1],
+        "values": [0],
     }
 ]
 
