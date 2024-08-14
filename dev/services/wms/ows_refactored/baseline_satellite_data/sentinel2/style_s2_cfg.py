@@ -14,7 +14,7 @@ s2_cloudless_mask = [
     {
         "band": "land",
         "invert": True,
-        "values": [1],
+        "values": [0],
     }
 ]
 
