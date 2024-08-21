@@ -86,9 +86,9 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/test/lccs/ga_ls_cultivated_cyear_3/0-0-1
+  s3://dea-public-data-dev/test/lccs/ga_ls_cultivated_cyear_3/0-0-1-rc1
 
 # save-tasks options
-input_products: ga_ls5t_gm_cyear_3-ga_ls7e_gm_cyear_3-ga_ls8cls9c_gm_cyear_3-s3://dea-public-data-dev/test/lccs/ga_ls_staging_l3_l4_cyear_3/0-0-1/
+input_products: ga_ls5t_gm_cyear_3-ga_ls7e_gm_cyear_3-ga_ls8cls9c_gm_cyear_3-s3://dea-public-data-dev/test/lccs/ga_ls_staging_l3_l4_cyear_3/0-0-2/
 frequency: annual
 grid: au_extended_30
