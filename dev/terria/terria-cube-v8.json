@@ -996,10 +996,15 @@
                                     "modelDimensions": [
                                        {
                                          "id": "Style",
+                                         "name": "Style",
                                          "options": [
                                            {
                                              "id": "Default",
-                                             "value": {"styles": None}
+                                             "value": {"styles": ""}
+                                           },
+                                           {
+                                             "id": "Rates of change",
+                                             "value": {"styles": "RateOfChangeStatistics"}
                                            },
                                            {
                                              "id": "Annual shorelines",
