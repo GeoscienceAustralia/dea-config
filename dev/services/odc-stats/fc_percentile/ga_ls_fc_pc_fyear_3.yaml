@@ -1,18 +1,18 @@
-plugin: fc-percentiles # this can help system find the relative plugin and plugin version
+plugin: veg_count # this can help system find the relative plugin and plugin version
 plugin_config:
   cloud_filters:
     cloud:
-      - [dilation, 5]
+      - [dilation, 6]
     cloud_shadow:
-      - [dilation, 10]
+      - [dilation, 6]
   transform_code: EPSG:9688
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
-  name: ga_ls_fc_pc_fyear_3
-  short_name: ga_ls_fc_pc_fyear_3
-  version: 3.0.0
-  product_family: fc_percentile
+  name: ga_ls_veg_water_cyear_3
+  short_name: ga_ls_veg_water_cyear_3
+  version: 0.0.2
+  product_family: lccs
 
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
@@ -56,21 +56,21 @@ product:
     - landsat:wrs_path
     - landsat:wrs_row
 
-  preview_image_ows_style:
-    name: fc_rgb
-    title: Three-band fractional cover
-    abstract: Fractional cover medians - red is bare soil, green is green vegetation and
-      blue is non-green vegetation
-    components:
-      red:
-        bs_pc_50: 1
-      green:
-        pv_pc_50: 1
-      blue:
-        npv_pc_50: 1
-    scale_range:
-    - 0
-    - 100
+      # preview_image_ows_style:
+      #   name: fc_rgb
+      #   title: Three-band fractional cover
+      #   abstract: Fractional cover medians - red is bare soil, green is green vegetation and
+      #     blue is non-green vegetation
+      #   components:
+      #     red:
+      #       bs_pc_50: 1
+      #     green:
+      #       pv_pc_50: 1
+      #     blue:
+      #       npv_pc_50: 1
+      #   scale_range:
+      #   - 0
+      #   - 100
 
 aws_unsigned: True
 
@@ -78,18 +78,15 @@ max_processing_time: 1200
 job_queue_max_lease: 300
 renew_safety_margin: 60
 future_poll_interval: 2
-s3_acl: public-read
+s3_acl: bucket-owner-full-control
 # Generic product attributes
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
-dataset_filters: >-
-  {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
-  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_fc_pc_fyear_3/3-0-0
+  s3://dea-public-data-dev/test/lccs/ga_ls_veg_water_cyear_3/0-0-2
 
 # save-tasks options
 input_products: ga_ls_fc_3+ga_ls_wo_3
-frequency: annual-fy
-grid: au-30
+frequency: annual
+grid: au_extended_30
