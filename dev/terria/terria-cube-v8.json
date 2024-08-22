@@ -998,7 +998,7 @@
                                          "options": [
                                            {
                                              "id": "Default",
-                                             "value": {"styles": "default-style-DEACoastlines"}
+                                             "value": {"styles": None}
                                            },
                                            {
                                              "id": "Annual shorelines",
