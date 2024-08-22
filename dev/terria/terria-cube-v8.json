@@ -987,7 +987,7 @@
                                     "type": "wms",
                                     "name": "DEA Coastlines",
                                     "id": "dea_coastlines_dev",
-                                    "shortReport": "<i>Change styles or zoom in to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
+                                    "shortReport": "<i>Change styles or zoom to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                     "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                     "opacity": 1,
                                     "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
