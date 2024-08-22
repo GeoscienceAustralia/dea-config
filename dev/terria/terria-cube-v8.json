@@ -992,6 +992,7 @@
                                     "opacity": 1,
                                     "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
                                     "layers": "dea:DEACoastlines",
+                                    "disableDimensionSelectors": true,
                                     "modelDimensions": [
                                        {
                                          "id": "Style",
