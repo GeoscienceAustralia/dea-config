@@ -1,20 +1,18 @@
-plugin: woody_cover # this can help system find the relative plugin and plugin version
+plugin: veg_class_l1 # this can help system find the relative plugin and plugin version
 plugin_config:
-  input_bands: [nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, nbart_swir_2, classes_l3_l4]
-  mask_bands: 
-    classes_l3_l4: 110
-  model_path: woody_treelite.so
+  input_bands: [nbart_red, nbart_green, nbart_blue, veg_frequency, frequency, dem_h]
+  optional_bands: [canopy_cover_class, elevation]
   output_classes:
-    woody: 113
-    herbaceous: 114
-  chunks:
-    y: 400 
-    x: 400 
+    aquatic_veg: 124
+    terrestrial_veg: 110
+    water: 221
+    intertidal: 223
+    surface: 210
 
 product:
-  name: ga_ls_woody_cover_cyear_3
-  short_name: ga_ls_woody_cover_cyear_3
-  version: 0.0.1
+  name: ga_ls_staging_l3_l4_cyear_3
+  short_name: ga_ls_staging_l3_l4_cyear_3
+  version: 0.0.2
   product_family: lccs
 
   # -- EO Dataset3 relative section --
@@ -86,9 +84,15 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/test/lccs/ga_ls_woody_cover_cyear_3/0-0-1-rc1
+  s3://dea-public-data-dev/test/lccs/ga_ls_staging_l3_l4_cyear_3/0-0-2
 
 # save-tasks options
-input_products: ga_ls5t_gm_cyear_3-ga_ls7e_gm_cyear_3-ga_ls8cls9c_gm_cyear_3-s3://dea-public-data-dev/test/lccs/ga_ls_staging_l3_l4_cyear_3/0-0-2/
+input_products: ga_ls7e_gm_cyear_3+ga_ls_wo_fq_cyear_3+s3://dea-public-data-dev/test/lccs/ga_ls_veg_water_cyear_3/0-0-2/+s3://dea-public-data-dev/derivative/ga_ls_mangrove_cover_cyear_3/4-0-0/+s3://dea-public-data-dev/test/lccs/ga_ls_dem_3/0-0-2/+s3://dea-public-data-dev/test/lccs/ga_ls_nidem_3/0-0-2/
+ignore_time:
+  - s3://dea-public-data-dev/test/lccs/ga_ls_dem_3/0-0-2/
+  - s3://dea-public-data-dev/test/lccs/ga_ls_nidem_3/0-0-2/
+optional_products:
+  - s3://dea-public-data-dev/derivative/ga_ls_mangrove_cover_cyear_3/4-0-0/
+  - s3://dea-public-data-dev/test/lccs/ga_ls_nidem_3/0-0-2/
 frequency: annual
 grid: au_extended_30
