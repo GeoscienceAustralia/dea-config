@@ -1,15 +1,15 @@
 plugin: woody_cover # this can help system find the relative plugin and plugin version
 plugin_config:
   input_bands: [nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, nbart_swir_2, classes_l3_l4]
-  mask_bands: 
+  mask_bands:
     classes_l3_l4: 110
   model_path: woody_treelite.so
   output_classes:
     woody: 113
     herbaceous: 114
   chunks:
-    y: 400 
-    x: 400 
+    y: 400
+    x: 400
 
 product:
   name: ga_ls_woody_cover_cyear_3
@@ -86,7 +86,7 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/test/lccs/ga_ls_woody_cover_cyear_3/0-0-1-rc1
+  s3://dea-public-data-dev/test/lccs/ga_ls_woody_cover_cyear_3/0-0-2
 
 # save-tasks options
 input_products: ga_ls5t_gm_cyear_3-ga_ls7e_gm_cyear_3-ga_ls8cls9c_gm_cyear_3-s3://dea-public-data-dev/test/lccs/ga_ls_staging_l3_l4_cyear_3/0-0-2/
