@@ -1,5 +1,3 @@
-from ows_refactored.baseline_satellite_data.landsat_annual.band_c3_ls_cfg import \
-    bands_c3_ls
 from ows_refactored.baseline_satellite_data.landsat_annual.band_c3_ls_nbart_cfg import \
     bands_c3_ls_nbart
 from ows_refactored.baseline_satellite_data.landsat_annual.style_c3_ls_cfg import \
