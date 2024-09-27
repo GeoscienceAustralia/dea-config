@@ -145,9 +145,9 @@
             ]
         },
         {
-            "layer": "ga_ls8c_nbart_gm_cyear_3",
+            "layer": "ga_ls8cls9c_gm_cyear_3",
             "product": [
-                "ga_ls8c_nbart_gm_cyear_3"
+                "ga_ls8cls9c_gm_cyear_3"
             ],
             "styles_count": 17,
             "styles_list": [
@@ -171,9 +171,9 @@
             ]
         },
         {
-            "layer": "ga_ls7e_nbart_gm_cyear_3",
+            "layer": "ga_ls7e_gm_cyear_3",
             "product": [
-                "ga_ls7e_nbart_gm_cyear_3"
+                "ga_ls7e_gm_cyear_3"
             ],
             "styles_count": 17,
             "styles_list": [
@@ -197,9 +197,9 @@
             ]
         },
         {
-            "layer": "ga_ls5t_nbart_gm_cyear_3",
+            "layer": "ga_ls5t_gm_cyear_3",
             "product": [
-                "ga_ls5t_nbart_gm_cyear_3"
+                "ga_ls5t_gm_cyear_3"
             ],
             "styles_count": 17,
             "styles_list": [
