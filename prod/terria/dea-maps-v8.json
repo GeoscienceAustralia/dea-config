@@ -103,7 +103,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS, version 4)",
+                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls8cls9c_gm_cyear_3",
@@ -131,7 +131,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 7 ETM+, version 4)",
+                                    "name": "DEA GeoMAD (Landsat 7 ETM+)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_gm_cyear_3",
@@ -159,7 +159,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 5 TM, version 4)",
+                                    "name": "DEA GeoMAD (Landsat 5 TM)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls5t_gm_cyear_3",
