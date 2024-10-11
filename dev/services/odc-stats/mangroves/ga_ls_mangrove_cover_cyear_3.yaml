@@ -59,6 +59,6 @@ output_location: >-
 
 # save-tasks config
 input_products: >-
-  # s3://dea-public-data-dev/test/derivative/ga_ls_fc_pc_cyear_3/4-0-1/+s3://dea-public-data-dev/test/derivative/ga_ls_tc_pc_cyear_3/2-0-1/
+  s3://dea-public-data-dev/test/derivative/ga_ls_fc_pc_cyear_3/4-0-1/+s3://dea-public-data-dev/test/derivative/ga_ls_tc_pc_cyear_3/2-0-1/
 frequency: annual
 grid: au_extended_30
