@@ -1,4 +1,4 @@
-plugin: lccs_level3 # this can help system find the relative plugin and plugin version
+plugin: lccs_level34 # this can help system find the relative plugin and plugin version
 plugin_config:
   input_bands: [classes_l3_l4, urban_classes, cultivated_class]
 product:
