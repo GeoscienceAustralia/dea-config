@@ -9,9 +9,9 @@ plugin_config:
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
-  name: ga_ls_veg_water_cyear_3
-  short_name: ga_ls_veg_water_cyear_3
-  version: 0.0.2
+  name: ga_ls_landcover_vwf_cyear_3
+  short_name: ga_ls_landcover_vwf_cyear_3
+  version: 1.0.0
   product_family: lccs
 
   # -- EO Dataset3 relative section --
@@ -83,7 +83,7 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/test/lccs/ga_ls_veg_water_cyear_3/0-0-2
+  s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/1-0-0
 
 # save-tasks options
 input_products: ga_ls_fc_3+ga_ls_wo_3
