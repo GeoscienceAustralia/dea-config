@@ -1,0 +1,27 @@
+name: ga_ls_landcover_vwf_cyear_3
+
+description: Geoscience Australia Landsat Landcover Vegetation Water Frequency Calender Year Collection 3
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: lc
+  product:
+    name: ga_ls_landcover_vwf_cyear_3
+
+measurements:
+  - name: veg_water_frequency
+    dtype: uint8
+    nodata: 255
+    units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution: 
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0
