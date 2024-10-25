@@ -1,6 +1,6 @@
-name: ga_ls5_landcover_inter_class_cyear_3
+name: ga_ls_landcover_inter_class_cyear_3
 
-description: Geoscience Australia Landsat 5 Landcover Intermediate Level 3 & 4 Classification Calender Year Collection 3
+description: Geoscience Australia Landsat Landcover Intermediate Level 3 & 4 Classification Calender Year Collection 3
 license: CC-BY-4.0
 metadata_type: eo3
 
@@ -9,7 +9,7 @@ metadata:
     odc:file_format: GeoTIFF
     odc:product_family: lc
   product:
-    name: ga_ls5_landcover_inter_class_cyear_3
+    name: ga_ls_landcover_inter_class_cyear_3
 
 measurements:
   - name: level_3_4
