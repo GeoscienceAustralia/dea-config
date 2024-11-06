@@ -12,7 +12,7 @@ metadata:
     name: ga_ls_landcover_woody_cover_cyear_3
 
 measurements:
-  - name: woody_cover
+  - name: woody
     dtype: uint8
     nodata: 255
     units: '1'
