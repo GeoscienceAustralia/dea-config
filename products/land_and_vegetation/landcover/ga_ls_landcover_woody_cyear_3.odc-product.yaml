@@ -1,6 +1,6 @@
 name: ga_ls_landcover_woody_cover_cyear_3
 
-description: Geoscience Australia Landsat Landcover Woody Cover Calender Year Collection 3
+description: Geoscience Australia Landsat Landcover Woody Calender Year Collection 3
 license: CC-BY-4.0
 metadata_type: eo3
 
@@ -9,7 +9,7 @@ metadata:
     odc:file_format: GeoTIFF
     odc:product_family: lc
   product:
-    name: ga_ls_landcover_woody_cover_cyear_3
+    name: ga_ls_landcover_woody_cyear_3
 
 measurements:
   - name: woody
