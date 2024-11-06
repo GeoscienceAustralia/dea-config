@@ -62,6 +62,6 @@ output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls_landcover_class_cyear_3/1-0-0
 
 # save-tasks options
-input_products: s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/1-0-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_urban_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/1-0-0
+input_products: s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/1-0-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/1-0-0
 frequency: annual
 grid: au_extended_30
