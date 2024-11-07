@@ -37,36 +37,29 @@ style_c3_level4_lifeform = {
     "title": "Lifeform",
     "abstract": "Lifeform (L4): woody / herbaceous",
     "value_map": {
-        "level3": [
+        "level4": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Woody", 'abstract': "", 'values': [20, 38, 56], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Herbaceous", 'abstract': "", 'values': [2], 'color': '#77A71E', 'alpha': 1}
+            {'title': "Woody", 'abstract': "", 'values': [2, 20, 38, 56], 'color': '#0E7912', 'alpha': 1},
+            {'title': "Herbaceous", 'abstract': "", 'values': [3, 21, 39, 57], 'color': '#77A71E', 'alpha': 1}
         ]
     },
 }
 
 
-style_c2_level4_canopyco = {
+style_c3_level4_canopyco = {
     "name": "canopyco",
     "title": "Vegetation Cover",
     "abstract": "Vegetation Cover (L4)",
     "value_map": {
-        'canopyco_veg_cat_l4d': [
+        'level4': [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Closed Vegetation", 'abstract': "(> 65 %)", 'values': [10], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Open Vegetation", 'abstract': "(40 to 65 %)", 'values': [12], 'color': '#2D8D2F', 'alpha': 1},
-            {'title': "Open Vegetation", 'abstract': "(15 to 40 %)", 'values': [13], 'color': '#50A052', 'alpha': 1},
-            {'title': "Sparse Vegetation", 'abstract': "(4 to 15 %)", 'values': [15], 'color': '#75B476', 'alpha': 1},
-            {'title': "Scattered Vegetation", 'abstract': "(1 to 4 %)", 'values': [16], 'color': '#9AC79C', 'alpha': 1}
+            {'title': "Closed Vegetation", 'abstract': "(> 65 %)", 'values': [4,9,14,22,27,32,40,45,50,58,63,64,65,78,79,80], 'color': '#0E7912', 'alpha': 1},
+            {'title': "Open Vegetation", 'abstract': "(40 to 65 %)", 'values': [5,10,15,23,28,33,41,46,51,59,66,67,68,81,82,83], 'color': '#2D8D2F', 'alpha': 1},
+            {'title': "Open Vegetation", 'abstract': "(15 to 40 %)", 'values': [6,11,16,24,29,34,42,47,52,60,69,70,71,84,85,86], 'color': '#50A052', 'alpha': 1},
+            {'title': "Sparse Vegetation", 'abstract': "(4 to 15 %)", 'values': [7,12,17,25,30,35,43,48,53,61,72,73,74,87,88,89], 'color': '#75B476', 'alpha': 1},
+            {'title': "Scattered Vegetation", 'abstract': "(1 to 4 %)", 'values': [8,13,18,26,31,36,44,49,54,62,75,76,77,90,91,92], 'color': '#9AC79C', 'alpha': 1}
         ]
     },
-    # "pq_masks": [
-    #     {
-    #         "band": "land",
-    #         "invert": True,
-    #         "enum": 0,
-    #     }
-    # ],
 }
 
 
@@ -75,7 +68,7 @@ style_c2_level4_watersea = {
     "title": "Water Seasonality",
     "abstract": "Water Seasonality (L4) in vegetated areas",
     "value_map": {
-        "watersea_veg_cat_l4a_au": [
+        "level4": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
             {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
@@ -89,7 +82,7 @@ style_c2_level4_waterper = {
     "title": "Water Persistence",
     "abstract": "Water persistence in non-vegetated areas",
     "value_map": {
-        "waterper_wat_cat_l4d_au": [
+        "level4": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Perennial", 'abstract': "(> 9 months)", 'values': [1], 'color': '#1b55ba', 'alpha': 1},
             {'title': "Non-perennial", 'abstract': "(7 to 9 months)", 'values': [7], 'color': '#3479C9', 'alpha': 1},
@@ -105,20 +98,13 @@ style_c2_level4_baregrad = {
     "title": "Bare Gradation",
     "abstract": "Level of vegetation in predominantly bare areas",
     "value_map": {
-        "baregrad_phy_cat_l4d_au": [
+        "level4": [
             {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Sparsely Vegetated", 'abstract': "", 'values': [10], 'color': '#FFE68C', 'alpha': 1},
             {'title': "Very Sparsely Vegetated", 'abstract': "", 'values': [12], 'color': '#FAD26E', 'alpha': 1},
             {'title': "Bare Areas, Unvegetated", 'abstract': "", 'values': [15], 'color': '#F3AB69', 'alpha': 1}
         ]
     },
-    # "pq_masks": [
-    #     {
-    #         "band": "land",
-    #         "invert": True,
-    #         "enum": 0,
-    #     }
-    # ],
 }
 
 
@@ -236,13 +222,6 @@ style_c2_level4 = {
             # {'title': 'Water: (Snow)', 'abstract': '', 'values': [105], 'color': '#fafafa', 'alpha': 1},
         ]
     },
-    # "pq_masks": [
-    #     {
-    #         "band": "land",
-    #         "invert": True,
-    #         "enum": 0,
-    #     }
-    # ],
     "legend": {
         "show_legend": True,
         "url": "https://data.dea.ga.gov.au/derivative/ga_ls_landcover_class_cyear_2/level4-web-legend.png"
@@ -264,29 +243,21 @@ Land cover is the observed physical cover on the Earth's surface including trees
 For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "ga_ls_landcover_class_cyear_2",
+            "product_name": "ga_ls_landcover_class_cyear_3",
             "bands": bands_landcover,
             "time_resolution": "summary",
             "resource_limits": reslim_for_lccs,
             "dynamic": True,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            # "flags": [
-            #     {
-            #         "band": "land",
-            #         "product": "geodata_coast_100k",
-            #         "ignore_time": True,
-            #         "ignore_info_flags": [],
-            #     }
-            # ],
             "styling": {
                 "default_style": "level4",
-                "styles": [style_c2_level3, style_c2_level4],
+                "styles": [style_c3_level3, style_c3_level4],
             },
             "feature_info": {
                 "include_custom": {
@@ -306,29 +277,21 @@ Land cover is the observed physical cover on the Earth's surface including trees
 For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/
 
 For service status information, see https://status.dea.ga.gov.au""",
-            "product_name": "ga_ls_landcover_class_cyear_2",
+            "product_name": "ga_ls_landcover_class_cyear_3",
             "bands": bands_eds,
             "time_resolution": "summary",
             "resource_limits": reslim_for_lccs,
             "dynamic": True,
             "native_crs": "EPSG:3577",
-            "native_resolution": [25, -25],
+            "native_resolution": [30, -30],
             "image_processing": {
                 "extent_mask_func": [],
                 "always_fetch_bands": [],
                 "manual_merge": False,
             },
-            # "flags": [
-            #     {
-            #         "band": "land",
-            #         "product": "geodata_coast_100k",
-            #         "ignore_time": True,
-            #         "ignore_info_flags": [],
-            #     }
-            # ],
             "styling": {
                 "default_style": "canopyco",
-                "styles": [style_c2_level4_canopyco, style_c2_level4_lifeform, style_c2_level4_watersea, style_c2_level4_waterper, style_c2_level4_baregrad],
+                "styles": [style_c3_level4_canopyco, style_c3_level4_lifeform, style_c3_level4_watersea, style_c3_level4_waterper, style_c3_level4_baregrad],
             },
             "feature_info": {
                 "include_custom": {
