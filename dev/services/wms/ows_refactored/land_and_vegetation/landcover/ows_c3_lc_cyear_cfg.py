@@ -38,9 +38,9 @@ style_c3_level4_lifeform = {
     "abstract": "Lifeform (L4): woody / herbaceous",
     "value_map": {
         "level4": [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Woody", 'abstract': "", 'values': [2, 20, 38, 56], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Herbaceous", 'abstract': "", 'values': [3, 21, 39, 57], 'color': '#77A71E', 'alpha': 1}
+            {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': "Woody", 'abstract': "", 'values': [2,20,38,56], 'color': '#0E7912', 'alpha': 1},
+            {'title': "Herbaceous", 'abstract': "", 'values': [3,21,39,57], 'color': '#77A71E', 'alpha': 1}
         ]
     },
 }
@@ -52,7 +52,7 @@ style_c3_level4_canopyco = {
     "abstract": "Vegetation Cover (L4)",
     "value_map": {
         'level4': [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
             {'title': "Closed Vegetation", 'abstract': "(> 65 %)", 'values': [4,9,14,22,27,32,40,45,50,58,63,64,65,78,79,80], 'color': '#0E7912', 'alpha': 1},
             {'title': "Open Vegetation", 'abstract': "(40 to 65 %)", 'values': [5,10,15,23,28,33,41,46,51,59,66,67,68,81,82,83], 'color': '#2D8D2F', 'alpha': 1},
             {'title': "Open Vegetation", 'abstract': "(15 to 40 %)", 'values': [6,11,16,24,29,34,42,47,52,60,69,70,71,84,85,86], 'color': '#50A052', 'alpha': 1},
@@ -69,9 +69,9 @@ style_c2_level4_watersea = {
     "abstract": "Water Seasonality (L4) in vegetated areas",
     "value_map": {
         "level4": [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [1], 'color': '#19AD6D', 'alpha': 1},
-            {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [2], 'color': '#B0DAC9', 'alpha': 1}
+            {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [64,67,70,73,76,79,82,85,88,91], 'color': '#19AD6D', 'alpha': 1},
+            {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [65,68,71,74,77,80,83,86,89,92], 'color': '#B0DAC9', 'alpha': 1}
         ]
     },
 }
@@ -83,11 +83,11 @@ style_c2_level4_waterper = {
     "abstract": "Water persistence in non-vegetated areas",
     "value_map": {
         "level4": [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Perennial", 'abstract': "(> 9 months)", 'values': [1], 'color': '#1b55ba', 'alpha': 1},
-            {'title': "Non-perennial", 'abstract': "(7 to 9 months)", 'values': [7], 'color': '#3479C9', 'alpha': 1},
-            {'title': "Non-perennial", 'abstract': "(4 to 6 months)", 'values': [8], 'color': '#4F9DD9', 'alpha': 1},
-            {'title': "Non-perennial", 'abstract': "(1 to 3 months)", 'values': [9], 'color': '#71CAFD', 'alpha': 1}
+            {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': "Perennial", 'abstract': "(> 9 months)", 'values': [101], 'color': '#1b55ba', 'alpha': 1},
+            {'title': "Non-perennial", 'abstract': "(7 to 9 months)", 'values': [102], 'color': '#3479C9', 'alpha': 1},
+            {'title': "Non-perennial", 'abstract': "(4 to 6 months)", 'values': [103], 'color': '#4F9DD9', 'alpha': 1},
+            {'title': "Non-perennial", 'abstract': "(1 to 3 months)", 'values': [104], 'color': '#71CAFD', 'alpha': 1}
         ]
     }
 }
@@ -99,10 +99,10 @@ style_c2_level4_baregrad = {
     "abstract": "Level of vegetation in predominantly bare areas",
     "value_map": {
         "level4": [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Sparsely Vegetated", 'abstract': "", 'values': [10], 'color': '#FFE68C', 'alpha': 1},
-            {'title': "Very Sparsely Vegetated", 'abstract': "", 'values': [12], 'color': '#FAD26E', 'alpha': 1},
-            {'title': "Bare Areas, Unvegetated", 'abstract': "", 'values': [15], 'color': '#F3AB69', 'alpha': 1}
+            {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': "Sparsely Vegetated", 'abstract': "", 'values': [95], 'color': '#FFE68C', 'alpha': 1},
+            {'title': "Very Sparsely Vegetated", 'abstract': "", 'values': [96], 'color': '#FAD26E', 'alpha': 1},
+            {'title': "Bare Areas, Unvegetated", 'abstract': "", 'values': [97], 'color': '#F3AB69', 'alpha': 1}
         ]
     },
 }
@@ -114,7 +114,7 @@ style_c2_level4 = {
     "abstract": "Standardised colouring of Level 4 land cover classes",
     "value_map": {
         "level4": [
-            {'title': "", 'abstract': "", 'values': [0], 'color': '#FFFFFF', 'alpha': 0},
+            {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
             {'title': 'Cultivated Terrestrial Vegetated', 'abstract': '', 'values': [1], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Woody', 'abstract': '', 'values': [2], 'color': '#97bb1a', 'alpha': 1},
             {'title': 'Cultivated Terrestrial Vegetated: Herbaceous', 'abstract': '', 'values': [3], 'color': '#d1e033', 'alpha': 1},
@@ -230,13 +230,13 @@ style_c2_level4 = {
 
 
 layers = {
-    "title": "DEA Land Cover",
+    "title": "DEA Land Cover Collection 3",
     "name": "",
     "layers": [
         {
-            "title": "DEA Land Cover Calendar Year (Landsat)",
-            "name": "ga_ls_landcover",
-            "abstract": """DEA Land Cover Calendar Year (Landsat)
+            "title": "DEA Land Cover Collection 3 Calendar Year (Landsat)",
+            "name": "ga_ls_landcover_c3",
+            "abstract": """DEA Land Cover Collection 3 Calendar Year (Landsat)
 
 Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
 
@@ -269,7 +269,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         },
         {
             "title": "DEA Land Cover Environmental Descriptors",
-            "name": "ga_ls_landcover_descriptors",
+            "name": "ga_ls_landcover_c3_descriptors",
             "abstract": """DEA Land Cover Environmental Descriptors
 
 Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
