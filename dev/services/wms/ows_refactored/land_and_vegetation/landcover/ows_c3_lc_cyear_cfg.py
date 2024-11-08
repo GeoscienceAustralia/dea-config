@@ -5,14 +5,6 @@ bands_landcover = {
     "level4": [],
 }
 
-bands_eds = {
-    "lifeform_veg_cat_l4a": ["lifeform"],
-    "canopyco_veg_cat_l4d": ["canopy_cover"],
-    "watersea_veg_cat_l4a_au": ["water_seasonality"],
-    "waterper_wat_cat_l4d_au": ["water_persistence"],
-    "baregrad_phy_cat_l4d_au": ["bare_gradation"],
-}
-
 style_c3_level3 = {
     "name": "level3",
     "title": "Basic",
@@ -278,7 +270,7 @@ For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-land-
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_landcover_class_cyear_3",
-            "bands": bands_eds,
+            "bands": bands_landcover,
             "time_resolution": "summary",
             "resource_limits": reslim_for_lccs,
             "dynamic": True,
