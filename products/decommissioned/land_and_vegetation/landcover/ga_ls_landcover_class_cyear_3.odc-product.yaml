@@ -16,48 +16,6 @@ measurements:
     dtype: uint8
     nodata: 0
     units: '1'
-  - name: lifeform_veg_cat_l4a
-    aliases:
-      - lifeform
-    dtype: uint8
-    nodata: 0
-    units: '1'
-  - name: canopyco_veg_cat_l4d
-    aliases:
-      - vegetation_cover
-    dtype: uint8
-    nodata: 0
-    units: '1'
-  - name: watersea_veg_cat_l4a_au
-    aliases:
-      - water_seasonality
-    dtype: uint8
-    nodata: 0
-    units: '1'
-  - name: waterstt_wat_cat_l4a
-    aliases:
-      - water_state
-    dtype: uint8
-    nodata: 0
-    units: '1'
-  - name: inttidal_wat_cat_l4a
-    aliases:
-      - intertidal
-    dtype: uint8
-    nodata: 0
-    units: '1'
-  - name: waterper_wat_cat_l4d_au
-    aliases:
-      - water_persistence
-    dtype: uint8
-    nodata: 0
-    units: '1'
-  - name: baregrad_phy_cat_l4d_au
-    aliases:
-      - bare_gradation
-    dtype: uint8
-    nodata: 0
-    units: '1'
   - name: level4
     aliases:
       - full_classification
