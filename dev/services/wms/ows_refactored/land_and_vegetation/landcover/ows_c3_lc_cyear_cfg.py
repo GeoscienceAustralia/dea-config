@@ -31,7 +31,7 @@ style_c3_level4_lifeform = {
     "value_map": {
         "level4": [
             {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Woody", 'abstract': "", 'values': [2, 20 ,38 ,56], 'color': '#0E7912', 'alpha': 1},
+            {'title': "Woody", 'abstract': "", 'values': [2, 20, 38, 56], 'color': '#0E7912', 'alpha': 1},
             {'title': "Herbaceous", 'abstract': "", 'values': [3, 21, 39, 57], 'color': '#77A71E', 'alpha': 1}
         ]
     },
