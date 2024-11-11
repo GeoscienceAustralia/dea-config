@@ -13,7 +13,7 @@ product:
   name: ga_ls5_landcover_inter_class_cyear_3
   short_name: ga_ls5_landcover_inter_class_cyear_3
   version: 1.0.0
-  product_family: lccs
+  product_family: lc
 
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
