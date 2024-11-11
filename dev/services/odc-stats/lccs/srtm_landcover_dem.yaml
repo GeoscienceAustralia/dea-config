@@ -12,7 +12,7 @@ product:
   name: srtm_landcover_dem
   short_name: srtm_landcover_dem
   version: 1.0.0
-  product_family: lccs
+  product_family: lc
 
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
