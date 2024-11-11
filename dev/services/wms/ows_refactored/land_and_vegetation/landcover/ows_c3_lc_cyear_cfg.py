@@ -55,7 +55,7 @@ style_c3_level4_canopyco = {
 }
 
 
-style_c2_level4_watersea = {
+style_c3_level4_watersea = {
     "name": "watersea",
     "title": "Water Seasonality",
     "abstract": "Water Seasonality (L4) in vegetated areas",
@@ -69,7 +69,7 @@ style_c2_level4_watersea = {
 }
 
 
-style_c2_level4_waterper = {
+style_c3_level4_waterper = {
     "name": "waterper",
     "title": "Water Persistence",
     "abstract": "Water persistence in non-vegetated areas",
@@ -85,7 +85,7 @@ style_c2_level4_waterper = {
 }
 
 
-style_c2_level4_baregrad = {
+style_c3_level4_baregrad = {
     "name": "baregrad",
     "title": "Bare Gradation",
     "abstract": "Level of vegetation in predominantly bare areas",
@@ -100,7 +100,7 @@ style_c2_level4_baregrad = {
 }
 
 
-style_c2_level4 = {
+style_c3_level4 = {
     "name": "level4",
     "title": "Detailed",
     "abstract": "Standardised colouring of Level 4 land cover classes",
