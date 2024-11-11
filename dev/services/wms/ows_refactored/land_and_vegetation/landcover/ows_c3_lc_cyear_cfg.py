@@ -31,8 +31,8 @@ style_c3_level4_lifeform = {
     "value_map": {
         "level4": [
             {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Woody", 'abstract': "", 'values': [2,20,38,56], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Herbaceous", 'abstract': "", 'values': [3,21,39,57], 'color': '#77A71E', 'alpha': 1}
+            {'title': "Woody", 'abstract': "", 'values': [2, 20 ,38 ,56], 'color': '#0E7912', 'alpha': 1},
+            {'title': "Herbaceous", 'abstract': "", 'values': [3, 21, 39, 57], 'color': '#77A71E', 'alpha': 1}
         ]
     },
 }
@@ -45,11 +45,11 @@ style_c3_level4_canopyco = {
     "value_map": {
         'level4': [
             {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "Closed Vegetation", 'abstract': "(> 65 %)", 'values': [4,9,14,22,27,32,40,45,50,58,63,64,65,78,79,80], 'color': '#0E7912', 'alpha': 1},
-            {'title': "Open Vegetation", 'abstract': "(40 to 65 %)", 'values': [5,10,15,23,28,33,41,46,51,59,66,67,68,81,82,83], 'color': '#2D8D2F', 'alpha': 1},
-            {'title': "Open Vegetation", 'abstract': "(15 to 40 %)", 'values': [6,11,16,24,29,34,42,47,52,60,69,70,71,84,85,86], 'color': '#50A052', 'alpha': 1},
-            {'title': "Sparse Vegetation", 'abstract': "(4 to 15 %)", 'values': [7,12,17,25,30,35,43,48,53,61,72,73,74,87,88,89], 'color': '#75B476', 'alpha': 1},
-            {'title': "Scattered Vegetation", 'abstract': "(1 to 4 %)", 'values': [8,13,18,26,31,36,44,49,54,62,75,76,77,90,91,92], 'color': '#9AC79C', 'alpha': 1}
+            {'title': "Closed Vegetation", 'abstract': "(> 65 %)", 'values': [4, 9, 14, 22, 27, 32, 40, 45, 50, 58, 63, 64, 65, 78, 79, 80], 'color': '#0E7912', 'alpha': 1},
+            {'title': "Open Vegetation", 'abstract': "(40 to 65 %)", 'values': [5, 10, 15, 23, 28, 33, 41, 46, 51, 59, 66, 67, 68, 81, 82, 83], 'color': '#2D8D2F', 'alpha': 1},
+            {'title': "Open Vegetation", 'abstract': "(15 to 40 %)", 'values': [6, 11, 16, 24, 29, 34, 42, 47, 52, 60, 69, 70, 71, 84, 85, 86], 'color': '#50A052', 'alpha': 1},
+            {'title': "Sparse Vegetation", 'abstract': "(4 to 15 %)", 'values': [7, 12, 17, 25, 30, 35, 43, 48, 53, 61, 72, 73, 74, 87, 88, 89], 'color': '#75B476', 'alpha': 1},
+            {'title': "Scattered Vegetation", 'abstract': "(1 to 4 %)", 'values': [8, 13, 18, 26, 31, 36, 44, 49, 54, 62, 75, 76, 77, 90, 91, 92], 'color': '#9AC79C', 'alpha': 1}
         ]
     },
 }
@@ -62,8 +62,8 @@ style_c2_level4_watersea = {
     "value_map": {
         "level4": [
             {'title': "", 'abstract': "", 'values': [255], 'color': '#FFFFFF', 'alpha': 0},
-            {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [64,67,70,73,76,79,82,85,88,91], 'color': '#19AD6D', 'alpha': 1},
-            {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [65,68,71,74,77,80,83,86,89,92], 'color': '#B0DAC9', 'alpha': 1}
+            {'title': "> 3 months", 'abstract': "(semi) permanent", 'values': [64, 67, 70, 73, 76, 79, 82, 85, 88, 91], 'color': '#19AD6D', 'alpha': 1},
+            {'title': "< 3 months", 'abstract': "temporary or seasonal", 'values': [65, 68, 71, 74, 77, 80, 83, 86, 89, 92], 'color': '#B0DAC9', 'alpha': 1}
         ]
     },
 }
