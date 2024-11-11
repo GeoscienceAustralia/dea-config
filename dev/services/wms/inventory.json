@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 76,
+    "total_layers_count": 73,
     "layers": [
         {
             "layer": "s2_ls_combined",
@@ -209,84 +209,6 @@
             "layer": "ga_ls5t_gm_cyear_3",
             "product": [
                 "ga_ls5t_gm_cyear_3"
-            ],
-            "styles_count": 17,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens",
-                "count"
-            ]
-        },
-        {
-            "layer": "ga_ls8c_nbart_gm_cyear_3",
-            "product": [
-                "ga_ls8c_nbart_gm_cyear_3"
-            ],
-            "styles_count": 17,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens",
-                "count"
-            ]
-        },
-        {
-            "layer": "ga_ls7e_nbart_gm_cyear_3",
-            "product": [
-                "ga_ls7e_nbart_gm_cyear_3"
-            ],
-            "styles_count": 17,
-            "styles_list": [
-                "simple_rgb",
-                "infrared_green",
-                "ndvi",
-                "ndwi",
-                "mndwi",
-                "blue",
-                "green",
-                "red",
-                "nir",
-                "swir1",
-                "swir2",
-                "arcsec_sdev",
-                "log_edev",
-                "log_bcdev",
-                "tmad_rgb_std",
-                "tmad_rgb_sens",
-                "count"
-            ]
-        },
-        {
-            "layer": "ga_ls5t_nbart_gm_cyear_3",
-            "product": [
-                "ga_ls5t_nbart_gm_cyear_3"
             ],
             "styles_count": 17,
             "styles_list": [

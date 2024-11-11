@@ -104,11 +104,11 @@
                         {
                             "id": "SDFa45",
                             "type": "group",
-                            "name": "DEA Surface Reflectance Calendar Year (Landsat)",
+                            "name": "DEA GeoMAD Surface Reflectance Calendar Year (Landsat)",
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS, version 4)",
+                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls8cls9c_gm_cyear_3",
@@ -136,7 +136,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 7 ETM+, version 4)",
+                                    "name": "DEA GeoMAD (Landsat 7 ETM+)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls7e_gm_cyear_3",
@@ -164,7 +164,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 5 TM, version 4)",
+                                    "name": "DEA GeoMAD (Landsat 5 TM)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls5t_gm_cyear_3",
@@ -189,90 +189,6 @@
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "ATY879"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 8 OLI-TIRS)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_ls8c_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls8c_nbart_gm_cyear_3",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "pju765"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 7 ETM+)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_ls7e_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls7e_nbart_gm_cyear_3",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "DFG426"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 5 TM)",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_ls5t_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls5t_nbart_gm_cyear_3",
-                                    "chartColor": "white",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Blue - 480</b></td><td>{{data.0.bands.blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.green}}</td></tr>  <tr><td><b>Red - 660</b></td><td>{{data.0.bands.red}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 870</b></td><td>{{data.0.bands.nir}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.swir1}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2200</b></td><td>{{data.0.bands.swir2}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, SWIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, SWIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n480,{{data.0.bands.blue}}\n560,{{data.0.bands.green}}\n660,{{data.0.bands.red}}\n870,{{data.0.bands.nir}}\n1610,{{data.0.bands.swir1}}\n2200,{{data.0.bands.swir2}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
-                                        "formats": {
-                                            "lat": {
-                                                "maximumFractionDigits": 5
-                                            },
-                                            "lon": {
-                                                "maximumFractionDigits": 5
-                                            }
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "dateFormat": "'Year: 'yyyy",
-                                    "id": "FTY875"
                                 }
                             ]
                         },
@@ -812,14 +728,14 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Waterbodies (version 3.0)",
-                                    "shortReport": "<i>Click to highlight a hatched Waterbody polygon. View the DEA Waterbodies timeseries of the percentage of the waterbody surface area observed as wet and the estimated latest open water surface area.</i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/'>DEA Waterbodies product description</a></small>",
+                                    "name": "DEA Waterbodies (version 3.0.0)",
+                                    "shortReport": "<i>Click to highlight a hatched Waterbody polygon. View the DEA Waterbodies time series of the percentage of the waterbody surface area observed as wet and the estimated latest open water surface area.</i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/'>DEA Waterbodies product description</a></small>",
                                     "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
-                                    "description": "Digital Earth Australia Waterbodies v3.0 provides up to date information about the extent and location of surface water, providing all Australians with a common understanding of this valuable and increasingly scarce resource. It supports users to understand and manage water across Australia. For example, users can gain insights into the severity and spatial distribution of drought or monitor critical lakes and dams, including hard-to-reach waterbodies in remote areas and on large properties. </br></br>The product indicates changes in the wet surface area of waterbodies. This can be used to identify when waterbodies are increasing or decreasing in wet surface area.</br></br>DEA Knowledge Hub product details: https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/?tab=overview.</br></br>Scientific paper: <a style=\"color:lightseagreen\" href='https://doi.org/10.3390/rs13081437'>Krause et al. 2021</a></small>.</br></br>DEA Website pages: https://www.dea.ga.gov.au/products/dea-waterbodies",
+                                    "description": "Digital Earth Australia Waterbodies v3.0.0 provides up to date information about the extent and location of surface water, providing all Australians with a common understanding of this valuable and increasingly scarce resource. It supports users to understand and manage water across Australia. For example, users can gain insights into the severity and spatial distribution of drought or monitor critical lakes and dams, including hard-to-reach waterbodies in remote areas and on large properties. </br></br>The product indicates changes in the wet surface area of waterbodies. This can be used to identify when waterbodies are increasing or decreasing in wet surface area.</br></br>DEA Knowledge Hub product details: https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/?tab=overview.</br></br>Scientific paper: <a style=\"color:lightseagreen\" href='https://doi.org/10.3390/rs13081437'>Krause et al. 2021</a></small>.</br></br>DEA Website pages: https://www.dea.ga.gov.au/products/dea-waterbodies",
                                     "info": [
                                         {
                                             "name": "Accuracy and limitations",
-                                            "content": "This product shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. Larger waterbodies are easier to detect and smaller or narrower waterbodies are harder to detect. Area estimates should be compared to additional data for verification.</br></br> Many of the inaccuracies and limitations of the waterbody analysis are inherited from DEA Water Observations (WO), with this product a reanalysis and mapping product built off the WO datasets. WO has a number of known limitations, and these manifest as misclassified waterbodies within this analysis. WO uses the spectral signature of water to classify wet pixels, and is known to be suboptimal in locations where water and vegetation are mixed. This includes locations such as rivers with vegetated riparian zones and vegetated wetlands.</br></br> Due to the way WO calculates the percentage of the water body observed and the way that satellite passes observe the water body, some of the larger salt lakes in Australia have very few records currently available. If less than 90% of the total waterbody is observed on any one day, due to cloud cover or missing data, than that observation is marked as a missing value. For larger bodies, which may cross multiple swath boundaries or suffer from misclassifications (salt lakes can be misclassified as cloud due to their brightness) this can be problematic.</br></br> For a full discussion of the limitations and accuracy of WO, see <a style=\"color:lightseagreen\" href='https://doi.org/10.1016/j.rse.2015.11.003'>Mueller et al., 2016</a></small>.</br></br>The update from version 2 to version 3.0 of the DEA Waterbodies product and service was created through a collaboration between Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI to make the product more useful in hazard applications.</br></br>Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI advise that the information published by this service comprises general statements based on scientific research. The reader is advised and needs to be aware that such information may be incomplete or unable to be used in any specific situation. No reliance or actions must therefore be made on that information without seeking prior expert professional, scientific and technical advice. To the extent permitted by law, FrontierSI, Geoscience Australia, the National Aerial Firefighting Centre and Natural Hazards Research Australia (including its employees and consultants) are excluded from all liability to any person for any consequences, including but not limited to all losses, damages, costs, expenses and any other compensation, arising directly or indirectly from using this publication (in part or in whole) and any information or material contained in it. "
+                                            "content": "This product shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. Larger waterbodies are easier to detect and smaller or narrower waterbodies are harder to detect. Area estimates should be compared to additional data for verification.</br></br> Many of the inaccuracies and limitations of the waterbody analysis are inherited from DEA Water Observations (WO), with this product a reanalysis and mapping product built off the WO datasets. WO has a number of known limitations, and these manifest as misclassified waterbodies within this analysis. WO uses the spectral signature of water to classify wet pixels, and is known to be suboptimal in locations where water and vegetation are mixed. This includes locations such as rivers with vegetated riparian zones and vegetated wetlands.</br></br> Due to the way WO calculates the percentage of the waterbody observed and the way that satellite passes observe the waterbody, some of the larger salt lakes in Australia have very few records currently available. If less than 90% of the total waterbody is observed on any one day, due to cloud cover or missing data, than that observation is marked as a missing value. For larger bodies, which may cross multiple swath boundaries or suffer from misclassifications (salt lakes can be misclassified as cloud due to their brightness) this can be problematic.</br></br> For a full discussion of the limitations and accuracy of WO, see <a style=\"color:lightseagreen\" href='https://doi.org/10.1016/j.rse.2015.11.003'>Mueller et al., 2016</a></small>.</br></br>The update from version 2 to version 3.0 of the DEA Waterbodies product and service was created through a collaboration between Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI to make the product more useful in hazard applications.</br></br>Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI advise that the information published by this service comprises general statements based on scientific research. The reader is advised and needs to be aware that such information may be incomplete or unable to be used in any specific situation. No reliance or actions must therefore be made on that information without seeking prior expert professional, scientific and technical advice. To the extent permitted by law, FrontierSI, Geoscience Australia, the National Aerial Firefighting Centre and Natural Hazards Research Australia (including its employees and consultants) are excluded from all liability to any person for any consequences, including but not limited to all losses, damages, costs, expenses and any other compensation, arising directly or indirectly from using this publication (in part or in whole) and any information or material contained in it. "
                                         },
                                         {
                                             "name": "Software",
@@ -987,13 +903,35 @@
                                     "type": "wms",
                                     "name": "DEA Coastlines",
                                     "id": "dea_coastlines_dev",
-                                    "shortReport": "<i>Zoom in to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
+                                    "shortReport": "<i>Change styles or zoom to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                     "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                     "opacity": 1,
                                     "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
                                     "layers": "dea:DEACoastlines",
+                                    "disableDimensionSelectors": true,
+                                    "modelDimensions": [
+                                       {
+                                         "id": "Style",
+                                         "name": "Styles",
+                                         "options": [
+                                           {
+                                             "id": "Default",
+                                             "value": {"styles": ""}
+                                           },
+                                           {
+                                             "id": "Rates of change",
+                                             "value": {"styles": "RateOfChangeStatistics"}
+                                           },
+                                           {
+                                             "id": "Annual shorelines",
+                                             "value": {"styles": "AnnualShorelines"}
+                                           },
+                                         ],
+                                         "selectedId": "Default"
+                                       }
+                                     ],
                                     "featureInfoTemplate": {
-                                      "template": "<div style='width:510px'>{{^year}}<h2 style='font-weight:normal'>{{#wms_sig}}This {{#max_year}}coastline{{/max_year}}{{#n}}region{{/n}} has <b>{{#wms_grew}}retreated &darr;{{/wms_grew}}{{#wms_retr}}grown &uarr;{{/wms_retr}}</b> by</br> <b>{{#terria.formatNumber}}{maximumFractionDigits:1}{{rate_time}}{{/terria.formatNumber}} metres (±{{#terria.formatNumber}}{maximumFractionDigits:1}{{wms_conf}}{{/terria.formatNumber}}) per year</b></br>on average since <b>1988</b></h2>{{/wms_sig}}{{^wms_sig}}This coastline has remained <b>net stable</b> since <b>1988</b> (no significant trend of retreat or growth)</h2><b>Net stable includes coastlines or regions that have remained relatively unchanged since 1988, or where shorelines have fluctuated between growth and retreat over time.</b></br></br>{{/wms_sig}}{{#max_year}}The shoreline at this location was <b>most seaward in {{max_year}}</b>, and <b>most landward in {{min_year}}</b>{{#outl_time}} (excluding outliers; see below){{/outl_time}}. Since 1988, the median annual position of the shoreline has moved over a total distance of <b>~{{#terria.formatNumber}}{maximumFractionDigits:0}{{sce}}{{/terria.formatNumber}}  metres.</b></br>{{/max_year}}</br><chart title='DEA Coastlines ({{#terria.formatNumber}}{maximumFractionDigits:4}{{terria.coords.latitude}}{{/terria.formatNumber}}, {{#terria.formatNumber}}{maximumFractionDigits:4}{{terria.coords.longitude}}{{/terria.formatNumber}})' y-column='Distance (m)' x-column='Year' column-units='{{terria.timeSeries.units}}' preview-x-label='Year'>Year,Distance (m)\n1988,{{dist_1988}}\n1989,{{dist_1989}}\n1990,{{dist_1990}}\n1991,{{dist_1991}}\n1992,{{dist_1992}}\n1993,{{dist_1993}}\n1994,{{dist_1994}}\n1995,{{dist_1995}}\n1996,{{dist_1996}}\n1997,{{dist_1997}}\n1998,{{dist_1998}}\n1999,{{dist_1999}}\n2000,{{dist_2000}}\n2001,{{dist_2001}}\n2002,{{dist_2002}}\n2003,{{dist_2003}}\n2004,{{dist_2004}}\n2005,{{dist_2005}}\n2006,{{dist_2006}}\n2007,{{dist_2007}}\n2008,{{dist_2008}}\n2009,{{dist_2009}}\n2010,{{dist_2010}}\n2011,{{dist_2011}}\n2012,{{dist_2012}}\n2013,{{dist_2013}}\n2014,{{dist_2014}}\n2015,{{dist_2015}}\n2016,{{dist_2016}}\n2017,{{dist_2017}}\n2018,{{dist_2018}}\n2019,{{dist_2019}}\n2020,{{dist_2020}}\n2021,{{dist_2021}}\n2022,{{dist_2022}}</chart>{{#outl_time}}The following years were identified as <b>missing data</b> or <b>potential outliers</b>, and should be interpreted with caution:<blockquote><b>{{outl_time}}</b></blockquote>{{/outl_time}}{{#terria.partialByName}}{{certainty}}{{/terria.partialByName}}</br><small>{{^n}}<b>Note: </b>Annual shoreline positions represent the median or 'most representative' position of the shoreline for each year, corrected to approximately mean sea level tide. They do not reflect short-term shoreline variability, for example changes in shoreline position between low and high tide, seasonal effects, or short-lived influences of individual storms.{{/n}}{{#n}}<b>Note: </b>These regional coastal change values are based on the median of all annual shoreline positions within a {{radius_m}} metre radius around this point. <b>Zoom into the map</b> to view more detailed rates of change and individual annual shorelines:</br></br><img src='https://data.dea.ga.gov.au/projects/coastlines/DEACoastLines_DEAMaps_1.gif' alt='Clicking on points'>{{/n}}</small></br></br>{{/year}}{{#year}}<h2 style='font-weight:normal'>{{year}} annual shoreline</h2>This line represents the <b>median or 'most representative'</b> position of the shoreline across the entire of {{year}}, corrected to approximately <b>mean sea level tide</b> (0 metres Above Mean Sea Level).{{#terria.partialByName}}{{certainty}}{{/terria.partialByName}}</br></br><small><b>Note: </b>Annual shorelines do not reflect short-term shoreline variability, for example changes in shoreline position between low and high tide, seasonal effects, or short-lived influences of individual storms. Annual shorelines will therefore show lower variability than the full range of short-term shoreline variability at this location.</small></br></br>{{/year}}</div>",
+                                      "template": "<div style='width:510px'>{{^year}}<h2 style='font-weight:normal'>{{#wms_sig}}This {{#max_year}}coastline{{/max_year}}{{#n}}region{{/n}} has <b>{{#wms_grew}}retreated &darr;{{/wms_grew}}{{#wms_retr}}grown &uarr;{{/wms_retr}}</b> by</br> <b>{{#terria.formatNumber}}{maximumFractionDigits:1}{{rate_time}}{{/terria.formatNumber}} metres (±{{#terria.formatNumber}}{maximumFractionDigits:1}{{wms_conf}}{{/terria.formatNumber}}) per year</b></br>on average since <b>1988</b></h2>{{/wms_sig}}{{^wms_sig}}This coastline has remained <b>net stable</b> since <b>1988</b> (no significant trend of retreat or growth)</h2><b>Net stable includes coastlines or regions that have remained relatively unchanged since 1988, or where shorelines have fluctuated between growth and retreat over time.</b></br></br>{{/wms_sig}}{{#max_year}}The shoreline at this location was <b>most seaward in {{max_year}}</b>, and <b>most landward in {{min_year}}</b>{{#outl_time}} (excluding outliers; see below){{/outl_time}}. Since 1988, the median annual position of the shoreline has moved over a total distance of <b>~{{#terria.formatNumber}}{maximumFractionDigits:0}{{sce}}{{/terria.formatNumber}}  metres.</b></br>{{/max_year}}</br><chart title='DEA Coastlines ({{#terria.formatNumber}}{maximumFractionDigits:4}{{terria.coords.latitude}}{{/terria.formatNumber}}, {{#terria.formatNumber}}{maximumFractionDigits:4}{{terria.coords.longitude}}{{/terria.formatNumber}})' y-column='Distance (m)' x-column='Year' column-units='{{terria.timeSeries.units}}' preview-x-label='Year'>Year,Distance (m)\n1988,{{dist_1988}}\n1989,{{dist_1989}}\n1990,{{dist_1990}}\n1991,{{dist_1991}}\n1992,{{dist_1992}}\n1993,{{dist_1993}}\n1994,{{dist_1994}}\n1995,{{dist_1995}}\n1996,{{dist_1996}}\n1997,{{dist_1997}}\n1998,{{dist_1998}}\n1999,{{dist_1999}}\n2000,{{dist_2000}}\n2001,{{dist_2001}}\n2002,{{dist_2002}}\n2003,{{dist_2003}}\n2004,{{dist_2004}}\n2005,{{dist_2005}}\n2006,{{dist_2006}}\n2007,{{dist_2007}}\n2008,{{dist_2008}}\n2009,{{dist_2009}}\n2010,{{dist_2010}}\n2011,{{dist_2011}}\n2012,{{dist_2012}}\n2013,{{dist_2013}}\n2014,{{dist_2014}}\n2015,{{dist_2015}}\n2016,{{dist_2016}}\n2017,{{dist_2017}}\n2018,{{dist_2018}}\n2019,{{dist_2019}}\n2020,{{dist_2020}}\n2021,{{dist_2021}}\n2022,{{dist_2022}}\n2023,{{dist_2023}}</chart>{{#outl_time}}The following years were identified as <b>missing data</b> or <b>potential outliers</b>, and should be interpreted with caution:<blockquote><b>{{outl_time}}</b></blockquote>{{/outl_time}}{{#terria.partialByName}}{{certainty}}{{/terria.partialByName}}</br><small>{{^n}}<b>Note: </b>Annual shoreline positions represent the median or 'most representative' position of the shoreline for each year, corrected to approximately mean sea level tide. They do not reflect short-term shoreline variability, for example changes in shoreline position between low and high tide, seasonal effects, or short-lived influences of individual storms.{{/n}}{{#n}}<b>Note: </b>These regional coastal change values are based on the median of all annual shoreline positions within a {{radius_m}} metre radius around this point. <b>Zoom into the map</b> to view more detailed rates of change and individual annual shorelines:</br></br><img src='https://data.dea.ga.gov.au/projects/coastlines/DEACoastLines_DEAMaps_1.gif' alt='Clicking on points'>{{/n}}</small></br></br>{{/year}}{{#year}}<h2 style='font-weight:normal'>{{year}} annual shoreline</h2>This line represents the <b>median or 'most representative'</b> position of the shoreline across the entire of {{year}}, corrected to approximately <b>mean sea level tide</b> (0 metres Above Mean Sea Level).{{#terria.partialByName}}{{certainty}}{{/terria.partialByName}}</br></br><small><b>Note: </b>Annual shorelines do not reflect short-term shoreline variability, for example changes in shoreline position between low and high tide, seasonal effects, or short-lived influences of individual storms. Annual shorelines will therefore show lower variability than the full range of short-term shoreline variability at this location.</small></br></br>{{/year}}</div>",
                                       "partials": {
                                         "good": "",
                                         "insufficient points": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>There are <b>too few valid rates of change points</b> in the {{radius_m}} metre radius around this location to calculate a reliable regional rate of change.</i></blockquote>",
@@ -1090,23 +1028,32 @@
                                     "url": "https://ows.dev.dea.ga.gov.au/wms",
                                     "opacity": 1,
                                     "layers": "ga_s2ls_intertidal_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2ls_intertidal_cyear_3",
                                     "dateFormat": "'Year: 'yyyy",
+                                    "availableDiffStyles": ["intertidal_elevation_adaptive"],
                                     "leafletUpdateInterval": 750,
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
+                                    "diffItemProperties": {
+                                        "featureInfoTemplate": {
+                                            "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>Elevation differences are shown for pixels with data in both timesteps only.<br><br>Intertidal elevation in {{data.0.time}}: <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>Intertidal elevation in {{data.1.time}}: <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.1.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.1.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1><hr><br><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
+                                        }
+                                    },
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>This location had an elevation above modelled Mean Sea Level (MSL): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>It was exposed from tidal inundation for: <h2 style='font-weight:normal'><b>{{data.0.bands.exposure}}%</b> of the <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b> analysis period</h2><hr><br>At this location, satellite data included images of the coast at tide heights from <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lot}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hot}}{{/terria.formatNumber}}</b> metres above MSL, compared to the full astronomical tide range of <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lat}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hat}}{{/terria.formatNumber}}</b> metres above MSL.<br><br>This resulted in satellite data observing <b>{{data.0.bands.ta_spread}}%</b> of the astronomical tide range, and failing to observe the lowest <b>{{data.0.bands.ta_offset_low}}%</b> and highest <b>{{data.0.bands.ta_offset_high}}%</b> of tides.<br><br><hr><br><small>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal product description.</a></small><br/><br/></div>"
+                                        "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>This location had an elevation above modelled Mean Sea Level (MSL): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>It was exposed from tidal inundation for: <h2 style='font-weight:normal'><b>{{data.0.bands.exposure}}%</b> of the <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b> analysis period</h2><hr><br>Mapped intertidal extents can be affected by biases in the tidal conditions observed by satellites<a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/?tab=details#tidal-attribute-layers-ta'></a>. At this location, satellites observed the coastline at tide heights ranging from <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lot}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hot}}{{/terria.formatNumber}}</b> metres above MSL, compared to the full astronomical tide range of <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lat}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hat}}{{/terria.formatNumber}}</b> metres above MSL.<br><br>This resulted in satellite data observing <b>~{{data.0.bands.ta_spread}}%</b> of the astronomical tide range, and failing to observe the lowest <b>~{{data.0.bands.ta_offset_low}}%</b> and highest <b>~{{data.0.bands.ta_offset_high}}%</b> of tides.<br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
                                     "id": "ab1264fr",       
                                 },
                                 {
                                     "type": "geojson",
                                     "name": "DEA Intertidal 32 km tile grid",
-                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal.geojson",
+                                    "url": "https://data.dea.ga.gov.au/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal.geojson",
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:350px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal 32 km tile grid</h1>This grid file was used to generate DEA Intertidal outputs. It contains unique 'region_code' IDs for each grid cell and access links to the data on Amazon S3.<h3 style='font-weight:normal'><b>Tile region code:</b> {{region_code}}</h3><h3 style='font-weight:normal'><a href='{{data_access}}'><b>Data access and download</b></a></h3><hr><br><small>For additional data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small></div>",
+                                    },
                                     "id": "gtBB45t"
                                 },
                             ]
@@ -1169,7 +1116,7 @@
                                             "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
                                         }
                                     ],
-                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20.geojson",
+                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20_maps.geojson",
                                     "featureInfoTemplate": {
                                         "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The low tide composite at this location was generated from imagery acquired in the lowest 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
                                     },
@@ -1200,7 +1147,7 @@
                                             "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
                                         }
                                     ],
-                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20.geojson",
+                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20_maps.geojson",
                                     "featureInfoTemplate": {
                                         "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The high tide composite at this location was generated from imagery acquired in the top 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
                                     },
@@ -1813,6 +1760,19 @@
                                 },
                                 {
                                     "type": "geojson",
+                                    "name": "DEA Summary Product Grid (Collection 3, expanded)",
+                                    "info": [
+                                        {
+                                            "name": "Important information",
+                                            "content": "This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> in 2024 by updating region code IDs to account for new satellite data processed over Australia's external territories."
+                                        }
+                                    ],
+                                    "shortReport": "<small><b>Note:</b> This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> in 2024 by updating region code IDs to account for new satellite data processed over Australia's external territories.</small>",
+                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3_expanded.geojson",
+                                    "id": "tu8951"
+                                },
+                                {
+                                    "type": "geojson",
                                     "name": "DEA Summary Product Grid (Collection 3)",
                                     "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3.geojson",
                                     "id": "GJY53s"
@@ -2275,16 +2235,16 @@
                         {
                             "id": "VEvPmu",
                             "type": "group",
-                            "name": "DEA Surface Reflectance Calendar Year (Landsat)",
+                            "name": "DEA GeoMAD Surface Reflectance Calendar Year (Landsat)",
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA GeoMAD (Landsat 8 OLI-TIRS)",
+                                    "name": "DEA GeoMAD (Landsat 8 & 9 OLI-TIRS)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls8c_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls8c_nbart_gm_cyear_3",
+                                    "layers": "ga_ls8cls9c_gm_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls8cls9c_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
@@ -2303,16 +2263,16 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "pju767prod"
+                                    "id": "hTd67B"
                                 },
                                 {
                                     "type": "wms",
                                     "name": "DEA GeoMAD (Landsat 7 ETM+)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls7e_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls7e_nbart_gm_cyear_3",
+                                    "layers": "ga_ls7e_gm_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls7e_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
@@ -2331,16 +2291,16 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "DFG421prod"
+                                    "id": "aFG45B"
                                 },
                                 {
                                     "type": "wms",
                                     "name": "DEA GeoMAD (Landsat 5 TM)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls5t_nbart_gm_cyear_3",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls5t_nbart_gm_cyear_3",
+                                    "layers": "ga_ls5t_gm_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls5t_gm_cyear_3",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
@@ -2359,7 +2319,7 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
-                                    "id": "FTY879prod"
+                                    "id": "ATY87B"
                                 }
                             ],
                             "shareKeys": [
@@ -2890,14 +2850,14 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Waterbodies (version 3.0)",
-                                    "shortReport": "<i>Click to highlight a hatched Waterbody polygon. View the DEA Waterbodies timeseries of the percentage of the waterbody surface area observed as wet and the estimated latest open water surface area.</i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/'>DEA Waterbodies product description</a></small>",
+                                    "name": "DEA Waterbodies (version 3.0.0)",
+                                    "shortReport": "<i>Click to highlight a hatched Waterbody polygon. View the DEA Waterbodies time series of the percentage of the waterbody surface area observed as wet and the estimated latest open water surface area.</i></br></br><small>For more information and to download data, visit the <a style=\"color:lightseagreen\" href='https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/'>DEA Waterbodies product description</a></small>",
                                     "url": "https://geoserver.dea.ga.gov.au/geoserver/dea/wms",
-                                    "description": "Digital Earth Australia Waterbodies v3.0 provides up to date information about the extent and location of surface water, providing all Australians with a common understanding of this valuable and increasingly scarce resource. It supports users to understand and manage water across Australia. For example, users can gain insights into the severity and spatial distribution of drought or monitor critical lakes and dams, including hard-to-reach waterbodies in remote areas and on large properties. </br></br>The product indicates changes in the wet surface area of waterbodies. This can be used to identify when waterbodies are increasing or decreasing in wet surface area.</br></br>DEA Knowledge Hub product details: https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/?tab=overview.</br></br>Scientific paper: <a href='https://doi.org/10.3390/rs13081437'>Krause et al. 2021</a></small>.</br></br>DEA Website pages: https://www.dea.ga.gov.au/products/dea-waterbodies",
+                                    "description": "Digital Earth Australia Waterbodies v3.0.0 provides up to date information about the extent and location of surface water, providing all Australians with a common understanding of this valuable and increasingly scarce resource. It supports users to understand and manage water across Australia. For example, users can gain insights into the severity and spatial distribution of drought or monitor critical lakes and dams, including hard-to-reach waterbodies in remote areas and on large properties. </br></br>The product indicates changes in the wet surface area of waterbodies. This can be used to identify when waterbodies are increasing or decreasing in wet surface area.</br></br>DEA Knowledge Hub product details: https://knowledge.dea.ga.gov.au/data/product/dea-waterbodies-landsat/?tab=overview.</br></br>Scientific paper: <a href='https://doi.org/10.3390/rs13081437'>Krause et al. 2021</a></small>.</br></br>DEA Website pages: https://www.dea.ga.gov.au/products/dea-waterbodies",
                                     "info": [
                                         {
                                             "name": "Accuracy and limitations",
-                                            "content": "This product shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. Larger waterbodies are easier to detect and smaller or narrower waterbodies are harder to detect. Area estimates should be compared to additional data for verification.</br></br> Many of the inaccuracies and limitations of the waterbody analysis are inherited from DEA Water Observations (WO), with this product a reanalysis and mapping product built off the WO datasets. WO has a number of known limitations, and these manifest as misclassified waterbodies within this analysis. WO uses the spectral signature of water to classify wet pixels, and is known to be suboptimal in locations where water and vegetation are mixed. This includes locations such as rivers with vegetated riparian zones and vegetated wetlands.</br></br> Due to the way WO calculates the percentage of the water body observed and the way that satellite passes observe the water body, some of the larger salt lakes in Australia have very few records currently available. If less than 90% of the total waterbody is observed on any one day, due to cloud cover or missing data, than that observation is marked as a missing value. For larger bodies, which may cross multiple swath boundaries or suffer from misclassifications (salt lakes can be misclassified as cloud due to their brightness) this can be problematic.</br></br> For a full discussion of the limitations and accuracy of WO, see <a href='https://doi.org/10.1016/j.rse.2015.11.003'>Mueller et al., 2016</a></small>.</br></br>The update from version 2 to version 3.0 of the DEA Waterbodies product and service was created through a collaboration between Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI to make the product more useful in hazard applications.</br></br>Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI advise that the information published by this service comprises general statements based on scientific research. The reader is advised and needs to be aware that such information may be incomplete or unable to be used in any specific situation. No reliance or actions must therefore be made on that information without seeking prior expert professional, scientific and technical advice. To the extent permitted by law, FrontierSI, Geoscience Australia, the National Aerial Firefighting Centre and Natural Hazards Research Australia (including its employees and consultants) are excluded from all liability to any person for any consequences, including but not limited to all losses, damages, costs, expenses and any other compensation, arising directly or indirectly from using this publication (in part or in whole) and any information or material contained in it. "
+                                            "content": "This product shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. Larger waterbodies are easier to detect and smaller or narrower waterbodies are harder to detect. Area estimates should be compared to additional data for verification.</br></br> Many of the inaccuracies and limitations of the waterbody analysis are inherited from DEA Water Observations (WO), with this product a reanalysis and mapping product built off the WO datasets. WO has a number of known limitations, and these manifest as misclassified waterbodies within this analysis. WO uses the spectral signature of water to classify wet pixels, and is known to be suboptimal in locations where water and vegetation are mixed. This includes locations such as rivers with vegetated riparian zones and vegetated wetlands.</br></br> Due to the way WO calculates the percentage of the waterbody observed and the way that satellite passes observe the waterbody, some of the larger salt lakes in Australia have very few records currently available. If less than 90% of the total waterbody is observed on any one day, due to cloud cover or missing data, than that observation is marked as a missing value. For larger bodies, which may cross multiple swath boundaries or suffer from misclassifications (salt lakes can be misclassified as cloud due to their brightness) this can be problematic.</br></br> For a full discussion of the limitations and accuracy of WO, see <a href='https://doi.org/10.1016/j.rse.2015.11.003'>Mueller et al., 2016</a></small>.</br></br>The update from version 2 to version 3.0 of the DEA Waterbodies product and service was created through a collaboration between Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI to make the product more useful in hazard applications.</br></br>Geoscience Australia, the National Aerial Firefighting Centre, Natural Hazards Research Australia, and FrontierSI advise that the information published by this service comprises general statements based on scientific research. The reader is advised and needs to be aware that such information may be incomplete or unable to be used in any specific situation. No reliance or actions must therefore be made on that information without seeking prior expert professional, scientific and technical advice. To the extent permitted by law, FrontierSI, Geoscience Australia, the National Aerial Firefighting Centre and Natural Hazards Research Australia (including its employees and consultants) are excluded from all liability to any person for any consequences, including but not limited to all losses, damages, costs, expenses and any other compensation, arising directly or indirectly from using this publication (in part or in whole) and any information or material contained in it. "
                                         },
                                         {
                                             "name": "Software",
@@ -3140,14 +3100,17 @@
                                     },
                                     "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>This location had an elevation above modelled Mean Sea Level (MSL): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>It was exposed from tidal inundation for: <h2 style='font-weight:normal'><b>{{data.0.bands.exposure}}%</b> of the <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b> analysis period</h2><hr><br>At this location, satellite data included images of the coast at tide heights from <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lot}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hot}}{{/terria.formatNumber}}</b> metres above MSL, compared to the full astronomical tide range of <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lat}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hat}}{{/terria.formatNumber}}</b> metres above MSL.<br><br>This resulted in satellite data observing <b>{{data.0.bands.ta_spread}}%</b> of the astronomical tide range, and failing to observe the lowest <b>{{data.0.bands.ta_offset_low}}%</b> and highest <b>{{data.0.bands.ta_offset_high}}%</b> of tides.<br><br><hr><br><small>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://docs.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal product description.</a></small><br/><br/></div>"
+                                        "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>This location had an elevation above modelled Mean Sea Level (MSL): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>It was exposed from tidal inundation for: <h2 style='font-weight:normal'><b>{{data.0.bands.exposure}}%</b> of the <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b> analysis period</h2><hr><br>Mapped intertidal extents can be affected by biases in the tidal conditions observed by satellites<a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/?tab=details#tidal-attribute-layers-ta'></a>. At this location, satellites observed the coastline at tide heights ranging from <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lot}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hot}}{{/terria.formatNumber}}</b> metres above MSL, compared to the full astronomical tide range of <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lat}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hat}}{{/terria.formatNumber}}</b> metres above MSL.<br><br>This resulted in satellite data observing <b>~{{data.0.bands.ta_spread}}%</b> of the astronomical tide range, and failing to observe the lowest <b>~{{data.0.bands.ta_offset_low}}%</b> and highest <b>~{{data.0.bands.ta_offset_high}}%</b> of tides.<br><br><hr><br><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
-                                    "id": "xfG556",       
+                                    "id": "xfG556",
                                 },
                                 {
                                     "type": "geojson",
                                     "name": "DEA Intertidal 32 km tile grid",
-                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal.geojson",
+                                    "url": "https://data.dea.ga.gov.au/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal.geojson",
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:350px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal 32 km tile grid</h1>This grid file was used to generate DEA Intertidal outputs. It contains unique 'region_code' IDs for each grid cell and access links to the data on Amazon S3.<h3 style='font-weight:normal'><b>Tile region code:</b> {{region_code}}</h3><h3 style='font-weight:normal'><a href='{{data_access}}'><b>Data access and download</b></a></h3><hr><br><small>For additional data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small></div>",
+                                    },
                                     "id": "67ttyU"
                                 },
                             ]
@@ -3210,7 +3173,7 @@
                                             "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
                                         }
                                     ],
-                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20.geojson",
+                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20_maps.geojson",
                                     "featureInfoTemplate": {
                                         "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The low tide composite at this location was generated from imagery acquired in the lowest 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
                                     },
@@ -3241,7 +3204,7 @@
                                             "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
                                         }
                                     ],
-                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20.geojson",
+                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20_maps.geojson",
                                     "featureInfoTemplate": {
                                         "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The high tide composite at this location was generated from imagery acquired in the top 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
                                     },

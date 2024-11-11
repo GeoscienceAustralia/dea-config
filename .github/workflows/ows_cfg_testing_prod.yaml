@@ -29,10 +29,10 @@ jobs:
 
     - name: Run ows_refactored_cfg test (Prod)
       run: |
-        docker-compose -f docker-compose.ows.yaml up -d
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config; ./compare-cfg.sh"
-        docker-compose -f docker-compose.ows.yaml down
+        docker compose -f docker-compose.ows.yaml up -d
+        docker compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system init"
+        docker compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config; ./compare-cfg.sh"
+        docker compose -f docker-compose.ows.yaml down
       env:
         OWS_CFG_PATH: prod/services/wms/ows_refactored
         PYTHON_PATH: prod/services/wms/

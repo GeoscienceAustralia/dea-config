@@ -41,3 +41,15 @@ def uncertainty_adaptive(data, band, lot, hot, band_mapper=None):
     proportion_array = data[band] / otr
 
     return proportion_array
+
+
+def multi_date_raw_elevation(data, band, band_mapper=None):
+    """
+    Compares two elevation layers and calculates difference in elevation.
+    """
+    if band_mapper is not None:
+        band = band_mapper(band)
+
+    data1, data2 = (data.sel(time=dt) for dt in data.coords["time"].values)
+
+    return data2[band] - data1[band]

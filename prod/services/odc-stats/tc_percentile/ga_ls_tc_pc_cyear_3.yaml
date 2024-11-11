@@ -13,14 +13,14 @@ product:
   short_name: ga_ls_tc_pc_cyear_3
   version: 2.0.0
   product_family: tci
-  
+
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
   explorer_path: https://explorer.dea.ga.gov.au/
   classifier: ard
   maturity: final
   collection_number: 3
-  
+
   inherit_skip_properties:
     - eo:cloud_cover
     - fmask:clear
@@ -59,6 +59,7 @@ product:
   preview_image_ows_style:
     name: tci_rgb
     title: Three-band TCI 
+
     abstract: TCI medians - red is brightness, green is greenness and
       blue is wetness
     components:
@@ -72,25 +73,23 @@ product:
     - -2000 
     - 2000
    
-aws_unsigned: True
-
 max_processing_time: 1200
 job_queue_max_lease: 300
 renew_safety_margin: 60
 future_poll_interval: 2
-s3_acl: public-read
 # Generic product attributes
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 dataset_filters: >-
   {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
-  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}
+  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}|
+  {"datetime": "2022-01--P10Y", "eo:platform": "landsat-9"}
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_tc_pc_cyear_3/2-0-0
+  s3://dea-public-data/derivative/ga_ls_tc_pc_cyear_3/2-0-0
 
 # save-tasks config
-input_products: ga_ls5t_ard_3-ga_ls7e_ard_3-ga_ls8c_ard_3
+input_products:  ga_ls5t_ard_3-ga_ls7e_ard_3-ga_ls8c_ard_3-ga_ls9c_ard_3
 frequency: annual
 grid: au_extended_30
 gqa: 1
