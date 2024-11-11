@@ -93,6 +93,7 @@ level4_labels = {
     104: 'Water: Non-perennial (1 to 3 months)',
 }
 
+
 def class_labels(data):
     return {
         "level3_label": level3_labels[data["level3"]],
