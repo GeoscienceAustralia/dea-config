@@ -4,6 +4,7 @@ plugin_config:
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
   resampling: nearest
   input_bands: [dem_h]
+  measurements: [dem_h]
   chunks:
     latitude: -1
     longitude: -1

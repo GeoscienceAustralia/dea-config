@@ -5,6 +5,7 @@ plugin_config:
   output_classes:
     artificial: 215
     natural: 216
+  measurements: [artificial_surface]
 
 product:
   name: ga_ls_landcover_artificial_surface_cyear_3

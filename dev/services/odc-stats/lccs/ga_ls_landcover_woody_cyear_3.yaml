@@ -7,6 +7,7 @@ plugin_config:
   output_classes:
     woody: 113
     herbaceous: 114
+  measurements: [woody]
   chunks:
     y: 400
     x: 400
