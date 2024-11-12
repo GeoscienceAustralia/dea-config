@@ -1,6 +1,6 @@
 plugin: urban_class # this can help system find the relative plugin and plugin version
 plugin_config:
-  input_bands: [nbart_red, nbart_green, nbart_blue, nbart_nir, nbart_swir_1, nbart_swir_2]
+  input_bands: [nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, nbart_swir_2]
   model_path: urban_model_tf_2_16_2.tflite
   output_classes:
     artificial: 215
