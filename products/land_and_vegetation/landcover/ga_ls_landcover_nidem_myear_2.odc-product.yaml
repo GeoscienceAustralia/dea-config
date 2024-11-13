@@ -9,15 +9,15 @@ metadata:
     product_type: ga_ls_landcover_nidem_myear_2
 measurements:
 -   dtype: float32
-    name: 'nidem'
-    nodata: -9999
+    name: elevation
+    nodata: nan
     units: 'metres'
 
 load:
   crs: 'EPSG:3577'
   resolution:
-    y: -25
-    x: 25
+    y: -30
+    x: 30
   align:
     y: 0
     x: 0
