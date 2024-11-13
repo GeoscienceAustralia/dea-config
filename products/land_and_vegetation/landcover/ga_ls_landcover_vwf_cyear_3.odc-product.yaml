@@ -12,7 +12,11 @@ metadata:
     name: ga_ls_landcover_vwf_cyear_3
 
 measurements:
-  - name: veg_water_frequency
+  - name: veg_frequency
+    dtype: uint8
+    nodata: 255
+    units: '1'
+  - name: water_frequency
     dtype: uint8
     nodata: 255
     units: '1'
