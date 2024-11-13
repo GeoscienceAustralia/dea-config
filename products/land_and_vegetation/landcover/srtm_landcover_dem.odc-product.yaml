@@ -16,8 +16,8 @@ metadata:
 measurements:
 - name: dem_h
   dtype: float32
-  units: metre
-  nodata: nan
+  units: "metres"
+  nodata: .nan
 
 load:
   crs: 'EPSG:3577'
