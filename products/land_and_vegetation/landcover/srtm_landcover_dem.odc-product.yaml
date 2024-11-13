@@ -14,27 +14,16 @@ metadata:
     name: SIR
 
 measurements:
-- name: dem
-  dtype: float32
-  units: metre
-  nodata: -340282346638528859811704183484516925440
-- name: dem_s
-  dtype: float32
-  units: metre
-  nodata: -340282346638528859811704183484516925440
 - name: dem_h
   dtype: float32
   units: metre
-  nodata: -340282346638528859811704183484516925440
-
-storage:
-  crs: EPSG:4326
-  resolution:
-    latitude: -0.00027777777778
-    longitude: 0.00027777777778
+  nodata: nan
 
 load:
-  crs: 'EPSG:4326'
-  resolution: 
-    latitude: -0.00027777777778
-    longitude: 0.00027777777778
+  crs: 'EPSG:3577'
+  resolution:
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0
