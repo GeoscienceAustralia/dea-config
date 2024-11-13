@@ -10,7 +10,7 @@ metadata:
 measurements:
 -   dtype: float32
     name: elevation
-    nodata: nan
+    nodata: .nan
     units: 'metres'
 
 load:
