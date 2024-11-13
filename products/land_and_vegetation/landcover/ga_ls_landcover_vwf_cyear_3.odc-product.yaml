@@ -1,6 +1,6 @@
-name: ga_ls_landcover_class_cyear_3
+name: ga_ls_landcover_vwf_cyear_3
 
-description: Geoscience Australia Landsat Land Cover Calendar Year Collection 3.0
+description: Geoscience Australia Landsat Landcover Vegetation Water Frequency Calender Year Collection 3
 license: CC-BY-4.0
 metadata_type: eo3
 
@@ -9,16 +9,14 @@ metadata:
     odc:file_format: GeoTIFF
     odc:product_family: lc
   product:
-    name: ga_ls_landcover_class_cyear_3
+    name: ga_ls_landcover_vwf_cyear_3
 
 measurements:
-  - name: level3
+  - name: veg_frequency
     dtype: uint8
     nodata: 255
     units: '1'
-  - name: level4
-    aliases:
-      - full_classification
+  - name: water_frequency
     dtype: uint8
     nodata: 255
     units: '1'

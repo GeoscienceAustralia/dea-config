@@ -26,8 +26,7 @@ fc_percentile_albers_annual,https://raw.githubusercontent.com/GeoscienceAustrali
 fc_percentile_albers_seasonal,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/9c12bb30bff1f81ccd2a94e2c5052288688c55d1/products/fc/fc_percentile_albers_seasonal_product.yaml,s3://dea-public-data/fractional-cover/fc-percentile/seasonal/v2.2.0/combined
 ga_ls5t_ard_3,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/c3/ard_ls5.odc-product.yaml,s3://dea-public-data/baseline/ga_ls5t_ard_3/
 ga_ls7e_ard_3,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/c3/ard_ls7.odc-product.yaml,s3://dea-public-data/baseline/ga_ls7e_ard_3/
-ga_ls7e_ard_provisional_3,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/provisional/ard_ls7_provisional.odc-product.yaml,
-s3:/dea-public-data/baseline/ga_ls7e_ard_3
+ga_ls7e_ard_provisional_3,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/provisional/ard_ls7_provisional.odc-product.yaml,s3:/dea-public-data/baseline/ga_ls7e_ard_3
 ga_ls8c_ard_3,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/c3/ard_ls8.odc-product.yaml,s3://dea-public-data/baseline/ga_ls8c_ard_3/
 ga_ls8c_ard_provisional_3,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/provisional/ard_ls8_provisional.odc-product.yaml,s3:/dea-public-data/baseline/ga_ls8c_ard_provisional_3
 ga_ls8c_nbart_gm_cyear_3,https://raw.githubusercontent.com/GeoscienceAustralia/dea-config/master/products/baseline_satellite_data/geomedian-au/ga_ls8c_nbart_gm_cyear_3.yaml,s3:/

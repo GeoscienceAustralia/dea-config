@@ -1,0 +1,29 @@
+---
+# Product
+name: srtm_landcover_dem
+metadata_type: eo
+description: Shuttle Radar Topography Mission Landcover 1 Arc Second Digital Elevation Model
+
+license: CC-BY-4.0
+
+metadata:
+  product_type: DEM
+  platform:
+    code: Space Shuttle Endeavour
+  instrument:
+    name: SIR
+
+measurements:
+- name: dem_h
+  dtype: float32
+  units: "metres"
+  nodata: .nan
+
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -30
+    x: 30
+  align:
+    y: 0
+    x: 0
