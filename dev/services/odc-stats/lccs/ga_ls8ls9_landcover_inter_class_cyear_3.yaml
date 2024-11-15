@@ -3,7 +3,8 @@ plugin_config:
   input_bands: [nbart_red, nbart_green, nbart_blue, veg_frequency, frequency, dem_h]
   optional_bands: [canopy_cover_class, elevation]
   output_classes:
-    aquatic_veg: 124
+    aquatic_veg_wood: 124
+    aquatic_veg_herb: 125
     terrestrial_veg: 110
     water: 221
     intertidal: 223
