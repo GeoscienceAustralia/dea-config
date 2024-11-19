@@ -291,6 +291,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                         "function": "ows_refactored.land_and_vegetation.landcover.lc_class_desc.class_labels",
                     }
                 }
+            }
         }
     ]
 }
