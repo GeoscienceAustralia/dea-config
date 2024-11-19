@@ -84,7 +84,7 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/lccs/srtm_landcover_dem/1-0-0
+  s3://dea-public-data-dev/derivative/srtm_landcover_dem/1-0-0
 
 # save-tasks options
 input_products: ga_srtm_dem1sv1_0

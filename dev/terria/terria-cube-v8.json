@@ -394,7 +394,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Land Cover (Landsat)",
+                                    "name": "DEA Land Cover C2 (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_landcover",
@@ -415,7 +415,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Land Cover Descriptors (Landsat)",
+                                    "name": "DEA Land Cover Descriptors C2 (Landsat)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_ls_landcover_descriptors",
@@ -432,6 +432,47 @@
                                     },
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "wejk58"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Land Cover C3 (Landsat)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_landcover_c3",
+                                    "styles": "level4",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_landcover_c3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "546erz"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Land Cover Descriptors C3 (Landsat)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_ls_landcover_c3_descriptors",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_ls_landcover_c3_descriptors_c3",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
+                                    },
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "id": "wejk59"
                                 }
                             ]
                         },

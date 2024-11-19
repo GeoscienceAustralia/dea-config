@@ -285,14 +285,13 @@ For service status information, see https://status.dea.ga.gov.au""",
                 "default_style": "canopyco",
                 "styles": [style_c3_level4_canopyco, style_c3_level4_lifeform, style_c3_level4_watersea, style_c3_level4_waterper, style_c3_level4_baregrad],
             },
-            # Remove labels for now while testing new styling
-            # "feature_info": {
-            #    "include_custom": {
-            #        "description": {
-            #           "function": "ows_refactored.land_and_vegetation.landcover.lc_class_desc.env_descriptor_labels",
-            #        }
-            #    }
-            # }
+            "feature_info": {
+                "include_custom": {
+                    "description": {
+                        "function": "ows_refactored.land_and_vegetation.landcover.lc_class_desc.class_labels",
+                    }
+                }
+            }
         }
     ]
 }
