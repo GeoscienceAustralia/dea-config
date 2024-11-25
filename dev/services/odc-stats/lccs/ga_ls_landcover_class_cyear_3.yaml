@@ -1,7 +1,9 @@
 plugin: lccs_level34 # this can help system find the relative plugin and plugin version
 plugin_config:
-  input_bands: [classes_l3_l4, urban_classes, cultivated_class]
+  input_bands: [pv_pc_50, bs_pc_50, water_frequency, level_3_4, water_season, artificial_surface, cultivated, woody]
   measurements: [level3, level4]
+  urban_mask: /vsizip/vsis3/dea-public-data-dev/urban_aux/SA1_2021_AUST_SHP_GDA2020.zip
+  filter_expression: SA4_NAME21 LIKE '%Outback%' AND AREASQKM21 < 5000 OR SA4_NAME21 NOT LIKE '%Outback%' # urban polygons and rural area < 5k km^2
 
 product:
   name: ga_ls_landcover_class_cyear_3
@@ -61,9 +63,9 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_landcover_class_cyear_3/1-0-0
+  s3://dea-public-data-dev/test/lccs/ga_ls_landcover_class_cyear_3/0-0-5
 
 # save-tasks options
-input_products: s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/1-0-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/1-0-0
+input_products: ga_ls_fc_pc_cyear_3+s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls8ls9_landcover_inter_class_cyear_3/1-0-0+s3://dea-public-data-dev/test/lccs/ga_ls_landcover_artificial_surface_cyear_3/0-0-5/+s3://dea-public-data-dev/test/lccs/ga_ls_landcover_cultivated_cyear_3/0-0-4/+s3://dea-public-data-dev/test/lccs/ga_ls_landcover_woody_cyear_3/0-0-3/
 frequency: annual
 grid: au_extended_30
