@@ -1,0 +1,100 @@
+plugin: veg_class_l1 # this can help system find the relative plugin and plugin version
+plugin_config:
+  input_bands: [nbart_red, nbart_green, nbart_blue, veg_frequency, frequency, dem_h]
+  optional_bands: [canopy_cover_class, elevation]
+  output_classes:
+    aquatic_veg_wood: 124
+    aquatic_veg_herb: 125
+    terrestrial_veg: 110
+    water: 221
+    intertidal: 223
+    surface: 210
+  measurements: [level_3_4, water_season]
+
+product:
+  name: ga_ls_landcover_inter_class_cyear_3
+  short_name: ga_ls_landcover_inter_class_cyear_3
+  version: 1.0.0
+  product_family: lc
+
+  # -- EO Dataset3 relative section --
+  naming_conventions_values: dea_c3
+  explorer_path: https://explorer.dea.ga.gov.au/
+  classifier: ard
+  maturity: final
+  collection_number: 3
+
+  inherit_skip_properties:
+    - eo:cloud_cover
+    - fmask:clear
+    - fmask:snow
+    - fmask:cloud
+    - fmask:water
+    - fmask:cloud_shadow
+    - eo:sun_elevation
+    - eo:sun_azimuth
+    - gqa:iterative_stddev_x
+    - gqa:iterative_stddev_y
+    - gqa:iterative_stddev_xy
+    - gqa:stddev_xy
+    - gqa:stddev_x
+    - gqa:stddev_y
+    - gqa:mean_xy
+    - gqa:mean_x
+    - gqa:mean_y
+    - gqa:abs_xy
+    - gqa:abs_x
+    - gqa:abs_y
+    - gqa:abs_iterative_mean_y
+    - gqa:abs_iterative_mean_x
+    - gqa:abs_iterative_mean_xy
+    - gqa:iterative_mean_xy
+    - gqa:iterative_mean_x
+    - gqa:iterative_mean_y
+    - gqa:cep90
+    - landsat:landsat_product_id
+    - landsat:landsat_scene_id
+    - landsat:collection_category
+    - landsat:collection_number
+    - landsat:wrs_path
+    - landsat:wrs_row
+
+      # preview_image_ows_style:
+      #   name: fc_rgb
+      #   title: Three-band fractional cover
+      #   abstract: Fractional cover medians - red is bare soil, green is green vegetation and
+      #     blue is non-green vegetation
+      #   components:
+      #     red:
+      #       bs_pc_50: 1
+      #     green:
+      #       pv_pc_50: 1
+      #     blue:
+      #       npv_pc_50: 1
+      #   scale_range:
+      #   - 0
+      #   - 100
+
+aws_unsigned: True
+
+max_processing_time: 1200
+job_queue_max_lease: 300
+renew_safety_margin: 60
+future_poll_interval: 2
+# Generic product attributes
+cog_opts:
+  zlevel: 9
+apply_eodatasets3: True
+output_location: >-
+  s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/1-0-0
+
+# save-tasks options
+input_products: ga_ls8cls9c_gm_cyear_3+ga_ls_wo_fq_cyear_3+s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_mangrove_cover_cyear_3/4-0-0/+s3://dea-public-data-dev/derivative/srtm_landcover_dem/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_nidem_myear_2/1-0-0/
+ignore_time:
+  - s3://dea-public-data-dev/derivative/srtm_landcover_dem/1-0-0/
+  - s3://dea-public-data-dev/derivative/ga_ls_landcover_nidem_myear_2/1-0-0/
+optional_products:
+  - s3://dea-public-data-dev/derivative/ga_ls_mangrove_cover_cyear_3/4-0-0/
+  - s3://dea-public-data-dev/derivative/ga_ls_landcover_nidem_myear_2/1-0-0/
+frequency: annual
+grid: au_extended_30
