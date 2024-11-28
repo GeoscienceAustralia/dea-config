@@ -2,8 +2,18 @@ plugin: lccs_level34 # this can help system find the relative plugin and plugin 
 plugin_config:
   input_bands: [pv_pc_50, bs_pc_50, water_frequency, level_3_4, water_season, artificial_surface, cultivated, woody]
   measurements: [level3, level4]
+  class_def_path: s3://dea-public-data-dev/lccs_validation/c3/data_to_plot/lccs_colour_scheme_golden_dark_au_c3.csv
+  # the dependencies of generating level34
+  # i.e., the columns in csv `class_def_path`
+  class_condition:
+    level3: [level1, artificial_surface, cultivated]
+    level4: [level1, level3, woody, water_season, water_frequency, pv_pc_50, bs_pc_50]
   urban_mask: /vsizip/vsis3/dea-public-data-dev/urban_aux/SA1_2021_AUST_SHP_GDA2020.zip
   filter_expression: SA4_NAME21 LIKE '%Outback%' AND AREASQKM21 < 5000 OR SA4_NAME21 NOT LIKE '%Outback%' # urban polygons and rural area < 5k km^2
+  # match the column names from `class_condition` to `input_bands`
+  # absent means the same
+  data_var_condition:
+    level1: level_3_4
 
 product:
   name: ga_ls_landcover_class_cyear_3
@@ -17,6 +27,44 @@ product:
   classifier: ard
   maturity: final
   collection_number: 3
+
+  preview_image_ows_style:
+    name: landcover
+    title: Landcover
+    abstract: Landcover level3
+    value_map:
+      level3:
+        - title: "CTV"
+          abstract: "Cultivated Terrestrial Vegetated"
+          values:
+            - 111
+          color: "#97BB1A"
+        - title: "NTV"
+          abstract: "Natural Terrestrial Vegetated"
+          values:
+            - 112
+          color: "#0E7912"
+        - title: "NAV"
+          abstract: "Natural Aquatic Vegetated"
+          values:
+            - 124
+          color: "#1EBF79"
+        - title: "AS"
+          abstract: "Artificial Surface"
+          values:
+            - 215
+          color: "#DA5C69"
+        - title: "NS"
+          abstract: "Natural Surface"
+          values:
+            - 216
+          color: "#F3AB69"
+        - title: "Water"
+          abstract: "Water"
+          values:
+            - 220
+          color: "#4D9FDC"
+
 
   inherit_skip_properties:
     - eo:cloud_cover
