@@ -10,7 +10,7 @@ plugin_config:
     level4: [level1, level3, woody, water_season, water_frequency, pv_pc_50, bs_pc_50]
   urban_mask: /vsizip/vsis3/dea-public-data-dev/urban_aux/SA1_2021_AUST_SHP_GDA2020.zip
   filter_expression: SA4_NAME21 LIKE '%Outback%' AND AREASQKM21 < 5000 OR SA4_NAME21 NOT LIKE '%Outback%' # urban polygons and rural area < 5k km^2
-  # match the column names from `class_condition` to `input_bands`  
+  # match the column names from `class_condition` to `input_bands`
   # absent means the same
   data_var_condition:
     level1: level_3_4
@@ -27,6 +27,44 @@ product:
   classifier: ard
   maturity: final
   collection_number: 3
+
+  preview_image_ows_style:
+    name: landcover
+    title: Landcover
+    abstract: Landcover level3
+    value_map:
+      level3:
+        - title: "CTV"
+          abstract: "Cultivated Terrestrial Vegetated"
+          values:
+            - 111
+          color: "#97BB1A"
+        - title: "NTV"
+          abstract: "Natural Terrestrial Vegetated"
+          values:
+            - 112
+          color: "#0E7912"
+        - title: "NAV"
+          abstract: "Natural Aquatic Vegetated"
+          values:
+            - 124
+          color: "#1EBF79"
+        - title: "AS"
+          abstract: "Artificial Surface"
+          values:
+            - 215
+          color: "#DA5C69"
+        - title: "NS"
+          abstract: "Natural Surface"
+          values:
+            - 216
+          color: "#F3AB69"
+        - title: "Water"
+          abstract: "Water"
+          values:
+            - 220
+          color: "#4D9FDC"
+
 
   inherit_skip_properties:
     - eo:cloud_cover
