@@ -2,7 +2,7 @@ plugin: cultivated_class  # this can help system find the relative plugin and pl
 plugin_config:
   input_bands: [nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, nbart_swir_2, sdev, edev, bcdev, level_3_4]
   mask_bands:
-    classes_l3_l4: 110
+    level_3_4: 110
   model_path: cultivated_treelite.so
   output_classes:
     cultivated: 111
