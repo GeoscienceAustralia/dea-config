@@ -1,6 +1,6 @@
 plugin: woody_cover # this can help system find the relative plugin and plugin version
 plugin_config:
-  input_bands: [nbart_swir_2, nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, classes_l3_l4]
+  input_bands: [nbart_swir_2, nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, level_3_4]
   mask_bands:
     classes_l3_l4: 110
   model_path: woody_treelite.so
