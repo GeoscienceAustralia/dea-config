@@ -8,7 +8,7 @@ plugin_config:
   class_condition:
     level3: [level1, artificial_surface, cultivated]
     level4: [level1, level3, woody, water_season, water_frequency, pv_pc_50, bs_pc_50]
-  urban_mask: /vsizip/vsis3/dea-public-data-dev/urban_aux/SA1_2021_AUST_SHP_GDA2020.zip
+  urban_mask: /vsizip/vsis3/dea-public-data-dev/lccs_models/urban_aux/SA1_2021_AUST_SHP_GDA2020.zip
   filter_expression: SA4_NAME21 LIKE '%Outback%' AND AREASQKM21 < 5000 OR SA4_NAME21 NOT LIKE '%Outback%' # urban polygons and rural area < 5k km^2
   # match the column names from `class_condition` to `input_bands`
   # absent means the same
