@@ -106,7 +106,7 @@ max_processing_time: 1200
 job_queue_max_lease: 300
 renew_safety_margin: 60
 future_poll_interval: 2
-s3_acl: public-read
+
 # Generic product attributes
 cog_opts:
   zlevel: 9
@@ -116,5 +116,4 @@ output_location: >-
 
 # save-tasks options
 input_products: ga_ls_wo_3
-frequency: apr-oct
 grid: au_extended_30
