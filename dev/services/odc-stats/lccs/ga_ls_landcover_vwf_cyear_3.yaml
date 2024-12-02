@@ -83,6 +83,10 @@ future_poll_interval: 2
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
+dataset_filters: >-
+  {"datetime": "1987-01--P17Y"}|{"datetime": "2004-01--P6Y", "eo:platform": "landsat-5"}|
+  {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}|
+  {"eo:platform": "landsat-9"}
 output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/2-0-0
 
