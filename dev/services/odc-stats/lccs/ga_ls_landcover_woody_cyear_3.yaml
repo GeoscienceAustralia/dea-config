@@ -1,6 +1,8 @@
 plugin: woody_cover # this can help system find the relative plugin and plugin version
 plugin_config:
   input_bands: [nbart_swir_2, nbart_blue, nbart_green, nbart_red, nbart_nir, nbart_swir_1, level_3_4]
+  # temporal_coverage:
+  #   ga_ls8cls9c_gm_cyear_3: [2014--P99Y]
   mask_bands:
     level_3_4: 110
   model_path: woody_treelite.so
