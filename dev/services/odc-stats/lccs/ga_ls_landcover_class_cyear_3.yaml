@@ -18,7 +18,7 @@ plugin_config:
 product:
   name: ga_ls_landcover_class_cyear_3
   short_name: ga_ls_landcover_class_cyear_3
-  version: 1.0.0
+  version: 1.1.0
   product_family: lc
 
   # -- EO Dataset3 relative section --
@@ -111,9 +111,9 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_landcover_class_cyear_3/1-0-0
+  s3://dea-public-data-dev/derivative/ga_ls_landcover_class_cyear_3/1-1-0
 
 # save-tasks options
-input_products: ga_ls_fc_pc_cyear_3+ga_ls_wo_fq_cyear_3+s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/1-0-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/1-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_woody_cyear_3/1-0-0/
+input_products: ga_ls_fc_pc_cyear_3+ga_ls_wo_fq_cyear_3+s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/1-1-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/1-1-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/1-1-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/1-1-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_woody_cyear_3/1-1-0/
 frequency: annual
 grid: au_extended_30
