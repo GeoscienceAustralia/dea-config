@@ -1,15 +1,15 @@
 plugin: lccs_level34 # this can help system find the relative plugin and plugin version
 plugin_config:
-  input_bands: [pv_pc_50, bs_pc_50, water_frequency, level_3_4, water_season, artificial_surface, cultivated, woody]
+  input_bands: [pv_pc_50, bs_pc_50, frequency, water_frequency, level_3_4, artificial_surface, cultivated, woody]
   measurements: [level3, level4]
   class_def_path: s3://dea-public-data-dev/lccs_validation/c3/data_to_plot/lccs_colour_scheme_golden_dark_au_c3.csv
   # the dependencies of generating level34
   # i.e., the columns in csv `class_def_path`
   class_condition:
     level3: [level1, artificial_surface, cultivated]
-    level4: [level1, level3, woody, water_season, water_frequency, pv_pc_50, bs_pc_50]
+    level4: [level1, level3, woody, frequency, water_frequency, pv_pc_50, bs_pc_50]
   urban_mask: /vsizip/vsis3/dea-public-data-dev/lccs_models/urban_aux/SA1_2021_AUST_SHP_GDA2020.zip
-  filter_expression: SA4_NAME21 LIKE '%Outback%' AND AREASQKM21 < 5000 OR SA4_NAME21 NOT LIKE '%Outback%' # urban polygons and rural area < 5k km^2
+  filter_expression: GCC_NAME21 LIKE '%Rest of%' AND AREASQKM21 < 63 OR GCC_NAME21 NOT LIKE '%Rest of%' # metropolitan polygons and rural area < 63 km^2
   # match the column names from `class_condition` to `input_bands`
   # absent means the same
   data_var_condition:
@@ -24,7 +24,7 @@ product:
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
   explorer_path: https://explorer.dea.ga.gov.au/
-  classifier: ard
+  classifier: lc
   maturity: final
   collection_number: 3
 
@@ -109,11 +109,12 @@ future_poll_interval: 2
 # Generic product attributes
 cog_opts:
   zlevel: 9
+  overview_resampling: mode
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data/derivative/ga_ls_landcover_class_cyear_3/2-0-0
+  s3://dea-public-data-dev/derivative/ga_ls_landcover_class_cyear_3/2-0-0
 
 # save-tasks options
-input_products: ga_ls_fc_pc_cyear_3+s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/2-0-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_woody_cyear_3/2-0-0/
+input_products: ga_ls_fc_pc_cyear_3+ga_ls_wo_fq_cyear_3+s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/2-0-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_woody_cyear_3/2-0-0/
 frequency: annual
 grid: au_extended_30
