@@ -24,7 +24,7 @@ product:
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
   explorer_path: https://explorer.dea.ga.gov.au/
-  classifier: ard
+  classifier: lc
   maturity: final
   collection_number: 3
 
