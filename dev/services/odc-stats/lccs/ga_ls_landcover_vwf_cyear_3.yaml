@@ -13,13 +13,13 @@ plugin_config:
 product:
   name: ga_ls_landcover_vwf_cyear_3
   short_name: ga_ls_landcover_vwf_cyear_3
-  version: 1.1.0
+  version: 2.0.0
   product_family: lc
 
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
   explorer_path: https://explorer.dea.ga.gov.au/
-  classifier: ard
+  classifier: lc
   maturity: final
   collection_number: 3
 
@@ -85,7 +85,7 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/1-1-0
+  s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/2-0-0
 
 # save-tasks options
 input_products: ga_ls_fc_3+ga_ls_wo_3
