@@ -82,6 +82,7 @@ future_poll_interval: 2
 # Generic product attributes
 cog_opts:
   zlevel: 9
+  overview_resampling: mode
 apply_eodatasets3: True
 output_location: >-
   s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/1-1-0
