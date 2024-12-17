@@ -1,6 +1,6 @@
 plugin: veg_class_l1 # this can help system find the relative plugin and plugin version
 plugin_config:
-  input_bands: [nbart_red, nbart_green, nbart_blue, veg_frequency, frequency, dem_h]
+  input_bands: [nbart_red, nbart_green, nbart_blue, veg_frequency, wet_percentage, frequency, dem_h]
   optional_bands: [canopy_cover_class, elevation]
   output_classes:
     aquatic_veg_wood: 124

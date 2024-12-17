@@ -112,7 +112,7 @@ cog_opts:
   overview_resampling: mode
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data/derivative/ga_ls_landcover_class_cyear_3/2-0-0
+  s3://dea-public-data-dev/derivative/ga_ls_landcover_class_cyear_3/2-0-0
 
 # save-tasks options
 input_products: ga_ls_fc_pc_cyear_3+ga_ls_wo_fq_cyear_3+s3://dea-public-data-dev/derivative/ga_ls_landcover_vwf_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_inter_class_cyear_3/2-0-0+s3://dea-public-data-dev/derivative/ga_ls_landcover_artificial_surface_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_cultivated_cyear_3/2-0-0/+s3://dea-public-data-dev/derivative/ga_ls_landcover_woody_cyear_3/2-0-0/
