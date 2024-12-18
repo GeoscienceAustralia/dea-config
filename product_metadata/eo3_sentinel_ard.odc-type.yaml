@@ -48,6 +48,11 @@ dataset:
       offset: [properties, 'dea:dataset_maturity']
       indexed: false
 
+    final_ancillaries:
+      description: One of - standard|nonstandard, if specificed
+      offset: [properties, 'dea:final_ancillaries']
+      indexed: false
+
     cloud_cover:
       description: |
         The proportion (from 0 to 100) of the dataset's valid data area that contains cloud pixels.
