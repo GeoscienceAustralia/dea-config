@@ -8,7 +8,7 @@ plugin_config:
   transform_code: EPSG:9688
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
   ue_threshold: 40
-  measurements: [veg_frequency, water_frequency]
+  measurements: [veg_frequency, water_frequency, wet_percentage]
 
 product:
   name: ga_ls_landcover_vwf_cyear_3

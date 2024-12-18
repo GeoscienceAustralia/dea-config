@@ -20,6 +20,10 @@ measurements:
     dtype: uint8
     nodata: 255
     units: '1'
+  - name: wet_percentage
+    dtype: uint8
+    nodata: 255
+    units: '1'
 
 load:
   crs: 'EPSG:3577'
