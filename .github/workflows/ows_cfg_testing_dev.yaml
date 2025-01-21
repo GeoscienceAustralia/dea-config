@@ -29,6 +29,8 @@ jobs:
     - name: Run ows_refactored_cfg test (dev)
       run: |
         docker compose -f docker-compose.ows.yaml up -d
+        docker network ls
+        docker ps
         docker compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "datacube system check"
         docker compose -f docker-compose.ows.yaml exec -T ows /bin/sh -c "cd /dea-config; ./compare-cfg.sh"
         docker compose -f docker-compose.ows.yaml down
