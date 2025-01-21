@@ -20,6 +20,7 @@ services:
       INVENTORY: /dea-config/${PYTHON_PATH}/inventory.json
     depends_on:
       - postgres
+    command: tail -f /dev/null
     volumes:
       - ./:/dea-config/
       - ./artifacts:/mnt/artifacts
