@@ -254,7 +254,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "feature_info": {
                 "include_custom": {
                     "description": {
-                        "function": "ows_refactored.land_and_vegetation.landcover.lc_class_desc.class_labels",
+                        "function": "ows_refactored.land_and_vegetation.landcover.lc_c3_class_desc.class_labels",
                     }
                 }
             }
@@ -288,7 +288,7 @@ For service status information, see https://status.dea.ga.gov.au""",
             "feature_info": {
                 "include_custom": {
                     "description": {
-                        "function": "ows_refactored.land_and_vegetation.landcover.lc_class_desc.class_labels",
+                        "function": "ows_refactored.land_and_vegetation.landcover.lc_c3_class_desc.class_labels",
                     }
                 }
             }
