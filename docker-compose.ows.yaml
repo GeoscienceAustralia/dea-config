@@ -1,6 +1,3 @@
-
-version: '3.4'
-
 # Default compose will create an ows image, with dev settings and connect to a local db
 services:
   ows:
@@ -19,7 +16,8 @@ services:
       - PYTHONPATH=/dea-config/${PYTHON_PATH}
       - INVENTORY=/dea-config/${PYTHON_PATH}/inventory.json
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     command: tail -f /dev/null
     volumes:
       - ./:/dea-config/
@@ -34,3 +32,8 @@ services:
         # ports:
         #   - "5435:5432"
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
