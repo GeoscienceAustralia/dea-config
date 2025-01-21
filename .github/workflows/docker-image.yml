@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   push:
     branches: [ master ]
-    path:
+    paths:
       - 'dev/services/wms/**'
       - 'prod/services/wms/**'
   release:
