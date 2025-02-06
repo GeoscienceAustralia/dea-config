@@ -1,25 +1,22 @@
-
-version: '3.4'
-
 # Default compose will create an ows image, with dev settings and connect to a local db
 services:
   ows:
     image: opendatacube/ows:latest
     environment:
       # # Defaults are defined in .env file
-      DB_HOSTNAME: postgres
-      DB_USERNAME: opendatacube
-      DB_PASSWORD: opendatacubepassword
-      DB_DATABASE: opendatacube
-      DB_PORT: 5432
-      WMS_CONFIG_PATH: /dea-config/${OWS_CFG_PATH}
+      - ODC_DEFAULT_DB_HOSTNAME=postgres
+      - ODC_DEFAULT_DB_USERNAME=opendatacube
+      - ODC_DEFAULT_DB_PASSWORD=opendatacubepassword
+      - ODC_DEFAULT_DB_DATABASE=opendatacube
+      - WMS_CONFIG_PATH=/dea-config/${OWS_CFG_PATH}
       # # Path from the PYTHONPATH to the config object (default PYTHONPATH is /env)
-      DATACUBE_OWS_CFG: ${DATACUBE_OWS_CFG}
-      AWS_DEFAULT_REGION: ap-southeast-2
-      PYTHONPATH: /dea-config/${PYTHON_PATH}
-      INVENTORY: /dea-config/${PYTHON_PATH}/inventory.json
+      - DATACUBE_OWS_CFG=${DATACUBE_OWS_CFG}
+      - AWS_DEFAULT_REGION=ap-southeast-2
+      - PYTHONPATH=/dea-config/${PYTHON_PATH}
+      - INVENTORY=/dea-config/${PYTHON_PATH}/inventory.json
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     volumes:
       - ./:/dea-config/
       - ./artifacts:/mnt/artifacts
@@ -30,6 +27,9 @@ services:
       - POSTGRES_DB=opendatacube
       - POSTGRES_PASSWORD=opendatacubepassword
       - POSTGRES_USER=opendatacube
-    ports:
-      - "5435:5432"
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
