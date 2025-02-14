@@ -48,6 +48,11 @@ dataset:
       description: One of - final|interim|nrt  (near real time)
       offset: [properties, 'dea:dataset_maturity']
 
+    final_ancillaries:
+      description: One of - standard|nonstandard, if specificed
+      offset: [properties, 'dea:final_ancillaries']
+      indexed: false
+
     gqa:
       description: GQA Circular error probable (90%)
       type: double
