@@ -90,3 +90,4 @@ input_products: ga_ls8c_ard_3-ga_ls9c_ard_3
 frequency: annual
 grid: au_extended_30
 gqa: 1
+dataset_filter: {"maturity": "final"}
