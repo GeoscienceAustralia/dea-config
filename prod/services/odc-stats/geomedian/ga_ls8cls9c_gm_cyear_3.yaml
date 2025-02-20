@@ -91,4 +91,4 @@ frequency: annual
 grid: au_extended_30
 gqa: 1
 dataset_filter: >-
-  {"maturity": "final"}
+  {"dataset_maturity": "final"}
