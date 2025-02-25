@@ -43,7 +43,7 @@ layers = {
                 "manual_merge": False,
             },
             "styling": {
-                "default_style": "dea_fmc",
+                "default_style": "style_fmc",
                 "styles": [style_fmc],
             },
         },
