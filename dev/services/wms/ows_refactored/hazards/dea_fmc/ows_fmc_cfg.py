@@ -1,5 +1,5 @@
 from ows_refactored.ows_reslim_cfg import reslim_standard
-from from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.colors import LinearSegmentedColormap
 
 bands_fmc= {
     "fmc": [],
