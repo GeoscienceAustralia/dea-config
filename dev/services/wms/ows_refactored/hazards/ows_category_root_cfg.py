@@ -10,7 +10,7 @@ category_layers = {
             "include": "ows_refactored.hazards.nrt_burn.ows_category_nrt_cfg.layers",
             "type": "python",
         },
-         {
+        {
             "include": "ows_refactored.hazards.dea_fmc.ows_fmc_cfg.layers",
             "type": "python",
         },
