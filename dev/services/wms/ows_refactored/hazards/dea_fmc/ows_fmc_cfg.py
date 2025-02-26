@@ -1,4 +1,3 @@
-from matplotlib.colors import LinearSegmentedColormap
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_fmc = {
@@ -6,7 +5,7 @@ bands_fmc = {
 }
 
 style_fmc = {
-    "name": "fmc",
+    "name": "style_fmc",
     "title": "Fuel Moisture Content",
     "abstract": "the percentage of water in vegetation by weight",
     "needed_bands": ["fmc"],
@@ -18,7 +17,7 @@ style_fmc = {
         },
     },
     "range": [0, 300],
-    "colour_ramp": LinearSegmentedColormap.from_list('fmc', [(0.87, 0, 0), (1, 1, 0.73), (0.165, 0.615, 0.957)], N=256),
+    "mpl_ramp": "PuOr_r",
     "legend": {
         "url": "https://data.dea.ga.gov.au/derivative/ga_ls_tcw_percentiles_2/tcw_percentiles_legend.png",
     },
