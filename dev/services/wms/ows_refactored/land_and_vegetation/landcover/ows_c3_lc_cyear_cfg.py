@@ -216,7 +216,7 @@ style_c3_level4 = {
     },
     "legend": {
         "show_legend": True,
-        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_landcover_class_cyear_2/level4-web-legend.png"
+        "url": "https://data.dea.ga.gov.au/derivative/ga_ls_landcover_class_cyear_3/level4-web-legend.png"
     },
 }
 
@@ -233,6 +233,8 @@ layers = {
 Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
 
 For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/
+
+Note: A Geometric Quality issue has been identified with data presence in three tiles in Western Australia, particularly between 1988 and 2005. The affected tiles are x39y49, x40y47, and x41y45. These will be rectified shortly.
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_landcover_class_cyear_3",
@@ -267,6 +269,8 @@ For service status information, see https://status.dea.ga.gov.au""",
 Land cover is the observed physical cover on the Earth's surface including trees, shrubs, grasses, soils, exposed rocks, water bodies, plantations, crops and built structures. A consistent, Australia-wide land cover product helps the understanding of how the different parts of the environment change and inter-relate. Earth observation data recorded over a period of time allows the observation of the state of land cover at specific times and therefore the way that land cover changes.
 
 For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-land-cover-landsat/
+
+Note: A Geometric Quality issue has been identified with data presence in three tiles in Western Australia, particularly between 1988 and 2005. The affected tiles are x39y49, x40y47, and x41y45. These will be rectified shortly.
 
 For service status information, see https://status.dea.ga.gov.au""",
             "product_name": "ga_ls_landcover_class_cyear_3",

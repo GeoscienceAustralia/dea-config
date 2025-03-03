@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 73,
+    "total_layers_count": 74,
     "layers": [
         {
             "layer": "s2_ls_combined",
@@ -1072,6 +1072,16 @@
                 "combined_burncube",
                 "severe_burncube",
                 "moderate_burncube"
+            ]
+        },
+        {
+            "layer": "ga_s2am_fmc",
+            "product": [ 
+                "ga_s2am_fmc"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "style_fmc"
             ]
         }
     ]
