@@ -26,6 +26,7 @@ This product combines:
 
    * Sentinel-2A https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2a-msi/
    * Sentinel-2B https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2b-msi/
+   * Sentinel-2C https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-sentinel-2c-msi/
    * Landsat-5 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-5-tm/
    * Landsat-7 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-7-etm/
    * Landsat-8 https://knowledge.dea.ga.gov.au/data/product/dea-surface-reflectance-landsat-8-oli-tirs/
@@ -37,6 +38,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         # Sentinel-2 listed first to set priority on overlap areas.
         "ga_s2am_ard_3",
         "ga_s2bm_ard_3",
+        "ga_s2cm_ard_3",
         # Landsat listed second.
         "ga_ls5t_ard_3",
         "ga_ls7e_ard_3",
@@ -61,6 +63,7 @@ For service status information, see https://status.dea.ga.gov.au""",
                 # Should line up with product_names above.
                 "ga_s2am_ard_3",
                 "ga_s2bm_ard_3",
+                "ga_s2cm_ard_3",
                 "ga_ls5t_ard_3",
                 "ga_ls7e_ard_3",
                 "ga_ls8c_ard_3",
