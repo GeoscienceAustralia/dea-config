@@ -88,7 +88,7 @@ dataset_filters: >-
   {"datetime": "2010-01--P3Y"}|{"datetime": "2013-01--P5M"}|{"eo:platform": "landsat-8"}|
   {"datetime": "2022-01--P10Y", "eo:platform": "landsat-9"}
 output_location: >-
-  s3://dea-public-data/derivative/ga_ls_fc_pc_cyear_3/4-0-0
+  s3://dea-public-data-dev/derivative/ga_ls_fc_pc_cyear_3/4-0-0
 
 # save-tasks options
 input_products: ga_ls_fc_3+ga_ls_wo_3
