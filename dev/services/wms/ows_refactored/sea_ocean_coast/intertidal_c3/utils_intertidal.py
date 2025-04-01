@@ -53,3 +53,18 @@ def multi_date_raw_elevation(data, band, band_mapper=None):
     data1, data2 = (data.sel(time=dt) for dt in data.coords["time"].values)
 
     return data2[band] - data1[band]
+
+
+def tide_graph_path(data, ds):
+    """
+    Calculates an additional metadata field providing the URL
+    to a graph that is used to visualise tide biases in DEA Intertidal
+    """
+
+    # Extract required data from datacube dataset
+    version = ds.metadata_doc['properties']['odc:dataset_version'].replace(".", "-")
+    year = ds.metadata_doc['properties']['datetime'][:4]
+    region = ds.metadata_doc['properties']['odc:region_code'].replace("y", "/y")
+
+    # Combine into a string
+    return f"https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2ls_intertidal_cyear_3/{version}/{region}/{year}--P1Y/tide_graph.png"
