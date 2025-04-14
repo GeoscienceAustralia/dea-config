@@ -1,0 +1,35 @@
+name: Alchemist CFG Lint Check
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'dev/services/alchemist/**'
+      - 'prod/services/alchemist/**'
+      - .github/workflows/alchemist-lint.yaml
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'dev/services/alchemist/**'
+      - 'prod/services/alchemist/**'
+      - .github/workflows/alchemist-lint.yaml
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      # You can use PyPy versions in python-version.
+      # For example, pypy-2.7 and pypy-3.8
+      matrix:
+        python-version: ["3.9"]
+
+    steps:
+      - uses: actions/checkout@v3
+      # - name: Set up Python ${{ matrix.python-version }}
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+            docker run -t -v ${PWD}:/code/dea-config opendatacube/datacube-alchemist:latest python /code/dea-config/alchemist_lint.py
