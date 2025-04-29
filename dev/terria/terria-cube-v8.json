@@ -1096,10 +1096,10 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA Tidal Composites (Sentinel-2)",
-                                    "url": "https://nc-ows.dev.dea.ga.gov.au/wms",
+                                    "url": "https://ows.dev.dea.ga.gov.au/wms",
                                     "opacity": 1,
                                     "layers": "ga_s2_tidal_composites_cyear_3",
-                                    "linkedWcsUrl": "https://nc-ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2_tidal_composites_cyear_3",
                                     "dateFormat": "'Year: 'yyyy",
                                     "availableDiffStyles": ["low_true"],
