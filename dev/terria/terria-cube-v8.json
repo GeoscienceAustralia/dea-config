@@ -70,6 +70,18 @@
                             "id": "45HIff"
                         },
                         {
+                          "type": "mvt",
+                          "name": "mvt example",
+                          "description": "Federal electoral boundaries which will apply at the 2019 federal election. Produced by combining boundary datasets provided by AEC for each state.",
+                          "url": "https://tiles.terria.io/ELB_2019/{z}/{x}/{y}.pbf",
+                          "opacity": 1,
+                          "lineColor": "hsl(180,80%,30%)",
+                          "layer": "ELB_2019",
+                          "maximumNativeZoom": 12,
+                          "minimumZoom": 0,
+                          "id": "some unique id"
+                        },
+                        {
                             "type": "wms",
                             "name": "DEA Surface Reflectance (Sentinel-2)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
