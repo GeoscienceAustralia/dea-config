@@ -10,36 +10,36 @@ metadata:
         odc:file_format: GeoTIFF
         odc:product_family: burn_mapping
 
-measurements: [
-    name: any
+measurements:
+  - name: any
     dtype: int32
     units: '1'
     nodata: -999
-    name: all
+  - name: all
     dtype: int32
     units: '1'
     nodata: -999
-    name: majority
+  - name: majority
     dtype: int32
     units: '1'
     nodata: -999
-    name: rf
+  - name: rf
     dtype: int16
     units: '1'
     nodata: -999
-    name: bc
+  - name: bc
     dtype: float64
     units: '1'
     nodata: -999
-    name: rbr
+  - name: rbr
     dtype: float64
     units: '1'
     nodata: -999
-    name: uncertainty
+  - name: uncertainty
     dtype: float64
     units: '1'
     nodata: -999
-]
+
 
 load:
     crs: 'epsg:3577'
