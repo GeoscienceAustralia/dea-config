@@ -1389,6 +1389,54 @@
                             "members": [
                                 {
                                     "type": "wms",
+                                    "name": "Relativised Burn Ratio (RBR) Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_burn_mapping_rbr",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_burn_mapping_rbr",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "sajkd9"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "BurnCube Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_burn_mapping_bc",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_burn_mapping_bc",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "sa79ih"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Gradient Boosted Decision Tree (GBDT) Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_burn_mapping_dea_gbdt",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_burn_mapping_dea_gbdt",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "sa1271"
+                                },
+                                {
+                                    "type": "wms",
                                     "name": "Stacking Burn Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
