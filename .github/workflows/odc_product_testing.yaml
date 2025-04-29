@@ -29,11 +29,11 @@ jobs:
 
     - name: Run product definition testing
       run: |
-        docker-compose -f docker-compose.productscsv.yaml up -d
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
-        docker-compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-product-definitions.sh"
-        docker-compose -f docker-compose.productscsv.yaml down
+        docker compose -f docker-compose.productscsv.yaml up -d
+        docker compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "datacube system init"
+        docker compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./datacube_init_metadata.sh"
+        docker compose -f docker-compose.productscsv.yaml exec -T datacube /bin/sh -c "cd /env/config; ./check-product-definitions.sh"
+        docker compose -f docker-compose.productscsv.yaml down
 
   eo3-validate:
     runs-on: ubuntu-latest
