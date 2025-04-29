@@ -11,7 +11,7 @@ metadata:
         odc:file_format: GeoTIFF
         odc:product_family: fmc
 measurements:
-- name: fmc
+  - name: fmc
     dtype: int16
     units: 1
     nodata: -999
