@@ -14,6 +14,17 @@ category_layers = {
             ]
         },
         {
+            "title": "DEA Tidal Composites",
+            "abstract": "",
+            "layers": [
+                {
+                    # DEA Tidal Composites Collection 3
+                    "include": "ows_refactored.sea_ocean_coast.tidal_composites_c3.ows_tidal_composites_cfg.dea_tidal_composites_layer",
+                    "type": "python",
+                },
+            ]
+        },
+        {
             # HLTC Collection 2 (nested folder structure is defined below)
             "include": "ows_refactored.sea_ocean_coast.ows_tide_cfg.layers",
             "type": "python",
