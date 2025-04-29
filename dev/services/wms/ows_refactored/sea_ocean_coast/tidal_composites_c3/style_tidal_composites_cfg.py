@@ -50,7 +50,7 @@ style_high_false = {
 }
 
 style_low_mndwi = {
-    "name": "mndwi",
+    "name": "low_mndwi",
     "title": "MNDWI – Low tide",
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
@@ -73,7 +73,7 @@ style_low_mndwi = {
 }
 
 style_high_mndwi = {
-    "name": "mndwi",
+    "name": "high_mndwi",
     "title": "MNDWI – High tide",
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "index_function": {
@@ -96,7 +96,7 @@ style_high_mndwi = {
 }
 
 style_count_clear = {
-    "name": "count",
+    "name": "count_clear",
     "title": "Clear observation count",
     "abstract": "Count of observations included in tidal composites",
     "index_function": {
