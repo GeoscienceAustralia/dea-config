@@ -16,8 +16,7 @@ style_stacking = {
     "color_ramp": [
         {"value": 0.33, "color": "#ffd966"},
         {"value": 0.66, "color": "#ffd966"},
-        {"value": 1, "color": "#d53a3a"}
-],
+        {"value": 1, "color": "#d53a3a"}],
     "legend": {},
 }
 
