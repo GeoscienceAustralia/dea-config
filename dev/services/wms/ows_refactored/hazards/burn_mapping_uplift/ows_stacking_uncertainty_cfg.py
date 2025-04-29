@@ -10,6 +10,10 @@ style_stacking = {
     "title": "Stacking Burnt Area",
     "abstract": "burnt area as detected by the Stacking method",
     "needed_bands": ["uncertainty"],
+    
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "kwargs": {"band": "uncertainty"}},
     "color_ramp": [
         {"value": 0.33, "color": "#ffd966"},
         {"value": 0.66, "color": "#ffd966"},
