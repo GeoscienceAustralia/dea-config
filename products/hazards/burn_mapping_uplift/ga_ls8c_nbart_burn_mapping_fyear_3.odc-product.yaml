@@ -1,0 +1,51 @@
+name: ga_ls8c_nbart_burn_mapping_fyear_3
+license: CC-BY-4.0
+metadata_type: eo3
+description: Geoscience Australia Landsat Nadir BRDF Adjusted Reflectance Terrain, Landsat 8 Burn Mapping Financial Years Collection 3
+
+metadata:
+    product:
+        name: ga_ls8c_nbart_burn_mapping_fyear_3
+    properties:
+        odc:file_format: GeoTIFF
+        odc:product_family: burn_mapping
+
+measurements: [
+    name: any
+    dtype: int32
+    units: '1'
+    nodata: -999
+    name: all
+    dtype: int32
+    units: '1'
+    nodata: -999
+    name: majority
+    dtype: int32
+    units: '1'
+    nodata: -999
+    name: rf
+    dtype: int16
+    units: '1'
+    nodata: -999
+    name: bc
+    dtype: float64
+    units: '1'
+    nodata: -999
+    name: rbr
+    dtype: float64
+    units: '1'
+    nodata: -999
+    name: uncertainty
+    dtype: float64
+    units: '1'
+    nodata: -999
+]
+
+load:
+    crs: 'epsg:3577'
+    align:
+        x: 0
+        y: 0
+    resolution:
+        x: 30
+        y: -30
