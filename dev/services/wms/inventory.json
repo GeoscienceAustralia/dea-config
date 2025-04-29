@@ -1142,7 +1142,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_stacking"
+                "stacking_burnt_area"
             ]
         },
         {
@@ -1152,7 +1152,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_dea_gbdt"
+                "rf_burnt_area"
             ]
         },
         {
@@ -1162,7 +1162,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_rbr"
+                "rbr_burnt_area"
             ]
         },
         {
@@ -1172,7 +1172,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_bc"
+                "bc_burnt_area"
             ]
         }
     ]
