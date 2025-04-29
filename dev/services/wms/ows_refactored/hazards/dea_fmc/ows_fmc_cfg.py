@@ -13,10 +13,10 @@ style_fmc = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "kwargs": {"band": "fmc"}},
-    "color_ramp": [{"value": 0, "color": "#DD0000"}, #here we set the colours and which value we want that colour to be centered at. this makes a blended continuous colour ramp
-                  {"value": 150, "color": "#FFFFBA"},
-                  {"value": 300, "color": "#2A9DF4"}]
-}
+    "color_ramp": [{"value": 0, "color": "#DD0000"},
+                   {"value": 150, "color": "#FFFFBA"},
+                   {"value": 300, "color": "#2A9DF4"}]
+                }
 
 
 layers = {
