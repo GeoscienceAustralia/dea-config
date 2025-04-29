@@ -1108,6 +1108,9 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Tidal Composites</h1><br><br><img src='{{data.0.tide_graph_path}}' width='550'><br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
+                                    },
                                     "id": "5533dfr",       
                                 },
                             ]
