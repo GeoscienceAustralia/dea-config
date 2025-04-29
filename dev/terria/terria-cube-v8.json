@@ -1089,6 +1089,30 @@
                             ]
                         },
                         {
+                            "id": "fkgj46",
+                            "type": "group",
+                            "name": "DEA Tidal Composites",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Tidal Composites (Sentinel-2)",
+                                    "url": "https://nc-ows.dev.dea.ga.gov.au/wms",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_tidal_composites_cyear_3",
+                                    "linkedWcsUrl": "https://nc-ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_tidal_composites_cyear_3",
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "availableDiffStyles": ["low_true"],
+                                    "leafletUpdateInterval": 750,
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
+                                    "id": "5533dfr",       
+                                },
+                            ]
+                        },
+                        {
                             "id": "sDf23f",
                             "type": "group",
                             "name": "DEA High and Low Tide Imagery (HLTC)",
