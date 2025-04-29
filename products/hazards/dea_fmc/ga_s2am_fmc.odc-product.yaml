@@ -13,11 +13,11 @@ metadata:
 measurements:
   - name: fmc
     dtype: int16
-    units: 1
+    units: '1'
     nodata: -999
 
 load:
-    crs: epsg:3577
+    crs: 'EPSG:3577'
     resolution:
         x: 20
         y: -20
