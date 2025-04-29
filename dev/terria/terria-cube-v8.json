@@ -1412,6 +1412,26 @@
                                     "id": "n2349s"
                                 }
                             ]
+                        },
+                        {
+                            "id": "fmc927",
+                            "type": "group",
+                            "name": "DEA Fuel Moisture Content",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Fuel Moisture Content",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2am_fmc",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "2fmc93"
+                                }
+                            ]
                         }
                     ]
                 },
