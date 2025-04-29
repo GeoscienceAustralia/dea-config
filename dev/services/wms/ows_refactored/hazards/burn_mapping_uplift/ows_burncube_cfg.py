@@ -54,7 +54,7 @@ Draft CMI https://cmi.ga.gov.au/data-products/dea/841/draft...-burncube-historic
 
 For service status information, see https://status.dea.ga.gov.au""",
     "product_name": "ga_ls8c_nbart_bc_cyear_3",
-    "bands": bands_in_bc,
+    "bands": bands_bc,
     "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
     "native_resolution": [30, -30],
