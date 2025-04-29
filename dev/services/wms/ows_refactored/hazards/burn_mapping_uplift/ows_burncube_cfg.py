@@ -32,7 +32,7 @@ style_bc = {
 
 layers = {
     "title": "BurnCube Burnt Area",
-    "name": "ga_ls8c_nbart_burn_mapping_fyear_3",
+    "name": "ga_burn_mapping_bc",
     "abstract": """BurnCube Burnt Area, 2023-2024 Financial Year, 30m, 0.0.0 (Landsat, Collection 3)""",
     "product_name": "ga_ls8c_nbart_burn_mapping_fyear_3",
     "bands": bands_bc,

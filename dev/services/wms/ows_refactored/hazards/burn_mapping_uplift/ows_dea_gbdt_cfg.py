@@ -32,7 +32,7 @@ style_dea_gbdt = {
 
 layers = {
     "title": "DEA Gradient Boosted Decision Tree (GBDT) Burnt Area",
-    "name": "ga_ls8c_nbart_burn_mapping_fyear_3",
+    "name": "ga_burn_mapping_dea_gbdt",
     "abstract": """DEA Gradient Boosted Decision Tree (GBDT) Burnt Area, 2023-2024 Financial Year, 30m, 0.0.0 (Landsat, Collection 3)""",
     "product_name": "ga_ls8c_nbart_burn_mapping_fyear_3",
     "bands": bands_dea_gbdt,
