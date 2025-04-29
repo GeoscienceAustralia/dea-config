@@ -34,7 +34,7 @@ layers = {
     "title": "Relativised Burn Ratio (RBR) Burnt Area",
     "name": "ga_ls8c_nbart_burn_mapping_fyear_3",
     "abstract": """Relativised Burn Ratio (RBR) Burnt Area, 2023-2024 Financial Year, 30m, 0.0.0 (Landsat, Collection 3)""",
-    "product_name": "ga_ls8c_nbart_bc_cyear_3",
+    "product_name": "ga_ls8c_nbart_burn_mapping_fyear_3",
     "bands": bands_rbr,
     "resource_limits": reslim_standard,
     "native_crs": "EPSG:3577",
