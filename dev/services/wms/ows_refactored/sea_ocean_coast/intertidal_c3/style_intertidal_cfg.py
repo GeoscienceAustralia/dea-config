@@ -163,6 +163,9 @@ style_intertidal_elevation_adaptive = {
             "hot": "ta_hot",
         },
     },
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "multi_date": [
         {
             "allowed_count_range": [2, 2],

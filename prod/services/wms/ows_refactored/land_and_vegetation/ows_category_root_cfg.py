@@ -7,6 +7,10 @@ category_layers = {
             "type": "python",
         },
         {
+            "include": "ows_refactored.land_and_vegetation.landcover.ows_c3_lc_cyear_cfg.layers",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.land_and_vegetation.fc.ows_fc_cfg.layers",
             "type": "python",
         },

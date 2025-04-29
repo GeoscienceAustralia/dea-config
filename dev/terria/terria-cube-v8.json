@@ -377,6 +377,35 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "DR7QYa"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Surface Reflectance (Sentinel-2C MSI)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2cm_ard_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2cm_ard_3",
+                                    "availableDiffStyles": ["ndvi", "ndwi", "mndwi", "nbr"],
+                                    "chartColor": "white",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table>  <tr><td><b>Time</b></td><td>{{data.0.time}}</td></tr>  <tr><td><b>Narrow Blue - 440</b></td><td>{{data.0.bands.nbart_coastal_aerosol}}</td></tr>  <tr><td><b>Blue - 490</b></td><td>{{data.0.bands.nbart_blue}}</td></tr>  <tr><td><b>Green - 560</b></td><td>{{data.0.bands.nbart_green}}</td></tr>  <tr><td><b>Red - 670</b></td><td>{{data.0.bands.nbart_red}}</td></tr>  <tr><td><b>Vegetation Red Edge - 710</b></td><td>{{data.0.bands.nbart_red_edge_1}}</td></tr>  <tr><td><b>Vegetation Red Edge - 740</b></td><td>{{data.0.bands.nbart_red_edge_2}}</td></tr>  <tr><td><b>Vegetation Red Edge - 780</b></td><td>{{data.0.bands.nbart_red_edge_3}}</td></tr>  <tr><td><b>Near Infrared (NIR) - 840</b></td><td>{{data.0.bands.nbart_nir_1}}</td></tr>  <tr><td><b>Narrow Near Infrared - 870</b></td><td>{{data.0.bands.nbart_nir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 1610</b></td><td>{{data.0.bands.nbart_swir_2}}</td></tr>  <tr><td><b>Shortwave Infrared (SWIR) - 2190</b></td><td>{{data.0.bands.nbart_swir_3}}</td></tr>  <tr><td><b>NDVI - Red, NIR</b></td><td>{{data.0.band_derived.ndvi}}</td></tr>  <tr><td><b>NDWI - Green, NIR</b></td><td>{{data.0.band_derived.ndwi}}</td></tr><tr><td><b>MNDWI - Green, NIR</b></td><td>{{data.0.band_derived.mndwi}}</td></tr><tr><td><b>NDCI - Red Edge, Red</b></td><td>{{data.0.band_derived.ndci}}</td></tr></table><p><chart id='{{lat}}{{lon}}{{data.0.time}}' title='NBART at {{lat}},{{lon}}' column-units='Wavelength (nm), Reflectance x 10k' preview-x-label='NBART Reflectance'>nm,NBART Reflectance\n440,{{data.0.bands.nbart_coastal_aerosol}}\n490,{{data.0.bands.nbart_blue}}\n560,{{data.0.bands.nbart_green}}\n670,{{data.0.bands.nbart_red}}\n710,{{data.0.bands.nbart_red_edge_1}}\n740,{{data.0.bands.nbart_red_edge_2}}\n780,{{data.0.bands.nbart_red_edge_3}}\n840,{{data.0.bands.nbart_nir_1}}\n870,{{data.0.bands.nbart_nir_2}}\n1610,{{data.0.bands.nbart_swir_2}}\n2190,{{data.0.bands.nbart_swir_3}}</chart></p><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                        "formats": {
+                                            "lat": {
+                                                "maximumFractionDigits": 5
+                                            },
+                                            "lon": {
+                                                "maximumFractionDigits": 5
+                                            }
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "DR4er4"
                                 }
                             ]
                         }
@@ -811,46 +840,6 @@
                                     ],
                                     "id": "AS145r"
                                 },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Waterbodies (version 2)",
-                                    "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
-                                    "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see <a href='https://www.dea.ga.gov.au/products/dea-waterbodies'>https://www.dea.ga.gov.au/products/dea-waterbodies</a>",
-                                    "layers": "dea:DigitalEarthAustraliaWaterbodies_v2",
-                                    "featureInfoTemplate": {
-                                        "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of surface area (not volume) observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' chart-type='lineAndPoint' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area (not volume) observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
-                                        "partials": {
-                                            "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
-                                        }
-                                    },
-                                    "legends": [
-                                        {
-                                            "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
-                                            "imageScaling": 0.5
-                                        }
-                                    ],
-                                    "id": "AS145s"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA Waterbodies (version 1, deprecated)",
-                                    "url": "https://nonprod.geoserver.dea.ga.gov.au/geoserver/dea/wms",
-                                    "chartDisclaimer": "Digital Earth Australia Waterbodies shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see <a href='https://www.dea.ga.gov.au/products/dea-waterbodies'>https://www.dea.ga.gov.au/products/dea-waterbodies</a>",
-                                    "layers": "dea:DigitalEarthAustraliaWaterbodies_v1",
-                                    "featureInfoTemplate": {
-                                        "template": "<div style='width:600px'><h3>Waterbody Identifier: {{uid}}<br /> Percentage of surface area (not volume) observed as wet</h3><br/><chart id='{{uid}}' title='Waterbody {{uid}}' chart-type='lineAndPoint' preview-x-label='Date' sources='{{#terria.urlEncode}}{{timeseries}}{{/terria.urlEncode}}'  column-names='Time,Percentage of total surface area (not volume) observed as wet,Wet Pixel Count' column-units='Date of satellite observation,%,#'></chart>{{>disclaimer}}</div>",
-                                        "partials": {
-                                            "disclaimer": "This graph shows the wet surface area of waterbodies as estimated from satellites. It does not show depth, volume, purpose of the waterbody, nor the source of the water. <br> For more detailed information see https://www.dea.ga.gov.au/products/dea-waterbodies."
-                                        }
-                                    },
-                                    "legends": [
-                                        {
-                                            "url": "https://dea-public-data.s3.ap-southeast-2.amazonaws.com/derivative/dea_waterbodies/waterbodies_legend_full.png",
-                                            "imageScaling": 0.5
-                                        }
-                                    ],
-                                    "id": "AS145t"
-                                }
                             ]
                         },
                         {

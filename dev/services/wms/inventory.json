@@ -1,11 +1,12 @@
 {
-    "total_layers_count": 74,
+    "total_layers_count": 75,
     "layers": [
         {
             "layer": "s2_ls_combined",
             "product": [ 
                 "ga_s2am_ard_3", 
                 "ga_s2bm_ard_3",
+                "ga_s2cm_ard_3",
                 "ga_ls5t_ard_3",
                 "ga_ls7e_ard_3",
                 "ga_ls8c_ard_3",
@@ -24,6 +25,7 @@
             "product": [ 
                 "ga_s2am_ard_3", 
                 "ga_s2bm_ard_3",
+                "ga_s2cm_ard_3",
                 "ga_ls5t_ard_3",
                 "ga_ls7e_ard_3",
                 "ga_ls8c_ard_3",
@@ -66,7 +68,8 @@
             "layer": "ga_s2m_ard_3",
             "product": [
                 "ga_s2am_ard_3",
-                "ga_s2bm_ard_3"
+                "ga_s2bm_ard_3",
+                "ga_s2cm_ard_3"
             ],
             "styles_count": 21,
             "styles_list": [
@@ -127,6 +130,36 @@
             "layer": "ga_s2bm_ard_3",
             "product": [
                 "ga_s2bm_ard_3"
+            ],
+            "styles_count": 21,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "s2cloudless_mask",
+                "s2cloudless_prob"
+            ]
+        },
+        {
+            "layer": "ga_s2cm_ard_3",
+            "product": [
+                "ga_s2cm_ard_3"
             ],
             "styles_count": 21,
             "styles_list": [

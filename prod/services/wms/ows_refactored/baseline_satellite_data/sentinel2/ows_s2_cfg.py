@@ -10,5 +10,9 @@ category_layers = {
             "include": "ows_refactored.baseline_satellite_data.sentinel2.ows_ard_cfg.s2b_layer",
             "type": "python",
         },
+        {
+            "include": "ows_refactored.baseline_satellite_data.sentinel2.ows_ard_cfg.s2c_layer",
+            "type": "python",
+        },
     ]
 }
