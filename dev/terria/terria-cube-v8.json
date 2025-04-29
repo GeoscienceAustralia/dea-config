@@ -1383,6 +1383,30 @@
                             ]
                         },
                         {
+                            "id": "sa5192",
+                            "type": "group",
+                            "name": "DEA Burn Mapping",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "Stacking Burn Area, 2023-2024 Financial Year (Landsat, Developmental)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_burn_mapping_stacking",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_burn_mapping_stacking",
+                                    "chartColor": "white",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "sa2987"
+                                }
+                                }
+                            ]
+                        },
+                        {
                             "id": "ASDF2f",
                             "type": "group",
                             "name": "DEA Hotspots",
