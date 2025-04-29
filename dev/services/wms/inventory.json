@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 75,
+    "total_layers_count": 79,
     "layers": [
         {
             "layer": "s2_ls_combined",
@@ -1115,6 +1115,46 @@
             "styles_count": 1,
             "styles_list": [
                 "style_fmc"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_stacking",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "style_stacking"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_dea_gbdt",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "style_dea_gbdt"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_rbr",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "style_rbr"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_bc",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "style_bc"
             ]
         }
     ]
