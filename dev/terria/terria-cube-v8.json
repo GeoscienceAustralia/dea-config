@@ -82,6 +82,12 @@
                           "id": "some unique id"
                         },
                         {
+                          "name": "COG Test Uluru",
+                          "description": "This is a COG from Sentinel-2 L2A, in EPSG:32752. Does it display in correct location? Does it display correctly?",
+                          "type": "cog",
+                          "url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/52/J/FS/2023/5/S2A_52JFS_20230501_0_L2A/TCI.tif"
+                        },
+                        {
                             "type": "wms",
                             "name": "DEA Surface Reflectance (Sentinel-2)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
