@@ -44,7 +44,9 @@ style_stacking = {
             },
         ]
     },
-    "legend": {},
+    "legend": {
+        "title": "Agreement"
+    },
 }
 
 layers = {
