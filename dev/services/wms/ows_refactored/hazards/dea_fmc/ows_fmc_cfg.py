@@ -29,30 +29,27 @@ style_fmc = {
 
 layers = {
     "title": "DEA Fuel Moisture Content (Sentinel 2)",
-    "abstract": "",
-    "layers": [
-        {
-            "title": "DEA Fuel Moisture Content (Sentinel 2)",
-            "name": "ga_s2am_fmc",
-            "abstract": """DEA Fuel Moisture Content (Sentinel 2)""",
-            "product_name": "ga_s2am_fmc",
-            "bands": bands_fmc,
-            "resource_limits": reslim_standard,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [20, -20],
+    "name": "ga_s2am_fmc",
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2)""",
+    "product_name": "ga_s2am_fmc",
+    "bands": bands_fmc,
+    "resource_limits": reslim_standard,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [20, -20],
     "image_processing": {
-            "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-            "always_fetch_bands": [],
-            "manual_merge": False},
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False
+    },
     "flags": [{
-            "band": "land",
-            "product": "geodata_coast_100k",
-            "ignore_time": True,
-            "ignore_info_flags": []}
-            ],
+        "band": "land",
+        "product": "geodata_coast_100k",
+        "ignore_time": True,
+        "ignore_info_flags": []
+    }],
     "styling": {
-            "default_style": "style_fmc",
-            "styles": [style_fmc]}
-        },
-    ],
+        "default_style": "style_fmc",
+        "styles": [style_fmc
+        ]
+    }
 }
