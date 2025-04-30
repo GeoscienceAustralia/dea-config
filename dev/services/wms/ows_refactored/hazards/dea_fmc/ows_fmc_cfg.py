@@ -49,7 +49,6 @@ layers = {
     }],
     "styling": {
         "default_style": "style_fmc",
-        "styles": [style_fmc
-        ]
+        "styles": [style_fmc]
     }
 }
