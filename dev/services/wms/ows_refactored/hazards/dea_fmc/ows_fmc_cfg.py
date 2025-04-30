@@ -16,11 +16,11 @@ style_fmc = {
     "color_ramp": [{"value": 0, "color": "#DD0000"},
                    {"value": 150, "color": "#FFFFBA"},
                    {"value": 300, "color": "#2A9DF4"}],
-    "legend":{
+    "legend": {
         "title": "Fuel Moisture Content (Weight Percent)",
         "begin": "0",
         "end": "300",
-        "ticks": ["0","50","100","150","200","250","300"],
+        "ticks": ["0", "50", "100", "150", "200", "250", "300"],
         "tick_labels": {
             "default": {
                 "suffix": "%"}}}
@@ -43,19 +43,18 @@ layers = {
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
-        "manual_merge": False,
-    },
+        "manual_merge": False},
     "flags": [
         {
             "band": "land",
             "product": "geodata_coast_100k",
             "ignore_time": True,
             "ignore_info_flags": []
-        },
+        }
     ],
             "styling": {
                 "default_style": "style_fmc",
-                "styles": [style_fmc],
+                "styles": [style_fmc]
             },
         },
     ],
