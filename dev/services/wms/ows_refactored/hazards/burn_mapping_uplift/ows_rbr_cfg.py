@@ -20,10 +20,10 @@ style_rbr = {
     "value_map": {
         "rbr": [
             {
-                "title": "",
+                "title": "Burnt Area",
                 "abstract": "",
                 "values": [1],
-                "color": "#a64d79",
+                "color": "#e785a3",
             },
         ]
     },

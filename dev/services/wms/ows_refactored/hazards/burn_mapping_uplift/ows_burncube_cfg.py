@@ -20,7 +20,7 @@ style_bc = {
     "value_map": {
         "bc": [
             {
-                "title": "",
+                "title": "Burnt Area",
                 "abstract": "",
                 "values": [1],
                 "color": "#674ea7",

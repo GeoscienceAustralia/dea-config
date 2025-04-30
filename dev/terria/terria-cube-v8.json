@@ -1385,7 +1385,7 @@
                         {
                             "id": "sa5192",
                             "type": "group",
-                            "name": "DEA Burn Mapping",
+                            "name": "DEA Burnt Area Mapping",
                             "members": [
                                 {
                                     "type": "wms",
@@ -1437,7 +1437,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "Stacking Burn Area, 2023-2024 Financial Year (Landsat, Developmental)",
+                                    "name": "Stacking Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_burn_mapping_stacking",
@@ -1495,6 +1495,7 @@
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2am_fmc",
+                                    "timeFilterPropertyName": "data_available_for_dates",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {

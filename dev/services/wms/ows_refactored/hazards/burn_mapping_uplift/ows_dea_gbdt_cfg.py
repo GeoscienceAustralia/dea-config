@@ -20,7 +20,7 @@ style_dea_gbdt = {
     "value_map": {
         "rf": [
             {
-                "title": "",
+                "title": "Burnt Area",
                 "abstract": "",
                 "values": [1],
                 "color": "#3d85c6",

@@ -15,32 +15,40 @@ style_fmc = {
         "kwargs": {"band": "fmc"}},
     "color_ramp": [{"value": 0, "color": "#DD0000"},
                    {"value": 150, "color": "#FFFFBA"},
-                   {"value": 300, "color": "#2A9DF4"}]
+                   {"value": 300, "color": "#2A9DF4"}],
+    "legend": {
+        "title": "Fuel Moisture Content (Weight Percent)",
+        "begin": "0",
+        "end": "300",
+        "ticks": ["0", "50", "100", "150", "200", "250", "300"],
+        "tick_labels": {
+            "default": {
+                "suffix": "%"}}}
 }
 
 
 layers = {
     "title": "DEA Fuel Moisture Content (Sentinel 2)",
-    "abstract": "",
-    "layers": [
-        {
-            "title": "DEA Fuel Moisture Content (Sentinel 2)",
-            "name": "ga_s2am_fmc",
-            "abstract": """DEA Fuel Moisture Content (Sentinel 2)""",
-            "product_name": "ga_s2am_fmc",
-            "bands": bands_fmc,
-            "resource_limits": reslim_standard,
-            "native_crs": "EPSG:3577",
-            "native_resolution": [20, -20],
-            "image_processing": {
-                "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
-                "always_fetch_bands": [],
-                "manual_merge": False,
-            },
-            "styling": {
-                "default_style": "style_fmc",
-                "styles": [style_fmc],
-            },
-        },
-    ],
+    "name": "ga_s2am_fmc",
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2)""",
+    "product_name": "ga_s2am_fmc",
+    "bands": bands_fmc,
+    "resource_limits": reslim_standard,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [20, -20],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False
+    },
+    "flags": [{
+        "band": "land",
+        "product": "geodata_coast_100k",
+        "ignore_time": True,
+        "ignore_info_flags": []
+    }],
+    "styling": {
+        "default_style": "style_fmc",
+        "styles": [style_fmc]
+    }
 }
