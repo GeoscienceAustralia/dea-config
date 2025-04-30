@@ -43,7 +43,8 @@ layers = {
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
-        "manual_merge": False},
+        "manual_merge": False
+    },
     "flags": [
         {
             "band": "land",
@@ -51,11 +52,11 @@ layers = {
             "ignore_time": True,
             "ignore_info_flags": []
         }
-    ],
+            ],
             "styling": {
                 "default_style": "style_fmc",
                 "styles": [style_fmc]
-            },
+            }
         },
     ],
 }
