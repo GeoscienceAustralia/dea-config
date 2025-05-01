@@ -1,6 +1,5 @@
 from ows_refactored.ows_reslim_cfg import reslim_standard
-from ows_refactored.others.srtm.style_srtm_cfg import \
-    styles_srtm_list
+from ows_refactored.others.srtm.style_srtm_cfg import styles_srtm_list
 
 bands_srtm = {
     "dem": [],
