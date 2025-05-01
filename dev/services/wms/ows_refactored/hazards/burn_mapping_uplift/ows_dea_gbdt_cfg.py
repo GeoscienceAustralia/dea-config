@@ -43,6 +43,12 @@ layers = {
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
     },
+    "flags": [{
+        "band": "land",
+        "product": "geodata_coast_100k",
+        "ignore_time": True,
+        "ignore_info_flags": []
+    }],
     "styling": {
         "default_style": "rf_burnt_area",
         "styles": [
