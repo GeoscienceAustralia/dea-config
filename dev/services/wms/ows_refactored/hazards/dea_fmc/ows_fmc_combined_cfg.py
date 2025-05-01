@@ -36,7 +36,7 @@ s2ab_layer = {
     "product_names": [
         "ga_s2am_fmc",
         "ga_s2bm_fmc"
-    ]
+    ],
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
