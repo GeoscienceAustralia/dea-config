@@ -27,7 +27,7 @@ style_fmc = {
 }
 
 
-layer_s2a = {
+s2a_layer = {
     "title": "DEA Fuel Moisture Content (Sentinel 2a)",
     "name": "ga_s2am_fmc",
     "abstract": """DEA Fuel Moisture Content (Sentinel 2a)""",
@@ -54,7 +54,7 @@ layer_s2a = {
     }
 }
 
-layer_s2b = {
+s2b_layer = {
     "title": "DEA Fuel Moisture Content (Sentinel 2b)",
     "name": "ga_s2bm_fmc",
     "abstract": """DEA Fuel Moisture Content (Sentinel 2b)""",
