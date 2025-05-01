@@ -68,7 +68,7 @@ combined_mosaic_layer = {
     "product_names": [
         "ga_s2am_fmc",
         "ga_s2bm_fmc"
-    ]
+    ],
     "mosaic_date_func": {
         # 6 day rolling window.  5 days should give full continental coverage
         # of Sentinel-2, plus an extra day to allow for patchy coverage on
