@@ -19,6 +19,10 @@ category_layers = {
             "type": "python",
         },
         {
+            "include": "ows_refactored.others.srtm.ows_srtm_cfg.dea_srtm_layer",
+            "type": "python",
+        },
+        {
             "include": "ows_refactored.others.ows_weather_cfg.layer",
             "type": "python",
         },
