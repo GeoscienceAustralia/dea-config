@@ -58,7 +58,7 @@ reslim_for_lccs = {
 reslim_for_mstp = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_level": 8.1,
+        "min_zoom_level": 1.0,
         "dataset_cache_rules": dataset_cache_rules,
         "max_datasets": 24,
     },
