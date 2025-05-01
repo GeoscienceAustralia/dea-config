@@ -49,7 +49,7 @@ s2ab_layer = {
     },
     "flags": [{
         "band": "land",
-        "product": "geodata_coast_100k",
+        "products": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],
@@ -93,7 +93,7 @@ combined_mosaic_layer = {
     },
     "flags": [{
         "band": "land",
-        "product": "geodata_coast_100k",
+        "products": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],
