@@ -14,6 +14,10 @@ category_layers = {
             "include": "ows_refactored.hazards.dea_fmc.ows_fmc_cfg.layers",
             "type": "python",
         },
+                {
+            "include": "ows_refactored.hazards.dea_fmc.ows_fmc_combined_cfg.layers",
+            "type": "python",
+        },
         {
             "include": "ows_refactored.hazards.burn_mapping_uplift.ows_rbr_cfg.layers",
             "type": "python",

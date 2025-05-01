@@ -1,7 +1,7 @@
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_fmc = {
-    "fmc": [],
+    "fmc": ["fmc"],
 }
 
 style_fmc = {
@@ -27,13 +27,41 @@ style_fmc = {
 }
 
 
-layers = {
-    "title": "DEA Fuel Moisture Content (Sentinel 2)",
+layer_s2a = {
+    "title": "DEA Fuel Moisture Content (Sentinel 2a)",
     "name": "ga_s2am_fmc",
-    "abstract": """DEA Fuel Moisture Content (Sentinel 2)""",
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2a)""",
     "product_name": "ga_s2am_fmc",
     "bands": bands_fmc,
-    "resource_limits": reslim_standard,
+    "resource_limits": reslim_for_sentinel2,
+    "dynamic": True,
+    "native_crs": "EPSG:3577",
+    "native_resolution": [20, -20],
+    "image_processing": {
+        "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
+        "always_fetch_bands": [],
+        "manual_merge": False
+    },
+    "flags": [{
+        "band": "land",
+        "product": "geodata_coast_100k",
+        "ignore_time": True,
+        "ignore_info_flags": []
+    }],
+    "styling": {
+        "default_style": "style_fmc",
+        "styles": [style_fmc]
+    }
+}
+
+layer_s2b = {
+    "title": "DEA Fuel Moisture Content (Sentinel 2b)",
+    "name": "ga_s2bm_fmc",
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2b)""",
+    "product_name": "ga_s2bm_fmc",
+    "bands": bands_fmc,
+    "resource_limits": reslim_for_sentinel2,
+    "dynamic": True,
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "image_processing": {
