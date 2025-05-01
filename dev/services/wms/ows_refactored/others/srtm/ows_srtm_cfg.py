@@ -17,8 +17,11 @@ dea_srtm_layer = {
     "bands": bands_srtm,
     "time_resolution": "summary",
     "resource_limits": reslim_standard,
-    "native_crs": "EPSG:3577",
-    "native_resolution": [30, -30],
+    "native_crs": "EPSG:4326",
+    "native_resolution": [
+        0.00027777777778,
+        -0.00027777777778,
+    ],
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
