@@ -1,4 +1,4 @@
-plugin: gm-ls # this can help system find the relative plugin and plugin version
+plugin: gm-ls
 plugin_config:
   cloud_filters:
     cloud:
@@ -10,8 +10,8 @@ plugin_config:
   area_of_interest: [-180, -90, 180, 90] # accommodate the fact of 326xx not intersecting 3577 in LS
 
 product:
-  name: ga_ls8cls9c_gm_cyear_3
-  short_name: ga_ls8cls9c_gm_cyear_3
+  name: ga_ls7e_gm_cyear_3
+  short_name: ga_ls7e_gm_cyear_3
   version: 4.0.0
   product_family: geomedian
 
@@ -78,16 +78,15 @@ max_processing_time: 2400
 job_queue_max_lease: 300
 renew_safety_margin: 60
 future_poll_interval: 2
+
 # Generic product attributes
 cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data/derivative/ga_ls8cls9c_gm_cyear_3/4-0-0
+  s3://dea-public-data/derivative/ga_ls7e_gm_cyear_3/4-0-0
 
 # save-tasks options
-input_products: ga_ls8c_ard_3-ga_ls9c_ard_3
+input_products: ga_ls7e_ard_3
 frequency: annual
 grid: au_extended_30
-dataset_filter: >-
-  {"dataset_maturity": "final"}
