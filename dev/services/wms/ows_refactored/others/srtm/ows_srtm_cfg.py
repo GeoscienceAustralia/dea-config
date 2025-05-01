@@ -1,5 +1,5 @@
 from ows_refactored.others.srtm.style_srtm_cfg import styles_srtm_list
-from ows_refactored.ows_reslim_cfg import reslim_standard
+from ows_refactored.ows_reslim_cfg import reslim_unlimited
 
 bands_srtm = {
     "dem": [],
@@ -16,7 +16,7 @@ dea_srtm_layer = {
     "product_name": "ga_srtm_dem1sv1_0",
     "bands": bands_srtm,
     "time_resolution": "summary",
-    "resource_limits": reslim_standard,
+    "resource_limits": reslim_unlimited,
     "native_crs": "EPSG:4326",
     "native_resolution": [
         0.00027777777778,
