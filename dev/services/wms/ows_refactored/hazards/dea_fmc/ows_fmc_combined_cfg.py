@@ -27,11 +27,16 @@ style_fmc = {
 }
 
 
-s2a_layer = {
-    "title": "DEA Fuel Moisture Content (Sentinel 2a)",
-    "name": "ga_s2am_fmc",
-    "abstract": """DEA Fuel Moisture Content (Sentinel 2a)""",
-    "product_name": "ga_s2am_fmc",
+s2ab_layer = {
+    "title": "DEA Fuel Moisture Content (Sentinel 2 a & b)",
+    "name": "ga_s2_fmc",
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
+    this layer combines data from both Sentinel 2 a and Sentinel 2 b """,
+    "multi_product": True,
+    "product_names": [
+        "ga_s2am_fmc",
+        "ga_s2bm_fmc"
+    ],
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
@@ -44,7 +49,7 @@ s2a_layer = {
     },
     "flags": [{
         "band": "land",
-        "product": "geodata_coast_100k",
+        "products": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],
@@ -54,11 +59,28 @@ s2a_layer = {
     }
 }
 
-s2b_layer = {
-    "title": "DEA Fuel Moisture Content (Sentinel 2b)",
-    "name": "ga_s2bm_fmc",
-    "abstract": """DEA Fuel Moisture Content (Sentinel 2b)""",
-    "product_name": "ga_s2bm_fmc",
+combined_mosaic_layer = {
+    "title": "DEA Fuel Moisture Content Most Recent Available Data Mosaic (Sentinel 2 a & b)",
+    "name": "ga_s2m_fmc_mosaic",
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
+    This product produces a mosaic of the most recent available data from both Sentinel-2 satelites captured over the Australian continent""",
+    "multi_product": True,
+    "product_names": [
+        "ga_s2am_fmc",
+        "ga_s2bm_fmc"
+    ],
+    "mosaic_date_func": {
+        # 6 day rolling window.  5 days should give full continental coverage
+        # of Sentinel-2, plus an extra day to allow for patchy coverage on
+        # most recent day.
+        # Note that the window is calculated from the most-recent available
+        # day, not the the calendar's idea of what "today" might be.
+        "function": "datacube_ows.ogc_utils.rolling_window_ndays",
+        "pass_layer_cfg": True,
+        "kwargs": {
+            "ndays": 6,
+        }
+    },
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
@@ -71,7 +93,7 @@ s2b_layer = {
     },
     "flags": [{
         "band": "land",
-        "product": "geodata_coast_100k",
+        "products": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],

@@ -27,13 +27,13 @@ style_stacking = {
             {
                 "title": "Any",
                 "abstract": "",
-                "values": [0.33],
+                "values": [0.333333333333333],
                 "color": "#ffd966",
             },
             {
                 "title": "Majority",
                 "abstract": "",
-                "values": [0.66],
+                "values": [0.666666666666667],
                 "color": "#f09c43",
             },
             {
@@ -62,6 +62,12 @@ layers = {
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
     },
+    "flags": [{
+        "band": "land",
+        "product": "geodata_coast_100k",
+        "ignore_time": True,
+        "ignore_info_flags": []
+    }],
     "styling": {
         "default_style": "stacking_burnt_area",
         "styles": [
