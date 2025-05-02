@@ -5,7 +5,7 @@ bands_fmc = {
 }
 
 style_fmc = {
-    "name": "style_fmc_combined",
+    "name": "style_fmc",
     "title": "Fuel Moisture Content",
     "abstract": "the percentage of water in vegetation by weight",
     "needed_bands": ["fmc"],
