@@ -1089,6 +1089,33 @@
                             ]
                         },
                         {
+                            "id": "fkgj46",
+                            "type": "group",
+                            "name": "DEA Tidal Composites",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA Tidal Composites (Sentinel-2)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/wms",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_tidal_composites_cyear_3",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "ga_s2_tidal_composites_cyear_3",
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "availableDiffStyles": ["low_true"],
+                                    "leafletUpdateInterval": 750,
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
+                                    "featureInfoTemplate": {
+                                        "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Tidal Composites</h1><br><br><img src='{{data.0.tide_graph_path}}' width='550'><br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
+                                    },
+                                    "id": "5533dfr",       
+                                },
+                            ]
+                        },
+                        {
                             "id": "sDf23f",
                             "type": "group",
                             "name": "DEA High and Low Tide Imagery (HLTC)",
