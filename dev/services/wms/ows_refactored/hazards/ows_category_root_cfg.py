@@ -19,11 +19,11 @@ category_layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.hazards.dea_fmc.ows_fmc_combined_cfg.s2ab_layer",
+            "include": "ows_refactored.hazards.dea_fmc.ows_fmc_combined_cfg.ga_s2_fmc",
             "type": "python",
         },
         {
-            "include": "ows_refactored.hazards.dea_fmc.ows_fmc_combined_cfg.combined_mosaic_layer",
+            "include": "ows_refactored.hazards.dea_fmc.ows_fmc_combined_cfg.ga_s2m_fmc_mosaic",
             "type": "python",
         },
         {
