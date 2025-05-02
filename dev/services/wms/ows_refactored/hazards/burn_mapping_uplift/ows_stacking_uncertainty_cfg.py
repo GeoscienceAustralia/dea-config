@@ -18,7 +18,7 @@ style_stacking = {
                    {"value": 0.66, "color": "#f09c43"},
                    {"value": 1, "color": "#d53a3a"}],
     "legend": {
-        "url": https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/projects/burn_cube/derivative/terria_accessory_files/burnt_area_stack_legend.png,
+        "url": "https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/projects/burn_cube/derivative/terria_accessory_files/burnt_area_stack_legend.png",
     },
 }
 
