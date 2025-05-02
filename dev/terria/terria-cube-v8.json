@@ -1339,73 +1339,73 @@
                             ]
                         },
                         {
-                            "id": "rryhs4",
+                            "id": "sa5192",
                             "type": "group",
-                            "name": "DEA Historic Burnt Area",
+                            "name": "DEA Burnt Area Mapping",
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA BurnCube Historic Burnt Area Calendar Year (Landsat, Developmental)",
+                                    "name": "Relativised Burn Ratio (RBR) Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls8c_nbart_bc_cyear_3",
+                                    "layers": "ga_burn_mapping_rbr",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls8c_nbart_bc_cyear_3",
+                                    "linkedWcsCoverage": "ga_burn_mapping_rbr",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "FD346d"
+                                    "id": "sajkd9"
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA BurnCube Historic Burnt Area Financial Year (Landsat, Developmental)",
+                                    "name": "BurnCube Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_ls8c_nbart_bc_fyear_3",
+                                    "layers": "ga_burn_mapping_bc",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls8c_nbart_bc_fyear_3",
+                                    "linkedWcsCoverage": "ga_burn_mapping_bc",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "FD3D0d"
+                                    "id": "sa79ih"
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA BurnCube Historic Burnt Area Calendar Year (Sentinel 2a and 2b, Developmental)",
+                                    "name": "DEA Gradient Boosted Decision Tree (GBDT) Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_s2_ard_bc_cyear_3",
+                                    "layers": "ga_burn_mapping_dea_gbdt",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_s2_ard_bc_cyear_3",
+                                    "linkedWcsCoverage": "ga_burn_mapping_dea_gbdt",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "F3D46d"
+                                    "id": "sa1271"
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA BurnCube Historic Burnt Area Financial Year (Sentinel 2a and 2b, Developmental)",
+                                    "name": "Stacking Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_s2_ard_bc_fyear_3",
+                                    "layers": "ga_burn_mapping_stacking",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_s2_ard_bc_fyear_3",
+                                    "linkedWcsCoverage": "ga_burn_mapping_stacking",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "F3D92d"
+                                    "id": "sa2987"
                                 }
                             ]
                         },
@@ -1438,6 +1438,69 @@
                                     },
                                     "id": "n2349s"
                                 }
+                            ]
+                        },
+                        {
+                            "id": "fmc927",
+                            "type": "group",
+                            "name": "DEA Fuel Moisture Content",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 a",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2am_fmc",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "2fmc93"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 b",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2bm_fmc",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "8jso32"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 combined",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_fmc",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "2cbf93"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 most recent mosaic",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2m_fmc_mosaic",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "mrfm98"
+                                },
                             ]
                         }
                     ]
