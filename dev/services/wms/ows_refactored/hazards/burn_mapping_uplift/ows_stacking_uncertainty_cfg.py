@@ -12,40 +12,13 @@ style_stacking = {
     "needed_bands": ["uncertainty"],
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
-        "mapped_bands": True,
-        "kwargs": {"band": "uncertainty"}
-    },
-    "value_map": {
-        "uncertainty": [
-            {
-                "title": "",
-                "abstract": "",
-                "values": [0.0],
-                "color": "#ffffff",
-                "alpha": 0.0,
-            },
-            {
-                "title": "Any",
-                "abstract": "",
-                "values": [0.333333333333333],
-                "color": "#ffd966",
-            },
-            {
-                "title": "Majority",
-                "abstract": "",
-                "values": [0.666666666666667],
-                "color": "#f09c43",
-            },
-            {
-                "title": "All",
-                "abstract": "",
-                "values": [1],
-                "color": "#d53a3a",
-            },
-        ]
-    },
+        "kwargs": {"band": "uncertainty"}},
+    "colour_ramp": [{"value": 0.0, "color": "#000000", "alpha": 0.0},
+                   {"value": 0.33, "color": "#ffd966"},
+                   {"value": 0.66, "color": "#f09c43"},
+                   {"value": 1, "color": "#d53a3a"}],
     "legend": {
-        "title": "Agreement"
+        https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/projects/burn_cube/derivative/terria_accessory_files/burnt_area_stack_legend.png
     },
 }
 
