@@ -13,7 +13,7 @@ style_stacking = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "kwargs": {"band": "uncertainty"}},
-    "colour_ramp": [{"value": 0.0, "color": "#000000", "alpha": 0.0},
+    "color_ramp": [{"value": 0.0, "color": "#000000", "alpha": 0.0},
                     {"value": 0.33, "color": "#ffd966"},
                     {"value": 0.66, "color": "#f09c43"},
                     {"value": 1, "color": "#d53a3a"}],
