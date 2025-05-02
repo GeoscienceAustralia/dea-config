@@ -27,7 +27,7 @@ style_fmc = {
 }
 
 
-s2ab_layer = {
+ga_s2_fmc = {
     "title": "DEA Fuel Moisture Content (Sentinel 2 a & b)",
     "name": "ga_s2_fmc",
     "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
@@ -59,7 +59,7 @@ s2ab_layer = {
     }
 }
 
-combined_mosaic_layer = {
+ga_s2m_fmc_mosaic = {
     "title": "DEA Fuel Moisture Content Most Recent Available Data Mosaic (Sentinel 2 a & b)",
     "name": "ga_s2m_fmc_mosaic",
     "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
