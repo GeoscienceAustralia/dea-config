@@ -125,6 +125,7 @@ style_low_true_log = {
     "name": "low_true_log",
     "title": "True colour – Low tide (experimental)",
     "abstract": "Low tide true colour image, using the red, green and blue bands",
+    "needed_bands": ["low_red", "low_green", "low_blue"],
     "components": {
         "red": {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
@@ -157,6 +158,7 @@ style_high_true_log = {
     "name": "high_true_log",
     "title": "True colour – High tide (experimental)",
     "abstract": "High tide true colour image, using the red, green and blue bands",
+    "needed_bands": ["high_red", "high_green", "high_blue"],
     "components": {
         "red": {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
