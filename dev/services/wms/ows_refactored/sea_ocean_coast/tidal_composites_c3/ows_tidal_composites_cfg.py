@@ -13,6 +13,8 @@ bands_tidal_composites = {
     "high_blue": [],
     "high_swir_2": [],
     "high_nir_1": [],
+    "qa_low_threshold": [],
+    "qa_high_threshold": [],
     "qa_count_clear": [],
 }
 
