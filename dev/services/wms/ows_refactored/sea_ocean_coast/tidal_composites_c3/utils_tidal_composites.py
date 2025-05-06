@@ -1,3 +1,4 @@
+import numpy as np
 from datacube_ows.band_utils import scalable
 
 
