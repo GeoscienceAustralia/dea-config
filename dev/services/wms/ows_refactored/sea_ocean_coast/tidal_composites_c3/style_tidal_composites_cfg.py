@@ -121,6 +121,70 @@ style_count_clear = {
     },
 }
 
+style_low_true_log = {
+    "name": "low_true_log",
+    "title": "True colour – Low tide (experimental)",
+    "abstract": "Low tide true colour image, using the red, green and blue bands",
+    "components": {
+        "red": {
+            "function": log_scaling,
+            "kwargs": {
+                "band": "low_red",
+                "scale_from": (2.5, 3.30),
+                "scale_to": (0, 255)
+            }
+        },
+        "green": {
+            "function": log_scaling,
+            "kwargs": {
+                "band": "low_green",
+                "scale_from": (2.5, 3.30),
+                "scale_to": (0, 255)
+            }
+        },
+        "blue": {
+            "function": log_scaling,
+            "kwargs": {
+                "band": "low_blue",
+                "scale_from": (2.5, 3.30),
+                "scale_to": (0, 255)
+            }
+        },
+    },
+}
+
+style_high_true_log = {
+    "name": "high_true_log",
+    "title": "True colour – High tide (experimental)",
+    "abstract": "High tide true colour image, using the red, green and blue bands",
+    "components": {
+        "red": {
+            "function": log_scaling,
+            "kwargs": {
+                "band": "high_red",
+                "scale_from": (2.5, 3.38),
+                "scale_to": (0, 255)
+            }
+        },
+        "green": {
+            "function": log_scaling,
+            "kwargs": {
+                "band": "high_green",
+                "scale_from": (2.5, 3.38),
+                "scale_to": (0, 255)
+            }
+        },
+        "blue": {
+            "function": log_scaling,
+            "kwargs": {
+                "band": "high_blue",
+                "scale_from": (2.5, 3.38),
+                "scale_to": (0, 255)
+            }
+        },
+    },
+}
+
 # Create combined list that is imported and passed to the layer
 styles_tidal_composites_list = [
     style_low_true,
@@ -130,4 +194,6 @@ styles_tidal_composites_list = [
     style_low_mndwi,
     style_high_mndwi,
     style_count_clear,
+    low_true_log,
+    high_true_log,
 ]

@@ -704,7 +704,7 @@
             "product": [
                 "ga_s2_tidal_composites_cyear_3"
             ],
-            "styles_count": 7,
+            "styles_count": 9,
             "styles_list": [
                 "low_true",
                 "high_true",
@@ -712,6 +712,8 @@
                 "high_false",
                 "low_mndwi",
                 "high_mndwi",
+                "low_true_log",
+                "high_true_log",
                 "count_clear"
             ]
         },
