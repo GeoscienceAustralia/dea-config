@@ -8,7 +8,7 @@ def log_scaling(data, band):
     Use log scaling to produce a more visually
     attractive three-band image.
     """
-    return np.log10(data[band] + 1)
+    return np.log(data[band] + 1)
 
 
 def tide_graph_path(data, ds):
