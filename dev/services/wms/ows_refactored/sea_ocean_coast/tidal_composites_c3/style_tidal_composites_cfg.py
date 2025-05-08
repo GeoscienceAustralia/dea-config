@@ -131,7 +131,7 @@ style_low_true_log = {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
             "kwargs": {
                 "band": "low_red",
-                "scale_from": (2.5, 3.30),
+                "scale_from": (5.5, 7.8),
                 "scale_to": (0, 255)
             }
         },
@@ -139,7 +139,7 @@ style_low_true_log = {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
             "kwargs": {
                 "band": "low_green",
-                "scale_from": (2.5, 3.30),
+                "scale_from": (5.5, 7.8),
                 "scale_to": (0, 255)
             }
         },
@@ -147,7 +147,7 @@ style_low_true_log = {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
             "kwargs": {
                 "band": "low_blue",
-                "scale_from": (2.5, 3.30),
+                "scale_from": (5.5, 7.8),
                 "scale_to": (0, 255)
             }
         },
@@ -164,7 +164,7 @@ style_high_true_log = {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
             "kwargs": {
                 "band": "high_red",
-                "scale_from": (2.5, 3.38),
+                "scale_from": (5.5, 7.8),
                 "scale_to": (0, 255)
             }
         },
@@ -172,7 +172,7 @@ style_high_true_log = {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
             "kwargs": {
                 "band": "high_green",
-                "scale_from": (2.5, 3.38),
+                "scale_from": (5.5, 7.8),
                 "scale_to": (0, 255)
             }
         },
@@ -180,7 +180,7 @@ style_high_true_log = {
             "function": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.log_scaling",
             "kwargs": {
                 "band": "high_blue",
-                "scale_from": (2.5, 3.38),
+                "scale_from": (5.5, 7.8),
                 "scale_to": (0, 255)
             }
         },
