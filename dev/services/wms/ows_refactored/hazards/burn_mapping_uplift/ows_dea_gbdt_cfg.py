@@ -20,13 +20,20 @@ style_dea_gbdt = {
     "value_map": {
         "rf": [
             {
-                "title": "Burnt Area",
+                "title": "DEA GBDT Burnt Area",
                 "abstract": "",
                 "values": [1],
                 "color": "#3d85c6",
             },
         ]
     },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": {},
 }
 

@@ -20,20 +20,27 @@ style_bc = {
     "value_map": {
         "bc": [
             {
-                "title": "Burnt Area",
+                "title": "DEA BurnCube Burnt Area",
                 "abstract": "",
                 "values": [1],
                 "color": "#674ea7",
             },
         ]
     },
+    "pq_masks": [
+        {
+            "band": "land",
+            "invert": True,
+            "values": [0],
+        }
+    ],
     "legend": {},
 }
 
 layers = {
-    "title": "BurnCube Burnt Area",
+    "title": "DEA BurnCube Burnt Area",
     "name": "ga_burn_mapping_bc",
-    "abstract": """BurnCube Burnt Area, 2023-2024 Financial Year, 30m, 0.0.0 (Landsat, Collection 3)""",
+    "abstract": """DEA BurnCube Burnt Area, 2023-2024 Financial Year, 30m, 0.0.0 (Landsat, Collection 3)""",
     "product_name": "ga_ls8c_nbart_burn_mapping_fyear_3",
     "bands": bands_bc,
     "resource_limits": reslim_standard,

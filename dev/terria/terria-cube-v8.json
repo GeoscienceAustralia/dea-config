@@ -1101,6 +1101,7 @@
                                     "layers": "ga_s2_tidal_composites_cyear_3",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2_tidal_composites_cyear_3",
+                                    "currentTime": "2022",
                                     "dateFormat": "'Year: 'yyyy",
                                     "availableDiffStyles": ["low_true"],
                                     "leafletUpdateInterval": 750,
@@ -1345,7 +1346,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "Relativised Burn Ratio (RBR) Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
+                                    "name": "DEA Relativised Burn Ratio (RBR) Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_burn_mapping_rbr",
@@ -1361,7 +1362,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "BurnCube Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
+                                    "name": "DEA BurnCube Burnt Area, 2023-2024 Financial Year (Landsat, Developmental)",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_burn_mapping_bc",
