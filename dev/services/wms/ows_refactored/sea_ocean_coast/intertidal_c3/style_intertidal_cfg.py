@@ -239,6 +239,47 @@ style_intertidal_elevation_uncertainty_adaptive = {
     },
 }
 
+style_intertidal_extents = {
+    "name": "intertidal_extents",
+    "title": "Extents",
+    "abstract": "Intertidal Extents classification",
+    "needed_bands": ["extents"],
+    "value_map": {
+        "extents": [
+            {
+                "title": "Ocean and coastal waters",
+                "abstract": "",
+                "values": [1],
+                "color": "#396dbf",
+            },
+            {
+                "title": "Exposed intertidal (low confidence)",
+                "abstract": "",
+                "values": [2],
+                "color": "#f5e167",
+            },
+            {
+                "title": "Exposed intertidal (high confidence)",
+                "abstract": "",
+                "values": [3],
+                "color": "#f5be3d",
+            },
+            {
+                "title": "Inland waters",
+                "abstract": "",
+                "values": [4],
+                "color": "#769bd6",
+            },
+            {
+                "title": "Land",
+                "abstract": "",
+                "values": [5],
+                "color": "#ffffff",
+            },
+        ]
+    }
+}
+
 style_intertidal_corr = {
     "name": "intertidal_corr",
     "title": "NDWI tide correlation",
@@ -289,6 +330,7 @@ styles_intertidal_list = [
     style_intertidal_elevation_meso,
     style_intertidal_elevation_macro,
     style_intertidal_elevation_uncertainty,
+    style_intertidal_extents,
     style_intertidal_corr,
     style_intertidal_freq,
 ]

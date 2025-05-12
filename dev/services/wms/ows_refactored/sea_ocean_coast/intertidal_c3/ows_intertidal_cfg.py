@@ -6,6 +6,7 @@ bands_intertidal = {
     "elevation": [],
     "elevation_uncertainty": [],
     "exposure": [],
+    "extents": [],
     "ta_hat": [],
     "ta_hot": [],
     "ta_lat": [],
