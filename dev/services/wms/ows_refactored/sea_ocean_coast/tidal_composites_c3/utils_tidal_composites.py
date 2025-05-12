@@ -18,7 +18,7 @@ def tide_graph_path(data, ds):
     """
 
     # Extract required data from datacube dataset
-    base_dir = "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative"
+    base_dir = "https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative"
     product = ds.metadata_doc['properties']['odc:product']
     version = ds.metadata_doc['properties']['odc:dataset_version'].replace(".", "-")
     year = ds.metadata_doc['properties']['datetime'][:4]
