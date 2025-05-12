@@ -18,6 +18,9 @@ style_intertidal_elevation_meso = {
     "name": "intertidal_elevation_meso",
     "title": "Elevation (mesotidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -45,6 +48,9 @@ style_intertidal_elevation_micro = {
     "name": "intertidal_elevation_micro",
     "title": "Elevation (microtidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -72,6 +78,9 @@ style_intertidal_elevation_macro = {
     "name": "intertidal_elevation_macro",
     "title": "Elevation (macrotidal)",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -99,6 +108,9 @@ style_intertidal_elevation_uncertainty = {
     "name": "intertidal_elevation_uncertainty",
     "title": "Elevation uncertainty",
     "abstract": "Intertidal elevation uncertainty in metres",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -125,6 +137,9 @@ style_intertidal_exposure = {
     "name": "intertidal_exposure",
     "title": "Exposure",
     "abstract": "Intertidal exposure in percent of time exposed to air",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -154,6 +169,9 @@ style_intertidal_elevation_adaptive = {
     "name": "intertidal_elevation_adaptive",
     "title": "Elevation",
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.elevation_adaptive",
         "mapped_bands": True,
@@ -162,9 +180,6 @@ style_intertidal_elevation_adaptive = {
             "lot": "ta_lot",
             "hot": "ta_hot",
         },
-    },
-    "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "multi_date": [
         {
@@ -214,6 +229,9 @@ style_intertidal_elevation_uncertainty_adaptive = {
     "name": "intertidal_elevation_uncertainty_adaptive",
     "title": "Elevation uncertainty",
     "abstract": "Intertidal elevation uncertainty",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.uncertainty_adaptive",
         "mapped_bands": True,
@@ -239,10 +257,57 @@ style_intertidal_elevation_uncertainty_adaptive = {
     },
 }
 
+style_intertidal_extents = {
+    "name": "intertidal_extents",
+    "title": "Extents",
+    "abstract": "Intertidal Extents classification",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
+    "needed_bands": ["extents"],
+    "value_map": {
+        "extents": [
+            {
+                "title": "Ocean and coastal waters",
+                "abstract": "",
+                "values": [1],
+                "color": "#396dbf",
+            },
+            {
+                "title": "Exposed intertidal (low confidence)",
+                "abstract": "",
+                "values": [2],
+                "color": "#f5e167",
+            },
+            {
+                "title": "Exposed intertidal (high confidence)",
+                "abstract": "",
+                "values": [3],
+                "color": "#f5be3d",
+            },
+            {
+                "title": "Inland waters",
+                "abstract": "",
+                "values": [4],
+                "color": "#769bd6",
+            },
+            {
+                "title": "Land",
+                "abstract": "",
+                "values": [5],
+                "color": "#ffffff",
+            },
+        ]
+    }
+}
+
 style_intertidal_corr = {
     "name": "intertidal_corr",
     "title": "NDWI tide correlation",
     "abstract": "Correlation between NDWI and tide height",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -266,6 +331,9 @@ style_intertidal_freq = {
     "name": "intertidal_freq",
     "title": "NDWI frequency",
     "abstract": "NDWI inundation frequency",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+    },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -289,6 +357,7 @@ styles_intertidal_list = [
     style_intertidal_elevation_meso,
     style_intertidal_elevation_macro,
     style_intertidal_elevation_uncertainty,
+    style_intertidal_extents,
     style_intertidal_corr,
     style_intertidal_freq,
 ]
