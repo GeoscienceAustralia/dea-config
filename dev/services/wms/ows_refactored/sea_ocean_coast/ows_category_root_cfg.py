@@ -25,11 +25,6 @@ category_layers = {
             ]
         },
         {
-            # HLTC Collection 2 (nested folder structure is defined below)
-            "include": "ows_refactored.sea_ocean_coast.ows_tide_cfg.layers",
-            "type": "python",
-        },
-        {
             "title": "Other",
             "abstract": "",
             "layers": [
@@ -46,6 +41,11 @@ category_layers = {
                 {
                     # NIDEM Colllection 2
                     "include": "ows_refactored.sea_ocean_coast.intertidal.ows_national_cfg.layer",
+                    "type": "python",
+                },
+                {
+                    # HLTC Collection 2 (nested folder structure is defined below)
+                    "include": "ows_refactored.sea_ocean_coast.ows_tide_cfg.layers",
                     "type": "python",
                 },
             ]
