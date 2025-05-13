@@ -1160,7 +1160,7 @@
             ]
         },
         {
-            "layer": "ga_s2_fmc",
+            "layer": "ga_s2_fmc_layer",
             "product": [ 
                 "ga_s2am_fmc",
                 "ga_s2bm_fmc"

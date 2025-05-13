@@ -16,6 +16,9 @@ style_fmc = {
     "color_ramp": [{"value": 0, "color": "#DD0000"},
                    {"value": 150, "color": "#FFFFBA"},
                    {"value": 300, "color": "#2A9DF4"}],
+    "pq_masks": [{"band": "land",
+                  "invert": True,
+                  "values": [0]}],
     "legend": {
         "title": "Fuel Moisture Content (Weight Percent)",
         "begin": "0",

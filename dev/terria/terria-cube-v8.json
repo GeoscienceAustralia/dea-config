@@ -1472,7 +1472,7 @@
                                     "name": "DEA FMC Sentinel-2 combined",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
-                                    "layers": "ga_s2_fmc",
+                                    "layers": "ga_s2_fmc_layer",
                                     "timeFilterPropertyName": "data_available_for_dates",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",

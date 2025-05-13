@@ -16,6 +16,9 @@ style_fmc = {
     "color_ramp": [{"value": 0, "color": "#DD0000"},
                    {"value": 150, "color": "#FFFFBA"},
                    {"value": 300, "color": "#2A9DF4"}],
+    "pq_masks": [{"band": "land",
+                  "invert": True,
+                  "values": [0]}],
     "legend": {
         "title": "Fuel Moisture Content (Weight Percent)",
         "begin": "0",
@@ -27,16 +30,13 @@ style_fmc = {
 }
 
 
-ga_s2_fmc = {
+ga_s2_fmc_layer = {
     "title": "DEA Fuel Moisture Content (Sentinel 2 a & b)",
-    "name": "ga_s2_fmc",
+    "name": "ga_s2_fmc_layer",
     "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
     this layer combines data from both Sentinel 2 a and Sentinel 2 b """,
     "multi_product": True,
-    "product_names": [
-        "ga_s2am_fmc",
-        "ga_s2bm_fmc"
-    ],
+    "product_names": ["ga_s2am_fmc", "ga_s2bm_fmc"],
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
@@ -45,7 +45,7 @@ ga_s2_fmc = {
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_val",
         "always_fetch_bands": [],
-        "manual_merge": False
+        "manual_merge": True
     },
     "flags": [{
         "band": "land",
@@ -59,7 +59,7 @@ ga_s2_fmc = {
     }
 }
 
-ga_s2m_fmc_mosaic = {
+ga_s2m_fmc_mosaic_layer = {
     "title": "DEA Fuel Moisture Content Most Recent Available Data Mosaic (Sentinel 2 a & b)",
     "name": "ga_s2m_fmc_mosaic",
     "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
