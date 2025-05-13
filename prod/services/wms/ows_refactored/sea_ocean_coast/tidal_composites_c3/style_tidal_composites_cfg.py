@@ -113,7 +113,7 @@ style_high_mndwi = {
 style_count_clear = {
     "name": "count_clear",
     "title": "Clear observation count",
-    "abstract": "Count of observations included in tidal composites",
+    "abstract": "Count of satellite observations included in tidal composites",
     "custom_includes": {
         "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
     },

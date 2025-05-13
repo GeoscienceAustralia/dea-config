@@ -686,7 +686,7 @@
             "product": [
                 "ga_s2ls_intertidal_cyear_3"
             ],
-            "styles_count": 10,
+            "styles_count": 11,
             "styles_list": [
                 "intertidal_elevation_adaptive",                
                 "intertidal_elevation_uncertainty_adaptive",
@@ -697,7 +697,8 @@
                 "intertidal_elevation_macro",
                 "intertidal_elevation_uncertainty",
                 "intertidal_corr",
-                "intertidal_freq"
+                "intertidal_freq",
+                "count_clear"
             ]
         },
         {
