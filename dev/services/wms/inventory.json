@@ -714,9 +714,9 @@
                 "high_false",
                 "low_mndwi",
                 "high_mndwi",
-                "count_clear",
                 "low_true_log",
-                "high_true_log"
+                "high_true_log",
+                "count_clear"
             ]
         },
         {
