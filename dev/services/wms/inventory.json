@@ -691,11 +691,11 @@
                 "intertidal_elevation_adaptive",                
                 "intertidal_elevation_uncertainty_adaptive",
                 "intertidal_exposure",
+                "intertidal_extents",
                 "intertidal_elevation_micro",
                 "intertidal_elevation_meso",
                 "intertidal_elevation_macro",
                 "intertidal_elevation_uncertainty",
-                "intertidal_extents",
                 "intertidal_corr",
                 "intertidal_freq"
             ]

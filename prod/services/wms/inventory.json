@@ -616,11 +616,12 @@
             "product": [
                 "ga_s2ls_intertidal_cyear_3"
             ],
-            "styles_count": 3,
+            "styles_count": 4,
             "styles_list": [
                 "intertidal_elevation_adaptive",                
                 "intertidal_elevation_uncertainty_adaptive",
-                "intertidal_exposure"
+                "intertidal_exposure",
+                "intertidal_extents"
             ]
         },
         {
