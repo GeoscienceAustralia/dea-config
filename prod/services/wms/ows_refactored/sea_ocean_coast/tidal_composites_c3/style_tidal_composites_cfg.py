@@ -220,6 +220,4 @@ styles_tidal_composites_list = [
     style_low_mndwi,
     style_high_mndwi,
     style_count_clear,
-    style_low_true_log,
-    style_high_true_log,
 ]
