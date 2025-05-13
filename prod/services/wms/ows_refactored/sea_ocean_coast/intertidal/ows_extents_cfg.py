@@ -150,7 +150,7 @@ style_item_confidence = {
 }
 
 item_v2_00_layer = {
-    "title": "DEA Intertidal Extents (Landsat)",
+    "title": "Intertidal Extents Model (ITEM)",
     "name": "ITEM_V2.0.0",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Extents)
 
@@ -219,7 +219,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 }
 
 item_v2_00_conf_layer = {
-    "title": "DEA Intertidal Extents confidence",
+    "title": "Intertidal Extents Model (ITEM) confidence",
     "name": "ITEM_V2.0.0_Conf",
     "abstract": """Intertidal Extents Model 25m 2.0.0 (Confidence)
 
