@@ -348,6 +348,35 @@ style_intertidal_freq = {
     "legend": legend_intertidal_percentage_by_20,
 }
 
+style_count_clear = {
+    "name": "count_clear",
+    "title": "Clear observation count",
+    "abstract": "Count of satellite observations included in DEA Intertidal",
+    "custom_includes": {
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+    },
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "mapped_bands": True,
+        "kwargs": {
+            "band": "qa_count_clear",
+        },
+    },
+    "needed_bands": ["qa_count_clear"],
+    "include_in_feature_info": True,
+    "mpl_ramp": "YlOrRd_r",
+    "range": [0, 400],
+    "legend": {
+        "begin": "0",
+        "end": "400",
+        "decimal_places": 0,
+        "ticks_every": 50,
+        "tick_labels": {
+            "400": {"prefix": ">"},
+        },
+    },
+}
+
 # Create combined list that is imported and passed to the layer
 styles_intertidal_list = [
     style_intertidal_elevation_adaptive,
@@ -360,4 +389,5 @@ styles_intertidal_list = [
     style_intertidal_extents,
     style_intertidal_corr,
     style_intertidal_freq,
+    style_count_clear,
 ]

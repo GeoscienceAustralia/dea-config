@@ -6,6 +6,7 @@ bands_intertidal = {
     "elevation": [],
     "elevation_uncertainty": [],
     "exposure": [],
+    "extents": [],
     "ta_hat": [],
     "ta_hot": [],
     "ta_lat": [],
@@ -23,9 +24,9 @@ The DEA Intertidal product suite maps the changing extent, elevation and topogra
 
 Incorporating both Sentinel-2 and Landsat data, the product suite provides an annual 10 m resolution elevation product for the intertidal zone, enabling users to better monitor and understand some of the most dynamic regions of Australia’s coastlines. Utilising an improved tidal modelling capability, the product suite includes a continental scale mapping of intertidal exposure over time, enabling scientists and managers to integrate the data into ecological and migratory species applications and modelling.
 
-https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/
+Product documentation: https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/
 
-For service status information, see https://status.dea.ga.gov.au"""
+Service status information: https://status.dea.ga.gov.au"""
 
 dea_intertidal_layer = {
     "title": "DEA Intertidal (Sentinel-2, Landsat)",
