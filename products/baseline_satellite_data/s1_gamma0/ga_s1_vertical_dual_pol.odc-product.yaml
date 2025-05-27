@@ -1,14 +1,10 @@
-name: ga_s1_rtc_backscatter_vertical_dual_polarisation
-description: Radiometric terrain corrected (RTC) linear backscatter for Sentinel-1 VV+VH generated from the COMPASS-ISCE3 pipeline
-metadata_type: eo3
-
-license: CC-BY-4.0
+name: ga_s1_vertical_dual_pol
+description: Radiometric Terrain Corrected (RTC) Backscatter for Sentinel-1 generated from the COMPASS-ISCE3 pipeline. VV+VH
+metadata_type: eo3_s1_ard
 
 metadata:
   product:
-    name: ga_s1_rtc_backscatter_vertical_dual_polarisation
-  properties:
-    eo:platform: sentinel-1
+    name: ga_s1_vertical_dual_pol
 
 measurements:
   - name: VV
