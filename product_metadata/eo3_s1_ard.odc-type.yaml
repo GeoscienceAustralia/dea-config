@@ -28,10 +28,7 @@ dataset:
       indexed: false
 
     scene_id: # Scene name
-      description: |
-        ESA product URI
-
-        (e.g. 'S2A_MSIL1C_20220303T000731_N0400_R073_T56LNM_20220303T012845')
+      description: ESA scene ID (e.g. 'S2A_MSIL1C_20220303T000731_N0400_R073_T56LNM_20220303T012845')
       offset: [properties, 'nrb:scene_id']
       indexed: false
       type: string
@@ -148,7 +145,7 @@ dataset:
 
     # Ionospheric correction
     ionospheric_correction_applied:
-      description: Whether ionospheic correction has been applied
+      description: Whether ionospheric correction has been applied
       offset: [properties, "nrb:ionospheric_correction_applied"]
       indexed: false
       type: int
