@@ -23,46 +23,46 @@ measurements:
     dtype: int16
     nodata: -999
     units: '1'
-  # - name: nbart_red_edge_1
-  #   dtype: int16
-  #   nodata: -999
-  #   units: '1'
-  # - name: nbart_red_edge_2
-  #   dtype: int16
-  #   nodata: -999
-  #   units: '1'    
-  # - name: nbart_red_edge_3
-  #   dtype: int16
-  #   nodata: -999
-  #   units: '1'
-  # - name: nbart_nir_1
-  #   dtype: int16
-  #   nodata: -999
-  #   units: '1'
-  # - name: nbart_nir_2
-  #   dtype: int16
-  #   nodata: -999
-  #   units: '1'
-  # - name: nbart_swir_2
-  #   dtype: int16
-  #   nodata: -999
-  #   units: '1'
-  # - name: nbart_swir_3
-  #   dtype: int16
-  #   nodata: -999
-  #   units: '1'
-  # - name: smad
-  #   dtype: float32
-  #   nodata: .nan
-  #   units: '1'
-  # - name: emad
-  #   dtype: float32
-  #   nodata: .nan
-  #   units: '1'
-  # - name: bcmad
-  #   dtype: float32
-  #   nodata: .nan
-  #   units: '1'
+  - name: nbart_red_edge_1
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nbart_red_edge_2
+    dtype: int16
+    nodata: -999
+    units: '1'    
+  - name: nbart_red_edge_3
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nbart_nir_1
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nbart_nir_2
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nbart_swir_2
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nbart_swir_3
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: smad
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: emad
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: bcmad
+    dtype: float32
+    nodata: .nan
+    units: '1'
   - name: count
     dtype: int16
     nodata: -999
