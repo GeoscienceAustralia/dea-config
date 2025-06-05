@@ -1,0 +1,78 @@
+name: ga_s2_gm_cyear_3
+description: Geoscience Australia Sentinel Adjusted Reflectance Terrain, Sentinel 2 A, B and C Geomedian Collection 3
+license: CC-BY-4.0
+metadata_type: eo3
+
+metadata:
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: geomedian
+  product:
+    name: ga_s2_gm_cyear_3
+
+measurements:
+  - name: nbart_blue
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nbart_green
+    dtype: int16
+    nodata: -999
+    units: '1'
+  - name: nbart_red
+    dtype: int16
+    nodata: -999
+    units: '1'
+  # - name: nbart_red_edge_1
+  #   dtype: int16
+  #   nodata: -999
+  #   units: '1'
+  # - name: nbart_red_edge_2
+  #   dtype: int16
+  #   nodata: -999
+  #   units: '1'    
+  # - name: nbart_red_edge_3
+  #   dtype: int16
+  #   nodata: -999
+  #   units: '1'
+  # - name: nbart_nir_1
+  #   dtype: int16
+  #   nodata: -999
+  #   units: '1'
+  # - name: nbart_nir_2
+  #   dtype: int16
+  #   nodata: -999
+  #   units: '1'
+  # - name: nbart_swir_2
+  #   dtype: int16
+  #   nodata: -999
+  #   units: '1'
+  # - name: nbart_swir_3
+  #   dtype: int16
+  #   nodata: -999
+  #   units: '1'
+  # - name: smad
+  #   dtype: float32
+  #   nodata: .nan
+  #   units: '1'
+  # - name: emad
+  #   dtype: float32
+  #   nodata: .nan
+  #   units: '1'
+  # - name: bcmad
+  #   dtype: float32
+  #   nodata: .nan
+  #   units: '1'
+  - name: count
+    dtype: int16
+    nodata: -999
+    units: '1'
+
+load:
+  crs: 'EPSG:3577'
+  resolution: 
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0
