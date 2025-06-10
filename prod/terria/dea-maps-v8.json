@@ -973,7 +973,7 @@
                                     "type": "wms",
                                     "name": "DEA Coastlines",
                                     "id": "dea_coastlines",
-                                    "shortReport": "<i>Change styles or zoom to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
+                                    "shortReport": "<i>Change styles or zoom to view detailed rates of coastal change and individual annual shorelines</i></br></br><small>For more information and to download data, visit the <a style=\'color:#00a1de\'  href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                     "url": "https://geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                     "opacity": 1,
                                     "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
@@ -1030,7 +1030,7 @@
                                             "type": "wms",
                                             "name": "DEA Coastlines annual shorelines",
                                             "id": "dea_coastlines_annual",
-                                            "shortReport": "<i>Zoom in to view individual annual shorelines from 1988 to the present</i></br></br><small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
+                                            "shortReport": "<i>Zoom in to view individual annual shorelines from 1988 to the present</i></br></br><small>For more information and to download data, visit the <a style=\'color:#00a1de\'  href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                             "url": "https://geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                             "opacity": 1,
                                             "layers": "dea:AnnualShorelines",
@@ -1048,7 +1048,7 @@
                                             "type": "wms",
                                             "name": "DEA Coastlines rates of change statistics",
                                             "id": "dea_coastlines_statistics",
-                                            "shortReport": "<i>Zoom in to view detailed rates of coastal change along the Australian coastline</i></br></br><small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
+                                            "shortReport": "<i>Zoom in to view detailed rates of coastal change along the Australian coastline</i></br></br><small>For more information and to download data, visit the <a style=\'color:#00a1de\'  href='https://knowledge.dea.ga.gov.au/data/product/dea-coastlines/'>DEA Coastlines product description</a></small>",
                                             "url": "https://geoserver.dea.ga.gov.au/geoserver/dea/wms",
                                             "opacity": 1,
                                             "chartDisclaimer": "The graph below shows the distance (in metres) from each historical shoreline to the baseline (i.e. most recent) annual shoreline. Negative distances indicate a historical shoreline was located inland of the most recent shoreline.",
@@ -1118,7 +1118,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
+                                    "shortReport": "<small>For more information and to download data, visit the <a style=\'color:#00a1de\' href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
                                     "diffItemProperties": {
                                         "featureInfoTemplate": {
                                             "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>Elevation differences are shown for pixels with data in both timesteps only.<br><br>Intertidal elevation in {{data.0.time}}: <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>Intertidal elevation in {{data.1.time}}: <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.1.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.1.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1><hr><br><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
@@ -1141,115 +1141,31 @@
                             ]
                         },
                         {
-                            "id": "yC2aqy",
+                            "id": "jfhht35",
                             "type": "group",
-                            "name": "DEA High and Low Tide Imagery (HLTC)",
+                            "name": "DEA Tidal Composites",
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Low Tide Imagery (Landsat)",
-                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "name": "DEA Tidal Composites (Sentinel-2)",
+                                    "url": "https://ows.dea.ga.gov.au/wms",
                                     "opacity": 1,
-                                    "layers": "low_tide_composite",
+                                    "layers": "ga_s2_tidal_composites_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "low_tide_composite",
+                                    "linkedWcsCoverage": "ga_s2_tidal_composites_cyear_3",
+                                    "currentTime": "2022",
+                                    "dateFormat": "'Year: 'yyyy",
+                                    "availableDiffStyles": ["low_mndwi", "high_mndwi"],
                                     "leafletUpdateInterval": 750,
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "4XvQxE",
-                                    "shareKeys": [
-                                        "Root Group/Coastal/Low tide satellite images/Low tide Landsat satellite images"
-                                    ]
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA High Tide Imagery (Landsat)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "high_tide_composite",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "high_tide_composite",
-                                    "leafletUpdateInterval": 750,
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "YLrxLi",
-                                    "shareKeys": [
-                                        "Root Group/Coastal/High tide satellite images/High tide Landsat satellite images"
-                                    ]
-                                },
-                                {
-                                    "type": "geojson",
-                                    "name": "DEA Low Tide polygons for data access",
-                                    "info": [
-                                        {
-                                            "name": "Abstract",
-                                            "content": "High Tide and Low Tide Composites 2.0.0 <p/> The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018). <p/> The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping. The time range used for composite generation in each polygon of the mosaic is tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The concepts of the Observed Tidal Range (OTR), and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016)."
-                                        },
-                                        {
-                                            "name": "Overview",
-                                            "content": "Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass. By harnessing the long archive of satellite imagery over Australia's coastal zones in the DEA and pairing the images with regional tidal modelling, the archive can be sorted by tide height rather than date, enabling the inter-tidal zone to be viewed at any stage of the tide regime. <p/> The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions. These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively. A geomedian composite for each Landsat band is calculated from the tiles in each ensemble subset to produce the respective HOT and LOT composites. Note that Landsat 7 ETM+ observations are excluded after May 2003 due to a large number of data artefacts. <p/> The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide. The tide stages were calculated by comparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide. <p/> Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band)."
-                                        },
-                                        {
-                                            "name": "Accuracy and limitations",
-                                            "content": "The accuracy of the tide height data is limited by the accuracy of the OTPS model. Tidal modelling on self-similar coastal polygons was performed to minimise regional uncertainty. <p/> Accuracies and limitations related to geomedian compositing of observations are discussed in Roberts et al (2017). <p/> Users should beware of seasonal and diurnal effects in the imagery, especially in the north east of Australia where the footprint of the highest and lowest astronomical tides are large. Consequently, where image acquisition misses the highest astronomical tide, for example, pooling effects of water are still visible in the landscape in lowest observed tidal composite imagery. <p/> This product has been rendered in both true colour and false colour. Validation and interpretation of surface features has not been attempted here. Interpretation of surface features is at the users own discretion."
-                                        },
-                                        {
-                                            "name": "File naming",
-                                            "content": "`<COUNT OR COMPOSITE>_<HIGH OR LOW>_<TIDAL POLYGON NUMBER>_<LONGITUDE>_<LATITUDE>_<START DATE>_<END DATE>_<PERCENTILE TIDE RANGE>` <p/> COUNT OR COMPOSITE refers to whether pixels contain composite observation values or the count of observations at that pixel location <br/>HIGH OR LOW refers to whether the content relates to High Tide values or Low Tide values <br/>TIDAL POLYGON NUMBER relates to the id of the tidal polygon referenced by the file <br/>LONGITUDE is the longitude of the centroid of the tidal polygon <br/>LATITUDE is the latitude of the centroid of the tidal polygon <br/>START DATE is the beginning of the date range covered by the file <br/>END DATE is the end of the date range covered by the file <br/>PERCENTILE TIDE RANGE indicates the percentile value used when calculating the composites <p/> The index of downloadable GeoTIFFs can be found here: <p/> http://dap.nci.org.au/thredds/remoteCatalogService?catalog=http://dapds00.nci.org.au/thredds/catalog/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/catalog.xml"
-                                        },
-                                        {
-                                            "name": "References",
-                                            "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
-                                        }
-                                    ],
-                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20_maps.geojson",
+                                    "shortReport": "<small>For more information and to download data, visit the <a style=\'color:#00a1de\'  href='https://knowledge.dea.ga.gov.au/data/product/dea-tidal-composites/'>DEA Tidal Composites product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The low tide composite at this location was generated from imagery acquired in the lowest 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
+                                        "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Tidal Composites</h1>Low tide imagery at this location was restricted to tide heights lower than:<h2 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.qa_low_threshold}}{{/terria.formatNumber}} m above Mean Sea Level</b></h2>High tide imagery was restricted to tide heights greater than:<h2 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.qa_high_threshold}}{{/terria.formatNumber}} m above Mean Sea Level</b></h2><br>Satellites may not always observe low and high tidal extremes. The graph below shows the approximate distribution of satellite images used to generate the low and high tide composites at this location, compared to the full astronomical tide range:<br><br><img src='{{data.0.tide_graph_path}}' width='550'><br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about the product including limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-tidal-composites/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
-                                    "id": "5SAK7J",
-                                    "shareKeys": [
-                                        "Root Group/Coastal/Low tide satellite images/Low Tide Polygons for data access"
-                                    ]
-                                },
-                                {
-                                    "type": "geojson",
-                                    "name": "DEA High Tide polygons for data access",
-                                    "info": [
-                                        {
-                                            "name": "Abstract",
-                                            "content": "High Tide and Low Tide Composites 2.0.0 <p/> The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018). <p/> The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping. The time range used for composite generation in each polygon of the mosaic is tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The concepts of the Observed Tidal Range (OTR), and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016)."
-                                        },
-                                        {
-                                            "name": "Overview",
-                                            "content": "Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass. By harnessing the long archive of satellite imagery over Australia's coastal zones in the DEA and pairing the images with regional tidal modelling, the archive can be sorted by tide height rather than date, enabling the inter-tidal zone to be viewed at any stage of the tide regime. <p/> The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions. These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively. A geomedian composite for each Landsat band is calculated from the tiles in each ensemble subset to produce the respective HOT and LOT composites. Note that Landsat 7 ETM+ observations are excluded after May 2003 due to a large number of data artefacts. <p/> The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide. The tide stages were calculated by comparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide. <p/> Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band)."
-                                        },
-                                        {
-                                            "name": "Accuracy and limitations",
-                                            "content": "The accuracy of the tide height data is limited by the accuracy of the OTPS model. Tidal modelling on self-similar coastal polygons was performed to minimise regional uncertainty. <p/> Accuracies and limitations related to geomedian compositing of observations are discussed in Roberts et al (2017). <p/> Users should beware of seasonal and diurnal effects in the imagery, especially in the north east of Australia where the footprint of the highest and lowest astronomical tides are large. Consequently, where image acquisition misses the highest astronomical tide, for example, pooling effects of water are still visible in the landscape in lowest observed tidal composite imagery. <p/> This product has been rendered in both true colour and false colour. Validation and interpretation of surface features has not been attempted here. Interpretation of surface features is at the users own discretion."
-                                        },
-                                        {
-                                            "name": "File naming",
-                                            "content": "`<COUNT OR COMPOSITE>_<HIGH OR LOW>_<TIDAL POLYGON NUMBER>_<LONGITUDE>_<LATITUDE>_<START DATE>_<END DATE>_<PERCENTILE TIDE RANGE>` <p/> COUNT OR COMPOSITE refers to whether pixels contain composite observation values or the count of observations at that pixel location <br/>HIGH OR LOW refers to whether the content relates to High Tide values or Low Tide values <br/>TIDAL POLYGON NUMBER relates to the id of the tidal polygon referenced by the file <br/>LONGITUDE is the longitude of the centroid of the tidal polygon <br/>LATITUDE is the latitude of the centroid of the tidal polygon <br/>START DATE is the beginning of the date range covered by the file <br/>END DATE is the end of the date range covered by the file <br/>PERCENTILE TIDE RANGE indicates the percentile value used when calculating the composites <p/> The index of downloadable GeoTIFFs can be found here: <p/> http://dap.nci.org.au/thredds/remoteCatalogService?catalog=http://dapds00.nci.org.au/thredds/catalog/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/catalog.xml"
-                                        },
-                                        {
-                                            "name": "References",
-                                            "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
-                                        }
-                                    ],
-                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20_maps.geojson",
-                                    "featureInfoTemplate": {
-                                        "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The high tide composite at this location was generated from imagery acquired in the top 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
-                                    },
-                                    "id": "IjP3T7",
-                                    "shareKeys": [
-                                        "Root Group/Coastal/High tide satellite images/High Tide Polygons for data access"
-                                    ]
+                                    "id": "58483fg"
                                 }
-                            ],
-                            "shareKeys": [
-                                "Root Group/Coastal/High tide satellite images"
                             ]
                         },
                         {
@@ -1259,7 +1175,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA Intertidal Elevation (Landsat)",
+                                    "name": "National Intertidal Digital Elevation Model (NIDEM, deprecated)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "NIDEM",
@@ -1280,7 +1196,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Intertidal Extents (Landsat)",
+                                    "name": "Intertidal Extents Model (ITEM, deprecated)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ITEM_V2.0.0",
@@ -1297,7 +1213,7 @@
                                 },
                                 {
                                     "type": "wms",
-                                    "name": "DEA Intertidal Extents confidence",
+                                    "name": "Intertidal Extents Model confidence (ITEM, deprecated)",
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ITEM_V2.0.0_Conf",
@@ -1313,8 +1229,42 @@
                                     ]
                                 },
                                 {
+                                    "type": "wms",
+                                    "name": "Low Tide Composite (HLTC, deprecated)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "low_tide_composite",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "low_tide_composite",
+                                    "leafletUpdateInterval": 750,
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "4XvQxE",
+                                    "shareKeys": [
+                                        "Root Group/Coastal/Low tide satellite images/Low tide Landsat satellite images"
+                                    ]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "High Tide Composite (HLTC, deprecated)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "high_tide_composite",
+                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsCoverage": "high_tide_composite",
+                                    "leafletUpdateInterval": 750,
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "YLrxLi",
+                                    "shareKeys": [
+                                        "Root Group/Coastal/High tide satellite images/High tide Landsat satellite images"
+                                    ]
+                                },
+                                {
                                     "type": "geojson",
-                                    "name": "DEA Intertidal Extents polygons for data access",
+                                    "name": "Intertidal Extents Model (ITEM) polygons for data access",
                                     "info": [
                                         {
                                             "name": "Abstract",
@@ -1354,6 +1304,74 @@
                                     "id": "6fBRXw",
                                     "shareKeys": [
                                         "Root Group/Coastal/Intertidal extent model/Intertidal Extent Polygons data access"
+                                    ]
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "Low Tide Composite (HLTC) polygons for data access",
+                                    "info": [
+                                        {
+                                            "name": "Abstract",
+                                            "content": "High Tide and Low Tide Composites 2.0.0 <p/> The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018). <p/> The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping. The time range used for composite generation in each polygon of the mosaic is tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The concepts of the Observed Tidal Range (OTR), and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016)."
+                                        },
+                                        {
+                                            "name": "Overview",
+                                            "content": "Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass. By harnessing the long archive of satellite imagery over Australia's coastal zones in the DEA and pairing the images with regional tidal modelling, the archive can be sorted by tide height rather than date, enabling the inter-tidal zone to be viewed at any stage of the tide regime. <p/> The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions. These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively. A geomedian composite for each Landsat band is calculated from the tiles in each ensemble subset to produce the respective HOT and LOT composites. Note that Landsat 7 ETM+ observations are excluded after May 2003 due to a large number of data artefacts. <p/> The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide. The tide stages were calculated by comparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide. <p/> Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band)."
+                                        },
+                                        {
+                                            "name": "Accuracy and limitations",
+                                            "content": "The accuracy of the tide height data is limited by the accuracy of the OTPS model. Tidal modelling on self-similar coastal polygons was performed to minimise regional uncertainty. <p/> Accuracies and limitations related to geomedian compositing of observations are discussed in Roberts et al (2017). <p/> Users should beware of seasonal and diurnal effects in the imagery, especially in the north east of Australia where the footprint of the highest and lowest astronomical tides are large. Consequently, where image acquisition misses the highest astronomical tide, for example, pooling effects of water are still visible in the landscape in lowest observed tidal composite imagery. <p/> This product has been rendered in both true colour and false colour. Validation and interpretation of surface features has not been attempted here. Interpretation of surface features is at the users own discretion."
+                                        },
+                                        {
+                                            "name": "File naming",
+                                            "content": "`<COUNT OR COMPOSITE>_<HIGH OR LOW>_<TIDAL POLYGON NUMBER>_<LONGITUDE>_<LATITUDE>_<START DATE>_<END DATE>_<PERCENTILE TIDE RANGE>` <p/> COUNT OR COMPOSITE refers to whether pixels contain composite observation values or the count of observations at that pixel location <br/>HIGH OR LOW refers to whether the content relates to High Tide values or Low Tide values <br/>TIDAL POLYGON NUMBER relates to the id of the tidal polygon referenced by the file <br/>LONGITUDE is the longitude of the centroid of the tidal polygon <br/>LATITUDE is the latitude of the centroid of the tidal polygon <br/>START DATE is the beginning of the date range covered by the file <br/>END DATE is the end of the date range covered by the file <br/>PERCENTILE TIDE RANGE indicates the percentile value used when calculating the composites <p/> The index of downloadable GeoTIFFs can be found here: <p/> http://dap.nci.org.au/thredds/remoteCatalogService?catalog=http://dapds00.nci.org.au/thredds/catalog/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/catalog.xml"
+                                        },
+                                        {
+                                            "name": "References",
+                                            "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
+                                        }
+                                    ],
+                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20_maps.geojson",
+                                    "featureInfoTemplate": {
+                                        "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The low tide composite at this location was generated from imagery acquired in the lowest 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_LOW_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
+                                    },
+                                    "id": "5SAK7J",
+                                    "shareKeys": [
+                                        "Root Group/Coastal/Low tide satellite images/Low Tide Polygons for data access"
+                                    ]
+                                },
+                                {
+                                    "type": "geojson",
+                                    "name": "High Tide Composite (HLTC) polygons for data access",
+                                    "info": [
+                                        {
+                                            "name": "Abstract",
+                                            "content": "High Tide and Low Tide Composites 2.0.0 <p/> The High and Low Tide Composites product is composed of two surface reflectance composite mosaics of Landsat TM and ETM+ (Landsat 5 and Landsat 7 respectively) and OLI (Landsat 8) surface reflectance data (Li et al., 2012). These products have been produced using Digital Earth Australia (DEA). The two mosaics allow cloud free and noise reduced visualisation of the shallow water and inter-tidal coastal regions of Australia, as observed at high and low tide respectively (Sagar et al. 2018). <p/> The composites are generated utilising the geomedian approach of Roberts et al (2017) to ensure a valid surface reflectance spectra suitable for uses such as habitat mapping. The time range used for composite generation in each polygon of the mosaic is tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The concepts of the Observed Tidal Range (OTR), and Highest and Lowest Observed Tide (HOT, LOT) are discussed and described fully in Sagar et al. (2017) and the product description for the ITEM v 1.0 product (Geoscience Australia, 2016)."
+                                        },
+                                        {
+                                            "name": "Overview",
+                                            "content": "Inter-tidal zones are difficult regions to characterise due to the dynamic nature of the tide. They are highly changeable environments, subject to forcings from the land, sea and atmosphere and yet they form critical habitats for a wide range of organisms from birds to fish and sea grass. By harnessing the long archive of satellite imagery over Australia's coastal zones in the DEA and pairing the images with regional tidal modelling, the archive can be sorted by tide height rather than date, enabling the inter-tidal zone to be viewed at any stage of the tide regime. <p/> The High Low Tide Composites (HLTC_25) product is composed of two mosaics, distinguished by tide height, representing a composite image of the synthetic geomedian surface reflectance from Landsats 5 TM, Landsat 7 ETM+ and Landsat 8 OLI NBAR data (Li et al., 2012; Roberts et al., 2017). Oregon State Tidal Prediction (OTPS) software (Egbert and Erofeeva, 2002, 2010) was used to generate tide heights, relative to mean sea level, for the Australian continental coastline, split into 306 distinct tidal regions. These time and date stamped tidal values were then attributed to all coastal tile observations for their time of acquisition, creating a range of observed tide heights for the Australian coastline. The two mosaics in HLTC_25 are composited from the highest and lowest 20 % of observed tide in the ensemble and are termed HOT and LOT respectively. A geomedian composite for each Landsat band is calculated from the tiles in each ensemble subset to produce the respective HOT and LOT composites. Note that Landsat 7 ETM+ observations are excluded after May 2003 due to a large number of data artefacts. <p/> The time range used for composite generation in each of the 306 polygons of the mosaics are tailored to ensure dynamic coastal features are captured whilst still allowing a clean and cloud free composite to be generated. The maximum epoch for which the products are calculated is between 1995-2017, although this varies due to data resolution and observation quality. The product also includes a count of clear observations per pixel for both mosaics and attribute summaries per polygon that include the date range, the highest and lowest modeled astronomical tide as well as the highest and lowest observed tide for that time range, the total observation count and the maximum count of observations for any one pixel in the polygon, the polygon ID number (from 1 to 306), the polygon centroid in longitude and latitude and the count of tide stages attributed to every observation used in that polygon of the mosaic. For the count of tidal stage observations, e = ebbing tide, f = flowing tide, ph = peak high tide and pl = peak low tide. The tide stages were calculated by comparison to the modeled tide data for 15 minutes either side of the observation to determine the ebb, flow or peak movement of the tide. <p/> Observations are filtered to remove poor quality observations including cloud, cloud shadow and band saturation (of any band)."
+                                        },
+                                        {
+                                            "name": "Accuracy and limitations",
+                                            "content": "The accuracy of the tide height data is limited by the accuracy of the OTPS model. Tidal modelling on self-similar coastal polygons was performed to minimise regional uncertainty. <p/> Accuracies and limitations related to geomedian compositing of observations are discussed in Roberts et al (2017). <p/> Users should beware of seasonal and diurnal effects in the imagery, especially in the north east of Australia where the footprint of the highest and lowest astronomical tides are large. Consequently, where image acquisition misses the highest astronomical tide, for example, pooling effects of water are still visible in the landscape in lowest observed tidal composite imagery. <p/> This product has been rendered in both true colour and false colour. Validation and interpretation of surface features has not been attempted here. Interpretation of surface features is at the users own discretion."
+                                        },
+                                        {
+                                            "name": "File naming",
+                                            "content": "`<COUNT OR COMPOSITE>_<HIGH OR LOW>_<TIDAL POLYGON NUMBER>_<LONGITUDE>_<LATITUDE>_<START DATE>_<END DATE>_<PERCENTILE TIDE RANGE>` <p/> COUNT OR COMPOSITE refers to whether pixels contain composite observation values or the count of observations at that pixel location <br/>HIGH OR LOW refers to whether the content relates to High Tide values or Low Tide values <br/>TIDAL POLYGON NUMBER relates to the id of the tidal polygon referenced by the file <br/>LONGITUDE is the longitude of the centroid of the tidal polygon <br/>LATITUDE is the latitude of the centroid of the tidal polygon <br/>START DATE is the beginning of the date range covered by the file <br/>END DATE is the end of the date range covered by the file <br/>PERCENTILE TIDE RANGE indicates the percentile value used when calculating the composites <p/> The index of downloadable GeoTIFFs can be found here: <p/> http://dap.nci.org.au/thredds/remoteCatalogService?catalog=http://dapds00.nci.org.au/thredds/catalog/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/catalog.xml"
+                                        },
+                                        {
+                                            "name": "References",
+                                            "content": "Egbert, G.D., Erofeeva, S.Y., 2002. Efficient Inverse Modeling of Barotropic Ocean Tides. J. Atmospheric Ocean. Technol. 19, 183-204. doi:10.1175/1520-0426(2002)019<0183:EIMOBO>2.0.CO;2 <p/> Egbert, G.D., Erofeeva, S.Y., 2010. The OSU TOPEX/Poseiden Global Inverse Solution TPXO [WWW Document]. TPXO8-Atlas Version 10. URL http://volkov.oce.orst.edu/tides/global.html (accessed 2.15.16). <p/> Geoscience Australia, 2016. Intertidal Extents Model (25m) v 1.0 Product Description. doi:10.4225/25/575F683E2A3AF <p/> Li, F., Jupp, D.L.B., Thankappan, M., Lymburner, L., Mueller, N., Lewis, A., Held, A., 2012. A physics-based atmospheric and BRDF correction for Landsat data over mountainous terrain. Remote Sens. Environ. 124, 756-770. doi:10.1016/j.rse.2012.06.018 <p/> Roberts, D., Mueller, N., McIntyre, A., 2017. High-dimensional pixel composites from Earth observation time series. IEEE Trans. Geosci. Remote Sens. In Press. <p/> Sagar, S., Roberts, D., Bala, B., Lymburner, L., 2017. Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations. Remote Sens. Environ. 195, 153-169. doi:10.1016/j.rse.2017.04.009 <p/> Sagar, S., Phillips, C., Bala, B., Roberts, D., Lymburner, L., 2018. Generating Continental Scale Pixel-Based Surface Reflectance Composites in Coastal Regions with the Use of a Multi-Resolution Tidal Model. Remote Sensing 10, 480."
+                                        }
+                                    ],
+                                    "url": "https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20_maps.geojson",
+                                    "featureInfoTemplate": {
+                                        "template": "The tidal range at this location is {{modelLow}} to {{modelHigh}} meters relative to mean sea level (MSL). <p/> The high tide composite at this location was generated from imagery acquired in the top 20% of the observed tidal range which is between {{LIT}} and {{HIT}} meters relative to MSL, during the period of time of {{date_range}}. <p/> <figure> <img style='width: 100%' src='http://dea-public-data.s3-ap-southeast-2.amazonaws.com/LHTC_Tides/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.jpg'/> <figcaption>Observations used to generate the composite (black dots), in relation to the full modelled tidal range (blue) and complete archive (white dots) at this location</figcaption> </figure> <p/> Download the GeoTIFF for this polygon here: <p/> <a href='http://dapds00.nci.org.au/thredds/fileServer/fk4/datacube/002/HLTC/HLTC_2_0/geotiff/COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif'>COMPOSITE_HIGH_{{ID}}_{{lon}}_{{lat}}_{{start_date}}_{{end_date}}_PER_20.tif</a>"
+                                    },
+                                    "id": "IjP3T7",
+                                    "shareKeys": [
+                                        "Root Group/Coastal/High tide satellite images/High Tide Polygons for data access"
                                     ]
                                 }
                             ],

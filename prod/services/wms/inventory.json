@@ -1,5 +1,5 @@
 {
-    "total_layers_count": 68,
+    "total_layers_count": 69,
     "layers": [
          {
             "layer": "s2_ls_combined",
@@ -616,11 +616,29 @@
             "product": [
                 "ga_s2ls_intertidal_cyear_3"
             ],
-            "styles_count": 3,
+            "styles_count": 5,
             "styles_list": [
                 "intertidal_elevation_adaptive",                
                 "intertidal_elevation_uncertainty_adaptive",
-                "intertidal_exposure"
+                "intertidal_exposure",
+                "intertidal_extents",
+                "count_clear"
+            ]
+        },
+        {
+            "layer": "ga_s2_tidal_composites_cyear_3",
+            "product": [
+                "ga_s2_tidal_composites_cyear_3"
+            ],
+            "styles_count": 7,
+            "styles_list": [
+                "low_true",
+                "high_true",
+                "low_false",
+                "high_false",
+                "low_mndwi",
+                "high_mndwi",
+                "count_clear"
             ]
         },
         {
