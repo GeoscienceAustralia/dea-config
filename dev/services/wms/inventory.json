@@ -1145,9 +1145,10 @@
             "product": [ 
                 "ga_s2am_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "fmc_blue"
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
@@ -1155,9 +1156,10 @@
             "product": [ 
                 "ga_s2bm_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "fmc_blue"
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
@@ -1165,9 +1167,10 @@
             "product": [ 
                 "ga_s2cm_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "fmc_blue"
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
