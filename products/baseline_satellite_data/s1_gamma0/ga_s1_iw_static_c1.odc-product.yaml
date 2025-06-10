@@ -1,0 +1,40 @@
+name: ga_s1_iw_static_c1
+description: > 
+  Radar-geometry layers matching the Radiometric Terrain Corrected (RTC) Backscatter for Sentinel-1 product (ga_s1_iw_*_c1) on burst ID, generated from the COMPASS-ISCE3 pipeline.
+metadata_type: eo3_s1_ard
+
+metadata:
+  product:
+    name: ga_s1_iw_static_c1
+
+measurements:
+  - name: number_of_looks
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: gamma0_to_beta0_ratio
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: gamma0_to_sigma0_ratio
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: local_incidence_angle
+    aliases:
+      - lia
+    dtype: float32
+    nodata: .nan
+    units: 'degrees'
+  - name: incidence_angle
+    aliases:
+      - ia
+    dtype: float32
+    nodata: .nan
+    units: 'degrees'
+  - name: digital_elevation_model
+    aliases:
+      - dem
+    dtype: float32
+    nodata: .nan
+    units: 'metres'
