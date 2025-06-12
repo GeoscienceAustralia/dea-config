@@ -112,7 +112,7 @@ cog_opts:
   zlevel: 9
 apply_eodatasets3: True
 output_location: >-
-  s3://dea-public-data-dev/derivative/ga_ls_wo_fq_nov_mar_3/2-0-0
+  s3://dea-public-data/derivative/ga_ls_wo_fq_nov_mar_3/2-0-0
 
 # save-tasks options
 input_products: ga_ls_wo_3
