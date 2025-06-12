@@ -49,7 +49,7 @@ ga_s2_fmc_layer = {
     },
     "flags": [{
         "band": "land",
-        "products": ["geodata_coast_100k","geodata_coast_100k","geodata_coast_100k"],
+        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
         "ignore_time": True,
         "ignore_info_flags": []
     }],
@@ -94,7 +94,7 @@ ga_s2m_fmc_mosaic_layer = {
     },
     "flags": [{
         "band": "land",
-        "products": ["geodata_coast_100k","geodata_coast_100k","geodata_coast_100k"],
+        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
         "ignore_time": True,
         "ignore_info_flags": []
     }],
