@@ -1,26 +1,26 @@
 name: ga_s2cm_fmc
-description: Geoscience Australia Sentinel 2C MSI Fuel Moisture Content Collection 3
-license: CC-BY-4.0
 metadata_type: eo3
+description: Geoscience Australia Sentinel 2C MSI Fuel Moisture Content Collection 3
+
+license: CC-BY-4.0
 
 metadata:
-  properties:
-    odc:file_format: GeoTIFF
-    odc:product_family: fmc
-  product:
-    name: ga_s2cm_fmc
-
+    product:
+        name: ga_s2cm_fmc
+    properties:
+        odc:file_format: GeoTIFF
+        odc:product_family: fmc
 measurements:
   - name: fmc
     dtype: int16
-    nodata: -999
     units: '1'
+    nodata: -999
 
 load:
-  crs: 'epsg:3577'
-  resolution:
-    y: -20
-    x: 20
-  align:
-    y: 0
-    x: 0
+    crs: 'EPSG:3577'
+    resolution:
+        x: 20
+        y: -20
+    align:
+        x: 0
+        y: 0

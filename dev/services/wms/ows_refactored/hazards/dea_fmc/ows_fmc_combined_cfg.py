@@ -14,16 +14,16 @@ style_fmc = {
         "function": "datacube_ows.band_utils.single_band",
         "kwargs": {"band": "fmc"}},
     "color_ramp": [{"value": 0, "color": "#DD0000"},
-                   {"value": 150, "color": "#FFFFBA"},
-                   {"value": 300, "color": "#2A9DF4"}],
+                   {"value": 75, "color": "#FFFFBA"},
+                   {"value": 150, "color": "#2A9DF4"}],
     "pq_masks": [{"band": "land",
                   "invert": True,
                   "values": [0]}],
     "legend": {
         "title": "Fuel Moisture Content (Weight Percent)",
         "begin": "0",
-        "end": "300",
-        "ticks": ["0", "50", "100", "150", "200", "250", "300"],
+        "end": "150",
+        "ticks": ["0", "50", "100", "150"],
         "tick_labels": {
             "default": {
                 "suffix": "%"}}}
@@ -31,12 +31,12 @@ style_fmc = {
 
 
 ga_s2_fmc_layer = {
-    "title": "DEA Fuel Moisture Content (Sentinel 2 a & b)",
+    "title": "DEA Fuel Moisture Content (Sentinel 2 a, b & c)",
     "name": "ga_s2_fmc_layer",
-    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
-    this layer combines data from both Sentinel 2 a and Sentinel 2 b """,
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a, b & c)
+    this layer combines data from both Sentinel 2 a, Sentinel 2 b and Sentinel 2 c""",
     "multi_product": True,
-    "product_names": ["ga_s2am_fmc", "ga_s2bm_fmc"],
+    "product_names": ["ga_s2am_fmc", "ga_s2bm_fmc", "ga_s2cm_fmc"],
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
@@ -49,7 +49,7 @@ ga_s2_fmc_layer = {
     },
     "flags": [{
         "band": "land",
-        "products": "geodata_coast_100k",
+        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
         "ignore_time": True,
         "ignore_info_flags": []
     }],
@@ -60,14 +60,15 @@ ga_s2_fmc_layer = {
 }
 
 ga_s2m_fmc_mosaic_layer = {
-    "title": "DEA Fuel Moisture Content Most Recent Available Data Mosaic (Sentinel 2 a & b)",
+    "title": "DEA Fuel Moisture Content Most Recent Available Data Mosaic (Sentinel 2 a, b & c)",
     "name": "ga_s2m_fmc_mosaic",
-    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a & b)
+    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a, b & c)
     This product produces a mosaic of the most recent available data from both Sentinel-2 satelites captured over the Australian continent""",
     "multi_product": True,
     "product_names": [
         "ga_s2am_fmc",
-        "ga_s2bm_fmc"
+        "ga_s2bm_fmc",
+        "ga_s2cm_fmc"
     ],
     "mosaic_date_func": {
         # 6 day rolling window.  5 days should give full continental coverage
@@ -93,7 +94,7 @@ ga_s2m_fmc_mosaic_layer = {
     },
     "flags": [{
         "band": "land",
-        "products": "geodata_coast_100k",
+        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
         "ignore_time": True,
         "ignore_info_flags": []
     }],

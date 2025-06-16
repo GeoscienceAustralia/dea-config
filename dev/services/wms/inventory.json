@@ -1,7 +1,7 @@
 {
 
 
-    "total_layers_count": 84,
+    "total_layers_count": 85,
 
     "layers": [
         {
@@ -1145,9 +1145,10 @@
             "product": [ 
                 "ga_s2am_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "style_fmc"
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
@@ -1155,16 +1156,29 @@
             "product": [ 
                 "ga_s2bm_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "style_fmc"
+                "fmc_blue",
+                "fmc_red"
+            ]
+        },
+        {
+            "layer": "ga_s2cm_fmc",
+            "product": [ 
+                "ga_s2cm_fmc"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
             "layer": "ga_s2_fmc_layer",
             "product": [ 
                 "ga_s2am_fmc",
-                "ga_s2bm_fmc"
+                "ga_s2bm_fmc",
+                "ga_s2cm_fmc"
             ],
             "styles_count": 1,
             "styles_list": [
@@ -1175,7 +1189,8 @@
             "layer": "ga_s2m_fmc_mosaic",
             "product": [ 
                 "ga_s2am_fmc",
-                "ga_s2bm_fmc"
+                "ga_s2bm_fmc",
+                "ga_s2cm_fmc"
             ],
             "styles_count": 1,
             "styles_list": [
