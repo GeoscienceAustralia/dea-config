@@ -686,17 +686,19 @@
             "product": [
                 "ga_s2ls_intertidal_cyear_3"
             ],
-            "styles_count": 9,
+            "styles_count": 11,
             "styles_list": [
                 "intertidal_elevation_adaptive",                
                 "intertidal_elevation_uncertainty_adaptive",
                 "intertidal_exposure",
+                "intertidal_extents",
                 "intertidal_elevation_micro",
                 "intertidal_elevation_meso",
                 "intertidal_elevation_macro",
                 "intertidal_elevation_uncertainty",
                 "intertidal_corr",
-                "intertidal_freq"
+                "intertidal_freq",
+                "count_clear"
             ]
         },
         {
@@ -712,9 +714,9 @@
                 "high_false",
                 "low_mndwi",
                 "high_mndwi",
-                "count_clear",
                 "low_true_log",
-                "high_true_log"
+                "high_true_log",
+                "count_clear"
             ]
         },
         {
@@ -1143,9 +1145,10 @@
             "product": [ 
                 "ga_s2am_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "fmc_blue"
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
@@ -1153,9 +1156,10 @@
             "product": [ 
                 "ga_s2bm_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "fmc_blue"
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
@@ -1163,16 +1167,18 @@
             "product": [ 
                 "ga_s2cm_fmc"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "fmc_blue"
+                "fmc_blue",
+                "fmc_red"
             ]
         },
         {
             "layer": "ga_s2_fmc_layer",
             "product": [ 
                 "ga_s2am_fmc",
-                "ga_s2bm_fmc"
+                "ga_s2bm_fmc",
+                "ga_s2cm_fmc"
             ],
             "styles_count": 1,
             "styles_list": [
@@ -1183,7 +1189,8 @@
             "layer": "ga_s2m_fmc_mosaic",
             "product": [ 
                 "ga_s2am_fmc",
-                "ga_s2bm_fmc"
+                "ga_s2bm_fmc",
+                "ga_s2cm_fmc"
             ],
             "styles_count": 1,
             "styles_list": [

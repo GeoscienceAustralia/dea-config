@@ -26,6 +26,7 @@ product owner: ARD
 yaml owner: CORE TEAM
 total products defined: 1
 - `s1_gmma0_geotif_scene`
+- `ga_s1_rtc_backscatter_experimental`
 
 ## srtm
 product owner: ard
