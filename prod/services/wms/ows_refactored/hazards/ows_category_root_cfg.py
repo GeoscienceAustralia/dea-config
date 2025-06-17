@@ -6,5 +6,9 @@ category_layers = {
             "include": "ows_refactored.hazards.burntarea.ows_provisional_ba_cfg.layers",
             "type": "python",
         },
+        {
+            "include": "ows_refactored.hazards.dea_fmc.ows_fmc_combined_cfg.layers",
+            "type": "python",
+        },
     ]
 }

@@ -1404,9 +1404,44 @@
                                 }
                             ],
                             "shareKeys": ["Root Group/Hotspots"]
-                        }
-                    ],
+                        },
+                        {
+                            "id": "fmc927",
+                            "type": "group",
+                            "name": "DEA Fuel Moisture Content (FMC)",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 (A, B & C)",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_fmc_layer",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "2cbf93"
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 Most Recent Observation",
+                                    "url": "https://ows.dev.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2m_fmc_mosaic",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "mrfm98"
+                                },
+                            ],
                     "shareKeys": ["Root Group/Hotspots"]
+                        },
+                    ]
                 },
                 {
                     "id": "89bGRF",
