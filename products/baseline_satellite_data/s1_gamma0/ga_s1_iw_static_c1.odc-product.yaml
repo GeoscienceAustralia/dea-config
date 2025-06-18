@@ -1,6 +1,6 @@
 name: ga_s1_iw_static_c1
 description: > 
-  Radar-geometry layers matching the Radiometric Terrain Corrected (RTC) Backscatter for Sentinel-1 product (ga_s1_iw_*_c1) on burst ID, generated from OPERA's RTC repository.
+  Radar-geometry layers matching the Radiometric Terrain Corrected (RTC) Backscatter for Sentinel-1 product (ga_s1_iw_*_c1) on burst ID, generated from the OPERA RTC repository.
 metadata_type: eo3_s1_ard
 
 metadata:
