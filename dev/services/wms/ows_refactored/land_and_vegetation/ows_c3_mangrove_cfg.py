@@ -46,9 +46,9 @@ layer = {
         {
             "title": "DEA Mangroves (Landsat)",
             "name": "ga_ls_mangrove_cover_cyear_3",
-            "abstract": """Mangrove Canopy Cover 30m 4.0.0 (Landsat, Collection 3)
+            "abstract": """Mangrove Canopy Cover 30m (Landsat, Collection 3)
 
-Mangrove canopy cover version 4.0.0, 30 metre. Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
+Mangrove canopy cover, 30 metre. Data is only visible at higher resolutions; when zoomed-out the available area will be displayed as a shaded region.
 The mangrove canopy cover product provides valuable information about the extent and canopy density of mangroves for each full year between 1987 and the present for the entire Australian coastline.
 The canopy cover classes are:
 20-50% (pale green), 50-80% (mid green), 80-100% (dark green).
