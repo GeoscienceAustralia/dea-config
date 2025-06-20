@@ -1,8 +1,5 @@
 name: ga_s1_vertical_dualpol
-description: > 
-  Radiometric Terrain Corrected (RTC) Backscatter for Sentinel-1 generated from the COMPASS-ISCE3 pipeline. 
-  This product contains scenes with vertical co-polarised (VV) and vertical cross-polarised (VH) measurements.
-  This product uses the gamma_0 linear backscatter measurement convention.
+description: Geoscience Australia Sentinel 1 Interferometric Wide Mode Radiometric Terrain Corrected Gamma0 VV+VH Linear Backscatter Collection 1.
 metadata_type: eo3_s1_ard
 
 metadata:
