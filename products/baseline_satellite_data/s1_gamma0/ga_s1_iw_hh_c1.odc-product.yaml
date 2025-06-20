@@ -38,10 +38,16 @@ measurements:
     nodata: .nan
     units: '1' 
   - name: local_incidence_angle
+    aliases:
+      - lia
+      - LIA
     dtype: float32
     nodata: .nan
     units: '1' 
   - name: incidence_angle
+    aliases:
+      - ia
+      - IA
     dtype: float32
     nodata: .nan
     units: '1'
