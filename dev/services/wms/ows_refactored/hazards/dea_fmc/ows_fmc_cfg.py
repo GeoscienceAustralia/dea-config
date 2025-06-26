@@ -4,8 +4,8 @@ bands_fmc = {
     "fmc": ["fmc"],
 }
 
-fmc_red = {
-    "name": "fmc_red",
+style_fmc = {
+    "name": "style_fmc",
     "title": "Fuel Moisture Content",
     "abstract": "the percentage of water in vegetation by weight",
     "needed_bands": ["fmc"],
@@ -13,25 +13,25 @@ fmc_red = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "kwargs": {"band": "fmc"}},
-    "color_ramp": [{"value": 0, "color": "#DD0000"},
-                   {"value": 150, "color": "#FFFFBA"},
-                   {"value": 300, "color": "#2A9DF4"}],
+    "color_ramp": [{"value": 0, "color": "#ca0020"},
+                   {"value": 75, "color": "#FFFFBA"},
+                   {"value": 150, "color": "#0571b0"}],
     "pq_masks": [{"band": "land",
                   "invert": True,
                   "values": [0]}],
     "legend": {
         "title": "Fuel Moisture Content (Weight Percent)",
         "begin": "0",
-        "end": "300",
-        "ticks": ["0", "50", "100", "150", "200", "250", "300"],
+        "end": "150",
+        "ticks": ["0", "50", "100", "150"],
         "tick_labels": {
             "default": {
                 "suffix": "%"}}}
 }
 
-fmc_blue = {
-    "name": "fmc_blue",
-    "title": "Fuel Moisture Content",
+style_fmc_old = {
+    "name": "style_fmc_old",
+    "title": "FMC - old style",
     "abstract": "the percentage of water in vegetation by weight",
     "needed_bands": ["fmc"],
 
@@ -77,8 +77,8 @@ s2a_layer = {
         "ignore_info_flags": []
     }],
     "styling": {
-        "default_style": "fmc_blue",
-        "styles": [fmc_red, fmc_blue]
+        "default_style": "style_fmc",
+        "styles": [style_fmc, style_fmc_old]
     }
 }
 
@@ -104,8 +104,8 @@ s2b_layer = {
         "ignore_info_flags": []
     }],
     "styling": {
-        "default_style": "fmc_blue",
-        "styles": [fmc_red, fmc_blue]
+        "default_style": "style_fmc",
+        "styles": [style_fmc, style_fmc_old]
     }
 }
 
@@ -131,7 +131,7 @@ s2c_layer = {
         "ignore_info_flags": []
     }],
     "styling": {
-        "default_style": "fmc_blue",
-        "styles": [fmc_red, fmc_blue]
+        "default_style": "style_fmc",
+        "styles": [style_fmc, style_fmc_old]
     }
 }
