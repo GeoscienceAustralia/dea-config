@@ -1147,8 +1147,8 @@
             ],
             "styles_count": 2,
             "styles_list": [
-                "fmc_blue",
-                "fmc_red"
+                "style_fmc",
+                "style_fmc_old"
             ]
         },
         {
@@ -1158,8 +1158,8 @@
             ],
             "styles_count": 2,
             "styles_list": [
-                "fmc_blue",
-                "fmc_red"
+                "style_fmc",
+                "style_fmc_old"
             ]
         },
         {
@@ -1169,8 +1169,8 @@
             ],
             "styles_count": 2,
             "styles_list": [
-                "fmc_blue",
-                "fmc_red"
+                "style_fmc",
+                "style_fmc_old"
             ]
         },
         {
@@ -1182,7 +1182,8 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_fmc"
+                "style_fmc",
+                "style_fmc_old"
             ]
         },
         {
@@ -1194,7 +1195,8 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_fmc"
+                "style_fmc",
+                "style_fmc_old"
             ]
         },
         {
