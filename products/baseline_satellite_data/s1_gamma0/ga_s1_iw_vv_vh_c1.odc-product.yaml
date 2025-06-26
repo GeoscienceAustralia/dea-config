@@ -1,0 +1,59 @@
+name: ga_s1_iw_vv_vh_c1
+description: Geoscience Australia Sentinel 1 Interferometric Wide Mode Radiometric Terrain Corrected Gamma0 VV+VH Linear Backscatter Collection 1.
+metadata_type: eo3_s1_ard
+
+metadata:
+  product:
+    name: ga_s1_iw_vv_vh_c1
+
+measurements:
+  - name: VV
+    aliases:
+      - vv
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: VH
+    aliases:
+      - vh
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: mask
+    dtype: uint8
+    nodata: 255
+    units: '1'
+    flags_definition:
+      mask:
+        bits: [0,1,2,3,4,5,6,7]
+        values:
+          1: shadow
+          2: layover
+          3: shadow and layover
+        description: shadow layover data mask
+  - name: number_of_looks
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: gamma0_to_beta0_ratio
+    dtype: float32
+    nodata: .nan
+    units: '1'
+  - name: gamma0_to_sigma0_ratio
+    dtype: float32
+    nodata: .nan
+    units: '1' 
+  - name: local_incidence_angle
+    aliases:
+      - lia
+      - LIA
+    dtype: float32
+    nodata: .nan
+    units: '1' 
+  - name: incidence_angle
+    aliases:
+      - ia
+      - IA
+    dtype: float32
+    nodata: .nan
+    units: '1'
