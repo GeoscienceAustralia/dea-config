@@ -24,7 +24,7 @@ dataset:
 
     product_family: # Sentinel-1
       description: Product family code
-      offset: [properties, 'odc:odc:product_family']
+      offset: [properties, 'odc:product_family']
       indexed: false
 
     scene_id: # Scene name
@@ -35,7 +35,7 @@ dataset:
 
     region_code: # Burst ID
       description: Sentinel-1 burst ID
-      offset: [properties, 'sar:odc:region_code']
+      offset: [properties, 'odc:region_code']
       indexed: false
       type: string
 
