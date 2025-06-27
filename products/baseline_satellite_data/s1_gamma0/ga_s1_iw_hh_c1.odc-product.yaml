@@ -24,6 +24,7 @@ measurements:
           1: shadow
           2: layover
           3: shadow and layover
+          255: invalid sample
         description: shadow layover data mask
   - name: number_of_looks
     dtype: float32
