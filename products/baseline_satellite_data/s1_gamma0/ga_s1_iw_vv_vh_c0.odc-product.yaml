@@ -2,6 +2,8 @@ name: ga_s1_iw_vv_vh_c0
 description: Geoscience Australia Sentinel 1 Interferometric Wide Mode Radiometric Terrain Corrected Gamma0 VV+VH Linear Backscatter Collection 0.
 metadata_type: eo3_s1_ard
 
+license: CC-BY-4.0
+
 metadata:
   product:
     name: ga_s1_iw_vv_vh_c0
