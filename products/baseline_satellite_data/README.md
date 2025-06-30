@@ -24,7 +24,7 @@ total products defined: 2
 ## s1_gamma0
 product owner: ARD/DEANT
 yaml owner: ARD/DEANT
-total products defined: 4
+total products defined: 6
 - `ga_s1_iw_hh_c0`
 - `ga_s1_iw_hh_hv_c0`
 - `ga_s1_iw_vv_c0`
