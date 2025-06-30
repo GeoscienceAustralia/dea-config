@@ -36,7 +36,7 @@ dataset:
     region_code: # Burst ID
       description: Sentinel-1 burst ID
       offset: [properties, 'odc:region_code']
-      indexed: false
+      indexed: true
       type: string
 
     time:
