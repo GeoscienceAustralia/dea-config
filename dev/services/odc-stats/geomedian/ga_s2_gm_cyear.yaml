@@ -1,0 +1,92 @@
+plugin: s2_gm_tools.s2_gm_enhanced.GMS2AUS
+plugin_config:
+  resampling: cubic
+  bands: ["nbart_blue", "nbart_green", "nbart_red", "nbart_red_edge_1", "nbart_red_edge_2", "nbart_red_edge_3", "nbart_nir_1", "nbart_nir_2", "nbart_swir_2", "nbart_swir_3"]
+  rgb_bands: ["nbart_red", "nbart_green", "nbart_blue"]
+  mask_band: "oa_s2cloudless_mask"
+  proba_band: "oa_s2cloudless_prob"
+  contiguity_band: "oa_nbart_contiguity"
+  s2cloudless_enchance: True
+  year: '2022'
+  nodata_classes: ["nodata"]
+  cp_threshold: 0.1
+  window_smoothing: 20 
+  aux_names:
+    smad: smad
+    emad: emad
+    bcmad: bcmad
+    count: count
+product:
+  name: ga_s2_gm_cyear_3
+  short_name: ga_s2_gm_cyear_3 
+  version: 0.0.1
+  product_family: geomedian
+  region_code_format: x{x:03d}y{y:03d}
+    
+  # -- EO Dataset3 relative section --
+  naming_conventions_values: dea_c3
+  explorer_path: https://explorer.dea.ga.gov.au/
+  classifier: ard
+  maturity: final
+  collection_number: 3
+
+  inherit_skip_properties:
+    - eo:cloud_cover
+    - fmask:clear
+    - fmask:snow
+    - fmask:cloud
+    - fmask:water
+    - fmask:cloud_shadow
+    - eo:sun_elevation
+    - eo:sun_azimuth
+    - s2cloudless:clear
+    - s2cloudless:cloud
+    - gqa:iterative_stddev_x
+    - gqa:iterative_stddev_y
+    - gqa:iterative_stddev_xy
+    - gqa:stddev_xy
+    - gqa:stddev_x
+    - gqa:stddev_y
+    - gqa:mean_xy
+    - gqa:mean_x
+    - gqa:mean_y
+    - gqa:abs_xy
+    - gqa:abs_x
+    - gqa:abs_y
+    - gqa:abs_iterative_mean_y
+    - gqa:abs_iterative_mean_x
+    - gqa:abs_iterative_mean_xy
+    - gqa:iterative_mean_xy
+    - gqa:iterative_mean_x
+    - gqa:iterative_mean_y
+    - gqa:cep90
+    - landsat:landsat_product_id
+    - landsat:landsat_scene_id
+    - landsat:collection_category
+    - landsat:collection_number
+    - landsat:wrs_path
+    - landsat:wrs_row
+  
+max_processing_time: 3600
+job_queue_max_lease: 3600
+renew_safety_margin: 60
+future_poll_interval: 2
+s3_acl: public-read
+cog_opts:
+  zlevel: 9
+  overrides:
+    # If you're making an RGBA image, compress better
+    rgba:
+      compress: JPEG
+      jpeg_quality: 90
+apply_eodatasets3: True
+# output_location: >-
+#   s3://dea-public-data-dev/ga_s2_gm_cyear_3
+
+# # save-tasks options
+# input_products: ga_s2am_ard_3-ga_s2bm_ard_3-ga_s2cm_ard_3
+# frequency: all
+# grid: au_extended_s2_10
+# temporal_range: 2020--P3Y 
+# dataset_filter: >-
+#   {"dataset_maturity": "final"}

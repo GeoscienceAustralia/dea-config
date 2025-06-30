@@ -2,3 +2,5 @@
 __pycache__/
 .env
 artifacts/
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
