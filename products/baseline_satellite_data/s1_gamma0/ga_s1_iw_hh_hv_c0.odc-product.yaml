@@ -5,7 +5,8 @@ metadata_type: eo3_s1_ard
 metadata:
   product:
     name: ga_s1_iw_hh_hv_c0
-    product_family: sar_ard
+  properties:
+    odc:product_family: sar_ard
 
 measurements:
   - name: HH
