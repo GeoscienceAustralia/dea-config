@@ -5,7 +5,7 @@ metadata_type: eo3_s1_ard
 metadata:
   product:
     name: ga_s1_iw_vv_c0
-    odc:product_family: sar_ard
+    product_family: sar_ard
 
 measurements:
   - name: VV
