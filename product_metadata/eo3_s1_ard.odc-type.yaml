@@ -28,7 +28,7 @@ dataset:
       indexed: false
 
     scene_id: # Scene name
-      description: ESA scene ID (e.g. 'S2A_MSIL1C_20220303T000731_N0400_R073_T56LNM_20220303T012845')
+      description: ESA scene ID (e.g. 'S1A_EW_GRDM_1SDH_20211219T152835_20211219T152939_041079_04E161_47D4')
       offset: [properties, 'nrb:scene_id']
       indexed: false
       type: string
@@ -69,7 +69,7 @@ dataset:
     # Instrument mode
     instrument_mode:
       description: The acquisition mode (one of SM, IW, EW, WV)
-      offset: [properties, 'altm:instrument_mode']
+      offset: [properties, 'sar:instrument_mode']
       indexed: false
       type: string
 
