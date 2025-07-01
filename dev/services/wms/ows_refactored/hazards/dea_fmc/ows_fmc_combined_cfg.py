@@ -13,6 +13,31 @@ style_fmc = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "kwargs": {"band": "fmc"}},
+    "color_ramp": [{"value": 0, "color": "#ca0020"},
+                   {"value": 75, "color": "#FFFFBA"},
+                   {"value": 150, "color": "#0571b0"}],
+    "pq_masks": [{"band": "land",
+                  "invert": True,
+                  "values": [0]}],
+    "legend": {
+        "title": "Fuel Moisture Content (Weight Percent)",
+        "begin": "0",
+        "end": "150",
+        "ticks": ["0", "50", "100", "150"],
+        "tick_labels": {
+            "default": {
+                "suffix": "%"}}}
+}
+
+style_fmc_old = {
+    "name": "style_fmc_old",
+    "title": "FMC - old style",
+    "abstract": "the percentage of water in vegetation by weight",
+    "needed_bands": ["fmc"],
+
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "kwargs": {"band": "fmc"}},
     "color_ramp": [{"value": 0, "color": "#DD0000"},
                    {"value": 75, "color": "#FFFFBA"},
                    {"value": 150, "color": "#2A9DF4"}],
@@ -55,7 +80,7 @@ ga_s2_fmc_layer = {
     }],
     "styling": {
         "default_style": "style_fmc",
-        "styles": [style_fmc]
+        "styles": [style_fmc, style_fmc_old]
     }
 }
 
@@ -100,6 +125,6 @@ ga_s2m_fmc_mosaic_layer = {
     }],
     "styling": {
         "default_style": "style_fmc",
-        "styles": [style_fmc]
+        "styles": [style_fmc, style_fmc_old]
     }
 }
