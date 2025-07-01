@@ -13,9 +13,9 @@ style_fmc = {
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "kwargs": {"band": "fmc"}},
-    "color_ramp": [{"value": 0, "color": "#DD0000"},
+    "color_ramp": [{"value": 0, "color": "#ca0020"},
                    {"value": 75, "color": "#FFFFBA"},
-                   {"value": 150, "color": "#2A9DF4"}],
+                   {"value": 150, "color": "#0571b0"}],
     "pq_masks": [{"band": "land",
                   "invert": True,
                   "values": [0]}],
@@ -38,7 +38,7 @@ ga_s2_fmc_layer = {
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 FMC is presented a percentage, by weight, of the non-water plant material. Values range from 0 – 300, where 300 would mean there is three times as much water (by weight) than dry plant material.
 
-This product presents the calculated FMC values for each individual Sentinel-2 (A, B and C) satellite image on each particular day since 2015.
+This product presents the calculated FMC values for each individual Sentinel-2 (A, B and C) satellite image on each individual day since 2015.
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
@@ -73,7 +73,7 @@ ga_s2m_fmc_mosaic_layer = {
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 FMC is presented a percentage, by weight, of the non-water plant material. Values range from 0 – 300, where 300 would mean there is three times as much water (by weight) than dry plant material.
 
-This product produces a mosaic of the most recent available data from Sentinel-2 satellites (A, B and C) captured over the Australian continent.
+This product is a mosaic of the most recent available data from Sentinel-2 satellites (A, B and C) captured over the Australian continent. You can click on the map to view date of observation infomration for each pixel.
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": True,
