@@ -120,39 +120,39 @@ dataset:
       description: Whether noise removal has been applied
       offset: [properties, 'nrb:noise_removal_applied']
       indexed: false
-      type: integer
+      type: string
 
     # Static tropospheric correction
     static_tropospheric_correction_applied:
       description: Whether static tropospheric correction has been applied
       offset: [properties, 'nrb:static_tropospheric_correction_applied']
       indexed: false
-      type: integer
+      type: string
 
     # Wet tropospheric correction
     wet_tropospheric_correction_applied:
       description: Whether wet tropospheric correction has been applied
       offset: [properties, 'nrb:wet_tropospheric_correction_applied']
       indexed: false
-      type: integer
+      type: string
 
     # Bistatic correction
     bistatic_correction_applied:
       description: Whether bistatic correction has been applied
       offset: [properties, 'nrb:bistatic_correction_applied']
       indexed: false
-      type: integer
+      type: string
 
     # Ionospheric correction
     ionospheric_correction_applied:
       description: Whether ionospheric correction has been applied
       offset: [properties, 'nrb:ionospheric_correction_applied']
       indexed: false
-      type: integer
+      type: string
 
     # Speckle filter
     speckle_filter_applied:
       description: Whether a speckle filter has been applied
       offset: [properties, 'nrb:speckle_filter_applied']
       indexed: false
-      type: integer
+      type: string
