@@ -78,6 +78,5 @@ output_location: >-
 input_products: ga_s2am_ard_3-ga_s2bm_ard_3-ga_s2cm_ard_3
 frequency: all
 grid: au_extended_s2_10
-temporal_range: 2020--P3Y 
 dataset_filter: >-
   {"dataset_maturity": "final"}
