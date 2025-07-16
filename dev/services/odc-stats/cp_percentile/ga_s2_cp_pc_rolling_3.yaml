@@ -15,7 +15,7 @@ product:
   # -- EO Dataset3 relative section --
   naming_conventions_values: dea_c3
   explorer_path: https://explorer.dea.ga.gov.au/
-  classifier: ard
+  classifier: s2
   maturity: final
   collection_number: 3
   inherit_skip_properties:
@@ -58,22 +58,26 @@ product:
     - landsat:wrs_path
     - landsat:wrs_row
 
+aws_unsigned: True
+
 max_processing_time: 3600
 job_queue_max_lease: 3600
 renew_safety_margin: 60
 future_poll_interval: 2
-s3_acl: public-read
+
 cog_opts:
   zlevel: 9
+  overview_resampling: average
+  
 apply_eodatasets3: True
 
-# output_location: >-
-#   s3://dea-public-data-dev/ga_s2cloudless_percentiles_3
+output_location: >-
+  s3://dea-public-data-dev/test/ga_s2cloudless_percentiles_3/0-0-1
 
-# # save-tasks options
-# input_products: ga_s2am_ard_3-ga_s2bm_ard_3-ga_s2cm_ard_3
-# frequency: all
-# grid: au_extended_s2_10
-# temporal_range: 2020--P3Y 
-# dataset_filter: >-
-#   {"dataset_maturity": "final"}
+# save-tasks options
+input_products: ga_s2am_ard_3-ga_s2bm_ard_3-ga_s2cm_ard_3
+frequency: all
+grid: au_extended_s2_10
+temporal_range: 2020--P3Y 
+dataset_filter: >-
+  {"dataset_maturity": "final"}
