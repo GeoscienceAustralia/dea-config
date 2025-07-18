@@ -1,4 +1,4 @@
-plugin: s2_gm_tools.cloud_proba_percentiles.S2Cloudless_percentiles
+plugin: odc.stats.plugins.cloud_proba_percentiles.S2Cloudless_percentiles
 plugin_config:
   resampling: cubic
   bands: ["oa_s2cloudless_prob"]
