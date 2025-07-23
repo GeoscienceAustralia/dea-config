@@ -133,7 +133,7 @@ dataset:
       description: Whether noise removal has been applied
       offset: [properties, 'sarard:noise_removal_applied']
       indexed: false
-      type: string
+      type: boolean
 
     # Static tropospheric correction
     static_tropospheric_correction_applied:
