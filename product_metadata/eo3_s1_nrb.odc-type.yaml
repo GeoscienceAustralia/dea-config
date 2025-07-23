@@ -48,8 +48,7 @@ dataset:
       type: string
 
     crs_raw:
-      description: |
-        The raw CRS string as it appears in the metadata
+      description: The raw CRS string as it appears in the metadata
       offset: ['crs']
       indexed: false
 
