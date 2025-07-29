@@ -74,9 +74,6 @@ apply_eodatasets3: True
 output_location: >-
   s3://dea-public-data-dev/test/ga_s2cloudless_percentiles_3/0-0-1
 
-# run in test mode - will stop after 10 tiles
-mode: test 
-
 # save-tasks options
 input_products: ga_s2am_ard_3-ga_s2bm_ard_3-ga_s2cm_ard_3
 frequency: all
