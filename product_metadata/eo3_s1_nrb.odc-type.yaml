@@ -13,29 +13,29 @@ dataset:
 
   search_fields:
     platform: # Sentinel-1A/B/C/D
-      description: Platform code
+      description: The platform code
       offset: [properties, 'eo:platform'] # EO3 name for the field
       indexed: false
 
     instrument: # Sentinel-1A/B/C/D CSAR
-      description: Instrument name
+      description: The instrument name
       offset: [properties, 'eo:instrument']
       indexed: false
 
     product_family: # sar_ard
-      description: Product family code
+      description: The product family code
       offset: [properties, 'odc:product_family']
       indexed: false
 
     scene_id: # Scene name
-      description: ESA scene ID (e.g. S1A_EW_GRDM_1SDH_20211219T152835_20211219T152939_041079_04E161_47D4)
+      description: The ESA scene ID (e.g. S1A_EW_GRDM_1SDH_20211219T152835_20211219T152939_041079_04E161_47D4)
       offset: [properties, 'sarard:scene_id']
       indexed: false
       type: string
     
     region_code: # Burst ID
       description: >
-        Spatial reference code from the provider.
+        The spatial reference code from the provider.
         For Sentinel-1 normalised radar backscatter 
         processed with the OPERA-ISCE3 pipeline 
         the region code is comprised of three pieces of 
@@ -116,7 +116,7 @@ dataset:
 
     # Orbit cycle
     orbit_cycle:
-      description: Number of days for the satellite to repeat its orbit track
+      description: The number of days for the satellite to repeat its orbit track
       offset: [properties, 'sat:orbit_cycle']
       indexed: false
       type: integer
@@ -130,7 +130,7 @@ dataset:
 
     # Burst ID
     burst_id:
-      description: OPERA-ISCE3 Burst ID, formatted as "t{track_number}_{esa_burst_id}_{swath_id}"
+      description: The OPERA-ISCE3 Burst ID, formatted as "t{track_number}_{esa_burst_id}_{swath_id}"
       offset: [properties, 'sarard:burst_id']
       indexed: true
       type: string
