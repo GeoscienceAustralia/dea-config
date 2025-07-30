@@ -21,6 +21,15 @@ total products defined: 2
 - `s2a_nrt_granule`
 - `s2b_nrt_granual`
 
+## s1-nrb
+product owner: ARD/DEANT
+yaml owner: ARD/DEANT
+total products defined: 4
+- `ga_s1_nrb_iw_hh_c0`
+- `ga_s1_nrb_iw_hh_hv_c0`
+- `ga_s1_nrb_iw_vv_c0`
+- `ga_s1_nrb_iw_vv_vh_c0`
+
 ## s1_gamma0
 product owner: ARD/DEANT
 yaml owner: ARD/DEANT
