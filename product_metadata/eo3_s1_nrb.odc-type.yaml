@@ -86,6 +86,13 @@ dataset:
       indexed: false
       type: string
 
+    # Observation direction
+    observation_direction:
+      description: The observation direction of the satellite relative to the flight path
+      offset: [properties, 'sar:observation_direction'] 
+      indexed: false
+      type: string
+
     # Orbit state
     orbit_state:
       description: The orbit state (one of ascending or descending)
@@ -93,9 +100,30 @@ dataset:
       indexed: false
       type: string
 
+    # Absolute orbit
+    absolute_orbit:
+      description: The absolute orbit number of the satellite
+      offset: [properties, 'sat:absolute_orbit']
+      indexed: false
+      type: integer
+
+    # Relative orbit
+    relative_orbit:
+      description: The orbit number in the satellite's repeat cycle
+      offset: [properties, 'sat:relative_orbit']
+      indexed: false
+      type: integer
+
+    # Orbit cycle
+    orbit_cycle:
+      description: Number of days for the satellite to repeat its orbit track
+      offset: [properties, 'sat:orbit_cycle']
+      indexed: false
+      type: integer
+
     # Orbit source
     orbit_source:
-      description: The orbit file type (one of POE or RES)
+      description: The orbit file type
       offset: [properties, 's1:orbit_source']
       indexed: false
       type: string
