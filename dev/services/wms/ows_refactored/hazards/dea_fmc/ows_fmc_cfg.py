@@ -80,6 +80,13 @@ s2a_layer = {
         "default_style": "style_fmc",
         "styles": [style_fmc, style_fmc_old]
     }
+    "feature_info": {
+        "include_custom": {
+            "description": {
+                "function": "ows_refactored.hazards.dea_fmc.fmc_feat_desc.class_labels",
+            }
+        }
+}
 }
 
 s2b_layer = {
