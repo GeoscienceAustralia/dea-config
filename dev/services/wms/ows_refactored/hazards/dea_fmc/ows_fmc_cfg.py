@@ -79,7 +79,7 @@ s2a_layer = {
     "styling": {
         "default_style": "style_fmc",
         "styles": [style_fmc, style_fmc_old]
-    }
+    },
     "feature_info": {
         "include_custom": {
             "description": {
