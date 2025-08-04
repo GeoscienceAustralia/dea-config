@@ -86,7 +86,7 @@ s2a_layer = {
                 "function": "ows_refactored.hazards.dea_fmc.fmc_feat_desc.class_labels",
             }
         }
-}
+    }
 }
 
 s2b_layer = {
