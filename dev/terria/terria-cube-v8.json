@@ -1449,7 +1449,11 @@
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                      "template": "<table><tr><td><b>Time</b></td><td>{{time}}</td></tr><tr><td><b>FMC</b></td><td>{{data.0.bands.fmc}}</td></tr></table>"
+                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data.0.time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data.0.bands.fmc}}</td></tr></table>",
+                                        "formats": {
+                                            "lat": { "maximumFractionDigits": 5},
+                                            "lon": { "maximumFractionDigits": 5}
+                                        }
                                     },
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
