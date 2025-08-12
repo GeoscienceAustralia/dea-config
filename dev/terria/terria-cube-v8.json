@@ -1448,6 +1448,9 @@
                                     "timeFilterPropertyName": "data_available_for_dates",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                      "template": "<table><tr><td><b>Time</b></td><td>{{time}}</td></tr><tr><td><b>FMC</b></td><td>{{data.0.bands.fmc}}</td></tr></table>"
+                                    },
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
