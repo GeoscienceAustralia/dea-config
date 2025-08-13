@@ -1,12 +1,12 @@
-from ows_refactored.baseline_satellite_data.sentinel1.band_s1_nrb_cfg import (
-    bands_sentinel1_nrb,
-)
-from ows_refactored.baseline_satellite_data.sentinel1.style_s1_nrb_cfg import (
-    styles_s1_nrb_list,
-)
+from ows_refactored.baseline_satellite_data.sentinel1.band_s1_nrb_cfg import \
+    bands_sentinel1_nrb
+from ows_refactored.baseline_satellite_data.sentinel1.style_s1_nrb_cfg import \
+    styles_s1_nrb_list
 
 s1_nrb_layer = {
     "name": "ga_s1_nrb_iw_vv_vh_c0",
+    "title": "GA Normalised Radar Backscatter (Sentinel-1)",
+    "abstract": "Geoscience Australia Sentinel-1 Normalised Radar Backscatter Collection 0",
     "product_name": "ga_s1_nrb_iw_vv_vh_c0",
     "bands": bands_sentinel1_nrb,
     "image_processing": {
