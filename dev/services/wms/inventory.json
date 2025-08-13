@@ -1,7 +1,7 @@
 {
 
 
-    "total_layers_count": 85,
+    "total_layers_count": 86,
 
     "layers": [
         {
@@ -187,6 +187,16 @@
                 "fmask",
                 "s2cloudless_mask",
                 "s2cloudless_prob"
+            ]
+        },
+        {
+            "layer": "ga_s1_nrb_iw_vv_vh_c0",
+            "product": [
+                "ga_s1_nrb_iw_vv_vh_c0"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "vv_gamma0"
             ]
         },
         {
