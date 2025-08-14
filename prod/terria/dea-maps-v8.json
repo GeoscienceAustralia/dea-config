@@ -1431,7 +1431,7 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA FMC Sentinel-2 (A, B & C)",
-                                    "url": "https://ows.dea.ga.gov.au/,
+                                    "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2_fmc_layer",
                                     "timeFilterPropertyName": "data_available_for_dates",
