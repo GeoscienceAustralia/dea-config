@@ -1,4 +1,4 @@
-output_folder: s3://dea-public-data/derivative
+output_folder: s3://dea-public-data-dev/projects/burn_cube/derivative
 
 input_products:
   platform: s2
