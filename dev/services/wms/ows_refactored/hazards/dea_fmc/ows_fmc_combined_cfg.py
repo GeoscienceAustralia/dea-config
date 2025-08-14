@@ -29,39 +29,20 @@ style_fmc = {
                 "suffix": "%"}}}
 }
 
-style_fmc_old = {
-    "name": "style_fmc_old",
-    "title": "FMC - old style",
-    "abstract": "the percentage of water in vegetation by weight",
-    "needed_bands": ["fmc"],
-
-    "index_function": {
-        "function": "datacube_ows.band_utils.single_band",
-        "kwargs": {"band": "fmc"}},
-    "color_ramp": [{"value": 0, "color": "#DD0000"},
-                   {"value": 75, "color": "#FFFFBA"},
-                   {"value": 150, "color": "#2A9DF4"}],
-    "pq_masks": [{"band": "land",
-                  "invert": True,
-                  "values": [0]}],
-    "legend": {
-        "title": "Fuel Moisture Content (Weight Percent)",
-        "begin": "0",
-        "end": "150",
-        "ticks": ["0", "50", "100", "150"],
-        "tick_labels": {
-            "default": {
-                "suffix": "%"}}}
-}
-
-
 ga_s2_fmc_layer = {
-    "title": "DEA Fuel Moisture Content (Sentinel 2 a, b & c)",
+    "title": "DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)",
     "name": "ga_s2_fmc_layer",
-    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a, b & c)
-    this layer combines data from both Sentinel 2 a, Sentinel 2 b and Sentinel 2 c""",
-    "multi_product": True,
-    "product_names": ["ga_s2am_fmc", "ga_s2bm_fmc", "ga_s2cm_fmc"],
+    "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)
+
+This product is a remotely sensed proxy for FUel Mosture Content (FMC). Fuel moisture content (FMC) is a metric used to understand flammability and fire risk. It describes the water contained within the leaf material of plants and it changes seasonally and with climate variations. FMC is traditionally determined by collecting plant sample in the field and analysing them in a laboratory. DEA FMC is  based on satellite imagery. It provides consistent, continent wide information on fuel condition that can be used in combination with other information to understanding vegetation flammability and fire potential. 
+
+DEA FMC is presented as a weight percentage. This meas the value given represent the weight of water in leaf material relative to non-water mateial. Values range from 0 – 300, where 300 would mean there is three times as much water (by weight) than dry plant material.
+
+This product presents the calculated FMC values for each individual Sentinel-2 (A, B and C) satellite image on each individual day since 2015.
+
+For service status information, see https://status.dea.ga.gov.au""",
+    "multi_product": False,
+    "product_names": "ga_s2_fmc_3",
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
@@ -74,27 +55,28 @@ ga_s2_fmc_layer = {
     },
     "flags": [{
         "band": "land",
-        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
+        "products": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],
     "styling": {
         "default_style": "style_fmc",
-        "styles": [style_fmc, style_fmc_old]
+        "styles": [style_fmc]
     }
 }
 
 ga_s2m_fmc_mosaic_layer = {
     "title": "DEA Fuel Moisture Content Most Recent Available Data Mosaic (Sentinel 2 a, b & c)",
     "name": "ga_s2m_fmc_mosaic",
-    "abstract": """DEA Fuel Moisture Content (Sentinel 2 a, b & c)
-    This product produces a mosaic of the most recent available data from both Sentinel-2 satelites captured over the Australian continent""",
-    "multi_product": True,
-    "product_names": [
-        "ga_s2am_fmc",
-        "ga_s2bm_fmc",
-        "ga_s2cm_fmc"
-    ],
+    "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C) Most Recent Mosaic
+
+This product is a remotely sensed proxy for FUel Mosture Content (FMC). Fuel moisture content (FMC) is a metric used to understand flammability and fire risk. It describes the water contained within the leaf material of plants and it changes seasonally and with climate variations. FMC is traditionally determined by collecting plant sample in the field and analysing them in a laboratory. DEA FMC is  based on satellite imagery. It provides consistent, continent wide information on fuel condition that can be used in combination with other information to understanding vegetation flammability and fire potential. 
+
+DEA FMC is presented as a weight percentage. This meas the value given represent the weight of water in leaf material relative to non-water mateial. Values range from 0 – 300, where 300 would mean there is three times as much water (by weight) than dry plant material.
+
+This layer displays the most recently processed FMC observation from the Sentinel 2 satelites for every part of Australia.""",
+    "multi_product": False,
+    "product_names": "ga_s2_fmc_3",
     "mosaic_date_func": {
         # 6 day rolling window.  5 days should give full continental coverage
         # of Sentinel-2, plus an extra day to allow for patchy coverage on
@@ -119,12 +101,12 @@ ga_s2m_fmc_mosaic_layer = {
     },
     "flags": [{
         "band": "land",
-        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
+        "products": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],
     "styling": {
         "default_style": "style_fmc",
-        "styles": [style_fmc, style_fmc_old]
+        "styles": [style_fmc]
     }
 }
