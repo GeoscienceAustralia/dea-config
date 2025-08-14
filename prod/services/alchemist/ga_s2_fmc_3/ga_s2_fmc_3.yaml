@@ -18,6 +18,7 @@ input_products:
 
 # We are using this processing cfg to process all S2a, S2b and S2c data
 product:
+  name: ga_s2_fmc_3
   version: 1.0.0
 
 model_path: https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/projects/burn_cube/configs/RF_AllBands_noLC_DEA_labeless.joblib
