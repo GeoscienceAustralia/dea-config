@@ -3508,7 +3508,7 @@
                             "shareKeys": ["Root Group/Hotspots"]
                         },
                         {
-                            "id": "fmc927",
+                            "id": "fmc829",
                             "type": "group",
                             "name": "DEA Fuel Moisture Content (FMC)",
                             "members": [
@@ -3531,7 +3531,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "2cbf93"
+                                    "id": "72nf0s"
                                 },
                                 {
                                     "type": "wms",
@@ -3539,7 +3539,6 @@
                                     "url": "https://ows.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2m_fmc_mosaic",
-                                    "timeFilterPropertyName": "data_available_for_dates",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
@@ -3552,7 +3551,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "id": "mrfm98"
+                                    "id": "hy72gn"
                                 },
                             ],
                     "shareKeys": ["Root Group/Hazards/fuel moisture content"]
