@@ -1,19 +1,19 @@
-name: ga_s1_nrb_iw_hh_0
-description: Geoscience Australia Sentinel-1 Interferometric Wide Mode Normalised Radar Backscatter Gamma0 HH Linear Backscatter Collection 0.
+name: ga_s1_nrb_iw_vv_0
+description: Geoscience Australia Sentinel-1 Interferometric Wide Mode Normalised Radar Backscatter Gamma0 VV Linear Backscatter Collection 0.
 metadata_type: eo3_s1_nrb
 
 license: CC-BY-4.0
 
 metadata:
   product: 
-    name: ga_s1_nrb_iw_hh_0
+    name: ga_s1_nrb_iw_vv_0
   properties:
     odc:product_family: sar_ard
 
 measurements:
-  - name: HH_gamma0
+  - name: VV_gamma0
     aliases:
-      - hh_gamma0
+      - vv_gamma0
     dtype: float32
     nodata: .nan
     units: 'linear power'

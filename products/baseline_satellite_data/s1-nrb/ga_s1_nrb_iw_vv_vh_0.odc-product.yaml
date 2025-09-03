@@ -16,17 +16,17 @@ measurements:
       - vv_gamma0
     dtype: float32
     nodata: .nan
-    units: '1'
+    units: 'linear power'
   - name: VH_gamma0
     aliases:
       - vh_gamma0
     dtype: float32
     nodata: .nan
-    units: '1'
+    units: 'linear power'
   - name: mask
     dtype: uint8
     nodata: 255
-    units: '1'
+    units: 'classification'
     flags_definition:
       mask:
         bits: [0,1,2,3,4,5,6,7]
@@ -42,26 +42,26 @@ measurements:
       - nlooks
     dtype: float32
     nodata: .nan
-    units: '1'
+    units: 'count'
   - name: gamma0_to_beta0_ratio
     dtype: float32
     nodata: .nan
-    units: '1'
+    units: 'ratio'
   - name: gamma0_to_sigma0_ratio
     dtype: float32
     nodata: .nan
-    units: '1'
+    units: 'ratio'
   - name: local_incidence_angle
     aliases:
       - lia
       - LIA
     dtype: float32
     nodata: .nan
-    units: '1' 
+    units: 'degrees' 
   - name: incidence_angle
     aliases:
       - ia
       - IA
     dtype: float32
     nodata: .nan
-    units: '1'
+    units: 'degrees'
