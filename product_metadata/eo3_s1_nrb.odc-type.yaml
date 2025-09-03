@@ -107,14 +107,14 @@ dataset:
       description: The near range incidence angle.
       offset: [properties, 'sarard:near_range_incidence_angle']
       indexed: false
-      type: float
+      type: double
 
     # Far range incidence angle
     far_range_incidence_angle:
       description: The far range incidence angle.
       offset: [properties, 'sarard:far_range_incidence_angle']
       indexed: false
-      type: float
+      type: double
 
     # Source ID
     source_id:
