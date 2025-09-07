@@ -1,4 +1,7 @@
-output_folder: s3://dea-public-data/derivative
+#output_folder: s3://dea-public-data/derivative
+
+# dump it to dev environment to review
+output_folder: s3://dea-public-data-dev/projects/burn_cube/derivative
 
 input_products:
   platform: s2
@@ -16,9 +19,8 @@ input_products:
     - oa_fmask
     - oa_nbart_contiguity
 
-# We are using this processing cfg to process all S2a, S2b and S2c data
-# the detail product name will be auto detected by input ARD product name
 product:
-  version: 3.0.1
+  name: ga_s2_fmc_3_v1
+  version: 1.0.0
 
 model_path: https://dea-public-data-dev.s3.ap-southeast-2.amazonaws.com/projects/burn_cube/configs/RF_AllBands_noLC_DEA_labeless.joblib

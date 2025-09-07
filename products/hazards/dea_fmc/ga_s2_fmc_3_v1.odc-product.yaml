@@ -1,0 +1,26 @@
+name: ga_s2_fmc_3_v1
+metadata_type: eo3
+description: Geoscience Australia Sentinel MSI Fuel Moisture Content Collection 3
+
+license: CC-BY-4.0
+
+metadata:
+    product:
+        name: ga_s2_fmc_3_v1
+    properties:
+        odc:file_format: GeoTIFF
+        odc:product_family: fmc
+measurements:
+  - name: fmc
+    dtype: int16
+    units: '1'
+    nodata: -999
+
+load:
+    crs: 'EPSG:3577'
+    resolution:
+        x: 20
+        y: -20
+    align:
+        x: 0
+        y: 0
