@@ -34,7 +34,7 @@ ga_s2_fmc_layer = {
     "name": "ga_s2_fmc_layer",
     "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)
 
-This product is a remotely sensed proxy for FUel Mosture Content (FMC). Fuel moisture content (FMC) is a metric used to understand flammability and fire risk. It describes the water contained within the leaf material of plants and it changes seasonally and with climate variations. FMC is traditionally determined by collecting plant sample in the field and analysing them in a laboratory. DEA FMC is  based on satellite imagery. It provides consistent, continent wide information on fuel condition that can be used in combination with other information to understanding vegetation flammability and fire potential. 
+This product is a remotely sensed proxy for FUel Mosture Content (FMC). Fuel moisture content (FMC) is a metric used to understand flammability and fire risk. It describes the water contained within the leaf material of plants and it changes seasonally and with climate variations. FMC is traditionally determined by collecting plant sample in the field and analysing them in a laboratory. DEA FMC is  based on satellite imagery. It provides consistent, continent wide information on fuel condition that can be used in combination with other information to understanding vegetation flammability and fire potential.
 
 DEA FMC is presented as a weight percentage. This meas the value given represent the weight of water in leaf material relative to non-water mateial. Values range from 0 – 300, where 300 would mean there is three times as much water (by weight) than dry plant material.
 
@@ -70,7 +70,7 @@ ga_s2m_fmc_mosaic_layer = {
     "name": "ga_s2m_fmc_mosaic",
     "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C) Most Recent Mosaic
 
-This product is a remotely sensed proxy for FUel Mosture Content (FMC). Fuel moisture content (FMC) is a metric used to understand flammability and fire risk. It describes the water contained within the leaf material of plants and it changes seasonally and with climate variations. FMC is traditionally determined by collecting plant sample in the field and analysing them in a laboratory. DEA FMC is  based on satellite imagery. It provides consistent, continent wide information on fuel condition that can be used in combination with other information to understanding vegetation flammability and fire potential. 
+This product is a remotely sensed proxy for FUel Mosture Content (FMC). Fuel moisture content (FMC) is a metric used to understand flammability and fire risk. It describes the water contained within the leaf material of plants and it changes seasonally and with climate variations. FMC is traditionally determined by collecting plant sample in the field and analysing them in a laboratory. DEA FMC is  based on satellite imagery. It provides consistent, continent wide information on fuel condition that can be used in combination with other information to understanding vegetation flammability and fire potential.
 
 DEA FMC is presented as a weight percentage. This meas the value given represent the weight of water in leaf material relative to non-water mateial. Values range from 0 – 300, where 300 would mean there is three times as much water (by weight) than dry plant material.
 
