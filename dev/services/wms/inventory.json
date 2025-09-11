@@ -1,0 +1,1214 @@
+{
+
+
+    "total_layers_count": 83,
+
+    "layers": [
+        {
+            "layer": "s2_ls_combined",
+            "product": [ 
+                "ga_s2am_ard_3", 
+                "ga_s2bm_ard_3",
+                "ga_s2cm_ard_3",
+                "ga_ls5t_ard_3",
+                "ga_ls7e_ard_3",
+                "ga_ls8c_ard_3",
+                "ga_ls9c_ard_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "true_colour",
+                "blue",
+                "green",
+                "red"
+            ]
+        },
+        {
+            "layer": "s2_ls_mosaic",
+            "product": [ 
+                "ga_s2am_ard_3", 
+                "ga_s2bm_ard_3",
+                "ga_s2cm_ard_3",
+                "ga_ls5t_ard_3",
+                "ga_ls7e_ard_3",
+                "ga_ls8c_ard_3",
+                "ga_ls9c_ard_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "true_colour",
+                "blue",
+                "green",
+                "red"
+            ]
+        },
+        {
+            "layer": "ga_ls_ard_3",
+            "product": [
+                "ga_ls5t_ard_3",
+                "ga_ls7e_ard_3",
+                "ga_ls8c_ard_3",
+                "ga_ls9c_ard_3"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_s2m_ard_3",
+            "product": [
+                "ga_s2am_ard_3",
+                "ga_s2bm_ard_3",
+                "ga_s2cm_ard_3"
+            ],
+            "styles_count": 21,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "s2cloudless_mask",
+                "s2cloudless_prob"
+            ]
+        },
+        {
+            "layer": "ga_s2am_ard_3",
+            "product": [
+                "ga_s2am_ard_3"
+            ],
+            "styles_count": 21,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "s2cloudless_mask",
+                "s2cloudless_prob"
+            ]
+        },
+        {
+            "layer": "ga_s2bm_ard_3",
+            "product": [
+                "ga_s2bm_ard_3"
+            ],
+            "styles_count": 21,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "s2cloudless_mask",
+                "s2cloudless_prob"
+            ]
+        },
+        {
+            "layer": "ga_s2cm_ard_3",
+            "product": [
+                "ga_s2cm_ard_3"
+            ],
+            "styles_count": 21,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "ndci",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir",
+                "narrow_nir",
+                "swir1",
+                "swir2",
+                "fmask",
+                "s2cloudless_mask",
+                "s2cloudless_prob"
+            ]
+        },
+        {
+            "layer": "ga_s1_nrb_iw_vv_vh_c0",
+            "product": [
+                "ga_s1_nrb_iw_vv_vh_c0"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "vv_gamma0"
+            ]
+        },
+        {
+            "layer": "ga_ls8cls9c_gm_cyear_3",
+            "product": [
+                "ga_ls8cls9c_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
+            ]
+        },
+        {
+            "layer": "ga_ls7e_gm_cyear_3",
+            "product": [
+                "ga_ls7e_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
+            ]
+        },
+        {
+            "layer": "ga_ls5t_gm_cyear_3",
+            "product": [
+                "ga_ls5t_gm_cyear_3"
+            ],
+            "styles_count": 17,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "arcsec_sdev",
+                "log_edev",
+                "log_bcdev",
+                "tmad_rgb_std",
+                "tmad_rgb_sens",
+                "count"
+            ]
+        },
+        {
+            "layer": "ga_ls9c_ard_3",
+            "product": [
+                "ga_ls9c_ard_3"
+            ],
+            "styles_count": 16,
+            "styles_list": [
+                "true_colour",
+                "true_colour_pan",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "panchromatic",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_ls8c_ard_3",
+            "product": [
+                "ga_ls8c_ard_3"
+            ],
+            "styles_count": 16,
+            "styles_list": [
+                "true_colour",
+                "true_colour_pan",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "aerosol",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "panchromatic",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_ls7e_ard_3",
+            "product": [
+                "ga_ls7e_ard_3"
+            ],
+            "styles_count": 15,
+            "styles_list": [
+                "true_colour",
+                "true_colour_pan",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "panchromatic",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_ls5t_ard_3",
+            "product": [
+                "ga_ls5t_ard_3"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "true_colour",
+                "false_colour",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "nbr",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "fmask"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "level4",
+                "level3"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover_descriptors",
+            "product": [
+                "ga_ls_landcover_class_cyear_2"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "canopyco",
+                "lifeform",
+                "watersea",
+                "waterper",
+                "baregrad"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover_c3",
+            "product": [
+                "ga_ls_landcover_class_cyear_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "level4",
+                "level3"
+            ]
+        },
+        {
+            "layer": "ga_ls_landcover_c3_descriptors",
+            "product": [
+                "ga_ls_landcover_class_cyear_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "canopyco",
+                "lifeform",
+                "watersea",
+                "waterper",
+                "baregrad"
+            ]
+        },
+        {
+            "layer": "ga_ls_fc_3",
+            "product": [
+                "ga_ls_fc_3"
+            ],
+            "styles_count": 8,
+            "styles_list": [
+                "fc_rgb",
+                "bare_ground_c3",
+                "green_veg_c3",
+                "non_green_veg_c3",
+                "fc_rgb_unmasked",
+                "bare_ground_c3_unmasked",
+                "green_veg_c3_unmasked",
+                "non_green_veg_c3_unmasked"
+            ]
+        },
+        {
+            "layer": "ga_ls_fc_pc_cyear_3",
+            "product": [
+                "ga_ls_fc_pc_cyear_3"
+            ],
+            "styles_count": 11,
+            "styles_list": [
+                "green_veg_10",
+                "green_veg_50",
+                "green_veg_90",
+                "non_green_veg_10",
+                "non_green_veg_50",
+                "non_green_veg_90",
+                "bare_ground_10",
+                "bare_ground_50",
+                "bare_ground_90",
+                "qa",
+                "fc_rgb"
+            ]
+        },
+        {
+            "layer": "ga_ls_mangrove_cover_cyear_3",
+            "product": [
+                "ga_ls_mangrove_cover_cyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "mangrove"
+            ]
+        },
+        {
+            "layer": "s2_barest_earth",
+            "product": [
+                "s2_barest_earth"
+            ],
+            "styles_count": 13,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "blue",
+                "green",
+                "red",
+                "red_edge_1",
+                "red_edge_2",
+                "red_edge_3",
+                "nir_1",
+                "nir_2",
+                "swir_2",
+                "swir_3"
+            ]
+        },
+        {
+            "layer": "ls8_barest_earth_mosaic",
+            "product": [
+                "ls8_barest_earth_albers"
+            ],
+            "styles_count": 9,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2"
+            ]
+        },
+        {
+            "layer": "landsat_barest_earth",
+            "product": [
+                "landsat_barest_earth"
+            ],
+            "styles_count": 12,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2",
+                "nd_ferric_iron",
+                "nd_soil",
+                "nd_clay_mica"
+            ]
+        },
+        {
+            "layer": "ga_ls_tcw_percentiles_2",
+            "product": [
+                "ga_ls_tcw_percentiles_2"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "tcw_10_percentile",
+                "tcw_50_percentile",
+                "tcw_90_percentile"
+            ]
+        },
+        {
+            "layer": "ga_ls_tc_pc_cyear_3",
+            "product": [
+                "ga_ls_tc_pc_cyear_3"
+            ],
+            "styles_count": 9,
+            "styles_list": [
+                "wet_10_percentile",
+                "wet_50_percentile",
+                "wet_90_percentile",
+                "green_10_percentile",
+                "green_50_percentile",
+                "green_90_percentile",
+                "bright_10_percentile",
+                "bright_50_percentile",
+                "bright_90_percentile"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_3",
+            "product": [
+                "ga_ls_wo_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "observations",
+                "wet"
+            ]
+        },
+        {
+            "layer": "wofs_filtered_summary",
+            "product": [
+                "wofs_filtered_summary"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "WOfS_filtered_frequency",
+                "WOfS_filtered_frequency_blues_transparent"
+            ]
+        },
+        {
+            "layer": "wofs_summary_wet",
+            "product": [
+                "wofs_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "water_observations"
+            ]
+        },
+        {
+            "layer": "wofs_summary_clear",
+            "product": [
+                "wofs_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "clear_observations"
+            ]
+        },
+        {
+            "layer": "Water Observations from Space Statistics",
+            "product": [
+                "wofs_summary"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "WOfS_frequency",
+                "WOfS_frequency_blues_transparent"
+            ]
+        },
+        {
+            "layer": "wofs_filtered_summary_confidence",
+            "product": [
+                "wofs_filtered_summary"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "wofs_confidence"
+            ]
+        },
+        {
+            "layer": "ga_s2_wo_provisional_3",
+            "product": [
+                "ga_s2_wo_provisional_3"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "observations",
+                "wet"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_myear_3",
+            "product": [
+                "ga_ls_wo_fq_myear_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "mysummary_wofs_frequency_3",
+                "mysummary_wofs_frequency_cvf_3",
+                "mysummary_wofs_frequency_blue_3",
+                "mysummary_wofs_wet_3",
+                "mysummary_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_apr_oct_3",
+            "product": [
+                "ga_ls_wo_fq_apr_oct_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "seasonal_wofs_frequency_3",
+                "seasonal_wofs_frequency_cvf_3",
+                "seasonal_wofs_frequency_blue_3",
+                "seasonal_wofs_wet_3",
+                "seasonal_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_nov_mar_3",
+            "product": [
+                "ga_ls_wo_fq_nov_mar_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "seasonal_wofs_frequency_3",
+                "seasonal_wofs_frequency_cvf_3",
+                "seasonal_wofs_frequency_blue_3",
+                "seasonal_wofs_wet_3",
+                "seasonal_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_ls_wo_fq_cyear_3",
+            "product": [
+                "ga_ls_wo_fq_cyear_3"
+            ],
+            "styles_count": 5,
+            "styles_list": [
+                "annual_wofs_frequency_3",
+                "annual_wofs_frequency_cvf_3",
+                "annual_wofs_frequency_blues_transparent_3",
+                "annual_wofs_wet_3",
+                "annual_wofs_clear_3"
+            ]
+        },
+        {
+            "layer": "ga_s2ls_intertidal_cyear_3",
+            "product": [
+                "ga_s2ls_intertidal_cyear_3"
+            ],
+            "styles_count": 11,
+            "styles_list": [
+                "intertidal_elevation_adaptive",                
+                "intertidal_elevation_uncertainty_adaptive",
+                "intertidal_exposure",
+                "intertidal_extents",
+                "intertidal_elevation_micro",
+                "intertidal_elevation_meso",
+                "intertidal_elevation_macro",
+                "intertidal_elevation_uncertainty",
+                "intertidal_corr",
+                "intertidal_freq",
+                "count_clear"
+            ]
+        },
+        {
+            "layer": "ga_s2_tidal_composites_cyear_3",
+            "product": [
+                "ga_s2_tidal_composites_cyear_3"
+            ],
+            "styles_count": 9,
+            "styles_list": [
+                "low_true",
+                "high_true",
+                "low_false",
+                "high_false",
+                "low_mndwi",
+                "high_mndwi",
+                "low_true_log",
+                "high_true_log",
+                "count_clear"
+            ]
+        },
+        {
+            "layer": "ITEM_V2.0.0",
+            "product": [
+                "item_v2"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "relative_layer"
+            ]
+        },
+        {
+            "layer": "ITEM_V2.0.0_Conf",
+            "product": [
+                "item_v2_conf"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "confidence_layer"
+            ]
+        },
+        {
+            "layer": "NIDEM",
+            "product": [
+                "nidem"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "nidem_macro",
+                "nidem_micro"
+            ]
+        },
+        {
+            "layer": "high_tide_composite",
+            "product": [
+                "high_tide_comp_20p"
+            ],
+            "styles_count": 11,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2"
+            ]
+        },
+        {
+            "layer": "low_tide_composite",
+            "product": [
+                "low_tide_comp_20p"
+            ],
+            "styles_count": 11,
+            "styles_list": [
+                "simple_rgb",
+                "infrared_green",
+                "ndvi",
+                "ndwi",
+                "mndwi",
+                "blue",
+                "green",
+                "red",
+                "nir",
+                "swir1",
+                "swir2"
+            ]
+        },
+        {
+            "layer": "ga_s2_ba_provisional_3",
+            "product": [
+                "ga_s2_ba_provisional_3"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "ga_s2_dnbr_provisional_3",
+                "ga_s2_dnbrclasses_provisional_3",
+                "ga_s2_dbsi_provisional_3",
+                "ga_s2_dndvi_provisional_3"
+            ]
+        },
+        {
+            "layer": "alos_displacement",
+            "product": [
+                "cemp_insar_alos_displacement"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "insar_disp_ud",
+                "insar_disp_ew",
+                "insar_disp_ud_std",
+                "insar_disp_ew_std"
+            ]
+        },
+        {
+            "layer": "alos_velocity",
+            "product": [
+                "cemp_insar_alos_velocity"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "insar_velocity_ud",
+                "insar_velocity_ew",
+                "insar_vel_ud_std",
+                "insar_vel_ew_std"
+            ]
+        },
+        {
+            "layer": "envisat_displacement",
+            "product": [
+                "cemp_insar_envisat_displacement"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "insar_disp_ud",
+                "insar_disp_ew",
+                "insar_disp_ud_std",
+                "insar_disp_ew_std"
+            ]
+        },
+        {
+            "layer": "envisat_velocity",
+            "product": [
+                "cemp_insar_envisat_velocity"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "insar_velocity_ud",
+                "insar_velocity_ew",
+                "insar_vel_ud_std",
+                "insar_vel_ew_std"
+            ]
+        },
+        {
+            "layer": "radarsat2_displacement",
+            "product": [
+                "cemp_insar_radarsat2_displacement"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "insar_disp_ud",
+                "insar_disp_ew",
+                "insar_disp_ud_std",
+                "insar_disp_ew_std"
+            ]
+        },
+        {
+            "layer": "radarsat2_velocity",
+            "product": [
+                "cemp_insar_radarsat2_velocity"
+            ],
+            "styles_count": 4,
+            "styles_list": [
+                "insar_velocity_ud",
+                "insar_velocity_ew",
+                "insar_vel_ud_std",
+                "insar_vel_ew_std"
+            ]
+        },
+        {
+            "layer": "aster_false_colour",
+            "product": [
+                "aster_false_colour"
+            ],
+            "styles_count": 2,
+            "styles_list": [
+                "false_colour",
+                "gray"
+            ]
+        },
+        {
+            "layer": "aster_regolith_ratios",
+            "product": [
+                "aster_regolith_ratios"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "simple_rgb"
+            ]
+        },
+        {
+            "layer": "aster_aloh_group_composition",
+            "product": [
+                "aster_aloh_group_composition"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_aloh_group_content",
+            "product": [
+                "aster_aloh_group_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_feoh_group_content",
+            "product": [
+                "aster_feoh_group_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferric_oxide_composition",
+            "product": [
+                "aster_ferric_oxide_composition"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferric_oxide_content",
+            "product": [
+                "aster_ferric_oxide_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferrous_iron_content_in_mgoh",
+            "product": [
+                "aster_ferrous_iron_content_in_mgoh"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_ferrous_iron_index",
+            "product": [
+                "aster_ferrous_iron_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_green_vegetation",
+            "product": [
+                "aster_green_vegetation"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_gypsum_index",
+            "product": [
+                "aster_gypsum_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_kaolin_group_index",
+            "product": [
+                "aster_kaolin_group_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_mgoh_group_composition",
+            "product": [
+                "aster_mgoh_group_composition"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_mgoh_group_content",
+            "product": [
+                "aster_mgoh_group_content"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_opaque_index",
+            "product": [
+                "aster_opaque_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_silica_index",
+            "product": [
+                "aster_silica_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "aster_quartz_index",
+            "product": [
+                "aster_quartz_index"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "ramp"
+            ]
+        },
+        {
+            "layer": "historical_airborne_photography",
+            "product": [
+                "historical_airborne_photography"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "simple_gray"
+            ]
+        },
+        {
+            "layer": "multi_scale_topographic_position",
+            "product": [
+                "multi_scale_topographic_position"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "mstp_rgb"
+            ]
+        },
+        {
+            "layer": "ga_srtm_dem1sv1_0",
+            "product": [
+                "ga_srtm_dem1sv1_0"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "dem_greyscale"
+            ]
+        },
+        {
+            "layer": "weathering_intensity",
+            "product": [
+                "weathering_intensity"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "wii"
+            ]
+        },
+        {
+            "layer": "ga_ls8c_nbart_bc_cyear_3",
+            "product": [ 
+                "ga_ls8c_nbart_bc_cyear_3"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "combined_burncube",
+                "severe_burncube",
+                "moderate_burncube"
+            ]
+        },    
+        {
+            "layer": "ga_ls8c_nbart_bc_fyear_3",
+            "product": [ 
+                "ga_ls8c_nbart_bc_fyear_3"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "combined_burncube",
+                "severe_burncube",
+                "moderate_burncube"
+            ]
+        },
+        {
+            "layer": "ga_s2_ard_bc_cyear_3",
+            "product": [ 
+                "ga_s2_ard_bc_cyear_3"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "combined_burncube",
+                "severe_burncube",
+                "moderate_burncube"
+            ]
+        },
+        {
+            "layer": "ga_s2_ard_bc_fyear_3",
+            "product": [ 
+                "ga_s2_ard_bc_fyear_3"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "combined_burncube",
+                "severe_burncube",
+                "moderate_burncube"
+            ]
+        },
+        {
+            "layer": "ga_s2_fmc_layer",
+            "product": [ 
+                "ga_s2_fmc_3_v1"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "style_fmc"
+            ]
+        },
+        {
+            "layer": "ga_s2m_fmc_mosaic",
+            "product": [ 
+                "ga_s2_fmc_3_v1"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "style_fmc"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_stacking",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "stacking_burnt_area"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_dea_gbdt",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "rf_burnt_area"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_rbr",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "rbr_burnt_area"
+            ]
+        },
+        {
+            "layer": "ga_burn_mapping_bc",
+            "product": [ 
+                "ga_ls8c_nbart_burn_mapping_fyear_3"
+            ],
+            "styles_count": 1,
+            "styles_list": [
+                "bc_burnt_area"
+            ]
+        }
+    ]
+}
