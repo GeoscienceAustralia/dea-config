@@ -42,7 +42,7 @@ This product presents the calculated FMC values for each individual Sentinel-2 (
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
-    "product_names": "ga_s2_fmc_3_v1",
+    "product_name": "ga_s2_fmc_3_v1",
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
@@ -76,7 +76,7 @@ DEA FMC is presented as a weight percentage. This meas the value given represent
 
 This layer displays the most recently processed FMC observation from the Sentinel 2 satelites for every part of Australia.""",
     "multi_product": False,
-    "product_names": "ga_s2_fmc_3_v1",
+    "product_name": "ga_s2_fmc_3_v1",
     "mosaic_date_func": {
         # 6 day rolling window.  5 days should give full continental coverage
         # of Sentinel-2, plus an extra day to allow for patchy coverage on
