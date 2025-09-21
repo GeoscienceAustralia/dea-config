@@ -22,9 +22,13 @@ total products defined: 2
 - `s2b_nrt_granual`
 
 ## s1_gamma0
-product owner: ARD
-yaml owner: CORE TEAM
-total products defined: 1
+product owner: ARD/DEANT
+yaml owner: ARD/DEANT
+total products defined: 6
+- `ga_s1_iw_hh_c0`
+- `ga_s1_iw_hh_hv_c0`
+- `ga_s1_iw_vv_c0`
+- `ga_s1_iw_vv_vh_c0`
 - `s1_gmma0_geotif_scene`
 - `ga_s1_rtc_backscatter_experimental`
 
