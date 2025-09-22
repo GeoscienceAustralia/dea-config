@@ -6,7 +6,7 @@ from ows_refactored.baseline_satellite_data.sentinel1.style_s1_nrb_cfg import (
 )
 from ows_refactored.ows_reslim_cfg import reslim_for_sentinel1
 
-vv_vh_0_layer = {
+iw_vv_vh_0_layer = {
     "name": "ga_s1_nrb_iw_vv_vh_0",
     "title": "DE Normalised Radar Backscatter (Sentinel-1 IW, VV+VH)",
     "abstract": "Experimental Sentinel-1 backscatter data (VV+VH)",

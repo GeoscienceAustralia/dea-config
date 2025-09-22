@@ -190,13 +190,14 @@
             ]
         },
         {
-            "layer": "ga_s1_nrb_iw_vv_vh_c0",
+            "layer": "ga_s1_nrb_iw_vv_vh_0",
             "product": [
-                "ga_s1_nrb_iw_vv_vh_c0"
+                "ga_s1_nrb_iw_vv_vh_0"
             ],
             "styles_count": 1,
             "styles_list": [
-                "vv_gamma0"
+                "VV",
+                "mask"
             ]
         },
         {
