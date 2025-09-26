@@ -1441,49 +1441,7 @@
                             "members": [
                                 {
                                     "type": "wms",
-                                    "name": "DEA FMC Sentinel-2 a",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_s2am_fmc",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "2fmc93"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA FMC Sentinel-2 b",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_s2bm_fmc",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "8jso32"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA FMC Sentinel-2 c",
-                                    "url": "https://ows.dev.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_s2cm_fmc",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "75aj23"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA FMC Sentinel-2 combined",
+                                    "name": "DEA FMC Sentinel-2",
                                     "url": "https://ows.dev.dea.ga.gov.au/",
                                     "opacity": 1,
                                     "layers": "ga_s2_fmc_layer",
