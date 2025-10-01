@@ -77,7 +77,7 @@ This product is a mosaic of the most recent available data from Sentinel-2 satel
 
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
-    "product_name": "ga_s2_fmc_3_v1"
+    "product_name": "ga_s2_fmc_3_v1",
     "mosaic_date_func": {
         # 6 day rolling window.  5 days should give full continental coverage
         # of Sentinel-2, plus an extra day to allow for patchy coverage on
