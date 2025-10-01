@@ -41,8 +41,8 @@ FMC is presented a percentage, by weight, of the non-water plant material. Value
 This product presents the calculated FMC values for each individual Sentinel-2 (A, B and C) satellite image on each individual day since 2015.
 
 For service status information, see https://status.dea.ga.gov.au""",
-    "multi_product": True,
-    "product_names": ["ga_s2am_fmc", "ga_s2bm_fmc", "ga_s2cm_fmc"],
+    "multi_product": False,
+    "product_name": "ga_s2_fmc_3_v1",
     "bands": bands_fmc,
     "resource_limits": reslim_for_sentinel2,
     "dynamic": True,
@@ -55,7 +55,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [{
         "band": "land",
-        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
+        "product": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],
@@ -76,12 +76,8 @@ FMC is presented a percentage, by weight, of the non-water plant material. Value
 This product is a mosaic of the most recent available data from Sentinel-2 satellites (A, B and C) captured over the Australian continent. You can click on the map to view date of observation infomration for each pixel.
 
 For service status information, see https://status.dea.ga.gov.au""",
-    "multi_product": True,
-    "product_names": [
-        "ga_s2am_fmc",
-        "ga_s2bm_fmc",
-        "ga_s2cm_fmc"
-    ],
+    "multi_product": False,
+    "product_name": "ga_s2_fmc_3_v1",
     "mosaic_date_func": {
         # 6 day rolling window.  5 days should give full continental coverage
         # of Sentinel-2, plus an extra day to allow for patchy coverage on
@@ -91,7 +87,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "function": "datacube_ows.ogc_utils.rolling_window_ndays",
         "pass_layer_cfg": True,
         "kwargs": {
-            "ndays": 6,
+            "ndays": 10,
         }
     },
     "bands": bands_fmc,
@@ -106,7 +102,7 @@ For service status information, see https://status.dea.ga.gov.au""",
     },
     "flags": [{
         "band": "land",
-        "products": ["geodata_coast_100k", "geodata_coast_100k", "geodata_coast_100k"],
+        "product": "geodata_coast_100k",
         "ignore_time": True,
         "ignore_info_flags": []
     }],

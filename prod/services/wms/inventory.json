@@ -1047,9 +1047,7 @@
         {
             "layer": "ga_s2_fmc_layer",
             "product": [ 
-                "ga_s2am_fmc",
-                "ga_s2bm_fmc",
-                "ga_s2cm_fmc"
+                "ga_s2_fmc_3_v1"
             ],
             "styles_count": 1,
             "styles_list": [
@@ -1059,9 +1057,7 @@
         {
             "layer": "ga_s2m_fmc_mosaic",
             "product": [ 
-                "ga_s2am_fmc",
-                "ga_s2bm_fmc",
-                "ga_s2cm_fmc"
+                "ga_s2_fmc_3_v1"
             ],
             "styles_count": 1,
             "styles_list": [
