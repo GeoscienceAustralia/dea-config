@@ -64,7 +64,7 @@ FMC is presented as a percentage, by weight, of the non-water plant material. Va
  
 This product presents pixel-level FMC values for each corresponding Sentinel-2 (A, B and C) scene since July 2015.
  
-For service status information, see https://status.dea.ga.gov.au"""
+For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
     "product_name": "ga_s2_fmc_3_v1",
     "bands": bands_fmc,
@@ -99,7 +99,7 @@ FMC is presented as a percentage, by weight, of the non-water plant material. Va
  
 This product is a mosaic of the most recent available data from Sentinel-2 satellites (A, B and C) captured over the Australian continent. You can click on the map to view date of observation information for each pixel.
  
-For service status information, see https://status.dea.ga.gov.au"""
+For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
     "product_name": "ga_s2_fmc_3_v1",
     "mosaic_date_func": {
