@@ -4,10 +4,10 @@ bands_fmc = {
     "fmc": ["fmc"],
 }
 
-style_fmc = {
-    "name": "style_fmc",
-    "title": "Fuel Moisture Content",
-    "abstract": "the percentage of water in vegetation by weight",
+FMC_daily = {
+    "name": "FMC_daily",
+    "title": "DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)",
+    "abstract": "Fuel Moisture Content observations grouped by day of collection.",
     "needed_bands": ["fmc"],
 
     "index_function": {
@@ -29,6 +29,30 @@ style_fmc = {
                 "suffix": "%"}}}
 }
 
+FMC_mosaic = {
+    "name": "FMC_mosaic",
+    "title": "DEA FMC Sentinel-2 Most Recent Observation",
+    "abstract": "displays the most recently processed data for DEA FMC as a continental mosaic",
+    "needed_bands": ["fmc"],
+
+    "index_function": {
+        "function": "datacube_ows.band_utils.single_band",
+        "kwargs": {"band": "fmc"}},
+    "color_ramp": [{"value": 0, "color": "#ca0020"},
+                   {"value": 75, "color": "#FFFFBA"},
+                   {"value": 150, "color": "#0571b0"}],
+    "pq_masks": [{"band": "land",
+                  "invert": True,
+                  "values": [0]}],
+    "legend": {
+        "title": "Fuel Moisture Content (Weight Percent)",
+        "begin": "0",
+        "end": "150",
+        "ticks": ["0", "50", "100", "150"],
+        "tick_labels": {
+            "default": {
+                "suffix": "%"}}}
+}
 
 ga_s2_fmc_layer = {
     "title": "DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)",
@@ -60,13 +84,13 @@ For service status information, see https://status.dea.ga.gov.au""",
         "ignore_info_flags": []
     }],
     "styling": {
-        "default_style": "style_fmc",
-        "styles": [style_fmc]
+        "default_style": "FMC_daily",
+        "styles": [FMC_daily]
     }
 }
 
 ga_s2m_fmc_mosaic_layer = {
-    "title": "DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C) Most Recent Observation",
+    "title": "DEA FMC Sentinel-2 Most Recent Observation",
     "name": "ga_s2m_fmc_mosaic",
     "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C) Most Recent Observation
 
@@ -107,7 +131,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "ignore_info_flags": []
     }],
     "styling": {
-        "default_style": "style_fmc",
-        "styles": [style_fmc]
+        "default_style": "FMC_mosaic",
+        "styles": [FMC_mosaic]
     }
 }
