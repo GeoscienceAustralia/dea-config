@@ -1427,13 +1427,13 @@
                                             "lat": { "maximumFractionDigits": 5},
                                             "lon": { "maximumFractionDigits": 5}
                                         }
+                                    }
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "mrfm98",
                                     "shareKeys": ["Root Group/DEA Fuel Moisture Content/Most Recent Observation"]
-                                    },
-                                },
+                                }
                             ],
                             "shareKeys": ["Root Group/DEA Fuel Moisture Content"]
                         },
