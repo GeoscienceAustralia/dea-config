@@ -58,12 +58,12 @@ ga_s2_fmc_layer = {
     "title": "DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)",
     "name": "ga_s2_fmc_layer",
     "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)
- 
+
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 FMC is presented as a percentage, by weight, of the non-water plant material. Values range from 0 – 300%, where 300% would mean there is three times as much water (by weight) than dry plant material.
- 
+
 This product presents pixel-level FMC values for each corresponding Sentinel-2 (A, B and C) scene since July 2015.
- 
+
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
     "product_name": "ga_s2_fmc_3_v1",
@@ -93,12 +93,12 @@ ga_s2m_fmc_mosaic_layer = {
     "title": "DEA FMC Sentinel-2 Most Recent Observation",
     "name": "ga_s2m_fmc_mosaic",
     "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C) Most Recent Observation
- 
+
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 FMC is presented as a percentage, by weight, of the non-water plant material. Values range from 0 – 300%, where 300% would mean there is three times as much water (by weight) than dry plant material.
- 
+
 This product is a mosaic of the most recent available data from Sentinel-2 satellites (A, B and C) captured over the Australian continent. You can click on the map to view date of observation information for each pixel.
- 
+
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
     "product_name": "ga_s2_fmc_3_v1",
