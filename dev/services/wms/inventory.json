@@ -1,7 +1,7 @@
 {
 
 
-    "total_layers_count": 86,
+    "total_layers_count": 83,
 
     "layers": [
         {
@@ -190,13 +190,14 @@
             ]
         },
         {
-            "layer": "ga_s1_nrb_iw_vv_vh_c0",
+            "layer": "ga_s1_nrb_iw_vv_vh_0",
             "product": [
-                "ga_s1_nrb_iw_vv_vh_c0"
+                "ga_s1_nrb_iw_vv_vh_0"
             ],
-            "styles_count": 1,
+            "styles_count": 2,
             "styles_list": [
-                "vv_gamma0"
+                "VV",
+                "mask"
             ]
         },
         {
@@ -1151,62 +1152,23 @@
             ]
         },
         {
-            "layer": "ga_s2am_fmc",
-            "product": [ 
-                "ga_s2am_fmc"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "style_fmc",
-                "style_fmc_old"
-            ]
-        },
-        {
-            "layer": "ga_s2bm_fmc",
-            "product": [ 
-                "ga_s2bm_fmc"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "style_fmc",
-                "style_fmc_old"
-            ]
-        },
-        {
-            "layer": "ga_s2cm_fmc",
-            "product": [ 
-                "ga_s2cm_fmc"
-            ],
-            "styles_count": 2,
-            "styles_list": [
-                "style_fmc",
-                "style_fmc_old"
-            ]
-        },
-        {
             "layer": "ga_s2_fmc_layer",
             "product": [ 
-                "ga_s2am_fmc",
-                "ga_s2bm_fmc",
-                "ga_s2cm_fmc"
+                "ga_s2_fmc_3_v1"
             ],
-            "styles_count": 2,
+            "styles_count": 1,
             "styles_list": [
-                "style_fmc",
-                "style_fmc_old"
+                "style_fmc"
             ]
         },
         {
             "layer": "ga_s2m_fmc_mosaic",
             "product": [ 
-                "ga_s2am_fmc",
-                "ga_s2bm_fmc",
-                "ga_s2cm_fmc"
+                "ga_s2_fmc_3_v1"
             ],
-            "styles_count": 2,
+            "styles_count": 1,
             "styles_list": [
-                "style_fmc",
-                "style_fmc_old"
+                "style_fmc"
             ]
         },
         {

@@ -22,7 +22,7 @@ common_wcs_limits = {
     "max_image_size": 800_000_000,
     # Maximum number of datasets that can be accessed in a
     # single query
-    "max_datasets": 24,   # defaults to no limit
+    "max_datasets": 24,  # defaults to no limit
 }
 
 reslim_standard = {
@@ -36,6 +36,16 @@ reslim_standard = {
 }
 
 reslim_for_sentinel2 = {
+    "wms": {
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
+        "min_zoom_level": 5.9,
+        "dataset_cache_rules": dataset_cache_rules,
+        "max_datasets": 24,
+    },
+    "wcs": common_wcs_limits,
+}
+
+reslim_for_sentinel1 = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_level": 5.9,
