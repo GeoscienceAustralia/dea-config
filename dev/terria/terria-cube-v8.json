@@ -1475,11 +1475,12 @@
                                             "lat": { "maximumFractionDigits": 5},
                                             "lon": { "maximumFractionDigits": 5}
                                         }
+                                    },
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "mrfm98"
-                                },
+                                }
                             ]
                         }
                     ]
