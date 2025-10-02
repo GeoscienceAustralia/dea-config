@@ -1449,7 +1449,12 @@
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:480px'><h3 style='font-weight:normal'>DEA Fuel Moisture Content</h3> remotely sensed fuel moisture for selected location on {{#terria.formatDateTime}}{format: \\\"dd MMMM yyyy\\\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/> Fuel moisture content: {{data.0.bands.fmc}} %. <br/><br/>coordinates of selected pixel: <br/><br/> Lon: {{lon}}<br/><br/>lat: {{lat}}<br/><br/></div>"},
+                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data.0.time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data.0.bands.fmc}}</td></tr><tr><td><b>Latitude</b></td><td>{{lat}}</td></tr><tr><td><b>Longitude</b></td><td>{{lon}}</td></tr></table>",
+                                        "formats": {
+                                            "lat": { "maximumFractionDigits": 5},
+                                            "lon": { "maximumFractionDigits": 5}
+                                        }
+                                    },
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
