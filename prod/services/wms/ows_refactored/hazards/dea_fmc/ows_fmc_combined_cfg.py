@@ -55,9 +55,9 @@ FMC_mosaic = {
 }
 
 ga_s2_fmc_layer = {
-    "title": "DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)",
+    "title": "DEA FMC Sentinel-2 (A, B & C)",
     "name": "ga_s2_fmc_layer",
-    "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C)
+    "abstract": """DEA FMC Sentinel-2 (A, B & C)
  
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 
@@ -95,7 +95,7 @@ For service status information, see https://status.dea.ga.gov.au""",
 ga_s2m_fmc_mosaic_layer = {
     "title": "DEA FMC Sentinel-2 Most Recent Observation",
     "name": "ga_s2m_fmc_mosaic",
-    "abstract": """DEA Fuel Moisture Content (Sentinel-2A, 2B & 2C) Most Recent Observation
+    "abstract": """DEA FMC Sentinel-2 (A, B & C) Most Recent Observation
  
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 
