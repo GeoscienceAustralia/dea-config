@@ -58,15 +58,15 @@ ga_s2_fmc_layer = {
     "title": "DEA FMC Sentinel-2 (A, B & C)",
     "name": "ga_s2_fmc_layer",
     "abstract": """DEA FMC Sentinel-2 (A, B & C)
- 
+
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 
 Values range from 0–300%, representing, by weight percent, the amount of water in leaves compared to dry plant material. A value of 0% would indicate that there is no water content. A value of 100% indicates there is an equal weight of water and dry plant material. A value of 300% would mean there is approximately three times as much water as dry plant material. Values in the range of 0–150% are particularly relevant to fire behaviour analysis, as this range is strongly associated with changes in vegetation flammability and the likelihood of ignition.
- 
+
 This product presents pixel-level FMC values for each corresponding Sentinel-2 (A, B and C) scene since July 2015.
- 
+
 For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-fuel-moisture-content/
- 
+
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
     "product_name": "ga_s2_fmc_3_v1",
@@ -96,15 +96,15 @@ ga_s2m_fmc_mosaic_layer = {
     "title": "DEA FMC Sentinel-2 Most Recent Observation",
     "name": "ga_s2m_fmc_mosaic",
     "abstract": """DEA FMC Sentinel-2 (A, B & C) Most Recent Observation
- 
+
 This product calculates the Fuel Moisture Content (FMC) of vegetation which is the percentage of water mass relative to dry mass in living vegetation.
 
 Values range from 0–300%, representing, by weight percent, the amount of water in leaves compared to dry plant material. A value of 0% would indicate that there is no water content. A value of 100% indicates there is an equal weight of water and dry plant material. A value of 300% would mean there is approximately three times as much water as dry plant material. Values in the range of 0–150% are particularly relevant to fire behaviour analysis, as this range is strongly associated with changes in vegetation flammability and the likelihood of ignition.
- 
+
 This product is a mosaic of the most recent available data from Sentinel-2 satellites (A, B and C) captured over the Australian continent. You can click on the map to view date of observation information for each pixel.
- 
+
 For more information, see https://knowledge.dea.ga.gov.au/data/product/dea-fuel-moisture-content/
- 
+
 For service status information, see https://status.dea.ga.gov.au""",
     "multi_product": False,
     "product_name": "ga_s2_fmc_3_v1",
