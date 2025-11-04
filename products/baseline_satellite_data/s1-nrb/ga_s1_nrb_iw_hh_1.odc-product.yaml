@@ -25,6 +25,7 @@ measurements:
       mask:
         bits: [0,1,2,3,4,5,6,7]
         values:
+          0: valid
           1: shadow
           2: layover
           3: shadow and layover
