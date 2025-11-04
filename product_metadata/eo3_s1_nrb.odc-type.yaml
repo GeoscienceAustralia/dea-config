@@ -102,6 +102,13 @@ dataset:
       indexed: false
       type: string
 
+    # Polarisations as a string
+    polarization_mode:
+      description: Polarization mode e.g. VV or HH+HV.
+      offset: [properties, 'sarard:polarization_mode']
+      indexed: false
+      type: string
+
     # Near range incidence angle
     near_range_incidence_angle:
       description: The near range incidence angle.
