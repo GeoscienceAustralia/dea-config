@@ -11,24 +11,26 @@ metadata:
     odc:product_family: sar_ard
 
 measurements:
-  - name: HH_gamma0
+  - name: hh_gamma0
     aliases:
-      - hh_gamma0
+      - hh
     dtype: float32
     nodata: .nan
     units: 'linear power'
-  - name: HV_gamma0
+  - name: hv_gamma0
     aliases:
-      - hv_gamma0
+      - hv
     dtype: float32
     nodata: .nan
     units: 'linear power'
-  - name: mask
+  - name: oa_layover_shadow_mask
+    aliases:
+      - mask
     dtype: uint8
     nodata: 255
     units: 'classification'
     flags_definition:
-      mask:
+      oa_layover_shadow_mask:
         bits: [0,1,2,3,4,5,6,7]
         values:
           0: valid
@@ -37,32 +39,41 @@ measurements:
           3: shadow and layover
           255: invalid sample
         description: shadow layover data mask
-  - name: number_of_looks
+  - name: oa_number_of_looks
     aliases:
       - n_looks
       - nlooks
+      - number_of_looks
     dtype: float32
     nodata: .nan
     units: 'count'
-  - name: gamma0_to_beta0_ratio
+  - name: oa_gamma0_to_beta0_ratio
+    aliases:
+      - gamma0_to_beta0_ratio
+      - gamma0_to_beta0
     dtype: float32
     nodata: .nan
     units: 'ratio'
-  - name: gamma0_to_sigma0_ratio
+  - name: oa_gamma0_to_sigma0_ratio
+    aliases:
+      - gamma0_to_sigma0_ratio
+      - gamma0_to_sigma0
     dtype: float32
     nodata: .nan
     units: 'ratio'
-  - name: local_incidence_angle
+  - name: oa_local_incidence_angle
     aliases:
       - lia
       - LIA
+      - local_incidence_angle
     dtype: float32
     nodata: .nan
     units: 'degrees' 
-  - name: incidence_angle
+  - name: oa_incidence_angle
     aliases:
       - ia
       - IA
+      - incidence_angle
     dtype: float32
     nodata: .nan
     units: 'degrees'
