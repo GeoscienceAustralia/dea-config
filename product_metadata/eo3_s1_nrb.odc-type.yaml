@@ -33,7 +33,7 @@ dataset:
     scene_id: # Scene name
       description: The ESA scene ID (e.g. S1A_EW_GRDM_1SDH_20211219T152835_20211219T152939_041079_04E161_47D4).
       offset: [properties, 'sarard:scene_id']
-      indexed: false
+      indexed: true
       type: string
 
     beam_id: # Beam id (subswath)
@@ -141,7 +141,7 @@ dataset:
     orbit_state:
       description: The orbit state (one of ascending or descending).
       offset: [properties, 'sat:orbit_state']
-      indexed: false
+      indexed: true
       type: string
 
     # Absolute orbit
@@ -155,7 +155,7 @@ dataset:
     relative_orbit:
       description: The orbit number in the satellite's repeat cycle.
       offset: [properties, 'sat:relative_orbit']
-      indexed: false
+      indexed: true
       type: integer
 
     # Orbit cycle
