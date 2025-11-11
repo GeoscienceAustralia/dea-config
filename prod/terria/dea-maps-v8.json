@@ -504,7 +504,7 @@
                                     "opacity": 1,
                                     "layers": "ga_ls_landcover_c3_descriptors",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls_landcover_c3_descriptors_c3",
+                                    "linkedWcsCoverage": "ga_ls_landcover_c3_descriptors",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
