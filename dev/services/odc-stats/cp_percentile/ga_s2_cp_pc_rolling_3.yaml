@@ -77,6 +77,7 @@ output_location: >-
 # save-tasks options
 input_products: ga_s2am_ard_3-ga_s2bm_ard_3-ga_s2cm_ard_3
 frequency: rolling-3years
+temporal_range: 2020--P3Y
 grid: au_extended_s2_10
 dataset_filter: >-
   {"dataset_maturity": "final"}
