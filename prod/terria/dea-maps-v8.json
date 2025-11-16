@@ -504,7 +504,7 @@
                                     "opacity": 1,
                                     "layers": "ga_ls_landcover_c3_descriptors",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_ls_landcover_c3_descriptors_c3",
+                                    "linkedWcsCoverage": "ga_ls_landcover_c3_descriptors",
                                     "chartColor": "white",
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
@@ -1386,6 +1386,58 @@
                     "name": "Hazards",
                     "members": [
                         {
+                            "id": "fmc927",
+                            "type": "group",
+                            "name": "DEA Fuel Moisture Content",
+                            "members": [
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 (A, B & C)",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2_fmc_layer",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data.0.time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data.0.bands.fmc}}</td></tr><tr><td><b>Latitude</b></td><td>{{lat}}</td></tr><tr><td><b>Longitude</b></td><td>{{lon}}</td></tr></table>",
+                                        "formats": {
+                                            "lat": { "maximumFractionDigits": 5},
+                                            "lon": { "maximumFractionDigits": 5}
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "2cbf93",
+                                    "shareKeys": ["Root Group/DEA Fuel Moisture Content/DEA FMC"]
+                                },
+                                {
+                                    "type": "wms",
+                                    "name": "DEA FMC Sentinel-2 Most Recent Observation",
+                                    "url": "https://ows.dea.ga.gov.au/",
+                                    "opacity": 1,
+                                    "layers": "ga_s2m_fmc_mosaic",
+                                    "timeFilterPropertyName": "data_available_for_dates",
+                                    "leafletUpdateInterval": 750,
+                                    "chartType": "momentPoints",
+                                    "featureInfoTemplate": {
+                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data.0.time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data.0.bands.fmc}}</td></tr><tr><td><b>Latitude</b></td><td>{{lat}}</td></tr><tr><td><b>Longitude</b></td><td>{{lon}}</td></tr></table>",
+                                        "formats": {
+                                            "lat": { "maximumFractionDigits": 5},
+                                            "lon": { "maximumFractionDigits": 5}
+                                        }
+                                    },
+                                    "tileErrorHandlingOptions": {
+                                        "ignoreUnknownTileErrors": true
+                                    },
+                                    "id": "mrfm98",
+                                    "shareKeys": ["Root Group/DEA Fuel Moisture Content/Most Recent Observation"]
+                                }
+                            ],
+                            "shareKeys": ["Root Group/DEA Fuel Moisture Content"]
+                        },
+                        {
                             "id": "BXljDt",
                             "type": "group",
                             "name": "DEA Hotspots",
@@ -1422,56 +1474,6 @@
                                 }
                             ],
                             "shareKeys": ["Root Group/Hotspots"]
-                        },
-                        {
-                            "id": "fmc927",
-                            "type": "group",
-                            "name": "DEA Fuel Moisture Content (FMC)",
-                            "members": [
-                                {
-                                    "type": "wms",
-                                    "name": "DEA FMC Sentinel-2 (A, B & C)",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_s2_fmc_layer",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data.0.time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data.0.bands.fmc}}</td></tr><tr><td><b>Latitude</b></td><td>{{lat}}</td></tr><tr><td><b>Longitude</b></td><td>{{lon}}</td></tr></table>",
-                                        "formats": {
-                                            "lat": { "maximumFractionDigits": 5},
-                                            "lon": { "maximumFractionDigits": 5}
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "2cbf93"
-                                },
-                                {
-                                    "type": "wms",
-                                    "name": "DEA FMC Sentinel-2 Most Recent Observation",
-                                    "url": "https://ows.dea.ga.gov.au/",
-                                    "opacity": 1,
-                                    "layers": "ga_s2m_fmc_mosaic",
-                                    "timeFilterPropertyName": "data_available_for_dates",
-                                    "leafletUpdateInterval": 750,
-                                    "chartType": "momentPoints",
-                                    "featureInfoTemplate": {
-                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data.0.time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data.0.bands.fmc}}</td></tr><tr><td><b>Latitude</b></td><td>{{lat}}</td></tr><tr><td><b>Longitude</b></td><td>{{lon}}</td></tr></table>",
-                                        "formats": {
-                                            "lat": { "maximumFractionDigits": 5},
-                                            "lon": { "maximumFractionDigits": 5}
-                                        }
-                                    },
-                                    "tileErrorHandlingOptions": {
-                                        "ignoreUnknownTileErrors": true
-                                    },
-                                    "id": "mrfm98"
-                                },
-                            ],
-                    "shareKeys": ["Root Group/Hotspots"]
                         },
                     ]
                 },
