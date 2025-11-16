@@ -25,10 +25,10 @@ total products defined: 2
 product owner: ARD/DEANT
 yaml owner: ARD/DEANT
 total products defined: 4
-- `ga_s1_nrb_iw_hh_c0`
-- `ga_s1_nrb_iw_hh_hv_c0`
-- `ga_s1_nrb_iw_vv_c0`
-- `ga_s1_nrb_iw_vv_vh_c0`
+- `ga_s1_nrb_iw_hh_c1`
+- `ga_s1_nrb_iw_hh_hv_c1`
+- `ga_s1_nrb_iw_vv_c1`
+- `ga_s1_nrb_iw_vv_vh_c1`
 
 ## s1_gamma0
 product owner: ARD/DEANT
