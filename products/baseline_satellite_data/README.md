@@ -24,22 +24,21 @@ total products defined: 2
 ## s1-nrb
 product owner: ARD/DEANT
 yaml owner: ARD/DEANT
-total products defined: 4
-- `ga_s1_nrb_iw_hh_c1`
-- `ga_s1_nrb_iw_hh_hv_c1`
-- `ga_s1_nrb_iw_vv_c1`
-- `ga_s1_nrb_iw_vv_vh_c1`
+total products defined: 8
+- `ga_s1_nrb_iw_hh_0`
+- `ga_s1_nrb_iw_hh_hv_0`
+- `ga_s1_nrb_iw_vv_0`
+- `ga_s1_nrb_iw_vv_vh_0`
+- `ga_s1_nrb_iw_hh_1`
+- `ga_s1_nrb_iw_hh_hv_1`
+- `ga_s1_nrb_iw_vv_1`
+- `ga_s1_nrb_iw_vv_vh_1`
 
 ## s1_gamma0
-product owner: ARD/DEANT
-yaml owner: ARD/DEANT
-total products defined: 6
-- `ga_s1_iw_hh_c0`
-- `ga_s1_iw_hh_hv_c0`
-- `ga_s1_iw_vv_c0`
-- `ga_s1_iw_vv_vh_c0`
+product owner: ARD
+yaml owner: ARD
+total products defined: 1
 - `s1_gmma0_geotif_scene`
-- `ga_s1_rtc_backscatter_experimental`
 
 ## srtm
 product owner: ard
