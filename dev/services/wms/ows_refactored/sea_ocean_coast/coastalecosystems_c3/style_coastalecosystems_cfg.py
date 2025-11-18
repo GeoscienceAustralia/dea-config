@@ -16,7 +16,7 @@ legend_coastalecosystems_percentage_by_20 = {
 style_coastalecosystems_mangrove_prob = {
     "name": "coastalecosystems_mangrove_prob",
     "title": "Mangrove Probability",
-    "abstract": "Coastal Ecosystem Map Mangrove Probability as a percentage",
+    "abstract": "Coastal Ecosystems Mangrove Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -34,7 +34,7 @@ style_coastalecosystems_mangrove_prob = {
 style_coastalecosystems_saltmarsh_prob = {
     "name": "coastalecosystems_saltmarsh_prob",
     "title": "Saltmarsh Probability",
-    "abstract": "Coastal Ecosystem Map Saltmarsh Probability as a percentage",
+    "abstract": "Coastal Ecosystems Saltmarsh Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -52,7 +52,7 @@ style_coastalecosystems_saltmarsh_prob = {
 style_coastalecosystems_seagrass_prob = {
     "name": "coastalecosystems_seagrass_prob",
     "title": "Seagrass Probability",
-    "abstract": "Coastal Ecosystem Map Seagrass Probability as a percentage",
+    "abstract": "Coastal Ecosystems Seagrass Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -63,14 +63,14 @@ style_coastalecosystems_seagrass_prob = {
     "include_in_feature_info": False,
     "needed_bands": ["seagrass_prob"],
     "mpl_ramp": "inferno",
-    "range": [20.0, 100],
+    "range": [0.0, 100],
     "legend": legend_coastalecosystems_percentage_by_20,
 }
 
 style_coastalecosystems_saltflat_prob = {
     "name": "coastalecosystems_saltflat_prob",
     "title": "Saltflat Probability",
-    "abstract": "Coastal Ecosystem Map Saltflat Probability as a percentage",
+    "abstract": "Coastal Ecosystems Saltflat Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -88,7 +88,7 @@ style_coastalecosystems_saltflat_prob = {
 style_coastalecosystems_classification = {
     "name": "coastalecosystems_classification",
     "title": "Classification",
-    "abstract": "Coastal Ecosystem Map classification",
+    "abstract": "Coastal Ecosystems classification",
     "needed_bands": ["classification"],
     "value_map": {
         "classification": [
@@ -123,7 +123,7 @@ style_coastalecosystems_classification = {
 style_coastalecosystems_count_clear = {
     "name": "coastalecosystems_count_clear",
     "title": "Clear observation count",
-    "abstract": "Count of satellite observations included in DEA Coastal Ecosystem Map",
+    "abstract": "Count of satellite observations included in DEA Coastal Ecosystems",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
