@@ -1,11 +1,10 @@
 legend_coastalecosystems_percentage_by_20 = {
-    "begin": "0",
+    "begin": "20",
     "end": "100",
     "decimal_places": 1,
     "ticks_every": "20",
     "units": "%",
     "tick_labels": {
-        "0": {"label": "0"},
         "20": {"label": "20"},
         "40": {"label": "40"},
         "60": {"label": "60"},
@@ -28,7 +27,7 @@ style_coastalecosystems_mangrove_prob = {
     "include_in_feature_info": False,
     "needed_bands": ["mangrove_prob"],
     "mpl_ramp": "inferno",
-    "range": [0.0, 100],
+    "range": [20.0, 100],
     "legend": legend_coastalecosystems_percentage_by_20,
 }
 
@@ -46,7 +45,7 @@ style_coastalecosystems_saltmarsh_prob = {
     "include_in_feature_info": False,
     "needed_bands": ["saltmarsh_prob"],
     "mpl_ramp": "inferno",
-    "range": [0.0, 100],
+    "range": [20.0, 100],
     "legend": legend_coastalecosystems_percentage_by_20,
 }
 
@@ -64,7 +63,7 @@ style_coastalecosystems_seagrass_prob = {
     "include_in_feature_info": False,
     "needed_bands": ["seagrass_prob"],
     "mpl_ramp": "inferno",
-    "range": [0.0, 100],
+    "range": [20.0, 100],
     "legend": legend_coastalecosystems_percentage_by_20,
 }
 
@@ -82,7 +81,7 @@ style_coastalecosystems_saltflat_prob = {
     "include_in_feature_info": False,
     "needed_bands": ["saltflat_prob"],
     "mpl_ramp": "inferno",
-    "range": [0.0, 100],
+    "range": [20.0, 100],
     "legend": legend_coastalecosystems_percentage_by_20,
 }
 
