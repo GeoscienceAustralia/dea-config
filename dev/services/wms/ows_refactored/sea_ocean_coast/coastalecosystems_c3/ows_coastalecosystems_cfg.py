@@ -1,6 +1,6 @@
 from ows_refactored.ows_reslim_cfg import reslim_standard
-from ows_refactored.sea_ocean_coast.coastalecosystems_c3.style_coastalecosystems_cfg import styles_coastalecosystems_list
-
+from ows_refactored.sea_ocean_coast.coastalecosystems_c3.style_coastalecosystems_cfg import \
+    styles_intertidal_list
 bands_coastalecosystems = {
     "classification": [],
     "mangrove_prob": [],
