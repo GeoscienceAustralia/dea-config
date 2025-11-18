@@ -17,7 +17,7 @@ legend_coastalecosystems_percentage_by_20 = {
 style_coastalecosystems_mangrove_prob = {
     "name": "coastalecosystems_mangrove_prob",
     "title": "Mangrove Probability",
-    "abstract": "Coastal Ecosystem Mangrove Probability as a percentage",
+    "abstract": "Coastal Ecosystem Map Mangrove Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -35,7 +35,7 @@ style_coastalecosystems_mangrove_prob = {
 style_coastalecosystems_saltmarsh_prob = {
     "name": "coastalecosystems_saltmarsh_prob",
     "title": "Saltmarsh Probability",
-    "abstract": "Coastal Ecosystem Saltmarsh Probability as a percentage",
+    "abstract": "Coastal Ecosystem Map Saltmarsh Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -53,7 +53,7 @@ style_coastalecosystems_saltmarsh_prob = {
 style_coastalecosystems_seagrass_prob = {
     "name": "coastalecosystems_seagrass_prob",
     "title": "Seagrass Probability",
-    "abstract": "Coastal Ecosystem Seagrass Probability as a percentage",
+    "abstract": "Coastal Ecosystem Map Seagrass Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -71,7 +71,7 @@ style_coastalecosystems_seagrass_prob = {
 style_coastalecosystems_saltflat_prob = {
     "name": "coastalecosystems_saltflat_prob",
     "title": "Saltflat Probability",
-    "abstract": "Coastal Ecosystem Saltflat Probability as a percentage",
+    "abstract": "Coastal Ecosystem Map Saltflat Probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -89,7 +89,7 @@ style_coastalecosystems_saltflat_prob = {
 style_coastalecosystems_classification = {
     "name": "coastalecosystems_classification",
     "title": "Classification",
-    "abstract": "Coastal Ecosystems classification",
+    "abstract": "Coastal Ecosystem Map classification",
     "needed_bands": ["classification"],
     "value_map": {
         "classification": [
