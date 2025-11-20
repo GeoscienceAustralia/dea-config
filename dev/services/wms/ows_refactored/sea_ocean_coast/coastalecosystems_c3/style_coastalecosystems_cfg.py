@@ -28,6 +28,7 @@ legend_coastalecosystems_percentage_by_20_0to100 = {
         "100": {"label": "100"},
     },
 }
+
 style_coastalecosystems_mangrove_prob = {
     "name": "coastalecosystems_mangrove_prob",
     "title": "Mangrove Probability",
