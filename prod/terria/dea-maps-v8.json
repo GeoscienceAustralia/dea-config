@@ -1422,7 +1422,7 @@
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data.-1.time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data.-1.bands.fmc}}</td></tr><tr><td><b>Latitude</b></td><td>{{lat}}</td></tr><tr><td><b>Longitude</b></td><td>{{lon}}</td></tr></table>",
+                                        "template": "<table><tr><td><b>Date of observation</b></td><td>{{data[-1].time}}</td></tr><tr><td><b>Fuel Moisture Content</b></td><td>{{data[-1].bands.fmc}}</td></tr><tr><td><b>Latitude</b></td><td>{{lat}}</td></tr><tr><td><b>Longitude</b></td><td>{{lon}}</td></tr></table>",
                                         "formats": {
                                             "lat": { "maximumFractionDigits": 5},
                                             "lon": { "maximumFractionDigits": 5}
