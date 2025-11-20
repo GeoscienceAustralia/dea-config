@@ -117,7 +117,8 @@ For service status information, see https://status.dea.ga.gov.au""",
         "function": "datacube_ows.ogc_utils.rolling_window_ndays",
         "pass_layer_cfg": True,
         "kwargs": {
-            "ndays": 10,
+            "ndays": 6,
+            "default_time": "latest",
         }
     },
     "bands": bands_fmc,
