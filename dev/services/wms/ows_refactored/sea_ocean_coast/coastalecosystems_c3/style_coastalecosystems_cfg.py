@@ -13,6 +13,22 @@ legend_coastalecosystems_percentage_by_20 = {
     },
 }
 
+legend_coastalecosystems_percentage_by_20_0to100 = {
+    "begin": "0",
+    "end": "100",
+    "decimal_places": 1,
+    "ticks_every": "20",
+    "units": "%",
+    "tick_labels": {
+        "0": {"label": "0"},
+        "20": {"label": "20"},
+        "40": {"label": "40"},
+        "60": {"label": "60"},
+        "80": {"label": "80"},
+        "100": {"label": "100"},
+    },
+}
+
 style_coastalecosystems_mangrove_prob = {
     "name": "coastalecosystems_mangrove_prob",
     "title": "Mangrove Probability",
@@ -64,7 +80,7 @@ style_coastalecosystems_seagrass_prob = {
     "needed_bands": ["seagrass_prob"],
     "mpl_ramp": "inferno",
     "range": [0.0, 100],
-    "legend": legend_coastalecosystems_percentage_by_20,
+    "legend": legend_coastalecosystems_percentage_by_20_0to100,
 }
 
 style_coastalecosystems_saltflat_prob = {
