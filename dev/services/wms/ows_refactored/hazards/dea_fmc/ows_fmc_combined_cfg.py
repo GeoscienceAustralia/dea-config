@@ -118,6 +118,7 @@ For service status information, see https://status.dea.ga.gov.au""",
         "pass_layer_cfg": True,
         "kwargs": {
             "ndays": 10,
+            "default_time": "latest",
         }
     },
     "bands": bands_fmc,
