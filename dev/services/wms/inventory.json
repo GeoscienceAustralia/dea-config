@@ -1,7 +1,7 @@
 {
 
 
-    "total_layers_count": 83,
+    "total_layers_count": 84,
 
     "layers": [
         {
@@ -1158,7 +1158,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_fmc"
+                "FMC_daily"
             ]
         },
         {
@@ -1168,7 +1168,7 @@
             ],
             "styles_count": 1,
             "styles_list": [
-                "style_fmc"
+                "FMC_mosaic"
             ]
         },
         {
@@ -1209,6 +1209,21 @@
             "styles_count": 1,
             "styles_list": [
                 "bc_burnt_area"
+            ]
+        },
+        {
+            "layer": "ga_s2_coastalecosystems_cyear_3_v1",
+            "product": [
+                "ga_s2_coastalecosystems_cyear_3_v1"
+            ],
+            "styles_count": 6,
+            "styles_list": [
+                "coastalecosystems_classification",                
+                "coastalecosystems_mangrove_prob",               
+                "coastalecosystems_saltmarsh_prob",               
+                "coastalecosystems_seagrass_prob",               
+                "coastalecosystems_saltflat_prob",
+                "coastalecosystems_count_clear"
             ]
         }
     ]
