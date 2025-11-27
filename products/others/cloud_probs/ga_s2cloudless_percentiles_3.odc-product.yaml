@@ -1,4 +1,4 @@
-name: ga_s2cloudless_percentiles_3
+name: ga_s2cloudless_percentiles_3_v1
 description: Geoscience Australia S2Cloudless Percentiles, Calendar Year Collection 3
 license: CC-BY-4.0
 metadata_type: eo3
@@ -7,7 +7,7 @@ metadata:
   properties:
     odc:file_format: GeoTIFF
   product:
-    name: ga_s2cloudless_percentiles_3
+    name: ga_s2cloudless_percentiles_3_v1
 
 measurements:
   - name: oa_s2cloudless_prob_pc_5
