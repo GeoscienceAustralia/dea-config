@@ -6,8 +6,8 @@ plugin_config:
   mask_band: "oa_s2cloudless_mask"
   nodata_classes: ["nodata"]
 product:
-  name: ga_s2cloudless_percentiles_3
-  short_name: ga_s2cloudless_percentiles_3 
+  name: ga_s2cloudless_percentiles_3_v1
+  short_name: ga_s2cloudless_percentiles_3_v1 
   version: 0.0.1
   product_family: percentiles
   region_code_format: x{x:03d}y{y:03d}
@@ -72,7 +72,7 @@ cog_opts:
 apply_eodatasets3: True
 
 output_location: >-
-  s3://dea-public-data-dev/test/ga_s2cloudless_percentiles_3/0-0-1
+  s3://dea-public-data-dev/test/ga_s2cloudless_percentiles_3_v1/0-0-1
 
 # save-tasks options
 input_products: ga_s2am_ard_3-ga_s2bm_ard_3-ga_s2cm_ard_3
