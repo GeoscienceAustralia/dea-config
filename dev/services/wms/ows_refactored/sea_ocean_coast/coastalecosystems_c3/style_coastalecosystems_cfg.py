@@ -112,25 +112,25 @@ style_coastalecosystems_classification = {
                 "title": "Intertidal",
                 "abstract": "",
                 "values": [2],
-                "color": "#823f4b",
+                "color": "#94410d",
             },
             {
                 "title": "Mangroves",
                 "abstract": "",
                 "values": [3],
-                "color": "#268f52",
+                "color": "#29df3a",
             },
             {
                 "title": "Saltmarsh",
                 "abstract": "",
                 "values": [4],
-                "color": "#74bcfb",
+                "color": "#dbe436",
             },
             {
                 "title": "Intertidal Seagrass",
                 "abstract": "",
                 "values": [5],
-                "color": "#3d4ca5",
+                "color": "#0d834e",
             },
         ]
     }
