@@ -1176,10 +1176,10 @@
                                 {
                                     "type": "wms",
                                     "name": "DEA Coastal Ecosystems (Sentinel-2)",
-                                    "url": "https://ows.dea.ga.gov.au/wms",
+                                    "url": "https://ows.dev.dea.ga.gov.au/wms",
                                     "opacity": 1,
                                     "layers": "ga_s2_coastalecosystems_cyear_3_v1",
-                                    "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                                    "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2_coastalecosystems_cyear_3_v1",
                                     "currentTime": "2022",
                                     "dateFormat": "'Year: 'yyyy",
