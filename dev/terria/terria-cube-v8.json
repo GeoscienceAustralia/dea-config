@@ -1126,16 +1126,16 @@
                                     "name": "DEA Coastal Ecosystems (Sentinel-2)",
                                     "url": "https://ows.dev.dea.ga.gov.au/wms",
                                     "opacity": 1,
-                                    "layers": "ga_s2_coastalecosystems_cyear_3",
+                                    "layers": "ga_s2_coastalecosystems_cyear_3_v1",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
-                                    "linkedWcsCoverage": "ga_s2_coastalecosystems_cyear_3",
+                                    "linkedWcsCoverage": "ga_s2_coastalecosystems_cyear_3_v1",
                                     "currentTime": "2022",
                                     "dateFormat": "'Year: 'yyyy",
                                     "leafletUpdateInterval": 750,
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/ga_s2_coastalecosystems_cyear_3/'>DEA Coastal Ecosystems product description</a></small>",
+                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/ga_s2_coastalecosystems_cyear_3_v1/'>DEA Coastal Ecosystems product description</a></small>",
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Coastal Ecosystems</h1>Annual coastal ecosystem classification and probabilities for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/><br><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about coastal ecosystem mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastalecosystems/'>DEA Coastal Ecosystems product description.</a></small><br/><br/></div>"
                                     },
