@@ -73,4 +73,3 @@ reslim_wms_unlimited = {
     },
     "wcs": common_wcs_limits,
 }
-
