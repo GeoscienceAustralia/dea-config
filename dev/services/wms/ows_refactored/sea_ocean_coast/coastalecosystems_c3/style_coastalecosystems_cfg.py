@@ -31,8 +31,8 @@ legend_coastalecosystems_percentage_by_20_0to100 = {
 
 style_coastalecosystems_mangrove_prob = {
     "name": "coastalecosystems_mangrove_prob",
-    "title": "Mangrove Probability",
-    "abstract": "Coastal Ecosystems Mangrove Probability as a percentage",
+    "title": "Mangrove probability",
+    "abstract": "Coastal Ecosystems Mangrove probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -49,8 +49,8 @@ style_coastalecosystems_mangrove_prob = {
 
 style_coastalecosystems_saltmarsh_prob = {
     "name": "coastalecosystems_saltmarsh_prob",
-    "title": "Saltmarsh Probability",
-    "abstract": "Coastal Ecosystems Saltmarsh Probability as a percentage",
+    "title": "Saltmarsh probability",
+    "abstract": "Coastal Ecosystems Saltmarsh probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -67,8 +67,8 @@ style_coastalecosystems_saltmarsh_prob = {
 
 style_coastalecosystems_seagrass_prob = {
     "name": "coastalecosystems_seagrass_prob",
-    "title": "Seagrass Probability",
-    "abstract": "Coastal Ecosystems Seagrass Probability as a percentage",
+    "title": "Seagrass probability",
+    "abstract": "Coastal Ecosystems Seagrass probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
@@ -85,8 +85,8 @@ style_coastalecosystems_seagrass_prob = {
 
 style_coastalecosystems_saltflat_prob = {
     "name": "coastalecosystems_saltflat_prob",
-    "title": "Saltflat Probability",
-    "abstract": "Coastal Ecosystems Saltflat Probability as a percentage",
+    "title": "Saltflat probability",
+    "abstract": "Coastal Ecosystems Saltflat probability as a percentage",
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
         "mapped_bands": True,
