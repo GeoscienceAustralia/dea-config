@@ -1,0 +1,72 @@
+---
+name: ga_s2_coastalecosystems_cyear_3_v1
+metadata_type: eo3
+description: Geoscience Australia Sentinel-2 Coastal Ecosystems Calendar Year Collection 3
+
+license: CC-BY-4.0
+
+metadata:
+  product:
+    name: ga_s2_coastalecosystems_cyear_3_v1
+  properties:
+    odc:file_format: GeoTIFF
+    odc:product_family: coastalecosystems
+    odc:producer: ga.gov.au
+
+measurements:
+  - name: classification
+    dtype: uint8
+    units: "class"
+    nodata: 255
+    flags_definition:
+      classification:
+        description: Coastal ecosystem class
+        bits: [0, 1, 2, 3, 4, 5, 6, 7]
+        values:
+          "2": Tidal flats
+          "3": Mangroves
+          "4": Saltmarsh
+          "5": Seagrass
+
+  - name: mangrove_prob
+    dtype: uint8
+    units: "percent"
+    nodata: 255
+
+  - name: saltmarsh_prob
+    dtype: uint8
+    units: "percent"
+    nodata: 255
+
+  - name: saltflat_prob
+    dtype: uint8
+    units: "percent"
+    nodata: 255
+
+  - name: seagrass_prob
+    dtype: uint8
+    units: "percent"
+    nodata: 255
+
+  - name: qa_count_clear
+    dtype: uint8
+    units: "count"
+    nodata: 255
+    aliases:
+      - count_clear
+
+  - name: qa_coastal_connectivity
+    dtype: uint16
+    units: "mask"
+    nodata: 65535
+    aliases:
+      - coastal_connectivity
+
+load:
+  crs: "EPSG:3577"
+  resolution:
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0
