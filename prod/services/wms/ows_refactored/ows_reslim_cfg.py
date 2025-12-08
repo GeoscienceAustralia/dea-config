@@ -64,3 +64,12 @@ reslim_for_mstp = {
     },
     "wcs": common_wcs_limits,
 }
+
+reslim_wms_unlimited = {
+    "wms": {
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
+        "min_zoom_level": 1.0,
+        "max_datasets": 24,
+    },
+    "wcs": common_wcs_limits,
+}

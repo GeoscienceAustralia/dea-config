@@ -25,6 +25,17 @@ category_layers = {
             ]
         },
         {
+            "title": "DEA Coastal Ecosystems",
+            "abstract": "",
+            "layers": [
+                {
+                    # DEA Coastal Ecosystems Collection 3
+                    "include": "ows_refactored.sea_ocean_coast.coastalecosystems_c3.ows_coastalecosystems_cfg.dea_coastalecosystems_layer",
+                    "type": "python",
+                },
+            ]
+        },
+        {
             "title": "Other",
             "abstract": "",
             "layers": [
