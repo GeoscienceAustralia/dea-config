@@ -13,7 +13,7 @@ bands_coastalecosystems = {
 
 abstract_coastalecosystems = """Geoscience Australia Sentinel-2 Coastal Ecosystems Calendar Year Collection 3
 
-The Digital Earth Australia Coastal Ecosystems product suite includes a categorical classification of four coastal ecosystems, supported by probability layers for individual ecosystems and selected quality assurance layers to support product interpretation, for the years 2021 and 2022 and 10 m spatial resolution.
+The Digital Earth Australia Coastal Ecosystems product suite includes a categorical classification of four coastal ecosystems, supported by probability layers for individual ecosystems and selected quality assurance layers to support product interpretation.
 
 Product documentation: https://knowledge.dea.ga.gov.au/data/product/dea-coastal-ecosystems/
 
