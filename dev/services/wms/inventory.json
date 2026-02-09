@@ -191,9 +191,11 @@
             "product": [
                 "ga_s1_nrb_iw_vv_vh_0"
             ],
-            "styles_count": 2,
+            "styles_count": 4,
             "styles_list": [
                 "VV",
+                "vv_vh_false_colour_linear",
+                "vv_vh_false_colour_db",
                 "mask"
             ]
         },
