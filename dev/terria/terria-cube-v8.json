@@ -13,6 +13,23 @@
                     "members": [
                         {
                             "type": "wms",
+                            "name": "DEA Normalised Radar Backscatter (Sentinel-1 IW, VV+VH)",
+                            "url": "https://ows.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "ga_s1_nrb_iw_vv_vh_0",
+                            "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_s1_nrb_iw_vv_vh_0",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "BC98b4"
+                        },
+                        {
+                            "type": "wms",
                             "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
