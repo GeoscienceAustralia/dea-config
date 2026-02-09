@@ -22,6 +22,18 @@ style_s1_nrb_VV = {
     "scale_range": [0.02, 0.4],
 }
 
+style_s1_nrb_VH = {
+    "name": "VH",
+    "title": "Backscatter VH",
+    "abstract": "Backscatter VH",
+    "components": {
+        "red": {"VH_gamma0": 1},
+        "green": {"VH_gamma0": 1},
+        "blue": {"VH_gamma0": 1},
+    },
+    "scale_range": [0.02, 0.4],
+}
+
 # Scale range is p5 and p90 of samples across Australia, calculated in s1_stats.py.
 # The scale range is set to these values to enhance the contrast of the images and make it easier to distinguish different features in the data.
 # The scale range can be adjusted based on the specific use case and the desired level of detail in the images.
@@ -98,6 +110,7 @@ style_s1_nrb_mask = {
 
 styles_s1_nrb_vvvh_list = [
     style_s1_nrb_VV,
+    style_s1_nrb_VH,
     style_s1_nrb_mask,
     style_s1_nrb_false_colour_linear,
     style_s1_nrb_false_colour_db,
