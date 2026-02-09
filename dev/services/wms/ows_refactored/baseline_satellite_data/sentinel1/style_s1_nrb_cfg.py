@@ -22,8 +22,8 @@ style_s1_nrb_VV = {
     "scale_range": [0.02, 0.4],
 }
 
-## Scale range is p5 and p90 of samples ascorss Australia, calculated in s1_stats.py. 
-# The scale range is set to these values to enhance the contrast of the images and make it easier to distinguish different features in the data. 
+# Scale range is p5 and p90 of samples across Australia, calculated in s1_stats.py.
+# The scale range is set to these values to enhance the contrast of the images and make it easier to distinguish different features in the data.
 # The scale range can be adjusted based on the specific use case and the desired level of detail in the images.
 style_s1_nrb_false_colour_linear = {
     "name": "vv_vh_false_colour_linear",
@@ -59,21 +59,21 @@ style_s1_nrb_false_colour_db = {
     "additional_bands": ["VV_gamma0", "VH_gamma0"],
     "components": {
         "red": {
-            "function": "s1_style_functions.db",
+            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "VV_gamma0",
                 "scale_from": (-20.09524918, -8.94672203),
             },
         },
         "green": {
-            "function": "s1_style_functions.db",
+            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "VH_gamma0",
                 "scale_from": (-30.15318871, -15.19352818),
             },
         },
         "blue": {
-            "function": "s1_style_functions.db_difference",
+            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db_difference",
             "kwargs": {
                 "band1": "VH_gamma0",
                 "band2": "VV_gamma0",
