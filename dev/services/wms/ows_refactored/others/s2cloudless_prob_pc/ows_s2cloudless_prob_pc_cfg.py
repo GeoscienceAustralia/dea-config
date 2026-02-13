@@ -1,6 +1,5 @@
-from ows_refactored.others.s2cloudless_prob_pc.style_s2cloudless_prob_pc_cfg import (
-    styles_s2cloudless_prob_pc_list,
-)
+from ows_refactored.others.s2cloudless_prob_pc.style_s2cloudless_prob_pc_cfg import \
+    styles_s2cloudless_prob_pc_list
 from ows_refactored.ows_reslim_cfg import reslim_standard
 
 bands_s2cloudless_prob_pc = {
