@@ -1,8 +1,5 @@
 {
-
-
-    "total_layers_count": 84,
-
+    "total_layers_count": 85,
     "layers": [
         {
             "layer": "s2_ls_combined",
@@ -1101,6 +1098,18 @@
             "styles_count": 1,
             "styles_list": [
                 "wii"
+            ]
+        },
+        {
+            "layer": "ga_s2cloudless_percentiles_cyear_3_v1",
+            "product": [
+                "ga_s2cloudless_percentiles_cyear_3_v1"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "s2cloudless_prob_pc_5",
+                "s2cloudless_prob_pc_10",
+                "s2cloudless_prob_pc_25"
             ]
         },
         {

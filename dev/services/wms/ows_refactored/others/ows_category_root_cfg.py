@@ -26,5 +26,9 @@ category_layers = {
             "include": "ows_refactored.others.ows_weather_cfg.layer",
             "type": "python",
         },
+        {
+            "include": "ows_refactored.others.s2cloudless_prob_pc.s2cloudless_prob_pc_layer",
+            "type": "python",
+        },
     ]
 }
