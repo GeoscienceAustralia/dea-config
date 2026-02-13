@@ -27,7 +27,7 @@ category_layers = {
             "type": "python",
         },
         {
-            "include": "ows_refactored.others.s2cloudless_prob_pc.s2cloudless_prob_pc_layer",
+            "include": "ows_refactored.others.s2cloudless_prob_pc.ows_s2cloudless_prob_pc_cfg.s2cloudless_prob_pc_layer",
             "type": "python",
         },
     ]
