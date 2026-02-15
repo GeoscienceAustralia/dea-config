@@ -12,7 +12,7 @@ style_s2cloudless_prob_pc_5 = {
     "include_in_feature_info": False,
     "needed_bands": ["oa_s2cloudless_prob_pc_5"],
     "mpl_ramp": "inferno",
-    "range": [0, 0.2],
+    "range": [0, 0.4],
 }
 
 style_s2cloudless_prob_pc_10 = {
@@ -29,7 +29,7 @@ style_s2cloudless_prob_pc_10 = {
     "include_in_feature_info": False,
     "needed_bands": ["oa_s2cloudless_prob_pc_10"],
     "mpl_ramp": "inferno",
-    "range": [0, 0.3],
+    "range": [0, 0.4],
 }
 
 style_s2cloudless_prob_pc_25 = {
