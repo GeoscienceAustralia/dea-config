@@ -1,7 +1,7 @@
 {
 
 
-    "total_layers_count": 85,
+    "total_layers_count": 87,
 
     "layers": [
         {
@@ -214,6 +214,18 @@
             "styles_list": [
                 "VV",
                 "VV_DB",
+                "mask"
+            ]
+        },
+        {
+            "layer": "ga_s1_nrb_iw_vh_0",
+            "product": [
+                "ga_s1_nrb_iw_vh_0"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "VH",
+                "VH_DB",
                 "mask"
             ]
         },

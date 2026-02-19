@@ -194,3 +194,10 @@ styles_s1_nrb_vv_list = [
     style_s1_nrb_VV_DB,
     style_s1_nrb_mask,
 ]
+
+
+styles_s1_nrb_vh_list = [
+    style_s1_nrb_VH,
+    style_s1_nrb_VH_DB,
+    style_s1_nrb_mask,
+]
