@@ -13,6 +13,90 @@
                     "members": [
                         {
                             "type": "wms",
+                            "name": "DEA Normalised Radar Backscatter (Sentinel-1 IW, VV+VH)",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "ga_s1_nrb_iw_vv_vh_0",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_s1_nrb_iw_vv_vh_0",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "featureInfoTemplate": {
+                                "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>VV_gamma0</b></td><td>{{data.0.bands.VV_gamma0}}</td></tr>  <tr><td><b>VH_gamma0</b></td><td>{{data.0.bands.VH_gamma0}}</td></tr> </table><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "BC98b4"
+                        },
+                        {
+                            "type": "wms",
+                            "name": "DEA Normalised Radar Backscatter (Sentinel-1 IW, VV)",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "ga_s1_nrb_iw_vv_0",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_s1_nrb_iw_vv_0",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "featureInfoTemplate": {
+                                "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>  <tr><td><b>VV_gamma0</b></td><td>{{data.0.bands.VV_gamma0}}</td></tr> </table><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "BC98c8"
+                        },
+                        {
+                            "type": "wms",
+                            "name": "DEA Normalised Radar Backscatter (Sentinel-1 IW, VH)",
+                            "url": "https://ows.dev.dea.ga.gov.au/",
+                            "opacity": 1,
+                            "layers": "ga_s1_nrb_iw_vh_0",
+                            "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "ga_s1_nrb_iw_vh_0",
+                            "chartColor": "white",
+                            "timeFilterPropertyName": "data_available_for_dates",
+                            "leafletUpdateInterval": 750,
+                            "chartType": "momentPoints",
+                            "featureInfoTemplate": {
+                                "template": "<table>  <tr><td><b>Time</b></td><td>{{time}}</td></tr>   <tr><td><b>VH_gamma0</b></td><td>{{data.0.bands.VH_gamma0}}</td></tr> </table><p><b>Imagery available for dates:</b>{{#data_available_for_dates}}<br/>{{.}}{{/data_available_for_dates}}</p>",
+                                "formats": {
+                                    "lat": {
+                                        "maximumFractionDigits": 5
+                                    },
+                                    "lon": {
+                                        "maximumFractionDigits": 5
+                                    }
+                                }
+                            },
+                            "tileErrorHandlingOptions": {
+                                "ignoreUnknownTileErrors": true
+                            },
+                            "id": "BC98f2"
+                        },
+                        {
+                            "type": "wms",
                             "name": "DEA Surface Reflectance (Landsat and Sentinel-2)",
                             "url": "https://ows.dev.dea.ga.gov.au/",
                             "opacity": 1,
