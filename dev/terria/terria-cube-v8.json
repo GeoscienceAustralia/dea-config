@@ -2097,6 +2097,27 @@
                           ]
                         },
                         {
+                            "id": "8574fv",
+                            "type": "group",
+                            "name": "GA SRTM 1 second DEM",
+                            "members": [
+                              {
+                                "type": "wms",
+                                "name": "GA SRTM 1 second DEM",
+                                "url": "https://ows.dev.dea.ga.gov.au/",
+                                "opacity": 1,
+                                "dateFormat": "yyyy",
+                                "layers": "ga_srtm_dem1sv1_0",
+                                "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
+                                "linkedWcsCoverage": "ga_srtm_dem1sv1_0",
+                                "tileErrorHandlingOptions": {
+                                  "ignoreUnknownTileErrors": true
+                                },
+                                "id": "857chf"
+                              }
+                            ]
+                          },
+                        {
                           "id": "453sdf",
                           "type": "group",
                           "name": "ASTER Geoscience Map of Australia",
