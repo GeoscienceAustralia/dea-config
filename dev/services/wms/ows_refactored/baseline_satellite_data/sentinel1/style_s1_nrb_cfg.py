@@ -8,7 +8,7 @@
 #         "blue": {"HH": 1},
 #     },
 #     "scale_range": [0.02, 0.4],
-# }
+# } # to be added later when HH data is available in the product.
 
 # Scale range is p5 and p95 of samples across Australia.
 # The scale range is set to these values to enhance the contrast of the images and make it easier to distinguish different features in the data.
@@ -192,12 +192,5 @@ styles_s1_nrb_vvvh_list = [
 styles_s1_nrb_vv_list = [
     style_s1_nrb_VV,
     style_s1_nrb_VV_DB,
-    style_s1_nrb_mask,
-]
-
-
-styles_s1_nrb_vh_list = [
-    style_s1_nrb_VH,
-    style_s1_nrb_VH_DB,
     style_s1_nrb_mask,
 ]
