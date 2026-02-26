@@ -1,4 +1,4 @@
-bands_sentinel1_nrb = {
+bands_sentinel1_nrb_vv_vh = {
     "VV_gamma0": ["VV_gamma0", "vv_gamma0"],
     "VH_gamma0": ["VH_gamma0", "vh_gamma0"],
     "mask": ["mask"],
@@ -8,3 +8,6 @@ bands_sentinel1_nrb = {
     "local_incidence_angle": ["local_incidence_angle", "lia", "LIA"],
     "incidence_angle": ["incidence_angle", "ia", "IA"],
 }
+
+bands_sentinel1_nrb_vv = bands_sentinel1_nrb_vv_vh.copy()
+bands_sentinel1_nrb_vv.pop("VH_gamma0")
