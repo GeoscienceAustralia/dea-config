@@ -37,6 +37,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "BC98b4"
                         },
                         {
@@ -65,6 +67,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "BC98c8"
                         },
                         {
@@ -94,6 +98,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "72HiKx"
                         },
                         {
@@ -123,6 +129,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "45HIff"
                         },
                         {
@@ -152,6 +160,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "qJzPBD",
                             "shareKeys": [
                                 "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2 satellite images"
@@ -187,6 +197,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "dateFormat": "'Year: 'yyyy",
                                     "id": "hTd67a"
                                 },
@@ -216,6 +228,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "aFG456"
                                 },
                                 {
@@ -244,6 +258,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "ATY879"
                                 }
                             ]
@@ -338,6 +354,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "kjas93"
                                 },
                                 {
@@ -403,6 +421,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "TrYgsw"
                                 },
                                 {
@@ -461,6 +481,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "DR4er4"
                                 }
                             ]
@@ -496,6 +518,8 @@
                                         "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "546ert"
                                 },
                                 {
@@ -516,6 +540,8 @@
                                       "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Environmental descriptors for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/><table><tr><td>Life Form:</td><td>{{data.0.description.lifeform_label}}</td></tr><tr><td>Vegetation Cover:</td><td>{{data.0.description.canopyco_label}}</td></tr><tr><td>Water Seasonality:</td><td>{{data.0.description.watersea_label}}</td></tr><tr><td>Water Persistence:</td><td>{{data.0.description.waterper_label}}</td></tr><tr><td>Bare Gradation:</td><td>{{data.0.description.baregrad_label}}</td></tr></table><br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "wejk58"
                                 },
                                 {
@@ -537,6 +563,8 @@
                                         "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "546erz"
                                 },
                                 {
@@ -557,6 +585,8 @@
                                         "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "wejk59"
                                 }
                             ]
@@ -581,6 +611,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "asD256"
                                 },
                                 {
@@ -599,6 +631,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "id": "fccy256",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "dateFormat": "'Year: 'yyyy"
                                 }
                             ]
@@ -623,6 +657,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "a54fng"
                                 }
                             ]
@@ -646,6 +682,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "CVyer4"
                                 },
                                 {
@@ -673,6 +711,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "Jh98Fd"
                                 },
                                 {
@@ -699,6 +739,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "PjiD98"
                                 }
                             ]
@@ -735,6 +777,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "ODw8jg1"
                                         },
                                         {
@@ -752,6 +796,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "qQ27213"
                                         }
                                     ]
@@ -775,6 +821,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "ODw8jg4",
                                             "dateFormat": "'Year: 'yyyy"
                                         }
@@ -799,6 +847,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "ODw8jg5",
                                             "dateFormat": "'Year: 'yyyy"
                                         }
@@ -824,6 +874,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "ODw8jg7"
                                         },
                                         {
@@ -841,6 +893,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "ODw8jg8"
                                         }
                                     ]
@@ -895,7 +949,7 @@
                                         }
                                     ],
                                     "id": "AS145r"
-                                },
+                                }
                             ]
                         },
                         {
@@ -953,6 +1007,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "kwerw7"
                                 },
                                 {
@@ -969,6 +1025,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "kwer37"
                                 }
                             ]
@@ -1011,7 +1069,7 @@
                                            {
                                              "id": "Annual shorelines",
                                              "value": {"styles": "AnnualShorelines"}
-                                           },
+                                           }
                                          ],
                                          "selectedId": "Default"
                                        }
@@ -1028,7 +1086,7 @@
                                         "likely rocky coastline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
                                         "extreme value (> 50 m)": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This location has been identified as having an <b>extreme rate of coastal change (> 50 metres per year)</b> and should be interpreted with caution.</blockquote>",
                                         "high angular variability": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This rate of coastal change is unlikely to be accurate due to high levels of <b>angular variability</b> from this point to each annual shoreline. This can occur in complex coastal environments like river mouths, sandbars and mudflats that do not show linear patterns of coastal change over time.</i></blockquote>",
-                                        "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>",
+                                        "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>"
                                       }
                                     },
                                     "legends": [
@@ -1056,9 +1114,9 @@
                                                 "good": "",
                                                 "aerosol issues": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline may be affected by <b>aerosol issues</b> caused by the 1991 eruption of Mount Pinatubo.</i></blockquote>",
                                                 "insufficient data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline may be affected by <b>limited good quality satellite observations</b> at this location. This can lead to noisier and less reliable shorelines.</i></blockquote>",
-                                                "unstable data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline is affected by <b>unstable data</b> at this location. This may be caused by errors in the tidal model used to reduce the influence of tide, the presence of gently sloping intertidal mudflats or sandbars that can lead to inaccurate shoreline mapping, or noisy satellite imagery caused by high levels of cloud.</i></blockquote>",
+                                                "unstable data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline is affected by <b>unstable data</b> at this location. This may be caused by errors in the tidal model used to reduce the influence of tide, the presence of gently sloping intertidal mudflats or sandbars that can lead to inaccurate shoreline mapping, or noisy satellite imagery caused by high levels of cloud.</i></blockquote>"
                                               }
-                                            },
+                                            }
                                         },
                                         {
                                             "type": "wms",
@@ -1077,9 +1135,9 @@
                                                 "likely rocky coastline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
                                                 "extreme value (> 50 m)": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This location has been identified as having an <b>extreme rate of coastal change (> 50 metres per year)</b> and should be interpreted with caution.</blockquote>",
                                                 "high angular variability": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This rate of coastal change is unlikely to be accurate due to high levels of <b>angular variability</b> from this point to each annual shoreline. This can occur in complex coastal environments like river mouths, sandbars and mudflats that do not show linear patterns of coastal change over time.</i></blockquote>",
-                                                "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>",
+                                                "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>"
                                               }
-                                            },
+                                            }
                                         },
                                         {
                                             "id": "Jgt655",
@@ -1131,6 +1189,8 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>This location had an elevation above modelled Mean Sea Level (MSL): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>It was exposed from tidal inundation for: <h2 style='font-weight:normal'><b>{{data.0.bands.exposure}}%</b> of the <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b> analysis period</h2><hr><br>Mapped intertidal extents can be affected by biases in the tidal conditions observed by satellites<a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/?tab=details#tidal-attribute-layers-ta'></a>. At this location, satellites observed the coastline at tide heights ranging from <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lot}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hot}}{{/terria.formatNumber}}</b> metres above MSL, compared to the full astronomical tide range of <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lat}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hat}}{{/terria.formatNumber}}</b> metres above MSL.<br><br>This resulted in satellite data observing <b>~{{data.0.bands.ta_spread}}%</b> of the astronomical tide range, and failing to observe the lowest <b>~{{data.0.bands.ta_offset_low}}%</b> and highest <b>~{{data.0.bands.ta_offset_high}}%</b> of tides.<br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "ab1264fr"
                                 },
                                 {
@@ -1138,7 +1198,7 @@
                                     "name": "DEA Intertidal 32 km tile grid",
                                     "url": "https://data.dea.ga.gov.au/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal.geojson",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:350px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal 32 km tile grid</h1>This grid file was used to generate DEA Intertidal outputs. It contains unique 'region_code' IDs for each grid cell and access links to the data on Amazon S3.<h3 style='font-weight:normal'><b>Tile region code:</b> {{region_code}}</h3><h3 style='font-weight:normal'><a href='{{data_access}}'><b>Data access and download</b></a></h3><hr><br><small>For additional data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small></div>",
+                                        "template": "<div style='width:350px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal 32 km tile grid</h1>This grid file was used to generate DEA Intertidal outputs. It contains unique 'region_code' IDs for each grid cell and access links to the data on Amazon S3.<h3 style='font-weight:normal'><b>Tile region code:</b> {{region_code}}</h3><h3 style='font-weight:normal'><a href='{{data_access}}'><b>Data access and download</b></a></h3><hr><br><small>For additional data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small></div>"
                                     },
                                     "id": "gtBB45t"
                                 }
@@ -1168,6 +1228,8 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Tidal Composites</h1><br><br><img src='{{data.0.tide_graph_path}}' width='550'><br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "5533dfr"
                                 }
                             ]
@@ -1195,6 +1257,8 @@
                                     "featureInfoTemplate": {
                                         "template":"<div style='width:550px'><h1 style='font-weight:normal'>DEA Coastal Ecosystems</h1>Annual coastal ecosystem classification and probabilities at this location for <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b><br/><table><tr><td><b>Classification</b></td><td><b>{{data.0.bands.classification.Coastal ecosystem class}}</b><br><tr><td><b>Saltmarsh probability (%)</td><td>{{data.0.bands.saltmarsh_prob}}</td></tr><br><tr><td>Mangrove probability (%)</td><td>{{data.0.bands.mangrove_prob}}</td></tr><br><tr><td>Saltflat probability (%)</td><td>{{data.0.bands.saltflat_prob}}</td></tr><tr><td>Seagrass probability (%)</td><td>{{data.0.bands.seagrass_prob}}</b></td></tr></table><br/><br><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about coastal ecosystem mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastal-ecosystems/'>DEA Coastal Ecosystems product description.</a></small><br/><br/></div>"
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "5533pf7"
                                 }
                             ]
@@ -1220,6 +1284,8 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "basdi2"
                                 },
                                 {
@@ -1234,6 +1300,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "AS31sf"
                                 },
                                 {
@@ -1248,6 +1316,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "a54s23"
                                 },
                                 {
@@ -1303,6 +1373,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "DFgh24"
                                 },
                                 {
@@ -1317,6 +1389,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "SDF476"
                                 },
                                 {
@@ -1411,6 +1485,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "FG346d"
                                 }
                             ]
@@ -1434,6 +1510,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "sajkd9"
                                 },
                                 {
@@ -1450,6 +1528,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "sa79ih"
                                 },
                                 {
@@ -1466,6 +1546,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "sa1271"
                                 },
                                 {
@@ -1482,6 +1564,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "sa2987"
                                 }
                             ]
@@ -1541,6 +1625,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "2cbf93"
                                 },
                                 {
@@ -1562,6 +1648,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "mrfm98"
                                 }
                             ]
@@ -1617,6 +1705,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "GHrwe6"
                                 },
                                 {
@@ -1635,6 +1725,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "47tyi6"
                                 },
                                 {
@@ -1653,6 +1745,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "WYre31"
                                 },
                                 {
@@ -1671,6 +1765,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "Dtyer8"
                                 },
                                 {
@@ -1689,6 +1785,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "sdjop3"
                                 },
                                 {
@@ -1707,6 +1805,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "ghi433"
                                 }
                             ],
@@ -2005,6 +2105,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "Hsad32"
                                 },
                                 {
@@ -2043,6 +2145,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "453453"
                             }
                           ]
@@ -2064,6 +2168,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "54s35h"
                             }
                           ]
@@ -2085,6 +2191,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "FcrnCd"
                             },
                             {
@@ -2099,6 +2207,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "DFEi45"
                             },
                             {
@@ -2113,6 +2223,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "HDF357"
                             },
                             {
@@ -2127,6 +2239,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "Psdr35"
                             },
                             {
@@ -2140,6 +2254,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "weor34"
                             },
                             {
@@ -2154,6 +2270,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "54urty"
                             },
                             {
@@ -2168,6 +2286,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "Fwe354"
                             },
                             {
@@ -2182,6 +2302,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "654ahk"
                             },
                             {
@@ -2196,6 +2318,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "SJ45tJ"
                             },
                             {
@@ -2210,6 +2334,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "LH43hw"
                             },
                             {
@@ -2224,6 +2350,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "54dsf6"
                             },
                             {
@@ -2238,6 +2366,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "d34r8s"
                             },
                             {
@@ -2252,6 +2382,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "435DFG"
                             },
                             {
@@ -2265,6 +2397,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "src537"
                             },
                             {
@@ -2279,6 +2413,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "q8P65s"
                             },
                             {
@@ -2293,6 +2429,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "937uyt"
                             },
                             {
@@ -2307,6 +2445,8 @@
                               "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                               },
+                              "tileWidth": 512,
+                              "tileHeight": 512,
                               "id": "uyocw3"
                             }
                           ]
