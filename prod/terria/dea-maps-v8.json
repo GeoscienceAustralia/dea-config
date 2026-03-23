@@ -33,6 +33,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "Wqpk8F"
                         },
                         {
@@ -62,6 +64,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "8sfhio"
                         },
                         {
@@ -91,6 +95,8 @@
                             "tileErrorHandlingOptions": {
                                 "ignoreUnknownTileErrors": true
                             },
+                            "tileWidth": 512,
+                            "tileHeight": 512,
                             "id": "SbBCvf",
                             "shareKeys": [
                                 "Root Group/Satellite images/Satellite images 10m - daily/Sentinel 2 satellite imagery archive/Sentinel 2 satellite images"
@@ -127,6 +133,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "hTd67B"
                                 },
                                 {
@@ -155,6 +163,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "aFG45B"
                                 },
                                 {
@@ -183,6 +193,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "ATY87B"
                                 }
                             ],
@@ -222,6 +234,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "584D3e"
                                 },
                                 {
@@ -251,6 +265,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "5k8KR4",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 8 satellite images"
@@ -283,6 +299,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "bzDSiT",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 7 satellite images"
@@ -315,6 +333,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "rESkby",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - daily/Daily Landsat 5 satellite images"
@@ -357,6 +377,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "rlm2Fc"
                                 },
                                 {
@@ -386,6 +408,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "qH2Uyn"
                                 },
                                 {
@@ -415,6 +439,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "fd45xm"
                                 }
                             ],
@@ -454,6 +480,8 @@
                                         "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "546ert"
                                 },
                                 {
@@ -474,6 +502,8 @@
                                       "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Environmental descriptors for selected location,{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/><table><tr><td>Life Form:</td><td>{{data.0.description.lifeform_label}}</td></tr><tr><td>Vegetation Cover:</td><td>{{data.0.description.canopyco_label}}</td></tr><tr><td>Water Seasonality:</td><td>{{data.0.description.watersea_label}}</td></tr><tr><td>Water Persistence:</td><td>{{data.0.description.waterper_label}}</td></tr><tr><td>Bare Gradation:</td><td>{{data.0.description.baregrad_label}}</td></tr></table><be/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "wejk58"
                                 },
                                 {
@@ -495,6 +525,8 @@
                                         "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "546erz"
                                 },
                                 {
@@ -515,6 +547,8 @@
                                         "template": "<div style='width:480px'><h3 style='font-weight:normal'>Digital Earth Australia Land Cover</h3>Annual land cover for selected location, {{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}<br/><br/>Base class: {{data.0.description.level3_label}}<br/><br/>Full classification: {{data.0.description.level4_label}}<br/><br/></div>"
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "wejk59"
                                 }
                             ]
@@ -539,6 +573,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "mYnkqY",
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Daily Fractional Cover observations"
@@ -559,6 +595,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "fccy256",
                                     "shareKeys": [
                                         "Root Group/Vegetation/Fractional Cover/Calendar Year Fractional Cover observations"
@@ -588,6 +626,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "3gjEXB",
                                     "shareKeys": [
                                         "Root Group/Vegetation/Mangrove Canopy Cover"
@@ -614,6 +654,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "CVypr4prod"
                                 },
                                 {
@@ -641,6 +683,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "Mn56Pg",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - Barest Earth/Barest Earth Landsat 8 satellite images"
@@ -670,6 +714,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "WRTIQP",
                                     "shareKeys": [
                                         "Root Group/Satellite images/Satellite images 25m - Barest Earth/Landsat 30+ Barest Earth Satellite Images (Combined Landsat)"
@@ -708,6 +754,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "O3Dw8jg1"
                                 },
                                 {
@@ -725,6 +773,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+                                    "tileWidth": 512,
+                                    "tileHeight": 512,
                                     "id": "qQ27H7cq"
                                 },
                                 {
@@ -747,6 +797,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "O3Dw8jg4",
                                             "dateFormat": "'Year: 'yyyy"
                                         }
@@ -771,6 +823,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "O3Dw8jg5",
                                             "dateFormat": "'Year: 'yyyy"
                                         }
@@ -796,6 +850,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "O3Dw8jg7"
                                         },
                                         {
@@ -813,6 +869,8 @@
                                             "tileErrorHandlingOptions": {
                                                 "ignoreUnknownTileErrors": true
                                             },
+                                            "tileWidth": 512,
+                                            "tileHeight": 512,
                                             "id": "O3Dw8jg8"
                                         }
                                     ]
@@ -927,6 +985,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "hbmz55",
                                     "shareKeys": [
                                         "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Wetness Percentiles"
@@ -946,6 +1006,8 @@
                                         "ignoreUnknownTileErrors": true
                                     },
                                     "dateFormat": "'Year: 'yyyy",
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "hbmzp5",
                                     "shareKeys": [
                                         "Root Group/Surface Water/DEA Wetness Percentiles (Landsat)/Tasseled Cap Indices Percentiles"
@@ -1012,7 +1074,7 @@
                                         "likely rocky coastline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
                                         "extreme value (> 50 m)": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This location has been identified as having an <b>extreme rate of coastal change (> 50 metres per year)</b> and should be interpreted with caution.</blockquote>",
                                         "high angular variability": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This rate of coastal change is unlikely to be accurate due to high levels of <b>angular variability</b> from this point to each annual shoreline. This can occur in complex coastal environments like river mouths, sandbars and mudflats that do not show linear patterns of coastal change over time.</i></blockquote>",
-                                        "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>",
+                                        "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>"
                                       }
                                     },
                                     "legends": [
@@ -1040,9 +1102,9 @@
                                                 "good": "",
                                                 "aerosol issues": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline may be affected by <b>aerosol issues</b> caused by the 1991 eruption of Mount Pinatubo.</i></blockquote>",
                                                 "insufficient data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline may be affected by <b>limited good quality satellite observations</b> at this location. This can lead to noisier and less reliable shorelines.</i></blockquote>",
-                                                "unstable data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline is affected by <b>unstable data</b> at this location. This may be caused by errors in the tidal model used to reduce the influence of tide, the presence of gently sloping intertidal mudflats or sandbars that can lead to inaccurate shoreline mapping, or noisy satellite imagery caused by high levels of cloud.</i></blockquote>",
+                                                "unstable data": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The accuracy of this shoreline is affected by <b>unstable data</b> at this location. This may be caused by errors in the tidal model used to reduce the influence of tide, the presence of gently sloping intertidal mudflats or sandbars that can lead to inaccurate shoreline mapping, or noisy satellite imagery caused by high levels of cloud.</i></blockquote>"
                                               }
-                                            },
+                                            }
                                         },
                                         {
                                             "type": "wms",
@@ -1061,9 +1123,9 @@
                                                 "likely rocky coastline": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This coastline has been identified as a probable <b>rocky or cliff shoreline</b>. Rates of coastal change at this location may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.</i></blockquote>",
                                                 "extreme value (> 50 m)": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This location has been identified as having an <b>extreme rate of coastal change (> 50 metres per year)</b> and should be interpreted with caution.</blockquote>",
                                                 "high angular variability": "</br>⚠️ DATA QUALITY WARNING:<blockquote><i>This rate of coastal change is unlikely to be accurate due to high levels of <b>angular variability</b> from this point to each annual shoreline. This can occur in complex coastal environments like river mouths, sandbars and mudflats that do not show linear patterns of coastal change over time.</i></blockquote>",
-                                                "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>",
+                                                "baseline outlier": "</br></br>⚠️ DATA QUALITY WARNING:<blockquote><i>The baseline (i.e. most recent) annual shoreline is itself <b>flagged as an outlier</b>, potentially resulting in inaccurate rates of change at this location.</i></blockquote>"
                                               }
-                                            },
+                                            }
                                         },
                                         {
                                             "id": "Jgt655",
@@ -1127,17 +1189,19 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>This location had an elevation above modelled Mean Sea Level (MSL): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>It was exposed from tidal inundation for: <h2 style='font-weight:normal'><b>{{data.0.bands.exposure}}%</b> of the <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b> analysis period</h2><hr><br>Mapped intertidal extents can be affected by biases in the tidal conditions observed by satellites<a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/?tab=details#tidal-attribute-layers-ta'></a>. At this location, satellites observed the coastline at tide heights ranging from <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lot}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hot}}{{/terria.formatNumber}}</b> metres above MSL, compared to the full astronomical tide range of <b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_lat}}{{/terria.formatNumber}}</b> to <b>+{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.ta_hat}}{{/terria.formatNumber}}</b> metres above MSL.<br><br>This resulted in satellite data observing <b>~{{data.0.bands.ta_spread}}%</b> of the astronomical tide range, and failing to observe the lowest <b>~{{data.0.bands.ta_offset_low}}%</b> and highest <b>~{{data.0.bands.ta_offset_high}}%</b> of tides.<br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
-                                    "id": "ghtu564",       
+				    "tileWidth": 512,
+				    "tileHeight": 512,
+                                    "id": "ghtu564"
                                 },
                                 {
                                     "type": "geojson",
                                     "name": "DEA Intertidal 32 km tile grid",
                                     "url": "https://data.dea.ga.gov.au/derivative/ga_s2ls_intertidal_cyear_3/ga_summary_grid_c3_32km_coastal.geojson",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:350px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal 32 km tile grid</h1>This grid file was used to generate DEA Intertidal outputs. It contains unique 'region_code' IDs for each grid cell and access links to the data on Amazon S3.<h3 style='font-weight:normal'><b>Tile region code:</b> {{region_code}}</h3><h3 style='font-weight:normal'><a href='{{data_access}}'><b>Data access and download</b></a></h3><hr><br><small>For additional data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small></div>",
+                                        "template": "<div style='width:350px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal 32 km tile grid</h1>This grid file was used to generate DEA Intertidal outputs. It contains unique 'region_code' IDs for each grid cell and access links to the data on Amazon S3.<h3 style='font-weight:normal'><b>Tile region code:</b> {{region_code}}</h3><h3 style='font-weight:normal'><a href='{{data_access}}'><b>Data access and download</b></a></h3><hr><br><small>For additional data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small></div>"
                                     },
                                     "id": "67ttyU"
-                                },
+                                }
                             ]
                         },
                         {
@@ -1164,6 +1228,8 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Tidal Composites</h1>Low tide imagery at this location was restricted to tide heights lower than:<h2 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.qa_low_threshold}}{{/terria.formatNumber}} m above Mean Sea Level</b></h2>High tide imagery was restricted to tide heights greater than:<h2 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.qa_high_threshold}}{{/terria.formatNumber}} m above Mean Sea Level</b></h2><br>Satellites may not always observe low and high tidal extremes. The graph below shows the approximate distribution of satellite images used to generate the low and high tide composites at this location, compared to the full astronomical tide range:<br><br><img src='{{data.0.tide_graph_path}}' width='550'><br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about the product including limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-tidal-composites/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "58483fg"
                                 }
                             ]
@@ -1191,6 +1257,8 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Coastal Ecosystems</h1>Annual coastal ecosystem classification and probabilities at this location for <b>{{#terria.formatDateTime}}{format: \"yyyy\"}{{data.0.time}}{{/terria.formatDateTime}}</b><br/><table><tr><td><b>Classification</b></td><td><b>{{data.0.bands.classification.Coastal ecosystem class}}</b><br><tr><td><b>Saltmarsh probability (%)</td><td>{{data.0.bands.saltmarsh_prob}}</td></tr><br><tr><td>Mangrove probability (%)</td><td>{{data.0.bands.mangrove_prob}}</td></tr><br><tr><td>Saltflat probability (%)</td><td>{{data.0.bands.saltflat_prob}}</td></tr><tr><td>Seagrass probability (%)</td><td>{{data.0.bands.seagrass_prob}}</b></td></tr></table><br/><br><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about coastal ecosystem mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-coastal-ecosystems/'>DEA Coastal Ecosystems product description.</a></small><br/><br/></div>"
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "5533df7"
                                 }
                             ]
@@ -1216,6 +1284,8 @@
                                     "featureInfoTemplate": {
                                         "template": "<div style='width:480px'><h2 style='font-weight:normal'>Digital Earth Australia Intertidal Elevation</h2>Elevation relative to Mean Sea Level (approximately equivelent to AHD): <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.nidem}}{{/terria.formatNumber}} metres</b></h1><i>For more information about intertidal mapping accuracy and limitations or to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal-elevation-landsat/'>DEA Intertidal Elevation product description.</a></i><br/><br/></div>"
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "bWICtK",
                                     "shareKeys": [
                                         "Root Group/Coastal/National Intertidal Digital Elevation Model"
@@ -1233,6 +1303,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "cXSDLg",
                                     "shareKeys": [
                                         "Root Group/Coastal/Intertidal extent model/Intertidal Extent"
@@ -1250,6 +1322,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "6E5V7V",
                                     "shareKeys": [
                                         "Root Group/Coastal/Intertidal extent model/Intertidal Extent Confidence"
@@ -1267,6 +1341,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "4XvQxE",
                                     "shareKeys": [
                                         "Root Group/Coastal/Low tide satellite images/Low tide Landsat satellite images"
@@ -1284,6 +1360,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "YLrxLi",
                                     "shareKeys": [
                                         "Root Group/Coastal/High tide satellite images/High tide Landsat satellite images"
@@ -1436,6 +1514,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "2cbf93",
                                     "shareKeys": ["Root Group/DEA Fuel Moisture Content/DEA FMC"]
                                 },
@@ -1458,6 +1538,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "mrfm98",
                                     "shareKeys": ["Root Group/DEA Fuel Moisture Content/Most Recent Observation"]
                                 }
@@ -1501,7 +1583,7 @@
                                 }
                             ],
                             "shareKeys": ["Root Group/Hotspots"]
-                        },
+                        }
                     ]
                 },
                 {
@@ -1577,6 +1659,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "DzhvUP",
                                     "shareKeys": [
                                         "Root Group/Camden Environmental Monitoring Project InSAR/ALOS Displacement"
@@ -1598,6 +1682,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "KqwIfB",
                                     "shareKeys": [
                                         "Root Group/Camden Environmental Monitoring Project InSAR/ALOS Velocity"
@@ -1619,6 +1705,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "Sc8euJ",
                                     "shareKeys": [
                                         "Root Group/Camden Environmental Monitoring Project InSAR/ENVISAT Displacement"
@@ -1640,6 +1728,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "qzCczV",
                                     "shareKeys": [
                                         "Root Group/Camden Environmental Monitoring Project InSAR/ENVISAT Velocity"
@@ -1661,6 +1751,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "Nb5Pcu",
                                     "shareKeys": [
                                         "Root Group/Camden Environmental Monitoring Project InSAR/RADARSAT2 Displacement"
@@ -1682,6 +1774,8 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
+				    "tileWidth": 512,
+				    "tileHeight": 512,
                                     "id": "3mQ5Ye",
                                     "shareKeys": [
                                         "Root Group/Camden Environmental Monitoring Project InSAR/RADARSAT2 Velocity"
