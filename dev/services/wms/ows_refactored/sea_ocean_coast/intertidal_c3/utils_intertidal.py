@@ -1,4 +1,5 @@
 from datacube_ows.band_utils import scalable
+from odc.geo.geom import point
 from odc.geo.gridspec import GridSpec
 from odc.geo.types import xy_
 
@@ -75,7 +76,9 @@ def tide_graph_path(data, ds):
     )
 
     # Get point from GetFeatureInfo data
-    point_albers = data.odc.geobox.extent.centroid.to_crs("EPSG:3577").geom
+    lat, lon = data.odc.map_bounds()[0]
+    point_albers = point(y=lat, x=lon, crs="EPSG:4326").to_crs("EPSG:3577").geom
+    # point_albers = data.odc.geobox.extent.centroid.to_crs("EPSG:3577").geom
 
     # Return region code
     tile = gs_sentinel_c3.pt2idx(x=point_albers.x, y=point_albers.y)
