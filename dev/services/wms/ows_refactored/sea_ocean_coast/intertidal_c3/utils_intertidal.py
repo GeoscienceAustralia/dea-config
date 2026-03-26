@@ -94,3 +94,16 @@ def tide_graph_path(data, ds):
 
     # Combine into a string
     return f"{base_dir}/{product}/{version}/{region_split}/{year}--P1Y/{product}_{region}_{year}--P1Y_final_tide_graph.png"
+
+
+def featureinfo_coords(data, ds):
+    """
+    Temporary function to test what x and y coordinates are returned on `data`
+    """
+    # Get point from GetFeatureInfo data. On DEA Maps, we
+    # can assume that `data` coordinates are always in "EPSG:3857"
+    epsg3857_y, epsg3857_x = data.y.item(), data.x.item()
+    point_albers = point(y=epsg3857_y, x=epsg3857_x, crs="EPSG:3857").to_crs("EPSG:3577").geom
+    epsg3577_y, epsg3577_x = point_albers.y, point_albers.x
+
+    return f"EPSG:3857 Y: {epsg3857_y}, EPSG:3857 X: {epsg3857_x}, EPSG:3577 Y: {epsg3577_y}, EPSG:3577 X: {epsg3577_x}"
