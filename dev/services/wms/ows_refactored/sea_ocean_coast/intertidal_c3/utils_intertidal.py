@@ -75,7 +75,8 @@ def tide_graph_path(data, ds):
         origin=xy_(-4416000, -6912000),
     )
 
-    # Get point from GetFeatureInfo data
+    # Get point from GetFeatureInfo data. On DEA Maps, we
+    # can assume that `data` coordinates are always in "EPSG:3857"
     y, x = data.y.item(), data.x.item()
     point_albers = point(y=y, x=x, crs="EPSG:3857").to_crs("EPSG:3577").geom
     # point_albers = data.odc.geobox.extent.centroid.to_crs("EPSG:3577").geom
