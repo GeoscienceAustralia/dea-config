@@ -76,8 +76,8 @@ def tide_graph_path(data, ds):
     )
 
     # Get point from GetFeatureInfo data
-    lat, lon = data.odc.map_bounds()[0]
-    point_albers = point(y=lat, x=lon, crs="EPSG:4326").to_crs("EPSG:3577").geom
+    y, x = data.y.item(), data.x.item()
+    point_albers = point(y=y, x=x, crs="EPSG:3857").to_crs("EPSG:3577").geom
     # point_albers = data.odc.geobox.extent.centroid.to_crs("EPSG:3577").geom
 
     # Return region code
