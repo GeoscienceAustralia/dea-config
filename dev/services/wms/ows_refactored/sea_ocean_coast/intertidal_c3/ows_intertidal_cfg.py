@@ -36,7 +36,7 @@ dea_intertidal_layer = {
     "product_name": "ga_s2ls_intertidal_cyear_3",
     "bands": bands_intertidal,
     "time_resolution": "summary",
-    "resource_limits": reslim_standard,
+    "resource_limits": reslim_wms_unlimited,
     "native_crs": "EPSG:3577",
     "native_resolution": [10, -10],
     "image_processing": {
