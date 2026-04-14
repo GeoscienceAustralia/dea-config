@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_standard
+from ows_refactored.ows_reslim_cfg import reslim_wms_unlimited
 from ows_refactored.sea_ocean_coast.tidal_composites_c3.style_tidal_composites_cfg import \
     styles_tidal_composites_list
 
