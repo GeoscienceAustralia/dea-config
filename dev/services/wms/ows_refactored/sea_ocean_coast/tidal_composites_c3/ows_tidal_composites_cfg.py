@@ -33,7 +33,7 @@ dea_tidal_composites_layer = {
     "product_name": "ga_s2_tidal_composites_cyear_3",
     "bands": bands_tidal_composites,
     "time_resolution": "summary",
-    "resource_limits": reslim_standard,
+    "resource_limits": reslim_wms_unlimited,
     "native_crs": "EPSG:3577",
     "native_resolution": [10, -10],
     "image_processing": {
