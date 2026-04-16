@@ -1180,7 +1180,7 @@
                                     "tileErrorHandlingOptions": {
                                         "ignoreUnknownTileErrors": true
                                     },
-                                    "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
+                                    "shortReport": "<small>For more information and to download data, visit the <a style=\'color:#00a1de\' href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
                                     "diffItemProperties": {
                                         "featureInfoTemplate": {
                                             "template": "<div style='width:510px'><h1 style='font-weight:normal'>Digital Earth Australia Intertidal</h1>Elevation differences are shown for pixels with data in both timesteps only.<br><br>Intertidal elevation in {{data.0.time}}: <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1>Intertidal elevation in {{data.1.time}}: <h1 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.1.bands.elevation}}{{/terria.formatNumber}} metres (± {{#terria.formatNumber}}{maximumFractionDigits:2}{{data.1.bands.elevation_uncertainty}}{{/terria.formatNumber}})</b></h1><hr><br><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
@@ -1217,7 +1217,6 @@
                                     "layers": "ga_s2_tidal_composites_cyear_3",
                                     "linkedWcsUrl": "https://ows.dev.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2_tidal_composites_cyear_3",
-                                    "currentTime": "2022",
                                     "dateFormat": "'Year: 'yyyy",
                                     "availableDiffStyles": ["low_mndwi", "high_mndwi"],
                                     "leafletUpdateInterval": 750,
@@ -1226,7 +1225,7 @@
                                     },
                                     "shortReport": "<small>For more information and to download data, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description</a></small>",
                                     "featureInfoTemplate": {
-                                        "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Tidal Composites</h1><br><br><img src='{{data.0.tide_graph_path}}' width='550'><br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about intertidal mapping accuracy and limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-intertidal/'>DEA Intertidal product description.</a></small><br/><br/></div>"
+                                        "template": "<div style='width:550px'><h1 style='font-weight:normal'>DEA Tidal Composites</h1>Low tide imagery at this location was restricted to tide heights lower than:<h2 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.qa_low_threshold}}{{/terria.formatNumber}} m above Mean Sea Level</b></h2>High tide imagery was restricted to tide heights greater than:<h2 style='font-weight:normal'><b>{{#terria.formatNumber}}{maximumFractionDigits:2}{{data.0.bands.qa_high_threshold}}{{/terria.formatNumber}} m above Mean Sea Level</b></h2><br>Satellites may not always observe low and high tidal extremes. The graph below shows the approximate distribution of satellite images used to generate the low and high tide composites at this location, compared to the full astronomical tide range:<br><br><img src='{{data.0.tide_graph_path}}' width='550'><br><br><hr><h3 style='font-weight:normal'><a href='{{data_links}}'><b>Data access and download</b></a></h3><small>For more information about the product including limitations and data access options, visit the <a href='https://knowledge.dea.ga.gov.au/data/product/dea-tidal-composites/'>DEA Intertidal product description.</a></small><br/><br/></div>"
                                     },
                                     "tileWidth": 512,
                                     "tileHeight": 512,
