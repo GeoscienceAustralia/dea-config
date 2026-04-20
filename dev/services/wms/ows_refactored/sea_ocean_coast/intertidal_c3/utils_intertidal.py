@@ -1,4 +1,5 @@
 from datacube_ows.band_utils import scalable
+from odc.geo.geom import point
 from odc.geo.gridspec import GridSpec
 from odc.geo.types import xy_
 
