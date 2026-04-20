@@ -4,7 +4,7 @@ ows_cfg = {
         "response_headers": {
             "Access-Control-Allow-Origin": "*",  # CORS header
         },
-        # "load_driver": "rio",
+        "load_driver": "rio",
         "services": {
             "wms": True,
             "wcs": True,
