@@ -1208,7 +1208,6 @@
                                     "layers": "ga_s2_tidal_composites_cyear_3",
                                     "linkedWcsUrl": "https://ows.dea.ga.gov.au/",
                                     "linkedWcsCoverage": "ga_s2_tidal_composites_cyear_3",
-                                    "currentTime": "2022",
                                     "dateFormat": "'Year: 'yyyy",
                                     "availableDiffStyles": ["low_mndwi", "high_mndwi"],
                                     "leafletUpdateInterval": 750,
