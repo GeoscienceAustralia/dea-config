@@ -1,4 +1,4 @@
-from ows_refactored.ows_reslim_cfg import reslim_standard
+from ows_refactored.ows_reslim_cfg import reslim_wms_unlimited
 from ows_refactored.sea_ocean_coast.tidal_composites_c3.style_tidal_composites_cfg import \
     styles_tidal_composites_list
 
@@ -33,7 +33,7 @@ dea_tidal_composites_layer = {
     "product_name": "ga_s2_tidal_composites_cyear_3",
     "bands": bands_tidal_composites,
     "time_resolution": "summary",
-    "resource_limits": reslim_standard,
+    "resource_limits": reslim_wms_unlimited,
     "native_crs": "EPSG:3577",
     "native_resolution": [10, -10],
     "image_processing": {
