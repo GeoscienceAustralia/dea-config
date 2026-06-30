@@ -1,6 +1,6 @@
 ---
 name: ga_s2ls_intertidal_cyear_3
-metadata_type: eo3_intertidal
+metadata_type: eo3
 description: Geoscience Australia Sentinel-2 Landsat Intertidal Calendar Year Collection 3
 
 license: CC-BY-4.0
@@ -30,6 +30,21 @@ measurements:
     dtype: uint8
     units: "percent"
     nodata: 255
+
+  - name: extents
+    dtype: uint8
+    units: "class"
+    nodata: 255
+    flags_definition:
+      extents:
+        description: Intertidal extents class
+        bits: [0, 1, 2, 3, 4, 5, 6, 7]
+        values:
+          "1": Ocean and coastal waters
+          "2": Exposed intertidal (low confidence)
+          "3": Exposed intertidal (high confidence)
+          "4": Inland waters
+          "5": Land
 
   - name: ta_hat
     dtype: float32
@@ -92,6 +107,20 @@ measurements:
     nodata: 255
     aliases:
       - ndwi_freq
+
+  - name: qa_count_clear
+    dtype: int16
+    units: "count"
+    nodata: -999
+    aliases:
+      - count_clear
+
+  - name: qa_coastal_connectivity
+    dtype: uint16
+    units: "mask"
+    nodata: 65535
+    aliases:
+      - coastal_connectivity
 
 load:
   crs: "EPSG:3577"

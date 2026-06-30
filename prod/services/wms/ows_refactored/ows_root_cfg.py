@@ -4,6 +4,7 @@ ows_cfg = {
         "response_headers": {
             "Access-Control-Allow-Origin": "*",  # CORS header
         },
+        "load_driver": "rio",
         "services": {
             "wms": True,
             "wcs": True,
@@ -21,7 +22,7 @@ ows_cfg = {
                 "horizontal_coord": "x",
                 "vertical_coord": "y",
             },
-            "EPSG:4238": {  # GDA-94 (geographic) - native CRS for ASTER
+            "EPSG:4283": {  # GDA-94 (geographic) - native CRS for ASTER
                 "geographic": True,
                 "horizontal_coord": "longitude",
                 "vertical_coord": "latitude",

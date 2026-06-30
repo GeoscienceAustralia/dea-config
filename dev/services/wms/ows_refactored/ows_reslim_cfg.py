@@ -28,7 +28,7 @@ common_wcs_limits = {
 reslim_standard = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_level": 6.9,
+        "min_zoom_level": 5.9,
         "dataset_cache_rules": dataset_cache_rules,
         "max_datasets": 24,
     },
@@ -38,7 +38,7 @@ reslim_standard = {
 reslim_for_sentinel2 = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_level": 5.9,
+        "min_zoom_level": 4.9,
         "dataset_cache_rules": dataset_cache_rules,
         "max_datasets": 24,
     },
@@ -48,7 +48,7 @@ reslim_for_sentinel2 = {
 reslim_for_sentinel1 = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_level": 5.9,
+        "min_zoom_level": 4.9,
         "dataset_cache_rules": dataset_cache_rules,
         "max_datasets": 24,
     },
@@ -58,7 +58,7 @@ reslim_for_sentinel1 = {
 reslim_for_lccs = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_level": 7.8,
+        "min_zoom_level": 6.8,
         "dataset_cache_rules": dataset_cache_rules,
         "max_datasets": 24,
     },
@@ -68,7 +68,7 @@ reslim_for_lccs = {
 reslim_for_mstp = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
-        "min_zoom_level": 8.1,
+        "min_zoom_level": 7.1,
         "dataset_cache_rules": dataset_cache_rules,
         "max_datasets": 24,
     },

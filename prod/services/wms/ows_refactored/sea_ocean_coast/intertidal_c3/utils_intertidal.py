@@ -1,4 +1,6 @@
 from datacube_ows.band_utils import scalable
+from odc.geo.gridspec import GridSpec
+from odc.geo.types import xy_
 
 
 @scalable
@@ -59,15 +61,33 @@ def tide_graph_path(data, ds):
     """
     Calculates an additional metadata field providing the
     URL to a graph used to visualise tide biases.
+
+    Region codes (e.g. "x123y123") are derived by querying
+    the 32km coastal tile grid based on the centroid of
+    the dataset returned by the GetFeatureInfo request.
     """
+    # Create coastal 32 km gridspec
+    gs_sentinel_c3 = GridSpec(
+        crs="EPSG:3577",
+        resolution=10,
+        tile_shape=(3200, 3200),
+        origin=xy_(-4416000, -6912000),
+    )
+
+    # Get point from GetFeatureInfo data
+    point_albers = data.odc.geobox.extent.centroid.to_crs("EPSG:3577").geom
+
+    # Return region code
+    tile = gs_sentinel_c3.pt2idx(x=point_albers.x, y=point_albers.y)
+    region = f"x{tile.x:03}y{tile.y:03}"
+    region_split = region.replace("y", "/y")
 
     # Extract required data from datacube dataset
-    base_dir = "https://dea-public-data.s3-ap-southeast-2.amazonaws.com/derivative"
+    # Tiled data is stored on dev S3, not prod
+    base_dir = "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative"
     product = ds.metadata_doc['properties']['odc:product']
     version = ds.metadata_doc['properties']['odc:dataset_version'].replace(".", "-")
     year = ds.metadata_doc['properties']['datetime'][:4]
-    region = ds.metadata_doc['properties']['odc:region_code']
-    region_split = region.replace("y", "/y")
 
     # Combine into a string
     return f"{base_dir}/{product}/{version}/{region_split}/{year}--P1Y/{product}_{region}_{year}--P1Y_final_tide_graph.png"

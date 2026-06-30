@@ -20,6 +20,7 @@ style_intertidal_elevation_meso = {
     "abstract": "Intertidal elevation in metres above Mean Sea Level",
     "custom_includes": {
         "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
+        "featureinfo_coords": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.featureinfo_coords",  # add custom metadata field
     },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -353,7 +354,7 @@ style_count_clear = {
     "title": "Clear observation count",
     "abstract": "Count of satellite observations included in DEA Intertidal",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",

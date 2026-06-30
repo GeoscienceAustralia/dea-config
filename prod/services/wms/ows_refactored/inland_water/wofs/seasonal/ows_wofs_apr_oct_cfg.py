@@ -8,7 +8,7 @@ from ows_refactored.ows_reslim_cfg import reslim_standard
 c3_statistics_layer = {
     "title": "DEA Water Observations April to October (Landsat)",
     "name": "ga_ls_wo_fq_apr_oct_3",
-    "abstract": """**Geoscience Australia Water Observations, Seasonal Frequency Statistics, April to October (Landsat, Collection 3, 30 m, WO-STATS-APR-OCT, 3.1.6).**
+    "abstract": """**Geoscience Australia Water Observations, Seasonal Frequency Statistics, April to October (Landsat, Collection 3, 30 m, WO-STATS-APR-OCT, 2.0.0).**
 
 The DEA Seasonal Water Observation (April to October) Statistic is a set of seasonal statistical summaries of the DEA Water Observations product. The product combines satellite observations, that occur during April to October within each year, into summary products that help the understanding of surface water across Australia. The layers available are: the count of clear observations; the count of wet observations; and the percentage of wet observations that were observed over the specified time period in the landscape.
 
