@@ -2046,7 +2046,7 @@
                                     "shortReport": "<small>Refer to the <a style=\'color:#00a1de\' href='https://knowledge.dea.ga.gov.au/guides/reference/collection_3_summary_grid/'>DEA Summary Product Grids</a> Knowledge Hub guide for more information.</small>",
                                     "info": [
                                         {	
-											"name": "DEA Summary Grid Landsat (Collection 3)",
+                                            "name": "DEA Summary Grid Landsat (Collection 3)",
                                             "content": "Digital Earth Australia Summary Grid for Landsat derivative products (96 x 96 km tiles covering the Australian mainland and offshore islands)"
                                         }
                                     ],
@@ -2059,7 +2059,7 @@
                                     "shortReport": "<small>Refer to the <a style=\'color:#00a1de\' href='https://knowledge.dea.ga.gov.au/guides/reference/collection_3_summary_grid/'>DEA Summary Product Grids</a> Knowledge Hub guide for more information.</small>",
                                     "info": [
                                         {
-											"name": "DEA Summary Grid Sentinel (Collection 3)",
+                                            "name": "DEA Summary Grid Sentinel (Collection 3)",
                                             "content": "Digital Earth Australia Summary Grid for Sentinel derivative products (32 x 32 km tiles covering the Australian mainland and offshore islands, nested within the 96 x 96 km Landsat grid)"
                                         }
                                     ],
