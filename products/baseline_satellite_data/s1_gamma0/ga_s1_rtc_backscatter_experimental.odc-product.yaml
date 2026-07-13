@@ -1,7 +1,0 @@
-name: ga_s1_rtc_backscatter_experimental
-description: Radiometric Terrain Corrected (RTC) Backscatter for Sentinel-1 generated from the COMPASS-ISCE3 pipeline
-metadata_type: eo3
-
-metadata:
-  product:
-    name: ga_s1_rtc_backscatter_experimental   
