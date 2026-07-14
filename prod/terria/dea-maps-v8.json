@@ -1600,31 +1600,29 @@
                                 },
                                 {
                                     "type": "geojson",
-                                    "name": "DEA Summary Product Grid (Collection 3, expanded)",
+                                    "name": "DEA Summary Grid Landsat (Collection 3)",
+                                    "shortReport": "<small>Refer to the <a style=\'color:#00a1de\' href='https://knowledge.dea.ga.gov.au/guides/reference/collection_3_summary_grid/'>DEA Summary Product Grids</a> Knowledge Hub guide for more information.</small>",
                                     "info": [
                                         {
-                                            "name": "Important information",
-                                            "content": "This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> in 2024 by updating region code IDs to account for new satellite data processed over Australia's external territories."
+                                            "name": "DEA Summary Grid Landsat (Collection 3)",
+                                            "content": "Digital Earth Australia Summary Grid for Landsat derivative products (96 x 96 km tiles covering the Australian mainland and offshore islands)"
                                         }
                                     ],
-                                    "shortReport": "<small><b>Note:</b> This is a provisional layer intended to replace the existing <b>DEA Summary Product Grid (Collection 3)</b> in 2024 by updating region code IDs to account for new satellite data processed over Australia's external territories.</small>",
-                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3_expanded.geojson",
+                                    "url": "https://data.dea.ga.gov.au/derivative/ga_summary_grid_landsat_c3.geojson",
                                     "id": "ui8151"
                                 },
                                 {
                                     "type": "geojson",
-                                    "name": "DEA Summary Product Grid (Collection 3)",
-                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c3.geojson",
-                                    "id": "xss124"
-                                },
-                                {
-                                    "type": "geojson",
-                                    "name": "DEA Summary Product Grid (Collection 2)",
-                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_summary_grid_c2.geojson",
-                                    "id": "fgfttd",
-                                    "shareKeys": [
-                                        "Root Group/DEA Shapes/DEA Albers Tiles grid"
-                                    ]
+                                    "name": "DEA Summary Grid Sentinel (Collection 3)",
+                                    "shortReport": "<small>Refer to the <a style=\'color:#00a1de\' href='https://knowledge.dea.ga.gov.au/guides/reference/collection_3_summary_grid/'>DEA Summary Product Grids</a> Knowledge Hub guide for more information.</small>",
+                                    "info": [
+                                        {
+                                            "name": "DEA Summary Grid Sentinel (Collection 3)",
+                                            "content": "Digital Earth Australia Summary Grid for Sentinel derivative products (32 x 32 km tiles covering the Australian mainland and offshore islands, nested within the 96 x 96 km Landsat grid)"
+                                        }
+                                    ],
+                                    "url": "https://data.dea.ga.gov.au/derivative/ga_summary_grid_sentinel_c3.geojson",
+                                    "id": "fhf567"
                                 }
                             ]
                         },
