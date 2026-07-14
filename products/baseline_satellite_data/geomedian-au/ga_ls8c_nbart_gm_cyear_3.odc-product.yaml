@@ -11,30 +11,40 @@ metadata:
     name: ga_ls8c_nbart_gm_cyear_3
 
 measurements:
-  - name: blue
+  - name: nbart_blue
     dtype: int16
     nodata: -999
     units: '1'
-  - name: green
+    aliases:
+    - blue
+  - name: nbart_green
     dtype: int16
     nodata: -999
     units: '1'
-  - name: red
+    aliases:
+    - green
+  - name: nbart_red
     dtype: int16
     nodata: -999
     units: '1'
-  - name: nir
+  - name: nbart_nir
     dtype: int16
     nodata: -999
     units: '1'
-  - name: swir1
+    aliases:
+    - nir
+  - name: nbart_swir1
     dtype: int16
     nodata: -999
     units: '1'
-  - name: swir2
+    aliases:
+    - swir1
+  - name: nbart_swir2
     dtype: int16
     nodata: -999
     units: '1'
+    aliases:
+    - swir2
   - name: sdev
     dtype: float32
     nodata: .nan
