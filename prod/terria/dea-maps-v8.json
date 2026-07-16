@@ -1589,13 +1589,13 @@
                                 {
                                     "type": "geojson",
                                     "name": "Sentinel-2 MGRS Tile grid for Australia",
-                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_s2_mgrs_tile_grid.geojson",
+                                    "url": "https://data.dea.ga.gov.au/derivative/ga_s2_mgrs_tile_grid.geojson",
                                     "id": "458eft"
                                 },
                                 {
                                     "type": "geojson",
                                     "name": "Landsat Path Row grid for Australia",
-                                    "url": "https://dea-public-data-dev.s3-ap-southeast-2.amazonaws.com/derivative/ga_ls_path_row_grid.geojson",
+                                    "url": "https://data.dea.ga.gov.au/derivative/ga_ls_path_row_grid.geojson",
                                     "id": "fr874s"
                                 },
                                 {
