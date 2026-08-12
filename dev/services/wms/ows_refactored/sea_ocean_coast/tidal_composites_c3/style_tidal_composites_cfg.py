@@ -3,7 +3,7 @@ style_low_true = {
     "title": "True colour – Low tide",
     "abstract": "Low tide true colour image, using the Red, Green and Blue bands",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "components": {
         "red": {"low_red": 1.0},
@@ -18,7 +18,7 @@ style_high_true = {
     "title": "True colour – High tide",
     "abstract": "High tide true colour image, using the Red, Green and Blue bands",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "components": {
         "red": {"high_red": 1.0},
@@ -33,7 +33,7 @@ style_low_false = {
     "title": "False colour – Low tide",
     "abstract": "Low tide false colour image, using the SWIR2, Green and Blue bands",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "components": {
         "red": {"low_swir_2": 1.0},
@@ -48,7 +48,7 @@ style_high_false = {
     "title": "False colour – High tide",
     "abstract": "High tide false colour image, using the SWIR2, Green and Blue bands",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "components": {
         "red": {"high_swir_2": 1.0},
@@ -63,7 +63,7 @@ style_low_mndwi = {
     "title": "MNDWI – Low tide",
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
@@ -89,7 +89,7 @@ style_high_mndwi = {
     "title": "MNDWI – High tide",
     "abstract": "Modified Normalised Difference Water Index - a derived index that correlates well with the existence of water (Xu 2006)",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "index_function": {
         "function": "datacube_ows.band_utils.norm_diff",
@@ -115,7 +115,7 @@ style_count_clear = {
     "title": "Clear observation count",
     "abstract": "Count of observations included in tidal composites",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "index_function": {
         "function": "datacube_ows.band_utils.single_band",
@@ -144,7 +144,7 @@ style_low_true_log = {
     "title": "True colour – Low tide (experimental)",
     "abstract": "Low tide true colour image, using the red, green and blue bands",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "additional_bands": ["low_red", "low_green", "low_blue"],
     "components": {
@@ -180,7 +180,7 @@ style_high_true_log = {
     "title": "True colour – High tide (experimental)",
     "abstract": "High tide true colour image, using the red, green and blue bands",
     "custom_includes": {
-        "tide_graph_path": "ows_refactored.sea_ocean_coast.tidal_composites_c3.utils_tidal_composites.tide_graph_path",  # add custom metadata field
+        "tide_graph_path": "ows_refactored.sea_ocean_coast.intertidal_c3.utils_intertidal.tide_graph_path",  # add custom metadata field
     },
     "additional_bands": ["high_red", "high_green", "high_blue"],
     "components": {
