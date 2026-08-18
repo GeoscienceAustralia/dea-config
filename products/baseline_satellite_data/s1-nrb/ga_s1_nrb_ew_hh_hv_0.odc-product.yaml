@@ -1,4 +1,4 @@
-name: ga_s1_nrb_iw_hh_hv_0
+name: ga_s1_nrb_ew_hh_hv_0
 description: Geoscience Australia Sentinel-1 Extra Wide Mode Normalised Radar Backscatter Gamma0 HH+HV Linear Backscatter Collection 0
 metadata_type: eo3_s1_nrb
 
@@ -6,7 +6,7 @@ license: CC-BY-4.0
 
 metadata:
   product: 
-    name: ga_s1_nrb_iw_hh_hv_0
+    name: ga_s1_nrb_ew_hh_hv_0
   properties:
     odc:product_family: sar_ard
 
