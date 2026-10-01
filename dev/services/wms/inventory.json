@@ -1,7 +1,7 @@
 {
 
 
-    "total_layers_count": 86,
+    "total_layers_count": 88,
 
     "layers": [
         {
@@ -209,6 +209,34 @@
             "layer": "ga_s1_nrb_iw_vv_0",
             "product": [
                 "ga_s1_nrb_iw_vv_0"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "VV",
+                "VV_DB",
+                "mask"
+            ]
+        },
+        {
+            "layer": "ga_s1_nrb_iw_vv_vh_1",
+            "product": [
+                "ga_s1_nrb_iw_vv_vh_1"
+            ],
+            "styles_count": 7,
+            "styles_list": [
+                "VV",
+                "VH",
+                "VV_DB",
+                "VH_DB",
+                "vv_vh_false_colour_linear",
+                "vv_vh_false_colour_db",
+                "mask"
+            ]
+        },
+        {
+            "layer": "ga_s1_nrb_iw_vv_1",
+            "product": [
+                "ga_s1_nrb_iw_vv_1"
             ],
             "styles_count": 3,
             "styles_list": [
