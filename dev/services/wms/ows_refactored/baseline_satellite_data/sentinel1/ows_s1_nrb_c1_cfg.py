@@ -1,6 +1,6 @@
 from ows_refactored.baseline_satellite_data.sentinel1.band_s1_nrb_c1_cfg import (
-    bands_sentinel1_nrb_hh,
     bands_sentinel1_nrb_hh_hv,
+    bands_sentinel1_nrb_hh,
     bands_sentinel1_nrb_vv,
     bands_sentinel1_nrb_vv_vh,
 )
