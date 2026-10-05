@@ -1,15 +1,9 @@
 from ows_refactored.baseline_satellite_data.sentinel1.band_s1_nrb_c1_cfg import (
-    bands_sentinel1_nrb_hh_hv,
-    bands_sentinel1_nrb_hh,
-    bands_sentinel1_nrb_vv,
-    bands_sentinel1_nrb_vv_vh,
-)
+    bands_sentinel1_nrb_hh, bands_sentinel1_nrb_hh_hv, bands_sentinel1_nrb_vv,
+    bands_sentinel1_nrb_vv_vh)
 from ows_refactored.baseline_satellite_data.sentinel1.style_s1_nrb_c1_cfg import (
-    styles_s1_nrb_hh_hv_list,
-    styles_s1_nrb_hh_list,
-    styles_s1_nrb_vv_list,
-    styles_s1_nrb_vv_vh_list,
-)
+    styles_s1_nrb_hh_hv_list, styles_s1_nrb_hh_list, styles_s1_nrb_vv_list,
+    styles_s1_nrb_vv_vh_list)
 from ows_refactored.ows_reslim_cfg import reslim_for_sentinel1
 
 iw_vv_vh_1_layer = {
