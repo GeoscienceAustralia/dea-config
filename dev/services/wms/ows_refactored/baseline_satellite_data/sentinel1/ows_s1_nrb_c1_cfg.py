@@ -41,7 +41,7 @@ iw_vv_1_layer = {
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "VV_DB",
+        "default_style": "vv_db",
         "styles": styles_s1_nrb_vv_list,
     },
 }
@@ -61,7 +61,7 @@ iw_hh_hv_1_layer = {
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "vv_vh_false_colour_db",
+        "default_style": "hh_hv_false_colour_blue_db",
         "styles": styles_s1_nrb_hh_hv_list,
     },
 }
@@ -81,7 +81,7 @@ iw_hh_1_layer = {
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "HH_DB",
+        "default_style": "hh_db",
         "styles": styles_s1_nrb_hh_list,
     },
 }
