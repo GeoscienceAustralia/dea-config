@@ -46,8 +46,8 @@ iw_vv_1_layer = {
     },
 }
 
-iw_hh_vh_1_layer = {
-    "name": "ga_s1_nrb_iw_hh_vh_1",
+iw_hh_hv_1_layer = {
+    "name": "ga_s1_nrb_iw_hh_hv_1",
     "title": "DE Normalised Radar Backscatter C1 (Sentinel-1 IW, HH+HV)",
     "abstract": "Experimental Sentinel-1 backscatter data (HH+HV)",
     "product_name": "ga_s1_nrb_iw_hh_hv_1",
