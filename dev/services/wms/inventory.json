@@ -224,8 +224,8 @@
             ],
             "styles_count": 7,
             "styles_list": [
-                "vv",
-                "vh",
+                "vv_linear",
+                "vh_linear",
                 "vv_db",
                 "vh_db",
                 "vv_vh_false_colour_linear",
@@ -240,7 +240,7 @@
             ],
             "styles_count": 3,
             "styles_list": [
-                "vv",
+                "vv_linear",
                 "vv_db",
                 "mask"
             ]
@@ -250,10 +250,10 @@
             "product": [
                 "ga_s1_nrb_iw_hh_hv_1"
             ],
-            "styles_count": 7,
+            "styles_count": 8,
             "styles_list": [
-                "hh",
-                "hv",
+                "hh_linear",
+                "hv_linear",
                 "hh_db",
                 "hv_db",
                 "hh_hv_false_colour_linear",
@@ -269,7 +269,7 @@
             ],
             "styles_count": 3,
             "styles_list": [
-                "hh",
+                "hh_linear",
                 "hh_db",
                 "mask"
             ]
