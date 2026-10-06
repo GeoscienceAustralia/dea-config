@@ -1,7 +1,7 @@
 {
 
 
-    "total_layers_count": 88,
+    "total_layers_count": 90,
 
     "layers": [
         {
@@ -224,10 +224,10 @@
             ],
             "styles_count": 7,
             "styles_list": [
-                "VV",
-                "VH",
-                "VV_DB",
-                "VH_DB",
+                "vv_linear",
+                "vh_linear",
+                "vv_db",
+                "vh_db",
                 "vv_vh_false_colour_linear",
                 "vv_vh_false_colour_db",
                 "mask"
@@ -240,8 +240,37 @@
             ],
             "styles_count": 3,
             "styles_list": [
-                "VV",
-                "VV_DB",
+                "vv_linear",
+                "vv_db",
+                "mask"
+            ]
+        },
+        {
+            "layer": "ga_s1_nrb_iw_hh_hv_1",
+            "product": [
+                "ga_s1_nrb_iw_hh_hv_1"
+            ],
+            "styles_count": 8,
+            "styles_list": [
+                "hh_linear",
+                "hv_linear",
+                "hh_db",
+                "hv_db",
+                "hh_hv_false_colour_linear",
+                "hh_hv_false_colour_blue_db",
+                "hh_hv_false_colour_red_db",
+                "mask"
+            ]
+        },
+        {
+            "layer": "ga_s1_nrb_iw_hh_1",
+            "product": [
+                "ga_s1_nrb_iw_hh_1"
+            ],
+            "styles_count": 3,
+            "styles_list": [
+                "hh_linear",
+                "hh_db",
                 "mask"
             ]
         },
