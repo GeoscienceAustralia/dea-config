@@ -1,0 +1,148 @@
+---
+name: eo3_landsat_l1
+description: EO3 for Level 1 Landsat, GA Collection 3
+dataset:
+  id:
+  - id
+  label:
+  - label
+  format:
+  - properties
+  - odc:file_format
+  sources:
+  - lineage
+  - source_datasets
+  creation_dt:
+  - properties
+  - odc:processing_datetime
+  grid_spatial:
+  - grid_spatial
+  - projection
+  measurements:
+  - measurements
+  search_fields:
+    lat:
+      type: double-range
+      max_offset:
+      - - extent
+        - lat
+        - end
+      min_offset:
+      - - extent
+        - lat
+        - begin
+      description: Latitude range
+    lon:
+      type: double-range
+      max_offset:
+      - - extent
+        - lon
+        - end
+      min_offset:
+      - - extent
+        - lon
+        - begin
+      description: Longitude range
+    time:
+      type: datetime-range
+      max_offset:
+      - - properties
+        - dtr:end_datetime
+      - - properties
+        - datetime
+      min_offset:
+      - - properties
+        - dtr:start_datetime
+      - - properties
+        - datetime
+      description: Acquisition time range
+    eo_gsd:
+      type: double
+      offset:
+      - properties
+      - eo:gsd
+      indexed: false
+      description: "Ground sampling distance of the sensor’s best resolution band\n
+        in metres; represents the size (or spatial resolution) of one pixel.\n"
+    crs_raw:
+      offset:
+      - crs
+      indexed: false
+      description: The raw CRS string as it appears in metadata
+    platform:
+      offset:
+      - properties
+      - eo:platform
+      indexed: false
+      description: Platform code
+    instrument:
+      offset:
+      - properties
+      - eo:instrument
+      indexed: false
+      description: Instrument name
+    cloud_cover:
+      type: double
+      offset:
+      - properties
+      - eo:cloud_cover
+      description: "The proportion (from 0 to 100) of the dataset's valid data area
+        that contains cloud pixels.\n"
+    region_code:
+      offset:
+      - properties
+      - odc:region_code
+      description: "Spatial reference code from the provider. For Landsat region_code
+        is a scene path row:\n        '{:03d}{:03d}.format(path,row)'.\nFor Sentinel
+        it is MGRS code. In general it is a unique string identifier that datasets
+        covering roughly the same spatial region share.\n"
+    eo_sun_azimuth:
+      type: double
+      offset:
+      - properties
+      - eo:sun_azimuth
+      indexed: false
+      description: "The azimuth angle of the sun at the moment of acquisition, in
+        degree units measured clockwise from due north\n"
+    product_family:
+      offset:
+      - properties
+      - odc:product_family
+      indexed: false
+      description: Product family code
+    dataset_maturity:
+      offset:
+      - properties
+      - dea:dataset_maturity
+      indexed: false
+      description: One of - final|interim|nrt  (near real time)
+    eo_sun_elevation:
+      type: double
+      offset:
+      - properties
+      - eo:sun_elevation
+      indexed: false
+      description: "The elevation angle of the sun at the moment of acquisition, in
+        degree units relative to the horizon.\n"
+    landsat_scene_id:
+      offset:
+      - properties
+      - landsat:landsat_scene_id
+      indexed: false
+      description: "A Landsat scene ID including WRS path and row, year and day,\n
+        ground station identifier and archive version number\n\n(e.g. ‘LC80900852021066LGN00’)\n"
+    landsat_data_type:
+      offset:
+      - properties
+      - landsat:data_type
+      indexed: false
+      description: Landsat Data Type (eg. 'L1T')
+    landsat_product_id:
+      offset:
+      - properties
+      - landsat:landsat_product_id
+      indexed: false
+      description: "A Landsat Collection 1 Level-1 product identifier including the\n
+        Collection processing levels, processing date, collection number, and\ncollection
+        tier category\n\n(e.g. ‘LE07_L1TP_098084_20210307_20210308_02_RT’)\n"
+...
