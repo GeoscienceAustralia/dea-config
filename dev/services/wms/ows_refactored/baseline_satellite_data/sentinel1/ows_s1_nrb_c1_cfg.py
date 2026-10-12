@@ -61,7 +61,7 @@ iw_hh_hv_1_layer = {
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "hh_hv_false_colour_blue_db",
+        "default_style": "hh_hv_false_colour_db",
         "styles": styles_s1_nrb_hh_hv_list,
     },
 }
