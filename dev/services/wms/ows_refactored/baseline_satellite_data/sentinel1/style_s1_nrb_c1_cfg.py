@@ -118,9 +118,9 @@ style_s1_nrb_hh_hv_false_colour_linear = {
 }
 
 # TODO: Get scale range is p5 and p99 of samples across Antarctica/Australia.
-style_s1_nrb_hh_hv_false_colour_blue_db = {
-    "name": "hh_hv_false_colour_blue_db",
-    "title": "HH+HV False Colour (dB) [blue=ratio]",
+style_s1_nrb_hh_hv_false_colour_db = {
+    "name": "hh_hv_false_colour_db",
+    "title": "HH+HV False Colour (dB)",
     "abstract": "HH+HV False Colour (dB)",
     "additional_bands": ["hh_gamma0", "hv_gamma0"],
     "components": {
@@ -144,38 +144,6 @@ style_s1_nrb_hh_hv_false_colour_blue_db = {
                 "band1": "hh_gamma0",
                 "band2": "hv_gamma0",
                 "scale_from": (0.0, 15),
-            },
-        },
-    },
-}
-
-# TODO: Get scale range is p5 and p99 of samples across Antarctica/Australia.
-style_s1_nrb_hh_hv_false_colour_red_db = {
-    "name": "hh_hv_false_colour_red_db",
-    "title": "HH+HV False Colour (dB) [red=ratio]",
-    "abstract": "HH+HV False Colour (dB)",
-    "additional_bands": ["hh_gamma0", "hv_gamma0"],
-    "components": {
-        "red": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db_difference",
-            "kwargs": {
-                "band1": "hh_gamma0",
-                "band2": "hv_gamma0",
-                "scale_from": (0.0, 15),
-            },
-        },
-        "green": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hv_gamma0",
-                "scale_from": (-25, 5),
-            },
-        },
-        "blue": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hh_gamma0",
-                "scale_from": (-35, -5),
             },
         },
     },
@@ -372,8 +340,7 @@ styles_s1_nrb_hh_hv_list = [
     style_s1_nrb_hh_db,
     style_s1_nrb_hv_db,
     style_s1_nrb_hh_hv_false_colour_linear,
-    style_s1_nrb_hh_hv_false_colour_blue_db,
-    style_s1_nrb_hh_hv_false_colour_red_db,
+    style_s1_nrb_hh_hv_false_colour_db,
     style_s1_nrb_mask,
 ]
 

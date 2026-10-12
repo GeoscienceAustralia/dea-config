@@ -1,7 +1,7 @@
 # Default compose will create an ows image, with dev settings and connect to a local db
 services:
   ows:
-    image: opendatacube/ows:latest
+    image: ghcr.io/opendatacube/ows:latest
     environment:
       # # Defaults are defined in .env file
       - ODC_DEFAULT_DB_HOSTNAME=postgres

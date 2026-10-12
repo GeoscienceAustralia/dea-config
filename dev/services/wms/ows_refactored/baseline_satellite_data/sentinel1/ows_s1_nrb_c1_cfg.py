@@ -14,6 +14,7 @@ iw_vv_vh_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_vv_vh,
+    "time_resolution": "solar",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_nan",
@@ -34,6 +35,7 @@ iw_vv_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_vv,
+    "time_resolution": "solar",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_nan",
@@ -54,6 +56,7 @@ iw_hh_hv_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_hh_hv,
+    "time_resolution": "utc",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_nan",
@@ -61,7 +64,7 @@ iw_hh_hv_1_layer = {
         "manual_merge": False,
     },
     "styling": {
-        "default_style": "hh_hv_false_colour_blue_db",
+        "default_style": "hh_hv_false_colour_db",
         "styles": styles_s1_nrb_hh_hv_list,
     },
 }
@@ -74,6 +77,7 @@ iw_hh_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_hh,
+    "time_resolution": "utc",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
         "extent_mask_func": "datacube_ows.ogc_utils.mask_by_nan",
