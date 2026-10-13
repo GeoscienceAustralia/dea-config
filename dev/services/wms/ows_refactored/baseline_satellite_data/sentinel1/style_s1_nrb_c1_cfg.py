@@ -149,6 +149,43 @@ style_s1_nrb_hh_hv_false_colour_db = {
     },
 }
 
+style_s1_nrb_hh_hv_sar_ice = {
+    "name": "hh_hv_sar_ice",
+    "title": "HH+HV SAR-Ice",
+    "abstract": "HH+HV Sea Ice Composite",
+    "additional_bands": ["hh_gamma0", "hv_gamma0"],
+    "components": {
+        "red": {
+            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sar_ice_square_root_stretch",
+            "kwargs": {
+                "band": "hv_gamma0",
+                "min_val": 0.02,
+                "max_val": 0.1,
+                "gamma": 1.0
+            }
+        },
+        "green": {
+            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sar_ice_overlay",
+            "kwargs": {
+                "band1": "hh_gamma0",
+                "band2": "hv_gamma0",
+                "min_val": 0.0,
+                "max_val": 0.06,
+                "gamma": 1.0
+            },
+        },
+        "blue": {
+            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sar_ice_square_root_stretch",
+            "kwargs": {
+                "band": "hh_gamma0",
+                "min_val": 0.0,
+                "max_val": 0.32,
+                "gamma": 1.0
+            }
+        },
+    },
+}
+
 # Scale range is p5 and p95 of samples across Australia.
 # The scale range is set to these values to enhance the contrast of the images and make it easier to distinguish different features in the data.
 # The scale range can be adjusted based on the specific use case and the desired level of detail in the images.
@@ -341,6 +378,7 @@ styles_s1_nrb_hh_hv_list = [
     style_s1_nrb_hv_db,
     style_s1_nrb_hh_hv_false_colour_linear,
     style_s1_nrb_hh_hv_false_colour_db,
+    style_s1_nrb_hh_hv_sar_ice,
     style_s1_nrb_mask,
 ]
 

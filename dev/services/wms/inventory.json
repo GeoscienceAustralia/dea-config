@@ -250,7 +250,7 @@
             "product": [
                 "ga_s1_nrb_iw_hh_hv_1"
             ],
-            "styles_count": 7,
+            "styles_count": 8,
             "styles_list": [
                 "hh_linear",
                 "hv_linear",
@@ -258,6 +258,7 @@
                 "hv_db",
                 "hh_hv_false_colour_linear",
                 "hh_hv_false_colour_db",
+                "hh_hv_sar_ice",
                 "mask"
             ]
         },
