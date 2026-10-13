@@ -28,7 +28,7 @@ def sar_ice_overlay(data, band1, band2, min_val, max_val, gamma=1.0):
     overlay = ((1 - 2 * top) * bottom + 2 * top) * bottom
     band_data = np.clip(overlay, min_val, max_val)
     normalised = (band_data - min_val) / (max_val - min_val)
-    return 255 * (normalised ** (1/gamma))
+    return 255 * (normalised ** (1 / gamma))
 
 
 def sar_ice_square_root_stretch(data, band, min_val, max_val, gamma=1.0):
@@ -39,4 +39,4 @@ def sar_ice_square_root_stretch(data, band, min_val, max_val, gamma=1.0):
     band_data = np.sqrt(band_data + 0.002)
     band_data = np.clip(band_data, min_val, max_val)
     normalised = (band_data - min_val) / (max_val - min_val)
-    return 255 * (normalised ** (1/gamma))
+    return 255 * (normalised ** (1 / gamma))
