@@ -6,6 +6,12 @@ from ows_refactored.baseline_satellite_data.sentinel1.style_s1_nrb_c1_cfg import
     styles_s1_nrb_vv_vh_list)
 from ows_refactored.ows_reslim_cfg import reslim_for_sentinel1
 
+flags = [
+    {
+        "band": "mask",
+    },
+]
+
 iw_vv_vh_1_layer = {
     "name": "ga_s1_nrb_iw_vv_vh_1",
     "title": "DE Normalised Radar Backscatter C1 (Sentinel-1 IW, VV+VH)",
@@ -14,6 +20,7 @@ iw_vv_vh_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_vv_vh,
+    "flags": flags,
     "time_resolution": "solar",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
@@ -35,6 +42,7 @@ iw_vv_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_vv,
+    "flags": flags,
     "time_resolution": "solar",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
@@ -56,6 +64,7 @@ iw_hh_hv_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_hh_hv,
+    "flags": flags,
     "time_resolution": "utc",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
@@ -77,6 +86,7 @@ iw_hh_1_layer = {
     "native_crs": "EPSG:3577",
     "native_resolution": [20, -20],
     "bands": bands_sentinel1_nrb_hh,
+    "flags": flags,
     "time_resolution": "utc",
     "resource_limits": reslim_for_sentinel1,
     "image_processing": {
