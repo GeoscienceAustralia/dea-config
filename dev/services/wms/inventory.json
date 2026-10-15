@@ -236,7 +236,8 @@
         {
             "layer": "ga_s1_nrb_iw_vv_1",
             "product": [
-                "ga_s1_nrb_iw_vv_1"
+                "ga_s1_nrb_iw_vv_1",
+                "ga_s1_nrb_iw_vv_vh_1"
             ],
             "styles_count": 3,
             "styles_list": [
@@ -265,7 +266,8 @@
         {
             "layer": "ga_s1_nrb_iw_hh_1",
             "product": [
-                "ga_s1_nrb_iw_hh_1"
+                "ga_s1_nrb_iw_hh_1",
+                "ga_s1_nrb_iw_hh_hv_1"
             ],
             "styles_count": 3,
             "styles_list": [
