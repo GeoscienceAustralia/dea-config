@@ -351,6 +351,13 @@ style_s1_nrb_mask = {
         "blue": {"mask": 1},
     },
     "scale_range": [0, 3],
+    "pq_masks": [
+        {
+            "band": "mask",
+            "values": [255],
+            "invert": True,
+        }
+    ],
 }
 
 
