@@ -346,9 +346,9 @@ style_s1_nrb_mask = {
     "title": "Shadow Layover Mask",
     "abstract": "Shadow Layover Mask",
     "components": {
-        "red": {"mask": 1},
-        "green": {"mask": 1},
-        "blue": {"mask": 1},
+        "red": {"oa_layover_shadow_mask": 1},
+        "green": {"oa_layover_shadow_mask": 1},
+        "blue": {"oa_layover_shadow_mask": 1},
     },
     "scale_range": [0, 3],
     "pq_masks": [
