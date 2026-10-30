@@ -41,7 +41,7 @@ style_s1_nrb_hv_db = {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
             "band": "hv_gamma0",
-            "scale_from": (-38.688, -1.09818748),
+            "scale_from": (-38.688, -1.09818748),  # 2% - 99.9%
             "scale_to": (0, 255),
         },
     },
@@ -59,11 +59,11 @@ style_s1_nrb_hh_hv_false_colour_linear = {
     "components": {
         "red": {
             "hh_gamma0": 1.0,
-            "scale_range": [0.0, 0.28],
+            "scale_range": [0.00189175, 2.30599523],  # 2% - 99.9%
         },
         "green": {
             "hv_gamma0": 1.0,
-            "scale_range": [0.0, 0.06],
+            "scale_range": [0.00013038, 0.77636848],  # 2% - 99.9%
         },
         "blue": {
             "function": "datacube_ows.band_utils.band_quotient",
@@ -71,7 +71,7 @@ style_s1_nrb_hh_hv_false_colour_linear = {
             "kwargs": {
                 "band1": "hh_gamma0",
                 "band2": "hv_gamma0",
-                "scale_from": [0.0, 0.49],
+                "scale_from": [0.0425341308, 10773.0266],  # 2% - 99.9%
             },
         },
     },
@@ -88,14 +88,14 @@ style_s1_nrb_hh_hv_false_colour_db = {
             "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "hh_gamma0",
-                "scale_from": (-25, 5),
+                "scale_from": ( -27.21538734, 3.62868977),  # 2% - 99.9%
             },
         },
         "green": {
             "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "hv_gamma0",
-                "scale_from": (-35, -5),
+                "scale_from": (-38.688, -1.09818748),  # 2% - 99.9%
             },
         },
         "blue": {
@@ -103,7 +103,7 @@ style_s1_nrb_hh_hv_false_colour_db = {
             "kwargs": {
                 "band1": "hh_gamma0",
                 "band2": "hv_gamma0",
-                "scale_from": (0.0, 15),
+                "scale_from": (-13.70164358, 40.32355998),  # 2% - 99.9%
             },
         },
     },
