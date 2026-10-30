@@ -45,7 +45,7 @@ style_s1_nrb_hv_db = {
             "scale_to": (0, 255),
         },
     },
-    "mpl_ramp": "gray",
+    "mpl_ramp": "bone",
     "range": [0, 255],
     "needed_bands": ["hv_gamma0"],
 }
