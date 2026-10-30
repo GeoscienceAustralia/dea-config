@@ -2,92 +2,52 @@ style_s1_nrb_hh = {
     "name": "hh_linear",
     "title": "Backscatter HH",
     "abstract": "Backscatter HH",
-    "components": {
-        "red": {"hh_gamma0": 1},
-        "green": {"hh_gamma0": 1},
-        "blue": {"hh_gamma0": 1},
-    },
-    "scale_range": [0.02, 0.4],
+    "index_expression": "hh_gamma0",
+    "mpl_ramp": "bone",
+    "scale_range": [0.001, 2.3],  # 2% - 99.9%
 }
 
 style_s1_nrb_hv = {
     "name": "hv_linear",
     "title": "Backscatter HV",
     "abstract": "Backscatter HV",
-    "components": {
-        "red": {"hv_gamma0": 1},
-        "green": {"hv_gamma0": 1},
-        "blue": {"hv_gamma0": 1},
-    },
-    "scale_range": [0.02, 0.4],
+    "index_expression": "hv_gamma0",
+    "mpl_ramp": "bone",
+    "scale_range": [0.0001, 0.78],  # 2% - 99.9%
 }
 
-# TODO: Get scale range is p5 and p99 of samples across Antarctica/Australia.
 style_s1_nrb_hh_db = {
     "name": "hh_db",
     "title": "Backscatter HH (dB)",
     "abstract": "Backscatter HH (dB)",
-    "additional_bands": ["hh_gamma0"],
-    "components": {
-        "red": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hh_gamma0",
-                "scale_from": (-20.09524918, -5.6233408),
-                "scale_to": (0, 255),
-            },
-        },
-        "blue": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hh_gamma0",
-                "scale_from": (-20.09524918, -5.6233408),
-                "scale_to": (0, 255),
-            },
-        },
-        "green": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hh_gamma0",
-                "scale_from": (-20.09524918, -5.6233408),
-                "scale_to": (0, 255),
-            },
+    "index_function": {
+        "function": "s1_style_functions.db",
+        "kwargs": {
+            "band": "hh_gamma0",
+            "scale_from": (-27.21538734, 3.62868977),  # 2% - 99.9%
+            "scale_to": (0, 255),
         },
     },
+    "mpl_ramp": "bone",
+    "range": [0, 255],
+    "needed_bands": ["hh_gamma0"],
 }
 
-# TODO: Get scale range is p5 and p99 of samples across Antarctica/Australia.
 style_s1_nrb_hv_db = {
     "name": "hv_db",
     "title": "Backscatter HV (dB)",
     "abstract": "Backscatter HV (dB)",
-    "additional_bands": ["hv_gamma0"],
-    "components": {
-        "red": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hv_gamma0",
-                "scale_from": (-17, 6),
-                "scale_to": (0, 255),
-            },
-        },
-        "blue": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hv_gamma0",
-                "scale_from": (-17, 6),
-                "scale_to": (0, 255),
-            },
-        },
-        "green": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "hv_gamma0",
-                "scale_from": (-17, 6),
-                "scale_to": (0, 255),
-            },
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
+        "kwargs": {
+            "band": "hv_gamma0",
+            "scale_from": (-38.688, -1.09818748),  # 2% - 99.9%
+            "scale_to": (0, 255),
         },
     },
+    "mpl_ramp": "bone",
+    "range": [0, 255],
+    "needed_bands": ["hv_gamma0"],
 }
 
 # Scale range is p5 and p99 of samples across Australia.
@@ -99,11 +59,11 @@ style_s1_nrb_hh_hv_false_colour_linear = {
     "components": {
         "red": {
             "hh_gamma0": 1.0,
-            "scale_range": [0.0, 0.28],
+            "scale_range": [0.00189175, 2.30599523],  # 2% - 99.9%
         },
         "green": {
             "hv_gamma0": 1.0,
-            "scale_range": [0.0, 0.06],
+            "scale_range": [0.00013038, 0.77636848],  # 2% - 99.9%
         },
         "blue": {
             "function": "datacube_ows.band_utils.band_quotient",
@@ -111,7 +71,7 @@ style_s1_nrb_hh_hv_false_colour_linear = {
             "kwargs": {
                 "band1": "hh_gamma0",
                 "band2": "hv_gamma0",
-                "scale_from": [0.0, 0.49],
+                "scale_from": [0.0425341308, 10773.0266],  # 2% - 99.9%
             },
         },
     },
@@ -128,14 +88,14 @@ style_s1_nrb_hh_hv_false_colour_db = {
             "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "hh_gamma0",
-                "scale_from": (-25, 5),
+                "scale_from": ( -27.21538734, 3.62868977),  # 2% - 99.9%
             },
         },
         "green": {
             "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "hv_gamma0",
-                "scale_from": (-35, -5),
+                "scale_from": (-38.688, -1.09818748),  # 2% - 99.9%
             },
         },
         "blue": {
@@ -143,7 +103,7 @@ style_s1_nrb_hh_hv_false_colour_db = {
             "kwargs": {
                 "band1": "hh_gamma0",
                 "band2": "hv_gamma0",
-                "scale_from": (0.0, 15),
+                "scale_from": (-13.70164358, 40.32355998),  # 2% - 99.9%
             },
         },
     },
@@ -193,11 +153,8 @@ style_s1_nrb_vv = {
     "name": "vv_linear",
     "title": "Backscatter VV",
     "abstract": "Backscatter VV",
-    "components": {
-        "red": {"vv_gamma0": 1},
-        "green": {"vv_gamma0": 1},
-        "blue": {"vv_gamma0": 1},
-    },
+    "index_expression": "vv_gamma0",
+    "mpl_ramp": "viridis",
     "scale_range": [0.00978187, 0.16764995],
 }
 
@@ -206,11 +163,8 @@ style_s1_nrb_vh = {
     "name": "vh_linear",
     "title": "Backscatter VH",
     "abstract": "Backscatter VH",
-    "components": {
-        "red": {"vh_gamma0": 1},
-        "green": {"vh_gamma0": 1},
-        "blue": {"vh_gamma0": 1},
-    },
+    "index_expression": "vh_gamma0",
+    "mpl_ramp": "viridis",
     "scale_range": [0.00096179, 0.03024042],
 }
 
@@ -219,33 +173,17 @@ style_s1_nrb_vv_db = {
     "name": "vv_db",
     "title": "Backscatter VV (dB)",
     "abstract": "Backscatter VV (dB)",
-    "additional_bands": ["vv_gamma0"],
-    "components": {
-        "red": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "vv_gamma0",
-                "scale_from": (-20.09524918, -5.6233408),
+                "scale_from": (-20.09524918, -5.6233408), # 5% - 99%
                 "scale_to": (0, 255),
-            },
-        },
-        "blue": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "vv_gamma0",
-                "scale_from": (-20.09524918, -5.6233408),
-                "scale_to": (0, 255),
-            },
-        },
-        "green": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "vv_gamma0",
-                "scale_from": (-20.09524918, -5.6233408),
-                "scale_to": (0, 255),
-            },
         },
     },
+    "mpl_ramp": "viridis",
+    "range": [0, 255],
+    "needed_bands": ["vv_gamma0"],
 }
 
 # Scale range is p5 and p99 of samples across Australia.
@@ -253,33 +191,17 @@ style_s1_nrb_vh_db = {
     "name": "vh_db",
     "title": "Backscatter VH (dB)",
     "abstract": "Backscatter VH (dB)",
-    "additional_bands": ["vh_gamma0"],
-    "components": {
-        "red": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "vh_gamma0",
-                "scale_from": (-30.15318871, -11.6874733),
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
+        "kwargs": {
+            "band": "vh_gamma0",
+            "scale_from": (-30.15318871, -11.6874733), # 5% - 99%
                 "scale_to": (0, 255),
-            },
-        },
-        "blue": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "vh_gamma0",
-                "scale_from": (-30.15318871, -11.6874733),
-                "scale_to": (0, 255),
-            },
-        },
-        "green": {
-            "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "vh_gamma0",
-                "scale_from": (-30.15318871, -11.6874733),
-                "scale_to": (0, 255),
-            },
         },
     },
+    "mpl_ramp": "viridis",
+    "range": [0, 255],
+    "needed_bands": ["vh_gamma0"],
 }
 
 # Scale range is p5 and p99 of samples across Australia.
