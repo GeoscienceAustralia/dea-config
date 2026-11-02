@@ -88,7 +88,7 @@ style_s1_nrb_hh_hv_false_colour_db = {
             "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
             "kwargs": {
                 "band": "hh_gamma0",
-                "scale_from": ( -27.21538734, 3.62868977),  # 2% - 99.9%
+                "scale_from": (-27.21538734, 3.62868977),  # 2% - 99.9%
             },
         },
         "green": {
@@ -175,10 +175,10 @@ style_s1_nrb_vv_db = {
     "abstract": "Backscatter VV (dB)",
     "index_function": {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
-            "kwargs": {
-                "band": "vv_gamma0",
-                "scale_from": (-20.09524918, -5.6233408), # 5% - 99%
-                "scale_to": (0, 255),
+        "kwargs": {
+            "band": "vv_gamma0",
+            "scale_from": (-20.09524918, -5.6233408),  # 5% - 99%
+            "scale_to": (0, 255),
         },
     },
     "mpl_ramp": "viridis",
@@ -195,7 +195,7 @@ style_s1_nrb_vh_db = {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
             "band": "vh_gamma0",
-            "scale_from": (-30.15318871, -11.6874733), # 5% - 99%
+            "scale_from": (-30.15318871, -11.6874733),  # 5% - 99%
                 "scale_to": (0, 255),
         },
     },
