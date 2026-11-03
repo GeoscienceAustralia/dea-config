@@ -4,7 +4,7 @@ style_s1_nrb_hh = {
     "abstract": "Backscatter HH",
     "index_expression": "hh_gamma0",
     "mpl_ramp": "bone",
-    "scale_range": [0.001, 2.3],  # 2% - 99.9%
+    "range": [0.001, 2.3],  # 2% - 99.9%
 }
 
 style_s1_nrb_hv = {
@@ -13,7 +13,7 @@ style_s1_nrb_hv = {
     "abstract": "Backscatter HV",
     "index_expression": "hv_gamma0",
     "mpl_ramp": "bone",
-    "scale_range": [0.0001, 0.78],  # 2% - 99.9%
+    "range": [0.0001, 0.78],  # 2% - 99.9%
 }
 
 style_s1_nrb_hh_db = {
@@ -21,7 +21,7 @@ style_s1_nrb_hh_db = {
     "title": "Backscatter HH (dB)",
     "abstract": "Backscatter HH (dB)",
     "index_function": {
-        "function": "s1_style_functions.db",
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
             "band": "hh_gamma0",
             "scale_from": (-27.21538734, 3.62868977),  # 2% - 99.9%
@@ -155,7 +155,7 @@ style_s1_nrb_vv = {
     "abstract": "Backscatter VV",
     "index_expression": "vv_gamma0",
     "mpl_ramp": "viridis",
-    "scale_range": [0.00978187, 0.16764995],
+    "range": [0.00978187, 0.16764995],
 }
 
 # Scale range is p5 and p90 of samples across Australia.
@@ -165,7 +165,7 @@ style_s1_nrb_vh = {
     "abstract": "Backscatter VH",
     "index_expression": "vh_gamma0",
     "mpl_ramp": "viridis",
-    "scale_range": [0.00096179, 0.03024042],
+    "range": [0.00096179, 0.03024042],
 }
 
 # Scale range is p5 and p99 of samples across Australia.
@@ -313,6 +313,6 @@ styles_s1_nrb_hh_hv_list = [
 
 styles_s1_nrb_hh_list = [
     style_s1_nrb_hh,
-    style_s1_nrb_hh_db,
-    style_s1_nrb_mask,
+    # style_s1_nrb_hh_db,
+    # style_s1_nrb_mask,
 ]
