@@ -313,6 +313,6 @@ styles_s1_nrb_hh_hv_list = [
 
 styles_s1_nrb_hh_list = [
     style_s1_nrb_hh,
-    # style_s1_nrb_hh_db,
-    # style_s1_nrb_mask,
+    style_s1_nrb_hh_db,
+    style_s1_nrb_mask,
 ]
