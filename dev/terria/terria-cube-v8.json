@@ -445,25 +445,13 @@
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Linear Value</th><th>dB Value</th></tr><tr><td><b>VV Gamma0</b></td><td>{{data.0.band_derived.vv_linear}}</td><td>{{data.0.band_derived.vv_db}}</td></tr><tr><td><b>VH Gamma0</b></td><td>{{data.0.band_derived.vh_linear}}</td><td>{{data.0.band_derived.vh_db}}</td></tr></table><details style=\"margin: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
+                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Value</th><th>dB</th></tr><tr><td><b>vv_gamma0</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.vv_linear}}{{/terria.formatNumber}}</td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.vv_db}}{{/terria.formatNumber}}</td></tr><tr><td><b>vh_gamma0</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.vh_linear}}{{/terria.formatNumber}}</td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.vh_db}}{{/terria.formatNumber}}</td></tr></table><details style=\"margin-top: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
                                         "formats": {
                                             "lat": {
                                                 "maximumFractionDigits": 5
                                             },
                                             "lon": {
                                                 "maximumFractionDigits": 5
-                                            },
-                                            "data.0.band_derived.vv_linear": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.vv_db": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.vh_linear": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.vh_db": {
-                                                "maximumFractionDigits": 5                                                
                                             }
                                         }
                                     },
@@ -488,19 +476,13 @@
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Linear Value</th><th>dB Value</th></tr><tr><td><b>VV Gamma0</b></td><td>{{data.0.band_derived.vv_linear}}</td><td>{{data.0.band_derived.vv_db}}</td></tr></table><details style=\"margin: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
+                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Value</th><th>dB</th></tr><tr><td><b>vv_gamma0</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.vv_linear}}{{/terria.formatNumber}}</td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.vv_db}}{{/terria.formatNumber}}</td></tr></table><details style=\"margin-top: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
                                         "formats": {
                                             "lat": {
                                                 "maximumFractionDigits": 5
                                             },
                                             "lon": {
                                                 "maximumFractionDigits": 5
-                                            },
-                                            "data.0.band_derived.vv_linear": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.vv_db": {
-                                                "maximumFractionDigits": 5                                                
                                             }
                                         }
                                     },
@@ -525,25 +507,13 @@
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Linear Value</th><th>dB Value</th></tr><tr><td><b>HH Gamma0</b></td><td>{{data.0.band_derived.hh_linear}}</td><td>{{data.0.band_derived.hh_db}}</td></tr><tr><td><b>HV Gamma0</b></td><td>{{data.0.band_derived.hv_linear}}</td><td>{{data.0.band_derived.hv_db}}</td></tr></table><details style=\"margin: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
+                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Value</th><th>dB</th></tr><tr><td><b>hh_gamma0</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.hh_linear}}{{/terria.formatNumber}}</td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.hh_db}}{{/terria.formatNumber}}</td></tr><tr><td><b>hv_gamma0</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.hv_linear}}{{/terria.formatNumber}}</td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.hv_db}}{{/terria.formatNumber}}</td></tr></table><details style=\"margin-top: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
                                         "formats": {
                                             "lat": {
                                                 "maximumFractionDigits": 5
                                             },
                                             "lon": {
                                                 "maximumFractionDigits": 5
-                                            },
-                                            "data.0.band_derived.hh_linear": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.hh_db": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.hv_linear": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.hv_db": {
-                                                "maximumFractionDigits": 5                                                
                                             }
                                         }
                                     },
@@ -568,19 +538,13 @@
                                     "leafletUpdateInterval": 750,
                                     "chartType": "momentPoints",
                                     "featureInfoTemplate": {
-                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Linear Value</th><th>dB Value</th></tr><tr><td><b>HH Gamma0</b></td><td>{{data.0.band_derived.hh_linear}}</td><td>{{data.0.band_derived.hh_db}}</td></tr></table><details style=\"margin: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
+                                        "template": "<p><b>Time:</b> {{data.0.time}}</p><table><tr><th></th><th>Value</th><th>dB</th></tr><tr><td><b>hh_gamma0</b></td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.hh_linear}}{{/terria.formatNumber}}</td><td>{{#terria.formatNumber}}{maximumFractionDigits:5}{{data.0.band_derived.hh_db}}{{/terria.formatNumber}}</td></tr></table><details style=\"margin-top: 10px;\"><summary style=\"cursor: pointer; font-weight: bold;\">Imagery available for dates</summary><div style=\"margin-top: 5px;\">{{#data_available_for_dates}}{{.}}<br/>{{/data_available_for_dates}}</div></details>",
                                         "formats": {
                                             "lat": {
                                                 "maximumFractionDigits": 5
                                             },
                                             "lon": {
                                                 "maximumFractionDigits": 5
-                                            },
-                                            "data.0.band_derived.hh_linear": {
-                                                "maximumFractionDigits": 5                                                
-                                            },
-                                            "data.0.band_derived.hh_db": {
-                                                "maximumFractionDigits": 5                                                
                                             }
                                         }
                                     },
