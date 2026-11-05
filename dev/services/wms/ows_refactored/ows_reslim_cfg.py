@@ -50,7 +50,7 @@ reslim_for_sentinel1 = {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
         "min_zoom_level": 4.9,
         "dataset_cache_rules": dataset_cache_rules,
-        "max_datasets": 24,
+        "max_datasets": 48,
     },
     "wcs": common_wcs_limits,
 }
