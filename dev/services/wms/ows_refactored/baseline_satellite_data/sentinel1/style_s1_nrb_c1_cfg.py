@@ -1,7 +1,7 @@
 style_s1_nrb_hh = {
     "name": "hh_linear",
-    "title": "Backscatter HH",
-    "abstract": "Backscatter HH",
+    "title": "Backscatter HH (Linear)",
+    "abstract": "Backscatter HH (Linear)",
     "index_expression": "hh_gamma0",
     "mpl_ramp": "bone",
     "range": [0.001, 2.3],  # 2% - 99.9%
@@ -9,8 +9,8 @@ style_s1_nrb_hh = {
 
 style_s1_nrb_hv = {
     "name": "hv_linear",
-    "title": "Backscatter HV",
-    "abstract": "Backscatter HV",
+    "title": "Backscatter HV (Linear)",
+    "abstract": "Backscatter HV (Linear)",
     "index_expression": "hv_gamma0",
     "mpl_ramp": "bone",
     "range": [0.0001, 0.78],  # 2% - 99.9%
@@ -24,12 +24,10 @@ style_s1_nrb_hh_db = {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
             "band": "hh_gamma0",
-            "scale_from": (-27.21538734, 3.62868977),  # 2% - 99.9%
-            "scale_to": (0, 255),
         },
     },
     "mpl_ramp": "bone",
-    "range": [0, 255],
+    "range": [-27.21538734, 3.62868977],  # 2% - 99.9%
     "needed_bands": ["hh_gamma0"],
 }
 
@@ -41,20 +39,18 @@ style_s1_nrb_hv_db = {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
             "band": "hv_gamma0",
-            "scale_from": (-38.688, -1.09818748),  # 2% - 99.9%
-            "scale_to": (0, 255),
         },
     },
     "mpl_ramp": "bone",
-    "range": [0, 255],
+    "range": [-38.688, -1.09818748],  # 2% - 99.9%
     "needed_bands": ["hv_gamma0"],
 }
 
 # Scale range is p5 and p99 of samples across Australia.
 style_s1_nrb_hh_hv_false_colour_linear = {
     "name": "hh_hv_false_colour_linear",
-    "title": "HH+HV False Colour",
-    "abstract": "HH+HV False Colour",
+    "title": "HH+HV False Colour (Linear)",
+    "abstract": "HH+HV False Colour (Linear)",
     "additional_bands": ["hh_gamma0", "hv_gamma0"],
     "components": {
         "red": {
@@ -151,8 +147,8 @@ style_s1_nrb_hh_hv_sar_ice = {
 # The scale range can be adjusted based on the specific use case and the desired level of detail in the images.
 style_s1_nrb_vv = {
     "name": "vv_linear",
-    "title": "Backscatter VV",
-    "abstract": "Backscatter VV",
+    "title": "Backscatter VV (Linear)",
+    "abstract": "Backscatter VV (Linear)",
     "index_expression": "vv_gamma0",
     "mpl_ramp": "viridis",
     "range": [0.00978187, 0.16764995],
@@ -161,8 +157,8 @@ style_s1_nrb_vv = {
 # Scale range is p5 and p90 of samples across Australia.
 style_s1_nrb_vh = {
     "name": "vh_linear",
-    "title": "Backscatter VH",
-    "abstract": "Backscatter VH",
+    "title": "Backscatter VH (Linear)",
+    "abstract": "Backscatter VH (Linear)",
     "index_expression": "vh_gamma0",
     "mpl_ramp": "viridis",
     "range": [0.00096179, 0.03024042],
@@ -177,12 +173,10 @@ style_s1_nrb_vv_db = {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
             "band": "vv_gamma0",
-            "scale_from": (-20.09524918, -5.6233408),  # 5% - 99%
-            "scale_to": (0, 255),
         },
     },
     "mpl_ramp": "viridis",
-    "range": [0, 255],
+    "range": [-20.09524918, -5.6233408],  # 5% - 99%
     "needed_bands": ["vv_gamma0"],
 }
 
@@ -195,20 +189,18 @@ style_s1_nrb_vh_db = {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
             "band": "vh_gamma0",
-            "scale_from": (-30.15318871, -11.6874733),  # 5% - 99%
-                "scale_to": (0, 255),
         },
     },
     "mpl_ramp": "viridis",
-    "range": [0, 255],
+    "range": [-30.15318871, -11.6874733],  # 5% - 99%
     "needed_bands": ["vh_gamma0"],
 }
 
 # Scale range is p5 and p99 of samples across Australia.
 style_s1_nrb_false_colour_linear = {
     "name": "vv_vh_false_colour_linear",
-    "title": "VV+VH False Colour",
-    "abstract": "VV+VH False Colour",
+    "title": "VV+VH False Colour (Linear)",
+    "abstract": "VV+VH False Colour (Linear)",
     "additional_bands": ["vv_gamma0", "vh_gamma0"],
     "components": {
         "red": {
