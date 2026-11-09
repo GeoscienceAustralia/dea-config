@@ -1,7 +1,7 @@
 style_s1_nrb_hh = {
     "name": "hh_linear",
-    "title": "Backscatter HH (Linear Power)",
-    "abstract": "Backscatter HH (Linear Power)",
+    "title": "Backscatter HH (Linear)",
+    "abstract": "Backscatter HH (Linear)",
     "index_expression": "hh_gamma0",
     "mpl_ramp": "bone",
     "range": [0.001, 2.3],  # 2% - 99.9%
@@ -9,8 +9,8 @@ style_s1_nrb_hh = {
 
 style_s1_nrb_hv = {
     "name": "hv_linear",
-    "title": "Backscatter HV (Linear Power)",
-    "abstract": "Backscatter HV (Linear Power)",
+    "title": "Backscatter HV (Linear)",
+    "abstract": "Backscatter HV (Linear)",
     "index_expression": "hv_gamma0",
     "mpl_ramp": "bone",
     "range": [0.0001, 0.78],  # 2% - 99.9%
@@ -18,8 +18,8 @@ style_s1_nrb_hv = {
 
 style_s1_nrb_hh_db = {
     "name": "hh_db",
-    "title": "Backscatter HH (dB Power)",
-    "abstract": "Backscatter HH (dB Power)",
+    "title": "Backscatter HH (dB)",
+    "abstract": "Backscatter HH (dB)",
     "index_function": {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
@@ -33,8 +33,8 @@ style_s1_nrb_hh_db = {
 
 style_s1_nrb_hv_db = {
     "name": "hv_db",
-    "title": "Backscatter HV (dB Power)",
-    "abstract": "Backscatter HV (dB Power)",
+    "title": "Backscatter HV (dB)",
+    "abstract": "Backscatter HV (dB)",
     "index_function": {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
@@ -147,8 +147,8 @@ style_s1_nrb_hh_hv_sar_ice = {
 # The scale range can be adjusted based on the specific use case and the desired level of detail in the images.
 style_s1_nrb_vv = {
     "name": "vv_linear",
-    "title": "Backscatter VV (Linear Power)",
-    "abstract": "Backscatter VV (Linear Power)",
+    "title": "Backscatter VV (Linear)",
+    "abstract": "Backscatter VV (Linear)",
     "index_expression": "vv_gamma0",
     "mpl_ramp": "viridis",
     "range": [0.00978187, 0.16764995],
@@ -157,8 +157,8 @@ style_s1_nrb_vv = {
 # Scale range is p5 and p90 of samples across Australia.
 style_s1_nrb_vh = {
     "name": "vh_linear",
-    "title": "Backscatter VH (Linear Power)",
-    "abstract": "Backscatter VH (Linear Power)",
+    "title": "Backscatter VH (Linear)",
+    "abstract": "Backscatter VH (Linear)",
     "index_expression": "vh_gamma0",
     "mpl_ramp": "viridis",
     "range": [0.00096179, 0.03024042],
@@ -167,8 +167,8 @@ style_s1_nrb_vh = {
 # Scale range is p5 and p99 of samples across Australia.
 style_s1_nrb_vv_db = {
     "name": "vv_db",
-    "title": "Backscatter VV (dB Power)",
-    "abstract": "Backscatter VV (dB Power)",
+    "title": "Backscatter VV (dB)",
+    "abstract": "Backscatter VV (dB)",
     "index_function": {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
@@ -183,8 +183,8 @@ style_s1_nrb_vv_db = {
 # Scale range is p5 and p99 of samples across Australia.
 style_s1_nrb_vh_db = {
     "name": "vh_db",
-    "title": "Backscatter VH (dB Power)",
-    "abstract": "Backscatter VH (dB Power)",
+    "title": "Backscatter VH (dB)",
+    "abstract": "Backscatter VH (dB)",
     "index_function": {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
