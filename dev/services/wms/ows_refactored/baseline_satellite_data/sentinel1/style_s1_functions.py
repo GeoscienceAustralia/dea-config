@@ -19,6 +19,29 @@ def db_difference(data, band1, band2):
     return db_difference.where(np.isfinite(db_difference))
 
 
+def sigma0_ellipsoid(data, gamma, gamma_to_beta, incidence_angle):
+    """
+    Compute sigma0 ellipsoid from gamma0 ellipsoid and incidence angle.
+    """
+    gamma0 = data[gamma]
+    beta = data[gamma_to_beta]
+    theta = data[incidence_angle]
+
+    sigma0 = gamma0 * np.sin(np.radians(theta)) * beta
+    return sigma0
+
+
+def sigma0_ellipsoid_db(data, gamma, gamma_to_beta, incidence_angle):
+    """
+    Compute sigma0 ellipsoid from gamma0 ellipsoid and incidence angle.
+    """
+    sigma0 = sigma0_ellipsoid(data, gamma, gamma_to_beta, incidence_angle)
+    
+    sigma0 = 10 * np.log10(sigma0)
+    sigma0 = sigma0.where(np.isfinite(sigma0))
+    return sigma0
+
+
 def sar_ice_overlay(data, band1, band2, min_val, max_val, gamma=1.0):
     """
     Overlay the bands for 2 bands for SAR-Ice.
