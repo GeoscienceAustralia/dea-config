@@ -40,7 +40,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.9
+          python-version: 3.12
       - run: python -m pip install flake8
       - name: flake8 - dev ows_cfg
         uses: liskin/gh-problem-matcher-wrap@v3
@@ -63,7 +63,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.9
+          python-version: 3.12
       - run: python -m pip install isort
       - name: isort - dev ows_cfg
         uses: liskin/gh-problem-matcher-wrap@v3
