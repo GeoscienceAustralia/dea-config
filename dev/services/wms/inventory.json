@@ -222,7 +222,7 @@
             "product": [
                 "ga_s1_nrb_iw_vv_vh_1"
             ],
-            "styles_count": 7,
+            "styles_count": 11,
             "styles_list": [
                 "vv_linear",
                 "vh_linear",
@@ -243,7 +243,7 @@
                 "ga_s1_nrb_iw_vv_1",
                 "ga_s1_nrb_iw_vv_vh_1"
             ],
-            "styles_count": 3,
+            "styles_count": 5,
             "styles_list": [
                 "vv_linear",
                 "vv_db",
@@ -257,7 +257,7 @@
             "product": [
                 "ga_s1_nrb_iw_hh_hv_1"
             ],
-            "styles_count": 8,
+            "styles_count": 12,
             "styles_list": [
                 "hh_linear",
                 "hv_linear",
@@ -279,7 +279,7 @@
                 "ga_s1_nrb_iw_hh_1",
                 "ga_s1_nrb_iw_hh_hv_1"
             ],
-            "styles_count": 3,
+            "styles_count": 5,
             "styles_list": [
                 "hh_linear",
                 "hh_db",
