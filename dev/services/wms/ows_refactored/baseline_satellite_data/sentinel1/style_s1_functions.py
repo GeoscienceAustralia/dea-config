@@ -36,7 +36,7 @@ def sigma0_ellipsoid_db(data, gamma, gamma_to_beta, incidence_angle):
     Compute sigma0 ellipsoid from gamma0 ellipsoid and incidence angle.
     """
     sigma0 = sigma0_ellipsoid(data, gamma, gamma_to_beta, incidence_angle)
-    
+
     sigma0 = 10 * np.log10(sigma0)
     sigma0 = sigma0.where(np.isfinite(sigma0))
     return sigma0
