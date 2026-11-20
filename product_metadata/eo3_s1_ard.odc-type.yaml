@@ -35,12 +35,6 @@ dataset:
       offset: [properties, 'sarard:scene_id']
       indexed: true
       type: string
-
-    beam_id: # Beam id (subswath)
-      description: The beam id (also known as subswath id) that contains the burst.
-      offset: [properties, 'sarard:beam_id']
-      indexed: false
-      type: string
     
     region_code: # Burst ID
       description: >
