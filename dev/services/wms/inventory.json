@@ -228,6 +228,10 @@
                 "vh_linear",
                 "vv_db",
                 "vh_db",
+                "vv_sigma",
+                "vh_sigma",
+                "vv_sigma_db",
+                "vh_sigma_db",
                 "vv_vh_false_colour_linear",
                 "vv_vh_false_colour_db",
                 "mask"
@@ -243,6 +247,8 @@
             "styles_list": [
                 "vv_linear",
                 "vv_db",
+                "vv_sigma",
+                "vv_sigma_db",
                 "mask"
             ]
         },
@@ -257,6 +263,10 @@
                 "hv_linear",
                 "hh_db",
                 "hv_db",
+                "hh_sigma",
+                "hv_sigma",
+                "hh_sigma_db",
+                "hv_sigma_db",
                 "hh_hv_false_colour_linear",
                 "hh_hv_false_colour_db",
                 "hh_hv_sar_ice",
@@ -273,6 +283,8 @@
             "styles_list": [
                 "hh_linear",
                 "hh_db",
+                "hh_sigma",
+                "hh_sigma_db",
                 "mask"
             ]
         },
