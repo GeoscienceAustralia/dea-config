@@ -1,7 +1,7 @@
 style_s1_nrb_hh = {
     "name": "hh_linear",
-    "title": "Backscatter HH (Linear)",
-    "abstract": "Backscatter HH (Linear)",
+    "title": "HH Gamma0 (Linear)",
+    "abstract": "Backscatter HH Gamma0 (Linear)",
     "index_expression": "hh_gamma0",
     "mpl_ramp": "bone",
     "range": [0.001, 2.3],  # 2% - 99.9%
@@ -9,8 +9,8 @@ style_s1_nrb_hh = {
 
 style_s1_nrb_hv = {
     "name": "hv_linear",
-    "title": "Backscatter HV (Linear)",
-    "abstract": "Backscatter HV (Linear)",
+    "title": "HV Gamma0 (Linear)",
+    "abstract": "Backscatter HV Gamma0 (Linear)",
     "index_expression": "hv_gamma0",
     "mpl_ramp": "bone",
     "range": [0.0001, 0.78],  # 2% - 99.9%
@@ -18,8 +18,8 @@ style_s1_nrb_hv = {
 
 style_s1_nrb_hh_db = {
     "name": "hh_db",
-    "title": "Backscatter HH (dB)",
-    "abstract": "Backscatter HH (dB)",
+    "title": "HH Gamma0 (dB)",
+    "abstract": "Backscatter HH Gamma0 (dB)",
     "index_function": {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
@@ -33,8 +33,8 @@ style_s1_nrb_hh_db = {
 
 style_s1_nrb_hv_db = {
     "name": "hv_db",
-    "title": "Backscatter HV (dB)",
-    "abstract": "Backscatter HV (dB)",
+    "title": "HV Gamma0 (dB)",
+    "abstract": "Backscatter HV Gamma0 (dB)",
     "index_function": {
         "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.db",
         "kwargs": {
@@ -44,6 +44,74 @@ style_s1_nrb_hv_db = {
     "mpl_ramp": "bone",
     "range": [-38.688, -1.09818748],  # 2% - 99.9%
     "needed_bands": ["hv_gamma0"],
+}
+
+style_s1_nrb_hh_sigma = {
+    "name": "hh_sigma",
+    "title": "HH Sigma0-ellipsoid (Linear)",
+    "abstract": "Backscatter HH Sigma0-ellipsoid (Linear)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid",
+        "kwargs": {
+            "gamma": "hh_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "bone",
+    "range": [-27.21538734, 3.62868977],  # 2% - 99.9%
+    "needed_bands": ["hh_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
+}
+
+style_s1_nrb_hv_sigma = {
+    "name": "hv_sigma",
+    "title": "HV Sigma0-ellipsoid (Linear)",
+    "abstract": "Backscatter HV Sigma0-ellipsoid (Linear)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid",
+        "kwargs": {
+            "gamma": "hv_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "bone",
+    "range": [-38.688, -1.09818748],  # 2% - 99.9%
+    "needed_bands": ["hv_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
+}
+
+style_s1_nrb_hh_sigma_db = {
+    "name": "hh_sigma_db",
+    "title": "HH Sigma0-ellipsoid (dB)",
+    "abstract": "Backscatter HH Sigma0-ellipsoid (dB)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid_db",
+        "kwargs": {
+            "gamma": "hh_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "bone",
+    "range": [-27.21538734, 3.62868977],  # 2% - 99.9%
+    "needed_bands": ["hh_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
+}
+
+style_s1_nrb_hv_sigma_db = {
+    "name": "hv_sigma_db",
+    "title": "HV Sigma0-ellipsoid (dB)",
+    "abstract": "Backscatter HV Sigma0-ellipsoid (dB)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid_db",
+        "kwargs": {
+            "gamma": "hv_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "bone",
+    "range": [-38.688, -1.09818748],  # 2% - 99.9%
+    "needed_bands": ["hv_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
 }
 
 # Scale range is p5 and p99 of samples across Australia.
@@ -197,6 +265,78 @@ style_s1_nrb_vh_db = {
 }
 
 # Scale range is p5 and p99 of samples across Australia.
+style_s1_nrb_vv_sigma = {
+    "name": "vv_sigma",
+    "title": "VV Sigma0-ellipsoid (Linear)",
+    "abstract": "Backscatter VV Sigma0-ellipsoid (Linear)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid",
+        "kwargs": {
+            "gamma": "vv_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "viridis",
+    "range": [-20.09524918, -5.6233408],  # 5% - 99%
+    "needed_bands": ["vv_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
+}
+
+# Scale range is p5 and p99 of samples across Australia.
+style_s1_nrb_vh_sigma = {
+    "name": "vh_sigma",
+    "title": "VH Sigma0-ellipsoid (Linear)",
+    "abstract": "Backscatter VH Sigma0-ellipsoid (Linear)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid",
+        "kwargs": {
+            "gamma": "vh_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "viridis",
+    "range": [-30.15318871, -11.6874733],  # 5% - 99%
+    "needed_bands": ["vh_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
+}
+
+# Scale range is p5 and p99 of samples across Australia.
+style_s1_nrb_vv_sigma_db = {
+    "name": "vv_sigma_db",
+    "title": "VV Sigma0-ellipsoid (dB)",
+    "abstract": "Backscatter VV Sigma0-ellipsoid (dB)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid_db",
+        "kwargs": {
+            "gamma": "vv_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "viridis",
+    "range": [-20.09524918, -5.6233408],  # 5% - 99%
+    "needed_bands": ["vv_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
+}
+
+# Scale range is p5 and p99 of samples across Australia.
+style_s1_nrb_vh_sigma_db = {
+    "name": "vh_sigma_db",
+    "title": "VH Sigma0-ellipsoid (dB)",
+    "abstract": "Backscatter VH Sigma0-ellipsoid (dB)",
+    "index_function": {
+        "function": "ows_refactored.baseline_satellite_data.sentinel1.style_s1_functions.sigma0_ellipsoid_db",
+        "kwargs": {
+            "gamma": "vh_gamma0",
+            "gamma_to_beta": "gamma0_to_beta0_ratio",
+            "incidence_angle": "incidence_angle",
+        },
+    },
+    "mpl_ramp": "viridis",
+    "range": [-30.15318871, -11.6874733],  # 5% - 99%
+    "needed_bands": ["vh_gamma0", "gamma0_to_beta0_ratio", "incidence_angle"],
+}
+
+# Scale range is p5 and p99 of samples across Australia.
 style_s1_nrb_false_colour_linear = {
     "name": "vv_vh_false_colour_linear",
     "title": "VV+VH False Colour (Linear)",
@@ -280,6 +420,10 @@ styles_s1_nrb_vv_vh_list = [
     style_s1_nrb_vh,
     style_s1_nrb_vv_db,
     style_s1_nrb_vh_db,
+    style_s1_nrb_vv_sigma,
+    style_s1_nrb_vh_sigma,
+    style_s1_nrb_vv_sigma_db,
+    style_s1_nrb_vh_sigma_db,
     style_s1_nrb_false_colour_linear,
     style_s1_nrb_false_colour_db,
     style_s1_nrb_mask,
@@ -289,6 +433,8 @@ styles_s1_nrb_vv_vh_list = [
 styles_s1_nrb_vv_list = [
     style_s1_nrb_vv,
     style_s1_nrb_vv_db,
+    style_s1_nrb_vv_sigma,
+    style_s1_nrb_vv_sigma_db,
     style_s1_nrb_mask,
 ]
 
@@ -297,6 +443,10 @@ styles_s1_nrb_hh_hv_list = [
     style_s1_nrb_hv,
     style_s1_nrb_hh_db,
     style_s1_nrb_hv_db,
+    style_s1_nrb_hh_sigma,
+    style_s1_nrb_hv_sigma,
+    style_s1_nrb_hh_sigma_db,
+    style_s1_nrb_hv_sigma_db,
     style_s1_nrb_hh_hv_false_colour_linear,
     style_s1_nrb_hh_hv_false_colour_db,
     style_s1_nrb_hh_hv_sar_ice,
@@ -306,5 +456,7 @@ styles_s1_nrb_hh_hv_list = [
 styles_s1_nrb_hh_list = [
     style_s1_nrb_hh,
     style_s1_nrb_hh_db,
+    style_s1_nrb_hh_sigma,
+    style_s1_nrb_hh_sigma_db,
     style_s1_nrb_mask,
 ]
