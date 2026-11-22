@@ -1,0 +1,30 @@
+name: ga_s2_fmc_provisional_3
+metadata_type: eo3
+description: Sentinel-2 Fuel Moisture Content Collection 3 (Provisional)
+
+license: CC-BY-4.0
+
+metadata:
+  product:
+    name: ga_s2_fmc_provisional_3
+  properties:
+    eo:instrument: MSI
+    odc:file_format: GeoTIFF
+    odc:product_family: fmc
+    odc:producer: ga.gov.au
+    dea:product_maturity: provisional
+
+measurements:
+  - name: fmc
+    dtype: float32
+    units: '1'
+    nodata: .nan
+
+load:
+  crs: 'EPSG:3577'
+  resolution:
+    y: -10
+    x: 10
+  align:
+    y: 0
+    x: 0
