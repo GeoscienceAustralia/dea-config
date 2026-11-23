@@ -1,12 +1,12 @@
-name: ga_s1_iw_vv_vh_pyrosar_gamma_c0
-description: Geoscience Australia Sentinel-1 Extra Wide Mode Radiometric Terrain Corrected Gamma0 VV+VH Linear Backscatter Collection 0.
+name: ga_s1_ew_vv_pyrosar_gamma_c0
+description: Geoscience Australia Sentinel-1 Extra Wide Mode Radiometric Terrain Corrected Gamma0 VV Linear Backscatter Collection 0.
 metadata_type: eo3_s1_nrb
 
 license: CC-BY-4.0
 
 metadata:
   product:
-    name: ga_s1_iw_vv_vh_pyrosar_gamma_c0
+    name: ga_s1_ew_vv_pyrosar_gamma_c0
   properties:
     odc:product_family: sar_nrb
 
@@ -15,13 +15,6 @@ measurements:
     aliases:
       - vv
       - vv_gamma0
-    dtype: float32
-    nodata: .nan
-    units: '1'
-  - name: VH
-    aliases:
-      - vh
-      - vh_gamma0
     dtype: float32
     nodata: .nan
     units: '1'
