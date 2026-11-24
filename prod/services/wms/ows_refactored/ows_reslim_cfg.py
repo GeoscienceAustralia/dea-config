@@ -45,6 +45,16 @@ reslim_for_sentinel2 = {
     "wcs": common_wcs_limits,
 }
 
+reslim_for_sentinel1 = {
+    "wms": {
+        "zoomed_out_fill_colour": [150, 180, 200, 160],
+        "min_zoom_level": 4.9,
+        "dataset_cache_rules": dataset_cache_rules,
+        "max_datasets": 48,
+    },
+    "wcs": common_wcs_limits,
+}
+
 reslim_for_lccs = {
     "wms": {
         "zoomed_out_fill_colour": [150, 180, 200, 160],
